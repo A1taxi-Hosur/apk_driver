@@ -75,25 +75,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
         console.log('✅ Found existing Supabase session')
         console.log('Session user ID:', existingSession.session.user.id)
         
-        // Try to load driver data for this session
+        // Try to load driver data for this session using RPC (bypasses RLS)
         try {
           const { data: sessionDriverData, error: sessionDriverError } = await supabase
-            .from('drivers')
-            .select(`
-              *,
-              vehicles!drivers_vehicle_id_fkey(
-                id,
-                registration_number,
-                make,
-                model,
-                year,
-                color,
-                vehicle_type,
-                capacity
-              )
-            `)
-            .eq('user_id', existingSession.session.user.id)
-          
+            .rpc('get_driver_by_user_id', {
+              p_user_id: existingSession.session.user.id
+            })
+
           if (!sessionDriverError && sessionDriverData && sessionDriverData.length > 0) {
             const driverRecord = sessionDriverData[0]
             console.log('✅ Found driver data for existing session')
@@ -111,9 +99,30 @@ export function AuthProvider({ children }: AuthProviderProps) {
             }
 
             const completeDriver = {
-              ...driverRecord,
+              id: driverRecord.id,
+              user_id: driverRecord.user_id,
+              license_number: driverRecord.license_number,
+              license_expiry: driverRecord.license_expiry,
+              status: driverRecord.status,
+              rating: driverRecord.rating,
+              total_rides: driverRecord.total_rides,
+              total_earnings: driverRecord.total_earnings,
+              is_verified: driverRecord.is_verified,
+              vehicle_id: driverRecord.vehicle_id,
+              vendor_id: driverRecord.vendor_id,
+              created_at: driverRecord.created_at,
+              updated_at: driverRecord.updated_at,
               user: sessionUser,
-              vehicle: driverRecord.vehicles
+              vehicle: driverRecord.vehicle_id ? {
+                id: driverRecord.vehicle_id,
+                registration_number: driverRecord.vehicle_registration_number,
+                make: driverRecord.vehicle_make,
+                model: driverRecord.vehicle_model,
+                year: driverRecord.vehicle_year,
+                color: driverRecord.vehicle_color,
+                vehicle_type: driverRecord.vehicle_type,
+                capacity: driverRecord.vehicle_capacity
+              } : null
             }
 
             setUser(sessionUser as any)
@@ -145,24 +154,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
         if (sessionAge < 24 * 60 * 60 * 1000) {
           console.log('✅ Found valid stored session, but fetching CURRENT status from database...')
           
-          // CRITICAL: Always fetch current status from database, never trust stored session status
+          // CRITICAL: Always fetch current status from database using RPC (bypasses RLS)
           try {
             const { data: currentDriverData, error: driverError } = await supabase
-              .from('drivers')
-              .select(`
-                *,
-                vehicles!drivers_vehicle_id_fkey(
-                  id,
-                  registration_number,
-                  make,
-                  model,
-                  year,
-                  color,
-                  vehicle_type,
-                  capacity
-                )
-              `)
-              .eq('user_id', sessionData.user.id)
+              .rpc('get_driver_by_user_id', {
+                p_user_id: sessionData.user.id
+              })
             
             if (driverError || !currentDriverData || currentDriverData.length === 0) {
               console.error('❌ Could not fetch current driver data:', driverError)
@@ -171,20 +168,42 @@ export function AuthProvider({ children }: AuthProviderProps) {
               setDriver(sessionData.driver)
             } else {
               console.log('=== CURRENT STATUS FROM DATABASE ===')
-              console.log('📊 Database status:', currentDriverData[0].status)
+              const driverRecord = currentDriverData[0]
+              console.log('📊 Database status:', driverRecord.status)
               console.log('📊 Stored session status:', sessionData.driver.status)
               console.log('📊 Using DATABASE status (authoritative source)')
-              
-              // Use current database data with fresh status
+
+              // Convert RPC result to driver object with vehicle
               const freshDriverData = {
-                ...currentDriverData[0],
+                id: driverRecord.id,
+                user_id: driverRecord.user_id,
+                license_number: driverRecord.license_number,
+                license_expiry: driverRecord.license_expiry,
+                status: driverRecord.status,
+                rating: driverRecord.rating,
+                total_rides: driverRecord.total_rides,
+                total_earnings: driverRecord.total_earnings,
+                is_verified: driverRecord.is_verified,
+                vehicle_id: driverRecord.vehicle_id,
+                vendor_id: driverRecord.vendor_id,
+                created_at: driverRecord.created_at,
+                updated_at: driverRecord.updated_at,
                 user: sessionData.user,
-                vehicle: currentDriverData[0].vehicles
+                vehicle: driverRecord.vehicle_id ? {
+                  id: driverRecord.vehicle_id,
+                  registration_number: driverRecord.vehicle_registration_number,
+                  make: driverRecord.vehicle_make,
+                  model: driverRecord.vehicle_model,
+                  year: driverRecord.vehicle_year,
+                  color: driverRecord.vehicle_color,
+                  vehicle_type: driverRecord.vehicle_type,
+                  capacity: driverRecord.vehicle_capacity
+                } : null
               }
-              
+
               setUser(sessionData.user)
               setDriver(freshDriverData)
-              
+
               console.log('✅ Session restored with CURRENT database status:', freshDriverData.status)
             }
           } catch (fetchError) {
@@ -264,36 +283,50 @@ export function AuthProvider({ children }: AuthProviderProps) {
       
       console.log('✅ User verified as driver')
 
-      // Step 3: Get CURRENT driver data with vehicle from database (FRESH DATA)
-      console.log('🚗 Loading driver profile...')
+      // Step 3: Get CURRENT driver data with vehicle from database using RPC (bypasses RLS)
+      console.log('🚗 Loading driver profile via RPC...')
       const { data: driverData, error: driverError } = await supabase
-        .from('drivers')
-        .select(`
-          *,
-          vehicles!fk_drivers_vehicle(
-            id,
-            registration_number,
-            make,
-            model,
-            year,
-            color,
-            vehicle_type,
-            capacity
-          )
-        `)
-        .eq('user_id', authResult.user_id)
-      
+        .rpc('get_driver_by_user_id', {
+          p_user_id: authResult.user_id
+        })
+
       if (driverError) {
-        console.error('❌ Driver profile not found:', driverError)
+        console.error('❌ Driver profile RPC error:', driverError)
         throw new Error('Driver profile not found')
       }
-      
+
       if (!driverData || driverData.length === 0) {
         console.error('❌ No driver record found for user:', authResult.user_id)
         throw new Error('Driver profile not found')
       }
-      
-      let driver = driverData[0]
+
+      // Convert RPC result to driver object with vehicle
+      const driverRecord = driverData[0]
+      let driver = {
+        id: driverRecord.id,
+        user_id: driverRecord.user_id,
+        license_number: driverRecord.license_number,
+        license_expiry: driverRecord.license_expiry,
+        status: driverRecord.status,
+        rating: driverRecord.rating,
+        total_rides: driverRecord.total_rides,
+        total_earnings: driverRecord.total_earnings,
+        is_verified: driverRecord.is_verified,
+        vehicle_id: driverRecord.vehicle_id,
+        vendor_id: driverRecord.vendor_id,
+        created_at: driverRecord.created_at,
+        updated_at: driverRecord.updated_at,
+        vehicles: driverRecord.vehicle_id ? {
+          id: driverRecord.vehicle_id,
+          registration_number: driverRecord.vehicle_registration_number,
+          make: driverRecord.vehicle_make,
+          model: driverRecord.vehicle_model,
+          year: driverRecord.vehicle_year,
+          color: driverRecord.vehicle_color,
+          vehicle_type: driverRecord.vehicle_type,
+          capacity: driverRecord.vehicle_capacity
+        } : null
+      }
       
       // Check if driver is verified
       if (!driver.is_verified) {
