@@ -1,7 +1,7 @@
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type, Authorization",
+  "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Client-Info, Apikey",
 };
 
 import { createClient } from "npm:@supabase/supabase-js@2";
@@ -191,8 +191,6 @@ async function handleNotifyDrivers(supabase: any, req: Request) {
       assigned_by_admin: ride.assigned_by_admin
     });
 
-    // Only notify drivers for regular rides
-    // Rental, outstation, and airport rides are assigned by admin
     if (ride.booking_type !== 'regular') {
       console.log('⚠️ Skipping driver notification - this is a', ride.booking_type, 'ride (admin-assigned only)');
       return new Response(
