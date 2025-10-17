@@ -4,7 +4,6 @@
     "slug": "taxi-driver-pro",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
     "scheme": "taxidriver",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
@@ -12,15 +11,14 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.a1taxi.driver",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#FFA500"
       }
     },
     "web": {
       "bundler": "metro",
-      "output": "single",
-      "favicon": "./assets/images/favicon.png"
+      "output": "single"
     },
     "plugins": [
       "expo-router",
