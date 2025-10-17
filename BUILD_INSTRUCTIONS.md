@@ -67,11 +67,14 @@ If you get "SDK not found":
 
 EAS Build runs in the cloud, so you don't need Android Studio installed.
 
-### Step 1: Install EAS CLI
+### Step 1: Install Dependencies and Update EAS CLI
 
 ```bash
+# Install all dependencies including latest EAS CLI
 npm install
-# EAS CLI is now in devDependencies
+
+# Verify EAS CLI version (should be 16.23.1 or higher)
+npx eas --version
 ```
 
 ### Step 2: Login to EAS
