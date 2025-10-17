@@ -242,18 +242,19 @@ export function AuthProvider({ children }: AuthProviderProps) {
       console.log('✅ Authentication successful')
       console.log('User ID:', authResult.user_id)
 
-      // Step 2: Get user data
+      // Step 2: Get user data using RPC function (bypasses RLS)
       console.log('📋 Loading user profile...')
-      const { data: userData, error: userError } = await supabase
-        .from('users')
-        .select('*')
-        .eq('id', authResult.user_id)
-        .maybeSingle()
-      
-      if (userError || !userData) {
+      const { data: userDataArray, error: userError } = await supabase
+        .rpc('get_user_by_id', {
+          p_user_id: authResult.user_id
+        })
+
+      if (userError || !userDataArray || userDataArray.length === 0) {
         console.error('❌ User not found:', userError)
         throw new Error('User profile not found')
       }
+
+      const userData = userDataArray[0]
       
       // Verify user is a driver
       if (userData.role !== 'driver') {
