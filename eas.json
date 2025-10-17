@@ -1,35 +1,18 @@
 {
   "cli": {
-    "version": ">= 13.0.0",
+    "version": ">= 16.23.1",
     "appVersionSource": "remote"
   },
   "build": {
     "development": {
       "developmentClient": true,
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk"
-      }
+      "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal",
-      "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease"
-      },
-      "env": {
-        "GRADLE_OPTS": "-Dorg.gradle.jvmargs=-Xmx4096m -Dorg.gradle.daemon=false"
-      }
+      "distribution": "internal"
     },
     "production": {
-      "autoIncrement": true,
-      "android": {
-        "buildType": "apk",
-        "gradleCommand": ":app:assembleRelease"
-      },
-      "env": {
-        "GRADLE_OPTS": "-Dorg.gradle.jvmargs=-Xmx4096m -Dorg.gradle.daemon=false"
-      }
+      "autoIncrement": true
     }
   },
   "submit": {
