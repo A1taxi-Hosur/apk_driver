@@ -188,9 +188,39 @@ async function sendLocationToDatabase(location: any) {
       }
     } catch (fetchError) {
       console.error('❌ Background edge function fetch failed:', fetchError.message);
-      console.log('⚠️ Background location update failed - edge function not accessible');
-      // For background service, we'll just log the error and continue
-      // The main app's location context will handle the primary location updates
+      console.log('⚠️ Trying RPC fallback for background location update...');
+
+      // Fallback: Try using RPC function
+      try {
+        const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/upsert_driver_location`, {
+          method: 'POST',
+          headers: {
+            'apikey': supabaseAnonKey,
+            'Authorization': `Bearer ${supabaseAnonKey}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=representation'
+          },
+          body: JSON.stringify({
+            p_user_id: driver.user_id,
+            p_latitude: locationPayload.latitude,
+            p_longitude: locationPayload.longitude,
+            p_heading: locationPayload.heading,
+            p_speed: locationPayload.speed,
+            p_accuracy: locationPayload.accuracy
+          }),
+          signal: AbortSignal.timeout(8000)
+        });
+
+        if (rpcResponse.ok) {
+          const rpcResult = await rpcResponse.json();
+          console.log('✅ Background location updated via RPC fallback:', rpcResult);
+        } else {
+          console.error('❌ RPC fallback failed:', rpcResponse.status);
+        }
+      } catch (rpcError) {
+        console.error('❌ RPC fallback exception:', rpcError.message);
+      }
+
       return;
     }
     

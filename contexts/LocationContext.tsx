@@ -369,7 +369,7 @@ export function LocationProvider({ children }: LocationProviderProps) {
     }
   }
 
-  // Fallback function to create location record directly in database
+  // Fallback function to create location record using RPC
   const fallbackCreateLocationRecord = async (): Promise<boolean> => {
     if (!driver?.user_id) {
       console.error('❌ No driver user_id available for fallback')
@@ -377,57 +377,64 @@ export function LocationProvider({ children }: LocationProviderProps) {
     }
 
     try {
-      console.log('=== FALLBACK: CREATING LOCATION RECORD DIRECTLY ===')
-      
-      const locationData = {
-        user_id: driver.user_id,
-        latitude: 12.7401984, // Bangalore coordinates
-        longitude: 77.824,
-        heading: null,
-        speed: null,
-        accuracy: 10,
-        updated_at: new Date().toISOString()
-      }
+      console.log('=== FALLBACK: CREATING LOCATION RECORD VIA RPC ===')
 
-      // Try to insert first, then update if record exists
-      const { data: insertData, error: insertError } = await supabase
-        .from('live_locations')
-        .insert(locationData)
-        .select()
+      // Get current location if possible
+      let latitude = 12.7401984 // Default Bangalore coordinates
+      let longitude = 77.824
+      let accuracy = 10
 
-      if (insertError) {
-        // If insert fails due to duplicate user_id, try update instead
-        if (insertError.code === '23505') {
-          console.log('📝 Record exists, updating instead...')
-          const { data: updateData, error: updateError } = await supabase
-            .from('live_locations')
-            .update({
-              latitude: locationData.latitude,
-              longitude: locationData.longitude,
-              heading: locationData.heading,
-              speed: locationData.speed,
-              accuracy: locationData.accuracy,
-              updated_at: locationData.updated_at
-            })
-            .eq('user_id', driver.user_id)
-            .select()
-
-          if (updateError) {
-            console.error('❌ Error updating location record:', updateError)
-            return false
-          } else {
-            console.log('✅ Location record updated successfully via fallback')
-            return true
+      console.log('📍 Attempting to get current GPS location...')
+      try {
+        if (Platform.OS === 'web') {
+          const webLocation = await getCurrentLocationWithGoogleMaps()
+          if (webLocation) {
+            latitude = webLocation.latitude
+            longitude = webLocation.longitude
+            accuracy = webLocation.accuracy || 10
+            console.log('✅ Got web location:', webLocation)
           }
         } else {
-          console.error('❌ Error inserting location record:', insertError)
-          return false
+          const nativeLocation = await Location.getCurrentPositionAsync({
+            accuracy: Location.Accuracy.BestForNavigation,
+            timeout: 10000
+          })
+          if (nativeLocation) {
+            latitude = nativeLocation.coords.latitude
+            longitude = nativeLocation.coords.longitude
+            accuracy = nativeLocation.coords.accuracy || 10
+            console.log('✅ Got native location:', nativeLocation.coords)
+          }
         }
-      } else {
-        console.log('✅ Location record created successfully via fallback')
-        return true
+      } catch (locationError) {
+        console.log('⚠️ Could not get current location, using default Bangalore coordinates')
+        console.log('Location error:', locationError.message)
       }
-      
+
+      // Use RPC function to upsert location
+      const { data: result, error: rpcError } = await supabase
+        .rpc('upsert_driver_location', {
+          p_user_id: driver.user_id,
+          p_latitude: latitude,
+          p_longitude: longitude,
+          p_heading: null,
+          p_speed: null,
+          p_accuracy: accuracy
+        })
+
+      if (rpcError) {
+        console.error('❌ RPC error:', rpcError)
+        return false
+      }
+
+      if (result && result.success) {
+        console.log('✅ Location record', result.action, 'successfully via RPC')
+        return true
+      } else {
+        console.error('❌ RPC returned error:', result?.error)
+        return false
+      }
+
     } catch (error) {
       console.error('❌ Exception in fallback location creation:', error)
       return false
@@ -577,49 +584,28 @@ export function LocationProvider({ children }: LocationProviderProps) {
       console.error('❌ Exception sending location to edge function:', error.message)
       console.log('⚠️ Edge function failed, falling back to direct database update')
       
-      // Fallback: Update location directly in database
+      // Fallback: Update location using RPC function
       try {
-        const { data: insertData, error: insertError } = await supabase
-          .from('live_locations')
-          .insert({
-            user_id: driver.user_id,
-            latitude: location.coords.latitude,
-            longitude: location.coords.longitude,
-            heading: location.coords.heading,
-            speed: location.coords.speed,
-            accuracy: location.coords.accuracy,
-            updated_at: new Date().toISOString()
+        console.log('📤 Using RPC fallback to update location...')
+        const { data: result, error: rpcError } = await supabase
+          .rpc('upsert_driver_location', {
+            p_user_id: driver.user_id,
+            p_latitude: location.coords.latitude,
+            p_longitude: location.coords.longitude,
+            p_heading: location.coords.heading,
+            p_speed: location.coords.speed,
+            p_accuracy: location.coords.accuracy
           })
 
-        if (insertError) {
-          // If insert fails due to duplicate user_id, try update instead
-          if (insertError.code === '23505') {
-            console.log('📝 Record exists, updating instead...')
-            const { error: updateError } = await supabase
-              .from('live_locations')
-              .update({
-                latitude: location.coords.latitude,
-                longitude: location.coords.longitude,
-                heading: location.coords.heading,
-                speed: location.coords.speed,
-                accuracy: location.coords.accuracy,
-                updated_at: new Date().toISOString()
-              })
-              .eq('user_id', driver.user_id)
-            
-            if (updateError) {
-              console.error('❌ Fallback database update also failed:', updateError)
-            } else {
-              console.log('✅ Location updated via direct database fallback')
-            }
-          } else {
-            console.error('❌ Fallback database insert failed:', insertError)
-          }
+        if (rpcError) {
+          console.error('❌ RPC fallback error:', rpcError)
+        } else if (result && result.success) {
+          console.log('✅ Location', result.action, 'via RPC fallback')
         } else {
-          console.log('✅ Location inserted via direct database fallback')
+          console.error('❌ RPC fallback returned error:', result?.error)
         }
-      } catch (dbError) {
-        console.error('❌ Database fallback failed:', dbError)
+      } catch (rpcError) {
+        console.error('❌ RPC fallback exception:', rpcError)
       }
     }
   }
