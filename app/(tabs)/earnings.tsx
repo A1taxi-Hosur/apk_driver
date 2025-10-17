@@ -19,7 +19,7 @@ import {
   Car
 } from 'lucide-react-native';
 import { useAuth } from '../../contexts/AuthContext';
-import { supabaseAdmin } from '../../utils/supabase';
+import { supabase } from '../../utils/supabase';
 
 const { width } = Dimensions.get('window');
 
@@ -86,7 +86,7 @@ export default function EarningsScreen() {
       console.log('Driver ID:', driver.id);
       
       // Fetch all completed rides for this driver
-      const { data: rides, error } = await supabaseAdmin
+      const { data: rides, error } = await supabase
         .from('rides')
         .select(`
           id,

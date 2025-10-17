@@ -24,7 +24,7 @@ import {
   Car
 } from 'lucide-react-native';
 import { useAuth } from '../../contexts/AuthContext';
-import { supabaseAdmin } from '../../utils/supabase';
+import { supabase } from '../../utils/supabase';
 import { openGoogleMapsNavigation } from '../../utils/maps';
 import OTPModal from '../../components/OTPModal';
 import TripCompletionModal from '../../components/TripCompletionModal';
@@ -87,7 +87,7 @@ export default function ScheduledScreen() {
       console.log('Driver ID:', driver.id);
 
       // Get assigned scheduled bookings (admin has assigned to this driver)
-      const { data: assignedBookings, error: assignedError } = await supabaseAdmin
+      const { data: assignedBookings, error: assignedError } = await supabase
         .from('scheduled_bookings')
         .select(`
           *,
@@ -111,7 +111,7 @@ export default function ScheduledScreen() {
       }
 
       // Get available scheduled bookings (pending, waiting for driver confirmation)
-      const { data: availableBookings, error: availableError } = await supabaseAdmin
+      const { data: availableBookings, error: availableError } = await supabase
         .from('scheduled_bookings')
         .select(`
           *,
@@ -151,7 +151,7 @@ export default function ScheduledScreen() {
     if (!driver?.id) return;
 
     try {
-      const { data: updatedBooking, error } = await supabaseAdmin
+      const { data: updatedBooking, error } = await supabase
         .from('scheduled_bookings')
         .update({
           assigned_driver_id: driver.id,
@@ -190,7 +190,7 @@ export default function ScheduledScreen() {
     if (!currentBooking) return;
 
     try {
-      const { data: updatedBooking, error } = await supabaseAdmin
+      const { data: updatedBooking, error } = await supabase
         .from('scheduled_bookings')
         .update({
           status: 'driver_arrived',
@@ -225,7 +225,7 @@ export default function ScheduledScreen() {
     try {
       const otp = Math.floor(1000 + Math.random() * 9000).toString();
       
-      const { error } = await supabaseAdmin
+      const { error } = await supabase
         .from('scheduled_bookings')
         .update({
           pickup_otp: otp,
@@ -256,7 +256,7 @@ export default function ScheduledScreen() {
     if (!currentBooking) return;
     
     try {
-      const { data: booking, error } = await supabaseAdmin
+      const { data: booking, error } = await supabase
         .from('scheduled_bookings')
         .select('pickup_otp')
         .eq('id', currentBooking.id)
@@ -285,7 +285,7 @@ export default function ScheduledScreen() {
     if (!currentBooking || !driver) return;
 
     try {
-      const { data: updatedBooking, error } = await supabaseAdmin
+      const { data: updatedBooking, error } = await supabase
         .from('scheduled_bookings')
         .update({
           status: 'in_progress',
@@ -523,7 +523,7 @@ export default function ScheduledScreen() {
       console.log('📊 Complete fare breakdown:', JSON.stringify(fareBreakdown, null, 2));
 
       // Get driver details for completion record
-      const { data: driverData } = await supabaseAdmin
+      const { data: driverData } = await supabase
         .from('drivers')
         .select(`
           *,
@@ -572,7 +572,7 @@ export default function ScheduledScreen() {
       }
 
       // Update booking status to completed
-      const { data: updatedBooking, error: updateError } = await supabaseAdmin
+      const { data: updatedBooking, error: updateError } = await supabase
         .from('scheduled_bookings')
         .update({
           status: 'completed',
@@ -640,7 +640,7 @@ export default function ScheduledScreen() {
           onPress: async () => {
             if (currentBooking) {
               try {
-                await supabaseAdmin
+                await supabase
                   .from('scheduled_bookings')
                   .update({
                     status: 'cancelled',
@@ -990,7 +990,7 @@ async function calculateRentalFare(
   dropLng: number
 ) {
   // Fetch rental fare package
-  const { data: rentalFares, error } = await supabaseAdmin
+  const { data: rentalFares, error } = await supabase
     .from('rental_fares')
     .select('*')
     .eq('vehicle_type', vehicleType)
@@ -1027,7 +1027,7 @@ async function calculateRentalFare(
   }
 
   // Fetch platform fee from fare_matrix for rental bookings
-  const { data: fareMatrix } = await supabaseAdmin
+  const { data: fareMatrix } = await supabase
     .from('fare_matrix')
     .select('platform_fee')
     .eq('booking_type', 'rental')
@@ -1132,7 +1132,7 @@ async function calculateOutstationFare(
     // Use slab pricing for trips < 300km
     console.log('💰 [OUTSTATION-COMPLETION] Fetching slab packages...');
 
-    const { data: slabPackages, error: slabError } = await supabaseAdmin
+    const { data: slabPackages, error: slabError } = await supabase
       .from('outstation_packages')
       .select('*')
       .eq('vehicle_type', vehicleType)
@@ -1213,7 +1213,7 @@ async function calculateOutstationFare(
     // Use per-km pricing for trips >= 300km
     console.log('💰 [OUTSTATION-COMPLETION] Fetching per-km config...');
 
-    const { data: perKmFares, error: perKmError } = await supabaseAdmin
+    const { data: perKmFares, error: perKmError } = await supabase
       .from('outstation_fares')
       .select('*')
       .eq('vehicle_type', vehicleType)
@@ -1265,7 +1265,7 @@ async function calculateOutstationFare(
   }
 
   // Get platform fee from fare matrix
-  const { data: fareMatrix } = await supabaseAdmin
+  const { data: fareMatrix } = await supabase
     .from('fare_matrix')
     .select('platform_fee')
     .eq('booking_type', 'outstation')
@@ -1327,7 +1327,7 @@ async function calculateAirportFare(
   dropLng: number
 ) {
   // Fetch airport fare package
-  const { data: airportFares, error } = await supabaseAdmin
+  const { data: airportFares, error } = await supabase
     .from('airport_fares')
     .select('*')
     .eq('vehicle_type', vehicleType)
@@ -1351,7 +1351,7 @@ async function calculateAirportFare(
   const packageFare = isHosurToAirport ? airportConfig.hosur_to_airport_fare : airportConfig.airport_to_hosur_fare;
 
   // Fetch platform fee from fare_matrix for airport bookings
-  const { data: fareMatrix } = await supabaseAdmin
+  const { data: fareMatrix } = await supabase
     .from('fare_matrix')
     .select('platform_fee')
     .eq('booking_type', 'airport')

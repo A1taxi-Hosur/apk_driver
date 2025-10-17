@@ -20,7 +20,7 @@ import {
   Award
 } from 'lucide-react-native';
 import { useAuth } from '../../contexts/AuthContext';
-import { supabaseAdmin } from '../../utils/supabase';
+import { supabase } from '../../utils/supabase';
 
 type RideHistoryItem = {
   id: string;
@@ -73,7 +73,7 @@ export default function HistoryScreen() {
       console.log('Driver ID:', driver.id);
       console.log('Driver Name:', driver.user?.full_name);
       
-      const { data, error } = await supabaseAdmin
+      const { data, error } = await supabase
         .from('rides')
         .select(`
           id,

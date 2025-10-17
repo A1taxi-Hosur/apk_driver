@@ -1,4 +1,4 @@
-import { supabaseAdmin } from '../utils/supabase'
+import { supabase } from '../utils/supabase'
 
 export interface TripCompletion {
   id: string
@@ -36,7 +36,7 @@ export class TripCompletionService {
    */
   static async getTripCompletionByRideId(rideId: string): Promise<TripCompletion | null> {
     try {
-      const { data, error } = await supabaseAdmin
+      const { data, error } = await supabase
         .from('trip_completions')
         .select('*')
         .eq('ride_id', rideId)

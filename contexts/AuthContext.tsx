@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useState, ReactNode } from
 import { Session, User } from '@supabase/supabase-js'
 import { Database } from '../types/database'
 import AsyncStorage from '@react-native-async-storage/async-storage'
-import { supabase, supabaseAdmin } from '../utils/supabase'
+import { supabase } from '../utils/supabase'
 
 type Driver = Database['public']['Tables']['drivers']['Row'] & {
   user: Database['public']['Tables']['users']['Row']

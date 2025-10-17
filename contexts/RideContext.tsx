@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
-import { supabase, supabaseAdmin } from '../utils/supabase'
+import { supabase } from '../utils/supabase'
 import { useAuth } from './AuthContext'
 import { FareCalculationService } from '../services/FareCalculationService'
 import { TripLocationTracker } from '../services/TripLocationTracker'
@@ -212,7 +212,7 @@ export function RideProvider({ children }: RideProviderProps) {
 
       // Load current ride (accepted, in_progress, driver_arrived)
       console.log('🔍 Loading current ride...')
-      const { data: currentRideData, error: currentRideError } = await supabaseAdmin
+      const { data: currentRideData, error: currentRideError } = await supabase
         .from('rides')
         .select(`
           *,
@@ -251,7 +251,7 @@ export function RideProvider({ children }: RideProviderProps) {
         setPendingRides([]);
       } else {
         console.log('🔍 Loading pending ride notifications...')
-        const { data: notifications, error: notificationsError } = await supabaseAdmin
+        const { data: notifications, error: notificationsError } = await supabase
           .from('notifications')
           .select('*')
           .eq('user_id', driver.user_id)
@@ -272,7 +272,7 @@ export function RideProvider({ children }: RideProviderProps) {
             .map(n => n.data.ride_id)
 
           // Fetch actual rides from database to validate they still exist
-          const { data: actualRides, error: ridesError } = await supabaseAdmin
+          const { data: actualRides, error: ridesError } = await supabase
             .from('rides')
             .select('id, status, driver_id')
             .in('id', rideIds)
@@ -295,7 +295,7 @@ export function RideProvider({ children }: RideProviderProps) {
           if (invalidNotifications.length > 0) {
             console.log(`🧹 Cleaning up ${invalidNotifications.length} invalid notifications`)
             const invalidNotifIds = invalidNotifications.map(n => n.id)
-            await supabaseAdmin
+            await supabase
               .from('notifications')
               .update({ status: 'read' })
               .in('id', invalidNotifIds)
@@ -398,7 +398,7 @@ export function RideProvider({ children }: RideProviderProps) {
         await updateDriverStatus('busy')
         
         // Mark notification as read
-        await supabaseAdmin
+        await supabase
           .from('notifications')
           .update({ status: 'read' })
           .eq('user_id', driver.user_id)
@@ -429,7 +429,7 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
 
       // Mark notification as read (declined)
-      await supabaseAdmin
+      await supabase
         .from('notifications')
         .update({ status: 'read' })
         .eq('user_id', driver.user_id)
@@ -453,7 +453,7 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('=== MARKING DRIVER ARRIVED ===')
       console.log('Ride ID:', rideId)
 
-      const { data: updatedRide, error } = await supabaseAdmin
+      const { data: updatedRide, error } = await supabase
         .from('rides')
         .update({
           status: 'driver_arrived',
@@ -493,7 +493,7 @@ export function RideProvider({ children }: RideProviderProps) {
 
       const otp = Math.floor(1000 + Math.random() * 9000).toString()
       
-      const { error } = await supabaseAdmin
+      const { error } = await supabase
         .from('rides')
         .update({
           pickup_otp: otp,
@@ -522,7 +522,7 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
       console.log('OTP:', otp)
 
-      const { data: ride, error } = await supabaseAdmin
+      const { data: ride, error } = await supabase
         .from('rides')
         .select('pickup_otp')
         .eq('id', rideId)
@@ -557,7 +557,7 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('=== STARTING RIDE ===')
       console.log('Ride ID:', rideId)
 
-      const { data: updatedRide, error } = await supabaseAdmin
+      const { data: updatedRide, error } = await supabase
         .from('rides')
         .update({
           status: 'in_progress',
@@ -611,7 +611,7 @@ export function RideProvider({ children }: RideProviderProps) {
 
       const otp = Math.floor(1000 + Math.random() * 9000).toString()
       
-      const { error } = await supabaseAdmin
+      const { error } = await supabase
         .from('rides')
         .update({
           drop_otp: otp,
@@ -647,7 +647,7 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('🚨 Driver User ID:', driver.user_id)
 
       // Get current ride details
-      const { data: ride, error: rideError } = await supabaseAdmin
+      const { data: ride, error: rideError } = await supabase
         .from('rides')
         .select(`
           *,
@@ -668,7 +668,7 @@ export function RideProvider({ children }: RideProviderProps) {
       }
 
       // Fetch driver details
-      const { data: driverDetails, error: driverError } = await supabaseAdmin
+      const { data: driverDetails, error: driverError } = await supabase
         .from('drivers')
         .select('*')
         .eq('id', driver.id)
@@ -681,7 +681,7 @@ export function RideProvider({ children }: RideProviderProps) {
       }
 
       // Fetch user details for driver
-      const { data: userData, error: userError } = await supabaseAdmin
+      const { data: userData, error: userError } = await supabase
         .from('users')
         .select('full_name')
         .eq('id', driverDetails.user_id)
@@ -694,7 +694,7 @@ export function RideProvider({ children }: RideProviderProps) {
       // Fetch vehicle details if driver has a vehicle
       let vehicleData = null
       if (driverDetails.vehicle_id) {
-        const { data: vehicle, error: vehicleError } = await supabaseAdmin
+        const { data: vehicle, error: vehicleError } = await supabase
           .from('vehicles')
           .select('id, make, model, color, registration_number')
           .eq('id', driverDetails.vehicle_id)
@@ -885,7 +885,7 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('✅ Fare calculated successfully:', fareResult.fareBreakdown)
 
       // Update ride status to completed
-      const { data: completedRide, error: updateError } = await supabaseAdmin
+      const { data: completedRide, error: updateError } = await supabase
         .from('rides')
         .update({
           status: 'completed',
@@ -976,7 +976,7 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
       console.log('Reason:', reason)
 
-      const { error } = await supabaseAdmin
+      const { error } = await supabase
         .from('rides')
         .update({
           status: 'cancelled',

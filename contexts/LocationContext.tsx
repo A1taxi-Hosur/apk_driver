@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 import * as Location from 'expo-location'
-import { supabase, supabaseAdmin } from '../utils/supabase'
+import { supabase } from '../utils/supabase'
 import { useAuth } from './AuthContext'
 import { calculateDistance, getCurrentLocationWithGoogleMaps, reverseGeocode } from '../utils/maps'
 import { Platform } from 'react-native'
@@ -390,7 +390,7 @@ export function LocationProvider({ children }: LocationProviderProps) {
       }
 
       // Try to insert first, then update if record exists
-      const { data: insertData, error: insertError } = await supabaseAdmin
+      const { data: insertData, error: insertError } = await supabase
         .from('live_locations')
         .insert(locationData)
         .select()
@@ -399,7 +399,7 @@ export function LocationProvider({ children }: LocationProviderProps) {
         // If insert fails due to duplicate user_id, try update instead
         if (insertError.code === '23505') {
           console.log('📝 Record exists, updating instead...')
-          const { data: updateData, error: updateError } = await supabaseAdmin
+          const { data: updateData, error: updateError } = await supabase
             .from('live_locations')
             .update({
               latitude: locationData.latitude,
@@ -579,7 +579,7 @@ export function LocationProvider({ children }: LocationProviderProps) {
       
       // Fallback: Update location directly in database
       try {
-        const { data: insertData, error: insertError } = await supabaseAdmin
+        const { data: insertData, error: insertError } = await supabase
           .from('live_locations')
           .insert({
             user_id: driver.user_id,
@@ -590,12 +590,12 @@ export function LocationProvider({ children }: LocationProviderProps) {
             accuracy: location.coords.accuracy,
             updated_at: new Date().toISOString()
           })
-        
+
         if (insertError) {
           // If insert fails due to duplicate user_id, try update instead
           if (insertError.code === '23505') {
             console.log('📝 Record exists, updating instead...')
-            const { error: updateError } = await supabaseAdmin
+            const { error: updateError } = await supabase
               .from('live_locations')
               .update({
                 latitude: location.coords.latitude,

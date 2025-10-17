@@ -1,4 +1,4 @@
-import { supabaseAdmin } from '../utils/supabase';
+import { supabase } from '../utils/supabase';
 import { calculateDistance } from '../utils/maps';
 
 export interface FareBreakdown {
@@ -74,7 +74,7 @@ export class FareCalculationService {
       console.log('Fare breakdown received:', JSON.stringify(fareBreakdown, null, 2));
 
       // Get ride details
-      const { data: ride, error: rideError } = await supabaseAdmin
+      const { data: ride, error: rideError } = await supabase
         .from('rides')
         .select('*')
         .eq('id', rideId)
@@ -92,7 +92,7 @@ export class FareCalculationService {
       };
 
       // Store in trip_completions table
-      const { error: completionError } = await supabaseAdmin
+      const { error: completionError } = await supabase
         .from('trip_completions')
         .insert({
           ride_id: rideId,
@@ -178,7 +178,7 @@ export class FareCalculationService {
       console.log('Actual Duration:', actualDurationMinutes, 'minutes');
 
       // Get ride details
-      const { data: ride, error: rideError } = await supabaseAdmin
+      const { data: ride, error: rideError } = await supabase
         .from('rides')
         .select('*')
         .eq('id', rideId)
@@ -198,7 +198,7 @@ export class FareCalculationService {
 
       // Get zones from database
       console.log('🔍 Fetching zones from database...');
-      const { data: zones, error: zonesError } = await supabaseAdmin
+      const { data: zones, error: zonesError } = await supabase
         .from('zones')
         .select('*')
         .eq('is_active', true);
@@ -270,7 +270,7 @@ export class FareCalculationService {
 
       switch (ride.booking_type) {
         case 'regular':
-          const regularResult = await supabaseAdmin
+          const regularResult = await supabase
             .from('trip_completions')
             .insert({
               ride_id: rideId,
@@ -314,7 +314,7 @@ export class FareCalculationService {
           break;
 
         case 'rental':
-          const rentalResult = await supabaseAdmin
+          const rentalResult = await supabase
             .from('rental_trip_completions')
             .insert({
               ride_id: rideId,
@@ -407,7 +407,7 @@ export class FareCalculationService {
 
           console.log('Insert data object:', JSON.stringify(insertData, null, 2));
 
-          const outstationResult = await supabaseAdmin
+          const outstationResult = await supabase
             .from('outstation_trip_completions')
             .insert(insertData)
             .select()
@@ -443,7 +443,7 @@ export class FareCalculationService {
           break;
 
         case 'airport':
-          const airportResult = await supabaseAdmin
+          const airportResult = await supabase
             .from('airport_trip_completions')
             .insert({
               ride_id: rideId,
@@ -498,7 +498,7 @@ export class FareCalculationService {
       }
 
       // Update ride with final fare
-      await supabaseAdmin
+      await supabase
         .from('rides')
         .update({
           fare_amount: fareBreakdown.total_fare,
@@ -543,7 +543,7 @@ export class FareCalculationService {
       console.log('Actual Duration:', actualDurationMinutes, 'minutes');
 
       // Get booking details
-      const { data: booking, error: bookingError } = await supabaseAdmin
+      const { data: booking, error: bookingError } = await supabase
         .from('scheduled_bookings')
         .select('*')
         .eq('id', bookingId)
@@ -562,7 +562,7 @@ export class FareCalculationService {
       });
 
       // Get zones from database
-      const { data: zones, error: zonesError } = await supabaseAdmin
+      const { data: zones, error: zonesError } = await supabase
         .from('zones')
         .select('*')
         .eq('is_active', true);
@@ -623,7 +623,7 @@ export class FareCalculationService {
 
       switch (booking.booking_type) {
         case 'rental':
-          const rentalResult = await supabaseAdmin
+          const rentalResult = await supabase
             .from('rental_trip_completions')
             .insert({
               scheduled_booking_id: bookingId,
@@ -669,7 +669,7 @@ export class FareCalculationService {
           console.log('fareBreakdown to store:', JSON.stringify(fareBreakdown, null, 2));
           console.log('Total fare from fareBreakdown:', fareBreakdown.total_fare);
 
-          const outstationResult = await supabaseAdmin
+          const outstationResult = await supabase
             .from('outstation_trip_completions')
             .insert({
               scheduled_booking_id: bookingId,
@@ -715,7 +715,7 @@ export class FareCalculationService {
           break;
 
         case 'airport':
-          const airportResult = await supabaseAdmin
+          const airportResult = await supabase
             .from('airport_trip_completions')
             .insert({
               scheduled_booking_id: bookingId,
@@ -805,7 +805,7 @@ export class FareCalculationService {
       console.log('Fare breakdown received:', JSON.stringify(fareBreakdown, null, 2));
 
       // Get booking details
-      const { data: booking, error: bookingError } = await supabaseAdmin
+      const { data: booking, error: bookingError } = await supabase
         .from('scheduled_bookings')
         .select('*')
         .eq('id', bookingId)
@@ -828,7 +828,7 @@ export class FareCalculationService {
       switch (booking.booking_type) {
         case 'rental':
           console.log('📝 Storing rental trip completion...');
-          const rentalResult = await supabaseAdmin
+          const rentalResult = await supabase
             .from('rental_trip_completions')
             .insert({
               scheduled_booking_id: bookingId,
@@ -875,7 +875,7 @@ export class FareCalculationService {
 
         case 'outstation':
           console.log('📝 Storing outstation trip completion...');
-          const outstationResult = await supabaseAdmin
+          const outstationResult = await supabase
             .from('outstation_trip_completions')
             .insert({
               scheduled_booking_id: bookingId,
@@ -924,7 +924,7 @@ export class FareCalculationService {
 
         case 'airport':
           console.log('📝 Storing airport trip completion...');
-          const airportResult = await supabaseAdmin
+          const airportResult = await supabase
             .from('airport_trip_completions')
             .insert({
               scheduled_booking_id: bookingId,
@@ -1021,7 +1021,7 @@ export class FareCalculationService {
     
     // First, let's see ALL fare matrix records for debugging
     console.log('=== DEBUGGING: FETCHING ALL FARE MATRIX RECORDS ===');
-    const { data: allFareMatrices, error: allError } = await supabaseAdmin
+    const { data: allFareMatrices, error: allError } = await supabase
       .from('fare_matrix')
       .select('*')
       .eq('is_active', true)
@@ -1047,7 +1047,7 @@ export class FareCalculationService {
     
     // Now try the specific query
     console.log('🔍 Now fetching specific record for regular + hatchback...');
-    const { data: fareMatrices, error } = await supabaseAdmin
+    const { data: fareMatrices, error } = await supabase
       .from('fare_matrix')
       .select('*')
       .eq('booking_type', 'regular')
@@ -1299,7 +1299,7 @@ export class FareCalculationService {
     console.log('Actual Duration:', actualDurationMinutes, 'minutes');
 
     // Get rental fare for the selected package
-    const { data: rentalFares, error } = await supabaseAdmin
+    const { data: rentalFares, error } = await supabase
       .from('rental_fares')
       .select('*')
       .eq('vehicle_type', vehicleType)
@@ -1388,7 +1388,7 @@ export class FareCalculationService {
     }
 
     // Get platform fee from fare matrix
-    const { data: fareMatrix } = await supabaseAdmin
+    const { data: fareMatrix } = await supabase
       .from('fare_matrix')
       .select('platform_fee')
       .eq('booking_type', 'rental')
@@ -1482,7 +1482,7 @@ export class FareCalculationService {
     if (tripType === 'one_way') {
       console.log('🛣️ ONE-WAY TRIP CALCULATION');
 
-      const { data: outstationFares, error } = await supabaseAdmin
+      const { data: outstationFares, error } = await supabase
         .from('outstation_fares')
         .select('*')
         .eq('vehicle_type', vehicleType)
@@ -1508,7 +1508,7 @@ export class FareCalculationService {
       const kmFare = actualDistanceKm * perKmRate * 2;
 
       // Get platform fee from fare matrix
-      const { data: fareMatrix } = await supabaseAdmin
+      const { data: fareMatrix } = await supabase
         .from('fare_matrix')
         .select('platform_fee')
         .eq('booking_type', 'outstation')
@@ -1581,7 +1581,7 @@ export class FareCalculationService {
     });
 
     if (useSlab) {
-      const { data: slabPackages, error: slabError } = await supabaseAdmin
+      const { data: slabPackages, error: slabError } = await supabase
         .from('outstation_packages')
         .select('*')
         .eq('vehicle_type', vehicleType)
@@ -1637,7 +1637,7 @@ export class FareCalculationService {
         const extraKmCharges = extraKm > 0 ? extraKm * parseFloat(slabPackage.extra_km_rate?.toString() || '0') : 0;
 
         // Get platform fee from fare matrix
-        const { data: fareMatrix } = await supabaseAdmin
+        const { data: fareMatrix } = await supabase
           .from('fare_matrix')
           .select('platform_fee')
           .eq('booking_type', 'outstation')
@@ -1701,7 +1701,7 @@ export class FareCalculationService {
       }
     }
 
-    const { data: outstationFares, error } = await supabaseAdmin
+    const { data: outstationFares, error } = await supabase
       .from('outstation_fares')
       .select('*')
       .eq('vehicle_type', vehicleType)
@@ -1768,7 +1768,7 @@ export class FareCalculationService {
     }
 
     // Get platform fee from fare matrix
-    const { data: fareMatrix } = await supabaseAdmin
+    const { data: fareMatrix } = await supabase
       .from('fare_matrix')
       .select('platform_fee')
       .eq('booking_type', 'outstation')
@@ -1842,7 +1842,7 @@ export class FareCalculationService {
     console.log('Drop coordinates:', dropLat, dropLng);
 
     // Get airport fare configuration
-    const { data: airportFares, error } = await supabaseAdmin
+    const { data: airportFares, error } = await supabase
       .from('airport_fares')
       .select('*')
       .eq('vehicle_type', vehicleType)
@@ -1891,7 +1891,7 @@ export class FareCalculationService {
     });
 
     // Get platform fee from fare matrix
-    const { data: fareMatrix } = await supabaseAdmin
+    const { data: fareMatrix } = await supabase
       .from('fare_matrix')
       .select('platform_fee')
       .eq('booking_type', 'airport')
@@ -2121,7 +2121,7 @@ export class FareCalculationService {
    */
   static async getTripCompletion(rideId: string) {
     try {
-      const { data, error } = await supabaseAdmin
+      const { data, error } = await supabase
         .from('trip_completions')
         .select('*')
         .eq('ride_id', rideId)
