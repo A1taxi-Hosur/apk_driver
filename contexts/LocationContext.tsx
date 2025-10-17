@@ -265,44 +265,21 @@ export function LocationProvider({ children }: LocationProviderProps) {
         return await fallbackCreateLocationRecord()
       }
 
-      // Check if edge function is accessible before trying to use it
-      console.log('🔍 Testing edge function accessibility...')
-      try {
-        const testResponse = await fetch(`${supabaseUrl}/functions/v1/update-driver-location`, {
-          method: 'OPTIONS',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        })
-        
-        if (!testResponse.ok) {
-          throw new Error(`Edge function not accessible: ${testResponse.status}`)
-        }
-        console.log('✅ Edge function is accessible')
-      } catch (testError) {
-        console.error('❌ Edge function accessibility test failed:', testError.message)
-        console.log('⚠️ Falling back to direct database insert')
-        return await fallbackCreateLocationRecord()
-      }
-
-      // Step 1: Get current location (with fallback to default)
-      let locationPayload = {
-        user_id: driver.user_id,
-        latitude: 12.7401984, // Default Bangalore coordinates
-        longitude: 77.824,
-        heading: null,
-        speed: null,
-        accuracy: 10
-      }
+      // Get current location (with fallback to default)
+      let latitude = 12.7401984; // Default Hosur coordinates
+      let longitude = 77.824;
+      let accuracy = 10;
+      let heading = null;
+      let speed = null;
 
       console.log('📍 Attempting to get current GPS location...')
       try {
         if (Platform.OS === 'web') {
           const webLocation = await getCurrentLocationWithGoogleMaps()
           if (webLocation) {
-            locationPayload.latitude = webLocation.latitude
-            locationPayload.longitude = webLocation.longitude
-            locationPayload.accuracy = webLocation.accuracy || 10
+            latitude = webLocation.latitude
+            longitude = webLocation.longitude
+            accuracy = webLocation.accuracy || 10
             console.log('✅ Got web location:', webLocation)
           }
         } else {
@@ -311,52 +288,52 @@ export function LocationProvider({ children }: LocationProviderProps) {
             timeout: 10000
           })
           if (nativeLocation) {
-            locationPayload.latitude = nativeLocation.coords.latitude
-            locationPayload.longitude = nativeLocation.coords.longitude
-            locationPayload.accuracy = nativeLocation.coords.accuracy || 10
+            latitude = nativeLocation.coords.latitude
+            longitude = nativeLocation.coords.longitude
+            accuracy = nativeLocation.coords.accuracy || 10
+            heading = nativeLocation.coords.heading
+            speed = nativeLocation.coords.speed
             console.log('✅ Got native location:', nativeLocation.coords)
           }
         }
       } catch (locationError) {
-        console.log('⚠️ Could not get current location, using default Bangalore coordinates')
+        console.log('⚠️ Could not get current location, using default Hosur coordinates')
         console.log('Location error:', locationError.message)
       }
 
-      // Step 2: Send to edge function
-      console.log('📤 Sending initial location to edge function...')
-      console.log('📍 Using GPS coordinates:', locationPayload.latitude, locationPayload.longitude)
-      
-      try {
-        const response = await fetch(`${supabaseUrl}/functions/v1/update-driver-location`, {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${supabaseAnonKey}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(locationPayload),
-          signal: AbortSignal.timeout(10000) // 10 second timeout
-        })
+      // Use RPC function to create/update initial location record
+      console.log('📤 Creating initial location record via RPC...')
+      console.log('📍 Using GPS coordinates:', latitude, longitude)
 
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+      try {
+        const { data: result, error: rpcError } = await supabase
+          .rpc('update_driver_location_rpc', {
+            p_driver_id: driver.id,
+            p_latitude: latitude,
+            p_longitude: longitude,
+            p_heading: heading,
+            p_speed: speed,
+            p_accuracy: accuracy
+          })
+
+        if (rpcError) {
+          console.error('❌ RPC error:', rpcError)
+          throw new Error(rpcError.message)
         }
 
-        const result = await response.json()
-        
-        if (result.success) {
-          console.log('✅ Initial location record created successfully via edge function')
-          console.log('📍 Action:', result.action)
+        if (result && result.success) {
+          console.log('✅ Initial location record', result.action, 'successfully via RPC')
           return true
         } else {
-          console.error('❌ Edge function returned error:', result.error)
-          throw new Error(result.error)
+          console.error('❌ RPC returned error:', result?.error)
+          throw new Error(result?.error || 'Unknown error')
         }
-      } catch (fetchError) {
-        console.error('❌ Edge function fetch failed:', fetchError.message)
+      } catch (rpcError) {
+        console.error('❌ RPC failed:', rpcError.message)
         console.log('❌ This could be due to:')
-        console.log('  1. Edge function not deployed')
-        console.log('  2. Network connectivity issues')
-        console.log('  3. Environment variables not configured')
+        console.log('  1. Database connectivity issues')
+        console.log('  2. Driver record not found')
+        console.log('  3. Permission issues')
         console.log('  4. CORS issues')
         console.log('⚠️ Falling back to direct database insert')
         return await fallbackCreateLocationRecord()
@@ -550,63 +527,33 @@ export function LocationProvider({ children }: LocationProviderProps) {
         accuracy: location.coords.accuracy
       }
 
-      console.log('📤 Sending location data to edge function...')
-      
-      const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL
-      const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY
-      
-      // Add timeout and better error handling
-      const response = await fetch(`${supabaseUrl}/functions/v1/update-driver-location`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${supabaseAnonKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(locationPayload),
-        signal: AbortSignal.timeout(15000) // 15 second timeout
-      })
+      console.log('📤 Updating location via RPC...')
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`)
+      // Use RPC function to update location (bypasses RLS)
+      const { data: result, error: rpcError } = await supabase
+        .rpc('update_driver_location_rpc', {
+          p_driver_id: driver.id,
+          p_latitude: location.coords.latitude,
+          p_longitude: location.coords.longitude,
+          p_heading: location.coords.heading || null,
+          p_speed: location.coords.speed || null,
+          p_accuracy: location.coords.accuracy || null
+        })
+
+      if (rpcError) {
+        console.error('❌ RPC error:', rpcError)
+        throw new Error(rpcError.message)
       }
 
-      const result = await response.json()
-      
-      if (result.success) {
-        console.log('✅ Location updated successfully via edge function')
-        console.log('📍 Action:', result.action)
+      if (result && result.success) {
+        console.log('✅ Location', result.action, 'successfully via RPC')
       } else {
-        console.error('❌ Edge function returned error:', result.error)
-        throw new Error(result.error)
+        console.error('❌ RPC returned error:', result?.error)
+        throw new Error(result?.error || 'Unknown error')
       }
-      
-    } catch (error) {
-      console.error('❌ Exception sending location to edge function:', error.message)
-      console.log('⚠️ Edge function failed, falling back to direct database update')
-      
-      // Fallback: Update location using RPC function
-      try {
-        console.log('📤 Using RPC fallback to update location...')
-        const { data: result, error: rpcError } = await supabase
-          .rpc('upsert_driver_location', {
-            p_user_id: driver.user_id,
-            p_latitude: location.coords.latitude,
-            p_longitude: location.coords.longitude,
-            p_heading: location.coords.heading,
-            p_speed: location.coords.speed,
-            p_accuracy: location.coords.accuracy
-          })
 
-        if (rpcError) {
-          console.error('❌ RPC fallback error:', rpcError)
-        } else if (result && result.success) {
-          console.log('✅ Location', result.action, 'via RPC fallback')
-        } else {
-          console.error('❌ RPC fallback returned error:', result?.error)
-        }
-      } catch (rpcError) {
-        console.error('❌ RPC fallback exception:', rpcError)
-      }
+    } catch (error) {
+      console.error('❌ Exception updating location:', error.message)
     }
   }
 
