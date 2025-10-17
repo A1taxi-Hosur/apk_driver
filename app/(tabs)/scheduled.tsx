@@ -86,52 +86,48 @@ export default function ScheduledScreen() {
       console.log('=== LOADING SCHEDULED BOOKINGS ===');
       console.log('Driver ID:', driver.id);
 
-      // Get assigned scheduled bookings (admin has assigned to this driver)
-      const { data: assignedBookings, error: assignedError } = await supabase
-        .from('scheduled_bookings')
-        .select(`
-          *,
-          customer:users!scheduled_bookings_customer_id_fkey(
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .eq('assigned_driver_id', driver.id)
-        .in('status', ['assigned', 'confirmed', 'driver_arrived', 'in_progress'])
-        .order('scheduled_time', { ascending: true });
+      // Get current active scheduled booking using RPC
+      const { data: currentBookingData, error: currentError } = await supabase
+        .rpc('get_driver_current_scheduled_booking', {
+          p_driver_id: driver.id
+        });
 
-      if (assignedError) {
-        console.error('Error loading assigned bookings:', assignedError);
+      if (currentError) {
+        console.error('Error loading current booking:', currentError);
         setCurrentBooking(null);
       } else {
-        const activeBooking = assignedBookings && assignedBookings.length > 0 ? assignedBookings[0] : null;
+        const activeBooking = currentBookingData && currentBookingData.length > 0 ? {
+          ...currentBookingData[0],
+          customer: {
+            full_name: currentBookingData[0].customer_full_name,
+            phone_number: currentBookingData[0].customer_phone,
+            email: currentBookingData[0].customer_email
+          }
+        } : null;
         setCurrentBooking(activeBooking);
         console.log('Current booking:', activeBooking?.id);
       }
 
-      // Get available scheduled bookings (pending, waiting for driver confirmation)
-      const { data: availableBookings, error: availableError } = await supabase
-        .from('scheduled_bookings')
-        .select(`
-          *,
-          customer:users!scheduled_bookings_customer_id_fkey(
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .eq('assigned_driver_id', driver.id)
-        .eq('status', 'pending')
-        .order('scheduled_time', { ascending: true })
-        .limit(10);
+      // Get available scheduled bookings (pending, assigned by admin) using RPC
+      const { data: availableBookingsData, error: availableError } = await supabase
+        .rpc('get_driver_assigned_scheduled_bookings', {
+          p_driver_id: driver.id
+        });
 
       if (availableError) {
         console.error('Error loading available bookings:', availableError);
         setScheduledBookings([]);
       } else {
-        setScheduledBookings(availableBookings || []);
-        console.log('Available bookings:', availableBookings?.length || 0);
+        const formattedBookings = (availableBookingsData || []).map(booking => ({
+          ...booking,
+          customer: {
+            full_name: booking.customer_full_name,
+            phone_number: booking.customer_phone,
+            email: booking.customer_email
+          }
+        }));
+        setScheduledBookings(formattedBookings);
+        console.log('Available bookings:', formattedBookings.length);
       }
 
     } catch (error) {
@@ -151,32 +147,20 @@ export default function ScheduledScreen() {
     if (!driver?.id) return;
 
     try {
-      const { data: updatedBooking, error } = await supabase
-        .from('scheduled_bookings')
-        .update({
-          assigned_driver_id: driver.id,
-          status: 'assigned',
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', bookingId)
-        .eq('status', 'pending')
-        .select(`
-          *,
-          customer:users!scheduled_bookings_customer_id_fkey(
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .single();
+      const { data: result, error } = await supabase
+        .rpc('update_scheduled_booking_status', {
+          p_booking_id: bookingId,
+          p_driver_id: driver.id,
+          p_status: 'assigned'
+        });
 
-      if (error) {
+      if (error || !result?.success) {
         Alert.alert('Error', 'Failed to accept booking');
         return;
       }
 
-      setCurrentBooking(updatedBooking);
-      setScheduledBookings(prev => prev.filter(b => b.id !== bookingId));
+      // Reload to get the updated booking
+      await loadScheduledBookings();
       await updateDriverStatus('busy');
       Alert.alert('Success', 'Booking accepted successfully!');
 
@@ -187,32 +171,22 @@ export default function ScheduledScreen() {
   };
 
   const handleDriverArrived = async () => {
-    if (!currentBooking) return;
+    if (!currentBooking || !driver?.id) return;
 
     try {
-      const { data: updatedBooking, error } = await supabase
-        .from('scheduled_bookings')
-        .update({
-          status: 'driver_arrived',
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', currentBooking.id)
-        .select(`
-          *,
-          customer:users!scheduled_bookings_customer_id_fkey(
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .single();
+      const { data: result, error } = await supabase
+        .rpc('update_scheduled_booking_status', {
+          p_booking_id: currentBooking.id,
+          p_driver_id: driver.id,
+          p_status: 'driver_arrived'
+        });
 
-      if (error) {
+      if (error || !result?.success) {
         Alert.alert('Error', 'Failed to mark as arrived');
         return;
       }
 
-      setCurrentBooking(updatedBooking);
+      await loadScheduledBookings();
     } catch (error) {
       console.error('Error marking driver arrived:', error);
       Alert.alert('Error', 'Failed to mark as arrived');
@@ -220,20 +194,20 @@ export default function ScheduledScreen() {
   };
 
   const handleGeneratePickupOTP = async () => {
-    if (!currentBooking) return;
-    
+    if (!currentBooking || !driver?.id) return;
+
     try {
       const otp = Math.floor(1000 + Math.random() * 9000).toString();
-      
-      const { error } = await supabase
-        .from('scheduled_bookings')
-        .update({
-          pickup_otp: otp,
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', currentBooking.id);
 
-      if (error) {
+      const { data: result, error } = await supabase
+        .rpc('update_scheduled_booking_otp', {
+          p_booking_id: currentBooking.id,
+          p_driver_id: driver.id,
+          p_otp_type: 'pickup',
+          p_otp: otp
+        });
+
+      if (error || !result?.success) {
         Alert.alert('Error', 'Failed to generate OTP');
         return;
       }
@@ -253,21 +227,22 @@ export default function ScheduledScreen() {
   };
 
   const handleOTPVerification = async (otp: string) => {
-    if (!currentBooking) return;
-    
-    try {
-      const { data: booking, error } = await supabase
-        .from('scheduled_bookings')
-        .select('pickup_otp')
-        .eq('id', currentBooking.id)
-        .single();
+    if (!currentBooking || !driver?.id) return;
 
-      if (error || !booking) {
+    try {
+      const { data: result, error } = await supabase
+        .rpc('get_scheduled_booking_otp', {
+          p_booking_id: currentBooking.id,
+          p_driver_id: driver.id,
+          p_otp_type: 'pickup'
+        });
+
+      if (error || !result?.success) {
         Alert.alert('Error', 'Failed to verify OTP');
         return;
       }
 
-      if (booking.pickup_otp !== otp) {
+      if (result.otp !== otp) {
         Alert.alert('Error', 'Incorrect OTP. Please try again.');
         return;
       }
@@ -285,29 +260,19 @@ export default function ScheduledScreen() {
     if (!currentBooking || !driver) return;
 
     try {
-      const { data: updatedBooking, error } = await supabase
-        .from('scheduled_bookings')
-        .update({
-          status: 'in_progress',
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', currentBooking.id)
-        .select(`
-          *,
-          customer:users!scheduled_bookings_customer_id_fkey(
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .single();
+      const { data: result, error } = await supabase
+        .rpc('update_scheduled_booking_status', {
+          p_booking_id: currentBooking.id,
+          p_driver_id: driver.id,
+          p_status: 'in_progress'
+        });
 
-      if (error) {
+      if (error || !result?.success) {
         Alert.alert('Error', 'Failed to start trip');
         return;
       }
 
-      setCurrentBooking(updatedBooking);
+      await loadScheduledBookings();
 
       // Start GPS tracking for scheduled trip
       console.log('🚀 Starting GPS tracking for scheduled trip...');
@@ -572,17 +537,14 @@ export default function ScheduledScreen() {
       }
 
       // Update booking status to completed
-      const { data: updatedBooking, error: updateError } = await supabase
-        .from('scheduled_bookings')
-        .update({
-          status: 'completed',
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', currentBooking.id)
-        .select()
-        .single();
+      const { data: result, error: updateError } = await supabase
+        .rpc('update_scheduled_booking_status', {
+          p_booking_id: currentBooking.id,
+          p_driver_id: driver!.id,
+          p_status: 'completed'
+        });
 
-      if (updateError) {
+      if (updateError || !result?.success) {
         console.error('❌ Error completing booking:', updateError);
         Alert.alert('Error', 'Failed to complete trip');
         return;
@@ -638,18 +600,23 @@ export default function ScheduledScreen() {
           text: 'Yes',
           style: 'destructive',
           onPress: async () => {
-            if (currentBooking) {
+            if (currentBooking && driver?.id) {
               try {
-                await supabase
-                  .from('scheduled_bookings')
-                  .update({
-                    status: 'cancelled',
-                    updated_at: new Date().toISOString()
-                  })
-                  .eq('id', currentBooking.id);
+                const { data: result, error } = await supabase
+                  .rpc('update_scheduled_booking_status', {
+                    p_booking_id: currentBooking.id,
+                    p_driver_id: driver.id,
+                    p_status: 'cancelled'
+                  });
+
+                if (error || !result?.success) {
+                  Alert.alert('Error', 'Failed to cancel booking');
+                  return;
+                }
 
                 await updateDriverStatus('online');
                 setCurrentBooking(null);
+                await loadScheduledBookings();
               } catch (error) {
                 console.error('Error cancelling booking:', error);
                 Alert.alert('Error', 'Failed to cancel booking');
