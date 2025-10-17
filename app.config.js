@@ -25,11 +25,7 @@ export default {
       supportsTablet: true
     },
     android: {
-      package: "com.a1taxi.driverpro",
-      adaptiveIcon: {
-        foregroundImage: "./assets/images/adaptive-icon.png",
-        backgroundColor: "#ffffff"
-      }
+      package: "com.a1taxi.driverpro"
     },
     web: {
       bundler: "metro",
