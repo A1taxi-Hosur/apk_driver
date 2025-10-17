@@ -213,25 +213,22 @@ export function RideProvider({ children }: RideProviderProps) {
       // Load current ride (accepted, in_progress, driver_arrived)
       console.log('🔍 Loading current ride...')
       const { data: currentRideData, error: currentRideError } = await supabase
-        .from('rides')
-        .select(`
-          *,
-          customer:users!rides_customer_id_fkey(
-            id,
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .eq('driver_id', driver.id)
-        .in('status', ['accepted', 'driver_arrived', 'in_progress'])
-        .order('created_at', { ascending: false })
-        .limit(1)
+        .rpc('get_driver_current_ride', {
+          p_driver_id: driver.id
+        })
 
       if (currentRideError) {
         console.error('Error loading current ride:', currentRideError)
       } else {
-        const ride = currentRideData && currentRideData.length > 0 ? currentRideData[0] : null
+        const ride = currentRideData && currentRideData.length > 0 ? {
+          ...currentRideData[0],
+          customer: {
+            id: currentRideData[0].customer_id,
+            full_name: currentRideData[0].customer_full_name,
+            phone_number: currentRideData[0].customer_phone,
+            email: currentRideData[0].customer_email
+          }
+        } : null
         setCurrentRide(ride)
         console.log('✅ Current ride loaded:', ride ? {
           id: ride.id,
@@ -252,12 +249,12 @@ export function RideProvider({ children }: RideProviderProps) {
       } else {
         console.log('🔍 Loading pending ride notifications...')
         const { data: notifications, error: notificationsError } = await supabase
-          .from('notifications')
-          .select('*')
-          .eq('user_id', driver.user_id)
-          .eq('type', 'ride_request')
-          .eq('status', 'unread')
-          .order('created_at', { ascending: false })
+          .rpc('get_user_notifications', {
+            p_user_id: driver.user_id,
+            p_type: 'ride_request',
+            p_status: 'unread',
+            p_limit: 50
+          })
 
         if (notificationsError) {
           console.error('Error loading notifications:', notificationsError)
@@ -273,11 +270,9 @@ export function RideProvider({ children }: RideProviderProps) {
 
           // Fetch actual rides from database to validate they still exist
           const { data: actualRides, error: ridesError } = await supabase
-            .from('rides')
-            .select('id, status, driver_id')
-            .in('id', rideIds)
-            .eq('status', 'requested')
-            .is('driver_id', null)
+            .rpc('get_available_rides', {
+              p_ride_ids: rideIds
+            })
 
           if (ridesError) {
             console.error('Error validating rides:', ridesError)
@@ -295,10 +290,11 @@ export function RideProvider({ children }: RideProviderProps) {
           if (invalidNotifications.length > 0) {
             console.log(`🧹 Cleaning up ${invalidNotifications.length} invalid notifications`)
             const invalidNotifIds = invalidNotifications.map(n => n.id)
-            await supabase
-              .from('notifications')
-              .update({ status: 'read' })
-              .in('id', invalidNotifIds)
+            await supabase.rpc('update_notification_status', {
+              p_notification_ids: invalidNotifIds,
+              p_user_id: driver.user_id,
+              p_status: 'read'
+            })
           }
 
           // Convert valid notifications to ride objects
@@ -396,14 +392,12 @@ export function RideProvider({ children }: RideProviderProps) {
         
         // Update driver status to busy
         await updateDriverStatus('busy')
-        
-        // Mark notification as read
-        await supabase
-          .from('notifications')
-          .update({ status: 'read' })
-          .eq('user_id', driver.user_id)
-          .eq('type', 'ride_request')
-          .contains('data', { ride_id: rideId })
+
+        // Mark notification as read using RPC
+        await supabase.rpc('mark_ride_notification_as_read', {
+          p_user_id: driver.user_id,
+          p_ride_id: rideId
+        })
 
         // Refresh rides to get updated data
         await loadRides()
@@ -428,13 +422,11 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('=== DECLINING RIDE ===')
       console.log('Ride ID:', rideId)
 
-      // Mark notification as read (declined)
-      await supabase
-        .from('notifications')
-        .update({ status: 'read' })
-        .eq('user_id', driver.user_id)
-        .eq('type', 'ride_request')
-        .contains('data', { ride_id: rideId })
+      // Mark notification as read (declined) using RPC
+      await supabase.rpc('mark_ride_notification_as_read', {
+        p_user_id: driver.user_id,
+        p_ride_id: rideId
+      })
 
       // Remove from pending rides
       setPendingRides(prev => prev.filter(ride => ride.id !== rideId))
@@ -453,32 +445,21 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('=== MARKING DRIVER ARRIVED ===')
       console.log('Ride ID:', rideId)
 
-      const { data: updatedRide, error } = await supabase
-        .from('rides')
-        .update({
-          status: 'driver_arrived',
-          updated_at: new Date().toISOString()
+      const { data: result, error } = await supabase
+        .rpc('update_ride_status_for_driver', {
+          p_ride_id: rideId,
+          p_driver_id: driver.id,
+          p_status: 'driver_arrived'
         })
-        .eq('id', rideId)
-        .eq('driver_id', driver.id)
-        .select(`
-          *,
-          customer:users!rides_customer_id_fkey(
-            id,
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .single()
 
-      if (error) {
-        console.error('Error marking driver arrived:', error)
+      if (error || !result?.success) {
+        console.error('Error marking driver arrived:', error || result?.error)
         setError('Failed to mark as arrived')
         return
       }
 
-      setCurrentRide(updatedRide)
+      // Reload rides to get updated data
+      await loadRides()
       console.log('✅ Driver marked as arrived')
     } catch (error) {
       console.error('Exception marking driver arrived:', error)
@@ -492,17 +473,16 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
 
       const otp = Math.floor(1000 + Math.random() * 9000).toString()
-      
-      const { error } = await supabase
-        .from('rides')
-        .update({
-          pickup_otp: otp,
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', rideId)
 
-      if (error) {
-        console.error('Error generating pickup OTP:', error)
+      const { data: result, error } = await supabase
+        .rpc('update_ride_pickup_otp', {
+          p_ride_id: rideId,
+          p_driver_id: driver?.id,
+          p_otp: otp
+        })
+
+      if (error || !result?.success) {
+        console.error('Error generating pickup OTP:', error || result?.error)
         setError('Failed to generate OTP')
         return null
       }
@@ -517,30 +497,32 @@ export function RideProvider({ children }: RideProviderProps) {
   }
 
   const verifyPickupOTP = async (rideId: string, otp: string): Promise<boolean> => {
+    if (!driver) return false
+
     try {
       console.log('=== VERIFYING PICKUP OTP ===')
       console.log('Ride ID:', rideId)
       console.log('OTP:', otp)
 
-      const { data: ride, error } = await supabase
-        .from('rides')
-        .select('pickup_otp')
-        .eq('id', rideId)
-        .single()
+      const { data: result, error } = await supabase
+        .rpc('verify_and_start_ride', {
+          p_ride_id: rideId,
+          p_driver_id: driver.id,
+          p_otp: otp
+        })
 
-      if (error || !ride) {
-        console.error('Error fetching ride for OTP verification:', error)
-        setError('Failed to verify OTP')
+      if (error || !result?.success) {
+        console.error('Error verifying OTP:', error || result?.error)
+        setError(result?.error || 'Failed to verify OTP')
         return false
       }
 
-      if (ride.pickup_otp !== otp) {
-        setError('Incorrect OTP. Please try again.')
-        return false
-      }
+      // Reload rides to get updated status
+      await loadRides()
 
-      // Start the ride
-      await startRide(rideId)
+      // Start trip location tracking
+      await TripLocationTracker.startTripTracking(rideId, 'regular', driver.user_id)
+
       console.log('✅ Pickup OTP verified and ride started')
       return true
     } catch (error) {
@@ -605,22 +587,23 @@ export function RideProvider({ children }: RideProviderProps) {
   }
 
   const generateDropOTP = async (rideId: string): Promise<string | null> => {
+    if (!driver) return null
+
     try {
       console.log('=== GENERATING DROP OTP ===')
       console.log('Ride ID:', rideId)
 
       const otp = Math.floor(1000 + Math.random() * 9000).toString()
-      
-      const { error } = await supabase
-        .from('rides')
-        .update({
-          drop_otp: otp,
-          updated_at: new Date().toISOString()
-        })
-        .eq('id', rideId)
 
-      if (error) {
-        console.error('Error generating drop OTP:', error)
+      const { data: result, error } = await supabase
+        .rpc('update_ride_drop_otp', {
+          p_ride_id: rideId,
+          p_driver_id: driver.id,
+          p_otp: otp
+        })
+
+      if (error || !result?.success) {
+        console.error('Error generating drop OTP:', error || result?.error)
         setError('Failed to generate OTP')
         return null
       }
