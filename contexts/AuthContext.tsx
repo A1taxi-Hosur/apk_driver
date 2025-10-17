@@ -77,7 +77,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
         
         // Try to load driver data for this session
         try {
-          const { data: sessionDriverData, error: sessionDriverError } = await supabaseAdmin
+          const { data: sessionDriverData, error: sessionDriverError } = await supabase
             .from('drivers')
             .select(`
               *,
@@ -147,7 +147,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           
           // CRITICAL: Always fetch current status from database, never trust stored session status
           try {
-            const { data: currentDriverData, error: driverError } = await supabaseAdmin
+            const { data: currentDriverData, error: driverError } = await supabase
               .from('drivers')
               .select(`
                 *,
@@ -215,97 +215,40 @@ export function AuthProvider({ children }: AuthProviderProps) {
       console.log('=== DRIVER AUTHENTICATION ===')
       console.log('Username:', username)
       console.log('Password length:', password.length)
-      console.log('Supabase URL:', process.env.EXPO_PUBLIC_SUPABASE_URL)
-      
+
       setLoading(true)
-      
-      // Step 1: Find driver credentials
-      console.log('🔍 Looking up driver credentials...')
-      
-      // First, let's see ALL credentials in the table (for debugging)
-      console.log('🔍 Fetching ALL credentials for debugging...')
-      try {
-        // Use admin client to bypass RLS for authentication
-        const client = supabaseAdmin || supabase
-        const { data: allCreds, error: allError } = await client
-          .from('driver_credentials')
-          .select('id, username, created_at')
-        
-        if (allError) {
-          console.error('❌ Error fetching all credentials:', allError)
-          console.error('Error details:', {
-            code: allError.code,
-            message: allError.message,
-            details: allError.details,
-            hint: allError.hint
-          })
-        } else {
-          console.log('✅ All credentials in table:', allCreds)
-          console.log('Total credentials found:', allCreds?.length || 0)
-          if (allCreds && allCreds.length > 0) {
-            console.log('Available usernames:', allCreds.map(c => `"${c.username}"`))
-          }
-        }
-      } catch (debugError) {
-        console.error('Debug query failed:', debugError)
-      }
-      
-      // Now try the specific query
-      console.log('🔍 Looking for specific username:', `"${username}"`)
-      const { data: credentials, error: credError } = await supabaseAdmin
-        .from('driver_credentials')
-        .select('*')
-        .eq('username', username)
-      
-      console.log('Query result:', { data: credentials, error: credError })
-      
-      if (credError) {
-        console.error('❌ Database error details:', {
-          code: credError.code,
-          message: credError.message,
-          details: credError.details,
-          hint: credError.hint
+
+      // Step 1: Authenticate using RPC function (bypasses RLS)
+      console.log('🔍 Authenticating driver credentials via RPC...')
+
+      const { data: authResult, error: authError } = await supabase
+        .rpc('authenticate_driver', {
+          p_username: username,
+          p_password: password
         })
-        
-        // If no rows found, show available usernames for debugging
-        if (credError.code === 'PGRST116') {
-          throw new Error('Invalid username or password')
-        }
-        
+
+      console.log('Authentication result:', authResult)
+
+      if (authError) {
+        console.error('❌ Authentication RPC error:', authError)
         throw new Error('Database connection failed')
       }
-      
-      // Handle array result (without .single())
-      if (!credentials || credentials.length === 0) {
-        console.error('❌ Username not found:', username)
+
+      if (!authResult || !authResult.success) {
+        console.error('❌ Authentication failed:', authResult?.message)
         throw new Error('Invalid username or password')
       }
-      
-      // Get first result if it's an array
-      const cred = Array.isArray(credentials) ? credentials[0] : credentials
-      console.log('✅ Found credentials for username:', username)
-      console.log('Credential ID:', cred.id)
-      
-      // Step 2: Verify password (simple comparison for now)
-      console.log('🔐 Verifying password...')
-      console.log('Stored password hash:', cred.password_hash)
-      console.log('Provided password:', password)
-      console.log('Passwords match:', cred.password_hash === password)
-      
-      if (cred.password_hash !== password) {
-        console.error('❌ Password verification failed')
-        throw new Error('Invalid username or password')
-      }
-      
-      console.log('✅ Password verified')
-      
-      // Step 3: Get user data
+
+      console.log('✅ Authentication successful')
+      console.log('User ID:', authResult.user_id)
+
+      // Step 2: Get user data
       console.log('📋 Loading user profile...')
-      const { data: userData, error: userError } = await supabaseAdmin
+      const { data: userData, error: userError } = await supabase
         .from('users')
         .select('*')
-        .eq('id', cred.user_id)
-        .single()
+        .eq('id', authResult.user_id)
+        .maybeSingle()
       
       if (userError || !userData) {
         console.error('❌ User not found:', userError)
@@ -319,10 +262,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
       }
       
       console.log('✅ User verified as driver')
-      
-      // Step 4: Get CURRENT driver data with vehicle from database (FRESH DATA)
+
+      // Step 3: Get CURRENT driver data with vehicle from database (FRESH DATA)
       console.log('🚗 Loading driver profile...')
-      const { data: driverData, error: driverError } = await supabaseAdmin
+      const { data: driverData, error: driverError } = await supabase
         .from('drivers')
         .select(`
           *,
@@ -337,7 +280,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
             capacity
           )
         `)
-        .eq('user_id', cred.user_id)
+        .eq('user_id', authResult.user_id)
       
       if (driverError) {
         console.error('❌ Driver profile not found:', driverError)
@@ -345,7 +288,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       }
       
       if (!driverData || driverData.length === 0) {
-        console.error('❌ No driver record found for user:', cred.user_id)
+        console.error('❌ No driver record found for user:', authResult.user_id)
         throw new Error('Driver profile not found')
       }
       
@@ -367,9 +310,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
       // FOR TESTING: Force status to online
       console.log('🧪 TESTING MODE ACTIVE - Ensuring driver is ONLINE and AVAILABLE')
       try {
-        const { error: statusUpdateError } = await supabaseAdmin
+        const { error: statusUpdateError } = await supabase
           .from('drivers')
-          .update({ 
+          .update({
             status: 'online',
             is_verified: true,
             updated_at: new Date().toISOString()
@@ -478,24 +421,24 @@ export function AuthProvider({ children }: AuthProviderProps) {
       // Only update database if this is an actual change
       if (isActualChange) {
         console.log('📊 WRITING TO DATABASE - This is the authoritative source of truth')
-        
+
         // When going online, ensure driver is verified and available for customers
-        const updateData: any = { 
+        const updateData: any = {
           status,
           updated_at: new Date().toISOString()
         };
-        
+
         if (status === 'online') {
           console.log('🟢 Driver going ONLINE - ensuring availability for customers');
           updateData.is_verified = true; // Ensure driver is verified when online
         }
-        
-        const { data: updatedData, error } = await supabaseAdmin
+
+        const { data: updatedData, error } = await supabase
           .from('drivers')
           .update(updateData)
           .eq('id', driver.id)
           .select()
-          .single()
+          .maybeSingle()
 
         if (error) {
           console.error('Error updating driver status:', error)
