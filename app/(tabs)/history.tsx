@@ -74,34 +74,10 @@ export default function HistoryScreen() {
       console.log('Driver Name:', driver.user?.full_name);
       
       const { data, error } = await supabase
-        .from('rides')
-        .select(`
-          id,
-          ride_code,
-          pickup_address,
-          destination_address,
-          pickup_landmark,
-          destination_landmark,
-          booking_type,
-          vehicle_type,
-          status,
-          fare_amount,
-          distance_km,
-          duration_minutes,
-          payment_method,
-          payment_status,
-          rating,
-          created_at,
-          updated_at,
-          customer:users!rides_customer_id_fkey(
-            full_name,
-            phone_number
-          )
-        `)
-        .eq('driver_id', driver.id)
-        .in('status', ['completed', 'cancelled'])
-        .order('created_at', { ascending: false })
-        .limit(100);
+        .rpc('get_driver_ride_history', {
+          p_driver_id: driver.id,
+          p_limit: 100
+        });
 
       if (error) {
         console.error('Error loading ride history:', error);
@@ -109,9 +85,15 @@ export default function HistoryScreen() {
         return;
       }
 
-      const rides = data || [];
+      const rides = (data || []).map(ride => ({
+        ...ride,
+        customer: {
+          full_name: ride.customer_full_name,
+          phone_number: ride.customer_phone
+        }
+      }));
       console.log(`✅ Loaded ${rides.length} historical rides`);
-      
+
       // Log some sample rides for debugging
       if (rides.length > 0) {
         console.log('Sample rides:');
@@ -119,8 +101,8 @@ export default function HistoryScreen() {
           console.log(`${index + 1}. ${ride.ride_code}: ${ride.pickup_address} → ${ride.destination_address} (₹${ride.fare_amount})`);
         });
       }
-      
-      setRideHistory(data || []);
+
+      setRideHistory(rides);
       
       // Calculate stats
       const completedRides = rides.filter(ride => ride.status === 'completed');

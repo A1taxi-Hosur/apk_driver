@@ -85,36 +85,23 @@ export default function EarningsScreen() {
       console.log('=== LOADING EARNINGS DATA ===');
       console.log('Driver ID:', driver.id);
       
-      // Fetch all completed rides for this driver
+      // Fetch all completed rides for this driver using RPC
       const { data: rides, error } = await supabase
-        .from('rides')
-        .select(`
-          id,
-          ride_code,
-          fare_amount,
-          payment_method,
-          payment_status,
-          distance_km,
-          duration_minutes,
-          created_at,
-          pickup_address,
-          destination_address,
-          rating,
-          customer:users!rides_customer_id_fkey(
-            full_name
-          )
-        `)
-        .eq('driver_id', driver.id)
-        .eq('status', 'completed')
-        .not('fare_amount', 'is', null)
-        .order('created_at', { ascending: false });
+        .rpc('get_driver_completed_rides', {
+          p_driver_id: driver.id
+        });
 
       if (error) {
         console.error('Error loading earnings:', error);
         return;
       }
 
-      const completedRides = rides || [];
+      const completedRides = (rides || []).map(ride => ({
+        ...ride,
+        customer: {
+          full_name: ride.customer_full_name
+        }
+      }));
       console.log(`✅ Loaded ${completedRides.length} completed rides`);
 
       // Calculate date ranges

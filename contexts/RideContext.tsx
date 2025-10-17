@@ -629,66 +629,50 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('🚨 Driver ID:', driver.id)
       console.log('🚨 Driver User ID:', driver.user_id)
 
-      // Get current ride details
-      const { data: ride, error: rideError } = await supabase
-        .from('rides')
-        .select(`
-          *,
-          customer:users!rides_customer_id_fkey(
-            id,
-            full_name,
-            phone_number,
-            email
-          )
-        `)
-        .eq('id', rideId)
-        .single()
+      // Get current ride details using RPC
+      const { data: rideData, error: rideError } = await supabase
+        .rpc('get_ride_details_for_completion', {
+          p_ride_id: rideId,
+          p_driver_id: driver.id
+        })
 
-      if (rideError || !ride) {
+      if (rideError || !rideData || rideData.length === 0) {
         console.error('❌ Error fetching ride for completion:', rideError)
         setError('Failed to fetch ride details')
         return { success: false }
       }
 
-      // Fetch driver details
-      const { data: driverDetails, error: driverError } = await supabase
-        .from('drivers')
-        .select('*')
-        .eq('id', driver.id)
-        .single()
+      const ride = {
+        ...rideData[0],
+        customer: {
+          id: rideData[0].customer_id,
+          full_name: rideData[0].customer_full_name,
+          phone_number: rideData[0].customer_phone,
+          email: rideData[0].customer_email
+        }
+      }
 
-      if (driverError || !driverDetails) {
+      // Fetch driver and vehicle details using RPC
+      const { data: driverData, error: driverError } = await supabase
+        .rpc('get_driver_details_with_vehicle', {
+          p_driver_id: driver.id
+        })
+
+      if (driverError || !driverData || driverData.length === 0) {
         console.error('❌ Error fetching driver details:', driverError)
         setError('Failed to fetch driver details')
         return { success: false }
       }
 
-      // Fetch user details for driver
-      const { data: userData, error: userError } = await supabase
-        .from('users')
-        .select('full_name')
-        .eq('id', driverDetails.user_id)
-        .maybeSingle()
-
-      if (userError) {
-        console.warn('⚠️ Error fetching user details:', userError)
-      }
-
-      // Fetch vehicle details if driver has a vehicle
-      let vehicleData = null
-      if (driverDetails.vehicle_id) {
-        const { data: vehicle, error: vehicleError } = await supabase
-          .from('vehicles')
-          .select('id, make, model, color, registration_number')
-          .eq('id', driverDetails.vehicle_id)
-          .maybeSingle()
-
-        if (vehicleError) {
-          console.warn('⚠️ Error fetching vehicle details:', vehicleError)
-        } else {
-          vehicleData = vehicle
-        }
-      }
+      const driverDetails = driverData[0]
+      const userData = { full_name: driverDetails.full_name }
+      const vehicleData = driverDetails.vehicle_id ? {
+        id: driverDetails.vehicle_id,
+        make: driverDetails.vehicle_make,
+        model: driverDetails.vehicle_model,
+        color: driverDetails.vehicle_color,
+        registration_number: driverDetails.vehicle_registration
+      } : null
 
       console.log('✅ Driver and vehicle details fetched:', {
         driverName: userData?.full_name,
@@ -867,23 +851,18 @@ export function RideProvider({ children }: RideProviderProps) {
 
       console.log('✅ Fare calculated successfully:', fareResult.fareBreakdown)
 
-      // Update ride status to completed
-      const { data: completedRide, error: updateError } = await supabase
-        .from('rides')
-        .update({
-          status: 'completed',
-          fare_amount: fareResult.fareBreakdown.total_fare,
-          distance_km: actualDistanceKm,
-          duration_minutes: actualDurationMinutes,
-          payment_status: 'completed',
-          updated_at: new Date().toISOString()
+      // Update ride status to completed using RPC
+      const { data: completionResult, error: updateError } = await supabase
+        .rpc('update_ride_to_completed', {
+          p_ride_id: rideId,
+          p_driver_id: driver.id,
+          p_fare_amount: fareResult.fareBreakdown.total_fare,
+          p_distance_km: actualDistanceKm,
+          p_duration_minutes: actualDurationMinutes
         })
-        .eq('id', rideId)
-        .select()
-        .single()
 
-      if (updateError) {
-        console.error('❌ Error updating ride to completed:', updateError)
+      if (updateError || !completionResult?.success) {
+        console.error('❌ Error updating ride to completed:', updateError || completionResult?.error)
         setError('Failed to complete ride')
         return { success: false }
       }
@@ -959,19 +938,16 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
       console.log('Reason:', reason)
 
-      const { error } = await supabase
-        .from('rides')
-        .update({
-          status: 'cancelled',
-          cancelled_by: driver.user_id,
-          cancellation_reason: reason,
-          updated_at: new Date().toISOString()
+      const { data: result, error } = await supabase
+        .rpc('cancel_ride_by_driver', {
+          p_ride_id: rideId,
+          p_driver_id: driver.id,
+          p_user_id: driver.user_id,
+          p_reason: reason
         })
-        .eq('id', rideId)
-        .eq('driver_id', driver.id)
 
-      if (error) {
-        console.error('Error cancelling ride:', error)
+      if (error || !result?.success) {
+        console.error('Error cancelling ride:', error || result?.error)
         setError('Failed to cancel ride')
         return
       }
