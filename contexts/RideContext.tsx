@@ -372,40 +372,32 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
       console.log('Driver ID:', driver.id)
 
-      const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL
-      const response = await fetch(`${supabaseUrl}/functions/v1/driver-api/accept-ride`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY}`,
-        },
-        body: JSON.stringify({
-          ride_id: rideId,
-          driver_id: driver.id
-        })
+      // Use RPC function to accept ride (more reliable than edge function)
+      const { data: result, error } = await supabase.rpc('accept_ride_rpc', {
+        p_ride_id: rideId,
+        p_driver_id: driver.id
       })
 
-      const result = await response.json()
-      
-      if (result.success) {
-        console.log('✅ Ride accepted successfully')
-        
-        // Update driver status to busy
-        await updateDriverStatus('busy')
+      if (error) {
+        console.error('❌ RPC error accepting ride:', error)
+        setError('Failed to accept ride')
+        return false
+      }
 
-        // Mark notification as read using RPC
-        await supabase.rpc('mark_ride_notification_as_read', {
-          p_user_id: driver.user_id,
-          p_ride_id: rideId
-        })
+      if (result?.success) {
+        console.log('✅ Ride accepted successfully via RPC')
+        console.log('Ride code:', result.ride_code)
+
+        // Update local driver status
+        await updateDriverStatus('busy')
 
         // Refresh rides to get updated data
         await loadRides()
-        
+
         return true
       } else {
-        console.error('❌ Failed to accept ride:', result.error)
-        setError(result.error)
+        console.error('❌ Failed to accept ride:', result?.error)
+        setError(result?.error || 'Failed to accept ride')
         return false
       }
     } catch (error) {
