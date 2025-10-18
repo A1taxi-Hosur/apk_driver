@@ -25,7 +25,12 @@ export default {
       supportsTablet: true
     },
     android: {
-      package: "com.a1taxi.driverpro"
+      package: "com.a1taxi.driverpro",
+      config: {
+        googleMaps: {
+          apiKey: "AIzaSyBIHJUk4DuAG7tjp_gIdNhUJdpBKN1eM2Q"
+        }
+      }
     },
     web: {
       bundler: "metro",
@@ -51,12 +56,6 @@ export default {
         "expo-background-fetch",
         {
           backgroundFetchInterval: 10
-        }
-      ],
-      [
-        "react-native-maps",
-        {
-          googleMapsApiKey: "AIzaSyBIHJUk4DuAG7tjp_gIdNhUJdpBKN1eM2Q"
         }
       ]
     ],
