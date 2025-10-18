@@ -82,14 +82,15 @@ async function checkDriverOnlineStatus(): Promise<boolean> {
 
     const sessionData = JSON.parse(storedSession);
     const driver = sessionData.driver;
-    
+
     // Check if session is not too old (24 hours)
     const sessionAge = Date.now() - sessionData.timestamp;
     if (sessionAge > 24 * 60 * 60 * 1000) {
       return false;
     }
 
-    return driver && driver.status === 'online';
+    // Driver should continue updating location if online OR busy
+    return driver && (driver.status === 'online' || driver.status === 'busy');
   } catch (error) {
     console.error('Error checking driver status:', error);
     return false;
@@ -107,123 +108,59 @@ async function sendLocationToDatabase(location: any) {
     const sessionData = JSON.parse(storedSession);
     const driver = sessionData.driver;
 
-    if (!driver?.user_id) {
-      console.log('❌ No driver user_id for background location update');
+    if (!driver?.id || !driver?.user_id) {
+      console.log('❌ No driver id/user_id for background location update');
       return;
     }
 
-    const locationPayload = {
-      user_id: driver.user_id,
-      latitude: location.coords.latitude,
-      longitude: location.coords.longitude,
-      heading: location.coords.heading,
-      speed: location.coords.speed,
-      accuracy: location.coords.accuracy
-    };
+    console.log('📤 Background location update via RPC...');
 
-    console.log('📤 Attempting to send background location...');
-    
-    // Get environment variables and validate them
+    // Get environment variables
     const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
     const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
-    
+
     // Validate environment variables
-    if (!supabaseUrl || supabaseUrl === 'your_supabase_url_here' || supabaseUrl === 'undefined' || supabaseUrl.includes('your-project-ref')) {
-      console.error('❌ EXPO_PUBLIC_SUPABASE_URL is not configured properly in background service');
-      console.log('⚠️ Skipping background location update - edge function not available');
-      return;
-    }
-    
-    if (!supabaseAnonKey || supabaseAnonKey === 'your_supabase_anon_key_here' || supabaseAnonKey === 'undefined') {
-      console.error('❌ EXPO_PUBLIC_SUPABASE_ANON_KEY is not configured properly in background service');
-      console.log('⚠️ Skipping background location update - edge function not available');
+    if (!supabaseUrl || !supabaseAnonKey) {
+      console.error('❌ Supabase credentials not configured');
       return;
     }
 
-    // Test edge function accessibility first
-    console.log('🔍 Testing edge function accessibility in background service...');
+    // Use RPC function to update location (bypasses RLS)
     try {
-      const testResponse = await fetch(`${supabaseUrl}/functions/v1/update-driver-location`, {
-        method: 'OPTIONS',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        signal: AbortSignal.timeout(10000) // 10 second timeout for test
-      });
-      
-      if (!testResponse.ok) {
-        throw new Error(`Edge function not accessible: ${testResponse.status}`);
-      }
-      console.log('✅ Edge function is accessible in background service');
-    } catch (testError) {
-      console.error('❌ Edge function accessibility test failed in background service:', testError.message);
-      console.log('⚠️ Skipping background location update - edge function not available');
-      return;
-    }
-
-    // Send location to edge function with timeout
-    console.log('📤 Sending background location to edge function...');
-    try {
-      const response = await fetch(`${supabaseUrl}/functions/v1/update-driver-location`, {
+      const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/update_driver_location_rpc`, {
         method: 'POST',
         headers: {
+          'apikey': supabaseAnonKey,
           'Authorization': `Bearer ${supabaseAnonKey}`,
           'Content-Type': 'application/json',
+          'Prefer': 'return=representation'
         },
-        body: JSON.stringify(locationPayload),
-        signal: AbortSignal.timeout(8000) // 8 second timeout
+        body: JSON.stringify({
+          p_driver_id: driver.id,
+          p_latitude: location.coords.latitude,
+          p_longitude: location.coords.longitude,
+          p_heading: location.coords.heading || null,
+          p_speed: location.coords.speed || null,
+          p_accuracy: location.coords.accuracy || null
+        }),
+        signal: AbortSignal.timeout(8000)
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-
-      const result = await response.json();
-      
-      if (result.success) {
-        console.log('✅ Background location updated successfully via edge function');
-      } else {
-        console.error('❌ Edge function returned error in background service:', result.error);
-        throw new Error(result.error);
-      }
-    } catch (fetchError) {
-      console.error('❌ Background edge function fetch failed:', fetchError.message);
-      console.log('⚠️ Trying RPC fallback for background location update...');
-
-      // Fallback: Try using RPC function
-      try {
-        const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/upsert_driver_location`, {
-          method: 'POST',
-          headers: {
-            'apikey': supabaseAnonKey,
-            'Authorization': `Bearer ${supabaseAnonKey}`,
-            'Content-Type': 'application/json',
-            'Prefer': 'return=representation'
-          },
-          body: JSON.stringify({
-            p_user_id: driver.user_id,
-            p_latitude: locationPayload.latitude,
-            p_longitude: locationPayload.longitude,
-            p_heading: locationPayload.heading,
-            p_speed: locationPayload.speed,
-            p_accuracy: locationPayload.accuracy
-          }),
-          signal: AbortSignal.timeout(8000)
-        });
-
-        if (rpcResponse.ok) {
-          const rpcResult = await rpcResponse.json();
-          console.log('✅ Background location updated via RPC fallback:', rpcResult);
+      if (rpcResponse.ok) {
+        const result = await rpcResponse.json();
+        if (result && result.success) {
+          console.log('✅ Background location updated via RPC:', result.action);
         } else {
-          console.error('❌ RPC fallback failed:', rpcResponse.status);
+          console.error('❌ RPC returned error:', result?.error);
         }
-      } catch (rpcError) {
-        console.error('❌ RPC fallback exception:', rpcError.message);
+      } else {
+        const errorText = await rpcResponse.text();
+        console.error('❌ RPC request failed:', rpcResponse.status, errorText);
       }
-
-      return;
+    } catch (rpcError) {
+      console.error('❌ RPC exception:', rpcError.message);
     }
-    
+
   } catch (error) {
     console.error('❌ Exception in background location update:', error.message);
     console.log('⚠️ Background location service will continue running');
