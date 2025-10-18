@@ -52,6 +52,12 @@ export default {
         {
           backgroundFetchInterval: 10
         }
+      ],
+      [
+        "react-native-maps",
+        {
+          googleMapsApiKey: "AIzaSyBIHJUk4DuAG7tjp_gIdNhUJdpBKN1eM2Q"
+        }
       ]
     ],
     extra: {
