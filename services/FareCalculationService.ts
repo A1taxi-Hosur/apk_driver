@@ -73,17 +73,18 @@ export class FareCalculationService {
       console.log('Ride ID:', rideId);
       console.log('Fare breakdown received:', JSON.stringify(fareBreakdown, null, 2));
 
-      // Get ride details
-      const { data: ride, error: rideError } = await supabase
-        .from('rides')
-        .select('*')
-        .eq('id', rideId)
-        .single();
+      // Get ride details using RPC to bypass RLS
+      const { data: rideData, error: rideError } = await supabase
+        .rpc('get_ride_by_id', {
+          p_ride_id: rideId
+        });
 
-      if (rideError || !ride) {
+      if (rideError || !rideData || rideData.length === 0) {
         console.error('Error fetching ride:', rideError);
         return { success: false, error: 'Ride not found' };
       }
+
+      const ride = rideData[0];
 
       // Round the total fare
       const roundedFareBreakdown = {
@@ -177,17 +178,18 @@ export class FareCalculationService {
       console.log('Actual Distance:', actualDistanceKm, 'km');
       console.log('Actual Duration:', actualDurationMinutes, 'minutes');
 
-      // Get ride details
-      const { data: ride, error: rideError } = await supabase
-        .from('rides')
-        .select('*')
-        .eq('id', rideId)
-        .single();
+      // Get ride details using RPC to bypass RLS
+      const { data: rideData, error: rideError } = await supabase
+        .rpc('get_ride_by_id', {
+          p_ride_id: rideId
+        });
 
-      if (rideError || !ride) {
+      if (rideError || !rideData || rideData.length === 0) {
         console.error('Error fetching ride:', rideError);
         return { success: false, error: 'Ride not found' };
       }
+
+      const ride = rideData[0];
 
       console.log('Ride details:', {
         booking_type: ride.booking_type,

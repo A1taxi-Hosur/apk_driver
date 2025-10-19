@@ -1,4 +1,5 @@
 import Constants from 'expo-constants';
+import { Linking, Platform } from 'react-native';
 
 export const GOOGLE_MAPS_API_KEY = Constants.expoConfig?.extra?.googleMapsApiKey || '';
 
@@ -13,26 +14,29 @@ export async function openGoogleMapsNavigation(
   try {
     const destination = `${destinationLat},${destinationLng}`;
     const label = destinationAddress ? encodeURIComponent(destinationAddress) : 'Destination';
-    
+
     // For web, open Google Maps in a new tab
-    if (typeof window !== 'undefined') {
+    if (Platform.OS === 'web') {
       const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}&destination_place_id=${label}`;
-      window.open(mapsUrl, '_blank');
+      if (typeof window !== 'undefined') {
+        window.open(mapsUrl, '_blank');
+      }
       return;
     }
-    
-    // For mobile, use deep linking
-    const { Linking } = require('react-native');
+
+    // For mobile (Android/iOS), use deep linking
     const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
-    
+
     const canOpen = await Linking.canOpenURL(mapsUrl);
     if (canOpen) {
       await Linking.openURL(mapsUrl);
     } else {
       console.error('Cannot open Google Maps');
+      throw new Error('Cannot open Google Maps on this device');
     }
   } catch (error) {
     console.error('Error opening Google Maps navigation:', error);
+    throw error;
   }
 }
 
