@@ -59,6 +59,7 @@ interface RideContextType {
   completeRide: (rideId: string) => Promise<{ success: boolean; completionData?: any }>
   cancelRide: (rideId: string, reason: string) => Promise<void>
   refreshRides: () => Promise<void>
+  clearCurrentRide: () => Promise<void>
   clearError: () => void
 }
 
@@ -869,16 +870,7 @@ export function RideProvider({ children }: RideProviderProps) {
       // Small delay to ensure database updates propagate
       await new Promise(resolve => setTimeout(resolve, 500))
 
-      // Clear current ride
-      setCurrentRide(null)
-      console.log('✅ Current ride cleared from state')
-
-      // Refresh rides to fetch new available rides
-      console.log('🔄 Refreshing rides after completion...')
-      await loadRides()
-      console.log('✅ Rides refreshed - driver can now receive new ride requests')
-
-      // Prepare completion data for modal - FIXED VERSION
+      // Prepare completion data for modal BEFORE clearing current ride
       console.log('=== PREPARING COMPLETION DATA ===')
       console.log('Raw fareBreakdown from service:', JSON.stringify(fareResult.fareBreakdown, null, 2))
 
@@ -966,6 +958,17 @@ export function RideProvider({ children }: RideProviderProps) {
     setError(null)
   }
 
+  const clearCurrentRide = async () => {
+    console.log('🧹 Clearing current ride after modal dismissal...')
+    setCurrentRide(null)
+    console.log('✅ Current ride cleared from state')
+
+    // Refresh rides to fetch new available rides
+    console.log('🔄 Refreshing rides after completion modal closed...')
+    await loadRides()
+    console.log('✅ Rides refreshed - driver can now receive new ride requests')
+  }
+
   const value = {
     currentRide,
     pendingRides,
@@ -981,6 +984,7 @@ export function RideProvider({ children }: RideProviderProps) {
     completeRide,
     cancelRide,
     refreshRides,
+    clearCurrentRide,
     clearError,
   }
 

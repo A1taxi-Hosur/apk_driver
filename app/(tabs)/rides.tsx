@@ -25,10 +25,10 @@ import { BackgroundLocationService } from '../../services/BackgroundLocationServ
 
 export default function RidesScreen() {
   const { driver, updateDriverStatus } = useAuth();
-  const { 
-    currentRide, 
-    pendingRides, 
-    loading, 
+  const {
+    currentRide,
+    pendingRides,
+    loading,
     error,
     acceptRide,
     declineRide,
@@ -40,6 +40,7 @@ export default function RidesScreen() {
     completeRide,
     cancelRide,
     refreshRides,
+    clearCurrentRide,
     clearError
   } = useRide();
   const { currentLocation, currentAddress, isTracking, isBackgroundTrackingActive } = useLocation();
@@ -637,9 +638,10 @@ export default function RidesScreen() {
         <TripCompletionModal
           visible={showCompletionModal}
           tripData={completionData}
-          onClose={() => {
+          onClose={async () => {
             setShowCompletionModal(false);
             setCompletionData(null);
+            await clearCurrentRide();
           }}
         />
       )}
