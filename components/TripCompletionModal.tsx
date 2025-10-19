@@ -4,7 +4,6 @@ import {
   Text,
   StyleSheet,
   TouchableOpacity,
-  Modal,
   Dimensions,
   ScrollView,
 } from 'react-native';
@@ -77,14 +76,12 @@ export default function TripCompletionModal({
     return `₹${numericAmount.toFixed(2)}`;
   };
 
+  if (!visible) {
+    return null;
+  }
+
   return (
-    <Modal
-      visible={visible}
-      animationType="slide"
-      transparent={true}
-      onRequestClose={onClose}
-    >
-      <View style={styles.overlay}>
+    <View style={[styles.overlay, { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999 }]}>
         <View style={styles.modal}>
           {/* Header */}
           <View style={styles.header}>
@@ -369,7 +366,7 @@ export default function TripCompletionModal({
           </TouchableOpacity>
         </View>
       </View>
-    </Modal>
+    </View>
   );
 }
 

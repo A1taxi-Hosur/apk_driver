@@ -412,6 +412,7 @@ export default function RidesScreen() {
   };
 
   return (
+    <>
     <SafeAreaView style={styles.container}>
       <ScrollView 
         contentContainerStyle={styles.scrollContent}
@@ -653,45 +654,46 @@ export default function RidesScreen() {
         onVerify={handleOTPVerification}
         onClose={() => setShowOTPModal(false)}
       />
-
-      {/* Trip Completion Modal */}
-      <TripCompletionModal
-        visible={completionModalState.visible && !!completionModalState.data}
-        tripData={completionModalState.data || {
-          distance: 0,
-          duration: 0,
-          fareBreakdown: {
-            booking_type: 'regular',
-            vehicle_type: 'sedan',
-            base_fare: 0,
-            distance_fare: 0,
-            time_fare: 0,
-            surge_charges: 0,
-            deadhead_charges: 0,
-            platform_fee: 0,
-            gst_on_charges: 0,
-            gst_on_platform_fee: 0,
-            extra_km_charges: 0,
-            driver_allowance: 0,
-            total_fare: 0,
-            details: {
-              actual_distance_km: 0,
-              actual_duration_minutes: 0,
-              per_km_rate: 0,
-            }
-          },
-          pickup_address: '',
-          destination_address: '',
-          booking_type: 'regular',
-          rental_hours: null
-        }}
-        onClose={async () => {
-          console.log('🚨 TRIP COMPLETION MODAL CLOSED');
-          setCompletionModalState({ visible: false, data: null });
-          await clearCurrentRide();
-        }}
-      />
     </SafeAreaView>
+
+    {/* Trip Completion Modal - Rendered outside SafeAreaView for proper z-index */}
+    <TripCompletionModal
+      visible={completionModalState.visible && !!completionModalState.data}
+      tripData={completionModalState.data || {
+        distance: 0,
+        duration: 0,
+        fareBreakdown: {
+          booking_type: 'regular',
+          vehicle_type: 'sedan',
+          base_fare: 0,
+          distance_fare: 0,
+          time_fare: 0,
+          surge_charges: 0,
+          deadhead_charges: 0,
+          platform_fee: 0,
+          gst_on_charges: 0,
+          gst_on_platform_fee: 0,
+          extra_km_charges: 0,
+          driver_allowance: 0,
+          total_fare: 0,
+          details: {
+            actual_distance_km: 0,
+            actual_duration_minutes: 0,
+            per_km_rate: 0,
+          }
+        },
+        pickup_address: '',
+        destination_address: '',
+        booking_type: 'regular',
+        rental_hours: null
+      }}
+      onClose={async () => {
+        console.log('🚨 TRIP COMPLETION MODAL CLOSED');
+        setCompletionModalState({ visible: false, data: null });
+        await clearCurrentRide();
+      }}
+    />
+    </>
   );
 }
 
