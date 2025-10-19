@@ -1,2420 +1,3478 @@
 --------- beginning of main
-10-18 20:53:57.069 26036 26104 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
-10-18 20:53:57.080 26036 12626 W SystemServiceRegistry: No service published for: wifirtt
-10-18 20:53:57.100 26036 26620 I WifiScanner: onFullResults
-10-18 20:53:57.101 26036 26620 I WifiScanner: onFullResults
-10-18 20:53:57.101 26036 26081 I WifiScanner: onFullResults
-10-18 20:53:57.149 26036 12518 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
-10-18 20:53:57.188 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:57.191 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:57.191 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:57.191 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:57.192 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:57.200 26036 26172 I fyyu    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
-10-18 20:53:57.505 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:57.506 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:57.509 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:57.510 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:57.512 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:58.521 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:58.525 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:58.525 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:58.546 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:58.576 26036 10436 I NearbySharing: Screen is unlocked
-10-18 20:53:58.576 26036 10436 I NearbySharing: Uwb feature is off.
-10-18 20:53:58.577 26036 10436 I NearbySharing: Uwb feature is off.
-10-18 20:53:58.577 26036 10436 I NearbySharing: Stopping scanning because Bluetooth is disabled.
-10-18 20:53:58.587 26036 10436 I NearbySharing: Stopping Fast Init advertisement because Bluetooth is off.
-10-18 20:53:58.587 26036 10436 I NearbySharing: Stopping advertising because Bluetooth is disabled.
-10-18 20:53:58.668  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.669  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.669  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.669  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.669  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.671  7096  7122 E VivoAudioPolicyProxyNative: VivoAudioPolicyProxy getInstanceInter: binding to vivoaudiopolicy service failed, service up?
-10-18 20:53:58.671  7096  7122 I AudioRecord: set final client name com.google.android.googlequicksearchbox(0)
-10-18 20:53:58.677  7096  7122 E word_detector_0: RecordingActivityTracker(): binding to audio service failed, service up?
-10-18 20:53:58.683  7096  7122 I AudioRecord: set(): getPolicyInputSourceForVoip mAttributes inputsource=1999, input source= 1999,flags:0
-10-18 20:53:58.723 26036 23159 I NearbyDiscovery: (REDACTED) FastPairHandler: Received action %s
-10-18 20:53:58.726 26036 10436 I NearbySharing: Starting scanning for Fast Initiation.
-10-18 20:53:58.726 26036 10436 I NearbySharing: Failed to scan for FastInitiation. Scanning is not supported on this device.
-10-18 20:53:58.726 26036 23159 I NearbyDiscovery: FastPairController: onSystemStateChanged: skip due to flag disabled [CONTEXT service_id=265 ]
-10-18 20:53:58.727 26036 10436 I NearbySharing: Dismissing HUN as there's no device nearby.
-10-18 20:53:58.727 26036 12595 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
-10-18 20:53:58.730 26106 12871 I PersonalSafety: ConnectivityProtectionLockingIntentOperation: cancelled task [CONTEXT service_id=310 ]
-10-18 20:53:58.743  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.dialer, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:53:58.751  5589  5589 I DeviceLockTags: DeviceLockTags.notifyDeviceLockStatusChanged():108 notifyDeviceLockStatusChanged(): deviceLocked=false, blockPersonalData=false
-10-18 20:53:58.751  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:53:58.756  5589  5589 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():121 Create keyboard group manager listenable future in gze
-10-18 20:53:58.758  5589  5589 I EmojifyExtensionImpl: EmojifyExtensionImpl.onCreate():602 Creating Emojify extension emc@aa505eb.
-10-18 20:53:58.758  5589  5589 I AbstractOpenableExtension: AbstractOpenableExtension.createKeyboardGroupManagerListenableFuture():121 Create keyboard group manager listenable future in emx
-10-18 20:53:58.759  5589  5589 I ClipboardDataHandler: ClipboardDataHandler.updateScreenshotsContentObserver():311 Disable the feature of handling screenshots in the clipboard.
-10-18 20:53:58.760  5589  5589 W NotificationCenter: NotificationCenter.unregisterListener():480 Listener dsf@192bf60 was not registered for notification class mpn
-10-18 20:53:58.761 26036 12881 I NearbyMediums: ModuleInitializer handles incoming intent android.intent.action.USER_PRESENT
-10-18 20:53:58.766  5589 12032 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():86 parseKeyboardGroupDef() 2132213996 -> 0_resource_name_obfuscated : WaitTime = 0 ms : RunTime = 6 ms
-10-18 20:53:58.769  5589 12882 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():86 parseKeyboardGroupDef() 2132213997 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 11 ms
-10-18 20:53:58.775  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.776  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.776  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.777  7096  7126 E VivoAudioPolicyProxyNative: VivoAudioPolicyProxy getInstanceInter: binding to vivoaudiopolicy service failed, service up?
-10-18 20:53:58.781 26036 12554 I Nearby  : (REDACTED) Beginning attempt #%d out of %d for %s...
-10-18 20:53:58.783  7096  7122 I native  : I0000 00:00:1760801038.778059    7122 soda_client.cc:330] Starting capture.
-10-18 20:53:58.783  7096  7122 I native  : I0000 00:00:1760801038.783184    7122 soda_async_impl.cc:651] SODA session starting (require_hotword:1, hotword_timeout_in_millis:0, trigger_type:TRIGGER_TYPE_UNSPECIFIED, hybrid_asr_config.mode:MODE_DEFAULT)
-10-18 20:53:58.787 26036 12554 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore default scan mode.
-10-18 20:53:58.788 26036 12554 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore device name
-10-18 20:53:58.798  5589  5589 W NotificationCenter: NotificationCenter$NotificationQueue.notifyPendingNotificationsOnExecutor():877 Heavy notify work detected on UI thread: [mpn->mou] takes 39ms
-10-18 20:53:58.798  5589  5589 I ExtensionManager: ExtensionManager.updateExtensionWrappersMap():230 The same notification is already processed
-10-18 20:53:58.799  5589 12532 I KeyboardGroupDefParser: KeyboardGroupDefParser.parseKeyboardGroupDef():86 parseKeyboardGroupDef() 2132213989 -> 0_resource_name_obfuscated : WaitTime = 1 ms : RunTime = 1 ms
-10-18 20:53:58.802  5589  5589 I ExtensionManager: ExtensionManager.updateExtensionWrappersMap():230 The same notification is already processed
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():221 Unregister key sequence nfz{labelResId=2132020499, callback=cgp@34586ce, lastModifier=2, keyCodes=[37], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.registerKeySequence():170 Register key sequence nfz{labelResId=2132020499, callback=cgp@c50551, lastModifier=2, keyCodes=[37], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():221 Unregister key sequence nfz{labelResId=2132020499, callback=cgp@4b3a60b, lastModifier=2, keyCodes=[37], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.registerKeySequence():170 Register key sequence nfz{labelResId=2132020499, callback=cgp@90ca342, lastModifier=2, keyCodes=[37], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():221 Unregister key sequence nfz{labelResId=2132020496, callback=cgp@9173f94, lastModifier=2, keyCodes=[50], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.registerKeySequence():170 Register key sequence nfz{labelResId=2132020496, callback=cgp@61a0daf, lastModifier=2, keyCodes=[50], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():221 Unregister key sequence nfz{labelResId=2132020496, callback=cgp@a2a5d39, lastModifier=2, keyCodes=[50], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.registerKeySequence():170 Register key sequence nfz{labelResId=2132020496, callback=cgp@5c811a8, lastModifier=2, keyCodes=[50], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():221 Unregister key sequence nfz{labelResId=2132020500, callback=cgp@7d3d58a, lastModifier=65536, keyCodes=[76], actions=[0]}
-10-18 20:53:58.803  5589  5589 I HardKeyTracker: HardKeyTracker.registerKeySequence():170 Register key sequence nfz{labelResId=2132020500, callback=cgp@5f60bfd, lastModifier=65536, keyCodes=[76], actions=[0]}
-10-18 20:53:58.803  5589  5589 W NotificationCenter: NotificationCenter$NotificationQueue.notifyPendingNotificationsOnExecutor():877 Heavy notify work detected on UI thread: [lva->lhd, lva->jvn, lva->jua, lva->jua, lva->jua, lva->jua, lva->jua, lva->nwr, lva->kzp, lva->jua, lva->fvc, lva->jua, lva->jua, lva->lud, lva->nii, lva->jua, lva->ltu, lva->hml, lva->jua, lva->gvk, lva->jua, lva->jua, lva->jua, lva->fxi, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nho->mtr, nhn->mtr, mpy->mpx, jtv->jtu, jtv->jtu, jtv->jtu, mpy->mpx, mpy->mpx, mpy->mpx, mpy->mpx, jtv->jtu, mpy->mpx, mpy->mpx, jtv->jtu, jtv->jtu, mpy->mpx, jtv->jtu, jtv->jtu, jtv->jtu, mpy->mpx] takes 60ms
-10-18 20:53:58.804 23128 23128 W fbservices-stub:InitStatus: Not blocking Service (51888160)
-10-18 20:53:58.804 23128 23128 W fbservices-stub:InitStatus: Not blocking Service (51888160)
-10-18 20:53:58.805 26036 26036 I RCNIntentOperation: RCN is disabled on this network.
-10-18 20:53:58.813  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.821  7096  7130 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.907 23128 23140 W cebook.services: Reducing the number of considered missed Gc histogram windows from 112 to 100
-10-18 20:53:58.915  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:53:58.916  7096  7120 I native  : I0000 00:00:1760801038.916362    7120 soda_async_impl.cc:1357] SODA received first mic audio buffer, size in bytes: 320, format: 1, channels: 1, sample rate: 16000
-10-18 20:53:59.297  7096  7120 I native  : I0000 00:00:1760801039.297196    7120 soda_async_impl.cc:1126] Not receiving any loopback audio in 500ms. Last audio received time: 1970-01-01T05:30:00+05:30, Current time: 2025-10-18T20:53:59.297193809+05:30
-10-18 20:53:59.487 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:59.487 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:59.489 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:59.489 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:53:59.490 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:53:59.627  6545  6545 I bnlz    : onStart
-10-18 20:53:59.645  6545  6545 I bldh    : (REDACTED) [%s] onStart()
-10-18 20:53:59.647  6545  6545 I blfn    : Reloading theme data
-10-18 20:53:59.659  6545  6545 I bnlz    : onResume
-10-18 20:53:59.709  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:53:59.711  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:53:59.711  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:53:59.714  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:00.479 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:00.479 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:00.480 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:00.480 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:00.481 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:01.489 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:01.489 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:01.491 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:01.492 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:01.493 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:01.801 26036 12642 I NearbyPresence: (REDACTED) %s verified [==] new request %s equals to the old request
-10-18 20:54:02.101 26036 26104 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
-10-18 20:54:02.106 26036 12595 W SystemServiceRegistry: No service published for: wifirtt
-10-18 20:54:02.295 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.299 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.299 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.301 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.488 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.488 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.489 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.489 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.490 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.491 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.666 26036 26051 I WifiScanner: onFullResults
-10-18 20:54:02.668 26036 26051 I WifiScanner: onFullResults
-10-18 20:54:02.669 26036 26082 I WifiScanner: onFullResults
-10-18 20:54:02.679 26036 12595 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
-10-18 20:54:02.701 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.701 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.702 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.702 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.702 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.704 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.708 26036 26172 I fyyu    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
-10-18 20:54:02.902 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.903 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.906 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:02.907 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.907 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:02.909 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:03.504 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:03.505 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:03.507 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:03.508 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:03.509 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:04.509 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:04.509 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:04.514 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:04.514 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:04.516 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:05.488 26036 26104 I ActivityScheduler: nextTriggerTime: 1245215351, in 500ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 62
-10-18 20:54:05.499 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:05.499 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:05.502 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:05.502 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:05.503 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:06.512 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:06.512 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:06.514 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:06.515 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:06.517 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:07.361  6545  6545 I bnlz    : onPause
-10-18 20:54:07.488 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:07.493 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:07.494 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:07.500 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:07.504  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +268ms
-10-18 20:54:07.514  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:07.515  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:07.515  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:07.516  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:07.664 26036 26104 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
-10-18 20:54:07.670 26036 12916 W SystemServiceRegistry: No service published for: wifirtt
-10-18 20:54:07.683 26036 26051 I WifiScanner: onFullResults
-10-18 20:54:07.684 26036 26051 I WifiScanner: onFullResults
-10-18 20:54:07.685 26036 26082 I WifiScanner: onFullResults
-10-18 20:54:07.733 26036 12636 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
-10-18 20:54:07.760 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:07.760 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:07.762 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:07.763 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:07.763 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:07.765 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:07.773 26036 26172 I fyyu    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
-10-18 20:54:07.779  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
-10-18 20:54:07.805  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:07.805  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#48](f:0,a:1) destructor()
-10-18 20:54:07.806  6545  6545 D BufferQueueConsumer: [VRI[Launcher]#48(BLAST Consumer)48](id:199100000030,api:0,p:-1,c:6545) disconnect
-10-18 20:54:07.822  6545  6545 I bnlz    : onStop
-10-18 20:54:07.895 26036 27707 I FontLog : (REDACTED) Received query %s, URI %s
-10-18 20:54:07.895 26036 27707 I FontLog : (REDACTED) Query [%s] resolved to %s
-10-18 20:54:07.898 26036 27707 I FontLog : (REDACTED) Fetch %s end status %s
-10-18 20:54:07.904 26036 26228 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
-10-18 20:54:07.914 26036 26228 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
-10-18 20:54:08.472 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:08.473 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:08.473 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:08.473 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:08.474 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
---------- beginning of crash
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: FATAL EXCEPTION: main
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 11348
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: java.lang.IllegalStateException: API key not found.  Check that <meta-data android:name="com.google.android.geo.API_KEY" android:value="your API key"/> is in the <application> element of AndroidManifest.xml
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.maps.api.android.lib6.common.g.b(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:117)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.maps.internal.CreatorImpl.c(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:806)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.maps.internal.CreatorImpl.newMapViewDelegate(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:23)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.maps.internal.h.br(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:311)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at m140.bat.onTransact(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:21)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.os.Binder.transact(Binder.java:1406)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.internal.maps.zza.zzJ(com.google.android.gms:play-services-maps@@18.2.0:2)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.maps.internal.zze.zzg(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.maps.zzai.zzb(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.maps.zzai.createDelegate(com.google.android.gms:play-services-maps@@18.2.0:1)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.zaf(com.google.android.gms:play-services-base@@18.2.0:6)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.onCreate(com.google.android.gms:play-services-base@@18.2.0:1)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.google.android.gms.maps.MapView.onCreate(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.rnmaps.maps.MapView.<init>(MapView.java:176)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:77)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:32)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.uimanager.ViewManager.createViewInstance(ViewManager.java:176)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:107)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:32)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.uimanager.ViewManager.createView(ViewManager.java:108)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.uimanager.NativeViewHierarchyManager.createView(NativeViewHierarchyManager.java:281)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$CreateViewOperation.execute(UIViewOperationQueue.java:160)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$DispatchUIFrameCallback.dispatchPendingNonBatchedOperations(UIViewOperationQueue.java:1107)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$DispatchUIFrameCallback.doFrameGuarded(UIViewOperationQueue.java:1078)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.uimanager.GuardedFrameCallback.doFrame(GuardedFrameCallback.java:29)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.facebook.react.modules.core.ReactChoreographer$1.doFrame(ReactChoreographer.java:89)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:2669)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:2680)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.view.Choreographer.doCallbacks(Choreographer.java:1863)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.view.Choreographer.doFrame(Choreographer.java:1592)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:2496)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9928)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:625)
-10-18 20:54:09.156 11348 11348 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:957)
-10-18 20:54:09.174  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
-10-18 20:54:09.191  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:09.191  6545  6545 D BufferQueueConsumer: [](id:199100000031,api:0,p:-1,c:6545) connect: controlledByApp=false
-10-18 20:54:09.192  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#49](f:0,a:0) constructor()
-10-18 20:54:09.192  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#49](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
-10-18 20:54:09.203  6545  6857 D BLASTBufferQueue: [VRI[Launcher]#49](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=618270489866466(auto) mPendingTransactions.size=0 graphicBufferId=28110560952664 transform=0
-10-18 20:54:09.243 26036 10436 I FusedLocation: (REDACTED) stationary throttling engaged @%s
-10-18 20:54:09.257  6545  6545 I bnlz    : onStart
-10-18 20:54:09.260  6545  6545 I bldh    : (REDACTED) [%s] onStart()
-10-18 20:54:09.260  6545  6545 I blfn    : Reloading theme data
-10-18 20:54:09.261  6545  6545 I bnlz    : onResume
-10-18 20:54:09.296 26036 12555 I FusedOrientationManager: Unregistering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:09.329  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:09.329  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:09.330  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:09.330  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:10.559 11492 11492 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-18 20:54:10.562 11492 11492 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-18 20:54:10.566 11492 11492 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-18 20:54:10.577 11492 11492 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-18 20:54:10.577 11492 11492 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-18 20:54:10.590 11492 11492 D CompatChangeReporter: Compat change id reported: 242716250; UID 10383; state: ENABLED
-10-18 20:54:10.606 11492 11492 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-18 20:54:10.616 11492 11492 D nativeloader: Configuring clns-7 for other apk /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64:/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-18 20:54:10.633 11492 11492 V GraphicsEnvironment: Currently set values for:
-10-18 20:54:10.633 11492 11492 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-18 20:54:10.633 11492 11492 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-18 20:54:10.633 11492 11492 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-18 20:54:10.633 11492 11492 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-18 20:54:10.674 11492 11492 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-18 20:54:10.674 11492 11492 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-18 20:54:10.675 11492 11492 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-18 20:54:10.690 11492 11492 V SoLoader: Init SoLoader delegate
-10-18 20:54:10.715 26036 10436 I FusedLocation: stationary throttling disengaged [CONTEXT service_id=6 ]
-10-18 20:54:10.730 26036 10436 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:10.737 11492 11492 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-18 20:54:10.757 26036 26172 W inertial-anchor: Triggering reinit due to mag declination change
-10-18 20:54:10.757 26036 26172 W Looper  : Looper already prepared for this thread with a different value for the LOOPER_PREPARE_ALLOW_NON_CALLBACKS option.
-10-18 20:54:10.766  6545  6545 I bnlz    : onPause
-10-18 20:54:10.776 11492 11492 V SoLoader: libhermes.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.779 11492 11492 V SoLoader: libjsi.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.780 11492 11492 V SoLoader: libfolly_runtime.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.781 11492 11492 V SoLoader: libglog.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.782 11492 11492 V SoLoader: libm.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.782 11492 11492 V SoLoader: libm.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.782 11492 11492 D SoLoader: libm.so found on /system/lib64
-10-18 20:54:10.782 11492 11492 D SoLoader: libm.so loaded implicitly
-10-18 20:54:10.782 11492 11492 V SoLoader: libc++_shared.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.784 11492 11492 V SoLoader: libc.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.784 11492 11492 V SoLoader: libc.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.784 11492 11492 D SoLoader: libc.so found on /system/lib64
-10-18 20:54:10.784 11492 11492 D SoLoader: libc.so loaded implicitly
-10-18 20:54:10.784 11492 11492 V SoLoader: libdl.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.784 11492 11492 V SoLoader: libdl.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.785 11492 11492 D SoLoader: libdl.so found on /system/lib64
-10-18 20:54:10.785 11492 11492 D SoLoader: libdl.so loaded implicitly
-10-18 20:54:10.787 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.787 11492 11492 D SoLoader: libc++_shared.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.789 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.789 11492 11492 D SoLoader: libglog.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.790 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.791 11492 11492 D SoLoader: libfolly_runtime.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.792 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.792 11492 11492 D SoLoader: libjsi.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.792 11492 11492 V SoLoader: libfbjni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.793 11492 11492 V SoLoader: libandroid.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.793 11492 11492 V SoLoader: libandroid.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.793 11492 11492 D SoLoader: libandroid.so found on /system/lib64
-10-18 20:54:10.793 11492 11492 D SoLoader: libandroid.so loaded implicitly
-10-18 20:54:10.794 11492 11492 V SoLoader: liblog.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.794 11492 11492 V SoLoader: liblog.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.794 11492 11492 D SoLoader: liblog.so found on /system/lib64
-10-18 20:54:10.794 11492 11492 D SoLoader: liblog.so loaded implicitly
-10-18 20:54:10.795 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.795 11492 11492 D SoLoader: libfbjni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.797 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.797 11492 11492 D SoLoader: libhermes.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.798 11492 11492 V SoLoader: libhermes_executor.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.803 11492 11492 V SoLoader: libreactnativejni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.805 11492 11492 V SoLoader: libyoga.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.807 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.807 11492 11492 D SoLoader: libyoga.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.807 11492 11492 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.810 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.810 11492 11492 D SoLoader: libreactperfloggerjni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.810 11492 11492 V SoLoader: libreact_render_core.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.812 11492 11492 V SoLoader: libreact_render_debug.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.814 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.814 11492 11492 D SoLoader: libreact_render_debug.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.814 11492 11492 V SoLoader: libreact_render_graphics.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.816 11492 11492 V SoLoader: libreact_utils.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.817 11492 11492 V SoLoader: libreact_debug.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.819 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.819 11492 11492 D SoLoader: libreact_debug.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.819 11492 11492 V SoLoader: libjsinspector.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.821 11492 11492 V SoLoader: libreact_featureflags.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.822 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.823 11492 11492 D SoLoader: libreact_featureflags.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.823 11492 11492 V SoLoader: libruntimeexecutor.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.824 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.825 11492 11492 D SoLoader: libruntimeexecutor.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.826 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.826 11492 11492 D SoLoader: libjsinspector.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.827 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.827 11492 11492 D SoLoader: libreact_utils.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.828 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.828 11492 11492 D SoLoader: libreact_render_graphics.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.828 11492 11492 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:10.830 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.830 11492 11492 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.832 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.832 11492 11492 D SoLoader: libreact_render_core.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.834 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.834 11492 11492 D SoLoader: libreactnativejni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.836 11492 11492 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.836 11492 11492 D SoLoader: libhermes_executor.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:10.847 11492 13048 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:10.849 11492 11492 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-18 20:54:10.849 11492 11492 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-18 20:54:10.850 11492 11492 I M-ProMotion: M-ProMotion is disabled
-10-18 20:54:10.850 11492 13050 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-18 20:54:10.854 11492 11492 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-18 20:54:10.856 11492 13048 I TaskService: Registered task with name 'background-fetch-task' for app with scoping identifier 'com.a1taxi.driverpro'.
-10-18 20:54:10.856 11492 13048 I TaskService: Registered task with name 'background-location-task' for app with scoping identifier 'com.a1taxi.driverpro'.
-10-18 20:54:10.857 11492 11492 W HWUI    : Unknown dataspace 0
-10-18 20:54:10.861 11492 13048 W LocationTaskConsumer: Foreground location task cannot be started while the app is in the background!
-10-18 20:54:10.873 11492 11492 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:10.873 11492 11492 D BufferQueueConsumer: [](id:2ce400000000,api:0,p:-1,c:11492) connect: controlledByApp=false
-10-18 20:54:10.874 11492 11492 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-18 20:54:10.874 11492 11492 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-18 20:54:10.882 11492 13034 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-18 20:54:10.906 11492 13048 I ExpoModulesCore: ✅ AppContext was initialized
-10-18 20:54:10.910 11492 13034 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-18 20:54:10.910 11492 13034 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=618272196717543(auto) mPendingTransactions.size=0 graphicBufferId=49357764165632 transform=0
-10-18 20:54:10.936  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +297ms
-10-18 20:54:10.941 11492 11492 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{77db64f V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-10-18 20:54:10.946  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:10.947  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:10.947  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:10.948  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:10.958 26036 12916 I AlarmManager: set [name: SystemMemoryMap-flp type: 2 triggerAtMillis: 9223372036854775806 windowMillis: -1 intervalMillis: 0]
-10-18 20:54:10.961 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-18 20:54:10.963 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-18 20:54:10.964 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-18 20:54:10.965 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-18 20:54:10.966 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-18 20:54:10.966 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-18 20:54:10.967 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-18 20:54:10.967 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-18 20:54:10.969 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-18 20:54:10.969 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-18 20:54:10.970 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-18 20:54:10.971 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-18 20:54:10.971 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-18 20:54:10.972 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-18 20:54:10.973 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-18 20:54:10.973 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-18 20:54:10.973 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-18 20:54:10.974 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-18 20:54:10.975 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-18 20:54:10.976 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-18 20:54:10.976 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-18 20:54:10.977 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-18 20:54:10.977 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-18 20:54:10.978 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-18 20:54:10.978 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-18 20:54:10.979 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-18 20:54:10.979 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-18 20:54:10.980 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-18 20:54:10.980 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-18 20:54:10.981 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-18 20:54:10.982 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-18 20:54:10.983 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-18 20:54:10.983 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-18 20:54:10.983 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-18 20:54:10.984 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-18 20:54:10.984 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-18 20:54:10.985 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-18 20:54:10.985 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-18 20:54:10.986 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-18 20:54:10.986 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-18 20:54:10.987 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-18 20:54:10.987 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-18 20:54:10.987 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-18 20:54:10.988 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-18 20:54:10.988 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-18 20:54:10.989 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-18 20:54:10.989 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-18 20:54:10.989 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-18 20:54:10.990 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-18 20:54:10.990 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-18 20:54:10.991 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-18 20:54:10.992 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-18 20:54:10.992 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-18 20:54:10.993 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-18 20:54:10.994 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-18 20:54:10.994 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-18 20:54:10.995 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-18 20:54:10.996 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-18 20:54:10.996 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-18 20:54:10.997 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-18 20:54:10.998 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-18 20:54:10.998 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-18 20:54:10.999 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-18 20:54:11.000 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-18 20:54:11.000 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-18 20:54:11.001 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-18 20:54:11.002 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-18 20:54:11.003 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-18 20:54:11.003 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-18 20:54:11.004 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-18 20:54:11.005 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-18 20:54:11.005 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-18 20:54:11.040 11492 13063 V SoLoader: libexpo-modules-core.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:11.043 11492 13063 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:11.047 11492 13063 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:11.047 11492 13063 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:11.049 11492 13063 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:11.050 11492 13063 D SoLoader: libexpo-modules-core.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:11.050 11492 13063 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:11.056 11492 13063 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:11.056 11492 13063 D SoLoader: libturbomodulejsijni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:11.061 11492 13063 I ExpoModulesCore: ✅ JSI interop was installed
-10-18 20:54:11.061 11492 13063 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-18 20:54:11.064 11492 13063 I ExpoModulesCore: ✅ Constants were exported
-10-18 20:54:11.088 11492 13063 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!classes3.dex): ok
-10-18 20:54:11.092 11492 13063 I ReactNativeJS: Running "main
-10-18 20:54:11.097 11492 13063 V SoLoader: libreactnativeblob.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:11.102 11492 13063 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:11.102 11492 13063 D SoLoader: libreactnativeblob.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:11.107 11492 13063 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-18 20:54:11.107 11492 13063 I ReactNativeJS:   hasAnonKey: true,
-10-18 20:54:11.107 11492 13063 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-18 20:54:11.201  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
-10-18 20:54:11.221  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:11.221  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#49](f:0,a:1) destructor()
-10-18 20:54:11.223  6545  6545 D BufferQueueConsumer: [VRI[Launcher]#49(BLAST Consumer)49](id:199100000031,api:0,p:-1,c:6545) disconnect
-10-18 20:54:11.228 11492 13064 D CompatChangeReporter: Compat change id reported: 289878283; UID 10383; state: ENABLED
-10-18 20:54:11.249  6545  6545 I bnlz    : onStop
-10-18 20:54:11.263 11492 13063 I ReactNativeJS: Auth still loading...
-10-18 20:54:11.263 11492 13063 I ReactNativeJS: === LOCATION PROVIDER INITIALIZATION ===
-10-18 20:54:11.263 11492 13063 I ReactNativeJS: === REQUESTING LOCATION PERMISSION ON STARTUP ===
-10-18 20:54:11.263 11492 13063 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:11.263 11492 13063 I ReactNativeJS: 'Driver:', undefined
-10-18 20:54:11.263 11492 13063 I ReactNativeJS: 'Driver Status:', undefined
-10-18 20:54:11.264 11492 13063 I ReactNativeJS: 'Driver User ID:', undefined
-10-18 20:54:11.264 11492 13063 I ReactNativeJS: 'Driver Verified:', undefined
-10-18 20:54:11.264 11492 13063 I ReactNativeJS: === INITIALIZING AUTHENTICATION ===
-10-18 20:54:11.264 11492 13063 I ReactNativeJS: 🔍 Checking Supabase client session...
-10-18 20:54:11.272 11492 13063 I ReactNativeJS: Found stored driver session
-10-18 20:54:11.272 11492 13063 I ReactNativeJS: ✅ Found valid stored session, but fetching CURRENT status from database...
-10-18 20:54:11.286 11492 13071 I WebViewFactory: Loading com.google.android.webview version 141.0.7390.43 (code 739004333)
-10-18 20:54:11.292 11492 13071 W 1taxi.driverpro: Failed to find entry 'classes.dex': Entry not found
-10-18 20:54:11.292 11492 13071 D nativeloader: Configuring clns-8 for other apk /data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/lib/arm64:/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk!/lib/arm64-v8a:/data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
-10-18 20:54:11.292 11492 13071 D nativeloader: Extending system_exposed_libraries: libapuwareapusys.mtk.so:libapuwareapusys_v2.mtk.so:libapuwarexrp.mtk.so:libapuwarexrp_v2.mtk.so:libapuwareutils.mtk.so:libapuwareutils_v2.mtk.so:libapuwarehmp.mtk.so:libneuron_graph_delegate.mtk.so:libneuronusdk_adapter.mtk.so:libtflite_mtk.mtk.so:libarmnn_ndk.mtk.so:libcmdl_ndk.mtk.so:libnir_neon_driver_ndk.mtk.so:libmvpu_runtime.mtk.so:libmvpu_runtime_pub.mtk.so:libmvpu_engine_pub.mtk.so:libmvpu_pattern_pub.mtk.so:libmvpuop_mtk_cv.mtk.so:libmvpuop_mtk_nn.mtk.so:libmvpu_runtime_25.mtk.so:libmvpu_runtime_25_pub.mtk.so:libmvpu_engine_25_pub.mtk.so:libmvpu_pattern_25_pub.mtk.so:libmvpuop25_mtk_cv.mtk.so:libmvpuop25_mtk_nn.mtk.so:libmvpu_config.mtk.so:libteeservice_client.trustonic.so:librealm-jni.vivo.so
-10-18 20:54:11.293 11492 13071 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
-10-18 20:54:11.295 11492 13071 D nativeloader: Configuring clns-9 for other apk /data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/lib/arm64:/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk!/lib/arm64-v8a:/data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
-10-18 20:54:11.308 11492 13071 I cr_WVCFactoryProvider: version=141.0.7390.43 (739004333) minSdkVersion=29 multiprocess=true packageId=2 splits=<none>
-10-18 20:54:11.312 11492 13071 D nativeloader: Load /data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk!/lib/arm64-v8a/libmonochrome_64.so using class loader ns clns-9 (caller=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk): ok
-10-18 20:54:11.313 11492 13071 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-9 (caller=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk): ok
-10-18 20:54:11.316 11492 13075 I chromium: [1018/205411.315887:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
-10-18 20:54:11.321 11492 13071 I cr_LibraryLoader: Successfully loaded native library
-10-18 20:54:11.322 11492 13071 I cr_CachingUmaRecorder: Flushed 15 samples from 15 histograms, 0 samples were dropped.
-10-18 20:54:11.349 26036 27707 I FontLog : (REDACTED) Received query %s, URI %s
-10-18 20:54:11.349 26036 27707 I FontLog : (REDACTED) Query [%s] resolved to %s
-10-18 20:54:11.351 26036 27707 I FontLog : (REDACTED) Fetch %s end status %s
-10-18 20:54:11.351 11492 13063 I ReactNativeJS: 'Current location permission status:', 'granted'
-10-18 20:54:11.351 11492 13063 I ReactNativeJS: ✅ Location permission already granted
-10-18 20:54:11.352 11492 13063 I ReactNativeJS: 🔧 Initializing location services...
-10-18 20:54:11.352 11492 13063 I ReactNativeJS: ✅ Location services initialized
-10-18 20:54:11.352 11492 13063 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:11.352 11492 13063 I ReactNativeJS: 'Driver:', undefined
-10-18 20:54:11.352 11492 13063 I ReactNativeJS: 'Driver Status:', undefined
-10-18 20:54:11.352 11492 13063 I ReactNativeJS: 'Driver User ID:', undefined
-10-18 20:54:11.352 11492 13063 I ReactNativeJS: 'Driver Verified:', undefined
-10-18 20:54:11.354 26036 27707 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
-10-18 20:54:11.357 26036 27707 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
-10-18 20:54:11.832 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:11.832 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:11.833 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:11.833 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:11.833 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:11.843 11492 13063 I ReactNativeJS: === CURRENT STATUS FROM DATABASE ===
-10-18 20:54:11.844 11492 13063 I ReactNativeJS: '📊 Database status:', 'busy'
-10-18 20:54:11.844 11492 13063 I ReactNativeJS: '📊 Stored session status:', 'busy'
-10-18 20:54:11.844 11492 13063 I ReactNativeJS: 📊 Using DATABASE status (authoritative source)
-10-18 20:54:11.844 11492 13063 I ReactNativeJS: '✅ Session restored with CURRENT database status:', 'busy'
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: Auth still loading...
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: === RIDE CONTEXT INITIALIZED ===
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: 'Driver Status:', 'busy'
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: === LOADING RIDES ===
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:11.845 11492 13063 I ReactNativeJS: 🔍 Loading current ride...
-10-18 20:54:11.846 11492 13054 D AudioManager: setMode(0)
-10-18 20:54:11.846 11492 13063 I ReactNativeJS: === SETTING UP REAL-TIME SUBSCRIPTIONS ===
-10-18 20:54:11.846 11492 13063 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:11.846 11492 13063 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
-10-18 20:54:11.848 11492 13054 D AudioManager: setSpeakerphoneOn(true)
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: ✅ Real-time subscriptions established
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver Status:', 'busy'
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver Verified:', true
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: ✅ Driver is active, ensuring location record exists and driver is available for customers...
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: === HANDLING ACTIVE DRIVER ===
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver status:', 'busy'
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver verified:', true
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: === FORCE CREATING LOCATION RECORD ===
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:11.848 11492 13063 I ReactNativeJS: 'Driver Name:', 'john'
-10-18 20:54:11.848 11492 13063 E ReactNativeJS: ❌ EXPO_PUBLIC_SUPABASE_URL is not configured properly
-10-18 20:54:11.850 11492 13063 E ReactNativeJS: 'Current value:', undefined
-10-18 20:54:11.851 11492 13063 I ReactNativeJS: ⚠️ Falling back to direct database insert without edge function
-10-18 20:54:11.851 11492 13063 I ReactNativeJS: === FALLBACK: CREATING LOCATION RECORD VIA RPC ===
-10-18 20:54:11.851 11492 13063 I ReactNativeJS: 📍 Attempting to get current GPS location...
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: console.error: ❌ EXPO_PUBLIC_SUPABASE_URL is not configured properly, js engine: hermes, stack:
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: _construct@1:117842
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: Wrapper@1:117496
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: _callSuper@1:115478
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: SyntheticError@1:116983
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: ?anon_0_@1:1954897
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: _next@1:573529
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: forceCreateLocationRecord@1:1955060
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: ?anon_0_@1:1953805
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: _next@1:573529
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: handleActiveDriver@1:1954029
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: anonymous@1:1952572
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitHookEffectListMount@1:393533
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitHookPassiveMountEffects@1:401261
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401706
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401559
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401661
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: flushPassiveEffects@1:409129
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: flushSyncWorkAcrossRoots_impl@1:362680
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: scheduleUpdateOnFiber@1:403741
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: dispatchSetState@1:377419
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: ?anon_0_@1:951395
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: _next@1:573529
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: anonymous@1:136226
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: _callTimer@1:135225
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: anonymous@1:100174
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: __guard@1:100912
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: flushedQueue@1:100085
-10-18 20:54:11.861 11492 13064 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: console.error: Current value: undefined, js engine: hermes, stack:
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: _construct@1:117842
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: Wrapper@1:117496
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: _callSuper@1:115478
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: SyntheticError@1:116983
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: ?anon_0_@1:1954917
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: _next@1:573529
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: forceCreateLocationRecord@1:1955060
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: ?anon_0_@1:1953805
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: _next@1:573529
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: handleActiveDriver@1:1954029
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: anonymous@1:1952572
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitHookEffectListMount@1:393533
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitHookPassiveMountEffects@1:401261
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401706
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401559
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: commitPassiveMountOnFiber@1:401661
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: flushPassiveEffects@1:409129
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: flushSyncWorkAcrossRoots_impl@1:362680
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: scheduleUpdateOnFiber@1:403741
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: dispatchSetState@1:377419
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: ?anon_0_@1:951395
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: _next@1:573529
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: anonymous@1:136226
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: _callTimer@1:135225
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: anonymous@1:100174
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: __guard@1:100912
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: flushedQueue@1:100085
-10-18 20:54:11.864 11492 13064 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
-10-18 20:54:11.865 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreensShadowNode
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: === NAVIGATION CHECK ===
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'In auth group:', false
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Has session:', false
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Has driver:', true
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Current segments:', [ '(tabs)' ]
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Loading state:', false
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Is authenticated:', { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   license_number: 'TY58971234',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   license_expiry: '2025-10-04',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   status: 'busy',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   rating: 5,
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   total_rides: 40,
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   is_verified: true,
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   vehicle_id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   vendor_id: null,
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   phone_number: '9598972325',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   name: 'john',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   created_at: '2025-09-16T17:06:10.397003+00:00',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   updated_at: '2025-10-18T15:15:50.284134+00:00',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   user: 
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:    { id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      email: 'john@gmail.com',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      role: 'driver',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      full_name: 'john',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      phone_number: '9598972325',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      avatar_url: null,
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      is_active: true,
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      created_at: '2025-09-16T17:06:09.397142+00:00',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      updated_at: '2025-09-16T17:06:09.397142+00:00' },
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:   vehicle: 
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      registration_number: 'KA51MN1111',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      make: 'Maruti',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      model: 'Ciaz',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      year: 2022,
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      color: 'Silver',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      vehicle_type: 'sedan',
-10-18 20:54:11.893 11492 13063 I ReactNativeJS:      capacity: 4 } }
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: No navigation needed - staying in current route
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Driver Status:', 'busy'
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:11.893 11492 13063 I ReactNativeJS: 'Driver Verified:', true
-10-18 20:54:11.898 11492 13064 V SoLoader: libreact_featureflagsjni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:11.902 11492 13064 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_featureflagsjni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:11.903 11492 13064 D SoLoader: libreact_featureflagsjni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:11.927 11492 13063 I ReactNativeJS: ✅ Notification sound service initialized
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Current ride:', 'null'
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Loading:', true
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Error:', null
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:11.928Z'
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: ❌ NO CURRENT RIDE - showing empty state
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: 🔄 Checking if should show ride request modal:
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Pending rides:', 0
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Modal already showing:', false
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: '  - Has current ride:', false
-10-18 20:54:11.928 11492 13063 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
-10-18 20:54:11.929 11492 13063 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
-10-18 20:54:11.929 11492 13063 I ReactNativeJS:   modalAlreadyShowing: false,
-10-18 20:54:11.929 11492 13063 I ReactNativeJS:   driverStatus: 'busy',
-10-18 20:54:11.929 11492 13063 I ReactNativeJS:   hasCurrentRide: false }
-10-18 20:54:11.932 11492 13063 I ReactNativeJS: === NAVIGATION CHECK ===
-10-18 20:54:11.932 11492 13063 I ReactNativeJS: 'In auth group:', false
-10-18 20:54:11.932 11492 13063 I ReactNativeJS: 'Has session:', false
-10-18 20:54:11.932 11492 13063 I ReactNativeJS: 'Has driver:', true
-10-18 20:54:11.932 11492 13063 I ReactNativeJS: 'Current segments:', [ '(tabs)', 'rides' ]
-10-18 20:54:11.932 11492 13063 I ReactNativeJS: 'Loading state:', false
-10-18 20:54:11.933 11492 13063 I ReactNativeJS: 'Is authenticated:', { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   license_number: 'TY58971234',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   license_expiry: '2025-10-04',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   status: 'busy',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   rating: 5,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   total_rides: 40,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   is_verified: true,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   vehicle_id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   vendor_id: null,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   phone_number: '9598972325',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   name: 'john',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   created_at: '2025-09-16T17:06:10.397003+00:00',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   updated_at: '2025-10-18T15:15:50.284134+00:00',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   user: 
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:    { id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      email: 'john@gmail.com',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      role: 'driver',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      full_name: 'john',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      phone_number: '9598972325',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      avatar_url: null,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      is_active: true,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      created_at: '2025-09-16T17:06:09.397142+00:00',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      updated_at: '2025-09-16T17:06:09.397142+00:00' },
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   vehicle: 
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      registration_number: 'KA51MN1111',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      make: 'Maruti',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      model: 'Ciaz',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      year: 2022,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      color: 'Silver',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      vehicle_type: 'sedan',
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:      capacity: 4 } }
-10-18 20:54:11.933 11492 13063 I ReactNativeJS: No navigation needed - staying in current route
-10-18 20:54:11.933 11492 13063 I ReactNativeJS: '✅ Got native location:', { accuracy: 3.0190000534057617,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   longitude: 77.8299592,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   altitude: 772.5999755859375,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   heading: 89.9807357788086,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   latitude: 12.7486013,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   altitudeAccuracy: 1.2897565364837646,
-10-18 20:54:11.933 11492 13063 I ReactNativeJS:   speed: 0.10429488867521286 }
-10-18 20:54:12.141 11492 13064 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.SizeReportingShadowNode
-10-18 20:54:12.149 11492 13063 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:   customer: 
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:      full_name: 'Ricco',
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:      phone_number: null,
-10-18 20:54:12.149 11492 13063 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
-10-18 20:54:12.149 11492 13063 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
-10-18 20:54:12.149 11492 13063 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:12.149 11492 13063 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:12.150 11492 13063 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:12.150 11492 13063 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:12.150 11492 13063 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Loading:', true
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Error:', null
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:12.150Z'
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: 🔄 Checking if should show ride request modal:
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Pending rides:', 0
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Modal already showing:', false
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '  - Has current ride:', true
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
-10-18 20:54:12.150 11492 13063 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
-10-18 20:54:12.150 11492 13063 I ReactNativeJS:   modalAlreadyShowing: false,
-10-18 20:54:12.150 11492 13063 I ReactNativeJS:   driverStatus: 'busy',
-10-18 20:54:12.150 11492 13063 I ReactNativeJS:   hasCurrentRide: true }
-10-18 20:54:12.157 11492 11492 D MapsInitializer: preferredRenderer: LATEST
-10-18 20:54:12.157 11492 11492 D zzcc    : preferredRenderer: LATEST
-10-18 20:54:12.157 11492 11492 I zzcc    : Making Creator dynamically
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:12.158 11492 13063 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:12.158 11492 13063 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:12.158 11492 13063 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Loading:', true
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Error:', null
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:12.158Z'
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: 🔄 Checking if should show ride request modal:
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Pending rides:', 0
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Modal already showing:', false
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '  - Has current ride:', true
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
-10-18 20:54:12.158 11492 13063 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
-10-18 20:54:12.158 11492 13063 I ReactNativeJS:   modalAlreadyShowing: false,
-10-18 20:54:12.158 11492 13063 I ReactNativeJS:   driverStatus: 'busy',
-10-18 20:54:12.158 11492 13063 I ReactNativeJS:   hasCurrentRide: true }
-10-18 20:54:12.162 11492 11492 W 1taxi.driverpro: ClassLoaderContext classpath size mismatch. expected=1, found=0 (DLC[];PCL[base.apk*2536329430]{PCL[/system/framework/org.apache.http.legacy.jar*1230680128]#PCL[/system/framework/com.android.media.remotedisplay.jar*2042759013]#PCL[/system/framework/com.android.location.provider.jar*3414091812]#PCL[/system_ext/framework/androidx.window.extensions.jar*3686172054]#PCL[/system_ext/framework/androidx.window.sidecar.jar*3225371103]} | DLC[];PCL[])
-10-18 20:54:12.164 11492 11492 I DynamiteModule: Considering local module com.google.android.gms.maps_core_dynamite:0 and remote module com.google.android.gms.maps_core_dynamite:253425402
-10-18 20:54:12.164 11492 11492 I DynamiteModule: Selected remote version of com.google.android.gms.maps_core_dynamite, version >= 253425402
-10-18 20:54:12.164 11492 11492 V DynamiteModule: Dynamite loader version >= 2, using loadModule2NoCrashUtils
-10-18 20:54:12.166 11492 13063 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:12.166 11492 13063 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:12.167 11492 13063 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:12.167 11492 13063 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:12.167 11492 13063 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: '  - Loading:', false
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: '  - Error:', null
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:12.167Z'
-10-18 20:54:12.167 11492 13063 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
-10-18 20:54:12.168 11492 11492 W System  : ClassLoader referenced unknown path: 
-10-18 20:54:12.169 11492 11492 D nativeloader: Configuring clns-10 for other apk . target_sdk_version=36, uses_libraries=, library_path=/data/app/~~Nj5x6oEjOfi5wD5H_znOGQ==/com.google.android.gms-is4C_Gk9dUPsxVnNnVBzPg==/lib/arm64:/data/app/~~Nj5x6oEjOfi5wD5H_znOGQ==/com.google.android.gms-is4C_Gk9dUPsxVnNnVBzPg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
-10-18 20:54:12.184 11492 11492 D nativeloader: Configuring clns-11 for other apk . target_sdk_version=34, uses_libraries=ALL, library_path=/data/user_de/0/com.google.android.gms/app_chimera/m/0000001d/dl-MapsCoreDynamite.integ_253425402100400.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
-10-18 20:54:12.184 11492 11492 D nativeloader: Extending system_exposed_libraries: libapuwareapusys.mtk.so:libapuwareapusys_v2.mtk.so:libapuwarexrp.mtk.so:libapuwarexrp_v2.mtk.so:libapuwareutils.mtk.so:libapuwareutils_v2.mtk.so:libapuwarehmp.mtk.so:libneuron_graph_delegate.mtk.so:libneuronusdk_adapter.mtk.so:libtflite_mtk.mtk.so:libarmnn_ndk.mtk.so:libcmdl_ndk.mtk.so:libnir_neon_driver_ndk.mtk.so:libmvpu_runtime.mtk.so:libmvpu_runtime_pub.mtk.so:libmvpu_engine_pub.mtk.so:libmvpu_pattern_pub.mtk.so:libmvpuop_mtk_cv.mtk.so:libmvpuop_mtk_nn.mtk.so:libmvpu_runtime_25.mtk.so:libmvpu_runtime_25_pub.mtk.so:libmvpu_engine_25_pub.mtk.so:libmvpu_pattern_25_pub.mtk.so:libmvpuop25_mtk_cv.mtk.so:libmvpuop25_mtk_nn.mtk.so:libmvpu_config.mtk.so:libteeservice_client.trustonic.so:librealm-jni.vivo.so
-10-18 20:54:12.185 11492 11492 D nativeloader: Load /data/user_de/0/com.google.android.gms/app_chimera/m/0000001d/dl-MapsCoreDynamite.integ_253425402100400.apk!/lib/arm64-v8a/libgmm-jni.so using isolated ns clns-11 (caller=/data/user_de/0/com.google.android.gms/app_chimera/m/0000001d/dl-MapsCoreDynamite.integ_253425402100400.apk): ok
-10-18 20:54:12.185 11492 11492 I native  : I0000 00:00:1760801052.185813   11492 jni_init.cc:30] Initializing JNI...
-10-18 20:54:12.186 11492 11492 I Google Android Maps SDK: Google Play services client version: 18020000
-10-18 20:54:12.196 11492 11492 D bo      : SDK type: 1, version: 253425402
-10-18 20:54:12.202 11492 11492 D hp      : maps_core_dynamite module version in use (0 represents standalone library): 253425402
-10-18 20:54:12.203 11492 11492 D hp      : Added event: 110
-10-18 20:54:12.203 11492 11492 D hp      : Added event: 112
-10-18 20:54:12.203 11492 11492 D MapsInitializer: loadedRenderer: LATEST
-10-18 20:54:12.203 11492 11492 D AirMapRenderer: LATEST
-10-18 20:54:12.203 11492 11492 D MapsInitializer: preferredRenderer: null
-10-18 20:54:12.204 11492 11492 D zzcc    : preferredRenderer: null
-10-18 20:54:12.205 11492 11492 D bo      : SDK type: 1, version: 253425402
-10-18 20:54:12.205 11492 11492 I Google Android Maps SDK: Google Play services package version: 253931035
-10-18 20:54:12.205 11492 11492 I Google Android Maps SDK: Google Play services maps renderer version(maps_core): 253425402
-10-18 20:54:12.205 11492 11492 D bo      : SDK type: 1, version: 253425402
-10-18 20:54:12.205 11492 11492 D de      : about to start loading native library asynchronously
-10-18 20:54:12.208 11492 11492 D AndroidRuntime: Shutting down VM
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: FATAL EXCEPTION: main
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 11492
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: java.lang.IllegalStateException: API key not found.  Check that <meta-data android:name="com.google.android.geo.API_KEY" android:value="your API key"/> is in the <application> element of AndroidManifest.xml
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.maps.api.android.lib6.common.g.b(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:117)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.maps.internal.CreatorImpl.c(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:806)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.maps.internal.CreatorImpl.newMapViewDelegate(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:23)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.maps.internal.h.br(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:311)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at m140.bat.onTransact(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:21)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.os.Binder.transact(Binder.java:1406)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.internal.maps.zza.zzJ(com.google.android.gms:play-services-maps@@18.2.0:2)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.maps.internal.zze.zzg(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.maps.zzai.zzb(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.maps.zzai.createDelegate(com.google.android.gms:play-services-maps@@18.2.0:1)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.zaf(com.google.android.gms:play-services-base@@18.2.0:6)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.onCreate(com.google.android.gms:play-services-base@@18.2.0:1)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.google.android.gms.maps.MapView.onCreate(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.rnmaps.maps.MapView.<init>(MapView.java:176)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:77)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:32)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.uimanager.ViewManager.createViewInstance(ViewManager.java:176)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:107)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:32)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.uimanager.ViewManager.createView(ViewManager.java:108)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.uimanager.NativeViewHierarchyManager.createView(NativeViewHierarchyManager.java:281)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$CreateViewOperation.execute(UIViewOperationQueue.java:160)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$DispatchUIFrameCallback.dispatchPendingNonBatchedOperations(UIViewOperationQueue.java:1107)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$DispatchUIFrameCallback.doFrameGuarded(UIViewOperationQueue.java:1078)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.uimanager.GuardedFrameCallback.doFrame(GuardedFrameCallback.java:29)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.facebook.react.modules.core.ReactChoreographer$1.doFrame(ReactChoreographer.java:89)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:2669)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:2680)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.view.Choreographer.doCallbacks(Choreographer.java:1863)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.view.Choreographer.doFrame(Choreographer.java:1592)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:2496)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9928)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:625)
-10-18 20:54:12.209 11492 11492 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:957)
-10-18 20:54:12.216 11492 13063 I ReactNativeJS: '✅ Location record', 'updated', 'successfully via RPC'
-10-18 20:54:12.216 11492 13063 I ReactNativeJS: ✅ Location record confirmed, starting tracking...
-10-18 20:54:12.216 11492 13063 I ReactNativeJS: ✅ Driver is now available for customer bookings
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: === STARTING LOCATION TRACKING ===
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 'Status:', 'busy'
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 'Permission:', true
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: === UPDATING LOCATION WITH GOOGLE MAPS ===
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 📱 Using native location...
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: === STARTING BACKGROUND LOCATION TRACKING ===
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 'Status:', 'busy'
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: === STARTING BACKGROUND LOCATION TRACKING ===
-10-18 20:54:12.217  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:12.217 11492 13063 I ReactNativeJS: 'Platform:', 'android'
-10-18 20:54:12.218 11492 13097 W x       : Suppressed StrictMode policy violation: StrictModeDiskReadViolation
-10-18 20:54:12.243  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:12.243  6545  6545 D BufferQueueConsumer: [](id:199100000032,api:0,p:-1,c:6545) connect: controlledByApp=false
-10-18 20:54:12.249  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#50](f:0,a:0) constructor()
-10-18 20:54:12.249  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#50](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
-10-18 20:54:12.267  6545  6857 D BLASTBufferQueue: [VRI[Launcher]#50](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=618273554253466(auto) mPendingTransactions.size=0 graphicBufferId=28110560952671 transform=0
-10-18 20:54:12.290  6545  6545 I bnlz    : onStart
-10-18 20:54:12.293  6545  6545 I bldh    : (REDACTED) [%s] onStart()
-10-18 20:54:12.293  6545  6545 I blfn    : Reloading theme data
-10-18 20:54:12.295  6545  6545 I bnlz    : onResume
-10-18 20:54:12.303 26036 12005 I FusedLocation: (REDACTED) stationary throttling engaged @%s
-10-18 20:54:12.317 26036 10436 I FusedOrientationManager: Unregistering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:12.435  6545  6545 I bnlz    : onPause
-10-18 20:54:12.455  6545  6545 I bnlz    : onResume
-10-18 20:54:12.481  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:12.481  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:12.482  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:12.482  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:14.258  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:14.260  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:14.260  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:14.261  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:14.261 11547 11547 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-18 20:54:14.265 11547 11547 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-18 20:54:14.268 11547 11547 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-18 20:54:14.276 11547 11547 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-18 20:54:14.276 11547 11547 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-18 20:54:14.286 11547 11547 D CompatChangeReporter: Compat change id reported: 242716250; UID 10383; state: ENABLED
-10-18 20:54:14.296  6545  6545 I bnlz    : onPause
-10-18 20:54:14.297 11547 11547 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-18 20:54:14.304 11547 11547 D nativeloader: Configuring clns-7 for other apk /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64:/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-18 20:54:14.312 26036 10436 I FusedLocation: stationary throttling disengaged [CONTEXT service_id=6 ]
-10-18 20:54:14.315 11547 11547 V GraphicsEnvironment: Currently set values for:
-10-18 20:54:14.315 11547 11547 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-18 20:54:14.315 11547 11547 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-18 20:54:14.315 11547 11547 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-18 20:54:14.315 11547 11547 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-18 20:54:14.333 11547 11547 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-18 20:54:14.333 11547 11547 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-18 20:54:14.334 11547 11547 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-18 20:54:14.337 26036 10436 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:14.345 26036 26172 W inertial-anchor: Triggering reinit due to mag declination change
-10-18 20:54:14.345 26036 26172 W Looper  : Looper already prepared for this thread with a different value for the LOOPER_PREPARE_ALLOW_NON_CALLBACKS option.
-10-18 20:54:14.347 11547 11547 V SoLoader: Init SoLoader delegate
-10-18 20:54:14.361 26036 26104 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
-10-18 20:54:14.366 26036 12626 W SystemServiceRegistry: No service published for: wifirtt
-10-18 20:54:14.378 11547 11547 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-18 20:54:14.437 11547 11547 V SoLoader: libhermes.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.439 11547 11547 V SoLoader: libjsi.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.440 11547 11547 V SoLoader: libfolly_runtime.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.441 11547 11547 V SoLoader: libglog.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.442 11547 11547 V SoLoader: libm.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.442 11547 11547 V SoLoader: libm.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.442 11547 11547 D SoLoader: libm.so found on /system/lib64
-10-18 20:54:14.442 11547 11547 D SoLoader: libm.so loaded implicitly
-10-18 20:54:14.442 11547 11547 V SoLoader: libc++_shared.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.443 11547 11547 V SoLoader: libc.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.443 11547 11547 V SoLoader: libc.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.443 11547 11547 D SoLoader: libc.so found on /system/lib64
-10-18 20:54:14.443 11547 11547 D SoLoader: libc.so loaded implicitly
-10-18 20:54:14.443 11547 11547 V SoLoader: libdl.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.443 11547 11547 V SoLoader: libdl.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.443 11547 11547 D SoLoader: libdl.so found on /system/lib64
-10-18 20:54:14.443 11547 11547 D SoLoader: libdl.so loaded implicitly
-10-18 20:54:14.444 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.445 11547 11547 D SoLoader: libc++_shared.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.446 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.446 11547 11547 D SoLoader: libglog.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.447 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.447 11547 11547 D SoLoader: libfolly_runtime.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.448 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.448 11547 11547 D SoLoader: libjsi.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.448 11547 11547 V SoLoader: libfbjni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.449 11547 11547 V SoLoader: libandroid.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.449 11547 11547 V SoLoader: libandroid.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.449 11547 11547 D SoLoader: libandroid.so found on /system/lib64
-10-18 20:54:14.449 11547 11547 D SoLoader: libandroid.so loaded implicitly
-10-18 20:54:14.449 11547 11547 V SoLoader: liblog.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.449 11547 11547 V SoLoader: liblog.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.449 11547 11547 D SoLoader: liblog.so found on /system/lib64
-10-18 20:54:14.449 11547 11547 D SoLoader: liblog.so loaded implicitly
-10-18 20:54:14.450 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.451 11547 11547 D SoLoader: libfbjni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.452 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.452 11547 11547 D SoLoader: libhermes.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.452 11547 11547 V SoLoader: libhermes_executor.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.455 11547 11547 V SoLoader: libreactnativejni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.457 11547 11547 V SoLoader: libyoga.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.459 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.459 11547 11547 D SoLoader: libyoga.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.459 11547 11547 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.461 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.461 11547 11547 D SoLoader: libreactperfloggerjni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.461 11547 11547 V SoLoader: libreact_render_core.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.463 11547 11547 V SoLoader: libreact_render_debug.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.464 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.464 11547 11547 D SoLoader: libreact_render_debug.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.465 11547 11547 V SoLoader: libreact_render_graphics.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.466 11547 11547 V SoLoader: libreact_utils.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.467 11547 11547 V SoLoader: libreact_debug.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.469 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.469 11547 11547 D SoLoader: libreact_debug.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.469 11547 11547 V SoLoader: libjsinspector.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.470 11547 11547 V SoLoader: libreact_featureflags.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.472 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.472 11547 11547 D SoLoader: libreact_featureflags.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.472 11547 11547 V SoLoader: libruntimeexecutor.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.473 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.473 11547 11547 D SoLoader: libruntimeexecutor.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.474 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.474 11547 11547 D SoLoader: libjsinspector.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.475 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.475 11547 11547 D SoLoader: libreact_utils.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.476 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.477 11547 11547 D SoLoader: libreact_render_graphics.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.477 11547 11547 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.479 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.479 11547 11547 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.479 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.480 11547 11547 D SoLoader: libreact_render_core.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.481 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.482 11547 11547 D SoLoader: libreactnativejni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.483 11547 11547 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.483 11547 11547 D SoLoader: libhermes_executor.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.491 11547 13166 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.493 11547 11547 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-18 20:54:14.493 11547 11547 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-18 20:54:14.493 11547 11547 I M-ProMotion: M-ProMotion is disabled
-10-18 20:54:14.494 11547 13168 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-18 20:54:14.497 11547 13166 I TaskService: Registered task with name 'background-fetch-task' for app with scoping identifier 'com.a1taxi.driverpro'.
-10-18 20:54:14.498 11547 13166 I TaskService: Registered task with name 'background-location-task' for app with scoping identifier 'com.a1taxi.driverpro'.
-10-18 20:54:14.499 11547 11547 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-18 20:54:14.501 11547 11547 W HWUI    : Unknown dataspace 0
-10-18 20:54:14.503 11547 13166 W LocationTaskConsumer: Foreground location task cannot be started while the app is in the background!
-10-18 20:54:14.520 11547 11547 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:14.521 11547 11547 D BufferQueueConsumer: [](id:2d1b00000000,api:0,p:-1,c:11547) connect: controlledByApp=false
-10-18 20:54:14.522 11547 11547 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-18 20:54:14.522 11547 11547 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-18 20:54:14.531 11547 13157 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-18 20:54:14.531 11547 13166 I ExpoModulesCore: ✅ AppContext was initialized
-10-18 20:54:14.556 11547 13157 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-18 20:54:14.556 11547 13157 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=618275843325158(auto) mPendingTransactions.size=0 graphicBufferId=49593987366912 transform=0
-10-18 20:54:14.578 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-18 20:54:14.580 11547 11547 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{21562e5 V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-10-18 20:54:14.581  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +398ms
-10-18 20:54:14.582 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-18 20:54:14.582 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-18 20:54:14.584 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-18 20:54:14.585 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-18 20:54:14.586 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-18 20:54:14.587 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-18 20:54:14.588 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-18 20:54:14.588  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:14.589 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-18 20:54:14.589 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-18 20:54:14.589  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:14.590  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:14.590 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-18 20:54:14.590 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-18 20:54:14.590 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-18 20:54:14.591  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:14.593 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-18 20:54:14.593 26036 13155 I AlarmManager: set [name: SystemMemoryMap-flp type: 2 triggerAtMillis: 9223372036854775806 windowMillis: -1 intervalMillis: 0]
-10-18 20:54:14.594 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-18 20:54:14.594 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-18 20:54:14.594 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-18 20:54:14.595 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-18 20:54:14.596 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-18 20:54:14.597 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-18 20:54:14.598 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-18 20:54:14.598 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-18 20:54:14.598 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-18 20:54:14.598 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-18 20:54:14.599 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-18 20:54:14.599 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-18 20:54:14.599 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-18 20:54:14.600 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-18 20:54:14.601 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-18 20:54:14.603 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-18 20:54:14.604 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-18 20:54:14.604 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-18 20:54:14.605 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-18 20:54:14.605 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-18 20:54:14.606 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-18 20:54:14.606 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-18 20:54:14.607 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-18 20:54:14.607 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-18 20:54:14.608 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-18 20:54:14.608 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-18 20:54:14.609 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-18 20:54:14.609 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-18 20:54:14.610 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-18 20:54:14.610 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-18 20:54:14.610 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-18 20:54:14.611 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-18 20:54:14.611 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-18 20:54:14.612 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-18 20:54:14.612 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-18 20:54:14.613 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-18 20:54:14.613 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-18 20:54:14.614 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-18 20:54:14.614 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-18 20:54:14.615 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-18 20:54:14.617 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-18 20:54:14.617 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-18 20:54:14.618 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-18 20:54:14.619 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-18 20:54:14.619 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-18 20:54:14.620 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-18 20:54:14.621 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-18 20:54:14.621 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-18 20:54:14.622 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-18 20:54:14.622 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-18 20:54:14.623 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-18 20:54:14.624 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-18 20:54:14.625 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-18 20:54:14.625 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-18 20:54:14.626 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-18 20:54:14.627 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-18 20:54:14.627 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-18 20:54:14.628 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-18 20:54:14.662 11547 13181 V SoLoader: libexpo-modules-core.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.665 11547 13181 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.668 11547 13181 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.669 11547 13181 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.670 11547 13181 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.671 11547 13181 D SoLoader: libexpo-modules-core.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.672 11547 13181 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.677 11547 13181 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.677 11547 13181 D SoLoader: libturbomodulejsijni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.681 11547 13181 I ExpoModulesCore: ✅ JSI interop was installed
-10-18 20:54:14.681 11547 13181 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-18 20:54:14.685 11547 13181 I ExpoModulesCore: ✅ Constants were exported
-10-18 20:54:14.707 11547 13181 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!classes3.dex): ok
-10-18 20:54:14.711 11547 13181 I ReactNativeJS: Running "main
-10-18 20:54:14.716 11547 13181 V SoLoader: libreactnativeblob.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:14.723  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
-10-18 20:54:14.723 11547 13181 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:14.723 11547 13181 D SoLoader: libreactnativeblob.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:14.739 11547 13181 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-18 20:54:14.739 11547 13181 I ReactNativeJS:   hasAnonKey: true,
-10-18 20:54:14.739 11547 13181 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-18 20:54:14.754  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:14.754  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#50](f:0,a:1) destructor()
-10-18 20:54:14.755  6545  6545 D BufferQueueConsumer: [VRI[Launcher]#50(BLAST Consumer)50](id:199100000032,api:0,p:-1,c:6545) disconnect
-10-18 20:54:14.764  6545  6545 I bnlz    : onStop
-10-18 20:54:14.861 11547 13183 D CompatChangeReporter: Compat change id reported: 289878283; UID 10383; state: ENABLED
-10-18 20:54:14.890 11547 13181 I ReactNativeJS: Auth still loading...
-10-18 20:54:14.890 11547 13181 I ReactNativeJS: === LOCATION PROVIDER INITIALIZATION ===
-10-18 20:54:14.890 11547 13181 I ReactNativeJS: === REQUESTING LOCATION PERMISSION ON STARTUP ===
-10-18 20:54:14.891 11547 13181 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:14.891 11547 13181 I ReactNativeJS: 'Driver:', undefined
-10-18 20:54:14.891 11547 13181 I ReactNativeJS: 'Driver Status:', undefined
-10-18 20:54:14.891 11547 13181 I ReactNativeJS: 'Driver User ID:', undefined
-10-18 20:54:14.891 11547 13181 I ReactNativeJS: 'Driver Verified:', undefined
-10-18 20:54:14.891 11547 13181 I ReactNativeJS: === INITIALIZING AUTHENTICATION ===
-10-18 20:54:14.891 11547 13181 I ReactNativeJS: 🔍 Checking Supabase client session...
-10-18 20:54:14.896 11547 13181 I ReactNativeJS: Found stored driver session
-10-18 20:54:14.896 11547 13181 I ReactNativeJS: ✅ Found valid stored session, but fetching CURRENT status from database...
-10-18 20:54:14.906 11547 13190 I WebViewFactory: Loading com.google.android.webview version 141.0.7390.43 (code 739004333)
-10-18 20:54:14.909 11547 13190 W 1taxi.driverpro: Failed to find entry 'classes.dex': Entry not found
-10-18 20:54:14.910 11547 13190 D nativeloader: Configuring clns-8 for other apk /data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk. target_sdk_version=36, uses_libraries=ALL, library_path=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/lib/arm64:/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk!/lib/arm64-v8a:/data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
-10-18 20:54:14.910 11547 13190 D nativeloader: Extending system_exposed_libraries: libapuwareapusys.mtk.so:libapuwareapusys_v2.mtk.so:libapuwarexrp.mtk.so:libapuwarexrp_v2.mtk.so:libapuwareutils.mtk.so:libapuwareutils_v2.mtk.so:libapuwarehmp.mtk.so:libneuron_graph_delegate.mtk.so:libneuronusdk_adapter.mtk.so:libtflite_mtk.mtk.so:libarmnn_ndk.mtk.so:libcmdl_ndk.mtk.so:libnir_neon_driver_ndk.mtk.so:libmvpu_runtime.mtk.so:libmvpu_runtime_pub.mtk.so:libmvpu_engine_pub.mtk.so:libmvpu_pattern_pub.mtk.so:libmvpuop_mtk_cv.mtk.so:libmvpuop_mtk_nn.mtk.so:libmvpu_runtime_25.mtk.so:libmvpu_runtime_25_pub.mtk.so:libmvpu_engine_25_pub.mtk.so:libmvpu_pattern_25_pub.mtk.so:libmvpuop25_mtk_cv.mtk.so:libmvpuop25_mtk_nn.mtk.so:libmvpu_config.mtk.so:libteeservice_client.trustonic.so:librealm-jni.vivo.so
-10-18 20:54:14.910 11547 13190 D ApplicationLoaders: Returning zygote-cached class loader: /system_ext/framework/androidx.window.extensions.jar
-10-18 20:54:14.913 11547 13190 D nativeloader: Configuring clns-9 for other apk /data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/lib/arm64:/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk!/lib/arm64-v8a:/data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
-10-18 20:54:14.934 26036 26081 I WifiScanner: onFullResults
-10-18 20:54:14.935 26036 26892 I WifiScanner: onFullResults
-10-18 20:54:14.935 26036 26051 I WifiScanner: onFullResults
-10-18 20:54:14.945 11547 13190 I cr_WVCFactoryProvider: version=141.0.7390.43 (739004333) minSdkVersion=29 multiprocess=true packageId=2 splits=<none>
-10-18 20:54:14.949 11547 13190 D nativeloader: Load /data/app/~~_E4p1LJR5JF7COZmMiDVoA==/com.google.android.trichromelibrary_739004333-IYHcrypmKBkTpfxt3UyU4A==/base.apk!/lib/arm64-v8a/libmonochrome_64.so using class loader ns clns-9 (caller=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk): ok
-10-18 20:54:14.951 11547 13190 D nativeloader: Load /system/lib64/libwebviewchromium_plat_support.so using class loader ns clns-9 (caller=/data/app/~~0k-bhKJKWMvMm9CSFH5Hzg==/com.google.android.webview-mLV-HzOd8sNTJLZpa_7utA==/base.apk): ok
-10-18 20:54:14.952 26036 13155 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
-10-18 20:54:14.952 11547 13194 I chromium: [1018/205414.952668:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
-10-18 20:54:14.961 11547 13190 I cr_LibraryLoader: Successfully loaded native library
-10-18 20:54:14.962 11547 13190 I cr_CachingUmaRecorder: Flushed 15 samples from 15 histograms, 0 samples were dropped.
-10-18 20:54:14.982 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:14.982 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:14.982 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:14.985 11547 13181 I ReactNativeJS: 'Current location permission status:', 'granted'
-10-18 20:54:14.985 11547 13181 I ReactNativeJS: ✅ Location permission already granted
-10-18 20:54:14.986 11547 13181 I ReactNativeJS: 🔧 Initializing location services...
-10-18 20:54:14.986 11547 13181 I ReactNativeJS: ✅ Location services initialized
-10-18 20:54:14.986 11547 13181 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:14.986 11547 13181 I ReactNativeJS: 'Driver:', undefined
-10-18 20:54:14.986 11547 13181 I ReactNativeJS: 'Driver Status:', undefined
-10-18 20:54:14.986 11547 13181 I ReactNativeJS: 'Driver User ID:', undefined
-10-18 20:54:14.986 11547 13181 I ReactNativeJS: 'Driver Verified:', undefined
-10-18 20:54:14.987 26036 26172 I fyyu    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
-10-18 20:54:14.993 26036 27730 I FontLog : (REDACTED) Received query %s, URI %s
-10-18 20:54:14.993 26036 27730 I FontLog : (REDACTED) Query [%s] resolved to %s
-10-18 20:54:14.994 26036 27730 I FontLog : (REDACTED) Fetch %s end status %s
-10-18 20:54:14.997 26036 27730 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
-10-18 20:54:14.999 26036 27730 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
-10-18 20:54:15.042 26036 12626 I TFLite-in-PlayServices: Created interpreter.
-10-18 20:54:15.066 26036 12626 I TFLite-in-PlayServices: Created interpreter.
-10-18 20:54:15.092 26036 12626 I SemanticLocation: (REDACTED) [Inferrer] %s%s
-10-18 20:54:15.462 11547 13181 I ReactNativeJS: === CURRENT STATUS FROM DATABASE ===
-10-18 20:54:15.462 11547 13181 I ReactNativeJS: '📊 Database status:', 'busy'
-10-18 20:54:15.462 11547 13181 I ReactNativeJS: '📊 Stored session status:', 'busy'
-10-18 20:54:15.462 11547 13181 I ReactNativeJS: 📊 Using DATABASE status (authoritative source)
-10-18 20:54:15.463 11547 13181 I ReactNativeJS: '✅ Session restored with CURRENT database status:', 'busy'
-10-18 20:54:15.463 11547 13181 I ReactNativeJS: Auth still loading...
-10-18 20:54:15.463 11547 13181 I ReactNativeJS: === RIDE CONTEXT INITIALIZED ===
-10-18 20:54:15.463 11547 13181 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:15.463 11547 13181 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
-10-18 20:54:15.463 11547 13181 I ReactNativeJS: 'Driver Status:', 'busy'
-10-18 20:54:15.464 11547 13181 I ReactNativeJS: === LOADING RIDES ===
-10-18 20:54:15.464 11547 13181 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
-10-18 20:54:15.464 11547 13181 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:15.464 11547 13181 I ReactNativeJS: 🔍 Loading current ride...
-10-18 20:54:15.465 11547 13172 D AudioManager: setMode(0)
-10-18 20:54:15.465 11547 13181 I ReactNativeJS: === SETTING UP REAL-TIME SUBSCRIPTIONS ===
-10-18 20:54:15.465 11547 13181 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:15.465 11547 13181 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
-10-18 20:54:15.467 11547 13172 D AudioManager: setSpeakerphoneOn(true)
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: ✅ Real-time subscriptions established
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver Status:', 'busy'
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver Verified:', true
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: ✅ Driver is active, ensuring location record exists and driver is available for customers...
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: === HANDLING ACTIVE DRIVER ===
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver status:', 'busy'
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver verified:', true
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: === FORCE CREATING LOCATION RECORD ===
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:15.467 11547 13181 I ReactNativeJS: 'Driver Name:', 'john'
-10-18 20:54:15.467 11547 13181 E ReactNativeJS: ❌ EXPO_PUBLIC_SUPABASE_URL is not configured properly
-10-18 20:54:15.469 11547 13181 E ReactNativeJS: 'Current value:', undefined
-10-18 20:54:15.470 11547 13181 I ReactNativeJS: ⚠️ Falling back to direct database insert without edge function
-10-18 20:54:15.470 11547 13181 I ReactNativeJS: === FALLBACK: CREATING LOCATION RECORD VIA RPC ===
-10-18 20:54:15.470 11547 13181 I ReactNativeJS: 📍 Attempting to get current GPS location...
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: console.error: ❌ EXPO_PUBLIC_SUPABASE_URL is not configured properly, js engine: hermes, stack:
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: _construct@1:117842
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: Wrapper@1:117496
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: _callSuper@1:115478
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: SyntheticError@1:116983
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: ?anon_0_@1:1954897
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: _next@1:573529
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: forceCreateLocationRecord@1:1955060
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: ?anon_0_@1:1953805
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: _next@1:573529
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: handleActiveDriver@1:1954029
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: anonymous@1:1952572
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitHookEffectListMount@1:393533
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitHookPassiveMountEffects@1:401261
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401706
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401559
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401661
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: flushPassiveEffects@1:409129
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: flushSyncWorkAcrossRoots_impl@1:362680
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: scheduleUpdateOnFiber@1:403741
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: dispatchSetState@1:377419
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: ?anon_0_@1:951395
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: _next@1:573529
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: anonymous@1:136226
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: _callTimer@1:135225
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: anonymous@1:100174
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: __guard@1:100912
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: flushedQueue@1:100085
-10-18 20:54:15.480 11547 13183 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: console.error: Current value: undefined, js engine: hermes, stack:
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: _construct@1:117842
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: Wrapper@1:117496
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: _callSuper@1:115478
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: SyntheticError@1:116983
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: ?anon_0_@1:1954917
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: _next@1:573529
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: forceCreateLocationRecord@1:1955060
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: ?anon_0_@1:1953805
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: _next@1:573529
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: anonymous@1:573481
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: anonymous@1:573402
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: handleActiveDriver@1:1954029
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: anonymous@1:1952572
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitHookEffectListMount@1:393533
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitHookPassiveMountEffects@1:401261
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401706
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401559
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: commitPassiveMountOnFiber@1:401661
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: flushPassiveEffects@1:409129
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: flushSyncWorkAcrossRoots_impl@1:362680
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: scheduleUpdateOnFiber@1:403741
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: dispatchSetState@1:377419
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: ?anon_0_@1:951395
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: asyncGeneratorStep@1:573272
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: _next@1:573529
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: anonymous@1:136226
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: _callTimer@1:135225
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: anonymous@1:100174
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: __guard@1:100912
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: flushedQueue@1:100085
-10-18 20:54:15.482 11547 13183 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
-10-18 20:54:15.484 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreensShadowNode
-10-18 20:54:15.509 11547 13181 I ReactNativeJS: === NAVIGATION CHECK ===
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'In auth group:', false
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Has session:', false
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Has driver:', true
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Current segments:', [ '(tabs)' ]
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Loading state:', false
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Is authenticated:', { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   license_number: 'TY58971234',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   license_expiry: '2025-10-04',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   status: 'busy',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   rating: 5,
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   total_rides: 40,
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   is_verified: true,
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   vehicle_id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   vendor_id: null,
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   phone_number: '9598972325',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   name: 'john',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   created_at: '2025-09-16T17:06:10.397003+00:00',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   updated_at: '2025-10-18T15:15:50.284134+00:00',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   user: 
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:    { id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      email: 'john@gmail.com',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      role: 'driver',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      full_name: 'john',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      phone_number: '9598972325',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      avatar_url: null,
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      is_active: true,
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      created_at: '2025-09-16T17:06:09.397142+00:00',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      updated_at: '2025-09-16T17:06:09.397142+00:00' },
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:   vehicle: 
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      registration_number: 'KA51MN1111',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      make: 'Maruti',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      model: 'Ciaz',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      year: 2022,
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      color: 'Silver',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      vehicle_type: 'sedan',
-10-18 20:54:15.510 11547 13181 I ReactNativeJS:      capacity: 4 } }
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: No navigation needed - staying in current route
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Driver:', 'john'
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Driver Status:', 'busy'
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
-10-18 20:54:15.510 11547 13181 I ReactNativeJS: 'Driver Verified:', true
-10-18 20:54:15.514 11547 13183 V SoLoader: libreact_featureflagsjni.so not found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64
-10-18 20:54:15.518 11547 13183 D nativeloader: Load /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a/libreact_featureflagsjni.so using class loader ns clns-7 (caller=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk): ok
-10-18 20:54:15.518 11547 13183 D SoLoader: libreact_featureflagsjni.so found on /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Current ride:', 'null'
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Loading:', true
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Error:', null
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:15.542Z'
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: ❌ NO CURRENT RIDE - showing empty state
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: 🔄 Checking if should show ride request modal:
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Pending rides:', 0
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Modal already showing:', false
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '  - Has current ride:', false
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
-10-18 20:54:15.542 11547 13181 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
-10-18 20:54:15.542 11547 13181 I ReactNativeJS:   modalAlreadyShowing: false,
-10-18 20:54:15.542 11547 13181 I ReactNativeJS:   driverStatus: 'busy',
-10-18 20:54:15.542 11547 13181 I ReactNativeJS:   hasCurrentRide: false }
-10-18 20:54:15.545 11547 13181 I ReactNativeJS: === NAVIGATION CHECK ===
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: 'In auth group:', false
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: 'Has session:', false
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: 'Has driver:', true
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: 'Current segments:', [ '(tabs)', 'rides' ]
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: 'Loading state:', false
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: 'Is authenticated:', { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   license_number: 'TY58971234',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   license_expiry: '2025-10-04',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   status: 'busy',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   rating: 5,
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   total_rides: 40,
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   is_verified: true,
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   vehicle_id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   vendor_id: null,
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   phone_number: '9598972325',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   name: 'john',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   created_at: '2025-09-16T17:06:10.397003+00:00',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   updated_at: '2025-10-18T15:15:50.284134+00:00',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   user: 
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:    { id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      email: 'john@gmail.com',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      role: 'driver',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      full_name: 'john',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      phone_number: '9598972325',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      avatar_url: null,
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      is_active: true,
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      created_at: '2025-09-16T17:06:09.397142+00:00',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      updated_at: '2025-09-16T17:06:09.397142+00:00' },
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:   vehicle: 
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      registration_number: 'KA51MN1111',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      make: 'Maruti',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      model: 'Ciaz',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      year: 2022,
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      color: 'Silver',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      vehicle_type: 'sedan',
-10-18 20:54:15.546 11547 13181 I ReactNativeJS:      capacity: 4 } }
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: No navigation needed - staying in current route
-10-18 20:54:15.546 11547 13181 I ReactNativeJS: ✅ Notification sound service initialized
-10-18 20:54:15.717 11547 13183 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.SizeReportingShadowNode
-10-18 20:54:15.722 11547 11547 D MapsInitializer: preferredRenderer: LATEST
-10-18 20:54:15.722 11547 11547 D zzcc    : preferredRenderer: LATEST
-10-18 20:54:15.722 11547 11547 I zzcc    : Making Creator dynamically
-10-18 20:54:15.727 11547 11547 W 1taxi.driverpro: ClassLoaderContext classpath size mismatch. expected=1, found=0 (DLC[];PCL[base.apk*2536329430]{PCL[/system/framework/org.apache.http.legacy.jar*1230680128]#PCL[/system/framework/com.android.media.remotedisplay.jar*2042759013]#PCL[/system/framework/com.android.location.provider.jar*3414091812]#PCL[/system_ext/framework/androidx.window.extensions.jar*3686172054]#PCL[/system_ext/framework/androidx.window.sidecar.jar*3225371103]} | DLC[];PCL[])
-10-18 20:54:15.728 11547 11547 I DynamiteModule: Considering local module com.google.android.gms.maps_core_dynamite:0 and remote module com.google.android.gms.maps_core_dynamite:253425402
-10-18 20:54:15.728 11547 11547 I DynamiteModule: Selected remote version of com.google.android.gms.maps_core_dynamite, version >= 253425402
-10-18 20:54:15.728 11547 11547 V DynamiteModule: Dynamite loader version >= 2, using loadModule2NoCrashUtils
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   customer: 
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:      full_name: 'Ricco',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:      phone_number: null,
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Loading:', true
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Error:', null
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:15.729Z'
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: 🔄 Checking if should show ride request modal:
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Pending rides:', 0
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Modal already showing:', false
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '  - Has current ride:', true
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
-10-18 20:54:15.729 11547 13181 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   modalAlreadyShowing: false,
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   driverStatus: 'busy',
-10-18 20:54:15.729 11547 13181 I ReactNativeJS:   hasCurrentRide: true }
-10-18 20:54:15.733 11547 11547 W System  : ClassLoader referenced unknown path: 
-10-18 20:54:15.733 11547 11547 D nativeloader: Configuring clns-10 for other apk . target_sdk_version=36, uses_libraries=, library_path=/data/app/~~Nj5x6oEjOfi5wD5H_znOGQ==/com.google.android.gms-is4C_Gk9dUPsxVnNnVBzPg==/lib/arm64:/data/app/~~Nj5x6oEjOfi5wD5H_znOGQ==/com.google.android.gms-is4C_Gk9dUPsxVnNnVBzPg==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:15.738 11547 13181 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:15.738 11547 13181 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:15.738 11547 13181 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Loading:', true
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Error:', null
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:15.738Z'
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: 🔄 Checking if should show ride request modal:
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Pending rides:', 0
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Modal already showing:', false
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '  - Has current ride:', true
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
-10-18 20:54:15.738 11547 13181 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
-10-18 20:54:15.738 11547 13181 I ReactNativeJS:   modalAlreadyShowing: false,
-10-18 20:54:15.738 11547 13181 I ReactNativeJS:   driverStatus: 'busy',
-10-18 20:54:15.738 11547 13181 I ReactNativeJS:   hasCurrentRide: true }
-10-18 20:54:15.746 11547 13181 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
-10-18 20:54:15.746 11547 13181 I ReactNativeJS: 🔄 Component state updated:
-10-18 20:54:15.746 11547 13181 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:15.746 11547 13181 I ReactNativeJS:   status: 'accepted',
-10-18 20:54:15.746 11547 13181 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
-10-18 20:54:15.746 11547 13181 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
-10-18 20:54:15.746 11547 13181 I ReactNativeJS: '  - Pending rides count:', 0
-10-18 20:54:15.746 11547 13181 I ReactNativeJS: '  - Driver status:', 'busy'
-10-18 20:54:15.747 11547 13181 I ReactNativeJS: '  - Loading:', false
-10-18 20:54:15.747 11547 13181 I ReactNativeJS: '  - Error:', null
-10-18 20:54:15.747 11547 13181 I ReactNativeJS: '  - Show modal:', false
-10-18 20:54:15.747 11547 13181 I ReactNativeJS: '  - Timestamp:', '2025-10-18T15:24:15.747Z'
-10-18 20:54:15.747 11547 13181 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
-10-18 20:54:15.749 11547 11547 D nativeloader: Configuring clns-11 for other apk . target_sdk_version=34, uses_libraries=ALL, library_path=/data/user_de/0/com.google.android.gms/app_chimera/m/0000001d/dl-MapsCoreDynamite.integ_253425402100400.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
-10-18 20:54:15.749 11547 11547 D nativeloader: Extending system_exposed_libraries: libapuwareapusys.mtk.so:libapuwareapusys_v2.mtk.so:libapuwarexrp.mtk.so:libapuwarexrp_v2.mtk.so:libapuwareutils.mtk.so:libapuwareutils_v2.mtk.so:libapuwarehmp.mtk.so:libneuron_graph_delegate.mtk.so:libneuronusdk_adapter.mtk.so:libtflite_mtk.mtk.so:libarmnn_ndk.mtk.so:libcmdl_ndk.mtk.so:libnir_neon_driver_ndk.mtk.so:libmvpu_runtime.mtk.so:libmvpu_runtime_pub.mtk.so:libmvpu_engine_pub.mtk.so:libmvpu_pattern_pub.mtk.so:libmvpuop_mtk_cv.mtk.so:libmvpuop_mtk_nn.mtk.so:libmvpu_runtime_25.mtk.so:libmvpu_runtime_25_pub.mtk.so:libmvpu_engine_25_pub.mtk.so:libmvpu_pattern_25_pub.mtk.so:libmvpuop25_mtk_cv.mtk.so:libmvpuop25_mtk_nn.mtk.so:libmvpu_config.mtk.so:libteeservice_client.trustonic.so:librealm-jni.vivo.so
-10-18 20:54:15.750 11547 11547 D nativeloader: Load /data/user_de/0/com.google.android.gms/app_chimera/m/0000001d/dl-MapsCoreDynamite.integ_253425402100400.apk!/lib/arm64-v8a/libgmm-jni.so using isolated ns clns-11 (caller=/data/user_de/0/com.google.android.gms/app_chimera/m/0000001d/dl-MapsCoreDynamite.integ_253425402100400.apk): ok
-10-18 20:54:15.751 11547 11547 I native  : I0000 00:00:1760801055.751001   11547 jni_init.cc:30] Initializing JNI...
-10-18 20:54:15.751 11547 11547 I Google Android Maps SDK: Google Play services client version: 18020000
-10-18 20:54:15.761 11547 11547 D bo      : SDK type: 1, version: 253425402
-10-18 20:54:15.765 11547 11547 D hp      : maps_core_dynamite module version in use (0 represents standalone library): 253425402
-10-18 20:54:15.766 11547 11547 D hp      : Added event: 110
-10-18 20:54:15.766 11547 11547 D hp      : Added event: 112
-10-18 20:54:15.766 11547 11547 D MapsInitializer: loadedRenderer: LATEST
-10-18 20:54:15.766 11547 11547 D AirMapRenderer: LATEST
-10-18 20:54:15.766 11547 11547 D MapsInitializer: preferredRenderer: null
-10-18 20:54:15.766 11547 11547 D zzcc    : preferredRenderer: null
-10-18 20:54:15.767 11547 11547 D bo      : SDK type: 1, version: 253425402
-10-18 20:54:15.767 11547 11547 I Google Android Maps SDK: Google Play services package version: 253931035
-10-18 20:54:15.767 11547 11547 I Google Android Maps SDK: Google Play services maps renderer version(maps_core): 253425402
-10-18 20:54:15.768 11547 11547 D bo      : SDK type: 1, version: 253425402
-10-18 20:54:15.768 11547 11547 D de      : about to start loading native library asynchronously
-10-18 20:54:15.771 11547 11547 D AndroidRuntime: Shutting down VM
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: FATAL EXCEPTION: main
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 11547
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: java.lang.IllegalStateException: API key not found.  Check that <meta-data android:name="com.google.android.geo.API_KEY" android:value="your API key"/> is in the <application> element of AndroidManifest.xml
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.maps.api.android.lib6.common.g.b(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:117)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.maps.internal.CreatorImpl.c(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:806)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.maps.internal.CreatorImpl.newMapViewDelegate(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:23)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.maps.internal.h.br(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:311)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at m140.bat.onTransact(:com.google.android.gms.policy_maps_core_dynamite@253425407@253425402025.797495247.797495247:21)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.os.Binder.transact(Binder.java:1406)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.internal.maps.zza.zzJ(com.google.android.gms:play-services-maps@@18.2.0:2)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.maps.internal.zze.zzg(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.maps.zzai.zzb(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.maps.zzai.createDelegate(com.google.android.gms:play-services-maps@@18.2.0:1)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.zaf(com.google.android.gms:play-services-base@@18.2.0:6)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.dynamic.DeferredLifecycleHelper.onCreate(com.google.android.gms:play-services-base@@18.2.0:1)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.google.android.gms.maps.MapView.onCreate(com.google.android.gms:play-services-maps@@18.2.0:4)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.rnmaps.maps.MapView.<init>(MapView.java:176)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:77)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:32)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.uimanager.ViewManager.createViewInstance(ViewManager.java:176)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:107)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.rnmaps.maps.MapManager.createViewInstance(MapManager.java:32)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.uimanager.ViewManager.createView(ViewManager.java:108)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.uimanager.NativeViewHierarchyManager.createView(NativeViewHierarchyManager.java:281)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$CreateViewOperation.execute(UIViewOperationQueue.java:160)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$DispatchUIFrameCallback.dispatchPendingNonBatchedOperations(UIViewOperationQueue.java:1107)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.uimanager.UIViewOperationQueue$DispatchUIFrameCallback.doFrameGuarded(UIViewOperationQueue.java:1078)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.uimanager.GuardedFrameCallback.doFrame(GuardedFrameCallback.java:29)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.facebook.react.modules.core.ReactChoreographer$1.doFrame(ReactChoreographer.java:89)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:2669)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.view.Choreographer$CallbackRecord.run(Choreographer.java:2680)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.view.Choreographer.doCallbacks(Choreographer.java:1863)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.view.Choreographer.doFrame(Choreographer.java:1592)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:2496)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9928)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:625)
-10-18 20:54:15.771 11547 11547 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:957)
-10-18 20:54:15.780  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
-10-18 20:54:15.780 11547 13217 W x       : Suppressed StrictMode policy violation: StrictModeDiskReadViolation
-10-18 20:54:15.783 11547 11547 I Process : Sending signal. PID: 11547 SIG: 9
-10-18 20:54:15.794  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:15.795  6545  6545 D BufferQueueConsumer: [](id:199100000033,api:0,p:-1,c:6545) connect: controlledByApp=false
-10-18 20:54:15.796  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#51](f:0,a:0) constructor()
-10-18 20:54:15.797  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#51](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
-10-18 20:54:15.809  6545  6857 D BLASTBufferQueue: [VRI[Launcher]#51](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=618277096041158(auto) mPendingTransactions.size=0 graphicBufferId=28110560952678 transform=0
-10-18 20:54:15.842 26036 12005 I FusedLocation: (REDACTED) stationary throttling engaged @%s
-10-18 20:54:15.850  6545  6545 I bnlz    : onStart
-10-18 20:54:15.851  6545  6545 I bldh    : (REDACTED) [%s] onStart()
-10-18 20:54:15.851  6545  6545 I blfn    : Reloading theme data
-10-18 20:54:15.852  6545  6545 I bnlz    : onResume
-10-18 20:54:15.870 26036 12005 I FusedOrientationManager: Unregistering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:15.921  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:15.922  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:15.922  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:15.924  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:17.762 26036 26104 I ActivityScheduler: nextTriggerTime: 1245467125, in 239999ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 30000
+10-19 14:18:29.134  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 14:18:29.138  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 14:18:29.204  8059  8059 I BackgroundFetchTaskConsumer: Starting an alarm for task 'background-fetch-task'.
+10-19 14:18:29.270  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 14:18:29.271  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 14:18:29.271  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
 --------- beginning of system
-10-18 20:54:19.014  1870  2711 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 860, arg2: 1237, arg3: 15708, arg4: 7178, name: com.a1taxi.a1taxicustomer
-10-18 20:54:19.016 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for e5863667-c95a-40ff-9572-d05a921bea53:', 'CHANNEL_ERROR'
-10-18 20:54:19.017 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 97334bab-4520-4c46-8c5e-568c16476c7e:', 'CHANNEL_ERROR'
-10-18 20:54:19.017 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for ab10282a-8c94-44dc-a563-7cbdaa1f2152:', 'CHANNEL_ERROR'
-10-18 20:54:19.017 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for a7bde9c8-d6fb-412e-a29f-8c04d59a5526:', 'CHANNEL_ERROR'
-10-18 20:54:19.018 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 62a975b5-e38c-4d14-bdb9-2804cd5efd62:', 'CHANNEL_ERROR'
-10-18 20:54:19.018 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 25c9b86c-1bcc-4c83-a52a-2bf9112a1805:', 'CHANNEL_ERROR'
-10-18 20:54:19.018 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 8ddb9bb2-571b-4e13-94a0-afe448d23214:', 'CHANNEL_ERROR'
-10-18 20:54:19.018 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 9bad33c5-02a8-49c2-9bf6-be2ec0abc239:', 'CHANNEL_ERROR'
-10-18 20:54:19.019 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 8fb34677-14fc-4479-b3c5-d42763361ec5:', 'CHANNEL_ERROR'
-10-18 20:54:19.020 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for cea5ef50-535a-4ebd-9ba9-524c03aebb88:', 'CHANNEL_ERROR'
-10-18 20:54:19.020 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 6877deb9-b84c-426f-b966-4f3d2767cead:', 'CHANNEL_ERROR'
-10-18 20:54:19.021 15708 19060 I ReactNativeJS: '📡 [GPS-TRACKING] Subscription status:', 'CHANNEL_ERROR'
-10-18 20:54:19.021 15708 19060 E ReactNativeJS: ❌ [GPS-TRACKING] Channel error occurred
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: console.error: ❌ [GPS-TRACKING] Channel error occurred, js engine: hermes, stack:
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: _construct@1:175995
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: Wrapper@1:175649
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: _callSuper@1:173480
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: SyntheticError@1:175136
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: reactConsoleErrorHandler@1:174747
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:2555767
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:2202823
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:2207898
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:2207323
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: _trigger@1:2206596
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:2192484
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: _triggerChanError@1:2192448
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: _onConnError@1:2192404
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:2191506
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: dispatchEvent@1:490839
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:508661
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: emit@1:211630
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:210019
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: emit@1:210313
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: __callFunction@1:167128
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: anonymous@1:165570
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: __guard@1:166510
-10-18 20:54:19.038 15708 19061 E unknown:ReactNative: callFunctionReturnFlushedQueue@1:165528
-10-18 20:54:19.047 15708 19060 I ReactNativeJS: '🗺️ [RIDES] Rendering map with data:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.047 15708 19060 I ReactNativeJS:   rideStatus: 'accepted',
-10-18 20:54:19.047 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: true,
-10-18 20:54:19.047 15708 19060 I ReactNativeJS:   driverLocation: { lat: 12.7287, lng: 77.8092 },
-10-18 20:54:19.047 15708 19060 I ReactNativeJS:   pickupLocation: { lat: 12.748588, lng: 77.8300797 },
-10-18 20:54:19.047 15708 19060 I ReactNativeJS:   destinationLocation: { lat: 12.8303987, lng: 77.8662369 } }
-10-18 20:54:19.048 15708 19060 I ReactNativeJS: '🚗 [RIDES] Driver info for LiveTracking:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:   driverName: 'john',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:   hasDrivers: true,
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:   hasAssignedDriver: false,
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:   driversUsersFullName: 'john',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:   assignedDriverUsersFullName: undefined,
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:   driversStructure: 
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:    [ 'id',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:      'users',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:      'rating',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:      'status',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:      'user_id',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:      'vehicles',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:      'total_rides',
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:      'license_number' ],
-10-18 20:54:19.048 15708 19060 I ReactNativeJS:   assignedDriverStructure: null }
-10-18 20:54:19.056 15708 15708 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:19.084 15708 15708 D BufferQueueConsumer: [](id:3d5c0000004d,api:0,p:-1,c:15708) connect: controlledByApp=false
-10-18 20:54:19.085 15708 15708 D BLASTBufferQueue: [VRI[MainActivity]#44](f:0,a:0) constructor()
-10-18 20:54:19.085 15708 15708 D BLASTBufferQueue: [VRI[MainActivity]#44](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-18 20:54:19.115  6545  6545 I bnlz    : onPause
-10-18 20:54:19.123  1870  2278 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 860, arg2: 1237, arg3: 15708, arg4: 7178, name: com.a1taxi.a1taxicustomer
-10-18 20:54:19.157 15708 19060 I ReactNativeJS: '🗺️ [MAP] Props updated:', { showRoute: true,
-10-18 20:54:19.157 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: true,
-10-18 20:54:19.157 15708 19060 I ReactNativeJS:   hasDriverLocation: true,
-10-18 20:54:19.157 15708 19060 I ReactNativeJS:   hasPickupCoords: true,
-10-18 20:54:19.157 15708 19060 I ReactNativeJS:   hasDestinationCoords: false,
-10-18 20:54:19.157 15708 19060 I ReactNativeJS:   driverLocation: { lat: 12.7287, lng: 77.8092 },
-10-18 20:54:19.157 15708 19060 I ReactNativeJS:   pickupCoords: { lat: 12.748588, lng: 77.8300797 },
-10-18 20:54:19.157 15708 19060 I ReactNativeJS:   destinationCoords: null }
-10-18 20:54:19.157 15708 19060 I ReactNativeJS: '🗺️ Calculating route between:', { latitude: 12.7287, longitude: 77.8092, heading: 45 }, 'and', { latitude: 12.748588, longitude: 77.8300797 }
-10-18 20:54:19.157 15708 19060 I ReactNativeJS: '🗺️ [GOOGLE-MAPS] Getting directions from', { lat: 12.7287, lng: 77.8092 }, 'to', { lat: 12.748588, lng: 77.8300797 }
-10-18 20:54:19.160 15708 19060 I ReactNativeJS: '🌐 Making proxy request to:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/places-proxy/directions?origin=12.7287%2C77.8092&destination=12.748588%2C77.8300797&mode=driving'
-10-18 20:54:19.172 15708 19060 I ReactNativeJS: '🚗 [MAP] Driver location updated:', { latitude: 12.7287, longitude: 77.8092, heading: 45 }
-10-18 20:54:19.173 15708 19060 I ReactNativeJS: '🚗 [RIDES] Driver location received:', { latitude: 12.7287,
-10-18 20:54:19.173 15708 19060 I ReactNativeJS:   longitude: 77.8092,
-10-18 20:54:19.173 15708 19060 I ReactNativeJS:   heading: 45,
-10-18 20:54:19.173 15708 19060 I ReactNativeJS:   timestamp: '2025-10-11T19:04:29.192807+00:00' }
-10-18 20:54:19.174 15708 19060 I ReactNativeJS: '🗺️ [RIDES] Rendering map with data:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   rideStatus: 'accepted',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: true,
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   driverLocation: { lat: 12.7287, lng: 77.8092 },
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   pickupLocation: { lat: 12.748588, lng: 77.8300797 },
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   destinationLocation: { lat: 12.8303987, lng: 77.8662369 } }
-10-18 20:54:19.174 15708 19060 I ReactNativeJS: '🚗 [RIDES] Driver info for LiveTracking:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   driverName: 'john',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   hasDrivers: true,
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   hasAssignedDriver: false,
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   driversUsersFullName: 'john',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   assignedDriverUsersFullName: undefined,
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   driversStructure: 
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:    [ 'id',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:      'users',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:      'rating',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:      'status',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:      'user_id',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:      'vehicles',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:      'total_rides',
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:      'license_number' ],
-10-18 20:54:19.174 15708 19060 I ReactNativeJS:   assignedDriverStructure: null }
-10-18 20:54:19.199 15708 19040 D BLASTBufferQueue: [VRI[MainActivity]#44](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=618280486283082(auto) mPendingTransactions.size=0 graphicBufferId=67465346286004 transform=0
-10-18 20:54:19.219 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for e5863667-c95a-40ff-9572-d05a921bea53:', 'CHANNEL_ERROR'
-10-18 20:54:19.220 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 97334bab-4520-4c46-8c5e-568c16476c7e:', 'CHANNEL_ERROR'
-10-18 20:54:19.220 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for ab10282a-8c94-44dc-a563-7cbdaa1f2152:', 'CHANNEL_ERROR'
-10-18 20:54:19.221 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for a7bde9c8-d6fb-412e-a29f-8c04d59a5526:', 'CHANNEL_ERROR'
-10-18 20:54:19.221 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 62a975b5-e38c-4d14-bdb9-2804cd5efd62:', 'CHANNEL_ERROR'
-10-18 20:54:19.222 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 25c9b86c-1bcc-4c83-a52a-2bf9112a1805:', 'CHANNEL_ERROR'
-10-18 20:54:19.222 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 8ddb9bb2-571b-4e13-94a0-afe448d23214:', 'CHANNEL_ERROR'
-10-18 20:54:19.222 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 9bad33c5-02a8-49c2-9bf6-be2ec0abc239:', 'CHANNEL_ERROR'
-10-18 20:54:19.222 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 8fb34677-14fc-4479-b3c5-d42763361ec5:', 'CHANNEL_ERROR'
-10-18 20:54:19.223 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for cea5ef50-535a-4ebd-9ba9-524c03aebb88:', 'CHANNEL_ERROR'
-10-18 20:54:19.223 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 6877deb9-b84c-426f-b966-4f3d2767cead:', 'CHANNEL_ERROR'
-10-18 20:54:19.223 15708 19060 I ReactNativeJS: '📡 [GPS-TRACKING] Subscription status:', 'CHANNEL_ERROR'
-10-18 20:54:19.223 15708 19060 E ReactNativeJS: ❌ [GPS-TRACKING] Channel error occurred
-10-18 20:54:19.225 15708 19060 I ReactNativeJS: '🗺️ [MAP] Props updated:', { showRoute: true,
-10-18 20:54:19.225 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: true,
-10-18 20:54:19.225 15708 19060 I ReactNativeJS:   hasDriverLocation: true,
-10-18 20:54:19.225 15708 19060 I ReactNativeJS:   hasPickupCoords: true,
-10-18 20:54:19.225 15708 19060 I ReactNativeJS:   hasDestinationCoords: false,
-10-18 20:54:19.225 15708 19060 I ReactNativeJS:   driverLocation: { lat: 12.7287, lng: 77.8092 },
-10-18 20:54:19.225 15708 19060 I ReactNativeJS:   pickupCoords: { lat: 12.748588, lng: 77.8300797 },
-10-18 20:54:19.225 15708 19060 I ReactNativeJS:   destinationCoords: null }
-10-18 20:54:19.225 15708 19060 I ReactNativeJS: '🗺️ Calculating route between:', { latitude: 12.7287, longitude: 77.8092, heading: 45 }, 'and', { latitude: 12.748588, longitude: 77.8300797 }
-10-18 20:54:19.225 15708 19060 I ReactNativeJS: '🗺️ [GOOGLE-MAPS] Getting directions from', { lat: 12.7287, lng: 77.8092 }, 'to', { lat: 12.748588, lng: 77.8300797 }
-10-18 20:54:19.226 15708 19060 I ReactNativeJS: '🌐 Making proxy request to:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/places-proxy/directions?origin=12.7287%2C77.8092&destination=12.748588%2C77.8300797&mode=driving'
-10-18 20:54:19.228 15708 19060 I ReactNativeJS: '🚗 [MAP] Driver location updated:', { latitude: 12.7287, longitude: 77.8092, heading: 45 }
-10-18 20:54:19.228 15708 19060 I ReactNativeJS: '🚗 [RIDES] Driver location received:', { latitude: 12.7287,
-10-18 20:54:19.228 15708 19060 I ReactNativeJS:   longitude: 77.8092,
-10-18 20:54:19.228 15708 19060 I ReactNativeJS:   heading: 45,
-10-18 20:54:19.228 15708 19060 I ReactNativeJS:   timestamp: '2025-10-11T19:04:29.192807+00:00' }
-10-18 20:54:19.230 15708 19060 I ReactNativeJS: '🗺️ [RIDES] Rendering map with data:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.230 15708 19060 I ReactNativeJS:   rideStatus: 'accepted',
-10-18 20:54:19.230 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: true,
-10-18 20:54:19.230 15708 19060 I ReactNativeJS:   driverLocation: { lat: 12.7287, lng: 77.8092 },
-10-18 20:54:19.230 15708 19060 I ReactNativeJS:   pickupLocation: { lat: 12.748588, lng: 77.8300797 },
-10-18 20:54:19.230 15708 19060 I ReactNativeJS:   destinationLocation: { lat: 12.8303987, lng: 77.8662369 } }
-10-18 20:54:19.231 15708 19060 I ReactNativeJS: '🚗 [RIDES] Driver info for LiveTracking:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:   driverName: 'john',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:   hasDrivers: true,
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:   hasAssignedDriver: false,
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:   driversUsersFullName: 'john',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:   assignedDriverUsersFullName: undefined,
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:   driversStructure: 
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:    [ 'id',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:      'users',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:      'rating',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:      'status',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:      'user_id',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:      'vehicles',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:      'total_rides',
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:      'license_number' ],
-10-18 20:54:19.231 15708 19060 I ReactNativeJS:   assignedDriverStructure: null }
-10-18 20:54:19.233 15708 15708 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{59ad08d V.E...... R......D 0,0-1080,2392 aid=0}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: console.error: ❌ [GPS-TRACKING] Channel error occurred, js engine: hermes, stack:
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: _construct@1:175995
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: Wrapper@1:175649
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: _callSuper@1:173480
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: SyntheticError@1:175136
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: reactConsoleErrorHandler@1:174747
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:2555767
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:2202823
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:2207898
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:2207323
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: _trigger@1:2206596
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:2192484
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: _triggerChanError@1:2192448
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: _onConnClose@1:2192268
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:2191552
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: dispatchEvent@1:490839
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:508726
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: emit@1:211630
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:210019
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: emit@1:210313
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: __callFunction@1:167128
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: anonymous@1:165570
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: __guard@1:166510
-10-18 20:54:19.235 15708 19061 E unknown:ReactNative: callFunctionReturnFlushedQueue@1:165528
-10-18 20:54:19.238  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:19.238  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:19.239  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.a1taxicustomer, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:19.240  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:19.290 15708 19060 I ReactNativeJS: '🗺️ [MAP] Props updated:', { showRoute: true,
-10-18 20:54:19.290 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: true,
-10-18 20:54:19.290 15708 19060 I ReactNativeJS:   hasDriverLocation: true,
-10-18 20:54:19.290 15708 19060 I ReactNativeJS:   hasPickupCoords: true,
-10-18 20:54:19.290 15708 19060 I ReactNativeJS:   hasDestinationCoords: false,
-10-18 20:54:19.290 15708 19060 I ReactNativeJS:   driverLocation: { lat: 12.7287, lng: 77.8092 },
-10-18 20:54:19.290 15708 19060 I ReactNativeJS:   pickupCoords: { lat: 12.748588, lng: 77.8300797 },
-10-18 20:54:19.290 15708 19060 I ReactNativeJS:   destinationCoords: null }
-10-18 20:54:19.290 15708 19060 I ReactNativeJS: '🗺️ Calculating route between:', { latitude: 12.7287, longitude: 77.8092, heading: 45 }, 'and', { latitude: 12.748588, longitude: 77.8300797 }
-10-18 20:54:19.290 15708 19060 I ReactNativeJS: '🗺️ [GOOGLE-MAPS] Getting directions from', { lat: 12.7287, lng: 77.8092 }, 'to', { lat: 12.748588, lng: 77.8300797 }
-10-18 20:54:19.290 15708 19060 I ReactNativeJS: '🌐 Making proxy request to:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/places-proxy/directions?origin=12.7287%2C77.8092&destination=12.748588%2C77.8300797&mode=driving'
-10-18 20:54:19.291 15708 19060 I ReactNativeJS: '🚗 [MAP] Driver location updated:', { latitude: 12.7287, longitude: 77.8092, heading: 45 }
-10-18 20:54:19.292 15708 19060 I ReactNativeJS: '🗺️ [RIDES] Rendering map with data:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.292 15708 19060 I ReactNativeJS:   rideStatus: 'accepted',
-10-18 20:54:19.292 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: true,
-10-18 20:54:19.292 15708 19060 I ReactNativeJS:   driverLocation: { lat: 12.7287, lng: 77.8092 },
-10-18 20:54:19.292 15708 19060 I ReactNativeJS:   pickupLocation: { lat: 12.748588, lng: 77.8300797 },
-10-18 20:54:19.292 15708 19060 I ReactNativeJS:   destinationLocation: { lat: 12.8303987, lng: 77.8662369 } }
-10-18 20:54:19.293 15708 19060 I ReactNativeJS: '🚗 [RIDES] Driver info for LiveTracking:', { rideId: '8fb34677-14fc-4479-b3c5-d42763361ec5',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:   driverName: 'john',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:   hasDrivers: true,
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:   hasAssignedDriver: false,
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:   driversUsersFullName: 'john',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:   assignedDriverUsersFullName: undefined,
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:   driversStructure: 
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:    [ 'id',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:      'users',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:      'rating',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:      'status',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:      'user_id',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:      'vehicles',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:      'total_rides',
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:      'license_number' ],
-10-18 20:54:19.293 15708 19060 I ReactNativeJS:   assignedDriverStructure: null }
-10-18 20:54:19.301 15708 19060 I ReactNativeJS: 🚨 [DEBUG] Driver location polling interval triggered
-10-18 20:54:19.306 15708 19060 I ReactNativeJS: 🚨 [DEBUG] Driver location polling interval triggered
-10-18 20:54:19.415 26036 26036 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
-10-18 20:54:19.572  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
-10-18 20:54:19.593  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:19.594  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#51](f:0,a:1) destructor()
-10-18 20:54:19.594  6545  6545 D BufferQueueConsumer: [VRI[Launcher]#51(BLAST Consumer)51](id:199100000033,api:0,p:-1,c:6545) disconnect
-10-18 20:54:19.601  6545  6545 I bnlz    : onStop
-10-18 20:54:19.903  1413  2005 W YouTube : Empty persistent device token received from InnerTube.
-10-18 20:54:20.082 15708 19060 I ReactNativeJS: '✅ Proxy response received:', 'OK'
-10-18 20:54:20.083 15708 19060 I ReactNativeJS: '✅ [GOOGLE-MAPS] Directions retrieved:', { distance: '5.4 km',
-10-18 20:54:20.083 15708 19060 I ReactNativeJS:   duration: '18 mins',
-10-18 20:54:20.083 15708 19060 I ReactNativeJS:   distance_km: '5.41',
-10-18 20:54:20.083 15708 19060 I ReactNativeJS:   duration_min: '17.6',
-10-18 20:54:20.083 15708 19060 I ReactNativeJS:   source: 'Google Directions API' }
-10-18 20:54:20.084 15708 19060 I ReactNativeJS: '✅ Got directions from Google API:', { distance: { text: '5.4 km', value: 5414 },
-10-18 20:54:20.084 15708 19060 I ReactNativeJS:   duration: { text: '18 mins', value: 1056 },
-10-18 20:54:20.084 15708 19060 I ReactNativeJS:   polyline: { points: 'uaulA}b|yMNMg@q@z@}@JQj@Ez@Ct@JLBJ@FF`@e@`@e@\\e@|@oBl@yBj@kF\\sBJi@FuBRgC|@}Fz@sFz@_GNw@JSD]`AoG`AeHLo@Bi@NkANaAPw@A?AC?C?GDE?Az@uD\\kBHy@OAYAs@Au@S}Aq@sAe@eCaAs@WwJ{CoBaAi@]_@M[IYG{C[_@MgBYqAYsB]cBc@aA]mA_@sA[aFqAy@Mc@CwA@eB?i@IcBc@eAi@{@k@kBqAaAy@oC{D_BiBcAw@u@]u@U}C}@q@Og@GsAMyFe@yEYsLYyFHwABQ~Ca@rEYDMHCJAT@R@PIV_@hBnA`@]bA[z@i@M' } }
-10-18 20:54:20.095 15708 19060 I ReactNativeJS: '✅ Proxy response received:', 'OK'
-10-18 20:54:20.096 15708 19060 I ReactNativeJS: '✅ [GOOGLE-MAPS] Directions retrieved:', { distance: '5.4 km',
-10-18 20:54:20.096 15708 19060 I ReactNativeJS:   duration: '18 mins',
-10-18 20:54:20.096 15708 19060 I ReactNativeJS:   distance_km: '5.41',
-10-18 20:54:20.096 15708 19060 I ReactNativeJS:   duration_min: '17.6',
-10-18 20:54:20.096 15708 19060 I ReactNativeJS:   source: 'Google Directions API' }
-10-18 20:54:20.097 15708 19060 I ReactNativeJS: '✅ Got directions from Google API:', { distance: { text: '5.4 km', value: 5414 },
-10-18 20:54:20.097 15708 19060 I ReactNativeJS:   duration: { text: '18 mins', value: 1056 },
-10-18 20:54:20.097 15708 19060 I ReactNativeJS:   polyline: { points: 'uaulA}b|yMNMg@q@z@}@JQj@Ez@Ct@JLBJ@FF`@e@`@e@\\e@|@oBl@yBj@kF\\sBJi@FuBRgC|@}Fz@sFz@_GNw@JSD]`AoG`AeHLo@Bi@NkANaAPw@A?AC?C?GDE?Az@uD\\kBHy@OAYAs@Au@S}Aq@sAe@eCaAs@WwJ{CoBaAi@]_@M[IYG{C[_@MgBYqAYsB]cBc@aA]mA_@sA[aFqAy@Mc@CwA@eB?i@IcBc@eAi@{@k@kBqAaAy@oC{D_BiBcAw@u@]u@U}C}@q@Og@GsAMyFe@yEYsLYyFHwABQ~Ca@rEYDMHCJAT@R@PIV_@hBnA`@]bA[z@i@M' } }
-10-18 20:54:20.130 15708 19060 I ReactNativeJS: '✅ Proxy response received:', 'OK'
-10-18 20:54:20.130 15708 19060 I ReactNativeJS: '✅ [GOOGLE-MAPS] Directions retrieved:', { distance: '5.4 km',
-10-18 20:54:20.130 15708 19060 I ReactNativeJS:   duration: '18 mins',
-10-18 20:54:20.130 15708 19060 I ReactNativeJS:   distance_km: '5.41',
-10-18 20:54:20.130 15708 19060 I ReactNativeJS:   duration_min: '17.6',
-10-18 20:54:20.130 15708 19060 I ReactNativeJS:   source: 'Google Directions API' }
-10-18 20:54:20.131 15708 19060 I ReactNativeJS: '✅ Got directions from Google API:', { distance: { text: '5.4 km', value: 5414 },
-10-18 20:54:20.131 15708 19060 I ReactNativeJS:   duration: { text: '18 mins', value: 1056 },
-10-18 20:54:20.131 15708 19060 I ReactNativeJS:   polyline: { points: 'uaulA}b|yMNMg@q@z@}@JQj@Ez@Ct@JLBJ@FF`@e@`@e@\\e@|@oBl@yBj@kF\\sBJi@FuBRgC|@}Fz@sFz@_GNw@JSD]`AoG`AeHLo@Bi@NkANaAPw@A?AC?C?GDE?Az@uD\\kBHy@OAYAs@Au@S}Aq@sAe@eCaAs@WwJ{CoBaAi@]_@M[IYG{C[_@MgBYqAYsB]cBc@aA]mA_@sA[aFqAy@Mc@CwA@eB?i@IcBc@eAi@{@k@kBqAaAy@oC{D_BiBcAw@u@]u@U}C}@q@Og@GsAMyFe@yEYsLYyFHwABQ~Ca@rEYDMHCJAT@R@PIV_@hBnA`@]bA[z@i@M' } }
-10-18 20:54:20.213  1413  2005 W YouTube : Empty persistent device token received from InnerTube.
-10-18 20:54:21.616  5589  5589 I StylusModule: StylusModule.onUpdateToolType():800 Update tool type = 0
-10-18 20:54:21.679 15708 19060 I ReactNativeJS: '🎯 [TRIP_NOTIFICATION] Component mounted, notifications count:', 23
-10-18 20:54:21.680 15708 19060 I ReactNativeJS: '🔍 [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
-10-18 20:54:21.706 15708 19060 I ReactNativeJS: '🎯 [useRideNotifications] useEffect triggered, user ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
-10-18 20:54:21.706 15708 19060 I ReactNativeJS: 🔍 [NOTIFICATIONS] ===== FETCHING NOTIFICATIONS =====
-10-18 20:54:21.707 15708 19060 I ReactNativeJS: '🔍 [NOTIFICATIONS] User ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
-10-18 20:54:21.707 15708 19060 I ReactNativeJS: '🔍 [NOTIFICATIONS] Timestamp:', '2025-10-18T15:24:21.707Z'
-10-18 20:54:21.709 15708 19060 I ReactNativeJS: 📱 Requesting location permission on app start for all platforms...
-10-18 20:54:21.709 15708 19060 I ReactNativeJS: '📱 Current platform:', 'android'
-10-18 20:54:21.709 15708 19060 I ReactNativeJS: '🔍 Requesting location permission for platform:', 'android'
-10-18 20:54:21.709 15708 19060 I ReactNativeJS: 📱 Requesting Android location permissions...
-10-18 20:54:21.709 15708 19060 I ReactNativeJS: 📊 Loading all vehicle configs from fare_matrix table for booking_type=regular
-10-18 20:54:21.710 15708 19060 I ReactNativeJS: 🗺️ Fetching active zones from database...
-10-18 20:54:21.711 15708 19060 I ReactNativeJS: 📊 [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
-10-18 20:54:21.711 15708 19060 I ReactNativeJS: '📊 [HOME] availableDrivers state update:', { count: 0,
-10-18 20:54:21.711 15708 19060 I ReactNativeJS:   showDriversOnMap: true,
-10-18 20:54:21.711 15708 19060 I ReactNativeJS:   driversPassedToMap: 0,
-10-18 20:54:21.711 15708 19060 I ReactNativeJS:   drivers: [] }
-10-18 20:54:21.711 15708 19060 I ReactNativeJS: 🗺️ [HOME] No drivers to pass to map (availableDrivers is empty)
-10-18 20:54:21.714 15708 19060 I ReactNativeJS: '🔍 AuthNavigator - checking auth state:', { user: true,
-10-18 20:54:21.714 15708 19060 I ReactNativeJS:   loading: false,
-10-18 20:54:21.714 15708 19060 I ReactNativeJS:   segments: '(tabs)',
-10-18 20:54:21.714 15708 19060 I ReactNativeJS:   userEmail: '918608374935@a1taxi.app',
-10-18 20:54:21.714 15708 19060 I ReactNativeJS:   userRole: 'customer' }
-10-18 20:54:21.714 15708 19060 I ReactNativeJS: ✅ User authenticated and on correct screen
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: '📱 Fine location permission result:', 'granted'
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: ✅ Android fine location permission granted
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: ✅ Location permission granted on mount
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: 📍 [HOME] Starting location fetch...
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: 🔍 Enhanced Location Service: Getting current location with address...
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: '🔍 Platform:', 'android'
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: 📍 Enhanced Location Service: Starting location detection...
-10-18 20:54:21.721 15708 19060 I ReactNativeJS: '🌍 Platform:', 'android'
-10-18 20:54:21.728 15708 19060 I ReactNativeJS: ✅ Enhanced Location Service: Permission granted, attempting detection...
-10-18 20:54:21.728 15708 19060 I ReactNativeJS: 🎯 Enhanced Location Service: Attempting high accuracy GPS...
-10-18 20:54:21.728 15708 19060 I ReactNativeJS: 📱 Using Expo Location for high accuracy...
-10-18 20:54:21.739  1870  3777 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 15708, arg4: 7178, name: com.a1taxi.a1taxicustomer
-10-18 20:54:21.740 15708 10657 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:21.742 15708 15708 D BufferQueueConsumer: [SurfaceTexture-0-15708-32](id:3d5c0000004b,api:0,p:-1,c:15708) disconnect
-10-18 20:54:21.759 26036 12005 I FusedLocation: stationary throttling disengaged [CONTEXT service_id=6 ]
-10-18 20:54:21.780 26036 12642 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:21.787 26036 26172 W inertial-anchor: Triggering reinit due to mag declination change
-10-18 20:54:21.788 26036 26172 W Looper  : Looper already prepared for this thread with a different value for the LOOPER_PREPARE_ALLOW_NON_CALLBACKS option.
-10-18 20:54:21.794 26036 26104 I ActivityScheduler: nextTriggerTime: 1245227125, in -4032ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 0
-10-18 20:54:21.796 26036 26104 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
-10-18 20:54:21.797 26036 13155 W SystemServiceRegistry: No service published for: wifirtt
-10-18 20:54:21.805 13271 13271 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-18 20:54:21.809 13271 13271 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-18 20:54:21.812 13271 13271 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-18 20:54:21.833 13271 13271 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-18 20:54:21.833 13271 13271 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-18 20:54:21.850 13271 13271 D CompatChangeReporter: Compat change id reported: 242716250; UID 10383; state: ENABLED
-10-18 20:54:21.862 13271 13271 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-18 20:54:21.865 13271 13271 D nativeloader: Configuring clns-7 for other apk /data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/lib/arm64:/data/app/~~qdwfY3fN7Kk_DI0QZoyw_w==/com.a1taxi.driverpro-dOdIvavY5QucTesdsNTGwA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-18 20:54:21.881 13271 13271 V GraphicsEnvironment: Currently set values for:
-10-18 20:54:21.881 13271 13271 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-18 20:54:21.881 13271 13271 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-18 20:54:21.881 13271 13271 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-18 20:54:21.881 26036 26104 I ActivityScheduler: nextTriggerTime: 1245231245, in 0ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 0
-10-18 20:54:21.881 13271 13271 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-18 20:54:21.896 13271 13271 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-18 20:54:21.896 13271 13271 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-18 20:54:21.897 13271 13271 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-18 20:54:21.907 13271 13271 V SoLoader: Init SoLoader delegate
-10-18 20:54:21.919 13271 13271 I TaskService: Registered task with name 'background-fetch-task' for app with scoping identifier 'com.a1taxi.driverpro'.
-10-18 20:54:21.921 13271 13271 I TaskService: Registered task with name 'background-location-task' for app with scoping identifier 'com.a1taxi.driverpro'.
-10-18 20:54:21.930 13271 13271 W LocationTaskConsumer: Foreground location task cannot be started while the app is in the background!
-10-18 20:54:21.932 13271 13271 I TaskService: Handling intent with task name 'background-location-task' and app scoping identifier 'com.a1taxi.driverpro'.
-10-18 20:54:21.967 26036 13265 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:21.971 26036 12636 I AlarmManager: set [name: SystemMemoryMap-flp type: 2 triggerAtMillis: 9223372036854775806 windowMillis: -1 intervalMillis: 0]
-10-18 20:54:22.116 15708 19060 I ReactNativeJS: '✅ Loaded', 6, 'fare configs from fare_matrix table:', [ { vehicle_type: 'hatchback', base_fare: 145, per_km_rate: 25 },
-10-18 20:54:22.116 15708 19060 I ReactNativeJS:   { vehicle_type: 'hatchback_ac', base_fare: 167, per_km_rate: 27 },
-10-18 20:54:22.116 15708 19060 I ReactNativeJS:   { vehicle_type: 'sedan', base_fare: 145, per_km_rate: 25 },
-10-18 20:54:22.116 15708 19060 I ReactNativeJS:   { vehicle_type: 'sedan_ac', base_fare: 160, per_km_rate: 25 },
-10-18 20:54:22.116 15708 19060 I ReactNativeJS:   { vehicle_type: 'suv', base_fare: 400, per_km_rate: 30 },
-10-18 20:54:22.116 15708 19060 I ReactNativeJS:   { vehicle_type: 'suv_ac', base_fare: 1500, per_km_rate: 35 } ]
-10-18 20:54:22.149 15708 19060 I ReactNativeJS: '✅ Fetched zones from database:', { count: 2,
-10-18 20:54:22.149 15708 19060 I ReactNativeJS:   zones: 
-10-18 20:54:22.149 15708 19060 I ReactNativeJS:    [ { name: 'Inner Ring', city: 'Hosur', radius: 7.74 },
-10-18 20:54:22.149 15708 19060 I ReactNativeJS:      { name: 'Outer Ring', city: 'Hosur', radius: 13.16 } ] }
-10-18 20:54:22.151 15708 19060 I ReactNativeJS: '✅ Loaded active zones:', 2
-10-18 20:54:22.328 26036 26051 I WifiScanner: onFullResults
-10-18 20:54:22.330 26036 26669 I WifiScanner: onFullResults
-10-18 20:54:22.330 26036 26082 I WifiScanner: onFullResults
-10-18 20:54:22.338 26036 12636 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
-10-18 20:54:22.357 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:22.360 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:22.360 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
-10-18 20:54:22.362 26036 26104 I ActivityScheduler: nextTriggerTime: 1245231245, in -480ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 0
-10-18 20:54:22.362 26036 26172 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
-10-18 20:54:22.363 15708 19060 I ReactNativeJS: '✅ Enhanced Location Service: High accuracy location obtained:', { lat: 12.74859,
-10-18 20:54:22.363 15708 19060 I ReactNativeJS:   lng: 77.8299901,
-10-18 20:54:22.363 15708 19060 I ReactNativeJS:   accuracy: '18.391000747680664m' }
-10-18 20:54:22.364 15708 19060 I ReactNativeJS: '📍 Enhanced Location Service: Got location:', { latitude: 12.74859,
-10-18 20:54:22.364 15708 19060 I ReactNativeJS:   longitude: 77.8299901,
-10-18 20:54:22.364 15708 19060 I ReactNativeJS:   accuracy: 18.391000747680664 }
-10-18 20:54:22.364 15708 19060 I ReactNativeJS: 🗺️ Enhanced Location Service: Starting reverse geocoding...
-10-18 20:54:22.364 15708 19060 I ReactNativeJS: '🗺️ Reverse geocoding coordinates:', { latitude: 12.74859, longitude: 77.8299901 }
-10-18 20:54:22.364 15708 19060 I ReactNativeJS: '🏠 Reverse geocoding:', { lat: 12.74859, lng: 77.8299901 }
-10-18 20:54:22.364 15708 19060 I ReactNativeJS: '🌐 Making proxy request to:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/places-proxy/geocode?latlng=12.74859%2C77.8299901'
-10-18 20:54:22.365 26036 26172 I fyyu    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
-10-18 20:54:22.367 26036 12642 I FusedLocation: (REDACTED) stationary throttling engaged @%s
-10-18 20:54:22.370 26036 12642 I FusedOrientationManager: Unregistering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:22.383 26036 26104 I ActivityScheduler: nextTriggerTime: 1245471245, in 239499ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 30000
-10-18 20:54:22.395 15708 19060 I ReactNativeJS: 🔍 [NOTIFICATIONS] ===== DATABASE QUERY RESULT =====
-10-18 20:54:22.397 15708 19060 I ReactNativeJS: '🔍 [NOTIFICATIONS] Query result:', { hasError: false,
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   errorMessage: undefined,
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   errorCode: undefined,
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   errorDetails: undefined,
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   dataCount: 23,
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   tripCompletedCount: 0,
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   unreadTripCompletedCount: 0,
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   allTypes: [ 'ride_status_changed', 'booking_completed', 'ride_cancelled' ],
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:   recentNotifications: 
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:    [ { id: 'f48be59d-9b46-4e42-86d9-abd2672e3a28',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        type: 'ride_status_changed',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        status: 'unread',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        title: 'Ride Status Updated',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        created_at: '2025-10-18T15:15:50.284134+00:00',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        age_seconds: 512 },
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:      { id: 'f7f1e040-9e2a-4984-a885-4b84cd772e90',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        type: 'ride_status_changed',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        status: 'read',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        title: 'Ride Status Updated',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        created_at: '2025-10-18T05:21:38.589702+00:00',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        age_seconds: 36164 },
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:      { id: '42714190-2ef0-493c-b908-bc2d69c15105',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        type: 'ride_status_changed',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        status: 'read',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        title: 'Ride Status Updated',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        created_at: '2025-10-18T04:18:40.565244+00:00',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        age_seconds: 39942 },
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:      { id: 'a8d88c20-3581-4d54-8988-419ab915822a',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        type: 'booking_completed',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        status: 'read',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        title: 'Trip Completed',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        created_at: '2025-10-18T00:11:22.993077+00:00',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        age_seconds: 54779 },
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:      { id: '33de3d27-4c4d-4eba-86ad-eb2daec905c7',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        type: 'ride_status_changed',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        status: 'read',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        title: 'Ride Status Updated',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        created_at: '2025-10-18T00:08:42.70233+00:00',
-10-18 20:54:22.397 15708 19060 I ReactNativeJS:        age_seconds: 54940 } ] }
-10-18 20:54:22.397 15708 19060 I ReactNativeJS: ✅ [NOTIFICATIONS] ===== SETTING NOTIFICATIONS IN STATE =====
-10-18 20:54:22.398 15708 19060 I ReactNativeJS: '✅ [NOTIFICATIONS] Notifications to set:', { total: 23,
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:   tripCompleted: 0,
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:   unreadTripCompleted: 0,
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:   allNotificationIds: 
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:    [ 'f48be59d-9b46-4e42-86d9-abd2672e3a28',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'f7f1e040-9e2a-4984-a885-4b84cd772e90',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '42714190-2ef0-493c-b908-bc2d69c15105',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'a8d88c20-3581-4d54-8988-419ab915822a',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '33de3d27-4c4d-4eba-86ad-eb2daec905c7',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '18198b2a-aaad-46e5-9acf-edd0f848d33f',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '48abd4e9-4389-4046-925e-c1e07ad84e47',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'd7a9b869-37bf-4c17-9176-8951196922bd',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '820df2fd-abe3-457c-82cf-24f154dfd19b',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'a7856ef3-761c-4b1c-9cf6-3c34df9833b7',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'b5795e46-c850-4bcb-a933-898c21727b1b',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '545c5e68-1353-4e95-b9e4-08f883b88a66',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '9c6911c2-87ea-4956-8c97-3e822ef63307',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '4e097013-42dd-4f82-b288-bf6aaf220fda',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '2e43addf-b9f4-4627-83ec-77c15684569b',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '4c443433-9f76-4ff7-8a7a-09b0c1a8250e',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'e424c186-10d1-4a49-93be-be7dfa9edb7e',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'c101ac4b-a09b-42b2-9ba8-aeecf8d1e085',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '3b7c6b23-a18d-4ba7-be7e-9eb312125937',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'ea6218b2-280d-457c-b056-7a321067ab73',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'b65bfbea-d7a8-4219-8131-e12d12f00fe0',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      'f5f74a9c-3334-4a54-b3a9-d6b0efc5f9f1',
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:      '95e45585-7c89-456b-a5c7-4d840ee0707e' ],
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:   tripCompletedNotificationIds: [],
-10-18 20:54:22.398 15708 19060 I ReactNativeJS:   unreadTripCompletedNotificationIds: [] }
-10-18 20:54:22.401 15708 19060 I ReactNativeJS: ✅ [NOTIFICATIONS] ===== CHECKING FOR IMMEDIATE TRIP COMPLETION =====
-10-18 20:54:22.401 15708 19060 I ReactNativeJS: ❌ [NOTIFICATIONS] No immediate trip completion notifications found
-10-18 20:54:22.401 15708 19060 I ReactNativeJS: '❌ [NOTIFICATIONS] Available notification types:', [ 'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'booking_completed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'booking_completed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_cancelled',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed',
-10-18 20:54:22.401 15708 19060 I ReactNativeJS:   'ride_status_changed' ]
-10-18 20:54:22.401 15708 19060 I ReactNativeJS: '❌ [NOTIFICATIONS] Trip completed notifications (all statuses):', []
-10-18 20:54:22.555 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for e5863667-c95a-40ff-9572-d05a921bea53:', 'SUBSCRIBED'
-10-18 20:54:22.557 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 62a975b5-e38c-4d14-bdb9-2804cd5efd62:', 'SUBSCRIBED'
-10-18 20:54:22.558 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for ab10282a-8c94-44dc-a563-7cbdaa1f2152:', 'SUBSCRIBED'
-10-18 20:54:22.560 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for a7bde9c8-d6fb-412e-a29f-8c04d59a5526:', 'SUBSCRIBED'
-10-18 20:54:22.562 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 97334bab-4520-4c46-8c5e-568c16476c7e:', 'SUBSCRIBED'
-10-18 20:54:22.579 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 6877deb9-b84c-426f-b966-4f3d2767cead:', 'SUBSCRIBED'
-10-18 20:54:22.581 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 8ddb9bb2-571b-4e13-94a0-afe448d23214:', 'SUBSCRIBED'
-10-18 20:54:22.583 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 8fb34677-14fc-4479-b3c5-d42763361ec5:', 'SUBSCRIBED'
-10-18 20:54:22.622 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for cea5ef50-535a-4ebd-9ba9-524c03aebb88:', 'SUBSCRIBED'
-10-18 20:54:22.624 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 25c9b86c-1bcc-4c83-a52a-2bf9112a1805:', 'SUBSCRIBED'
-10-18 20:54:22.634 15708 19060 I ReactNativeJS: '📡 [REALTIME] Ride subscription status for 9bad33c5-02a8-49c2-9bf6-be2ec0abc239:', 'SUBSCRIBED'
-10-18 20:54:22.637 15708 19060 I ReactNativeJS: '📡 [GPS-TRACKING] Subscription status:', 'SUBSCRIBED'
-10-18 20:54:22.637 15708 19060 I ReactNativeJS: ✅ [GPS-TRACKING] Successfully subscribed to driver location updates
-10-18 20:54:22.813  6545  6545 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
-10-18 20:54:22.833  6545  6545 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:22.836  6545  6545 D BufferQueueConsumer: [](id:199100000034,api:0,p:-1,c:6545) connect: controlledByApp=false
-10-18 20:54:22.836  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#52](f:0,a:0) constructor()
-10-18 20:54:22.836  6545  6545 D BLASTBufferQueue: [VRI[Launcher]#52](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
-10-18 20:54:22.854  6545  6857 D BLASTBufferQueue: [VRI[Launcher]#52](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=618284141125236(auto) mPendingTransactions.size=0 graphicBufferId=28110560952686 transform=0
-10-18 20:54:22.857  6545  6545 I bnlz    : onStart
-10-18 20:54:22.863  6545  6545 I bldh    : (REDACTED) [%s] onStart()
-10-18 20:54:22.863  6545  6545 I blfn    : Reloading theme data
-10-18 20:54:22.870  6545  6545 I bnlz    : onResume
-10-18 20:54:22.909 15708 19060 I ReactNativeJS: '✅ Proxy response received:', 'OK'
-10-18 20:54:22.910 15708 19060 I ReactNativeJS: '✅ Geocoded address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
-10-18 20:54:22.910 15708 19060 I ReactNativeJS: '✅ Geocoded address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
-10-18 20:54:22.910 15708 19060 I ReactNativeJS: '🏠 Enhanced Location Service: Got address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
-10-18 20:54:22.910 15708 19060 I ReactNativeJS: '✅ [HOME] Location obtained:', { lat: 12.74859,
-10-18 20:54:22.910 15708 19060 I ReactNativeJS:   lng: 77.8299901,
-10-18 20:54:22.910 15708 19060 I ReactNativeJS:   address: 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India' }
-10-18 20:54:22.913 15708 19060 I ReactNativeJS: 🚗 [HOME] ===== STARTING IMMEDIATE DRIVER DISPLAY =====
-10-18 20:54:22.918 15708 19060 I ReactNativeJS: 🚗 [HOME] Current location available, showing drivers immediately
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: '🚗 [HOME] Location details:', { latitude: 12.74859,
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   longitude: 77.8299901,
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   accuracy: 18.391000747680664 }
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: 🚗 [HOME] Showing ALL vehicle types (no filter applied)
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: '🚗 [HOME] Should show drivers on map:', true
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: '🔄 [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.74859, longitude: 77.8299901 },
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   vehicleType: 'sedan',
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   radius: 10 }
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: 🛑 [HOME] Stopping driver location polling
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: '🔄 [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: '🔄 [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.74859, lng: 77.8299901 },
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   vehicleType: 'all',
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   interval: '10000ms' }
-10-18 20:54:22.919 15708 19060 I ReactNativeJS: '🗺️ [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.74859, lng: 77.8299901 },
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   radius: '10km',
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   vehicleType: 'all',
-10-18 20:54:22.919 15708 19060 I ReactNativeJS:   timestamp: '2025-10-18T15:24:22.919Z' }
-10-18 20:54:22.920 15708 19060 I ReactNativeJS: '🌐 [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.74859&lng=77.8299901&radius=10'
-10-18 20:54:22.930 15708 19060 I ReactNativeJS: 🚗 [HOME] ===== SHOWING DRIVERS AGAIN =====
-10-18 20:54:22.930 15708 19060 I ReactNativeJS: 🚗 [HOME] Not both locations selected, showing drivers on map
-10-18 20:54:22.931 15708 19060 I ReactNativeJS: '🚗 [HOME] Pickup coords:', true, 'Destination coords:', false
-10-18 20:54:22.935 15708 19060 I ReactNativeJS: '🔄 [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.74859, longitude: 77.8299901 },
-10-18 20:54:22.935 15708 19060 I ReactNativeJS:   vehicleType: 'sedan',
-10-18 20:54:22.935 15708 19060 I ReactNativeJS:   radius: 10 }
-10-18 20:54:22.935 15708 19060 I ReactNativeJS: 🛑 [HOME] Stopping driver location polling
-10-18 20:54:22.937 15708 19060 I ReactNativeJS: 🛑 [DRIVER-SERVICE] Stopped driver location polling
-10-18 20:54:22.937 15708 19060 I ReactNativeJS: '🔄 [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
-10-18 20:54:22.937 15708 19060 I ReactNativeJS: '🔄 [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.74859, lng: 77.8299901 },
-10-18 20:54:22.937 15708 19060 I ReactNativeJS:   vehicleType: 'all',
-10-18 20:54:22.937 15708 19060 I ReactNativeJS:   interval: '10000ms' }
-10-18 20:54:22.938 15708 19060 I ReactNativeJS: '🗺️ [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.74859, lng: 77.8299901 },
-10-18 20:54:22.938 15708 19060 I ReactNativeJS:   radius: '10km',
-10-18 20:54:22.938 15708 19060 I ReactNativeJS:   vehicleType: 'all',
-10-18 20:54:22.938 15708 19060 I ReactNativeJS:   timestamp: '2025-10-18T15:24:22.937Z' }
-10-18 20:54:22.939 15708 19060 I ReactNativeJS: '🌐 [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.74859&lng=77.8299901&radius=10'
-10-18 20:54:22.940 15708 19060 I ReactNativeJS: ✅ [HOME] Location state updated successfully
-10-18 20:54:22.945  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
-10-18 20:54:22.947  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
-10-18 20:54:22.947  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-18 20:54:22.951  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
-10-18 20:54:22.972 15708 19060 I ReactNativeJS: 📍 [HOME] Location loading state set to false
-10-18 20:54:22.973 15708 19060 I ReactNativeJS: '🗺️ [MAP] Props updated:', { showRoute: true,
-10-18 20:54:22.973 15708 19060 I ReactNativeJS:   showDriverToPickupRoute: false,
-10-18 20:54:22.973 15708 19060 I ReactNativeJS:   hasDriverLocation: false,
-10-18 20:54:22.973 15708 19060 I ReactNativeJS:   hasPickupCoords: true,
-10-18 20:54:22.973 15708 19060 I ReactNativeJS:   hasDestinationCoords: false,
-10-18 20:54:22.973 15708 19060 I ReactNativeJS:   driverLocation: null,
-10-18 20:54:22.973 15708 19060 I ReactNativeJS:   pickupCoords: { lat: 12.74859, lng: 77.8299901 },
-10-18 20:54:22.973 15708 19060 I ReactNativeJS:   destinationCoords: null }
-10-18 20:54:22.974 15708 19060 I ReactNativeJS: 📍 Enhanced Location Service: Starting location detection...
-10-18 20:54:22.974 15708 19060 I ReactNativeJS: '🌍 Platform:', 'android'
-10-18 20:54:22.980 15708 19060 I ReactNativeJS: ✅ Enhanced Location Service: Permission granted, attempting detection...
-10-18 20:54:22.980 15708 19060 I ReactNativeJS: 🎯 Enhanced Location Service: Attempting high accuracy GPS...
-10-18 20:54:22.981 15708 19060 I ReactNativeJS: 📱 Using Expo Location for high accuracy...
-10-18 20:54:22.999 15708 15708 D MapsInitializer: preferredRenderer: null
-10-18 20:54:23.000 15708 15708 D zzcc    : preferredRenderer: null
-10-18 20:54:23.000 15708 15708 I Google Android Maps SDK: Google Play services package version: 253931035
-10-18 20:54:23.000 15708 15708 I Google Android Maps SDK: Google Play services maps renderer version(maps_core): 253425402
-10-18 20:54:23.001 26036 12642 I FusedLocation: stationary throttling disengaged [CONTEXT service_id=6 ]
-10-18 20:54:23.005 26036 13263 I FusedLocation: (REDACTED) stationary throttling engaged @%s
-10-18 20:54:23.007 15708 15708 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.008 15708 15708 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.011 15708 15708 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.011 15708 15708 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.011 26036 13263 I PhenotypeResourceReader: unable to find any Phenotype resource metadata for com.a1taxi.a1taxicustomer
-10-18 20:54:23.011 15708 13247 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.013 15708 13246 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.013 15708 15708 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.014 15708 15708 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.014 15708 15708 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.030 26036 13296 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:23.066 26036 26172 W inertial-anchor: Triggering reinit due to mag declination change
-10-18 20:54:23.066 26036 26172 W Looper  : Looper already prepared for this thread with a different value for the LOOPER_PREPARE_ALLOW_NON_CALLBACKS option.
-10-18 20:54:23.066 26036 13265 I FusedOrientationManager: Unregistering orientation client. [CONTEXT service_id=6 ]
-10-18 20:54:23.066 26036 26104 I ActivityScheduler: nextTriggerTime: 1245471245, in 238815ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 30000
-10-18 20:54:23.075 26036 26104 I ActivityScheduler: nextTriggerTime: 1245471245, in 238807ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 30000
-10-18 20:54:23.080 15708 15708 D BufferQueueConsumer: [](id:3d5c0000004e,api:0,p:-1,c:15708) connect: controlledByApp=true
-10-18 20:54:23.111 15708 19060 I ReactNativeJS: '✅ Enhanced Location Service: High accuracy location obtained:', { lat: 12.74859,
-10-18 20:54:23.111 15708 19060 I ReactNativeJS:   lng: 77.8299901,
-10-18 20:54:23.111 15708 19060 I ReactNativeJS:   accuracy: '18.391000747680664m' }
-10-18 20:54:23.140 15708 13247 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.140 15708 13247 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.142  1870  3777 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 1080, arg2: 2056, arg3: 15708, arg4: 7292, name: com.a1taxi.a1taxicustomer
-10-18 20:54:23.145 15708 13247 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.145 15708 13247 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.157 15708 13246 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.157 15708 13246 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.157 15708 19023 I .a1taxicustomer: Background young concurrent copying GC freed 16MB AllocSpace bytes, 66(5028KB) LOS objects, 7% free, 82MB/89MB, paused 260us,66us total 107.615ms
-10-18 20:54:23.165 15708 13248 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.165 15708 13248 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.183 15708 13310 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.449 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.449 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.450 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.450 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.450 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.451 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.451 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.451 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.451 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.452 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.452 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.452 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.452 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.452 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.453 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.453 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.453 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.453 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.453 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.453 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.454 15708 13313 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.559 15708 15708 D VRI[MainActivity]: visibilityChanged oldVisibility=true newVisibility=false
-10-18 20:54:23.590 15708 15708 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-18 20:54:23.591 15708 15708 D BLASTBufferQueue: [VRI[MainActivity]#44](f:0,a:4) destructor()
-10-18 20:54:23.591 15708 15708 D BufferQueueConsumer: [VRI[MainActivity]#44(BLAST Consumer)44](id:3d5c0000004d,api:0,p:-1,c:15708) disconnect
-10-18 20:54:23.597 15708 13309 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
-10-18 20:54:23.598 15708 19060 I ReactNativeJNI: Memory warning (pressure level: TRIM_MEMORY_UI_HIDDEN) received by JS VM, ignoring because it's non-severe
-10-18 20:54:23.607  1870  6015 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 15708, arg4: 7292, name: com.a1taxi.a1taxicustomer
-10-18 20:54:24.139 26106 26106 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.potokens.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
-10-18 20:54:24.174 15708 19060 I ReactNativeJS: '🔄 [DRIVER-SERVICE] Initial fetch completed:', 0, 'drivers'
-10-18 20:54:24.174 15708 19060 I ReactNativeJS: '📍 [HOME] Received driver locations update:', 0, 'drivers'
-10-18 20:54:24.200 15708 19060 I ReactNativeJS: '🔄 [DRIVER-SERVICE] Initial fetch completed:', 0, 'drivers'
-10-18 20:54:24.200 15708 19060 I ReactNativeJS: '📍 [HOME] Received driver locations update:', 0, 'drivers'
-10-18 20:54:24.200 15708 19060 I ReactNativeJS: 📊 [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
-10-18 20:54:24.201 15708 19060 I ReactNativeJS: '📊 [HOME] availableDrivers state update:', { count: 0,
-10-18 20:54:24.201 15708 19060 I ReactNativeJS:   showDriversOnMap: true,
-10-18 20:54:24.201 15708 19060 I ReactNativeJS:   driversPassedToMap: 0,
-10-18 20:54:24.201 15708 19060 I ReactNativeJS:   drivers: [] }
-10-18 20:54:24.201 15708 19060 I ReactNativeJS: 🗺️ [HOME] No drivers to pass to map (availableDrivers is empty)
-10-18 20:54:24.223 15708 19060 I ReactNativeJS: 📊 [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
-10-18 20:54:24.223 15708 19060 I ReactNativeJS: '📊 [HOME] availableDrivers state update:', { count: 0,
-10-18 20:54:24.223 15708 19060 I ReactNativeJS:   showDriversOnMap: true,
-10-18 20:54:24.223 15708 19060 I ReactNativeJS:   driversPassedToMap: 0,
-10-18 20:54:24.223 15708 19060 I ReactNativeJS:   drivers: [] }
-10-18 20:54:24.223 15708 19060 I ReactNativeJS: 🗺️ [HOME] No drivers to pass to map (availableDrivers is empty)
-10-18 20:54:24.441 26036 26036 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
-10-18 20:54:24.990 26106 13333 I Authzen : [DeviceStateSyncManager] The server is in sync with current state. Nothing to do
-10-18 20:54:26.198 23128 23180 I DGW     : I[sendRequest:90] StreamGroupConnectivityAwareNetworkLayer[notifgateway] processing request with connection state: 1
-10-18 20:54:26.199 23128 23180 I DGW     : I[sendRequest:98] StreamGroupMNSNetworkLayer[notifgateway] DGW Connecting to https://z-m-gateway.facebook.com/notifgateway
-10-18 20:54:26.544 23128 23194 W DGW     : W[onSuccessfulResponse:848] StreamGroupTransport[notifgateway] on successful response. DGW is now connected.
+10-19 14:18:29.723  9744  9744 W ContextImpl: Calling a method in the system process without a qualified user: android.app.ContextImpl.stopService:1986 android.content.ContextWrapper.stopService:858 com.vivo.globalanimation.c.handleMessage:1130 android.os.Handler.dispatchMessage:109 android.os.Looper.loopOnce:250 
+10-19 14:18:29.758  9744  9744 I Process : Sending signal. PID: 9744 SIG: 9
+10-19 14:18:29.774  5589 10152 I DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():123 onReceive() : Action = android.intent.action.SCREEN_OFF
+10-19 14:18:29.775  5589 10152 I DeviceStatusMonitor: DeviceStatusMonitor.updateCountryInfo():139 updateCountryInfo(), notifyAnyway = false
+10-19 14:18:29.776  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 14:18:29.776  5589  5589 I InputBundle: InputBundle.consumeEvent():1028 Skip consuming an event as imeStatus is INACTIVE
+10-19 14:18:29.893 11830 11830 I epse    : (REDACTED) Created gRPC endpoint for service %s
+10-19 14:18:29.976  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 14:18:31.246  5720 14092 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
+10-19 14:18:31.389  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
+10-19 14:18:31.491  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
+10-19 14:18:31.611  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
+10-19 14:18:31.648  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( _id in () AND (group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273,
+10-19 14:18:31.697  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN ( 1000011337, 1000011549 ) AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC LIMIT 10 OFFSET 0
+10-19 14:18:31.807  5720 14092 D SQLiteQueryBuilder: SELECT count(_id) FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0)))
+10-19 14:18:31.866  5720 14092 D SQLiteQueryBuilder: SELECT _id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, -572399359, 1192168428, -1667878795, -247796258, -961453482, -202
+10-19 14:18:32.024  5720 14092 D SQLiteQueryBuilder: SELECT count(_id) FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0)))
+10-19 14:18:32.069  5720 14092 D SQLiteQueryBuilder: SELECT _id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, -572399359, 1192168428, -1667878795, -247796258, -961453482, -202
+10-19 14:18:32.186  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id > 1000014407 AND _size < 209715200 AND bucket_id IN ( -1949793892, 13311172, -1739773001, 1216519567,-1033534650, -2426154, -53910322, 675671268, -1966575852,-1535937100, 1028125135,97354131, 1017917803, -924335728, -924530092, -435605656, -435800020,-1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 102812513
+10-19 14:18:32.312  5720 14092 D SQLiteQueryBuilder: SELECT count(_id) FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0)))
+10-19 14:18:32.343  5720 14092 D SQLiteQueryBuilder: SELECT _id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((width >=50 AND height >= 50 AND _size >= 25000 AND (width > 0 AND height > 0))) ORDER BY _id DESC LIMIT 100000 OFFSET 0
+10-19 14:18:32.454  5720 14092 D SQLiteQueryBuilder: SELECT _id, _data, datetaken, latitude, longitude, mime_type, width, height FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN (1000010200, 1000010199, 1000010198, 1000010197, 1000010196, 1000010195, 1000010194, 1000010193, 1000010192, 1000010191, 1000010189, 1000010188, 1000010187, 1000010186, 1000010185, 1000010184, 1000010183, 1000010182, 1000010181, 1000010180, 1000010179, 1000010178, 1000010177, 1000010176, 1000010175, 1000010174, 1000010173, 1000010172, 1000010171, 1000010170, 1000010169, 1000010168, 1000010167, 1000010166, 1000010165, 1000010164, 1000010163, 1000010162, 1000010161, 1000010160, 1000010159, 1000010158, 1000010157, 1000010156, 1000010155, 1000010154, 1000010153, 1000010152, 1000010151, 1000010150, 1000010149, 1000010148, 1000010147, 1000010146, 1000010145, 1000010144, 1000010143, 1000010142, 1000010141, 1000010140, 1000010139, 1000010138, 1000010137, 1000010136, 1000010135, 1000010134, 1000010133, 1000010132, 1000010131, 1000010130, 1000010129, 1000010128, 1000010127, 1000010126, 1000010125, 1000010124, 1000010123, 1000010122, 1000010121, 1000010120, 1000010119, 1000010118, 1000010117, 1000010116, 1000010115, 1000010114, 1000010113, 1000010112, 1000010111, 1000010110, 1000010109, 1000010108, 1000010107, 1000010106, 1000010105, 1000010104, 1000010103, 1000010102, 1000010101, 1000010100, 1000010099, 1000010098, 1000010097, 1000010096, 1000010095, 1000010094, 1000010093, 1000010092, 1000010091, 1000010090, 1000010089, 1000010088, 1000010087, 1000010086, 1000010085, 1000010084, 1000010083, 1000010082, 1000010081, 1000010080, 1000010079, 1000010078, 1000010077, 1000010076, 1000010075, 1000010074, 1000010073, 1000010072, 1000010071, 1000010070, 1000010069, 1000010068, 1000010067, 1000010066, 1000010065, 1000010064, 1000010063, 1000010062, 1000010061, 1000010060, 1000010059, 1000010058, 1000010057, 1000010056, 1000010055, 1000010054, 1000010053, 1000010052, 1000010051, 1000010050, 1000010049, 1000010048, 1000010047, 1000010046, 1000010045, 1000010044, 1000010043, 1000010042, 1000010041, 1000010040, 1000010039, 1000010038, 1000010037, 1000010036, 1000010035, 1000010034, 1000010033, 1000010032, 1000010031, 1000010030, 1000010029, 1000010028, 1000010027, 1000010026, 1000010025, 1000010024, 1000010023, 1000010022, 1000010021, 1000010020, 1000010019, 1000010018, 1000010017, 1000010016, 1000010015, 1000010014, 1000010013, 1000010012, 1000010011, 1000010010, 1000010009, 1000010008, 1000010007, 1000010006, 1000010005, 1000010004, 1000010003, 1000010001, 1000010000, 1000009999, 1000009998, 1000009997, 1000009996, 1000009995, 1000009994, 1000009993, 1000009992, 1000009991, 1000009990, 1000009989, 1000009988, 1000009987, 1000009986, 1000009985, 1000009984, 1000009983, 1000009982, 1000009981, 1000009980, 1000009979, 1000009978, 1000009977, 1000009976, 1000009975, 1000009974, 1000009973, 1000009972, 1000009971, 1000009970, 1000009969, 1000009968, 1000009967, 1000009966, 1000009965, 1000009964, 1000009963, 1000009962, 1000009961, 1000009960, 1000009959, 1000009958, 1000009957, 1000009956, 1000009955, 1000009954, 1000009953, 1000009952, 1000009951, 1000009950, 1000009949, 1000009948, 1000009947, 1000009946, 1000009945, 1000009944, 1000009943, 1000009942, 1000009941, 1000009940, 1000009939, 1000009938, 1000009937, 1000009936, 1000009935, 1000009934, 1000009933, 1000009932, 1000009931, 1000009930, 1000009929, 1000009928, 1000009927, 1000009926, 1000009925, 1000009924, 1000009923, 1000009922, 1000009921, 1000009920, 1000009919, 1000009918, 1000009917, 1000009916, 1000009915, 1000009914, 1000009913, 1000009912, 1000009911, 1000009910, 1000009909, 1000009908, 1000009907, 1000009906, 1000009905, 1000009904, 1000009903, 1000009902, 1000009901, 1000009900, 1000009899, 1000009898, 1000009897, 1000009896, 1000009895, 1000009894, 1000009893, 1000009892
+10-19 14:18:37.388 11830 23774 D VivoJavaJsonManager: failed to find appName:com.google.android.googlequicksearchbox from config key:mProtakePackages
+10-19 14:18:37.392 24047 25062 D VivoJavaJsonManager: failed to find appName:com.google.android.gms from config key:mProtakePackages
+10-19 14:18:37.411 15631  9577 D VivoJavaJsonManager: failed to find appName:com.android.chrome from config key:mProtakePackages
+10-19 14:18:37.427  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 14:18:37.428  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 14:18:37.429  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 14:18:37.446  5589 10270 I DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():123 onReceive() : Action = android.intent.action.SCREEN_ON
+10-19 14:18:37.447  5589 10270 I DeviceStatusMonitor: DeviceStatusMonitor.updateCountryInfo():139 updateCountryInfo(), notifyAnyway = false
+10-19 14:18:37.561  5720 14136 D SQLiteQueryBuilder: SELECT bucket_id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_data like '/storage/emulated/0/Download/互传/folder/%' AND (width > 0 AND height > 0)))
+10-19 14:18:37.750 11830 12418 D WM-NetworkStateTracker: Network capabilities changed: [ Transports: WIFI Capabilities: NOT_METERED&INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VPN&VALIDATED&NOT_ROAMING&FOREGROUND&NOT_CONGESTED&NOT_SUSPENDED&NOT_VCN_MANAGED&NOT_BANDWIDTH_CONSTRAINED LinkUpBandwidth>=12000Kbps LinkDnBandwidth>=60000Kbps TransportInfo: <SSID: <unknown ssid>, BSSID: 02:00:00:00:00:00, MAC: 02:00:00:00:00:00, IP: /192.168.31.172, Security type: 2, Supplicant state: COMPLETED, Wi-Fi standard: 11ax, RSSI: -31, Link speed: 480Mbps, Tx Link speed: 480Mbps, Max Supported Tx Link speed: 600Mbps, Rx Link speed: 480Mbps, Max Supported Rx Link speed: 600Mbps, Frequency: 5785MHz, Net ID: -1, Metered hint: false, score: 60, isUsable: true, CarrierMerged: false, SubscriptionId: -1, IsPrimary: -1, Trusted: true, Restricted: false, Ephemeral: false, OEM paid: false, OEM private: false, OSU AP: false, FQDN: <none>, Provider friendly name: <none>, Requesting package name: <none><none>MLO Information: , Is TID-To-Link negotiation supported by the AP: false, AP MLD Address: <none>, AP MLO Link Id: <none>, AP MLO Affiliated links: <none>, Vendor Data: <none>> SignalStrength: -31 UnderlyingNetworks: Null]
+10-19 14:18:37.751  5720 14136 D SQLiteQueryBuilder: SELECT _id, _data, width, height FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((duration >= 3000 AND  duration <= 60000 AND (bucket_id IN (-1949793892, 13311172, -1739773001, 1216519567, -1535937100, 1028125135, -1524047660, 1040014575, -1526850504, 1037211731, 139421402, 1136101865, 2126348076, -452826217, -519179321, -519178918, 1711169606, -884178653, -884178250, -1421703830, 232691476, -1949680778)) AND _id NOT IN () AND (width > 0 AND height > 0))) LIMIT 40 OFFSET 0
+10-19 14:18:37.887  5720 14136 D SQLiteQueryBuilder: SELECT count(_id) FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id>?))
+10-19 14:18:38.219 32698 32698 D CellBroadcastReceiver: onReceive Intent { act=android.intent.action.SERVICE_STATE flg=0x1000010 cmp=com.google.android.cellbroadcastreceiver/com.android.cellbroadcastreceiver.CellBroadcastReceiver (has extras) }
+10-19 14:18:38.225 32698 32698 D CellBroadcastReceiver: onServiceStateChanged, ss: 0
+10-19 14:18:38.226 32698 32698 D CellBroadcastReceiver: networkOperator: 405869
+10-19 14:18:38.227 32698 32698 D CellBroadcastReceiver: update supported roaming operator as 
+10-19 14:18:38.433  1870  2896 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 1080, arg2: 2392, arg3: 2704, arg4: 250, name: com.android.systemui
+10-19 14:18:39.075 11830 23510 D VivoJavaJsonManager: failed to find appName:com.google.android.googlequicksearchbox from config key:mProtakePackages
+10-19 14:18:39.078 24047 24108 D VivoJavaJsonManager: failed to find appName:com.google.android.gms from config key:mProtakePackages
+10-19 14:18:39.081 15631 15649 D VivoJavaJsonManager: failed to find appName:com.android.chrome from config key:mProtakePackages
+10-19 14:18:39.779  1870  3261 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 3218, arg4: 8209, name: com.vivo.fingerprintui
+10-19 14:18:39.840  1870  2718 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 882, arg2: 550, arg3: 8059, arg4: 979, name: com.a1taxi.driverpro
+10-19 14:18:39.841  8059  8059 I BackgroundFetchTaskConsumer: Stopping an alarm for task 'background-fetch-task'.
+10-19 14:18:39.846  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:39.846  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:39.846  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:39.846  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:39.859  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:39.860  8059  8059 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 14:18:39.860  8059  8059 D BufferQueueConsumer: [](id:1f7b0000000f,api:0,p:-1,c:8059) connect: controlledByApp=false
+10-19 14:18:39.860  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#12](f:0,a:0) constructor()
+10-19 14:18:39.860  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#12](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
+10-19 14:18:39.866  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:39.866  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:39.868  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:39.868  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:39.868  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:39.868Z'
+10-19 14:18:39.868  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:39.874  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 882, arg2: 550, arg3: 8059, arg4: 979, name: com.a1taxi.driverpro
+10-19 14:18:39.880  8059  8674 D BLASTBufferQueue: [VRI[MainActivity]#12](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=627090431848299(auto) mPendingTransactions.size=0 graphicBufferId=34613141438560 transform=0
+10-19 14:18:39.897  1870  3776 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 2704, arg4: 394, name: com.vivo.systemuiplugin
+10-19 14:18:39.952  1870  3346 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 230, name: com.android.systemui
+10-19 14:18:39.952  1870  3346 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 236, name: com.android.systemui
+10-19 14:18:39.964  5589  6128 I PhenotypeProcessReaper: Memory state is: 200
+10-19 14:18:39.993  1870  3343 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 250, name: com.android.systemui
+10-19 14:18:39.993  1870  3343 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 250, name: com.android.systemui
+10-19 14:18:40.015  1870  3605 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 250, name: com.android.systemui
+10-19 14:18:40.045 13532 13532 W fbservices-stub:InitStatus: Not blocking Service (51888160)
+10-19 14:18:40.046 13532 13532 W fbservices-stub:InitStatus: Not blocking Service (51888160)
+10-19 14:18:40.051  1870  6192 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 230, name: com.android.systemui
+10-19 14:18:40.052  1870  2718 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 236, name: com.android.systemui
+10-19 14:18:40.055  1870  2718 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 2704, arg4: 250, name: com.android.systemui
+10-19 14:18:40.067  8059  8059 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{e311d29 V.E...... R......D 0,0-1080,2392 aid=0}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+10-19 14:18:40.073  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 14:18:40.076  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 14:18:40.102  1870  3777 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 2704, arg4: 250, name: com.android.systemui
+10-19 14:18:40.103  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.133  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.134  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.151  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.151  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.163  7096  7122 E VivoAudioPolicyProxyNative: VivoAudioPolicyProxy getInstanceInter: binding to vivoaudiopolicy service failed, service up?
+10-19 14:18:40.164  7096  7122 D AudioRecord: set(): 0xb4000077800288c0, inputSource 1999, sampleRate 16000, format 0x1, channelMask 0x10, frameCount 128000, notificationFrames 0, sessionId 0, transferType 0, flags 0, attributionSource AttributionSourceState{pid: 7096, uid: 99384, deviceId: 0, packageName: com.google.android.googlequicksearchbox, attributionTag: (null), token: binder:0xb40000760002bcd0, renouncedPermissions: [], next: []} uid -1, pid -1
+10-19 14:18:40.164  7096  7122 I AudioRecord: set final client name com.google.android.googlequicksearchbox(0)
+10-19 14:18:40.165  7096  7122 E word_detector_0: RecordingActivityTracker(): binding to audio service failed, service up?
+10-19 14:18:40.181  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:40.181  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:40.181  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:40.183  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:40.183  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:40.183  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:40.183Z'
+10-19 14:18:40.183  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:40.184  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:40.184  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:40.184  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:40.184  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:40.202  7096  7122 I AudioRecord: set(): getPolicyInputSourceForVoip mAttributes inputsource=1999, input source= 1999,flags:0
+10-19 14:18:40.208  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:40.208  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:40.209  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:40.209  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:40.209  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:40.209Z'
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:40.209  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:40.209  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:40.209  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:40.209  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:40.218 24047 10401 I PersonalSafety: ConnectivityProtectionLockingIntentOperation: cancelled task [CONTEXT service_id=310 ]
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:40.247  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:40.247  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:40.247  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:40.247Z'
+10-19 14:18:40.247  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:40.301  7096  7122 D AudioRecord: openRecord_l: 0xb4000077800288c0, mCblk = 0x7abab1b000
+10-19 14:18:40.305  7096  7122 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.305  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.305  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.306  7096  7126 D AudioRecord: start(24835): 0xb4000077800288c0, sync event 0 trigger session 0
+10-19 14:18:40.306  7096  7126 E VivoAudioPolicyProxyNative: VivoAudioPolicyProxy getInstanceInter: binding to vivoaudiopolicy service failed, service up?
+10-19 14:18:40.330  7096  7122 I native  : I0000 00:00:1760863720.329518    7122 soda_client.cc:330] Starting capture.
+10-19 14:18:40.333  7096  7122 I native  : I0000 00:00:1760863720.333032    7122 soda_async_impl.cc:651] SODA session starting (require_hotword:1, hotword_timeout_in_millis:0, trigger_type:TRIGGER_TYPE_UNSPECIFIED, hybrid_asr_config.mode:MODE_DEFAULT)
+10-19 14:18:40.337  7096  7126 D AudioRecord: start(24835): return status 0
+10-19 14:18:40.338  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.338  7096  7126 D AudioSystem: +setParameters(): MAGT-Process=7096;MAGT-AudioThread=7126 
+10-19 14:18:40.354  7096  7130 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.437  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:18:40.438  7096  7120 I native  : I0000 00:00:1760863720.438467    7120 soda_async_impl.cc:1357] SODA received first mic audio buffer, size in bytes: 320, format: 1, channels: 1, sample rate: 16000
+10-19 14:18:40.855  7096  7120 I native  : I0000 00:00:1760863720.855241    7120 soda_async_impl.cc:1126] Not receiving any loopback audio in 500ms. Last audio received time: 1970-01-01T05:30:00+05:30, Current time: 2025-10-19T14:18:40.855238945+05:30
+10-19 14:18:41.864  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:41.864  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:41.865  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:41.865  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:41.879  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:41.881  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:41.881  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:41.882  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:41.882  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:41.882  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:41.882Z'
+10-19 14:18:41.882  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:42.186Z'
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:42.186  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:42.186  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:42.193  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:42.193  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:42.193  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:42.193  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:42.193  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:42.193  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:42.194Z'
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:42.194  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:42.194  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:42.194  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:42.194  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:42.201  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:42.201  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:42.202  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:42.202  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:42.202  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:42.202Z'
+10-19 14:18:42.202  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:42.537 24047 25062 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000077d012cbb0 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-19 14:18:42.758  9755  9755 I AidlLazyServiceRegistrar: Process has 0 (of 1 available) client(s) in use after notification artd has clients: 0
+10-19 14:18:42.759  9755  9755 I AidlLazyServiceRegistrar: Trying to shut down the service. No clients in use for any service in process.
+10-19 14:18:42.760  9755  9755 I AidlLazyServiceRegistrar: Unregistered all clients and exiting
+10-19 14:18:43.865  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:43.866  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:43.866  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:43.866  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:43.878  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:43.880  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:43.880  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:43.880  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:43.880Z'
+10-19 14:18:43.880  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:43.981 24047 24877 I IPCThreadState: oneway function results for code 2 on binder at 0xb4000077d0067150 will be dropped but finished with status UNKNOWN_TRANSACTION
+10-19 14:18:44.157  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:44.157  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:44.157  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:44.157  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:44.157  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:44.157  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:44.158Z'
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:44.158  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:44.158  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:44.158  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:44.158  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:44.167  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:44.167  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:44.167  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:44.167Z'
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:44.167  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:44.167  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:44.167  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:44.167  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:44.175  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:44.175  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:44.175  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:44.175Z'
+10-19 14:18:44.175  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:44.364  8059  8700 E ReactNativeJS: 'Error opening Google Maps navigation:', [TypeError: undefined is not a function]
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: console.error: Error opening Google Maps navigation: TypeError: undefined is not a function, js engine: hermes, stack:
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: ?anon_0_@1:1967262
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: openGoogleMapsNavigation@1:1966875
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: ?anon_0_@1:1991261
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: handleDirectionsToDestination@1:1991369
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: _performTransitionSideEffects@1:449470
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: _receiveSignal@1:449083
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: onResponderRelease@1:448253
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: invokeGuardedCallbackImpl@1:350443
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: invokeGuardedCallback@1:350500
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: invokeGuardedCallbackAndCatchFirstError@1:350532
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: executeDispatch@1:350661
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: executeDispatchesAndReleaseTopLevel@1:354059
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: forEachAccumulated@1:352152
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: anonymous@1:354422
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: batchedUpdatesImpl@1:421280
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: batchedUpdates$1@1:353975
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: _receiveRootNodeIDEvent@1:354260
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: receiveTouches@1:416321
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: __callFunction@1:101530
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: anonymous@1:99972
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:44.375  8059  8701 E unknown:ReactNative: callFunctionReturnFlushedQueue@1:99930
+10-19 14:18:45.097  8059  8700 E ReactNativeJS: 'Error opening Google Maps navigation:', [TypeError: undefined is not a function]
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: console.error: Error opening Google Maps navigation: TypeError: undefined is not a function, js engine: hermes, stack:
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: ?anon_0_@1:1967262
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: openGoogleMapsNavigation@1:1966875
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: ?anon_0_@1:1991261
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: handleDirectionsToDestination@1:1991369
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: _performTransitionSideEffects@1:449470
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: _receiveSignal@1:449083
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: onResponderRelease@1:448253
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: invokeGuardedCallbackImpl@1:350443
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: invokeGuardedCallback@1:350500
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: invokeGuardedCallbackAndCatchFirstError@1:350532
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: executeDispatch@1:350661
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: executeDispatchesAndReleaseTopLevel@1:354059
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: forEachAccumulated@1:352152
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: anonymous@1:354422
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: batchedUpdatesImpl@1:421280
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: batchedUpdates$1@1:353975
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: _receiveRootNodeIDEvent@1:354260
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: receiveTouches@1:416321
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: __callFunction@1:101530
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: anonymous@1:99972
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:45.102  8059  8701 E unknown:ReactNative: callFunctionReturnFlushedQueue@1:99930
+10-19 14:18:45.866  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:45.866  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:45.867  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:45.867  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:45.896  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:45.898  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:45.898  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:45.898  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:45.898Z'
+10-19 14:18:45.898  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:46.202  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:46.202  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:46.202Z'
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:46.203  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:46.203  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:46.203  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:46.203  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:46.212  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:46.212  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:46.212  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:46.212Z'
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:46.212  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:46.213  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:46.213  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:46.213  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:46.213  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:46.220  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:46.220  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:46.220  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:46.220Z'
+10-19 14:18:46.220  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:47.867  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:47.868  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:47.868  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:47.868  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:47.878  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:47.879  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:47.879  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:47.879  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:47.879Z'
+10-19 14:18:47.879  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:48.175  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:48.175  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:48.176  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:48.176  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:48.176  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:48.176Z'
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:48.176  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:48.177  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:48.177  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:48.177  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:48.177  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:48.186  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:48.186  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:48.186  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:48.186Z'
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:48.186  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:48.186  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:48.186  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:48.186  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:48.194  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:48.194  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:48.194  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:48.194Z'
+10-19 14:18:48.194  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: 🚨 COMPLETE RIDE BUTTON CLICKED!
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: '🚨 Current ride exists:', true
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: '🚨 Current ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: 🚨 About to call completeRide function...
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: '🚨 Calling completeRide with ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: 🚨 === COMPLETE RIDE FUNCTION CALLED ===
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: '🚨 Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: '🚨 Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:48.567  8059  8700 I ReactNativeJS: '🚨 Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:49.099  8059  8700 I ReactNativeJS: '✅ Driver and vehicle details fetched:', { driverName: 'john',
+10-19 14:18:49.099  8059  8700 I ReactNativeJS:   driverRating: 5,
+10-19 14:18:49.099  8059  8700 I ReactNativeJS:   vehicle: 
+10-19 14:18:49.099  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:18:49.099  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:18:49.099  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:18:49.099  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:18:49.099  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111' } }
+10-19 14:18:49.102  8059  8700 I ReactNativeJS: '✅ Ride details fetched for completion:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:49.102  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:49.102  8059  8700 I ReactNativeJS:   booking_type: 'regular',
+10-19 14:18:49.102  8059  8700 I ReactNativeJS:   vehicle_type: 'sedan',
+10-19 14:18:49.102  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:49.102  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:49.102  8059  8700 I ReactNativeJS: 📍 Stopping GPS tracking and calculating actual distance...
+10-19 14:18:49.102  8059  8700 I ReactNativeJS: === STOPPING TRIP GPS TRACKING ===
+10-19 14:18:49.102  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:49.103  8059  8700 I ReactNativeJS: ✅ Trip GPS tracking stopped. Total points recorded: 2
+10-19 14:18:49.103  8059  8700 I ReactNativeJS: === CALCULATING TRIP DISTANCE FROM GPS (Google Maps API) ===
+10-19 14:18:49.103  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:49.391  8059  8700 W ReactNativeJS: ⚠️ Not enough GPS points for distance calculation
+10-19 14:18:49.393  8059  8700 I ReactNativeJS: '📍 GPS distance result (raw):', { distanceKm: 0, pointsUsed: 0 }
+10-19 14:18:49.393  8059  8700 W ReactNativeJS: ⚠️ GPS tracking insufficient (distance < 0.5km or < 3 points), using Google Maps API...
+10-19 14:18:49.393  8059  8700 W ReactNativeJS: '⚠️ GPS distance calculation failed, using Google Maps API fallback:', [Error: Insufficient GPS data]
+10-19 14:18:49.394  8059  8700 I ReactNativeJS: 📡 Calling Google Maps Directions API...
+10-19 14:18:49.394  8059  8700 I ReactNativeJS: '📍 Origin:', { latitude: 12.748588, longitude: 77.8300797 }
+10-19 14:18:49.395  8059  8700 I ReactNativeJS: '📍 Destination:', { latitude: 12.8303987, longitude: 77.8662369 }
+10-19 14:18:49.490  8059  8662 E 1taxi.driverpro: [SurfaceTexture-0-8059-0] setSurfaceTextureListener: listener is nullptr
+10-19 14:18:49.621  8059  8700 I ReactNativeJS: 📊 Found 1 route(s):
+10-19 14:18:49.621  8059  8700 I ReactNativeJS:   Route 1: 10.55 km, 15 min
+10-19 14:18:49.623  8059  8700 I ReactNativeJS: '✅ Google Maps Directions result (using Route 1):', { distance: '10.55 km',
+10-19 14:18:49.623  8059  8700 I ReactNativeJS:   duration: '15 min',
+10-19 14:18:49.623  8059  8700 I ReactNativeJS:   distanceMeters: 10551,
+10-19 14:18:49.623  8059  8700 I ReactNativeJS:   durationSeconds: 929,
+10-19 14:18:49.623  8059  8700 I ReactNativeJS:   startAddress: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:49.623  8059  8700 I ReactNativeJS:   endAddress: 'RVJ8+5F5, Bagalur, Tamil Nadu 635103, India' }
+10-19 14:18:49.624  8059  8700 I ReactNativeJS: '✅ Google Maps fallback distance:', { distanceKm: '10.55',
+10-19 14:18:49.624  8059  8700 I ReactNativeJS:   durationMinutes: 15,
+10-19 14:18:49.624  8059  8700 I ReactNativeJS:   method: 'Google Maps Directions API' }
+10-19 14:18:49.625  8059  8700 I ReactNativeJS: '🚨 Trip metrics (Real GPS-tracked distance):', { actualDistanceKm: '10.55',
+10-19 14:18:49.625  8059  8700 I ReactNativeJS:   actualDurationMinutes: 15,
+10-19 14:18:49.625  8059  8700 I ReactNativeJS:   gpsPointsUsed: 0,
+10-19 14:18:49.625  8059  8700 I ReactNativeJS:   pickupLat: 12.748588,
+10-19 14:18:49.625  8059  8700 I ReactNativeJS:   pickupLng: 77.8300797,
+10-19 14:18:49.625  8059  8700 I ReactNativeJS:   dropLat: 12.8303987,
+10-19 14:18:49.625  8059  8700 I ReactNativeJS:   dropLng: 77.8662369,
+10-19 14:18:49.625  8059  8700 I ReactNativeJS:   method: 'GPS Breadcrumb Tracking' }
+10-19 14:18:49.625  8059  8700 I ReactNativeJS: 🚨 About to call FareCalculationService.calculateAndStoreTripFare...
+10-19 14:18:49.625  8059  8700 I ReactNativeJS: === CALCULATING TRIP FARE ===
+10-19 14:18:49.625  8059  8700 I ReactNativeJS: 'Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:49.625  8059  8700 I ReactNativeJS: 'Actual Distance:', 10.551, 'km'
+10-19 14:18:49.625  8059  8700 I ReactNativeJS: 'Actual Duration:', 15, 'minutes'
+10-19 14:18:49.869  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:49.869  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:49.869  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:49.870  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:49.895  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:49.897  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:49.897  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:49.897  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:49.897  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:49.898  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:49.897Z'
+10-19 14:18:49.898  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:49.910  8059  8700 E ReactNativeJS: 'Error fetching ride:', { code: 'PGRST116',
+10-19 14:18:49.910  8059  8700 E ReactNativeJS:   details: 'The result contains 0 rows',
+10-19 14:18:49.910  8059  8700 E ReactNativeJS:   hint: null,
+10-19 14:18:49.910  8059  8700 E ReactNativeJS:   message: 'Cannot coerce the result to a single JSON object' }
+10-19 14:18:49.911  8059  8700 I ReactNativeJS: '🚨 FareCalculationService result:', { success: false, error: 'Ride not found' }
+10-19 14:18:49.912  8059  8700 E ReactNativeJS: '❌ Fare calculation failed:', 'Ride not found'
+10-19 14:18:49.929  8059  8700 I ReactNativeJS: '🚨 CompleteRide function completed, result:', { success: false }
+10-19 14:18:49.929  8059  8700 E ReactNativeJS: ❌ Failed to complete ride
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:49.930  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:49.930  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:49.930  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: '  - Error:', 'Failed to calculate fare: Ride not found'
+10-19 14:18:49.930  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:49.931  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:49.931Z'
+10-19 14:18:49.931  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: console.error: Error fetching ride: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}, js engine: hermes, stack:
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: ?anon_0_@1:2010940
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:18:49.936  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:18:49.938  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:49.939  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:49.939  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:49.939  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:49.939Z'
+10-19 14:18:49.939  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: console.error: ❌ Fare calculation failed: Ride not found, js engine: hermes, stack:
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: ?anon_0_@1:2002480
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:18:49.941  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: console.error: ❌ Failed to complete ride, js engine: hermes, stack:
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: ?anon_0_@1:1990386
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:18:49.946  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:18:49.947  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:18:49.947  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:18:50.033  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:18:50.033  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:18:50.106  8059  8059 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1202, 713), rotation: ROTATION_0
+10-19 14:18:50.107  8059  8059 D BufferQueueConsumer: [](id:1f7b00000010,api:0,p:-1,c:8059) connect: controlledByApp=false
+10-19 14:18:50.107  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#13](f:0,a:0) constructor()
+10-19 14:18:50.107  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#13](f:0,a:0) update width=1202 height=713 format=-3 mTransformHint=0
+10-19 14:18:50.120  8059  8674 D BLASTBufferQueue: [VRI[MainActivity]#13](f:0,a:1) acquireNextBufferLocked size=1202x713 mFrameNumber=1 applyTransaction=true mTimestamp=627100670864069(auto) mPendingTransactions.size=0 graphicBufferId=34613141438564 transform=0
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:50.161  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:50.161Z'
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:50.161  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:50.162  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:50.162  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:50.162  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:50.162  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:50.170  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:50.170  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:50.171  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:50.171  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:50.171  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:50.171Z'
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:50.171  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:50.171  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:50.171  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:50.171  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:50.179  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:50.179  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:50.179  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:50.179Z'
+10-19 14:18:50.179  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:51.869  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:51.869  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:51.870  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:51.870  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:51.878  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:51.879  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:51.879  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:51.880  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:51.880  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:51.880  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:51.880Z'
+10-19 14:18:51.880  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:52.174  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:52.174  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:52.174  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:52.175  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:52.175  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:52.175  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:52.175Z'
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:52.175  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:52.175  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:52.175  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:52.175  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:52.186  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:52.186  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:52.187  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:52.187  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:52.187  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:52.187Z'
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:52.187  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:52.187  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:52.187  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:52.187  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:52.194  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:52.195  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:52.195  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:52.195  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:52.195Z'
+10-19 14:18:52.195  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:52.671  8059  8059 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@9acb130
+10-19 14:18:52.683  8059  8674 D HWUI    : endAllActiveAnimators on 0xb4000077800ae870 (RippleDrawable) with handle 0xb4000077d00cfca0
+10-19 14:18:52.691  8059  8695 D BLASTBufferQueue: [VRI[MainActivity]#13](f:0,a:4) destructor()
+10-19 14:18:52.691  8059  8695 D BufferQueueConsumer: [VRI[MainActivity]#13(BLAST Consumer)13](id:1f7b00000010,api:0,p:-1,c:8059) disconnect
+10-19 14:18:52.702  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:18:52.702  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:18:52.746  8059  8059 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{e311d29 V.E...... R......D 0,0-1080,2392 aid=0}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+10-19 14:18:52.755  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 14:18:52.761  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 14:18:52.762  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 14:18:52.763  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 14:18:53.568  8059  8700 I ReactNativeJS: 🚨 COMPLETE RIDE BUTTON CLICKED!
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: '🚨 Current ride exists:', true
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: '🚨 Current ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: 🚨 About to call completeRide function...
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: '🚨 Calling completeRide with ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: 🚨 === COMPLETE RIDE FUNCTION CALLED ===
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: '🚨 Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: '🚨 Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:53.569  8059  8700 I ReactNativeJS: '🚨 Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:53.869  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:53.869  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:53.869  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:53.870  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:53.894  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:53.896  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:53.896  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:53.897  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:53.897  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:53.897  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:53.897Z'
+10-19 14:18:53.897  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:54.118  8059  8700 I ReactNativeJS: '✅ Driver and vehicle details fetched:', { driverName: 'john',
+10-19 14:18:54.118  8059  8700 I ReactNativeJS:   driverRating: 5,
+10-19 14:18:54.118  8059  8700 I ReactNativeJS:   vehicle: 
+10-19 14:18:54.118  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:18:54.118  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:18:54.118  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:18:54.118  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:18:54.118  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111' } }
+10-19 14:18:54.119  8059  8700 I ReactNativeJS: '✅ Ride details fetched for completion:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:54.119  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:54.119  8059  8700 I ReactNativeJS:   booking_type: 'regular',
+10-19 14:18:54.119  8059  8700 I ReactNativeJS:   vehicle_type: 'sedan',
+10-19 14:18:54.119  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.119  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:54.119  8059  8700 I ReactNativeJS: 📍 Stopping GPS tracking and calculating actual distance...
+10-19 14:18:54.119  8059  8700 I ReactNativeJS: === STOPPING TRIP GPS TRACKING ===
+10-19 14:18:54.119  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:54.119  8059  8700 I ReactNativeJS: ✅ Trip GPS tracking stopped. Total points recorded: 2
+10-19 14:18:54.119  8059  8700 I ReactNativeJS: === CALCULATING TRIP DISTANCE FROM GPS (Google Maps API) ===
+10-19 14:18:54.120  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:54.209  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:54.209  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:54.209  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:54.210  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:54.210  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.210  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:54.210Z'
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:54.210  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:54.210  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:54.210  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:54.210  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:54.219  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:54.219  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:54.219  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:54.219  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:54.219  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.219  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:54.219  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:54.219  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:54.219  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:54.220Z'
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:54.220  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:54.220  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:54.220  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:54.220  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:54.227  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:54.227  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.227  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:54.227Z'
+10-19 14:18:54.227  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:54.388  8059  8700 W ReactNativeJS: ⚠️ Not enough GPS points for distance calculation
+10-19 14:18:54.389  8059  8700 I ReactNativeJS: '📍 GPS distance result (raw):', { distanceKm: 0, pointsUsed: 0 }
+10-19 14:18:54.389  8059  8700 W ReactNativeJS: ⚠️ GPS tracking insufficient (distance < 0.5km or < 3 points), using Google Maps API...
+10-19 14:18:54.389  8059  8700 W ReactNativeJS: '⚠️ GPS distance calculation failed, using Google Maps API fallback:', [Error: Insufficient GPS data]
+10-19 14:18:54.389  8059  8700 I ReactNativeJS: 📡 Calling Google Maps Directions API...
+10-19 14:18:54.389  8059  8700 I ReactNativeJS: '📍 Origin:', { latitude: 12.748588, longitude: 77.8300797 }
+10-19 14:18:54.389  8059  8700 I ReactNativeJS: '📍 Destination:', { latitude: 12.8303987, longitude: 77.8662369 }
+10-19 14:18:54.561  8059  8700 I ReactNativeJS: 📊 Found 1 route(s):
+10-19 14:18:54.561  8059  8700 I ReactNativeJS:   Route 1: 10.55 km, 15 min
+10-19 14:18:54.562  8059  8700 I ReactNativeJS: '✅ Google Maps Directions result (using Route 1):', { distance: '10.55 km',
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   duration: '15 min',
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   distanceMeters: 10551,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   durationSeconds: 929,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   startAddress: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   endAddress: 'RVJ8+5F5, Bagalur, Tamil Nadu 635103, India' }
+10-19 14:18:54.562  8059  8700 I ReactNativeJS: '✅ Google Maps fallback distance:', { distanceKm: '10.55',
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   durationMinutes: 15,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   method: 'Google Maps Directions API' }
+10-19 14:18:54.562  8059  8700 I ReactNativeJS: '🚨 Trip metrics (Real GPS-tracked distance):', { actualDistanceKm: '10.55',
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   actualDurationMinutes: 15,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   gpsPointsUsed: 0,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   pickupLat: 12.748588,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   pickupLng: 77.8300797,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   dropLat: 12.8303987,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   dropLng: 77.8662369,
+10-19 14:18:54.562  8059  8700 I ReactNativeJS:   method: 'GPS Breadcrumb Tracking' }
+10-19 14:18:54.562  8059  8700 I ReactNativeJS: 🚨 About to call FareCalculationService.calculateAndStoreTripFare...
+10-19 14:18:54.562  8059  8700 I ReactNativeJS: === CALCULATING TRIP FARE ===
+10-19 14:18:54.562  8059  8700 I ReactNativeJS: 'Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:18:54.563  8059  8700 I ReactNativeJS: 'Actual Distance:', 10.551, 'km'
+10-19 14:18:54.563  8059  8700 I ReactNativeJS: 'Actual Duration:', 15, 'minutes'
+10-19 14:18:54.829  8059  8700 E ReactNativeJS: 'Error fetching ride:', { code: 'PGRST116',
+10-19 14:18:54.829  8059  8700 E ReactNativeJS:   details: 'The result contains 0 rows',
+10-19 14:18:54.829  8059  8700 E ReactNativeJS:   hint: null,
+10-19 14:18:54.829  8059  8700 E ReactNativeJS:   message: 'Cannot coerce the result to a single JSON object' }
+10-19 14:18:54.830  8059  8700 I ReactNativeJS: '🚨 FareCalculationService result:', { success: false, error: 'Ride not found' }
+10-19 14:18:54.831  8059  8700 E ReactNativeJS: '❌ Fare calculation failed:', 'Ride not found'
+10-19 14:18:54.852  8059  8700 I ReactNativeJS: '🚨 CompleteRide function completed, result:', { success: false }
+10-19 14:18:54.853  8059  8700 E ReactNativeJS: ❌ Failed to complete ride
+10-19 14:18:54.853  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:54.853  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:54.854  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:54.854  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.854  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: '  - Error:', 'Failed to calculate fare: Ride not found'
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:54.854Z'
+10-19 14:18:54.854  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: console.error: Error fetching ride: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}, js engine: hermes, stack:
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: ?anon_0_@1:2010940
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:18:54.857  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:54.862  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:54.862  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:54.862  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:54.862Z'
+10-19 14:18:54.862  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: console.error: ❌ Fare calculation failed: Ride not found, js engine: hermes, stack:
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: ?anon_0_@1:2002480
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:18:54.863  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: console.error: ❌ Failed to complete ride, js engine: hermes, stack:
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: ?anon_0_@1:1990386
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:18:54.870  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:18:54.871  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:18:54.871  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:18:54.949  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:18:54.949  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:18:55.010  8059  8059 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1202, 713), rotation: ROTATION_0
+10-19 14:18:55.011  8059  8059 D BufferQueueConsumer: [](id:1f7b00000011,api:0,p:-1,c:8059) connect: controlledByApp=false
+10-19 14:18:55.012  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#14](f:0,a:0) constructor()
+10-19 14:18:55.012  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#14](f:0,a:0) update width=1202 height=713 format=-3 mTransformHint=0
+10-19 14:18:55.025  8059  8674 D BLASTBufferQueue: [VRI[MainActivity]#14](f:0,a:1) acquireNextBufferLocked size=1202x713 mFrameNumber=1 applyTransaction=true mTimestamp=627105575825608(auto) mPendingTransactions.size=0 graphicBufferId=34613141438571 transform=0
+10-19 14:18:55.871  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:55.872  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:55.872  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:55.872  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:55.880  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:55.881  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:55.881  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:55.881  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:55.881Z'
+10-19 14:18:55.881  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:56.091  8059  8059 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@fcb4267
+10-19 14:18:56.101  8059  8674 D HWUI    : endAllActiveAnimators on 0xb40000778006dc00 (RippleDrawable) with handle 0xb4000077d00e04a0
+10-19 14:18:56.110  8059  8695 D BLASTBufferQueue: [VRI[MainActivity]#14](f:0,a:4) destructor()
+10-19 14:18:56.110  8059  8695 D BufferQueueConsumer: [VRI[MainActivity]#14(BLAST Consumer)14](id:1f7b00000011,api:0,p:-1,c:8059) disconnect
+10-19 14:18:56.122  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:18:56.122  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:18:56.143  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:56.143  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:56.143  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:56.143  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:56.143  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:56.143  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:56.144Z'
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:56.144  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:56.144  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:56.144  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:56.144  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:56.152  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:56.152  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:56.153  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:56.153  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:56.153  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:56.153Z'
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:56.153  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:56.153  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:56.153  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:56.153  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:56.156  8059  8059 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{e311d29 V.E...... R......D 0,0-1080,2392 aid=0}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+10-19 14:18:56.159  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 14:18:56.159  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 14:18:56.160  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 14:18:56.161  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:56.161  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:56.161  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:56.161  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:56.161Z'
+10-19 14:18:56.161  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:57.570  8059  8059 I ScrollIdentify: on fling
+10-19 14:18:57.870  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:57.870  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:57.870  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:57.870  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:57.881  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:57.882  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:57.882  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:57.882  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:57.882  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:57.882  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:57.882  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:57.882  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:57.882  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:57.882  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:57.882  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:57.883  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:57.883  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:57.883Z'
+10-19 14:18:57.883  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:58.153  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:18:58.153  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:18:58.153  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:58.153  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:58.153  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:58.153  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:58.154Z'
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:58.154  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:58.154  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:58.154  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:58.154  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:58.162  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:58.162  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:58.162  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:58.162  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:58.162Z'
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:18:58.163  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:18:58.163  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:18:58.163  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:18:58.163  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:18:58.170  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:58.170  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:58.170  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:58.170  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:58.170  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:58.170  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:58.171  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:58.171  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:58.171  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:18:58.171  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:58.171  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:58.171  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:58.171Z'
+10-19 14:18:58.171  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:18:59.856  8059  8059 I ScrollIdentify: on fling
+10-19 14:18:59.871  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:18:59.871  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:18:59.871  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:18:59.871  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:18:59.881  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:18:59.883  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:18:59.883  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:18:59.883  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:48:59.883Z'
+10-19 14:18:59.883  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:00.131Z'
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:00.131  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:00.131  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:00.139  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:00.140  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:00.140  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:00.140  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:00.140Z'
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:00.140  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:00.140  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:00.140  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:00.140  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:00.149  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:00.149  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:00.149  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:00.149Z'
+10-19 14:19:00.149  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:00.792  8059  8059 I ScrollIdentify: on fling
+10-19 14:19:01.872  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:01.872  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:01.872  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:01.873  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:01.881  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:01.883  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:01.883  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:01.883  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:01.883Z'
+10-19 14:19:01.883  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:02.144  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:02.144Z'
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:02.144  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:02.145  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:02.145  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:02.145  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:02.145  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:02.153  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:02.153  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:02.153  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:02.153Z'
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:02.153  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:02.153  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:02.153  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:02.153  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:02.161  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:02.161  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:02.161  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:02.161Z'
+10-19 14:19:02.161  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:02.846  8059  8059 I ScrollIdentify: on fling
+10-19 14:19:03.873  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:03.873  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:03.873  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:03.873  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:03.882  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:03.883  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:03.883  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:03.884  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:03.884  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:03.884  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:03.884Z'
+10-19 14:19:03.884  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:04.134  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:04.134  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:04.135Z'
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:04.135  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:04.135  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:04.135  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:04.135  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:04.143  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:04.144  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:04.144  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:04.144  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:04.144Z'
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:04.144  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:04.144  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:04.144  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:04.144  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:04.152  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:04.152  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:04.152  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:04.152Z'
+10-19 14:19:04.152  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:04.186  8059  8059 I ScrollIdentify: on fling
+10-19 14:19:05.143  8059  8700 I ReactNativeJS: === MANUAL CHANGE ===
+10-19 14:19:05.144  8059  8700 I ReactNativeJS: '🔄 Updating driver status from:', 'online', 'to:', 'offline'
+10-19 14:19:05.145  8059  8700 I ReactNativeJS: '📊 Change type:', 'MANUAL CHANGE'
+10-19 14:19:05.145  8059  8700 I ReactNativeJS: 📊 Database will be updated with new status
+10-19 14:19:05.145  8059  8700 I ReactNativeJS: '📊 Timestamp:', '2025-10-19T08:49:05.145Z'
+10-19 14:19:05.145  8059  8700 I ReactNativeJS: 📊 This change is PERMANENT and will persist across app sessions
+10-19 14:19:05.146  8059  8700 I ReactNativeJS: '📊 Status will remain', 'offline', 'until explicitly changed again by user or ride lifecycle'
+10-19 14:19:05.146  8059  8700 I ReactNativeJS: 📊 WRITING TO DATABASE - This is the authoritative source of truth
+10-19 14:19:05.834  8059  8700 I ReactNativeJS: ✅ Database updated successfully
+10-19 14:19:05.835  8059  8700 I ReactNativeJS: '✅ Updated driver data:', null
+10-19 14:19:05.835  8059  8700 I ReactNativeJS: '✅ Status is now PERMANENTLY set to:', 'offline'
+10-19 14:19:05.835  8059  8700 I ReactNativeJS: ✅ No automatic processes will change this status
+10-19 14:19:05.835  8059  8700 I ReactNativeJS: '✅ Driver status changed from', 'online', 'to', 'offline'
+10-19 14:19:05.835  8059  8700 I ReactNativeJS: ✅ This change will persist across app sessions
+10-19 14:19:05.836  8059  8700 I ReactNativeJS: '✅ Status will remain', 'offline', 'indefinitely until next manual change'
+10-19 14:19:05.836  8059  8700 I ReactNativeJS: '✅ Status will remain', 'offline', 'until manually changed again'
+10-19 14:19:05.866  8059  8700 I ReactNativeJS: ✅ Local state updated - UI will reflect new status
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: 🛑 Cleaning up auto-refresh interval
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: ✅ Notification sound service cleaned up
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:05.867  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:05.867  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:05.867  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:05.867Z'
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:05.867  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   driverStatus: 'offline',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: === NAVIGATION CHECK ===
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: 'In auth group:', false
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: 'Has session:', false
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: 'Has driver:', true
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: 'Current segments:', [ '(tabs)', 'rides' ]
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: 'Loading state:', false
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: 'Is authenticated:', { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   license_number: 'TY58971234',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   license_expiry: '2025-10-04',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   status: 'offline',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   rating: 5,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   total_rides: 40,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   is_verified: true,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   vehicle_id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   vendor_id: null,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   phone_number: '9598972325',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   name: 'john',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   created_at: '2025-09-16T17:06:10.397003+00:00',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   updated_at: '2025-10-18T15:15:50.284134+00:00',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   vehicles: 
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      year: 2022,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      vehicle_type: 'sedan',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      capacity: 4 },
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   user: 
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:    { id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      email: 'john@gmail.com',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      role: 'driver',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      full_name: 'john',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      phone_number: '9598972325',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      avatar_url: null,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      is_active: true,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      created_at: '2025-09-16T17:06:09.397142+00:00',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      updated_at: '2025-09-16T17:06:09.397142+00:00' },
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:   vehicle: 
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      year: 2022,
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      vehicle_type: 'sedan',
+10-19 14:19:05.868  8059  8700 I ReactNativeJS:      capacity: 4 } }
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: No navigation needed - staying in current route
+10-19 14:19:05.868  8059  8700 I ReactNativeJS: === RIDE CONTEXT INITIALIZED ===
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver Status:', 'offline'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: === SETTING UP REAL-TIME SUBSCRIPTIONS ===
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: ✅ Real-time subscriptions established
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver Status:', 'offline'
+10-19 14:19:05.869  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:05.870  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:05.870  8059  8700 I ReactNativeJS: ⚠️ Driver is offline, stopping location tracking
+10-19 14:19:05.870  8059  8700 I ReactNativeJS: === STOPPING LOCATION TRACKING ===
+10-19 14:19:05.870  8059  8700 I ReactNativeJS: ✅ Location tracking stopped
+10-19 14:19:05.870  8059  8700 I ReactNativeJS: === STOPPING BACKGROUND LOCATION TRACKING ===
+10-19 14:19:05.870  8059  8700 I ReactNativeJS: === STOPPING BACKGROUND LOCATION TRACKING ===
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:05.880  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:05.880  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:05.880  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:05.880Z'
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: 'Driver Status:', 'offline'
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:05.880  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:05.881  8059  8687 I TaskService: Unregistering task 'background-location-task' for app with scoping identifier 'com.a1taxi.driverpro'.
+10-19 14:19:05.888  8059  8700 I ReactNativeJS: ✅ Background location tracking stopped
+10-19 14:19:05.891  8059  8687 I TaskService: Unregistering task 'background-fetch-task' for app with scoping identifier 'com.a1taxi.driverpro'.
+10-19 14:19:05.891  8059  8687 I BackgroundFetchTaskConsumer: Stopping an alarm for task 'background-fetch-task'.
+10-19 14:19:05.892  8059  8700 I ReactNativeJS: ✅ Stored session updated with new status
+10-19 14:19:05.892  8059  8700 I ReactNativeJS: ✅ Status will persist even after app restart
+10-19 14:19:05.895  8059  8700 I ReactNativeJS: ✅ Background fetch stopped
+10-19 14:19:05.895  8059  8700 I ReactNativeJS: ✅ All background location services stopped
+10-19 14:19:05.918  8059  8700 I ReactNativeJS: ✅ Background location tracking stopped
+10-19 14:19:05.918  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:05.918  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:05.918  8059  8700 I ReactNativeJS: 'Driver Status:', 'offline'
+10-19 14:19:05.918  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:05.918  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.142  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:06.142  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.143Z'
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:06.143  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:06.143  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:06.143  8059  8700 I ReactNativeJS:   driverStatus: 'offline',
+10-19 14:19:06.143  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.152  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.152  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.152  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.152Z'
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:06.152  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:06.152  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:06.152  8059  8700 I ReactNativeJS:   driverStatus: 'offline',
+10-19 14:19:06.152  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.160  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.160  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.160  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: '  - Driver status:', 'offline'
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.160Z'
+10-19 14:19:06.160  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: === MANUAL CHANGE ===
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: '🔄 Updating driver status from:', 'offline', 'to:', 'online'
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: '📊 Change type:', 'MANUAL CHANGE'
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: 📊 Database will be updated with new status
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: '📊 Timestamp:', '2025-10-19T08:49:06.210Z'
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: 📊 This change is PERMANENT and will persist across app sessions
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: '📊 Status will remain', 'online', 'until explicitly changed again by user or ride lifecycle'
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: 📊 WRITING TO DATABASE - This is the authoritative source of truth
+10-19 14:19:06.210  8059  8700 I ReactNativeJS: 🟢 Driver going ONLINE - ensuring availability for customers
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: ✅ Database updated successfully
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: '✅ Updated driver data:', null
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: '✅ Status is now PERMANENTLY set to:', 'online'
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: ✅ No automatic processes will change this status
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: ✅ Driver is now VERIFIED and AVAILABLE for customer bookings
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: '✅ Driver status changed from', 'offline', 'to', 'online'
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: ✅ This change will persist across app sessions
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: '✅ Status will remain', 'online', 'indefinitely until next manual change'
+10-19 14:19:06.455  8059  8700 I ReactNativeJS: '✅ Status will remain', 'online', 'until manually changed again'
+10-19 14:19:06.462 24047 10464 I Authzen : [DeviceStateSyncManager] The server is in sync with current state. Nothing to do
+10-19 14:19:06.478  8059  8700 I ReactNativeJS: ✅ Local state updated - UI will reflect new status
+10-19 14:19:06.478  8059  8700 I ReactNativeJS: 🔄 Driver went online - forcing notification refresh
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: 🛑 Cleaning up auto-refresh interval
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: ✅ Notification sound service cleaned up
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.479  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.479  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.479  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.479Z'
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:06.479  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:06.479  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:06.479  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: === NAVIGATION CHECK ===
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: 'In auth group:', false
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: 'Has session:', false
+10-19 14:19:06.479  8059  8700 I ReactNativeJS: 'Has driver:', true
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Current segments:', [ '(tabs)', 'rides' ]
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Loading state:', false
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Is authenticated:', { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   license_number: 'TY58971234',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   license_expiry: '2025-10-04',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   status: 'online',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   rating: 5,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   total_rides: 40,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   is_verified: true,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   vehicle_id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   vendor_id: null,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   phone_number: '9598972325',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   name: 'john',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   created_at: '2025-09-16T17:06:10.397003+00:00',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   updated_at: '2025-10-18T15:15:50.284134+00:00',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   vehicles: 
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      year: 2022,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      vehicle_type: 'sedan',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      capacity: 4 },
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   user: 
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:    { id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      email: 'john@gmail.com',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      role: 'driver',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      full_name: 'john',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      phone_number: '9598972325',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      avatar_url: null,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      is_active: true,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      created_at: '2025-09-16T17:06:09.397142+00:00',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      updated_at: '2025-09-16T17:06:09.397142+00:00' },
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:   vehicle: 
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      year: 2022,
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      vehicle_type: 'sedan',
+10-19 14:19:06.480  8059  8700 I ReactNativeJS:      capacity: 4 } }
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: No navigation needed - staying in current route
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: === RIDE CONTEXT INITIALIZED ===
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Driver Status:', 'online'
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:06.480  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: === SETTING UP REAL-TIME SUBSCRIPTIONS ===
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: ✅ Real-time subscriptions established
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver Status:', 'online'
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: ✅ Driver is active, ensuring location record exists and driver is available for customers...
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: === HANDLING ACTIVE DRIVER ===
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver status:', 'online'
+10-19 14:19:06.481  8059  8700 I ReactNativeJS: 'Driver verified:', true
+10-19 14:19:06.482  8059  8700 I ReactNativeJS: === FORCE CREATING LOCATION RECORD ===
+10-19 14:19:06.482  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:06.482  8059  8700 I ReactNativeJS: 'Driver Name:', 'john'
+10-19 14:19:06.482  8059  8700 E ReactNativeJS: ❌ EXPO_PUBLIC_SUPABASE_URL is not configured properly
+10-19 14:19:06.482  8059  8700 E ReactNativeJS: 'Current value:', undefined
+10-19 14:19:06.483  8059  8700 I ReactNativeJS: ⚠️ Falling back to direct database insert without edge function
+10-19 14:19:06.483  8059  8700 I ReactNativeJS: === FALLBACK: CREATING LOCATION RECORD VIA RPC ===
+10-19 14:19:06.483  8059  8700 I ReactNativeJS: 📍 Attempting to get current GPS location...
+10-19 14:19:06.492  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.492  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.493  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.493  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.493  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.493Z'
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: 'Driver Status:', 'online'
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:06.493  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: console.error: ❌ EXPO_PUBLIC_SUPABASE_URL is not configured properly, js engine: hermes, stack:
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: ?anon_0_@1:1954897
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: forceCreateLocationRecord@1:1955060
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: ?anon_0_@1:1953805
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: handleActiveDriver@1:1954029
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: anonymous@1:1952572
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitHookEffectListMount@1:393533
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitHookPassiveMountEffects@1:401261
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401706
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401559
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401661
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: flushPassiveEffects@1:409129
+10-19 14:19:06.500  8059  8701 E unknown:ReactNative: anonymous@1:408952
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: console.error: Current value: undefined, js engine: hermes, stack:
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: ?anon_0_@1:1954917
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: forceCreateLocationRecord@1:1955060
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: ?anon_0_@1:1953805
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: anonymous@1:573481
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: anonymous@1:573402
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: handleActiveDriver@1:1954029
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: anonymous@1:1952572
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitHookEffectListMount@1:393533
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitHookPassiveMountEffects@1:401261
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401706
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401559
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401679
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401453
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: recursivelyTraversePassiveMountEffects@1:401345
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: commitPassiveMountOnFiber@1:401661
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: flushPassiveEffects@1:409129
+10-19 14:19:06.505  8059  8701 E unknown:ReactNative: anonymous@1:408952
+10-19 14:19:06.511  8059  8700 I ReactNativeJS: ✅ Stored session updated with new status
+10-19 14:19:06.511  8059  8700 I ReactNativeJS: ✅ Status will persist even after app restart
+10-19 14:19:06.768  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:06.768  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:06.768  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.768  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.768  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.768  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.769Z'
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:06.769  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:06.769  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:06.769  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:06.769  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:06.778  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.778  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.779  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.779  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.779  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.779Z'
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:06.779  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:06.779  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:06.779  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:06.779  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:06.787  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:06.787  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:06.787  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:06.787Z'
+10-19 14:19:06.787  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:07.521  8059  8700 I ReactNativeJS: '✅ Got native location:', { accuracy: 2.5,
+10-19 14:19:07.521  8059  8700 I ReactNativeJS:   longitude: 77.8299383,
+10-19 14:19:07.521  8059  8700 I ReactNativeJS:   altitude: 774.5999755859375,
+10-19 14:19:07.521  8059  8700 I ReactNativeJS:   heading: 0,
+10-19 14:19:07.521  8059  8700 I ReactNativeJS:   latitude: 12.7486217,
+10-19 14:19:07.521  8059  8700 I ReactNativeJS:   altitudeAccuracy: 41.35140609741211,
+10-19 14:19:07.521  8059  8700 I ReactNativeJS:   speed: 3.516453674535745e-20 }
+10-19 14:19:07.789  8059  8700 I ReactNativeJS: '✅ Location record', 'updated', 'successfully via RPC'
+10-19 14:19:07.790  8059  8700 I ReactNativeJS: ✅ Location record confirmed, starting tracking...
+10-19 14:19:07.790  8059  8700 I ReactNativeJS: ✅ Driver is now available for customer bookings
+10-19 14:19:07.790  8059  8700 I ReactNativeJS: === STARTING LOCATION TRACKING ===
+10-19 14:19:07.790  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:07.790  8059  8700 I ReactNativeJS: 'Status:', 'online'
+10-19 14:19:07.790  8059  8700 I ReactNativeJS: 'Permission:', true
+10-19 14:19:07.790  8059  8700 I ReactNativeJS: === UPDATING LOCATION WITH GOOGLE MAPS ===
+10-19 14:19:07.791  8059  8700 I ReactNativeJS: 📱 Using native location...
+10-19 14:19:07.792  8059  8700 I ReactNativeJS: === STARTING BACKGROUND LOCATION TRACKING ===
+10-19 14:19:07.792  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:07.792  8059  8700 I ReactNativeJS: 'Status:', 'online'
+10-19 14:19:07.793  8059  8700 I ReactNativeJS: === STARTING BACKGROUND LOCATION TRACKING ===
+10-19 14:19:07.793  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:07.793  8059  8700 I ReactNativeJS: 'Platform:', 'android'
+10-19 14:19:07.917  8059  8700 I ReactNativeJS: ✅ Background location permission granted
+10-19 14:19:07.918  8059  8687 I TaskService: Registered task with name 'background-location-task' for app with scoping identifier 'com.a1taxi.driverpro'.
+10-19 14:19:07.927  8059  8687 I TaskService: Registered task with name 'background-fetch-task' for app with scoping identifier 'com.a1taxi.driverpro'.
+10-19 14:19:07.928  8059  8700 I ReactNativeJS: ✅ Background location tracking started
+10-19 14:19:07.928  8059  8700 I ReactNativeJS: ✅ Foreground service notification will be shown
+10-19 14:19:07.928  8059  8700 I ReactNativeJS: ✅ Location will update every 5 seconds even when app is closed
+10-19 14:19:07.950  8059  8700 I ReactNativeJS: ✅ Background location tracking started successfully
+10-19 14:19:07.950  8059  8700 I ReactNativeJS: ✅ Driver location will be sent every 5 seconds even when app is closed
+10-19 14:19:07.950  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:07.950  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:07.950  8059  8700 I ReactNativeJS: 'Driver Status:', 'online'
+10-19 14:19:07.950  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:07.950  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:07.957  8059  8059 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{e311d29 V.E...... R......D 0,0-1080,2392 aid=0}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
+10-19 14:19:07.963  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:07.964  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:07.964  8059  8700 I ReactNativeJS: 'Driver Status:', 'online'
+10-19 14:19:07.964  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:07.964  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:07.967  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 14:19:07.968  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 14:19:07.969  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 14:19:07.970  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 14:19:07.987  8059  8059 I TaskService: Handling intent with task name 'background-location-task' and app scoping identifier 'com.a1taxi.driverpro'.
+10-19 14:19:08.072  8059  8700 I ReactNativeJS: '✅ Location obtained:', { accuracy: 2.5,
+10-19 14:19:08.072  8059  8700 I ReactNativeJS:   longitude: 77.8299383,
+10-19 14:19:08.072  8059  8700 I ReactNativeJS:   altitude: 774.5999755859375,
+10-19 14:19:08.072  8059  8700 I ReactNativeJS:   heading: 0,
+10-19 14:19:08.072  8059  8700 I ReactNativeJS:   latitude: 12.7486217,
+10-19 14:19:08.072  8059  8700 I ReactNativeJS:   altitudeAccuracy: 41.35140609741211,
+10-19 14:19:08.072  8059  8700 I ReactNativeJS:   speed: 3.516453674535745e-20 }
+10-19 14:19:08.080  8059  8700 I ReactNativeJS: === SENDING LOCATION TO EDGE FUNCTION ===
+10-19 14:19:08.080  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:08.080  8059  8700 I ReactNativeJS: 'Location:', { latitude: 12.7486217, longitude: 77.8299383, accuracy: 2.5 }
+10-19 14:19:08.081  8059  8700 I ReactNativeJS: 📤 Updating location via RPC...
+10-19 14:19:08.494  8059  8700 I ReactNativeJS: 🔄 Triggering manual ride check after status change
+10-19 14:19:08.494  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:08.495  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:08.495  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:08.495  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:08.514  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:08.516  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:08.516  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:08.516  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:08.516  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:08.516Z'
+10-19 14:19:08.517  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:08.732  8059  8700 I ReactNativeJS: '✅ Location', 'updated', 'successfully via RPC'
+10-19 14:19:08.733  8059  8700 I ReactNativeJS: 📱 Starting native location watching with 5s intervals
+10-19 14:19:08.771  8059  8700 I ReactNativeJS: ✅ Location tracking started successfully
+10-19 14:19:08.771  8059  8700 I ReactNativeJS: '✅ isTracking state set to:', true
+10-19 14:19:08.771  8059  8700 I ReactNativeJS: '📍 5-second location watch update:', { altitude: 774.5999755859375,
+10-19 14:19:08.771  8059  8700 I ReactNativeJS:   heading: 0,
+10-19 14:19:08.771  8059  8700 I ReactNativeJS:   altitudeAccuracy: 41.35140609741211,
+10-19 14:19:08.771  8059  8700 I ReactNativeJS:   latitude: 12.7486217,
+10-19 14:19:08.771  8059  8700 I ReactNativeJS:   speed: 3.516453674535745e-20,
+10-19 14:19:08.771  8059  8700 I ReactNativeJS:   longitude: 77.8299383,
+10-19 14:19:08.771  8059  8700 I ReactNativeJS:   accuracy: 2.5 }
+10-19 14:19:08.771  8059  8700 I ReactNativeJS: === DRIVER STATUS CHANGE DETECTED ===
+10-19 14:19:08.771  8059  8700 I ReactNativeJS: 'Driver:', 'john'
+10-19 14:19:08.771  8059  8700 I ReactNativeJS: 'Driver Status:', 'online'
+10-19 14:19:08.772  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:08.772  8059  8700 I ReactNativeJS: 'Driver Verified:', true
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:08.813  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:08.813  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:08.814Z'
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:08.814  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:08.814  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:08.814  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:08.814  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:08.822  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:08.822  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:08.822  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:08.822  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:08.822  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:08.822  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:08.822  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:08.822  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:08.823Z'
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:08.823  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:08.823  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:08.823  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:08.823  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:08.830  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:08.830  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:08.830  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:08.830  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:08.830  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:08.830  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:08.830  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:08.830  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:08.831  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:08.831  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:08.831  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:08.831  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:08.831Z'
+10-19 14:19:08.831  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:09.102  8059  8700 I ReactNativeJS: === SENDING LOCATION TO EDGE FUNCTION ===
+10-19 14:19:09.103  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:09.103  8059  8700 I ReactNativeJS: 'Location:', { latitude: 12.7486217, longitude: 77.8299383, accuracy: 2.5 }
+10-19 14:19:09.103  8059  8700 I ReactNativeJS: 📤 Updating location via RPC...
+10-19 14:19:09.356  8059  8700 I ReactNativeJS: '✅ Location', 'updated', 'successfully via RPC'
+10-19 14:19:09.891  8059  8059 I ScrollIdentify: on fling
+10-19 14:19:10.416  7096  7120 I native  : I0000 00:00:1760863750.415634    7120 soda_async_impl.cc:1383] Current audio timestamp: 1760863750321455
+10-19 14:19:10.454  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 14:19:10.494  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:10.494  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:10.495  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:10.495  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:10.512  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:10.514  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:10.514  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:10.514  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:10.514Z'
+10-19 14:19:10.514  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:10.734  8059  8059 I ScrollIdentify: on fling
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:10.768  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:10.768  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:10.768Z'
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:10.769  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:10.769  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:10.769  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:10.769  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:10.778  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:10.778  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:10.778  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:10.778Z'
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:10.778  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:10.778  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:10.778  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:10.778  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:10.788  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:10.788  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:10.788  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:10.788  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:10.789  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:10.788Z'
+10-19 14:19:10.789  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:11.627  8059  8059 I ScrollIdentify: on fling
+10-19 14:19:12.494  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:12.494  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:12.494  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:12.494  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:12.502  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:12.504  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:12.504  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:12.504  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:12.504Z'
+10-19 14:19:12.504  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:12.764  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:12.764  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:12.764Z'
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:12.765  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:12.765  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:12.765  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:12.765  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:12.773  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:12.773  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:12.773  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:12.773Z'
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:12.773  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:12.773  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:12.773  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:12.773  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:12.781  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:12.781  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:12.782  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:12.782  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:12.782  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:12.782Z'
+10-19 14:19:12.782  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: 🚨 COMPLETE RIDE BUTTON CLICKED!
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: '🚨 Current ride exists:', true
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: '🚨 Current ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: 🚨 About to call completeRide function...
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: '🚨 Calling completeRide with ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: 🚨 === COMPLETE RIDE FUNCTION CALLED ===
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: '🚨 Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: '🚨 Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:13.615  8059  8700 I ReactNativeJS: '🚨 Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:14.185  8059  8700 I ReactNativeJS: '✅ Driver and vehicle details fetched:', { driverName: 'john',
+10-19 14:19:14.185  8059  8700 I ReactNativeJS:   driverRating: 5,
+10-19 14:19:14.185  8059  8700 I ReactNativeJS:   vehicle: 
+10-19 14:19:14.185  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:14.185  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:19:14.185  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:19:14.185  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:19:14.185  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111' } }
+10-19 14:19:14.186  8059  8700 I ReactNativeJS: '✅ Ride details fetched for completion:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.186  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.186  8059  8700 I ReactNativeJS:   booking_type: 'regular',
+10-19 14:19:14.186  8059  8700 I ReactNativeJS:   vehicle_type: 'sedan',
+10-19 14:19:14.186  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.186  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:14.186  8059  8700 I ReactNativeJS: 📍 Stopping GPS tracking and calculating actual distance...
+10-19 14:19:14.186  8059  8700 I ReactNativeJS: === STOPPING TRIP GPS TRACKING ===
+10-19 14:19:14.186  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:14.186  8059  8700 I ReactNativeJS: ✅ Trip GPS tracking stopped. Total points recorded: 2
+10-19 14:19:14.186  8059  8700 I ReactNativeJS: === CALCULATING TRIP DISTANCE FROM GPS (Google Maps API) ===
+10-19 14:19:14.187  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:14.485  8059  8700 W ReactNativeJS: ⚠️ Not enough GPS points for distance calculation
+10-19 14:19:14.485  8059  8700 I ReactNativeJS: '📍 GPS distance result (raw):', { distanceKm: 0, pointsUsed: 0 }
+10-19 14:19:14.485  8059  8700 W ReactNativeJS: ⚠️ GPS tracking insufficient (distance < 0.5km or < 3 points), using Google Maps API...
+10-19 14:19:14.485  8059  8700 W ReactNativeJS: '⚠️ GPS distance calculation failed, using Google Maps API fallback:', [Error: Insufficient GPS data]
+10-19 14:19:14.486  8059  8700 I ReactNativeJS: 📡 Calling Google Maps Directions API...
+10-19 14:19:14.486  8059  8700 I ReactNativeJS: '📍 Origin:', { latitude: 12.748588, longitude: 77.8300797 }
+10-19 14:19:14.486  8059  8700 I ReactNativeJS: '📍 Destination:', { latitude: 12.8303987, longitude: 77.8662369 }
+10-19 14:19:14.494  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:14.494  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:14.495  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:14.495  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:14.507  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.509  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.509  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.509  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:14.509Z'
+10-19 14:19:14.509  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:14.561  8059  8700 I ReactNativeJS: '📍 5-second location watch update:', { altitude: 772.5999755859375,
+10-19 14:19:14.561  8059  8700 I ReactNativeJS:   heading: 0,
+10-19 14:19:14.561  8059  8700 I ReactNativeJS:   altitudeAccuracy: 1.1337547302246094,
+10-19 14:19:14.561  8059  8700 I ReactNativeJS:   latitude: 12.7486614,
+10-19 14:19:14.561  8059  8700 I ReactNativeJS:   speed: 0.00007645219739060849,
+10-19 14:19:14.561  8059  8700 I ReactNativeJS:   longitude: 77.8299929,
+10-19 14:19:14.561  8059  8700 I ReactNativeJS:   accuracy: 2.799999952316284 }
+10-19 14:19:14.564  8059  8059 I TaskService: Handling intent with task name 'background-location-task' and app scoping identifier 'com.a1taxi.driverpro'.
+10-19 14:19:14.565  8059  8059 W JobInfo : Job 'com.a1taxi.driverpro/expo.modules.taskManager.TaskJobService#0' has a deadline with no functional constraints. The deadline won't improve job execution latency. Consider removing the deadline.
+10-19 14:19:14.578  8059  8059 I TaskService: Handling job with task name 'background-location-task' for app with scoping identifier 'com.a1taxi.driverpro'.
+10-19 14:19:14.581  8059  8700 I ReactNativeJS: '📍 Background location update:', [ { timestamp: 1760863747437,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:     mocked: false,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:     coords: 
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:      { altitude: 774.5999755859375,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        heading: 0,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        altitudeAccuracy: 41.35140609741211,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        latitude: 12.7486217,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        speed: 3.516453674535745e-20,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        longitude: 77.8299383,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        accuracy: 2.5 } },
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:   { timestamp: 1760863754470,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:     mocked: false,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:     coords: 
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:      { altitude: 772.5999755859375,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        heading: 0,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        altitudeAccuracy: 1.1337547302246094,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        latitude: 12.7486614,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        speed: 0.00007645219739060849,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        longitude: 77.8299929,
+10-19 14:19:14.581  8059  8700 I ReactNativeJS:        accuracy: 2.799999952316284 } } ]
+10-19 14:19:14.587  8059  8700 I ReactNativeJS: 📤 Background location update via RPC...
+10-19 14:19:14.587  8059  8700 E ReactNativeJS: ❌ Supabase credentials not configured
+10-19 14:19:14.588  8059  8687 I TaskService: Finished task 'background-location-task' with eventId 'ad8661ce-b7cc-4956-a0ff-8cbee2ee3cc2'.
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: console.error: ❌ Supabase credentials not configured, js engine: hermes, stack:
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: ?anon_0_@1:1972274
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137289
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:19:14.591  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:19:14.658  8059  8700 I ReactNativeJS: 📊 Found 1 route(s):
+10-19 14:19:14.658  8059  8700 I ReactNativeJS:   Route 1: 10.55 km, 15 min
+10-19 14:19:14.658  8059  8700 I ReactNativeJS: '✅ Google Maps Directions result (using Route 1):', { distance: '10.55 km',
+10-19 14:19:14.658  8059  8700 I ReactNativeJS:   duration: '15 min',
+10-19 14:19:14.658  8059  8700 I ReactNativeJS:   distanceMeters: 10551,
+10-19 14:19:14.658  8059  8700 I ReactNativeJS:   durationSeconds: 929,
+10-19 14:19:14.658  8059  8700 I ReactNativeJS:   startAddress: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.658  8059  8700 I ReactNativeJS:   endAddress: 'RVJ8+5F5, Bagalur, Tamil Nadu 635103, India' }
+10-19 14:19:14.659  8059  8700 I ReactNativeJS: '✅ Google Maps fallback distance:', { distanceKm: '10.55',
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   durationMinutes: 15,
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   method: 'Google Maps Directions API' }
+10-19 14:19:14.659  8059  8700 I ReactNativeJS: '🚨 Trip metrics (Real GPS-tracked distance):', { actualDistanceKm: '10.55',
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   actualDurationMinutes: 15,
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   gpsPointsUsed: 0,
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   pickupLat: 12.748588,
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   pickupLng: 77.8300797,
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   dropLat: 12.8303987,
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   dropLng: 77.8662369,
+10-19 14:19:14.659  8059  8700 I ReactNativeJS:   method: 'GPS Breadcrumb Tracking' }
+10-19 14:19:14.659  8059  8700 I ReactNativeJS: 🚨 About to call FareCalculationService.calculateAndStoreTripFare...
+10-19 14:19:14.659  8059  8700 I ReactNativeJS: === CALCULATING TRIP FARE ===
+10-19 14:19:14.659  8059  8700 I ReactNativeJS: 'Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:14.660  8059  8700 I ReactNativeJS: 'Actual Distance:', 10.551, 'km'
+10-19 14:19:14.660  8059  8700 I ReactNativeJS: 'Actual Duration:', 15, 'minutes'
+10-19 14:19:14.800  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:14.800  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:14.800  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:14.800  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:14.800  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.801  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.801  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.801  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:14.801Z'
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:14.801  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:14.801  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:14.801  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:14.801  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.811  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.811  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.811  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:14.811Z'
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:14.811  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:14.811  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:14.811  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:14.811  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.819  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.819  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.819  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:14.819Z'
+10-19 14:19:14.819  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:14.882  8059  8700 I ReactNativeJS: === SENDING LOCATION TO EDGE FUNCTION ===
+10-19 14:19:14.882  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:14.882  8059  8700 I ReactNativeJS: 'Location:', { latitude: 12.7486614,
+10-19 14:19:14.882  8059  8700 I ReactNativeJS:   longitude: 77.8299929,
+10-19 14:19:14.882  8059  8700 I ReactNativeJS:   accuracy: 2.799999952316284 }
+10-19 14:19:14.882  8059  8700 I ReactNativeJS: 📤 Updating location via RPC...
+10-19 14:19:14.915  8059  8700 E ReactNativeJS: 'Error fetching ride:', { code: 'PGRST116',
+10-19 14:19:14.915  8059  8700 E ReactNativeJS:   details: 'The result contains 0 rows',
+10-19 14:19:14.915  8059  8700 E ReactNativeJS:   hint: null,
+10-19 14:19:14.915  8059  8700 E ReactNativeJS:   message: 'Cannot coerce the result to a single JSON object' }
+10-19 14:19:14.917  8059  8700 I ReactNativeJS: '🚨 FareCalculationService result:', { success: false, error: 'Ride not found' }
+10-19 14:19:14.917  8059  8700 E ReactNativeJS: '❌ Fare calculation failed:', 'Ride not found'
+10-19 14:19:14.937  8059  8700 I ReactNativeJS: '🚨 CompleteRide function completed, result:', { success: false }
+10-19 14:19:14.937  8059  8700 E ReactNativeJS: ❌ Failed to complete ride
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.938  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.938  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.938  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: '  - Error:', 'Failed to calculate fare: Ride not found'
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:14.938Z'
+10-19 14:19:14.938  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: console.error: Error fetching ride: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}, js engine: hermes, stack:
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: ?anon_0_@1:2010940
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:19:14.941  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: console.error: ❌ Fare calculation failed: Ride not found, js engine: hermes, stack:
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: ?anon_0_@1:2002480
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:19:14.945  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:14.947  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:14.947  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:14.947  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:14.947Z'
+10-19 14:19:14.947  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: console.error: ❌ Failed to complete ride, js engine: hermes, stack:
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: ?anon_0_@1:1990386
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:19:14.949  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:19:14.950  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:19:14.950  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:19:15.022  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:19:15.022  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:19:15.081  8059  8059 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1202, 713), rotation: ROTATION_0
+10-19 14:19:15.082  8059  8059 D BufferQueueConsumer: [](id:1f7b00000012,api:0,p:-1,c:8059) connect: controlledByApp=false
+10-19 14:19:15.083  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#15](f:0,a:0) constructor()
+10-19 14:19:15.083  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#15](f:0,a:0) update width=1202 height=713 format=-3 mTransformHint=0
+10-19 14:19:15.096  8059  8674 D BLASTBufferQueue: [VRI[MainActivity]#15](f:0,a:1) acquireNextBufferLocked size=1202x713 mFrameNumber=1 applyTransaction=true mTimestamp=627125647058455(auto) mPendingTransactions.size=0 graphicBufferId=34613141438578 transform=0
+10-19 14:19:15.159  8059  8700 I ReactNativeJS: '✅ Location', 'updated', 'successfully via RPC'
+10-19 14:19:16.229  8059  8059 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@2508c02
+10-19 14:19:16.235  8059  8674 D HWUI    : endAllActiveAnimators on 0xb400007780101690 (RippleDrawable) with handle 0xb4000077d00c5da0
+10-19 14:19:16.246  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:19:16.246  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:19:16.247  8059  8695 D BLASTBufferQueue: [VRI[MainActivity]#15](f:0,a:4) destructor()
+10-19 14:19:16.248  8059  8695 D BufferQueueConsumer: [VRI[MainActivity]#15(BLAST Consumer)15](id:1f7b00000012,api:0,p:-1,c:8059) disconnect
+10-19 14:19:16.283  8059  8059 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{e311d29 V.E...... R......D 0,0-1080,2392 aid=0}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+10-19 14:19:16.286  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 14:19:16.287  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 14:19:16.288  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 14:19:16.289  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 14:19:16.498  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:16.498  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:16.498  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:16.498  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:16.523  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:16.525  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:16.525  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:16.526  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:16.526  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:16.526  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:16.526Z'
+10-19 14:19:16.526  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:16.816  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:16.816  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:16.816  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:16.817  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:16.817  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:16.817  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:16.817Z'
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:16.817  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:16.817  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:16.817  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:16.817  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:16.826  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:16.826  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:16.826  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:16.826  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:16.826  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:16.826  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:16.826  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:16.826  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:16.826  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:16.826  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:16.827Z'
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:16.827  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:16.827  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:16.827  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:16.827  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:16.834  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:16.834  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:16.834  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:16.834  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:16.834Z'
+10-19 14:19:16.835  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:17.113  8059  8700 I ReactNativeJS: 🚨 COMPLETE RIDE BUTTON CLICKED!
+10-19 14:19:17.113  8059  8700 I ReactNativeJS: '🚨 Current ride exists:', true
+10-19 14:19:17.113  8059  8700 I ReactNativeJS: '🚨 Current ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:17.113  8059  8700 I ReactNativeJS: 🚨 About to call completeRide function...
+10-19 14:19:17.113  8059  8700 I ReactNativeJS: '🚨 Calling completeRide with ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:17.113  8059  8700 I ReactNativeJS: 🚨 === COMPLETE RIDE FUNCTION CALLED ===
+10-19 14:19:17.113  8059  8700 I ReactNativeJS: '🚨 Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:17.114  8059  8700 I ReactNativeJS: '🚨 Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:17.114  8059  8700 I ReactNativeJS: '🚨 Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:17.637  8059  8700 I ReactNativeJS: '✅ Driver and vehicle details fetched:', { driverName: 'john',
+10-19 14:19:17.637  8059  8700 I ReactNativeJS:   driverRating: 5,
+10-19 14:19:17.637  8059  8700 I ReactNativeJS:   vehicle: 
+10-19 14:19:17.637  8059  8700 I ReactNativeJS:    { id: 'e7591bc7-c083-49f6-b30d-cc0d6964f3a1',
+10-19 14:19:17.637  8059  8700 I ReactNativeJS:      make: 'Maruti',
+10-19 14:19:17.637  8059  8700 I ReactNativeJS:      model: 'Ciaz',
+10-19 14:19:17.637  8059  8700 I ReactNativeJS:      color: 'Silver',
+10-19 14:19:17.637  8059  8700 I ReactNativeJS:      registration_number: 'KA51MN1111' } }
+10-19 14:19:17.638  8059  8700 I ReactNativeJS: '✅ Ride details fetched for completion:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:17.638  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:17.638  8059  8700 I ReactNativeJS:   booking_type: 'regular',
+10-19 14:19:17.638  8059  8700 I ReactNativeJS:   vehicle_type: 'sedan',
+10-19 14:19:17.638  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:17.638  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:17.638  8059  8700 I ReactNativeJS: 📍 Stopping GPS tracking and calculating actual distance...
+10-19 14:19:17.638  8059  8700 I ReactNativeJS: === STOPPING TRIP GPS TRACKING ===
+10-19 14:19:17.638  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:17.638  8059  8700 I ReactNativeJS: ✅ Trip GPS tracking stopped. Total points recorded: 2
+10-19 14:19:17.638  8059  8700 I ReactNativeJS: === CALCULATING TRIP DISTANCE FROM GPS (Google Maps API) ===
+10-19 14:19:17.639  8059  8700 I ReactNativeJS: 'Trip ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:17.930  8059  8700 W ReactNativeJS: ⚠️ Not enough GPS points for distance calculation
+10-19 14:19:17.931  8059  8700 I ReactNativeJS: '📍 GPS distance result (raw):', { distanceKm: 0, pointsUsed: 0 }
+10-19 14:19:17.931  8059  8700 W ReactNativeJS: ⚠️ GPS tracking insufficient (distance < 0.5km or < 3 points), using Google Maps API...
+10-19 14:19:17.931  8059  8700 W ReactNativeJS: '⚠️ GPS distance calculation failed, using Google Maps API fallback:', [Error: Insufficient GPS data]
+10-19 14:19:17.931  8059  8700 I ReactNativeJS: 📡 Calling Google Maps Directions API...
+10-19 14:19:17.932  8059  8700 I ReactNativeJS: '📍 Origin:', { latitude: 12.748588, longitude: 77.8300797 }
+10-19 14:19:17.933  8059  8700 I ReactNativeJS: '📍 Destination:', { latitude: 12.8303987, longitude: 77.8662369 }
+10-19 14:19:18.098  8059  8700 I ReactNativeJS: 📊 Found 1 route(s):
+10-19 14:19:18.098  8059  8700 I ReactNativeJS:   Route 1: 10.55 km, 15 min
+10-19 14:19:18.099  8059  8700 I ReactNativeJS: '✅ Google Maps Directions result (using Route 1):', { distance: '10.55 km',
+10-19 14:19:18.099  8059  8700 I ReactNativeJS:   duration: '15 min',
+10-19 14:19:18.099  8059  8700 I ReactNativeJS:   distanceMeters: 10551,
+10-19 14:19:18.099  8059  8700 I ReactNativeJS:   durationSeconds: 929,
+10-19 14:19:18.099  8059  8700 I ReactNativeJS:   startAddress: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.099  8059  8700 I ReactNativeJS:   endAddress: 'RVJ8+5F5, Bagalur, Tamil Nadu 635103, India' }
+10-19 14:19:18.099  8059  8700 I ReactNativeJS: '✅ Google Maps fallback distance:', { distanceKm: '10.55',
+10-19 14:19:18.099  8059  8700 I ReactNativeJS:   durationMinutes: 15,
+10-19 14:19:18.099  8059  8700 I ReactNativeJS:   method: 'Google Maps Directions API' }
+10-19 14:19:18.100  8059  8700 I ReactNativeJS: '🚨 Trip metrics (Real GPS-tracked distance):', { actualDistanceKm: '10.55',
+10-19 14:19:18.100  8059  8700 I ReactNativeJS:   actualDurationMinutes: 15,
+10-19 14:19:18.100  8059  8700 I ReactNativeJS:   gpsPointsUsed: 0,
+10-19 14:19:18.100  8059  8700 I ReactNativeJS:   pickupLat: 12.748588,
+10-19 14:19:18.100  8059  8700 I ReactNativeJS:   pickupLng: 77.8300797,
+10-19 14:19:18.100  8059  8700 I ReactNativeJS:   dropLat: 12.8303987,
+10-19 14:19:18.100  8059  8700 I ReactNativeJS:   dropLng: 77.8662369,
+10-19 14:19:18.100  8059  8700 I ReactNativeJS:   method: 'GPS Breadcrumb Tracking' }
+10-19 14:19:18.100  8059  8700 I ReactNativeJS: 🚨 About to call FareCalculationService.calculateAndStoreTripFare...
+10-19 14:19:18.100  8059  8700 I ReactNativeJS: === CALCULATING TRIP FARE ===
+10-19 14:19:18.100  8059  8700 I ReactNativeJS: 'Ride ID:', '8fb34677-14fc-4479-b3c5-d42763361ec5'
+10-19 14:19:18.101  8059  8700 I ReactNativeJS: 'Actual Distance:', 10.551, 'km'
+10-19 14:19:18.101  8059  8700 I ReactNativeJS: 'Actual Duration:', 15, 'minutes'
+10-19 14:19:18.371  8059  8700 E ReactNativeJS: 'Error fetching ride:', { code: 'PGRST116',
+10-19 14:19:18.371  8059  8700 E ReactNativeJS:   details: 'The result contains 0 rows',
+10-19 14:19:18.371  8059  8700 E ReactNativeJS:   hint: null,
+10-19 14:19:18.371  8059  8700 E ReactNativeJS:   message: 'Cannot coerce the result to a single JSON object' }
+10-19 14:19:18.376  8059  8700 I ReactNativeJS: '🚨 FareCalculationService result:', { success: false, error: 'Ride not found' }
+10-19 14:19:18.376  8059  8700 E ReactNativeJS: '❌ Fare calculation failed:', 'Ride not found'
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: console.error: Error fetching ride: {"code":"PGRST116","details":"The result contains 0 rows","hint":null,"message":"Cannot coerce the result to a single JSON object"}, js engine: hermes, stack:
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: ?anon_0_@1:2010940
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:19:18.379  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:19:18.403  8059  8700 I ReactNativeJS: '🚨 CompleteRide function completed, result:', { success: false }
+10-19 14:19:18.403  8059  8700 E ReactNativeJS: ❌ Failed to complete ride
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:18.404  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:18.404  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.404  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: '  - Error:', 'Failed to calculate fare: Ride not found'
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:18.404Z'
+10-19 14:19:18.404  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: console.error: ❌ Fare calculation failed: Ride not found, js engine: hermes, stack:
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: ?anon_0_@1:2002480
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:19:18.408  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:18.415  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:18.415  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.415  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:18.415Z'
+10-19 14:19:18.415  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: console.error: ❌ Failed to complete ride, js engine: hermes, stack:
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: _construct@1:117842
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: Wrapper@1:117496
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: _callSuper@1:115478
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: SyntheticError@1:116983
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: reactConsoleErrorHandler@1:116629
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: ?anon_0_@1:1990386
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: asyncGeneratorStep@1:573272
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: _next@1:573529
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: anonymous@1:136226
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: _callTimer@1:135225
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: _callReactNativeMicrotasksPass@1:135369
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: callReactNativeMicrotasks@1:137300
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: __callReactNativeMicrotasks@1:101038
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: anonymous@1:100174
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: __guard@1:100912
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: flushedQueue@1:100085
+10-19 14:19:18.415  8059  8701 E unknown:ReactNative: invokeCallbackAndReturnFlushedQueue@1:100028
+10-19 14:19:18.416  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:19:18.416  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:19:18.492  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:19:18.492  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:19:18.550  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:18.550  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:18.551  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:18.551  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:18.565  8059  8059 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1202, 713), rotation: ROTATION_0
+10-19 14:19:18.565  8059  8059 D BufferQueueConsumer: [](id:1f7b00000013,api:0,p:-1,c:8059) connect: controlledByApp=false
+10-19 14:19:18.565  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#16](f:0,a:0) constructor()
+10-19 14:19:18.565  8059  8059 D BLASTBufferQueue: [VRI[MainActivity]#16](f:0,a:0) update width=1202 height=713 format=-3 mTransformHint=0
+10-19 14:19:18.569  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:18.571  8059  8674 D BLASTBufferQueue: [VRI[MainActivity]#16](f:0,a:1) acquireNextBufferLocked size=1202x713 mFrameNumber=1 applyTransaction=true mTimestamp=627129122816686(auto) mPendingTransactions.size=0 graphicBufferId=34613141438585 transform=0
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:18.571  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:18.571  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.571  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:18.571  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:18.571Z'
+10-19 14:19:18.572  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:18.845  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:18.845  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:18.845  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:18.846  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:18.846  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.846  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:18.846Z'
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:18.846  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:18.847  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:18.847  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.847  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:18.847  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:18.847  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:18.847  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:18.847  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:18.847  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:18.855  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:18.855  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:18.855  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:18.855  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:18.855  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.855  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:18.855  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:18.855  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.855  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:18.855  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:18.856Z'
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:18.856  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:18.856  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:18.856  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:18.856  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:18.863  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:18.863  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:18.864  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:18.864  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:18.864  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:18.864Z'
+10-19 14:19:18.864  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:19.751  8059  8059 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=false callback=android.view.ViewRootImpl$$ExternalSyntheticLambda11@a839d46
+10-19 14:19:19.758  8059  8674 D HWUI    : endAllActiveAnimators on 0xb4000077801e5230 (RippleDrawable) with handle 0xb4000077d010d3b0
+10-19 14:19:19.768  8059  8695 D BLASTBufferQueue: [VRI[MainActivity]#16](f:0,a:4) destructor()
+10-19 14:19:19.768  8059  8695 D BufferQueueConsumer: [VRI[MainActivity]#16(BLAST Consumer)16](id:1f7b00000013,api:0,p:-1,c:8059) disconnect
+10-19 14:19:19.778  8059  8059 W WindowOnBackDispatcher: OnBackInvokedCallback is not enabled for the application.
+10-19 14:19:19.778  8059  8059 W WindowOnBackDispatcher: Set 'android:enableOnBackInvokedCallback="true"' in the application manifest.
+10-19 14:19:19.806  8059  8059 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{e311d29 V.E...... R......D 0,0-1080,2392 aid=0}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+10-19 14:19:19.813  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 14:19:19.815  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 14:19:19.816  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 14:19:19.818  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 14:19:20.550  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:20.551  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:20.551  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:20.551  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:20.562  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:20.564  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:20.564  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:20.564  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:20.564Z'
+10-19 14:19:20.564  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:20.949  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:20.949Z'
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:20.949  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:20.950  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:20.950  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:20.950  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:20.950  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:20.958  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:20.958  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:20.959  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:20.959  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:20.959  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:20.959Z'
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:20.959  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:20.959  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:20.959  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:20.959  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:20.966  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:20.966  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:20.967  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:20.967  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:20.967  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:20.967Z'
+10-19 14:19:20.967  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:22.550  8059  8700 I ReactNativeJS: 🔄 Auto-refreshing rides (2-second interval)...
+10-19 14:19:22.550  8059  8700 I ReactNativeJS: === LOADING RIDES ===
+10-19 14:19:22.551  8059  8700 I ReactNativeJS: 'Driver ID:', 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4'
+10-19 14:19:22.551  8059  8700 I ReactNativeJS: 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-19 14:19:22.559  8059  8700 I ReactNativeJS: 🔍 Loading current ride...
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:22.560  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:22.560  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:22.560  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:22.560Z'
+10-19 14:19:22.560  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:22.852  8059  8700 I ReactNativeJS: '✅ Current ride loaded:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India',
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:   customer: 
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:    { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:      full_name: 'Ricco',
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:      phone_number: null,
+10-19 14:19:22.852  8059  8700 I ReactNativeJS:      email: '918608374935@a1taxi.app' } }
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: ⚠️ Driver has current ride - not loading pending ride requests
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:22.853  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:22.853  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:22.853  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:22.853Z'
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:22.853  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:22.853  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:22.853  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:22.853  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:22.863  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:22.863  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:22.863  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Loading:', true
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:22.863Z'
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: === RIDE REQUEST MODAL LOGIC DEBUG ===
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: 🔄 Checking if should show ride request modal:
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Pending rides:', 0
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Modal already showing:', false
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '  - Has current ride:', true
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: ❌ NOT SHOWING MODAL - reasons:
+10-19 14:19:22.863  8059  8700 I ReactNativeJS: '🚗 Analysis:', { pendingRidesCount: 0,
+10-19 14:19:22.863  8059  8700 I ReactNativeJS:   modalAlreadyShowing: false,
+10-19 14:19:22.863  8059  8700 I ReactNativeJS:   driverStatus: 'online',
+10-19 14:19:22.863  8059  8700 I ReactNativeJS:   hasCurrentRide: true }
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: === RIDES SCREEN STATE DEBUG ===
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: 🔄 Component state updated:
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: '  - Current ride:', { id: '8fb34677-14fc-4479-b3c5-d42763361ec5',
+10-19 14:19:22.871  8059  8700 I ReactNativeJS:   status: 'in_progress',
+10-19 14:19:22.871  8059  8700 I ReactNativeJS:   pickup: 'PRXJ+F32, Brindavan Nagar, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-19 14:19:22.871  8059  8700 I ReactNativeJS:   destination: 'Bagalur, Tamil Nadu, India' }
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: '  - Pending rides count:', 0
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: '  - Driver status:', 'online'
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: '  - Loading:', false
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: '  - Error:', null
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: '  - Show modal:', false
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: '  - Timestamp:', '2025-10-19T08:49:22.871Z'
+10-19 14:19:22.871  8059  8700 I ReactNativeJS: ✅ CURRENT RIDE EXISTS - should be visible in UI
