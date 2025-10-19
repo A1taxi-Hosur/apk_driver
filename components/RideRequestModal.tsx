@@ -97,20 +97,21 @@ export default function RideRequestModal({
 
   console.log('🚗 RideRequestModal - Full ride object:', JSON.stringify(ride, null, 2));
 
-  // Safety check: Ensure all required fields are primitives (not objects)
+  // Safety check: ONLY include the specific fields we need (prevent object spreading issues)
   const safeRide = {
-    ...ride,
-    booking_type: ride.booking_type || 'regular',
-    fare_amount: ride.fare_amount !== null && ride.fare_amount !== undefined ? ride.fare_amount : 0,
-    pickup_address: ride.pickup_address || '',
-    destination_address: ride.destination_address || '',
-    pickup_landmark: ride.pickup_landmark && typeof ride.pickup_landmark === 'string' ? ride.pickup_landmark : null,
-    destination_landmark: ride.destination_landmark && typeof ride.destination_landmark === 'string' ? ride.destination_landmark : null,
-    distance_km: ride.distance_km !== null && ride.distance_km !== undefined && !isNaN(Number(ride.distance_km)) ? Number(ride.distance_km) : null,
+    // Only include primitive fields we actually use in the UI
+    id: ride.id,
+    booking_type: String(ride.booking_type || 'regular'),
+    fare_amount: (ride.fare_amount !== null && ride.fare_amount !== undefined && !isNaN(Number(ride.fare_amount))) ? Number(ride.fare_amount) : 0,
+    pickup_address: String(ride.pickup_address || ''),
+    destination_address: String(ride.destination_address || ''),
+    pickup_landmark: (ride.pickup_landmark && typeof ride.pickup_landmark === 'string') ? String(ride.pickup_landmark) : null,
+    destination_landmark: (ride.destination_landmark && typeof ride.destination_landmark === 'string') ? String(ride.destination_landmark) : null,
+    distance_km: (ride.distance_km !== null && ride.distance_km !== undefined && !isNaN(Number(ride.distance_km))) ? Number(ride.distance_km) : null,
     customer: {
-      full_name: ride.customer?.full_name || 'Anonymous Customer',
-      phone_number: ride.customer?.phone_number || '',
-      email: ride.customer?.email || ''
+      full_name: String(ride.customer?.full_name || 'Anonymous Customer'),
+      phone_number: String(ride.customer?.phone_number || ''),
+      email: String(ride.customer?.email || '')
     }
   };
 
@@ -211,7 +212,9 @@ export default function RideRequestModal({
             <View style={styles.statItem}>
               <IndianRupee size={20} color="#10B981" />
               <View style={styles.statInfo}>
-                <Text style={styles.statValue}>₹{safeRide.fare_amount || 'TBD'}</Text>
+                <Text style={styles.statValue}>
+                  {safeRide.fare_amount > 0 ? `₹${safeRide.fare_amount}` : 'TBD'}
+                </Text>
                 <Text style={styles.statLabel}>Estimated Fare</Text>
               </View>
             </View>

@@ -625,18 +625,27 @@ export default function ScheduledScreen() {
       await loadScheduledBookings();
       console.log('✅ Scheduled bookings reloaded');
 
-      // Show completion alert with trip details
+      // Show completion alert with trip details (ensure all values are numbers)
+      const safeDistance = Number(actualDistanceKm) || 0;
+      const safeDuration = Number(actualDurationMinutes) || 0;
+      const safeTotalFare = Number(fareBreakdown.total_fare) || 0;
+      const safeBaseFare = Number(fareBreakdown.base_fare) || 0;
+      const safeDistanceFare = Number(fareBreakdown.distance_fare) || 0;
+      const safeTimeFare = Number(fareBreakdown.time_fare) || 0;
+      const safePlatformFee = Number(fareBreakdown.platform_fee) || 0;
+      const safeGst = (Number(fareBreakdown.gst_on_charges) || 0) + (Number(fareBreakdown.gst_on_platform_fee) || 0);
+
       const completionMessage =
         `Trip Completed Successfully!\n\n` +
-        `Distance: ${actualDistanceKm.toFixed(1)} km\n` +
-        `Duration: ${actualDurationMinutes} min\n` +
-        `Total Fare: ₹${fareBreakdown.total_fare.toFixed(2)}\n\n` +
+        `Distance: ${safeDistance.toFixed(1)} km\n` +
+        `Duration: ${safeDuration} min\n` +
+        `Total Fare: ₹${safeTotalFare.toFixed(2)}\n\n` +
         `Breakdown:\n` +
-        `Base Fare: ₹${fareBreakdown.base_fare.toFixed(2)}\n` +
-        `Distance Fare: ₹${fareBreakdown.distance_fare.toFixed(2)}\n` +
-        `Time Fare: ₹${fareBreakdown.time_fare.toFixed(2)}\n` +
-        `Platform Fee: ₹${fareBreakdown.platform_fee.toFixed(2)}\n` +
-        `GST: ₹${(fareBreakdown.gst_on_charges + fareBreakdown.gst_on_platform_fee).toFixed(2)}`;
+        `Base Fare: ₹${safeBaseFare.toFixed(2)}\n` +
+        `Distance Fare: ₹${safeDistanceFare.toFixed(2)}\n` +
+        `Time Fare: ₹${safeTimeFare.toFixed(2)}\n` +
+        `Platform Fee: ₹${safePlatformFee.toFixed(2)}\n` +
+        `GST: ₹${safeGst.toFixed(2)}`;
 
       Alert.alert('Trip Completed', completionMessage, [
         {
