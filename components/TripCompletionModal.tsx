@@ -82,7 +82,7 @@ export default function TripCompletionModal({
 
   return (
     <View style={[styles.overlay, { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999 }]}>
-        <View style={styles.modal}>
+      <View style={styles.modal}>
           {/* Header */}
           <View style={styles.header}>
             <View style={styles.headerLeft}>
@@ -364,7 +364,6 @@ export default function TripCompletionModal({
           <TouchableOpacity style={styles.doneButton} onPress={onClose}>
             <Text style={styles.doneButtonText}>Done</Text>
           </TouchableOpacity>
-        </View>
       </View>
     </View>
   );
