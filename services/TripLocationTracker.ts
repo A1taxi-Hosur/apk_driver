@@ -242,6 +242,61 @@ class TripLocationTrackerService {
   }
 
   /**
+   * Calculate trip duration from GPS tracking timestamps
+   */
+  async calculateTripDuration(
+    tripId: string,
+    tripType: 'regular' | 'scheduled'
+  ): Promise<{ durationMinutes: number; pointsUsed: number }> {
+    try {
+      console.log('=== CALCULATING TRIP DURATION FROM GPS ===');
+      console.log('Trip ID:', tripId);
+
+      // Fetch all location points from database
+      const { data: locationHistory, error } = await supabase
+        .from('trip_location_history')
+        .select('*')
+        .eq(tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id', tripId)
+        .order('recorded_at', { ascending: true });
+
+      if (error) {
+        console.error('❌ Error fetching location history:', error);
+        return { durationMinutes: 0, pointsUsed: 0 };
+      }
+
+      if (!locationHistory || locationHistory.length < 2) {
+        console.warn('⚠️ Not enough GPS points to calculate duration');
+        return { durationMinutes: 0, pointsUsed: locationHistory?.length || 0 };
+      }
+
+      // Get first and last timestamp
+      const firstPoint = locationHistory[0];
+      const lastPoint = locationHistory[locationHistory.length - 1];
+
+      const startTime = new Date(firstPoint.recorded_at).getTime();
+      const endTime = new Date(lastPoint.recorded_at).getTime();
+
+      const durationMs = endTime - startTime;
+      const durationMinutes = Math.round(durationMs / (1000 * 60));
+
+      console.log('✅ Trip duration calculated from GPS:', {
+        startTime: firstPoint.recorded_at,
+        endTime: lastPoint.recorded_at,
+        durationMinutes,
+        pointsUsed: locationHistory.length
+      });
+
+      return {
+        durationMinutes,
+        pointsUsed: locationHistory.length
+      };
+    } catch (error) {
+      console.error('❌ Error calculating trip duration:', error);
+      return { durationMinutes: 0, pointsUsed: 0 };
+    }
+  }
+
+  /**
    * Filter GPS points to remove noise and keep significant waypoints
    */
   private filterGPSPoints(points: any[]): any[] {
