@@ -6,6 +6,8 @@ import {
   TouchableOpacity,
   Dimensions,
   ScrollView,
+  Modal,
+  StatusBar,
 } from 'react-native';
 import { CircleCheck as CheckCircle, MapPin, Clock, X } from 'lucide-react-native';
 
@@ -76,13 +78,28 @@ export default function TripCompletionModal({
     return `₹${numericAmount.toFixed(2)}`;
   };
 
+  console.log('🎯🎯🎯 TripCompletionModal RENDER - visible:', visible);
+  console.log('🎯🎯🎯 tripData:', JSON.stringify(tripData, null, 2));
+
   if (!visible) {
+    console.log('❌ Modal not visible - returning null');
     return null;
   }
 
+  console.log('✅ Modal IS visible - rendering Modal component');
+
   return (
-    <View style={[styles.overlay, { position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, zIndex: 9999 }]}>
-      <View style={styles.modal}>
+    <Modal
+      visible={true}
+      transparent={true}
+      animationType="slide"
+      statusBarTranslucent={true}
+      hardwareAccelerated={true}
+      onRequestClose={onClose}
+      presentationStyle="overFullScreen"
+    >
+      <View style={styles.overlay}>
+        <View style={styles.modal}>
           {/* Header */}
           <View style={styles.header}>
             <View style={styles.headerLeft}>
@@ -364,8 +381,9 @@ export default function TripCompletionModal({
           <TouchableOpacity style={styles.doneButton} onPress={onClose}>
             <Text style={styles.doneButtonText}>Done</Text>
           </TouchableOpacity>
+        </View>
       </View>
-    </View>
+    </Modal>
   );
 }
 
