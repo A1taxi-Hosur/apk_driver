@@ -51,8 +51,13 @@ export default function RidesScreen() {
   const [showOTPModal, setShowOTPModal] = useState(false);
   const [otpModalType, setOTPModalType] = useState<'pickup' | 'drop' | 'verify-pickup'>('pickup');
   const [currentOTP, setCurrentOTP] = useState('');
-  const [showCompletionModal, setShowCompletionModal] = useState(false);
-  const [completionData, setCompletionData] = useState(null);
+  const [completionModalState, setCompletionModalState] = useState<{
+    visible: boolean;
+    data: any;
+  }>({
+    visible: false,
+    data: null
+  });
 
   // Debug: Track component state changes
   useEffect(() => {
@@ -88,10 +93,10 @@ export default function RidesScreen() {
   // Debug: Track completion modal state
   useEffect(() => {
     console.log('=== COMPLETION MODAL STATE DEBUG ===');
-    console.log('📊 showCompletionModal:', showCompletionModal);
-    console.log('📊 completionData exists:', !!completionData);
-    console.log('📊 completionData:', completionData ? JSON.stringify(completionData, null, 2) : 'null');
-  }, [showCompletionModal, completionData]);
+    console.log('📊 visible:', completionModalState.visible);
+    console.log('📊 data exists:', !!completionModalState.data);
+    console.log('📊 data:', completionModalState.data ? JSON.stringify(completionModalState.data, null, 2) : 'null');
+  }, [completionModalState]);
 
   useEffect(() => {
     console.log('=== RIDE REQUEST MODAL LOGIC DEBUG ===')
@@ -311,11 +316,12 @@ export default function RidesScreen() {
       if (result.success) {
         console.log('✅ Ride completed successfully');
         if (result.completionData) {
-          console.log('🚨 ABOUT TO SET COMPLETION DATA');
-          setCompletionData(result.completionData);
-          console.log('🚨 ABOUT TO SET SHOW COMPLETION MODAL TRUE');
-          setShowCompletionModal(true);
-          console.log('🚨 STATE UPDATES COMPLETE - MODAL SHOULD SHOW NOW');
+          console.log('🚨 ABOUT TO SET COMPLETION MODAL STATE (SINGLE UPDATE)');
+          setCompletionModalState({
+            visible: true,
+            data: result.completionData
+          });
+          console.log('🚨 STATE UPDATE COMPLETE - MODAL SHOULD SHOW NOW');
         } else {
           console.error('❌ No completionData in result!');
         }
@@ -650,8 +656,8 @@ export default function RidesScreen() {
 
       {/* Trip Completion Modal */}
       <TripCompletionModal
-        visible={showCompletionModal && !!completionData}
-        tripData={completionData || {
+        visible={completionModalState.visible && !!completionModalState.data}
+        tripData={completionModalState.data || {
           distance: 0,
           duration: 0,
           fareBreakdown: {
@@ -681,8 +687,7 @@ export default function RidesScreen() {
         }}
         onClose={async () => {
           console.log('🚨 TRIP COMPLETION MODAL CLOSED');
-          setShowCompletionModal(false);
-          setCompletionData(null);
+          setCompletionModalState({ visible: false, data: null });
           await clearCurrentRide();
         }}
       />
