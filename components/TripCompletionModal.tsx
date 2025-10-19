@@ -172,7 +172,7 @@ export default function TripCompletionModal({
                 {tripData.fareBreakdown.platform_fee > 0 && (
                   <View style={styles.fareRow}>
                     <Text style={styles.fareLabel}>Platform Fee</Text>
-                    <Text style={styles.fareValue}>-{formatCurrency(tripData.fareBreakdown.platform_fee)}</Text>
+                    <Text style={styles.fareValue}>{formatCurrency(tripData.fareBreakdown.platform_fee)}</Text>
                   </View>
                 )}
 
@@ -230,7 +230,7 @@ export default function TripCompletionModal({
                 {tripData.fareBreakdown.platform_fee > 0 && (
                   <View style={styles.fareRow}>
                     <Text style={styles.fareLabel}>Platform Fee</Text>
-                    <Text style={styles.fareValue}>-{formatCurrency(tripData.fareBreakdown.platform_fee)}</Text>
+                    <Text style={styles.fareValue}>{formatCurrency(tripData.fareBreakdown.platform_fee)}</Text>
                   </View>
                 )}
 

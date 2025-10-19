@@ -161,7 +161,9 @@ export default function ScheduledScreen() {
 
       // Reload to get the updated booking
       await loadScheduledBookings();
-      await updateDriverStatus('busy');
+      // NOTE: Do NOT change driver status to 'busy' yet
+      // Driver remains 'online' and available for regular rides
+      // Status changes to 'busy' only when trip starts (in_progress)
       Alert.alert('Success', 'Booking accepted successfully!');
 
     } catch (error) {
@@ -271,6 +273,10 @@ export default function ScheduledScreen() {
         Alert.alert('Error', 'Failed to start trip');
         return;
       }
+
+      // Update driver status to 'busy' when trip starts
+      await updateDriverStatus('busy');
+      console.log('✅ Driver status set to busy');
 
       await loadScheduledBookings();
 
@@ -967,7 +973,12 @@ async function calculateRentalFare(
     .limit(1);
 
   if (error || !rentalFares || rentalFares.length === 0) {
-    throw new Error('Rental fare configuration not found');
+    console.error('❌ No rental fare found for:', {
+      vehicle_type: vehicleType,
+      duration_hours: selectedHours,
+      is_active: true
+    });
+    throw new Error(`Rental fare configuration not found for ${vehicleType} vehicle with ${selectedHours} hours package`);
   }
 
   const rentalFare = rentalFares[0];
@@ -1303,7 +1314,11 @@ async function calculateAirportFare(
     .limit(1);
 
   if (error || !airportFares || airportFares.length === 0) {
-    throw new Error('Airport fare configuration not found');
+    console.error('❌ No airport fare found for:', {
+      vehicle_type: vehicleType,
+      is_active: true
+    });
+    throw new Error(`Airport fare configuration not found for ${vehicleType} vehicle`);
   }
 
   const airportConfig = airportFares[0];
