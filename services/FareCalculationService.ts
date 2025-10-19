@@ -1283,7 +1283,12 @@ export class FareCalculationService {
 
     if (error || !rentalFares || rentalFares.length === 0) {
       console.error('Error fetching rental fare:', error);
-      throw new Error('Rental fare configuration not found');
+      console.error('❌ No rental fare found for:', {
+        vehicle_type: vehicleType,
+        duration_hours: selectedHours,
+        is_active: true
+      });
+      throw new Error(`Rental fare configuration not found for ${vehicleType} vehicle with ${selectedHours} hours package`);
     }
 
     const rentalFare = rentalFares[0];
@@ -1465,7 +1470,11 @@ export class FareCalculationService {
 
       if (error || !outstationFares || outstationFares.length === 0) {
         console.error('Error fetching outstation fare:', error);
-        throw new Error('Outstation fare configuration not found');
+        console.error('❌ No outstation fare found for:', {
+          vehicle_type: vehicleType,
+          is_active: true
+        });
+        throw new Error(`Outstation fare configuration not found for ${vehicleType} vehicle`);
       }
 
       const outstationConfig = outstationFares[0];
@@ -1825,12 +1834,15 @@ export class FareCalculationService {
 
     if (error) {
       console.error('Error fetching airport fare:', error);
-      throw new Error('Airport fare configuration not found');
+      throw new Error(`Airport fare configuration error: ${error.message}`);
     }
 
     if (!airportFares || airportFares.length === 0) {
-      console.error('No airport fare found for:', { vehicle_type: vehicleType });
-      throw new Error('Airport fare configuration not found');
+      console.error('❌ No airport fare found for:', {
+        vehicle_type: vehicleType,
+        is_active: true
+      });
+      throw new Error(`Airport fare configuration not found for ${vehicleType} vehicle`);
     }
 
     const airportConfig = airportFares[0];
