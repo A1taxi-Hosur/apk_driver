@@ -609,6 +609,14 @@ export default function ScheduledScreen() {
       await updateDriverStatus('online');
       console.log('✅ Driver status updated to online');
 
+      // Verify driver status was actually updated
+      const { data: driverCheck } = await supabase
+        .from('drivers')
+        .select('status')
+        .eq('id', driver!.id)
+        .single();
+      console.log('✅ Verified driver status in DB:', driverCheck?.status);
+
       // Small delay to ensure database updates propagate
       await new Promise(resolve => setTimeout(resolve, 500));
 

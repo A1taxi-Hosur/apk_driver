@@ -819,11 +819,14 @@ export class FareCalculationService {
         return { success: false, error: 'Booking not found' };
       }
 
-      // Round the total fare
+      // Round the total fare and sanitize for JSON storage
       const roundedFareBreakdown = {
         ...fareBreakdown,
         total_fare: this.roundFare(fareBreakdown.total_fare)
       };
+
+      // Sanitize fare_details to ensure all values are JSON-safe
+      const sanitizedFareDetails = JSON.parse(JSON.stringify(roundedFareBreakdown));
 
       let completionError: any = null;
 
@@ -854,7 +857,7 @@ export class FareCalculationService {
               gst_on_charges: roundedFareBreakdown.gst_on_charges,
               gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
               total_fare: roundedFareBreakdown.total_fare,
-              fare_details: roundedFareBreakdown,
+              fare_details: sanitizedFareDetails,
               completed_at: new Date().toISOString(),
               driver_name: driverDetails.driver_name,
               driver_phone: driverDetails.driver_phone || '',
@@ -903,7 +906,7 @@ export class FareCalculationService {
               gst_on_charges: roundedFareBreakdown.gst_on_charges,
               gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
               total_fare: roundedFareBreakdown.total_fare,
-              fare_details: roundedFareBreakdown,
+              fare_details: sanitizedFareDetails,
               completed_at: new Date().toISOString(),
               driver_name: driverDetails.driver_name,
               driver_phone: driverDetails.driver_phone || '',
@@ -948,7 +951,7 @@ export class FareCalculationService {
               gst_on_charges: roundedFareBreakdown.gst_on_charges,
               gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
               total_fare: roundedFareBreakdown.total_fare,
-              fare_details: roundedFareBreakdown,
+              fare_details: sanitizedFareDetails,
               completed_at: new Date().toISOString(),
               driver_name: driverDetails.driver_name,
               driver_phone: driverDetails.driver_phone || '',
