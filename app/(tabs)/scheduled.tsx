@@ -352,12 +352,30 @@ export default function ScheduledScreen() {
           });
         }
 
-        // Calculate duration from scheduled time or booking creation
-        const startTime = currentBooking.scheduled_time
-          ? new Date(currentBooking.scheduled_time).getTime()
-          : new Date(currentBooking.created_at).getTime();
-        const currentTime = Date.now();
-        actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
+        // Calculate duration from GPS tracking data
+        const gpsDuration = await TripLocationTracker.calculateTripDuration(
+          currentBooking.id,
+          'scheduled'
+        );
+
+        if (gpsDuration.durationMinutes > 0) {
+          actualDurationMinutes = gpsDuration.durationMinutes;
+          console.log('✅ Using GPS-tracked duration:', {
+            durationMinutes: actualDurationMinutes,
+            method: 'Real GPS tracking'
+          });
+        } else {
+          // Fallback: calculate from scheduled time
+          const startTime = currentBooking.scheduled_time
+            ? new Date(currentBooking.scheduled_time).getTime()
+            : new Date(currentBooking.created_at).getTime();
+          const currentTime = Date.now();
+          actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
+          console.log('⚠️ Using time-based duration (fallback):', {
+            durationMinutes: actualDurationMinutes,
+            method: 'Scheduled time to completion'
+          });
+        }
 
         console.log('✅ GPS-tracked distance for scheduled trip:', {
           distanceKm: actualDistanceKm.toFixed(2),
@@ -441,11 +459,28 @@ export default function ScheduledScreen() {
           }
         }
 
-        const startTime = currentBooking.scheduled_time
-          ? new Date(currentBooking.scheduled_time).getTime()
-          : new Date(currentBooking.created_at).getTime();
-        const currentTime = Date.now();
-        actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
+        // Calculate duration from GPS tracking data
+        try {
+          const gpsDuration = await TripLocationTracker.calculateTripDuration(
+            currentBooking.id,
+            'scheduled'
+          );
+
+          if (gpsDuration.durationMinutes > 0) {
+            actualDurationMinutes = gpsDuration.durationMinutes;
+            console.log('✅ Using GPS-tracked duration:', actualDurationMinutes);
+          } else {
+            throw new Error('No GPS duration available');
+          }
+        } catch (durationError) {
+          // Fallback: calculate from scheduled time
+          const startTime = currentBooking.scheduled_time
+            ? new Date(currentBooking.scheduled_time).getTime()
+            : new Date(currentBooking.created_at).getTime();
+          const currentTime = Date.now();
+          actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
+          console.log('⚠️ Using time-based duration (fallback):', actualDurationMinutes);
+        }
       }
 
       console.log('📊 Final trip metrics:', {
@@ -962,15 +997,12 @@ async function calculateRentalFare(
   dropLat: number,
   dropLng: number
 ) {
-  // Fetch rental fare package
+  // Fetch rental fare package using RPC (bypasses RLS)
   const { data: rentalFares, error } = await supabase
-    .from('rental_fares')
-    .select('*')
-    .eq('vehicle_type', vehicleType)
-    .eq('duration_hours', selectedHours)
-    .eq('is_active', true)
-    .order('is_popular', { ascending: false })
-    .limit(1);
+    .rpc('get_rental_fare', {
+      p_vehicle_type: vehicleType,
+      p_duration_hours: selectedHours
+    });
 
   if (error || !rentalFares || rentalFares.length === 0) {
     console.error('❌ No rental fare found for:', {
@@ -1192,12 +1224,9 @@ async function calculateOutstationFare(
     console.log('💰 [OUTSTATION-COMPLETION] Fetching per-km config...');
 
     const { data: perKmFares, error: perKmError } = await supabase
-      .from('outstation_fares')
-      .select('*')
-      .eq('vehicle_type', vehicleType)
-      .eq('is_active', true)
-      .order('created_at', { ascending: false })
-      .limit(1);
+      .rpc('get_outstation_fare', {
+        p_vehicle_type: vehicleType
+      });
 
     if (perKmError || !perKmFares || perKmFares.length === 0) {
       console.error('❌ [OUTSTATION-COMPLETION] Per-km config not found:', perKmError);
@@ -1304,14 +1333,11 @@ async function calculateAirportFare(
   dropLat: number,
   dropLng: number
 ) {
-  // Fetch airport fare package
+  // Fetch airport fare package using RPC (bypasses RLS)
   const { data: airportFares, error } = await supabase
-    .from('airport_fares')
-    .select('*')
-    .eq('vehicle_type', vehicleType)
-    .eq('is_active', true)
-    .order('created_at', { ascending: false })
-    .limit(1);
+    .rpc('get_airport_fare', {
+      p_vehicle_type: vehicleType
+    });
 
   if (error || !airportFares || airportFares.length === 0) {
     console.error('❌ No airport fare found for:', {
