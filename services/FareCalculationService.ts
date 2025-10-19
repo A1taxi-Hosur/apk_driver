@@ -1018,61 +1018,31 @@ export class FareCalculationService {
     console.log('- vehicle_type:', vehicleType);
     console.log('- is_active:', true);
 
-    // Get fare matrix for regular rides
-    console.log('🔍 Fetching fare matrix for regular rides...');
-    
-    // First, let's see ALL fare matrix records for debugging
-    console.log('=== DEBUGGING: FETCHING ALL FARE MATRIX RECORDS ===');
-    const { data: allFareMatrices, error: allError } = await supabase
-      .from('fare_matrix')
-      .select('*')
-      .eq('is_active', true)
-      .order('created_at', { ascending: false });
-    
-    if (allError) {
-      console.error('❌ Error fetching all fare matrices:', allError);
-    } else {
-      console.log('📊 ALL ACTIVE FARE MATRIX RECORDS:');
-      console.log(`Total records: ${allFareMatrices?.length || 0}`);
-      allFareMatrices?.forEach((matrix, index) => {
-        console.log(`Record ${index + 1}:`, {
-          id: matrix.id,
-          booking_type: matrix.booking_type,
-          vehicle_type: matrix.vehicle_type,
-          base_fare: matrix.base_fare,
-          per_km_rate: matrix.per_km_rate,
-          platform_fee: matrix.platform_fee,
-          is_active: matrix.is_active
-        });
-      });
-    }
-    
-    // Now try the specific query
-    console.log('🔍 Now fetching specific record for regular + hatchback...');
-    const { data: fareMatrices, error } = await supabase
-      .from('fare_matrix')
-      .select('*')
-      .eq('booking_type', 'regular')
-      .eq('vehicle_type', vehicleType)
-      .eq('is_active', true)
-      .order('created_at', { ascending: false });
+    // Get fare matrix for regular rides using RPC
+    console.log('🔍 Fetching fare matrix for regular rides using RPC...');
 
-    console.log('=== SPECIFIC QUERY RESULT ===');
+    const { data: fareMatrixData, error } = await supabase
+      .rpc('get_fare_matrix_for_calculation', {
+        p_booking_type: 'regular',
+        p_vehicle_type: vehicleType
+      });
+
+    console.log('=== RPC QUERY RESULT ===');
     console.log('Query error:', error);
-    console.log('Query result:', fareMatrices);
-    console.log('Number of records found:', fareMatrices?.length || 0);
+    console.log('Query result:', fareMatrixData);
+    console.log('Number of records found:', fareMatrixData?.length || 0);
 
     if (error) {
       console.error('Error fetching fare matrix:', error);
       throw new Error('Fare configuration not found');
     }
 
-    if (!fareMatrices || fareMatrices.length === 0) {
+    if (!fareMatrixData || fareMatrixData.length === 0) {
       console.error('❌ No fare matrix found for:', { booking_type: 'regular', vehicle_type: vehicleType });
       throw new Error('Fare configuration not found for this vehicle type');
     }
 
-    const fareMatrix = fareMatrices[0];
+    const fareMatrix = fareMatrixData[0];
 
     console.log('=== FOUND FARE MATRIX RECORD ===');
     console.log('Raw fareMatrix object:', JSON.stringify(fareMatrix, null, 2));
