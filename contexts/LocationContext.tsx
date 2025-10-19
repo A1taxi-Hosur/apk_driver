@@ -11,7 +11,7 @@ interface LocationContextType {
   currentAddress: string | null
   locationPermission: boolean
   requestLocationPermission: () => Promise<boolean>
-  startLocationTracking: () => void
+  startLocationTracking: () => Promise<void>
   stopLocationTracking: () => void
   isTracking: boolean
   updateLocationWithGoogleMaps: () => Promise<void>
@@ -63,18 +63,29 @@ export function LocationProvider({ children }: LocationProviderProps) {
     console.log('Driver Status:', driver?.status)
     console.log('Driver User ID:', driver?.user_id)
     console.log('Driver Verified:', driver?.is_verified)
-    
+    console.log('🔍 Checking conditions:')
+    console.log('  - driver exists:', !!driver)
+    console.log('  - status is online/busy:', driver?.status === 'online' || driver?.status === 'busy')
+    console.log('  - locationPermission:', locationPermission)
+    console.log('  - NOT isTracking:', !isTracking)
+    console.log('  - NOT isBackgroundTrackingActive:', !isBackgroundTrackingActive)
+    console.log('  - NOT isHandlingActiveDriver:', !isHandlingActiveDriver)
+
     if (driver && (driver.status === 'online' || driver.status === 'busy') && locationPermission && !isTracking && !isBackgroundTrackingActive && !isHandlingActiveDriver) {
-      console.log('✅ Driver is active, ensuring location record exists and driver is available for customers...')
+      console.log('✅✅✅ ALL CONDITIONS MET - Starting location services...')
       handleActiveDriver()
-    } else if (driver && driver.status === 'offline' && isTracking) {
-      console.log('⚠️ Driver is offline, stopping location tracking')
-      stopLocationTracking()
-      stopBackgroundTracking()
-    } else if (!driver && isTracking) {
-      console.log('❌ No driver available, stopping location tracking')
-      stopLocationTracking()
-      stopBackgroundTracking()
+    } else {
+      console.log('❌ Conditions not met for starting location tracking')
+
+      if (driver && driver.status === 'offline' && isTracking) {
+        console.log('⚠️ Driver is offline, stopping location tracking')
+        stopLocationTracking()
+        stopBackgroundTracking()
+      } else if (!driver && isTracking) {
+        console.log('❌ No driver available, stopping location tracking')
+        stopLocationTracking()
+        stopBackgroundTracking()
+      }
     }
   }, [driver?.status, driver?.user_id, locationPermission, isTracking, isBackgroundTrackingActive, isHandlingActiveDriver])
 
@@ -179,9 +190,9 @@ export function LocationProvider({ children }: LocationProviderProps) {
         
         // Step 2: Start location tracking (only if not already tracking)
         if (!isTracking) {
-          startLocationTracking()
+          await startLocationTracking()
         }
-        
+
         // Step 3: Start background tracking for when app is closed
         await startBackgroundTracking()
       } else {
@@ -580,17 +591,17 @@ export function LocationProvider({ children }: LocationProviderProps) {
     }
   }
 
-  const startLocationTracking = async () => {
+  const startLocationTracking = async (): Promise<void> => {
     if (!driver) {
       console.log('❌ Cannot start tracking: no driver available')
       return
     }
-    
+
     if (isTracking) {
       console.log('⚠️ Location tracking already active')
       return
     }
-    
+
     if (!locationPermission) {
       console.log('❌ Cannot start tracking: no location permission')
       return
@@ -601,6 +612,10 @@ export function LocationProvider({ children }: LocationProviderProps) {
       console.log('Driver:', driver.user?.full_name)
       console.log('Status:', driver.status)
       console.log('Permission:', locationPermission)
+
+      // CRITICAL: Set tracking to true BEFORE starting to prevent re-entry
+      setIsTracking(true)
+      console.log('✅ isTracking state set to TRUE at start')
 
       // Get initial location
       await updateLocationWithGoogleMaps()
@@ -626,22 +641,20 @@ export function LocationProvider({ children }: LocationProviderProps) {
           async (location) => {
             console.log('📍 5-second location watch update:', location.coords)
             setCurrentLocation(location)
-            
+
             const address = await reverseGeocode(
               location.coords.latitude,
               location.coords.longitude
             )
             setCurrentAddress(address || null)
-            
+
             await sendLocationToEdgeFunction(location)
           }
         )
         setLocationSubscription(subscription)
       }
 
-      setIsTracking(true)
       console.log('✅ Location tracking started successfully')
-      console.log('✅ isTracking state set to:', true)
     } catch (error) {
       console.error('❌ Error starting location tracking:', error)
       setIsTracking(false)
