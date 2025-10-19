@@ -273,46 +273,47 @@ export class FareCalculationService {
       switch (ride.booking_type) {
         case 'regular':
           const regularResult = await supabase
-            .from('trip_completions')
-            .insert({
-              ride_id: rideId,
-              driver_id: driverDetails?.driver_id,
-              customer_id: driverDetails?.customer_id,
-              booking_type: ride.booking_type,
-              vehicle_type: ride.vehicle_type,
-              trip_type: ride.trip_type,
-              pickup_address: ride.pickup_address,
-              destination_address: ride.destination_address,
-              actual_distance_km: actualDistanceKm,
-              actual_duration_minutes: actualDurationMinutes,
-              base_fare: fareBreakdown.base_fare,
-              distance_fare: fareBreakdown.distance_fare,
-              time_fare: fareBreakdown.time_fare,
-              surge_charges: fareBreakdown.surge_charges,
-              deadhead_charges: fareBreakdown.deadhead_charges,
-              platform_fee: fareBreakdown.platform_fee,
-              gst_on_charges: fareBreakdown.gst_on_charges,
-              gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              extra_km_charges: fareBreakdown.extra_km_charges,
-              driver_allowance: fareBreakdown.driver_allowance,
-              total_fare: fareBreakdown.total_fare,
-              fare_details: fareBreakdown,
-              rental_hours: ride.rental_hours,
-              scheduled_time: ride.scheduled_time,
-              completed_at: new Date().toISOString(),
-              driver_name: driverDetails?.driver_name || 'Driver',
-              driver_phone: driverDetails?.driver_phone || '',
-              driver_rating: driverDetails?.driver_rating,
-              vehicle_id: driverDetails?.vehicle_id,
-              vehicle_make: driverDetails?.vehicle_make || '',
-              vehicle_model: driverDetails?.vehicle_model || '',
-              vehicle_color: driverDetails?.vehicle_color || '',
-              vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
-            })
-            .select()
-            .single();
-          completionError = regularResult.error;
-          tripCompletion = regularResult.data;
+            .rpc('insert_trip_completion', {
+              p_ride_id: rideId,
+              p_driver_id: driverDetails?.driver_id,
+              p_customer_id: driverDetails?.customer_id,
+              p_booking_type: ride.booking_type,
+              p_vehicle_type: ride.vehicle_type,
+              p_trip_type: ride.trip_type,
+              p_pickup_address: ride.pickup_address,
+              p_destination_address: ride.destination_address,
+              p_actual_distance_km: actualDistanceKm,
+              p_actual_duration_minutes: actualDurationMinutes,
+              p_base_fare: fareBreakdown.base_fare,
+              p_distance_fare: fareBreakdown.distance_fare,
+              p_time_fare: fareBreakdown.time_fare,
+              p_surge_charges: fareBreakdown.surge_charges,
+              p_deadhead_charges: fareBreakdown.deadhead_charges,
+              p_platform_fee: fareBreakdown.platform_fee,
+              p_gst_on_charges: fareBreakdown.gst_on_charges,
+              p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
+              p_extra_km_charges: fareBreakdown.extra_km_charges,
+              p_driver_allowance: fareBreakdown.driver_allowance,
+              p_total_fare: fareBreakdown.total_fare,
+              p_fare_details: fareBreakdown,
+              p_rental_hours: ride.rental_hours,
+              p_scheduled_time: ride.scheduled_time,
+              p_completed_at: new Date().toISOString(),
+              p_driver_name: driverDetails?.driver_name || 'Driver',
+              p_driver_phone: driverDetails?.driver_phone || '',
+              p_driver_rating: driverDetails?.driver_rating,
+              p_vehicle_id: driverDetails?.vehicle_id,
+              p_vehicle_make: driverDetails?.vehicle_make || '',
+              p_vehicle_model: driverDetails?.vehicle_model || '',
+              p_vehicle_color: driverDetails?.vehicle_color || '',
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+            });
+
+          if (regularResult.error || !regularResult.data?.success) {
+            completionError = regularResult.error || { message: regularResult.data?.error };
+          } else {
+            tripCompletion = { id: regularResult.data.trip_completion_id };
+          }
           break;
 
         case 'rental':
