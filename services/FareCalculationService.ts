@@ -236,7 +236,7 @@ export class FareCalculationService {
             ride.vehicle_type,
             actualDistanceKm,
             actualDurationMinutes,
-            ride.selected_hours || 4,
+            ride.rental_hours || 4,
             dropLat,
             dropLng
           );
