@@ -593,11 +593,12 @@ export default function ScheduledScreen() {
 
       console.log('✅ Scheduled booking completed successfully');
 
-      // Prepare completion data for modal
+      // Prepare completion data for modal (exclude details to avoid React Native render error)
+      const { details, ...fareBreakdownWithoutDetails } = fareBreakdown;
       const completionData = {
         distance: actualDistanceKm,
         duration: actualDurationMinutes,
-        fareBreakdown: fareBreakdown,
+        fareBreakdown: fareBreakdownWithoutDetails,
         pickup_address: currentBooking.pickup_address,
         destination_address: currentBooking.destination_address,
         booking_type: currentBooking.booking_type,
