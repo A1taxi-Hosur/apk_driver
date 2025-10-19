@@ -85,6 +85,14 @@ export default function RidesScreen() {
     }
   }, [error]);
 
+  // Debug: Track completion modal state
+  useEffect(() => {
+    console.log('=== COMPLETION MODAL STATE DEBUG ===');
+    console.log('📊 showCompletionModal:', showCompletionModal);
+    console.log('📊 completionData exists:', !!completionData);
+    console.log('📊 completionData:', completionData ? JSON.stringify(completionData, null, 2) : 'null');
+  }, [showCompletionModal, completionData]);
+
   useEffect(() => {
     console.log('=== RIDE REQUEST MODAL LOGIC DEBUG ===')
     console.log('🔄 Checking if should show ride request modal:')
@@ -291,18 +299,25 @@ export default function RidesScreen() {
     console.log('🚨 Current ride ID:', currentRide?.id);
 
     if (!currentRide) return;
-    
+
     console.log('🚨 About to call completeRide function...');
     try {
       console.log('🚨 Calling completeRide with ID:', currentRide.id);
       const result = await completeRide(currentRide.id);
       console.log('🚨 CompleteRide function completed, result:', result);
-      
+      console.log('�� Result has completionData?:', !!result.completionData);
+      console.log('🚨 CompletionData object:', JSON.stringify(result.completionData, null, 2));
+
       if (result.success) {
         console.log('✅ Ride completed successfully');
         if (result.completionData) {
+          console.log('🚨 ABOUT TO SET COMPLETION DATA');
           setCompletionData(result.completionData);
+          console.log('🚨 ABOUT TO SET SHOW COMPLETION MODAL TRUE');
           setShowCompletionModal(true);
+          console.log('🚨 STATE UPDATES COMPLETE - MODAL SHOULD SHOW NOW');
+        } else {
+          console.error('❌ No completionData in result!');
         }
       } else {
         console.error('❌ Failed to complete ride');
@@ -634,17 +649,43 @@ export default function RidesScreen() {
       />
 
       {/* Trip Completion Modal */}
-      {completionData && (
-        <TripCompletionModal
-          visible={showCompletionModal}
-          tripData={completionData}
-          onClose={async () => {
-            setShowCompletionModal(false);
-            setCompletionData(null);
-            await clearCurrentRide();
-          }}
-        />
-      )}
+      <TripCompletionModal
+        visible={showCompletionModal && !!completionData}
+        tripData={completionData || {
+          distance: 0,
+          duration: 0,
+          fareBreakdown: {
+            booking_type: 'regular',
+            vehicle_type: 'sedan',
+            base_fare: 0,
+            distance_fare: 0,
+            time_fare: 0,
+            surge_charges: 0,
+            deadhead_charges: 0,
+            platform_fee: 0,
+            gst_on_charges: 0,
+            gst_on_platform_fee: 0,
+            extra_km_charges: 0,
+            driver_allowance: 0,
+            total_fare: 0,
+            details: {
+              actual_distance_km: 0,
+              actual_duration_minutes: 0,
+              per_km_rate: 0,
+            }
+          },
+          pickup_address: '',
+          destination_address: '',
+          booking_type: 'regular',
+          rental_hours: null
+        }}
+        onClose={async () => {
+          console.log('🚨 TRIP COMPLETION MODAL CLOSED');
+          setShowCompletionModal(false);
+          setCompletionData(null);
+          await clearCurrentRide();
+        }}
+      />
     </SafeAreaView>
   );
 }

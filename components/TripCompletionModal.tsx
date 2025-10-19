@@ -59,17 +59,21 @@ export default function TripCompletionModal({
   tripData,
   onClose,
 }: TripCompletionModalProps) {
+  console.log('🎯 TripCompletionModal RENDER');
+  console.log('🎯 visible:', visible);
+  console.log('🎯 tripData:', tripData ? JSON.stringify(tripData, null, 2) : 'null');
+
   const formatCurrency = (amount: number | undefined | null) => {
     // Handle all edge cases properly
     if (amount == null || amount === undefined) {
       return `₹0.00`;
     }
-    
+
     const numericAmount = Number(amount);
     if (isNaN(numericAmount)) {
       return `₹0.00`;
     }
-    
+
     return `₹${numericAmount.toFixed(2)}`;
   };
 
