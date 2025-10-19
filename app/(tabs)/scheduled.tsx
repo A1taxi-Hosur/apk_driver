@@ -163,6 +163,16 @@ export default function ScheduledScreen() {
       await loadScheduledBookings();
       // NOTE: Do NOT change driver status to 'busy' yet
       // Driver remains 'online' and available for regular rides
+      console.log('✅ Scheduled booking accepted');
+      console.log('✅ Driver status remains: online (available for regular rides)');
+
+      // Verify driver status in database
+      const { data: driverCheck } = await supabase
+        .from('drivers')
+        .select('status')
+        .eq('id', driver.id)
+        .single();
+      console.log('✅ Confirmed driver status in DB:', driverCheck?.status);
       // Status changes to 'busy' only when trip starts (in_progress)
       Alert.alert('Success', 'Booking accepted successfully!');
 

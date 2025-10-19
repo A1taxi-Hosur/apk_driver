@@ -97,6 +97,23 @@ export default function RideRequestModal({
 
   console.log('🚗 RideRequestModal - Full ride object:', JSON.stringify(ride, null, 2));
 
+  // Safety check: Ensure all required fields are primitives (not objects)
+  const safeRide = {
+    ...ride,
+    booking_type: ride.booking_type || 'regular',
+    fare_amount: ride.fare_amount !== null && ride.fare_amount !== undefined ? ride.fare_amount : 0,
+    pickup_address: ride.pickup_address || '',
+    destination_address: ride.destination_address || '',
+    pickup_landmark: ride.pickup_landmark && typeof ride.pickup_landmark === 'string' ? ride.pickup_landmark : null,
+    destination_landmark: ride.destination_landmark && typeof ride.destination_landmark === 'string' ? ride.destination_landmark : null,
+    distance_km: ride.distance_km !== null && ride.distance_km !== undefined && !isNaN(Number(ride.distance_km)) ? Number(ride.distance_km) : null,
+    customer: {
+      full_name: ride.customer?.full_name || 'Anonymous Customer',
+      phone_number: ride.customer?.phone_number || '',
+      email: ride.customer?.email || ''
+    }
+  };
+
   const getDistanceToPickup = () => {
     if (!currentLocation || !ride.pickup_latitude || !ride.pickup_longitude) return null;
 
@@ -136,9 +153,9 @@ export default function RideRequestModal({
           {/* Header */}
           <View style={styles.header}>
             <View style={styles.headerLeft}>
-              <View style={[styles.rideTypeBadge, { backgroundColor: getRideTypeColor(ride.booking_type) }]}>
+              <View style={[styles.rideTypeBadge, { backgroundColor: getRideTypeColor(safeRide.booking_type) }]}>
                 <Text style={styles.rideTypeText}>
-                  {ride.booking_type.toUpperCase()}
+                  {safeRide.booking_type.toUpperCase()}
                 </Text>
               </View>
               <Text style={styles.newRequestText}>New Ride Request</Text>
@@ -155,7 +172,7 @@ export default function RideRequestModal({
             </View>
             <View style={styles.customerDetails}>
               <Text style={styles.customerName}>
-                {ride.customer?.full_name || 'Anonymous Customer'}
+                {safeRide.customer.full_name}
               </Text>
             </View>
           </View>
@@ -167,22 +184,22 @@ export default function RideRequestModal({
                 <View style={[styles.addressDot, { backgroundColor: '#10B981' }]} />
                 <View style={styles.addressInfo}>
                   <Text style={styles.addressLabel}>Pickup</Text>
-                  <Text style={styles.addressText}>{ride.pickup_address || 'Pickup location'}</Text>
-                  {ride.pickup_landmark && (
-                    <Text style={styles.landmarkText}>Near {ride.pickup_landmark}</Text>
+                  <Text style={styles.addressText}>{safeRide.pickup_address}</Text>
+                  {safeRide.pickup_landmark && (
+                    <Text style={styles.landmarkText}>Near {safeRide.pickup_landmark}</Text>
                   )}
                 </View>
               </View>
-              
+
               <View style={styles.routeLine} />
-              
+
               <View style={styles.addressItem}>
                 <View style={[styles.addressDot, { backgroundColor: '#EF4444' }]} />
                 <View style={styles.addressInfo}>
                   <Text style={styles.addressLabel}>Destination</Text>
-                  <Text style={styles.addressText}>{ride.destination_address || 'Destination'}</Text>
-                  {ride.destination_landmark && (
-                    <Text style={styles.landmarkText}>Near {ride.destination_landmark}</Text>
+                  <Text style={styles.addressText}>{safeRide.destination_address}</Text>
+                  {safeRide.destination_landmark && (
+                    <Text style={styles.landmarkText}>Near {safeRide.destination_landmark}</Text>
                   )}
                 </View>
               </View>
@@ -194,7 +211,7 @@ export default function RideRequestModal({
             <View style={styles.statItem}>
               <IndianRupee size={20} color="#10B981" />
               <View style={styles.statInfo}>
-                <Text style={styles.statValue}>₹{ride.fare_amount || 'TBD'}</Text>
+                <Text style={styles.statValue}>₹{safeRide.fare_amount || 'TBD'}</Text>
                 <Text style={styles.statLabel}>Estimated Fare</Text>
               </View>
             </View>
@@ -217,7 +234,7 @@ export default function RideRequestModal({
                     ? 'Calculating...'
                     : tripDistance !== null && tripDistance !== undefined
                     ? `${tripDistance.toFixed(1)}km`
-                    : (ride.distance_km ? `${ride.distance_km}km` : 'N/A')}
+                    : (safeRide.distance_km ? `${safeRide.distance_km}km` : 'N/A')}
                 </Text>
                 <Text style={styles.statLabel}>Trip Distance (Road)</Text>
               </View>
