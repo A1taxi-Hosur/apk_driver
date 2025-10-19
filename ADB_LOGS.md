@@ -1,1249 +1,1853 @@
-Running 'gradlew :app:assembleRelease' in /home/expo/workingdir/build/android
-Downloading https://services.gradle.org/distributions/gradle-8.8-all.zip
-10
-%.
-20%.
-30%.
-40%
-50%
-60%
-70%
-80%
-90%
-100%
-Welcome to Gradle 8.8!
-Here are the highlights of this release:
-- Running Gradle on Java 22
- - Configurable Gradle daemon JVM
- - Improved IDE performance for large projects
-For more details see https://docs.gradle.org/8.8/release-notes.html
-To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.8/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
-Daemon will be stopped at the end of the build
-> Task :gradle-plugin:settings-plugin:checkKotlinGradlePluginConfigurationErrors
-> Task :gradle-plugin:settings-plugin:pluginDescriptors
-> Task :gradle-plugin:settings-plugin:processResources
-> Task :gradle-plugin:settings-plugin:compileKotlin
-> Task :gradle-plugin:settings-plugin:compileJava NO-SOURCE
-> Task :gradle-plugin:settings-plugin:classes
-> Task :gradle-plugin:settings-plugin:jar
-> Task :gradle-plugin:react-native-gradle-plugin:checkKotlinGradlePluginConfigurationErrors
-> Task :gradle-plugin:react-native-gradle-plugin:pluginDescriptors
-> Task :gradle-plugin:react-native-gradle-plugin:processResources
-> Task :gradle-plugin:react-native-gradle-plugin:compileKotlin
-> Task :gradle-plugin:react-native-gradle-plugin:compileJava NO-SOURCE
-> Task :gradle-plugin:react-native-gradle-plugin:classes
-> Task :gradle-plugin:react-native-gradle-plugin:jar
-> Configure project :expo
-Using expo modules
-  - [32mexpo-application[0m (5.9.1)
-  - [32mexpo-asset[0m (10.0.10)
-  - [32mexpo-av[0m (14.0.7)
-  - [32mexpo-background-fetch[0m (12.0.1)
-  - [32mexpo-constants[0m (16.0.2)
-  - [32mexpo-file-system[0m (17.0.1)
-  - [32mexpo-font[0m (12.0.10)
-  - [32mexpo-haptics[0m (13.0.1)
-  - [32mexpo-keep-awake[0m (13.0.2)
-  - [32mexpo-location[0m (17.0.1)
-  - [32mexpo-modules-core[0m (1.12.26)
-  - [32mexpo-notifications[0m (0.28.19)
-  - [32mexpo-splash-screen[0m (0.27.7)
-  - [32mexpo-task-manager[0m (11.8.2)
-  - [32mexpo-web-browser[0m (13.0.3)
-  - [32munimodules-app-loader[0m (4.6.0)
-> Configure project :react-native-reanimated
-Android gradle plugin: 8.2.1
-Gradle: 8.8
-> Task :expo-application:preBuild UP-TO-DATE
-> Task :expo-application:preReleaseBuild UP-TO-DATE
-> Task :expo-asset:preBuild UP-TO-DATE
-> Task :expo-asset:preReleaseBuild UP-TO-DATE
-> Task :expo-application:writeReleaseAarMetadata
-> Task :expo-av:preBuild UP-TO-DATE
-> Task :expo-av:preReleaseBuild UP-TO-DATE
-> Task :expo:generateExpoModulesPackageListTask
-> Task :expo:preBuild
-> Task :expo:preReleaseBuild
-> Task :expo-asset:writeReleaseAarMetadata
-> Task :expo-background-fetch:preBuild UP-TO-DATE
-> Task :expo-background-fetch:preReleaseBuild UP-TO-DATE
-> Task :expo-background-fetch:writeReleaseAarMetadata
-> Task :expo-av:writeReleaseAarMetadata
-> Task :expo-file-system:preBuild UP-TO-DATE
-> Task :expo-file-system:preReleaseBuild UP-TO-DATE
-> Task :expo:writeReleaseAarMetadata
-> Task :expo-font:preBuild UP-TO-DATE
-> Task :expo-font:preReleaseBuild UP-TO-DATE
-> Task :expo-file-system:writeReleaseAarMetadata
-> Task :expo-haptics:preBuild UP-TO-DATE
-> Task :expo-haptics:preReleaseBuild UP-TO-DATE
-> Task :expo-font:writeReleaseAarMetadata
-> Task :expo-keep-awake:preBuild UP-TO-DATE
-> Task :expo-keep-awake:preReleaseBuild UP-TO-DATE
-> Task :expo-keep-awake:writeReleaseAarMetadata
-> Task :expo-location:preBuild UP-TO-DATE
-> Task :expo-location:preReleaseBuild UP-TO-DATE
-> Task :expo-haptics:writeReleaseAarMetadata
-> Task :expo-modules-core:preBuild UP-TO-DATE
-> Task :expo-modules-core:preReleaseBuild UP-TO-DATE
-> Task :expo-location:writeReleaseAarMetadata
-> Task :expo-notifications:preBuild UP-TO-DATE
-> Task :expo-notifications:preReleaseBuild UP-TO-DATE
-> Task :expo-modules-core:writeReleaseAarMetadata
-> Task :expo-splash-screen:preBuild UP-TO-DATE
-> Task :expo-splash-screen:preReleaseBuild UP-TO-DATE
-> Task :expo-notifications:writeReleaseAarMetadata
-> Task :expo-task-manager:preBuild UP-TO-DATE
-> Task :expo-task-manager:preReleaseBuild UP-TO-DATE
-> Task :expo-splash-screen:writeReleaseAarMetadata
-> Task :expo-web-browser:preBuild UP-TO-DATE
-> Task :expo-web-browser:preReleaseBuild UP-TO-DATE
-> Task :expo-task-manager:writeReleaseAarMetadata
-> Task :react-native-async-storage_async-storage:preBuild UP-TO-DATE
-> Task :react-native-async-storage_async-storage:preReleaseBuild UP-TO-DATE
-> Task :expo-web-browser:writeReleaseAarMetadata
-> Task :react-native-gesture-handler:preBuild UP-TO-DATE
-> Task :react-native-gesture-handler:preReleaseBuild UP-TO-DATE
-> Task :react-native-gesture-handler:writeReleaseAarMetadata
-> Task :react-native-maps:preBuild UP-TO-DATE
-> Task :react-native-maps:preReleaseBuild UP-TO-DATE
-> Task :react-native-maps:writeReleaseAarMetadata
-> Task :react-native-reanimated:assertLatestReactNativeWithNewArchitectureTask SKIPPED
-> Task :react-native-reanimated:assertMinimalReactNativeVersionTask SKIPPED
-> Task :react-native-reanimated:prepareHeadersForPrefab
-> Task :react-native-reanimated:preBuild
-> Task :react-native-reanimated:preReleaseBuild
-> Task :react-native-async-storage_async-storage:writeReleaseAarMetadata
-> Task :react-native-safe-area-context:preBuild UP-TO-DATE
-> Task :react-native-safe-area-context:preReleaseBuild UP-TO-DATE
-> Task :react-native-safe-area-context:writeReleaseAarMetadata
-> Task :react-native-screens:preBuild UP-TO-DATE
-> Task :react-native-screens:preReleaseBuild UP-TO-DATE
-> Task :react-native-reanimated:writeReleaseAarMetadata
-> Task :react-native-svg:preBuild UP-TO-DATE
-> Task :react-native-svg:preReleaseBuild UP-TO-DATE
-> Task :react-native-screens:writeReleaseAarMetadata
-> Task :unimodules-app-loader:preBuild UP-TO-DATE
-> Task :unimodules-app-loader:preReleaseBuild UP-TO-DATE
-> Task :react-native-svg:writeReleaseAarMetadata
-> Task :expo:generateReleaseResValues
-> Task :expo:generateReleaseResources
-> Task :expo-constants:createExpoConfig
-> Task :expo-constants:preBuild
-> Task :expo-constants:preReleaseBuild
-The NODE_ENV environment variable is required but was not specified. Ensure the project is bundled with Expo CLI or NODE_ENV is set.
-Proceeding without mode-specific .env
-> Task :expo:packageReleaseResources
-> Task :expo-application:generateReleaseResValues
-> Task :expo-application:generateReleaseResources
-> Task :expo-constants:writeReleaseAarMetadata
-> Task :expo-asset:generateReleaseResValues
-> Task :expo-asset:generateReleaseResources
-> Task :expo-application:packageReleaseResources
-> Task :expo-asset:packageReleaseResources
-> Task :expo-background-fetch:generateReleaseResValues
-> Task :expo-background-fetch:generateReleaseResources
-> Task :expo-av:generateReleaseResValues
-> Task :expo-av:generateReleaseResources
-> Task :expo-background-fetch:packageReleaseResources
-> Task :expo-constants:generateReleaseResValues
-> Task :expo-constants:generateReleaseResources
-> Task :expo-constants:packageReleaseResources
-> Task :expo-file-system:generateReleaseResValues
-> Task :expo-file-system:generateReleaseResources
-> Task :expo-av:packageReleaseResources
-> Task :expo-file-system:packageReleaseResources
-> Task :expo-haptics:generateReleaseResValues
-> Task :expo-haptics:generateReleaseResources
-> Task :expo-font:generateReleaseResValues
-> Task :expo-font:generateReleaseResources
-> Task :expo-font:packageReleaseResources
-> Task :expo-haptics:packageReleaseResources
-> Task :expo-keep-awake:generateReleaseResValues
-> Task :expo-keep-awake:generateReleaseResources
-> Task :expo-location:generateReleaseResValues
-> Task :expo-location:generateReleaseResources
-> Task :expo-keep-awake:packageReleaseResources
-> Task :expo-modules-core:generateReleaseResValues
-> Task :expo-location:packageReleaseResources
-> Task :expo-modules-core:generateReleaseResources
-> Task :expo-notifications:generateReleaseResValues
-> Task :expo-notifications:generateReleaseResources
-> Task :expo-modules-core:packageReleaseResources
-> Task :expo-splash-screen:generateReleaseResValues
-> Task :expo-splash-screen:generateReleaseResources
-> Task :expo-notifications:packageReleaseResources
-> Task :expo-task-manager:generateReleaseResValues
-> Task :expo-task-manager:generateReleaseResources
-> Task :expo-splash-screen:packageReleaseResources
-> Task :expo-web-browser:generateReleaseResValues
-> Task :expo-web-browser:generateReleaseResources
-> Task :expo-task-manager:packageReleaseResources
-> Task :react-native-async-storage_async-storage:generateReleaseResValues
-> Task :react-native-async-storage_async-storage:generateReleaseResources
-> Task :expo-web-browser:packageReleaseResources
-> Task :react-native-gesture-handler:generateReleaseResValues
-> Task :react-native-async-storage_async-storage:packageReleaseResources
-> Task :react-native-gesture-handler:generateReleaseResources
-> Task :react-native-maps:generateReleaseResValues
-> Task :react-native-maps:generateReleaseResources
-> Task :react-native-gesture-handler:packageReleaseResources
-> Task :react-native-maps:packageReleaseResources
-> Task :react-native-reanimated:generateReleaseResValues
-> Task :react-native-safe-area-context:generateReleaseResValues
-> Task :react-native-safe-area-context:generateReleaseResources
-> Task :react-native-reanimated:generateReleaseResources
-> Task :react-native-safe-area-context:packageReleaseResources
-> Task :react-native-screens:generateReleaseResValues
-> Task :react-native-screens:generateReleaseResources
-> Task :react-native-reanimated:packageReleaseResources
-> Task :react-native-svg:generateReleaseResValues
-> Task :react-native-svg:generateReleaseResources
-> Task :react-native-svg:packageReleaseResources
-> Task :unimodules-app-loader:generateReleaseResValues
-> Task :unimodules-app-loader:generateReleaseResources
-> Task :react-native-screens:packageReleaseResources
-> Task :unimodules-app-loader:packageReleaseResources
-> Task :expo:extractDeepLinksRelease
-> Task :expo-application:extractDeepLinksRelease
-> Task :unimodules-app-loader:writeReleaseAarMetadata
-> Task :expo-asset:extractDeepLinksRelease
-> Task :expo-application:processReleaseManifest
-> Task :expo-av:extractDeepLinksRelease
-> Task :expo-av:processReleaseManifest
-> Task :expo-background-fetch:extractDeepLinksRelease
-> Task :expo-asset:processReleaseManifest
-> Task :expo-constants:extractDeepLinksRelease
-> Task :expo:processReleaseManifest
-> Task :expo-file-system:extractDeepLinksRelease
-> Task :expo-constants:processReleaseManifest
-> Task :expo-font:extractDeepLinksRelease
-> Task :expo-background-fetch:processReleaseManifest
-> Task :expo-haptics:extractDeepLinksRelease
-> Task :expo-file-system:processReleaseManifest
-/home/expo/workingdir/build/node_modules/expo-file-system/android/src/main/AndroidManifest.xml:6:9-8:20 Warning:
-	provider#expo.modules.filesystem.FileSystemFileProvider@android:authorities was tagged at AndroidManifest.xml:6 to replace other declarations but no other declaration present
-> Task :expo-keep-awake:extractDeepLinksRelease
-> Task :expo-haptics:processReleaseManifest
-> Task :expo-font:processReleaseManifest
-> Task :expo-location:extractDeepLinksRelease
-> Task :expo-modules-core:extractDeepLinksRelease
-> Task :expo-keep-awake:processReleaseManifest
-> Task :expo-location:processReleaseManifest
-> Task :expo-notifications:extractDeepLinksRelease
-> Task :expo-splash-screen:extractDeepLinksRelease
-> Task :expo-modules-core:processReleaseManifest
-/home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/AndroidManifest.xml:8:9-11:45 Warning:
-	meta-data#com.facebook.soloader.enabled@android:value was tagged at AndroidManifest.xml:8 to replace other declarations but no other declaration present
-> Task :expo-task-manager:extractDeepLinksRelease
-> Task :expo-splash-screen:processReleaseManifest
-> Task :expo-web-browser:extractDeepLinksRelease
-> Task :expo-task-manager:processReleaseManifest
-> Task :react-native-async-storage_async-storage:extractDeepLinksRelease
-> Task :expo-notifications:processReleaseManifest
-> Task :react-native-gesture-handler:extractDeepLinksRelease
-> Task :react-native-async-storage_async-storage:processReleaseManifest
-package="com.reactnativecommunity.asyncstorage" found in source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/@react-native-async-storage/async-storage/android/src/main/AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.reactnativecommunity.asyncstorage" from the source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/@react-native-async-storage/async-storage/android/src/main/AndroidManifest.xml.
-> Task :react-native-maps:extractDeepLinksRelease
-> Task :react-native-gesture-handler:processReleaseManifest
-package="com.swmansion.gesturehandler" found in source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-gesture-handler/android/src/main/AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.swmansion.gesturehandler" from the source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-gesture-handler/android/src/main/AndroidManifest.xml.
-> Task :react-native-reanimated:extractDeepLinksRelease
-> Task :react-native-maps:processReleaseManifest
-package="com.rnmaps.maps" found in source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-maps/android/src/main/AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.rnmaps.maps" from the source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-maps/android/src/main/AndroidManifest.xml.
-> Task :react-native-reanimated:processReleaseManifest
-package="com.swmansion.reanimated" found in source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-reanimated/android/src/main/AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.swmansion.reanimated" from the source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-reanimated/android/src/main/AndroidManifest.xml.
-> Task :react-native-safe-area-context:extractDeepLinksRelease
-> Task :react-native-screens:extractDeepLinksRelease
-> Task :expo-web-browser:processReleaseManifest
-> Task :react-native-svg:extractDeepLinksRelease
-> Task :react-native-safe-area-context:processReleaseManifest
-package="com.th3rdwave.safeareacontext" found in source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-safe-area-context/android/src/main/AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.th3rdwave.safeareacontext" from the source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-safe-area-context/android/src/main/AndroidManifest.xml.
-> Task :react-native-screens:processReleaseManifest
-package="com.swmansion.rnscreens" found in source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.swmansion.rnscreens" from the source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/AndroidManifest.xml.
-> Task :unimodules-app-loader:extractDeepLinksRelease
-> Task :react-native-svg:processReleaseManifest
-package="com.horcrux.svg" found in source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-svg/android/src/main/AndroidManifest.xml.
-Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
-Recommendation: remove package="com.horcrux.svg" from the source AndroidManifest.xml: /home/expo/workingdir/build/node_modules/react-native-svg/android/src/main/AndroidManifest.xml.
-> Task :unimodules-app-loader:processReleaseManifest
-> Task :expo:compileReleaseLibraryResources
-> Task :expo-application:compileReleaseLibraryResources
-> Task :expo-asset:compileReleaseLibraryResources
-> Task :expo-application:parseReleaseLocalResources
-> Task :expo-application:generateReleaseRFile
-> Task :expo:parseReleaseLocalResources
-> Task :expo-asset:parseReleaseLocalResources
-> Task :expo-asset:generateReleaseRFile
-> Task :expo:generateReleaseRFile
-> Task :expo-background-fetch:compileReleaseLibraryResources
-> Task :expo-av:parseReleaseLocalResources
-> Task :expo-av:compileReleaseLibraryResources
-> Task :expo-av:generateReleaseRFile
-> Task :expo-constants:compileReleaseLibraryResources
-> Task :expo-background-fetch:parseReleaseLocalResources
-> Task :expo-constants:parseReleaseLocalResources
-> Task :expo-background-fetch:generateReleaseRFile
-> Task :expo-constants:generateReleaseRFile
-> Task :expo-file-system:compileReleaseLibraryResources
-> Task :expo-font:compileReleaseLibraryResources
-> Task :expo-file-system:parseReleaseLocalResources
-> Task :expo-font:parseReleaseLocalResources
-> Task :expo-font:generateReleaseRFile
-> Task :expo-haptics:compileReleaseLibraryResources
-> Task :expo-file-system:generateReleaseRFile
-> Task :expo-haptics:parseReleaseLocalResources
-> Task :expo-keep-awake:compileReleaseLibraryResources
-> Task :expo-keep-awake:parseReleaseLocalResources
-> Task :expo-haptics:generateReleaseRFile
-> Task :expo-location:compileReleaseLibraryResources
-> Task :expo-keep-awake:generateReleaseRFile
-> Task :expo-location:parseReleaseLocalResources
-> Task :expo-modules-core:compileReleaseLibraryResources
-> Task :expo-location:generateReleaseRFile
-> Task :expo-modules-core:parseReleaseLocalResources
-> Task :expo-notifications:compileReleaseLibraryResources
-> Task :expo-modules-core:generateReleaseRFile
-> Task :expo-splash-screen:compileReleaseLibraryResources
-> Task :expo-notifications:parseReleaseLocalResources
-> Task :expo-notifications:generateReleaseRFile
-> Task :expo-splash-screen:parseReleaseLocalResources
-> Task :expo-task-manager:compileReleaseLibraryResources
-> Task :expo-splash-screen:generateReleaseRFile
-> Task :expo-web-browser:compileReleaseLibraryResources
-> Task :expo-task-manager:parseReleaseLocalResources
-> Task :expo-web-browser:parseReleaseLocalResources
-> Task :expo-task-manager:generateReleaseRFile
-> Task :react-native-async-storage_async-storage:compileReleaseLibraryResources
-> Task :expo-web-browser:generateReleaseRFile
-> Task :react-native-async-storage_async-storage:parseReleaseLocalResources
-> Task :react-native-gesture-handler:compileReleaseLibraryResources
-> Task :react-native-gesture-handler:parseReleaseLocalResources
-> Task :react-native-async-storage_async-storage:generateReleaseRFile
-> Task :react-native-maps:compileReleaseLibraryResources
-> Task :react-native-gesture-handler:generateReleaseRFile
-> Task :react-native-maps:parseReleaseLocalResources
-> Task :react-native-reanimated:compileReleaseLibraryResources
-> Task :react-native-maps:generateReleaseRFile
-> Task :react-native-reanimated:parseReleaseLocalResources
-> Task :react-native-safe-area-context:compileReleaseLibraryResources
-> Task :react-native-reanimated:generateReleaseRFile
-> Task :react-native-safe-area-context:parseReleaseLocalResources
-> Task :react-native-safe-area-context:generateReleaseRFile
-> Task :react-native-screens:compileReleaseLibraryResources
-> Task :react-native-svg:compileReleaseLibraryResources
-> Task :react-native-svg:parseReleaseLocalResources
-> Task :react-native-screens:parseReleaseLocalResources
-> Task :react-native-svg:generateReleaseRFile
-> Task :unimodules-app-loader:compileReleaseLibraryResources
-> Task :unimodules-app-loader:parseReleaseLocalResources
-> Task :react-native-screens:generateReleaseRFile
-> Task :expo:checkKotlinGradlePluginConfigurationErrors
-> Task :unimodules-app-loader:generateReleaseRFile
-> Task :expo-application:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-application:generateReleaseBuildConfig
-> Task :expo-modules-core:checkKotlinGradlePluginConfigurationErrors
-> Task :expo:generateReleaseBuildConfig
-> Task :expo-modules-core:generateReleaseBuildConfig
-> Task :expo-application:javaPreCompileRelease
-> Task :expo-asset:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-asset:generateReleaseBuildConfig
-> Task :expo-asset:javaPreCompileRelease
-> Task :expo-av:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-av:generateReleaseBuildConfig
-> Task :expo-av:javaPreCompileRelease
-> Task :expo-background-fetch:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-background-fetch:generateReleaseBuildConfig
-> Task :expo-background-fetch:javaPreCompileRelease
-> Task :expo-constants:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-constants:generateReleaseBuildConfig
-> Task :expo-constants:javaPreCompileRelease
-> Task :expo-file-system:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-file-system:generateReleaseBuildConfig
-> Task :expo-file-system:javaPreCompileRelease
-> Task :expo-font:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-font:generateReleaseBuildConfig
-> Task :expo-font:javaPreCompileRelease
-> Task :expo-haptics:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-haptics:generateReleaseBuildConfig
-> Task :expo-haptics:javaPreCompileRelease
-> Task :expo-keep-awake:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-keep-awake:generateReleaseBuildConfig
-> Task :expo-keep-awake:javaPreCompileRelease
-> Task :expo-location:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-location:generateReleaseBuildConfig
-> Task :expo-location:javaPreCompileRelease
-> Task :expo-notifications:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-notifications:generateReleaseBuildConfig
-> Task :expo-notifications:javaPreCompileRelease
-> Task :expo-splash-screen:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-splash-screen:generateReleaseBuildConfig
-> Task :expo-splash-screen:javaPreCompileRelease
-> Task :expo-task-manager:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-task-manager:generateReleaseBuildConfig
-> Task :unimodules-app-loader:checkKotlinGradlePluginConfigurationErrors
-> Task :unimodules-app-loader:generateReleaseBuildConfig
-> Task :unimodules-app-loader:javaPreCompileRelease
-> Task :expo-task-manager:javaPreCompileRelease
-> Task :expo-web-browser:checkKotlinGradlePluginConfigurationErrors
-> Task :expo-web-browser:generateReleaseBuildConfig
-> Task :expo-web-browser:javaPreCompileRelease
-> Task :expo:javaPreCompileRelease
-> Task :react-native-async-storage_async-storage:generateReleaseBuildConfig
-> Task :react-native-async-storage_async-storage:javaPreCompileRelease
-> Task :react-native-gesture-handler:checkKotlinGradlePluginConfigurationErrors
-> Task :react-native-gesture-handler:generateReleaseBuildConfig
-> Task :react-native-reanimated:generateReleaseBuildConfig
-> Task :react-native-reanimated:javaPreCompileRelease
-> Task :react-native-reanimated:packageNdkLibs NO-SOURCE
-WARNING: [Processor] Library '/home/expo/.gradle/caches/modules-2/files-2.1/com.google.android.exoplayer/exoplayer-ui/2.18.1/eed81d49b8b0e9a365cbec260dafb222d6e5bc67/exoplayer-ui-2.18.1.aar' contains references to both AndroidX and old support library. This seems like the library is partially migrated. Jetifier will try to rewrite the library anyway.
- Example of androidX reference: 'androidx/core/app/NotificationCompat$Builder'
- Example of support library reference: 'android/support/v4/media/session/MediaSessionCompat$Token'
-> Task :app:buildKotlinToolingMetadata
-> Task :app:checkKotlinGradlePluginConfigurationErrors
-> Task :app:generateCodegenSchemaFromJavaScript SKIPPED
-> Task :app:generateCodegenArtifactsFromSchema SKIPPED
-> Task :app:generatePackageList
-> Task :app:preBuild
-> Task :app:preReleaseBuild
-> Task :app:generateReleaseBuildConfig
-> Task :react-native-async-storage_async-storage:compileReleaseJavaWithJavac
-/home/expo/workingdir/build/node_modules/@react-native-async-storage/async-storage/android/src/main/java/com/reactnativecommunity/asyncstorage/AsyncStorageModule.java:84: warning: [removal] onCatalystInstanceDestroy() in NativeModule has been deprecated and marked for removal
-  public void onCatalystInstanceDestroy() {
-              ^
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: /home/expo/workingdir/build/node_modules/@react-native-async-storage/async-storage/android/src/javaPackage/java/com/reactnativecommunity/asyncstorage/AsyncStoragePackage.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-1 warning
-> Task :react-native-reanimated:compileReleaseJavaWithJavac
-> Task :expo-modules-core:javaPreCompileRelease
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-> Task :react-native-reanimated:bundleLibCompileToJarRelease
-> Task :react-native-async-storage_async-storage:bundleLibCompileToJarRelease
-> Task :react-native-maps:generateReleaseBuildConfig
-> Task :react-native-maps:javaPreCompileRelease
-> Task :react-native-maps:compileReleaseJavaWithJavac
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-> Task :react-native-gesture-handler:javaPreCompileRelease
-> Task :react-native-maps:bundleLibCompileToJarRelease
-> Task :react-native-safe-area-context:checkKotlinGradlePluginConfigurationErrors
-> Task :react-native-safe-area-context:generateReleaseBuildConfig
-> Task :react-native-safe-area-context:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaContextPackage.kt:27:11 'constructor ReactModuleInfo(String!, String!, Boolean, Boolean, Boolean, Boolean, Boolean)' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaContextPackage.kt:33:27 'hasConstants: Boolean' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-safe-area-context/android/src/main/java/com/th3rdwave/safeareacontext/SafeAreaView.kt:59:23 'getter for uiImplementation: UIImplementation!' is deprecated. Deprecated in Java
-> Task :react-native-safe-area-context:javaPreCompileRelease
-> Task :react-native-safe-area-context:compileReleaseJavaWithJavac
-> Task :react-native-safe-area-context:bundleLibCompileToJarRelease
-> Task :react-native-screens:checkKotlinGradlePluginConfigurationErrors
-> Task :react-native-screens:generateReleaseBuildConfig
-Note: /home/expo/workingdir/build/node_modules/react-native-safe-area-context/android/src/paper/java/com/th3rdwave/safeareacontext/NativeSafeAreaContextSpec.java uses or overrides a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-> Task :app:checkReleaseAarMetadata
-> Task :app:createBundleReleaseJsAndAssets
-Starting Metro Bundler
-warning: Bundler cache is empty, rebuilding (this may take a minute)
-> Task :expo-modules-core:compileReleaseKotlin
-> Task :react-native-gesture-handler:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/RNGestureHandlerPackage.kt:69:42 'constructor ReactModuleInfo(String!, String!, Boolean, Boolean, Boolean, Boolean, Boolean)' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-gesture-handler/android/src/main/java/com/swmansion/gesturehandler/core/FlingGestureHandler.kt:25:26 Parameter 'event' is never used
-> Task :react-native-gesture-handler:compileReleaseJavaWithJavac
-> Task :react-native-gesture-handler:bundleLibCompileToJarRelease
-> Task :react-native-screens:javaPreCompileRelease
-> Task :react-native-svg:generateReleaseBuildConfig
-> Task :react-native-svg:javaPreCompileRelease
-> Task :react-native-svg:compileReleaseJavaWithJavac
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-> Task :react-native-svg:bundleLibCompileToJarRelease
-> Task :expo:mergeReleaseJniLibFolders
-> Task :expo:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo:stripReleaseDebugSymbols
-NO-SOURCE
-> Task :expo:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo:extractDeepLinksForAarRelease
-> Task :expo:mergeReleaseShaders
-> Task :expo:compileReleaseShaders NO-SOURCE
-> Task :expo:generateReleaseAssets UP-TO-DATE
-> Task :expo:packageReleaseAssets
-> Task :expo:prepareLintJarForPublish
-> Task :expo:prepareReleaseArtProfile
-> Task :expo-application:mergeReleaseJniLibFolders
-> Task :expo-application:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-application:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-application:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-application:extractDeepLinksForAarRelease
-> Task :expo-application:mergeReleaseShaders
-> Task :expo-application:compileReleaseShaders NO-SOURCE
-> Task :expo-application:generateReleaseAssets UP-TO-DATE
-> Task :expo-application:packageReleaseAssets
-> Task :expo-application:prepareLintJarForPublish
-> Task :expo-application:prepareReleaseArtProfile
-> Task :expo-asset:mergeReleaseJniLibFolders
-> Task :expo-asset:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-asset:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-asset:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-asset:extractDeepLinksForAarRelease
-> Task :expo-asset:mergeReleaseShaders
-> Task :expo-asset:compileReleaseShaders NO-SOURCE
-> Task :expo-asset:generateReleaseAssets UP-TO-DATE
-> Task :expo-asset:packageReleaseAssets
-> Task :expo-asset:prepareLintJarForPublish
-> Task :expo-asset:prepareReleaseArtProfile
-> Task :expo-av:configureCMakeRelWithDebInfo[arm64-v8a]
-Checking the license for package CMake 3.22.1 in /home/expo/Android/Sdk/licenses
-License for package CMake 3.22.1 accepted.
-Preparing "Install CMake 3.22.1 v.3.22.1".
-> Task :react-native-screens:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/RNScreensPackage.kt:42:47 'constructor ReactModuleInfo(String!, String!, Boolean, Boolean, Boolean, Boolean, Boolean)' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenContainer.kt:30:53 'FrameCallback' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenContainer.kt:30:98 'FrameCallback' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:65:27 'setter for targetElevation: Float' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackFragment.kt:128:27 'setter for targetElevation: Float' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfig.kt:86:34 'getter for systemWindowInsetTop: Int' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenStackHeaderConfig.kt:231:37 'setColorFilter(Int, PorterDuff.Mode): Unit' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenViewManager.kt:47:42 'setStateWrapper(StateWrapper!): Unit' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:135:47 'replaceSystemWindowInsets(Int, Int, Int, Int): WindowInsetsCompat' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:136:51 'getter for systemWindowInsetLeft: Int' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:138:51 'getter for systemWindowInsetRight: Int' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/ScreenWindowTraits.kt:139:51 'getter for systemWindowInsetBottom: Int' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:100:22 Parameter 'view' is never used
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarManager.kt:100:43 Parameter 'placeholder' is never used
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/SearchBarView.kt:147:43 Parameter 'flag' is never used
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/main/java/com/swmansion/rnscreens/events/HeaderHeightChangeEvent.kt:6:44 'RCTEventEmitter' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:5:37 'FabricViewStateManager' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:9:48 'FabricViewStateManager' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:11:42 Parameter 'width' is never used
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:11:54 Parameter 'height' is never used
-w: file:///home/expo/workingdir/build/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/FabricEnabledViewGroup.kt:11:67 Parameter 'headerHeight' is never used
-> Task :react-native-screens:compileReleaseJavaWithJavac
-> Task :react-native-screens:bundleLibCompileToJarRelease
-> Task :expo-background-fetch:mergeReleaseJniLibFolders
-> Task :expo-background-fetch:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-background-fetch:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-background-fetch:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-background-fetch:extractDeepLinksForAarRelease
-Note: /home/expo/workingdir/build/node_modules/react-native-screens/android/src/paper/java/com/swmansion/rnscreens/NativeScreensModuleSpec.java uses or overrides a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-> Task :expo-background-fetch:mergeReleaseShaders
-> Task :expo-background-fetch:compileReleaseShaders NO-SOURCE
-> Task :expo-background-fetch:generateReleaseAssets UP-TO-DATE
-> Task :expo-background-fetch:packageReleaseAssets
-> Task :expo-background-fetch:prepareLintJarForPublish
-> Task :expo-background-fetch:prepareReleaseArtProfile
-> Task :expo-constants:mergeReleaseJniLibFolders
-> Task :expo-constants:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-constants:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-constants:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-constants:extractDeepLinksForAarRelease
-> Task :expo-constants:mergeReleaseShaders
-> Task :expo-constants:compileReleaseShaders NO-SOURCE
-> Task :expo-constants:generateReleaseAssets UP-TO-DATE
-> Task :expo-constants:packageReleaseAssets
-> Task :expo-constants:prepareLintJarForPublish
-> Task :expo-constants:prepareReleaseArtProfile
-> Task :expo-file-system:mergeReleaseJniLibFolders
-> Task :expo-file-system:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-file-system:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-file-system:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-file-system:extractDeepLinksForAarRelease
-> Task :expo-file-system:mergeReleaseShaders
-> Task :expo-file-system:compileReleaseShaders NO-SOURCE
-> Task :expo-file-system:generateReleaseAssets UP-TO-DATE
-> Task :expo-file-system:packageReleaseAssets
-> Task :expo-file-system:prepareLintJarForPublish
-> Task :expo-file-system:prepareReleaseArtProfile
-> Task :expo-font:mergeReleaseJniLibFolders
-> Task :expo-font:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-font:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-font:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-font:extractDeepLinksForAarRelease
-> Task :expo-font:mergeReleaseShaders
-> Task :expo-font:compileReleaseShaders NO-SOURCE
-> Task :expo-font:generateReleaseAssets UP-TO-DATE
-> Task :expo-font:packageReleaseAssets
-> Task :expo-font:prepareLintJarForPublish
-> Task :expo-font:prepareReleaseArtProfile
-> Task :expo-haptics:mergeReleaseJniLibFolders
-> Task :expo-haptics:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-haptics:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-haptics:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-haptics:extractDeepLinksForAarRelease
-> Task :expo-haptics:mergeReleaseShaders
-> Task :expo-haptics:compileReleaseShaders NO-SOURCE
-> Task :expo-haptics:generateReleaseAssets UP-TO-DATE
-> Task :expo-haptics:packageReleaseAssets
-> Task :expo-haptics:prepareLintJarForPublish
-> Task :expo-haptics:prepareReleaseArtProfile
-> Task :expo-keep-awake:mergeReleaseJniLibFolders
-> Task :expo-keep-awake:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-keep-awake:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-keep-awake:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-keep-awake:extractDeepLinksForAarRelease
-> Task :expo-keep-awake:mergeReleaseShaders
-> Task :expo-keep-awake:compileReleaseShaders NO-SOURCE
-> Task :expo-keep-awake:generateReleaseAssets UP-TO-DATE
-> Task :expo-keep-awake:packageReleaseAssets
-> Task :expo-keep-awake:prepareLintJarForPublish
-> Task :expo-keep-awake:prepareReleaseArtProfile
-> Task :expo-location:mergeReleaseJniLibFolders
-> Task :expo-location:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-location:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-location:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-location:extractDeepLinksForAarRelease
-> Task :expo-location:mergeReleaseShaders
-> Task :expo-location:compileReleaseShaders NO-SOURCE
-> Task :expo-location:generateReleaseAssets UP-TO-DATE
-> Task :expo-location:packageReleaseAssets
-> Task :expo-location:prepareLintJarForPublish
-> Task :expo-location:prepareReleaseArtProfile
-> Task :expo-notifications:mergeReleaseJniLibFolders
-> Task :expo-notifications:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-notifications:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-notifications:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-notifications:extractDeepLinksForAarRelease
-> Task :expo-notifications:mergeReleaseShaders
-> Task :expo-notifications:compileReleaseShaders NO-SOURCE
-> Task :expo-notifications:generateReleaseAssets UP-TO-DATE
-> Task :expo-notifications:packageReleaseAssets
-> Task :expo-notifications:prepareLintJarForPublish
-> Task :expo-notifications:prepareReleaseArtProfile
-> Task :expo-splash-screen:mergeReleaseJniLibFolders
-> Task :expo-splash-screen:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-splash-screen:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-splash-screen:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-splash-screen:extractDeepLinksForAarRelease
-> Task :expo-splash-screen:mergeReleaseShaders
-> Task :expo-splash-screen:compileReleaseShaders NO-SOURCE
-> Task :expo-splash-screen:generateReleaseAssets UP-TO-DATE
-> Task :expo-splash-screen:packageReleaseAssets
-> Task :expo-splash-screen:prepareLintJarForPublish
-> Task :expo-splash-screen:prepareReleaseArtProfile
-> Task :expo-task-manager:mergeReleaseJniLibFolders
-> Task :expo-task-manager:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-task-manager:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-task-manager:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-task-manager:extractDeepLinksForAarRelease
-> Task :expo-task-manager:mergeReleaseShaders
-> Task :expo-task-manager:compileReleaseShaders NO-SOURCE
-> Task :expo-task-manager:generateReleaseAssets UP-TO-DATE
-> Task :expo-task-manager:packageReleaseAssets
-> Task :expo-task-manager:prepareLintJarForPublish
-> Task :expo-task-manager:prepareReleaseArtProfile
-> Task :expo-web-browser:mergeReleaseJniLibFolders
-> Task :expo-web-browser:mergeReleaseNativeLibs NO-SOURCE
-> Task :expo-web-browser:stripReleaseDebugSymbols NO-SOURCE
-> Task :expo-web-browser:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-web-browser:extractDeepLinksForAarRelease
-> Task :expo-web-browser:mergeReleaseShaders
-> Task :expo-web-browser:compileReleaseShaders NO-SOURCE
-> Task :expo-web-browser:generateReleaseAssets UP-TO-DATE
-> Task :expo-web-browser:packageReleaseAssets
-> Task :expo-web-browser:prepareLintJarForPublish
-> Task :expo-web-browser:prepareReleaseArtProfile
-> Task :unimodules-app-loader:mergeReleaseJniLibFolders
-> Task :unimodules-app-loader:mergeReleaseNativeLibs NO-SOURCE
-> Task :unimodules-app-loader:stripReleaseDebugSymbols NO-SOURCE
-> Task :unimodules-app-loader:copyReleaseJniLibsProjectAndLocalJars
-> Task :unimodules-app-loader:extractDeepLinksForAarRelease
-> Task :unimodules-app-loader:mergeReleaseShaders
-> Task :unimodules-app-loader:compileReleaseShaders NO-SOURCE
-> Task :unimodules-app-loader:generateReleaseAssets UP-TO-DATE
-> Task :unimodules-app-loader:packageReleaseAssets
-> Task :unimodules-app-loader:prepareLintJarForPublish
-> Task :unimodules-app-loader:prepareReleaseArtProfile
-> Task :expo-av:configureCMakeRelWithDebInfo[arm64-v8a]
-"Install CMake 3.22.1 v.3.22.1" ready.
-Installing CMake 3.22.1 in /home/expo/Android/Sdk/cmake/3.22.1
-"Install CMake 3.22.1 v.3.22.1" complete.
-"Install CMake 3.22.1 v.3.22.1" finished.
-> Task :expo-modules-core:configureCMakeRelWithDebInfo[arm64-v8a]
-> Task :expo-modules-core:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/java/expo/modules/adapters/react/permissions/PermissionsService.kt:20:26 'Promise' is deprecated. AsyncFunction will crash when called. Use expo.modules.kotlin.Promise instead
-w: file:///home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/java/expo/modules/adapters/react/permissions/PermissionsService.kt:63:51 'Promise' is deprecated. AsyncFunction will crash when called. Use expo.modules.kotlin.Promise instead
-w: file:///home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/java/expo/modules/adapters/react/permissions/PermissionsService.kt:90:54 'Promise' is deprecated. AsyncFunction will crash when called. Use expo.modules.kotlin.Promise instead
-w: file:///home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/defaultmodules/CoreModule.kt:6:34 'ReactFeatureFlags' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/defaultmodules/CoreModule.kt:70:12 'ReactFeatureFlags' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/events/KModuleEventEmitterWrapper.kt:97:7 'constructor Event<T : Event<(raw) Event<*>>!>(Int)' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-modules-core/android/src/main/java/expo/modules/kotlin/types/JSTypeConverterHelper.kt:44:17 'get(String!): Any?' is deprecated. Deprecated in Java
-> Task :expo:extractProguardFiles
-> Task :expo:writeReleaseLintModelMetadata
-> Task :expo-application:extractProguardFiles
-> Task :expo-application:writeReleaseLintModelMetadata
-> Task :expo-asset:extractProguardFiles
-> Task :expo-asset:writeReleaseLintModelMetadata
-> Task :expo-background-fetch:extractProguardFiles
-> Task :expo-background-fetch:writeReleaseLintModelMetadata
-> Task :expo-constants:extractProguardFiles
-> Task :expo-constants:writeReleaseLintModelMetadata
-> Task :expo-file-system:extractProguardFiles
-> Task :expo-file-system:writeReleaseLintModelMetadata
-> Task :expo-font:extractProguardFiles
-> Task :expo-font:writeReleaseLintModelMetadata
-> Task :expo-haptics:extractProguardFiles
-> Task :expo-haptics:writeReleaseLintModelMetadata
-> Task :expo-keep-awake:extractProguardFiles
-> Task :expo-keep-awake:writeReleaseLintModelMetadata
-> Task :expo-location:extractProguardFiles
-> Task :expo-location:writeReleaseLintModelMetadata
-> Task :expo-notifications:extractProguardFiles
-> Task :expo-notifications:writeReleaseLintModelMetadata
-> Task :expo-splash-screen:extractProguardFiles
-> Task :expo-splash-screen:writeReleaseLintModelMetadata
-> Task :expo-task-manager:extractProguardFiles
-> Task :expo-task-manager:writeReleaseLintModelMetadata
-> Task :unimodules-app-loader:extractProguardFiles
-> Task :unimodules-app-loader:writeReleaseLintModelMetadata
-> Task :expo-web-browser:extractProguardFiles
-> Task :expo-web-browser:writeReleaseLintModelMetadata
-> Task :react-native-async-storage_async-storage:bundleLibRuntimeToJarRelease
-> Task :react-native-async-storage_async-storage:processReleaseJavaRes NO-SOURCE
-> Task :react-native-async-storage_async-storage:createFullJarRelease
-> Task :react-native-async-storage_async-storage:mergeReleaseJniLibFolders
-> Task :react-native-async-storage_async-storage:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-async-storage_async-storage:stripReleaseDebugSymbols NO-SOURCE
-> Task :react-native-async-storage_async-storage:copyReleaseJniLibsProjectAndLocalJars
-> Task :react-native-async-storage_async-storage:extractDeepLinksForAarRelease
-> Task :expo-av:buildCMakeRelWithDebInfo[arm64-v8a]
-> Task :expo-av:configureCMakeRelWithDebInfo[armeabi-v7a]
-> Task :expo-av:buildCMakeRelWithDebInfo[armeabi-v7a]
-> Task :expo-av:configureCMakeRelWithDebInfo[x86]
-> Task :react-native-async-storage_async-storage:extractReleaseAnnotations
-> Task :react-native-async-storage_async-storage:mergeReleaseGeneratedProguardFiles
-> Task :react-native-async-storage_async-storage:mergeReleaseConsumerProguardFiles
-> Task :react-native-async-storage_async-storage:mergeReleaseShaders
-> Task :react-native-async-storage_async-storage:compileReleaseShaders NO-SOURCE
-> Task :react-native-async-storage_async-storage:generateReleaseAssets UP-TO-DATE
-> Task :react-native-async-storage_async-storage:packageReleaseAssets
-> Task :react-native-async-storage_async-storage:prepareLintJarForPublish
-> Task :react-native-async-storage_async-storage:prepareReleaseArtProfile
-> Task :react-native-async-storage_async-storage:mergeReleaseJavaResource
-> Task :react-native-async-storage_async-storage:syncReleaseLibJars
-> Task :react-native-async-storage_async-storage:bundleReleaseLocalLintAar
-> Task :react-native-async-storage_async-storage:extractProguardFiles
-> Task :react-native-async-storage_async-storage:writeReleaseLintModelMetadata
-> Task :expo-av:buildCMakeRelWithDebInfo[x86]
-> Task :expo-av:configureCMakeRelWithDebInfo[x86_64]
-> Task :expo-av:buildCMakeRelWithDebInfo[x86_64]
-> Task :expo-av:mergeReleaseJniLibFolders
-> Task :expo-av:mergeReleaseNativeLibs
-> Task :expo-av:stripReleaseDebugSymbols
-> Task :expo-av:copyReleaseJniLibsProjectAndLocalJars
-> Task :expo-av:extractDeepLinksForAarRelease
-> Task :expo-av:mergeReleaseShaders
-> Task :expo-av:compileReleaseShaders NO-SOURCE
-> Task :expo-av:generateReleaseAssets UP-TO-DATE
-> Task :expo-av:packageReleaseAssets
-> Task :expo-av:prepareLintJarForPublish
-> Task :expo-av:prepareReleaseArtProfile
-> Task :expo-av:extractProguardFiles
-> Task :expo-av:writeReleaseLintModelMetadata
-> Task :react-native-gesture-handler:bundleLibRuntimeToJarRelease
-> Task :react-native-gesture-handler:processReleaseJavaRes
-> Task :react-native-gesture-handler:createFullJarRelease
-> Task :react-native-gesture-handler:mergeReleaseJniLibFolders
-> Task :react-native-gesture-handler:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-gesture-handler:stripReleaseDebugSymbols NO-SOURCE
-> Task :react-native-gesture-handler:copyReleaseJniLibsProjectAndLocalJars
-> Task :react-native-gesture-handler:extractDeepLinksForAarRelease
-> Task :react-native-gesture-handler:extractReleaseAnnotations
-> Task :react-native-gesture-handler:mergeReleaseGeneratedProguardFiles
-> Task :react-native-gesture-handler:mergeReleaseConsumerProguardFiles
-> Task :react-native-gesture-handler:mergeReleaseShaders
-> Task :react-native-gesture-handler:compileReleaseShaders NO-SOURCE
-> Task :react-native-gesture-handler:generateReleaseAssets UP-TO-DATE
-> Task :react-native-gesture-handler:packageReleaseAssets
-> Task :react-native-gesture-handler:prepareLintJarForPublish
-> Task :react-native-gesture-handler:prepareReleaseArtProfile
-> Task :react-native-async-storage_async-storage:generateReleaseLintModel
-> Task :react-native-gesture-handler:mergeReleaseJavaResource
-> Task :react-native-gesture-handler:syncReleaseLibJars
-> Task :react-native-gesture-handler:bundleReleaseLocalLintAar
-> Task :react-native-gesture-handler:extractProguardFiles
-> Task :react-native-gesture-handler:writeReleaseLintModelMetadata
-> Task :react-native-maps:bundleLibRuntimeToJarRelease
-> Task :react-native-maps:processReleaseJavaRes NO-SOURCE
-> Task :react-native-maps:createFullJarRelease
-> Task :react-native-maps:mergeReleaseJniLibFolders
-> Task :react-native-maps:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-maps:stripReleaseDebugSymbols NO-SOURCE
-> Task :react-native-maps:copyReleaseJniLibsProjectAndLocalJars
-> Task :react-native-maps:extractDeepLinksForAarRelease
-> Task :react-native-maps:extractReleaseAnnotations
-> Task :react-native-maps:mergeReleaseGeneratedProguardFiles
-> Task :react-native-maps:mergeReleaseConsumerProguardFiles
-> Task :react-native-maps:mergeReleaseShaders
-> Task :react-native-maps:compileReleaseShaders NO-SOURCE
-> Task :react-native-maps:generateReleaseAssets UP-TO-DATE
-> Task :react-native-maps:packageReleaseAssets
-> Task :react-native-maps:prepareLintJarForPublish
-> Task :react-native-maps:prepareReleaseArtProfile
-> Task :react-native-maps:mergeReleaseJavaResource
-> Task :expo-modules-core:buildCMakeRelWithDebInfo[arm64-v8a]
-> Task :react-native-maps:syncReleaseLibJars
-> Task :react-native-maps:bundleReleaseLocalLintAar
-> Task :react-native-maps:extractProguardFiles
-> Task :react-native-maps:writeReleaseLintModelMetadata
-> Task :react-native-maps:generateReleaseLintModel
-> Task :react-native-safe-area-context:bundleLibRuntimeToJarRelease
-> Task :react-native-safe-area-context:processReleaseJavaRes
-> Task :react-native-safe-area-context:createFullJarRelease
-> Task :react-native-safe-area-context:mergeReleaseJniLibFolders
-> Task :react-native-safe-area-context:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-safe-area-context:stripReleaseDebugSymbols NO-SOURCE
-> Task :react-native-safe-area-context:copyReleaseJniLibsProjectAndLocalJars
-> Task :react-native-safe-area-context:extractDeepLinksForAarRelease
-> Task :react-native-safe-area-context:extractReleaseAnnotations
-> Task :react-native-safe-area-context:mergeReleaseGeneratedProguardFiles
-> Task :react-native-safe-area-context:mergeReleaseConsumerProguardFiles
-> Task :react-native-safe-area-context:mergeReleaseShaders
-> Task :react-native-safe-area-context:compileReleaseShaders NO-SOURCE
-> Task :react-native-safe-area-context:generateReleaseAssets UP-TO-DATE
-> Task :react-native-safe-area-context:packageReleaseAssets
-> Task :react-native-safe-area-context:prepareLintJarForPublish
-> Task :react-native-safe-area-context:prepareReleaseArtProfile
-> Task :react-native-safe-area-context:mergeReleaseJavaResource
-> Task :react-native-safe-area-context:syncReleaseLibJars
-> Task :react-native-safe-area-context:bundleReleaseLocalLintAar
-> Task :react-native-safe-area-context:extractProguardFiles
-> Task :react-native-safe-area-context:writeReleaseLintModelMetadata
-> Task :react-native-reanimated:configureCMakeRelWithDebInfo[arm64-v8a]
-> Task :react-native-safe-area-context:generateReleaseLintModel
-> Task :react-native-screens:bundleLibRuntimeToJarRelease
-> Task :react-native-screens:processReleaseJavaRes
-> Task :react-native-screens:createFullJarRelease
-> Task :react-native-screens:configureCMakeRelWithDebInfo[arm64-v8a]
-> Task :react-native-screens:buildCMakeRelWithDebInfo[arm64-v8a]
-> Task :react-native-screens:configureCMakeRelWithDebInfo[armeabi-v7a]
-> Task :expo-modules-core:compileReleaseJavaWithJavac
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-> Task :expo-modules-core:bundleLibCompileToJarRelease
-> Task :react-native-screens:buildCMakeRelWithDebInfo[armeabi-v7a]
-> Task :expo-application:compileReleaseKotlin
-> Task :expo-application:compileReleaseJavaWithJavac
-> Task :expo-application:bundleLibCompileToJarRelease
-> Task :expo-asset:compileReleaseKotlin
-> Task :expo-asset:compileReleaseJavaWithJavac
-> Task :expo-asset:bundleLibCompileToJarRelease
-> Task :expo-background-fetch:compileReleaseKotlin
-> Task :expo-background-fetch:compileReleaseJavaWithJavac
-> Task :expo-background-fetch:bundleLibCompileToJarRelease
-> Task :expo-constants:compileReleaseKotlin
-> Task :expo-constants:compileReleaseJavaWithJavac
-> Task :expo-constants:bundleLibCompileToJarRelease
-> Task :expo-av:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/ViewUtils.kt:10:26 'Promise' is deprecated. AsyncFunction will crash when called. Use expo.modules.kotlin.Promise instead
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/ViewUtils.kt:19:129 'Promise' is deprecated. AsyncFunction will crash when called. Use expo.modules.kotlin.Promise instead
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/ViewUtils.kt:21:78 'resolveView(Int): View?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/ViewUtils.kt:39:111 'Promise' is deprecated. AsyncFunction will crash when called. Use expo.modules.kotlin.Promise instead
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/ViewUtils.kt:52:78 'resolveView(Int): View?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/player/datasource/CustomHeadersOkHttpDataSourceFactory.kt:32:12 'constructor OkHttpDataSource(Call.Factory, String?, CacheControl?, HttpDataSource.RequestProperties?)' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/progress/AndroidLooperTimeMachine.kt:8:5 'constructor Handler()' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-av/android/src/main/java/expo/modules/av/video/VideoViewModule.kt:64:17 'tryRunWithVideoView(ModuleRegistry, Int, ViewUtils.VideoViewCallback, Promise): Unit' is deprecated. Use `dispatchCommands` in favor of finding view with imperative calls
-> Task :expo-av:compileReleaseJavaWithJavac
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-> Task :expo-av:bundleLibCompileToJarRelease
-> Task :expo-font:compileReleaseKotlin
-> Task :expo-font:compileReleaseJavaWithJavac
-> Task :expo-font:bundleLibCompileToJarRelease
-> Task :expo-file-system:compileReleaseKotlin
-> Task :expo-haptics:compileReleaseKotlin
-> Task :expo-haptics:compileReleaseJavaWithJavac
-> Task :expo-haptics:bundleLibCompileToJarRelease
-> Task :expo-file-system:compileReleaseJavaWithJavac
-> Task :expo-file-system:bundleLibCompileToJarRelease
-> Task :expo-keep-awake:compileReleaseKotlin
-> Task :expo-keep-awake:compileReleaseJavaWithJavac
-> Task :expo-keep-awake:bundleLibCompileToJarRelease
-> Task :react-native-reanimated:buildCMakeRelWithDebInfo[arm64-v8a]
-> Task :expo-location:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/expo-location/android/src/main/java/expo/modules/location/LocationModule.kt:676:63 'getFromLocationName(String, Int): (Mutable)List<Address!>?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-location/android/src/main/java/expo/modules/location/LocationModule.kt:708:63 'getFromLocation(Double, Double, Int): (Mutable)List<Address!>?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-location/android/src/main/java/expo/modules/location/records/LocationResults.kt:86:23 'getter for isFromMockProvider: Boolean' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-location/android/src/main/java/expo/modules/location/records/LocationResults.kt:93:7 Unchecked cast: {BaseBundle & Parcelable & kotlin.Cloneable} to BundleType
-w: file:///home/expo/workingdir/build/node_modules/expo-location/android/src/main/java/expo/modules/location/records/LocationResults.kt:135:7 Unchecked cast: {BaseBundle & Parcelable & kotlin.Cloneable} to BundleType
-w: file:///home/expo/workingdir/build/node_modules/expo-location/android/src/main/java/expo/modules/location/services/LocationTaskService.kt:50:5 'stopForeground(Boolean): Unit' is deprecated. Deprecated in Java
-> Task :expo-location:compileReleaseJavaWithJavac
-> Task :expo-location:bundleLibCompileToJarRelease
-> Task :unimodules-app-loader:compileReleaseKotlin NO-SOURCE
-> Task :unimodules-app-loader:compileReleaseJavaWithJavac
-> Task :unimodules-app-loader:bundleLibCompileToJarRelease
-> Task :expo-splash-screen:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/expo-splash-screen/android/src/main/java/expo/modules/splashscreen/SplashScreenViewController.kt:42:5 Parameter 'failureCallback' is never used
-w: file:///home/expo/workingdir/build/node_modules/expo-splash-screen/android/src/main/java/expo/modules/splashscreen/singletons/SplashScreenStatusBar.kt:16:27 'replaceSystemWindowInsets(Int, Int, Int, Int): WindowInsets' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-splash-screen/android/src/main/java/expo/modules/splashscreen/singletons/SplashScreenStatusBar.kt:17:29 'getter for systemWindowInsetLeft: Int' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-splash-screen/android/src/main/java/expo/modules/splashscreen/singletons/SplashScreenStatusBar.kt:19:29 'getter for systemWindowInsetRight: Int' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-splash-screen/android/src/main/java/expo/modules/splashscreen/singletons/SplashScreenStatusBar.kt:20:29 'getter for systemWindowInsetBottom: Int' is deprecated. Deprecated in Java
-> Task :expo-task-manager:compileReleaseKotlin
-> Task :expo-splash-screen:compileReleaseJavaWithJavac
-> Task :expo-splash-screen:bundleLibCompileToJarRelease
-> Task :expo-task-manager:compileReleaseJavaWithJavac
-> Task :expo-task-manager:bundleLibCompileToJarRelease
-> Task :expo-application:extractReleaseAnnotations
-> Task :expo-application:mergeReleaseGeneratedProguardFiles
-Note: /home/expo/workingdir/build/node_modules/expo-task-manager/android/src/main/java/expo/modules/taskManager/TaskService.java uses or overrides a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: Some input files use unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-> Task :expo-application:mergeReleaseConsumerProguardFiles
-> Task :expo-application:processReleaseJavaRes
-> Task :expo-application:mergeReleaseJavaResource
-> Task :expo-application:syncReleaseLibJars
-> Task :expo-application:bundleReleaseLocalLintAar
-> Task :expo-asset:extractReleaseAnnotations
-> Task :expo-asset:mergeReleaseGeneratedProguardFiles
-> Task :expo-asset:mergeReleaseConsumerProguardFiles
-> Task :expo-asset:processReleaseJavaRes
-> Task :expo-asset:mergeReleaseJavaResource
-> Task :expo-asset:syncReleaseLibJars
-> Task :expo-asset:bundleReleaseLocalLintAar
-> Task :expo-av:extractReleaseAnnotations
-> Task :expo-av:mergeReleaseGeneratedProguardFiles
-> Task :expo-av:mergeReleaseConsumerProguardFiles
-> Task :expo-av:processReleaseJavaRes
-> Task :expo-av:mergeReleaseJavaResource
-> Task :expo-av:syncReleaseLibJars
-> Task :expo-av:bundleReleaseLocalLintAar
-> Task :expo-background-fetch:extractReleaseAnnotations
-> Task :expo-background-fetch:mergeReleaseGeneratedProguardFiles
-> Task :expo-background-fetch:mergeReleaseConsumerProguardFiles
-> Task :expo-background-fetch:processReleaseJavaRes
-> Task :expo-background-fetch:mergeReleaseJavaResource
-> Task :expo-background-fetch:syncReleaseLibJars
-> Task :expo-background-fetch:bundleReleaseLocalLintAar
-> Task :expo-constants:extractReleaseAnnotations
-> Task :expo-constants:mergeReleaseGeneratedProguardFiles
-> Task :expo-constants:mergeReleaseConsumerProguardFiles
-> Task :expo-constants:processReleaseJavaRes
-> Task :expo-constants:mergeReleaseJavaResource
-> Task :expo-constants:syncReleaseLibJars
-> Task :expo-constants:bundleReleaseLocalLintAar
-> Task :expo-file-system:extractReleaseAnnotations
-> Task :expo-file-system:mergeReleaseGeneratedProguardFiles
-> Task :expo-file-system:mergeReleaseConsumerProguardFiles
-> Task :expo-file-system:processReleaseJavaRes
-> Task :expo-file-system:mergeReleaseJavaResource
-> Task :expo-file-system:syncReleaseLibJars
-> Task :expo-file-system:bundleReleaseLocalLintAar
-> Task :expo-font:extractReleaseAnnotations
-> Task :expo-font:mergeReleaseGeneratedProguardFiles
-> Task :expo-font:mergeReleaseConsumerProguardFiles
-> Task :expo-font:processReleaseJavaRes
-> Task :expo-font:mergeReleaseJavaResource
-> Task :expo-font:syncReleaseLibJars
-> Task :expo-font:bundleReleaseLocalLintAar
-> Task :expo-haptics:extractReleaseAnnotations
-> Task :expo-haptics:mergeReleaseGeneratedProguardFiles
-> Task :expo-haptics:mergeReleaseConsumerProguardFiles
-> Task :expo-haptics:processReleaseJavaRes
-> Task :expo-haptics:mergeReleaseJavaResource
-> Task :expo-haptics:syncReleaseLibJars
-> Task :expo-haptics:bundleReleaseLocalLintAar
-> Task :expo-keep-awake:extractReleaseAnnotations
-> Task :expo-keep-awake:mergeReleaseGeneratedProguardFiles
-> Task :expo-keep-awake:mergeReleaseConsumerProguardFiles
-> Task :expo-keep-awake:processReleaseJavaRes
-> Task :expo-keep-awake:mergeReleaseJavaResource
-> Task :expo-keep-awake:syncReleaseLibJars
-> Task :expo-keep-awake:bundleReleaseLocalLintAar
-> Task :expo-location:extractReleaseAnnotations
-> Task :expo-location:mergeReleaseGeneratedProguardFiles
-> Task :expo-location:mergeReleaseConsumerProguardFiles
-> Task :expo-location:processReleaseJavaRes
-> Task :expo-location:mergeReleaseJavaResource
-> Task :expo-location:syncReleaseLibJars
-> Task :expo-location:bundleReleaseLocalLintAar
-> Task :expo-splash-screen:extractReleaseAnnotations
-> Task :expo-splash-screen:mergeReleaseGeneratedProguardFiles
-> Task :expo-splash-screen:mergeReleaseConsumerProguardFiles
-> Task :expo-splash-screen:processReleaseJavaRes
-> Task :expo-splash-screen:mergeReleaseJavaResource
-> Task :expo-splash-screen:syncReleaseLibJars
-> Task :expo-splash-screen:bundleReleaseLocalLintAar
-> Task :expo-task-manager:extractReleaseAnnotations
-> Task :expo-task-manager:mergeReleaseGeneratedProguardFiles
-> Task :expo-task-manager:mergeReleaseConsumerProguardFiles
-> Task :expo-task-manager:processReleaseJavaRes
-> Task :expo-task-manager:mergeReleaseJavaResource
-> Task :expo-task-manager:syncReleaseLibJars
-> Task :expo-task-manager:bundleReleaseLocalLintAar
-> Task :unimodules-app-loader:extractReleaseAnnotations
-> Task :unimodules-app-loader:mergeReleaseGeneratedProguardFiles
-> Task :unimodules-app-loader:mergeReleaseConsumerProguardFiles
-> Task :unimodules-app-loader:processReleaseJavaRes NO-SOURCE
-> Task :unimodules-app-loader:mergeReleaseJavaResource
-> Task :unimodules-app-loader:syncReleaseLibJars
-> Task :unimodules-app-loader:bundleReleaseLocalLintAar
-> Task :expo-web-browser:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:112:15 'setToolbarColor(Int): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:117:15 'setSecondaryToolbarColor(Int): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-web-browser/android/src/main/java/expo/modules/webbrowser/WebBrowserModule.kt:123:15 'addDefaultShareMenuItem(): CustomTabsIntent.Builder' is deprecated. Deprecated in Java
-> Task :expo-web-browser:compileReleaseJavaWithJavac
-> Task :expo-web-browser:bundleLibCompileToJarRelease
-> Task :expo-web-browser:extractReleaseAnnotations
-> Task :expo-web-browser:mergeReleaseGeneratedProguardFiles
-> Task :expo-web-browser:mergeReleaseConsumerProguardFiles
-> Task :expo-web-browser:processReleaseJavaRes
-> Task :expo-web-browser:mergeReleaseJavaResource
-> Task :expo-web-browser:syncReleaseLibJars
-> Task :expo-web-browser:bundleReleaseLocalLintAar
-> Task :expo-application:bundleLibRuntimeToJarRelease
-> Task :expo-application:createFullJarRelease
-> Task :expo-asset:bundleLibRuntimeToJarRelease
-> Task :expo-asset:createFullJarRelease
-> Task :expo-av:bundleLibRuntimeToJarRelease
-> Task :expo-av:createFullJarRelease
-> Task :expo-background-fetch:bundleLibRuntimeToJarRelease
-> Task :expo-background-fetch:createFullJarRelease
-> Task :expo-constants:bundleLibRuntimeToJarRelease
-> Task :expo-constants:createFullJarRelease
-> Task :expo-file-system:bundleLibRuntimeToJarRelease
-> Task :expo-file-system:createFullJarRelease
-> Task :expo-font:bundleLibRuntimeToJarRelease
-> Task :expo-font:createFullJarRelease
-> Task :expo-haptics:bundleLibRuntimeToJarRelease
-> Task :expo-haptics:createFullJarRelease
-> Task :expo-keep-awake:bundleLibRuntimeToJarRelease
-> Task :expo-keep-awake:createFullJarRelease
-> Task :expo-location:bundleLibRuntimeToJarRelease
-> Task :expo-location:createFullJarRelease
-> Task :expo-splash-screen:bundleLibRuntimeToJarRelease
-> Task :expo-splash-screen:createFullJarRelease
-> Task :expo-task-manager:bundleLibRuntimeToJarRelease
-> Task :expo-task-manager:createFullJarRelease
-> Task :unimodules-app-loader:bundleLibRuntimeToJarRelease
-> Task :unimodules-app-loader:createFullJarRelease
-> Task :expo-web-browser:bundleLibRuntimeToJarRelease
-> Task :expo-web-browser:createFullJarRelease
-> Task :expo-notifications:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/Utils.kt:41:21 'get(String!): Any?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/Utils.kt:93:25 No cast needed
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/Utils.kt:97:26 No cast needed
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/categories/ExpoNotificationCategoriesModule.kt:69:40 'getParcelableArrayList(String?): ArrayList<T!>?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/categories/ExpoNotificationCategoriesModule.kt:122:36 'getParcelable(String?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/debug/DebugLogging.kt:30:23 'get(String!): Any?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/model/RemoteNotificationContent.kt:21:45 'readParcelable(ClassLoader?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/model/triggers/FirebaseNotificationTrigger.kt:16:12 'readParcelable(ClassLoader?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/ExpoNotificationPresentationModule.kt:44:33 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/ExpoNotificationPresentationModule.kt:55:43 'getParcelableArrayList(String?): ArrayList<T!>?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/ExpoNotificationPresentationModule.kt:59:33 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/ExpoNotificationPresentationModule.kt:79:31 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/ExpoNotificationPresentationModule.kt:93:31 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/builders/ExpoNotificationBuilder.kt:208:26 Unnecessary safe call on a non-null receiver of type NotificationPriority
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/builders/ExpoNotificationBuilder.kt:208:40 Elvis operator (?:) always returns the left operand of non-nullable type Int
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/presentation/builders/ExpoNotificationBuilder.kt:230:11 Condition 'requestPriority != null' is always 'true'
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/scheduling/NotificationScheduler.kt:50:40 'getParcelableArrayList(String?): ArrayList<T!>?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/scheduling/NotificationScheduler.kt:57:33 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/scheduling/NotificationScheduler.kt:80:35 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/scheduling/NotificationScheduler.kt:127:31 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/scheduling/NotificationScheduler.kt:141:31 'getSerializable(String?): Serializable?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:480:34 'getParcelable(String?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:481:28 'getParcelable(String?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:505:33 'getParcelableExtra(String!): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:506:27 'getParcelableExtra(String!): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:604:54 'get(String!): Any?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:671:22 'getParcelable(String?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:672:22 'getParcelable(String?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:699:14 'getParcelableExtra(String!): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:729:18 'getParcelableExtra(String!): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/NotificationsService.kt:769:22 'getParcelable(String?): T?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/delegates/Base64Serialization.kt:26:45 Returning type parameter has been inferred to Nothing implicitly because Nothing is more specific than specified expected type. Please specify type arguments explicitly in accordance with expected type to hide this warning. Nothing can produce an exception at runtime. See KT-36776 for more details.
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/delegates/ExpoHandlingDelegate.kt:63:85 Parameter 'notificationResponse' is never used
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/delegates/ExpoPresentationDelegate.kt:190:70 'priority: Int' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/delegates/ExpoPresentationDelegate.kt:191:41 'vibrate: LongArray!' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/delegates/ExpoPresentationDelegate.kt:192:30 'sound: Uri!' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/delegates/ExpoPresentationDelegate.kt:205:41 'get(String!): Any?' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/service/delegates/ExpoPresentationDelegate.kt:208:124 'get(String!): Any?' is deprecated. Deprecated in Java
-> Task :expo-modules-core:configureCMakeRelWithDebInfo[armeabi-v7a]
-> Task :react-native-reanimated:configureCMakeRelWithDebInfo[armeabi-v7a]
-> Task :expo-notifications:compileReleaseJavaWithJavac
-Note: Some input files use or override a deprecated API.
-Note: Recompile with -Xlint:deprecation for details.
-Note: /home/expo/workingdir/build/node_modules/expo-notifications/android/src/main/java/expo/modules/notifications/notifications/model/NotificationCategory.java uses unchecked or unsafe operations.
-Note: Recompile with -Xlint:unchecked for details.
-> Task :expo-notifications:bundleLibCompileToJarRelease
-> Task :expo:compileReleaseKotlin
-w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:20:34 'ReactFeatureFlags' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:153:11 'ReactFeatureFlags' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:161:34 'constructor ReactDelegate(Activity!, ReactNativeHost!, String?, Bundle?)' is deprecated. Deprecated in Java
-w: file:///home/expo/workingdir/build/node_modules/expo/android/src/main/java/expo/modules/ReactActivityDelegateWrapper.kt:231:10 'ReactFeatureFlags' is deprecated. Deprecated in Java
-> Task :expo:compileReleaseJavaWithJavac
-> Task :expo:bundleLibCompileToJarRelease
-> Task :expo:bundleLibRuntimeToJarRelease
-> Task :expo:processReleaseJavaRes
-> Task :expo:createFullJarRelease
-> Task :expo:extractReleaseAnnotations
-> Task :expo:mergeReleaseGeneratedProguardFiles
-> Task :expo:mergeReleaseConsumerProguardFiles
-> Task :expo:mergeReleaseJavaResource
-> Task :expo:syncReleaseLibJars
-> Task :expo:bundleReleaseLocalLintAar
-> Task :expo-notifications:extractReleaseAnnotations
-> Task :expo-notifications:mergeReleaseGeneratedProguardFiles
-> Task :expo-notifications:mergeReleaseConsumerProguardFiles
-> Task :expo-notifications:processReleaseJavaRes
-> Task :expo-notifications:mergeReleaseJavaResource
-> Task :expo-notifications:syncReleaseLibJars
-> Task :expo-notifications:bundleReleaseLocalLintAar
-> Task :expo-notifications:bundleLibRuntimeToJarRelease
-> Task :expo-notifications:createFullJarRelease
-> Task :react-native-screens:configureCMakeRelWithDebInfo[x86]
-> Task :react-native-screens:buildCMakeRelWithDebInfo[x86]
-> Task :react-native-screens:configureCMakeRelWithDebInfo[x86_64]
-> Task :expo-modules-core:buildCMakeRelWithDebInfo[armeabi-v7a]
-> Task :react-native-screens:buildCMakeRelWithDebInfo[x86_64]
-> Task :react-native-screens:mergeReleaseJniLibFolders
-> Task :react-native-screens:mergeReleaseNativeLibs
-> Task :react-native-screens:stripReleaseDebugSymbols
-> Task :react-native-screens:copyReleaseJniLibsProjectAndLocalJars
-> Task :react-native-screens:extractDeepLinksForAarRelease
-> Task :react-native-screens:extractReleaseAnnotations
-> Task :react-native-screens:mergeReleaseGeneratedProguardFiles
-> Task :react-native-screens:mergeReleaseConsumerProguardFiles
-> Task :react-native-screens:mergeReleaseShaders
-> Task :react-native-screens:compileReleaseShaders
-NO-SOURCE
-> Task :react-native-screens:generateReleaseAssets
-UP-TO-DATE
-> Task :react-native-screens:packageReleaseAssets
-> Task :react-native-screens:prepareLintJarForPublish
-> Task :react-native-screens:prepareReleaseArtProfile
-> Task :react-native-screens:mergeReleaseJavaResource
-> Task :react-native-reanimated:buildCMakeRelWithDebInfo[armeabi-v7a]
-> Task :react-native-screens:syncReleaseLibJars
-> Task :react-native-screens:bundleReleaseLocalLintAar
-> Task :react-native-screens:extractProguardFiles
-> Task :react-native-screens:writeReleaseLintModelMetadata
-> Task :react-native-screens:generateReleaseLintModel
-> Task :react-native-svg:bundleLibRuntimeToJarRelease
-> Task :react-native-svg:processReleaseJavaRes NO-SOURCE
-> Task :react-native-svg:createFullJarRelease
-> Task :react-native-svg:mergeReleaseJniLibFolders
-> Task :react-native-svg:mergeReleaseNativeLibs NO-SOURCE
-> Task :react-native-svg:stripReleaseDebugSymbols NO-SOURCE
-> Task :react-native-svg:copyReleaseJniLibsProjectAndLocalJars
-> Task :react-native-svg:extractDeepLinksForAarRelease
-> Task :react-native-svg:extractReleaseAnnotations
-> Task :react-native-svg:mergeReleaseGeneratedProguardFiles
-> Task :react-native-svg:mergeReleaseConsumerProguardFiles
-> Task :react-native-svg:mergeReleaseShaders
-> Task :react-native-svg:compileReleaseShaders NO-SOURCE
-> Task :react-native-svg:generateReleaseAssets UP-TO-DATE
-> Task :react-native-svg:packageReleaseAssets
-> Task :react-native-svg:prepareLintJarForPublish
-> Task :react-native-svg:prepareReleaseArtProfile
-> Task :react-native-svg:mergeReleaseJavaResource
-> Task :react-native-svg:syncReleaseLibJars
-> Task :react-native-svg:bundleReleaseLocalLintAar
-> Task :react-native-svg:extractProguardFiles
-> Task :react-native-svg:writeReleaseLintModelMetadata
-> Task :react-native-svg:generateReleaseLintModel
-> Task :react-native-async-storage_async-storage:generateReleaseLintVitalModel
-> Task :app:createBundleReleaseJsAndAssets
-Android Bundling failed 129650ms node_modules/expo-router/entry.js (2579 modules)
-SyntaxError: SyntaxError: /home/expo/workingdir/build/components/TripCompletionModal.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (369:4)
-[0m [90m 367 |[39m         [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 368 |[39m       [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 369 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m 370 |[39m   )[33m;[39m
- [90m 371 |[39m }
- [90m 372 |[39m[0m
-SyntaxError: /home/expo/workingdir/build/components/TripCompletionModal.tsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (369:4)
-[0m [90m 367 |[39m         [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m 368 |[39m       [33m<[39m[33m/[39m[33mView[39m[33m>[39m
-[31m[1m>[22m[39m[90m 369 |[39m     [33m<[39m[33m/[39m[33mView[39m[33m>[39m
- [90m     |[39m     [31m[1m^[22m[39m
- [90m 370 |[39m   )[33m;[39m
- [90m 371 |[39m }
- [90m 372 |[39m[0m
-    at constructor (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:367:19)
-    at TypeScriptParserMixin.raise (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:6630:19)
-    at TypeScriptParserMixin.jsxParseElementAt (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:4775:18)
-    at TypeScriptParserMixin.jsxParseElement (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:4782:17)
-    at TypeScriptParserMixin.parseExprAtom (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:4792:19)
-    at TypeScriptParserMixin.parseExprSubscripts (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11085:23)
-    at TypeScriptParserMixin.parseUpdate (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11070:21)
-    at TypeScriptParserMixin.parseMaybeUnary (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11050:23)
-    at TypeScriptParserMixin.parseMaybeUnary (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:9857:18)
-    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10903:61)
-    at TypeScriptParserMixin.parseExprOps (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10908:23)
-    at TypeScriptParserMixin.parseMaybeConditional (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10885:23)
-    at TypeScriptParserMixin.parseMaybeAssign (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10835:21)
-    at /home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:9795:39
-    at TypeScriptParserMixin.tryParse (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:6938:20)
-    at TypeScriptParserMixin.parseMaybeAssign (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:9795:18)
-    at /home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10804:39
-    at TypeScriptParserMixin.allowInAnd (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12436:12)
-    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10804:17)
-    at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12503:17)
-    at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11683:28)
-    at TypeScriptParserMixin.parseExprAtom (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11335:23)
-    at TypeScriptParserMixin.parseExprAtom (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:4797:20)
-    at TypeScriptParserMixin.parseExprSubscripts (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11085:23)
-    at TypeScriptParserMixin.parseUpdate (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11070:21)
-    at TypeScriptParserMixin.parseMaybeUnary (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:11050:23)
-    at TypeScriptParserMixin.parseMaybeUnary (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:9857:18)
-    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10903:61)
-    at TypeScriptParserMixin.parseExprOps (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10908:23)
-    at TypeScriptParserMixin.parseMaybeConditional (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10885:23)
-    at TypeScriptParserMixin.parseMaybeAssign (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10835:21)
-    at TypeScriptParserMixin.parseMaybeAssign (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:9806:20)
-    at TypeScriptParserMixin.parseExpressionBase (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10788:23)
-    at /home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10784:39
-    at TypeScriptParserMixin.allowInAnd (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12431:16)
-    at TypeScriptParserMixin.parseExpression (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:10784:17)
-    at TypeScriptParserMixin.parseReturnStatement (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:13151:28)
-    at TypeScriptParserMixin.parseStatementContent (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12807:21)
-    at TypeScriptParserMixin.parseStatementContent (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:9532:18)
-    at TypeScriptParserMixin.parseStatementLike (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12776:17)
-    at TypeScriptParserMixin.parseStatementListItem (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12756:17)
-    at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:13325:61)
-    at TypeScriptParserMixin.parseBlockBody (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:13318:10)
-    at TypeScriptParserMixin.parseBlock (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:13306:10)
-    at TypeScriptParserMixin.parseFunctionBody (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12110:24)
-    at TypeScriptParserMixin.parseFunctionBodyAndFinish (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12096:10)
-    at TypeScriptParserMixin.parseFunctionBodyAndFinish (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:9252:18)
-    at /home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:13454:12
-    at TypeScriptParserMixin.withSmartMixTopicForbiddingContext (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:12413:14)
-    at TypeScriptParserMixin.parseFunction (/home/expo/workingdir/build/node_modules/@babel/parser/lib/index.js:13453:10)
-> Task :app:createBundleReleaseJsAndAssets FAILED
-> Task :react-native-async-storage_async-storage:lintVitalAnalyzeRelease
-FAILURE: Build failed with an exception.
-* What went wrong:
-Execution failed for task ':app:createBundleReleaseJsAndAssets'.
-> Process 'command 'node'' finished with non-zero exit value 1
-* Try:
-> Run with --stacktrace option to get the stack trace.
-> Run with --info or --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
-BUILD FAILED in 4m 38s
-773 actionable tasks: 773 executed
-Error: Gradle build failed with unknown error. See logs for the "Run gradlew" phase for more information.
+--------- beginning of main
+10-19 17:59:25.509 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:25.509 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:25.509 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:25.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:25.513 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:25.514 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:27.632 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 17:59:27.633 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 17:59:28.466 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 17:59:28.471 21104 21779 W SystemServiceRegistry: No service published for: wifirtt
+10-19 17:59:28.490 21104 22617 I WifiScanner: onFullResults
+10-19 17:59:28.490 21104 22225 I WifiScanner: onFullResults
+10-19 17:59:28.491 21104 21250 I WifiScanner: onFullResults
+10-19 17:59:28.535 21104 21771 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 17:59:28.566 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:28.566 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:28.566 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:28.566 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:28.569 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:28.570 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 17:59:30.501 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:30.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:30.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:30.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:30.507 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:30.521 21104 21771 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 17:59:31.841 21104 21188 I ActivityScheduler: nextTriggerTime: 1321146204, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 17:59:33.493 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 17:59:33.498 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 17:59:34.008 21104 21118 I WifiScanner: onFullResults
+10-19 17:59:34.011 21104 21250 I WifiScanner: onFullResults
+10-19 17:59:34.012 21104 21143 I WifiScanner: onFullResults
+10-19 17:59:34.026 21104 21779 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 17:59:34.063 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:34.064 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:34.064 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:34.066 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:34.068 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:34.070 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 17:59:35.497 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:35.497 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:35.497 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:35.498 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:35.501 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:35.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:38.571 21163 22073 I Authzen : [DeviceStateSyncManager] The server is in sync with current state. Nothing to do
+10-19 17:59:39.008 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 17:59:39.013 21104 21779 W SystemServiceRegistry: No service published for: wifirtt
+10-19 17:59:39.035 21104 21143 I WifiScanner: onFullResults
+10-19 17:59:39.036 21104 21118 I WifiScanner: onFullResults
+10-19 17:59:39.036 21104 21143 I WifiScanner: onFullResults
+10-19 17:59:39.090 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 17:59:39.129 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:39.130 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:39.130 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:39.130 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:39.133 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:39.135 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 17:59:40.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:40.506 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:40.506 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:40.507 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:40.509 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:40.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:42.461  7096  7120 I native  : I0000 00:00:1760876982.461426    7120 soda_async_impl.cc:1383] Current audio timestamp: 1760876982359289
+10-19 17:59:42.479  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 17:59:44.038 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 17:59:44.046 21104 21771 W SystemServiceRegistry: No service published for: wifirtt
+10-19 17:59:44.790 21104 21118 I WifiScanner: onFullResults
+10-19 17:59:44.790 21104 21250 I WifiScanner: onFullResults
+10-19 17:59:44.790 21104 21143 I WifiScanner: onFullResults
+10-19 17:59:44.801 21104 21779 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 17:59:44.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:44.830 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:44.830 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:44.830 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:44.834 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 17:59:44.892 21104 21771 I TFLite-in-PlayServices: Created interpreter.
+10-19 17:59:44.917 21104 21771 I TFLite-in-PlayServices: Created interpreter.
+10-19 17:59:44.943 21104 21771 I SemanticLocation: (REDACTED) [Inferrer] %s%s
+10-19 17:59:45.079 14485 14591 I chbox:googleapp: Explicit concurrent copying GC freed 3173KB AllocSpace bytes, 8(128KB) LOS objects, 49% free, 15MB/30MB, paused 359us,123us total 355.982ms
+10-19 17:59:45.295 14485 14591 I chbox:googleapp: Explicit concurrent copying GC freed 255KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 15MB/30MB, paused 2.876ms,126us total 209.703ms
+10-19 17:59:45.305 14485 14591 I app_process: Native memory cannot be purged, Android API level < 28.
+10-19 17:59:45.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:45.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:45.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:45.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:45.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:45.507 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:45.508 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:47.456 21104 21188 I ActivityScheduler: nextTriggerTime: 1321161820, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 17:59:47.457 21104 21771 I SemanticLocation: New activity record out of order; sorting [CONTEXT service_id=173 ]
+10-19 17:59:49.793 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 17:59:49.800 21104 21779 W SystemServiceRegistry: No service published for: wifirtt
+10-19 17:59:49.822 21104 22225 I WifiScanner: onFullResults
+10-19 17:59:49.823 21104 21143 I WifiScanner: onFullResults
+10-19 17:59:49.823 21104 22224 I WifiScanner: onFullResults
+10-19 17:59:49.860 21104 21771 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 17:59:49.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:49.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:49.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:49.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:49.913 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:49.915 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 17:59:50.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:50.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:50.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:50.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:50.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:50.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:50.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:54.825 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 17:59:54.831 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 17:59:55.328 21104 22224 I WifiScanner: onFullResults
+10-19 17:59:55.330 21104 21118 I WifiScanner: onFullResults
+10-19 17:59:55.331 21104 21143 I WifiScanner: onFullResults
+10-19 17:59:55.345 21104 21771 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 17:59:55.384 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:55.385 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:55.385 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:55.385 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:55.387 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:55.389 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 17:59:55.516 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:55.516 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:55.516 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:55.516 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:55.517 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:55.520 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:55.521 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:56.517 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:56.518 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:56.519 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:56.519 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 17:59:56.521 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:56.522 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 17:59:58.210 21104 21188 I ActivityScheduler: nextTriggerTime: 1321172573, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:00.058 15531 15531 I ndroid.settings: Using CollectorTypeCC GC.
+10-19 18:00:00.065 15531 15531 E ndroid.settings: Not starting debugger since process cannot load the jdwp agent.
+10-19 18:00:00.073 15531 15531 E ndroid.settings: BBinder_init Processname  <pre-initialized>  
+10-19 18:00:00.074 15531 15531 E ndroid.settings: BBinder_init hasGetProcessName  <pre-initialized>
+10-19 18:00:00.331 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:00.335 21104 21779 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:00.346 21104 21118 I WifiScanner: onFullResults
+10-19 18:00:00.347 21104 21143 I WifiScanner: onFullResults
+10-19 18:00:00.348 21104 22224 I WifiScanner: onFullResults
+10-19 18:00:00.381 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:00.411 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:00.412 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:00.412 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:00.412 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:00.415 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:00.418 21104 22070 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 18:00:00.705 15531 22128 E ndroid.settings: Invalid resource ID 0x00000000.
+--------- beginning of system
+10-19 18:00:00.718 15531 22132 W PowerProfile: screen.on is deprecated! Use screen.on.display0 instead.
+10-19 18:00:00.718 15531 22132 W PowerProfile: screen.full is deprecated! Use screen.full.display0 instead.
+10-19 18:00:00.719 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x0, drain:SLEEP,RAT:DEFAULT
+10-19 18:00:00.719 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x10000000, drain:IDLE,RAT:DEFAULT
+10-19 18:00:00.719 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x20000000, drain:RX,RAT:DEFAULT
+10-19 18:00:00.719 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x30000000, drain:TX,level:0,RAT:DEFAULT
+10-19 18:00:00.719 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x31000000, drain:TX,level:1,RAT:DEFAULT
+10-19 18:00:00.721 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x32000000, drain:TX,level:2,RAT:DEFAULT
+10-19 18:00:00.721 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x33000000, drain:TX,level:3,RAT:DEFAULT
+10-19 18:00:00.721 15531 22132 W ModemPowerProfile: getAverageBatteryDrainMaH called with unexpected key: 0x34000000, drain:TX,level:4,RAT:DEFAULT
+10-19 18:00:01.016 15531 22128 E ndroid.settings: Invalid resource ID 0x00000000.
+10-19 18:00:01.483 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:01.483 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:01.484 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:01.484 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:01.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:01.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:05.351 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:05.360 21104 21779 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:05.851 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:05.853 21104 21250 I WifiScanner: onFullResults
+10-19 18:00:05.854 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:05.860 21104 21779 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:05.883 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:05.883 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:05.883 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:05.883 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:05.885 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:05.886 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:06.387 15531 22132 W ratelimit: Single process limit 50/s drop 182 lines.
+10-19 18:00:06.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:06.500 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:06.500 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:06.500 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:06.501 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:06.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:06.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:08.621 15531 22132 E IPCThreadState: Binder transaction failure. id: 457694284, BR_*: 29201, error: -28 (No space left on device)
+10-19 18:00:08.622 15531 22132 W BpBinder: Large outgoing transaction of 4333068 bytes, interface descriptor , code 13
+10-19 18:00:08.622 15531 22132 E JavaBinder: !!! FAILED BINDER TRANSACTION !!!  (parcel size = 4333068)
+10-19 18:00:08.725 21104 21188 I ActivityScheduler: nextTriggerTime: 1321183088, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:10.855 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:10.861 21104 21779 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:10.876 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:10.876 21104 21250 I WifiScanner: onFullResults
+10-19 18:00:10.877 21104 21142 I WifiScanner: onFullResults
+10-19 18:00:10.944 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:10.991 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:10.992 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:10.993 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:10.993 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:10.997 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:11.000 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:11.513 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:11.514 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:11.514 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:11.514 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:11.515 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:11.517 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:11.518 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:12.461  7096  7120 I native  : I0000 00:00:1760877012.460923    7120 soda_async_impl.cc:1383] Current audio timestamp: 1760877012359289
+10-19 18:00:12.479  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:15.881 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:15.888 21104 22181 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:16.394 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:16.394 21104 21250 I WifiScanner: onFullResults
+10-19 18:00:16.397 21104 21142 I WifiScanner: onFullResults
+10-19 18:00:16.410 21104 21779 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:16.448 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:16.449 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:16.449 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:16.450 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:16.456 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:16.476 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:16.477 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:16.477 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:16.477 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:16.477 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:16.478 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:16.478 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:16.521 21104 21771 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:00:16.544 21104 21771 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:00:16.567 21104 21771 I SemanticLocation: (REDACTED) [Inferrer] %s%s
+10-19 18:00:19.265 21104 21188 I ActivityScheduler: nextTriggerTime: 1321193629, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:21.395 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:21.405 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:21.425 21104 21142 I WifiScanner: onFullResults
+10-19 18:00:21.425 21104 21250 I WifiScanner: onFullResults
+10-19 18:00:21.426 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:21.455 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:21.477 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:21.477 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:21.478 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:21.478 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:21.481 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:21.486 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:21.907 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/dyn/app/IqooSecure/IqooSecure.apk' with 2 weak references
+10-19 18:00:21.908 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/BBKAccount/BBKAccount.apk' with 2 weak references
+10-19 18:00:21.909 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/AudioEffect/AudioEffect.apk' with 2 weak references
+10-19 18:00:21.909 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/VivoSmartMultiWindow/VivoSmartMultiWindow.apk' with 2 weak references
+10-19 18:00:21.912 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/SmartKey/SmartKey.apk' with 2 weak references
+10-19 18:00:21.912 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~wNMuk5gdH9kB2VTegQ6Sxg==/com.a1taxi.driverpro-oApJGQ7M2XY8Z_KeTnNMFg==/base.apk' with 2 weak references
+10-19 18:00:21.913 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/SuperCard/SuperCard.apk' with 2 weak references
+10-19 18:00:21.913 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~wGnTClMI1tnlJxeSH0sgWQ==/com.a1taxi.a1taxicustomer-iKq0bxkUZD0N_mIC98uDqQ==/base.apk' with 2 weak references
+10-19 18:00:21.914 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/BBKCrontab/BBKCrontab.apk' with 2 weak references
+10-19 18:00:21.914 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~OLNwR-GNpxdAZ-xkr0Y-2g==/com.cleartrip.android-1M70SPT8gUBH3pRk8e1vcw==/base.apk' with 2 weak references
+10-19 18:00:21.915 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/FloatingBall/FloatingBall.apk' with 2 weak references
+10-19 18:00:21.915 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~Ni5m9rOIYd20IHvTFoOnuQ==/com.mediocre.smashhit-qUOp6xc7dkQFBJI_0eD-FQ==/base.apk' with 2 weak references
+10-19 18:00:21.916 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/SmartShot/SmartShot.apk' with 2 weak references
+10-19 18:00:21.916 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~0DmDyaLsvKFH0kLl4kTizw==/com.booking-EsbCWe-ifgz_6RhgMXewWg==/base.apk' with 2 weak references
+10-19 18:00:21.917 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/FloatingCamera/FloatingCamera.apk' with 2 weak references
+10-19 18:00:21.918 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/MinScreen/MinScreen.apk' with 2 weak references
+10-19 18:00:21.918 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~0DmDyaLsvKFH0kLl4kTizw==/com.booking-EsbCWe-ifgz_6RhgMXewWg==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:21.919 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~0DmDyaLsvKFH0kLl4kTizw==/com.booking-EsbCWe-ifgz_6RhgMXewWg==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:21.919 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~O6rl15dJb50drM-hNT-o5A==/host.exp.exponent-VV2RWFguikxSwJOsrbvgyA==/base.apk' with 2 weak references
+10-19 18:00:21.919 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~O6rl15dJb50drM-hNT-o5A==/host.exp.exponent-VV2RWFguikxSwJOsrbvgyA==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:21.920 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~O6rl15dJb50drM-hNT-o5A==/host.exp.exponent-VV2RWFguikxSwJOsrbvgyA==/split_config.en.apk' with 2 weak references
+10-19 18:00:21.920 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~O6rl15dJb50drM-hNT-o5A==/host.exp.exponent-VV2RWFguikxSwJOsrbvgyA==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:21.920 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~Na_E4VXYPEdS0423EwWhpQ==/com.google.android.music-dS_7d7woOeToHl_Ajdp1GQ==/base.apk' with 2 weak references
+10-19 18:00:21.921 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~KgE9HbnByLOv1uv9I67nHA==/com.microsoft.office.excel-Md9DT4sOCcyImNgQ8BsZRw==/base.apk' with 2 weak references
+10-19 18:00:21.921 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/NightPearlUI/NightPearlUI.apk' with 2 weak references
+10-19 18:00:21.922 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~N-XV-PAB6w_YlEK8eoyoXQ==/com.airbnb.android-dnv1mIc1USK14kK-VA0AFw==/base.apk' with 2 weak references
+10-19 18:00:21.923 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~N-XV-PAB6w_YlEK8eoyoXQ==/com.airbnb.android-dnv1mIc1USK14kK-VA0AFw==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:21.923 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~N-XV-PAB6w_YlEK8eoyoXQ==/com.airbnb.android-dnv1mIc1USK14kK-VA0AFw==/split_config.en.apk' with 2 weak references
+10-19 18:00:21.924 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~N-XV-PAB6w_YlEK8eoyoXQ==/com.airbnb.android-dnv1mIc1USK14kK-VA0AFw==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:21.924 15531 22109 W System  : A resource failed to call ContentProviderClient.close. 
+10-19 18:00:21.924 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~VECHlTu1qXlRxryLYkx5ew==/com.whatsapp-rzMrQGAnUj1JTLL3REp3oQ==/base.apk' with 2 weak references
+10-19 18:00:21.925 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/BBKSoundRecorder/BBKSoundRecorder.apk' with 1 weak references
+10-19 18:00:21.926 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~VECHlTu1qXlRxryLYkx5ew==/com.whatsapp-rzMrQGAnUj1JTLL3REp3oQ==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:21.926 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/BBKWeatherProvider/BBKWeatherProvider.apk' with 2 weak references
+10-19 18:00:21.927 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~VECHlTu1qXlRxryLYkx5ew==/com.whatsapp-rzMrQGAnUj1JTLL3REp3oQ==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:21.927 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~U7zqbrHB7HfKaC6SX_ljFg==/com.google.android.youtube-j2UNFWJe_A00mSop1jNYgw==/base.apk' with 2 weak references
+10-19 18:00:21.928 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~deN_TmpOilfXLRk3X_pDgA==/com.sbi.lotusintouch-GwIigX_wzAzRki-sC78gtg==/base.apk' with 2 weak references
+10-19 18:00:21.928 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~U7zqbrHB7HfKaC6SX_ljFg==/com.google.android.youtube-j2UNFWJe_A00mSop1jNYgw==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:21.929 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~U7zqbrHB7HfKaC6SX_ljFg==/com.google.android.youtube-j2UNFWJe_A00mSop1jNYgw==/split_config.en.apk' with 2 weak references
+10-19 18:00:21.929 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~U7zqbrHB7HfKaC6SX_ljFg==/com.google.android.youtube-j2UNFWJe_A00mSop1jNYgw==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:21.930 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~r5J_GLtr0Ap9j8K9DJ5ijw==/com.application.zomato-zamaQzhKvK_5MHAV-AS52Q==/base.apk' with 2 weak references
+10-19 18:00:21.930 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/AssistantFunction/AssistantFunction.apk' with 1 weak references
+10-19 18:00:21.931 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.uwb/priv-app/ServiceUwbResources@AP3A.240905.015.A2/ServiceUwbResources.apk' with 1 weak references
+10-19 18:00:21.931 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~r5J_GLtr0Ap9j8K9DJ5ijw==/com.application.zomato-zamaQzhKvK_5MHAV-AS52Q==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:21.932 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/asvit/asvit.apk' with 1 weak references
+10-19 18:00:21.932 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk' with 1 weak references
+10-19 18:00:21.932 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.extservices/priv-app/GoogleExtServices@360906080/GoogleExtServices.apk' with 1 weak references
+10-19 18:00:21.933 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~v5jx9H4i58uFQrmTpVMAlQ==/com.makemytrip-FL-Cg87u4yaxQvK-dUkgGA==/base.apk' with 2 weak references
+10-19 18:00:21.934 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/MonochromeIcons/MonochromeIcons.apk' with 1 weak references
+10-19 18:00:21.934 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk' with 1 weak references
+10-19 18:00:22.000 15531 22109 W ratelimit: Single process limit 50/s drop 203 lines.
+10-19 18:00:22.000 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.gu.apk' with 2 weak references
+10-19 18:00:22.001 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/PacProcessor/PacProcessor.apk' with 1 weak references
+10-19 18:00:22.001 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.hi.apk' with 2 weak references
+10-19 18:00:22.001 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/SimAppDialog/SimAppDialog.apk' with 1 weak references
+10-19 18:00:22.001 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.kn.apk' with 2 weak references
+10-19 18:00:22.002 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.ml.apk' with 2 weak references
+10-19 18:00:22.002 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /apex/com.android.adservices/priv-app/AdServicesApkGoogle@360918020/AdServicesApkGoogle.apk' with 1 weak references
+10-19 18:00:22.003 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.mr.apk' with 2 weak references
+10-19 18:00:22.003 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.pa.apk' with 2 weak references
+10-19 18:00:22.003 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.ta.apk' with 2 weak references
+10-19 18:00:22.004 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.te.apk' with 2 weak references
+10-19 18:00:22.004 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UpOT7pjJA-LwQ5bb11VS_g==/com.google.android.apps.maps-bSebZifGKJTp-L5WetqEiw==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:22.005 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~fEibWwpOoq33dRZSFZ920A==/com.google.android.accessibility.switchaccess-cweGvKt1T9_r8DM83BM_jg==/base.apk' with 2 weak references
+10-19 18:00:22.006 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~fEibWwpOoq33dRZSFZ920A==/com.google.android.accessibility.switchaccess-cweGvKt1T9_r8DM83BM_jg==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:22.006 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~Fune0dJ1ovq-5fANWftqFg==/com.google.android.gm-ewu6r1G9sFW6ivWtKWGGqw==/base.apk' with 2 weak references
+10-19 18:00:22.007 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~Fune0dJ1ovq-5fANWftqFg==/com.google.android.gm-ewu6r1G9sFW6ivWtKWGGqw==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:22.007 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~Fune0dJ1ovq-5fANWftqFg==/com.google.android.gm-ewu6r1G9sFW6ivWtKWGGqw==/split_config.en.apk' with 2 weak references
+10-19 18:00:22.007 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~Fune0dJ1ovq-5fANWftqFg==/com.google.android.gm-ewu6r1G9sFW6ivWtKWGGqw==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:22.008 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UBnwYHIuTzUPLhO34uja1g==/com.google.android.tts-mzMFtun4HXfQ3oF4sLehMg==/base.apk' with 2 weak references
+10-19 18:00:22.008 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UBnwYHIuTzUPLhO34uja1g==/com.google.android.tts-mzMFtun4HXfQ3oF4sLehMg==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:22.008 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UBnwYHIuTzUPLhO34uja1g==/com.google.android.tts-mzMFtun4HXfQ3oF4sLehMg==/split_config.en.apk' with 2 weak references
+10-19 18:00:22.009 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~UBnwYHIuTzUPLhO34uja1g==/com.google.android.tts-mzMFtun4HXfQ3oF4sLehMg==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:22.009 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~72FFAOgW4Aj25KqlkjYabQ==/com.google.android.apps.tachyon-WhV8FKs-nOcVutiIWd6XRA==/base.apk' with 2 weak references
+10-19 18:00:22.010 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~72FFAOgW4Aj25KqlkjYabQ==/com.google.android.apps.tachyon-WhV8FKs-nOcVutiIWd6XRA==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:22.010 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~72FFAOgW4Aj25KqlkjYabQ==/com.google.android.apps.tachyon-WhV8FKs-nOcVutiIWd6XRA==/split_config.en.apk' with 2 weak references
+10-19 18:00:22.010 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~72FFAOgW4Aj25KqlkjYabQ==/com.google.android.apps.tachyon-WhV8FKs-nOcVutiIWd6XRA==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:22.010 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~yB1mBXGIdhgqkukshb-JDA==/com.google.android.calendar-6CGrgNbeUJi6yHTMsnQEPg==/base.apk' with 2 weak references
+10-19 18:00:22.011 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~yB1mBXGIdhgqkukshb-JDA==/com.google.android.calendar-6CGrgNbeUJi6yHTMsnQEPg==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:22.011 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~yB1mBXGIdhgqkukshb-JDA==/com.google.android.calendar-6CGrgNbeUJi6yHTMsnQEPg==/split_config.en.apk' with 2 weak references
+10-19 18:00:22.011 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~yB1mBXGIdhgqkukshb-JDA==/com.google.android.calendar-6CGrgNbeUJi6yHTMsnQEPg==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:22.012 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~JmuPTYBTj-jaJNIstZq-9w==/com.android.chrome-bNbZsDOoFREdLvLbMoksJw==/base.apk' with 2 weak references
+10-19 18:00:22.012 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~JmuPTYBTj-jaJNIstZq-9w==/com.android.chrome-bNbZsDOoFREdLvLbMoksJw==/split_chrome.apk' with 2 weak references
+10-19 18:00:22.012 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~JmuPTYBTj-jaJNIstZq-9w==/com.android.chrome-bNbZsDOoFREdLvLbMoksJw==/split_config.en.apk' with 2 weak references
+10-19 18:00:22.013 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~JmuPTYBTj-jaJNIstZq-9w==/com.android.chrome-bNbZsDOoFREdLvLbMoksJw==/split_dev_ui.apk' with 2 weak references
+10-19 18:00:22.013 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~JmuPTYBTj-jaJNIstZq-9w==/com.android.chrome-bNbZsDOoFREdLvLbMoksJw==/split_on_demand.apk' with 2 weak references
+10-19 18:00:22.013 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~JmuPTYBTj-jaJNIstZq-9w==/com.android.chrome-bNbZsDOoFREdLvLbMoksJw==/split_stack_unwinder.apk' with 2 weak references
+10-19 18:00:22.013 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~JmuPTYBTj-jaJNIstZq-9w==/com.android.chrome-bNbZsDOoFREdLvLbMoksJw==/split_test_dummy.apk' with 2 weak references
+10-19 18:00:22.013 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~y8c-7G8746PBceSb85X2WQ==/com.google.android.trichromelibrary_739011133-eYqA66OgqxH0rGEpyXHuGg==/base.apk' with 2 weak references
+10-19 18:00:22.014 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~6d7y0P6J4f-fayTRuhBzLQ==/com.google.audio.hearing.visualization.accessibility.scribe-ZOQw3FKv0LN30VeoGpht4Q==/base.apk' with 2 weak references
+10-19 18:00:22.014 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk' with 1 weak references
+10-19 18:00:22.015 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk' with 1 weak references
+10-19 18:00:22.015 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/CertInstaller/CertInstaller.apk' with 1 weak references
+10-19 18:00:22.015 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~6d7y0P6J4f-fayTRuhBzLQ==/com.google.audio.hearing.visualization.accessibility.scribe-ZOQw3FKv0LN30VeoGpht4Q==/split_config.arm64_v8a.apk' with 2 weak references
+10-19 18:00:22.016 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/app/GoogleLocationHistory/GoogleLocationHistory.apk' with 2 weak references
+10-19 18:00:22.016 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk' with 1 weak references
+10-19 18:00:22.017 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/framework/framework-res.apk' with 2 weak references
+10-19 18:00:22.018 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/priv-app/Contacts/Contacts.apk' with 2 weak references
+10-19 18:00:22.019 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~rUeNTINGgbUNobPZ0Qh4uw==/com.google.android.apps.wellbeing-aBN_STDA7BMcUbQ3HgeMfA==/base.apk' with 2 weak references
+10-19 18:00:22.021 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~rUeNTINGgbUNobPZ0Qh4uw==/com.google.android.apps.wellbeing-aBN_STDA7BMcUbQ3HgeMfA==/split_config.xxhdpi.apk' with 2 weak references
+10-19 18:00:22.021 15531 22109 W ndroid.settings: ApkAssets: Deleting an ApkAssets object '<empty> and /system/app/UpnpServer/UpnpServer.apk' with 2 weak references
+10-19 18:00:26.427 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:26.432 21104 21771 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:26.485 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:26.486 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:26.486 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:26.486 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:26.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:26.930 21104 21250 I WifiScanner: onFullResults
+10-19 18:00:26.930 21104 21119 I WifiScanner: onFullResults
+10-19 18:00:26.933 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:26.942 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:26.969 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:26.970 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:26.970 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:26.970 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:26.970 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:26.971 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:26.971 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:26.973 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:29.821 21104 21188 I ActivityScheduler: nextTriggerTime: 1321204185, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:30.609  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:00:30.611  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:00:30.809 14485 14485 I bnlz    : onPause
+10-19 18:00:30.819  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 18:00:30.820  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 18:00:30.820  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 18:00:30.861 14485 14485 I bnlz    : onStop
+10-19 18:00:30.885 21104 22229 I NearbySharing: Screen is locked
+10-19 18:00:30.891 21104 22229 I NearbySharing: Stopping scanning because the screen is locked.
+10-19 18:00:30.893 21104 22229 I NearbySharing: Stopping Fast Init advertisement because Bluetooth is off.
+10-19 18:00:30.894 21104 22229 I NearbySharing: Stopping advertising because Bluetooth is disabled.
+10-19 18:00:30.894 21104 22229 I NearbySharing: Stopping FastInitiation scanning because the screen is locked.
+10-19 18:00:30.897 21104 22229 I NearbySharing: Fast Initiation Scanning has stopped
+10-19 18:00:30.897 21104 22229 I NearbySharing: Dismissing HUN as there's no device nearby.
+10-19 18:00:31.243  5589 22262 I DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():123 onReceive() : Action = android.intent.action.SCREEN_OFF
+10-19 18:00:31.243  5589 22262 I DeviceStatusMonitor: DeviceStatusMonitor.updateCountryInfo():139 updateCountryInfo(), notifyAnyway = false
+10-19 18:00:31.244  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:00:31.244  5589  5589 I InputBundle: InputBundle.consumeEvent():1028 Skip consuming an event as imeStatus is INACTIVE
+10-19 18:00:31.298 11830 11830 I epse    : (REDACTED) Created gRPC endpoint for service %s
+10-19 18:00:31.305  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.305  7096  7120 I native  : I0000 00:00:1760877031.305383    7120 soda_async_impl.cc:1016] SODA stopped processing audio, mics audio processed in millis: 78780, loopback audio processed in millis: 0
+10-19 18:00:31.305  7096  7120 I native  : I0000 00:00:1760877031.305726    7120 soda_async_impl.cc:1028] Audio readers are stopped.
+10-19 18:00:31.307  7096  7120 I native  : I0000 00:00:1760877031.306970    7120 soda_async_impl.cc:1091] SODA session stopped due to: STOP_CALLED
+10-19 18:00:31.308  7096  7121 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.309 21104 21188 I ActivityScheduler: nextTriggerTime: 1321204185, in 3513ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:31.309  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.311 21104 21188 I ActivityScheduler: nextTriggerTime: 1321204185, in 3511ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:31.340  7096  7130 W native  : W0000 00:00:1760877031.340280    7130 soda_jni.cc:236] Failed to add audio to SODA: INTERNAL: Mic provider not setup
+10-19 18:00:31.340  7096  7130 W native  : === Source Location Trace: === 
+10-19 18:00:31.340  7096  7130 W native  : speech/soda/api/soda_client.cc:555
+10-19 18:00:31.341  7096  7130 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.343  7096  7130 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.345  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.345  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.345  7096  7112 E VivoAudioPolicyProxyNative: VivoAudioPolicyProxy getInstanceInter: binding to vivoaudiopolicy service failed, service up?
+10-19 18:00:31.397  5720 14136 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:00:31.465  7096  7112 W mediametrics::Item: selfrecord: failed to record: {audiorecord, (01-01 05:30:00.000), (, -1, -1), (android.media.audiorecord.attributes={ Content type: AUDIO_CONTENT_TYPE_UNKNOWN Usage: AUDIO_USAGE_UNKNOWN Source: AUDIO_SOURCE_HOTWORD Flags: 0x800 Tags:  }, android.media.audiorecord.channelMask=16, android.media.audiorecord.channels=1, android.media.audiorecord.durationMs=7.908353e+04, android.media.audiorecord.encoding=AUDIO_FORMAT_PCM_16_BIT, android.media.audiorecord.frameCount=128000, android.media.audiorecord.latency=8000, android.media.audiorecord.logSessionId=, android.media.audiorecord.portId=25120, android.media.audiorecord.samplerate=16000, android.media.audiorecord.source=AUDIO_SOURCE_HOTWORD, android.media.audiorecord.startCount=1)}
+10-19 18:00:31.465  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.466  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:00:31.476 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:31.476 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:31.476 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:31.476 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:31.482 21104 22070 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 18:00:31.929 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:31.933 21104 22233 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:31.944 21104 21249 I WifiScanner: onFullResults
+10-19 18:00:31.944 21104 21250 I WifiScanner: onFullResults
+10-19 18:00:31.944 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:31.962 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:31.976 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:31.977 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:31.977 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:31.977 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:31.977 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:31.978 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:31.978 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:31.984 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:32.029  9466 22273 E VCAP-   : File: jni/../core/runtime/cpu/cpu_runtime.cpp, Func: set_sched_affinity() --- syscall error -1
+10-19 18:00:32.030  9466 22274 E VCAP-   : File: jni/../core/runtime/cpu/cpu_runtime.cpp, Func: set_sched_affinity() --- syscall error -1
+10-19 18:00:32.030  9466  9529 E VCAP-   : File: jni/../core/runtime/cpu/cpu_runtime.cpp, Func: set_sched_affinity() --- syscall error -1
+10-19 18:00:32.031  9466 22272 E VCAP-   : File: jni/../core/runtime/cpu/cpu_runtime.cpp, Func: set_sched_affinity() --- syscall error -1
+10-19 18:00:32.594  5720 14795 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
+10-19 18:00:32.683  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
+10-19 18:00:32.785  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
+10-19 18:00:32.889  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
+10-19 18:00:32.918  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( _id in () AND (group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273,
+10-19 18:00:32.952  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN ( 1000011337, 1000011549 ) AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC LIMIT 10 OFFSET 0
+10-19 18:00:33.017  5720 14795 D SQLiteQueryBuilder: SELECT count(_id) FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0)))
+10-19 18:00:33.024  9466  9477 W ratelimit: Single process limit 50/s drop 370 lines.
+10-19 18:00:33.024  9466  9477 I om.vivo.gallery: Background concurrent copying GC freed 6686KB AllocSpace bytes, 4(10MB) LOS objects, 49% free, 15MB/31MB, paused 183us,110us total 161.530ms
+10-19 18:00:33.059  5720 14795 D SQLiteQueryBuilder: SELECT _id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, -572399359, 1192168428, -1667878795, -247796258, -961453482, -202
+10-19 18:00:33.164  5720 14795 D SQLiteQueryBuilder: SELECT count(_id) FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0)))
+10-19 18:00:33.204  5720 14795 D SQLiteQueryBuilder: SELECT _id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, -572399359, 1192168428, -1667878795, -247796258, -961453482, -202
+10-19 18:00:33.289  9466  9529 D SQLiteQueryBuilder: SELECT distinct folder_item_hashcode FROM foldercreate ORDER BY folder_item_dateadded DESC
+10-19 18:00:33.301  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id > 1000014407 AND _size < 209715200 AND bucket_id IN ( -1949793892, 13311172, -1739773001, 1216519567,-1033534650, -2426154, -53910322, 675671268, -1966575852,-1535937100, 1028125135,97354131, 1017917803, -924335728, -924530092, -435605656, -435800020,-1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 102812513
+10-19 18:00:33.405  5720 14795 D SQLiteQueryBuilder: SELECT count(_id) FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0)))
+10-19 18:00:33.419  5720 14795 D SQLiteQueryBuilder: SELECT _id FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((width >=50 AND height >= 50 AND _size >= 25000 AND (width > 0 AND height > 0))) ORDER BY _id DESC LIMIT 100000 OFFSET 0
+10-19 18:00:33.500  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, datetaken, latitude, longitude, mime_type, width, height FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN (1000014684, 1000009961, 1000009960, 1000009959, 1000009958, 1000009957, 1000009956, 1000009955, 1000009954, 1000009953, 1000009952, 1000009951, 1000009950, 1000009949, 1000009948, 1000009947, 1000009946, 1000009945, 1000009944, 1000009943, 1000009942, 1000009941, 1000009940, 1000009939, 1000009938, 1000009937, 1000009936, 1000009935, 1000009934, 1000009933, 1000009932, 1000009931, 1000009930, 1000009929, 1000009928, 1000009927, 1000009926, 1000009925, 1000009924, 1000009923, 1000009922, 1000009921, 1000009920, 1000009919, 1000009918, 1000009917, 1000009916, 1000009915, 1000009914, 1000009913, 1000009912, 1000009911, 1000009910, 1000009909, 1000009908, 1000009907, 1000009906, 1000009905, 1000009904, 1000009903, 1000009902, 1000009901, 1000009900, 1000009899, 1000009898, 1000009897, 1000009896, 1000009895, 1000009894, 1000009893, 1000009892, 1000009891, 1000009890, 1000009889, 1000009888, 1000009887, 1000009886, 1000009885, 1000009884, 1000009883, 1000009882, 1000009881, 1000009880, 1000009879, 1000009878, 1000009877, 1000009876, 1000009875, 1000009874, 1000009873, 1000009872, 1000009871, 1000009870, 1000009869, 1000009868, 1000009867, 1000009866, 1000009865, 1000009864, 1000009863, 1000009862, 1000009861, 1000009860, 1000009859, 1000009858, 1000009857, 1000009856, 1000009855, 1000009854, 1000009853, 1000009852, 1000009851, 1000009850, 1000009849, 1000009848, 1000009847, 1000009846, 1000009845, 1000009844, 1000009843, 1000009842, 1000009841, 1000009840, 1000009839, 1000009838, 1000009837, 1000009836, 1000009835, 1000009834, 1000009833, 1000009832, 1000009831, 1000009830, 1000009829, 1000009828, 1000009827, 1000009826, 1000009825, 1000009824, 1000009823, 1000009822, 1000009821, 1000009820, 1000009819, 1000009818, 1000009817, 1000009816, 1000009815, 1000009813, 1000009812, 1000009811, 1000009810, 1000009809, 1000009808, 1000009807, 1000009806, 1000009805, 1000009804, 1000009803, 1000009802, 1000009801, 1000009800, 1000009799, 1000009798, 1000009797, 1000009796, 1000009795, 1000009794, 1000009793, 1000009792, 1000009791, 1000009790, 1000009789, 1000009788, 1000009787, 1000009786, 1000009785, 1000009784, 1000009783, 1000009782, 1000009781, 1000009780, 1000009779, 1000009778, 1000009777, 1000009776, 1000009775, 1000009774, 1000009773, 1000009772, 1000009771, 1000009770, 1000009769, 1000009768, 1000009767, 1000009766, 1000009765, 1000009764, 1000009763, 1000009762, 1000009761, 1000009760, 1000009759, 1000009758, 1000009757, 1000009756, 1000009755, 1000009754, 1000009753, 1000009752, 1000009751, 1000009750, 1000009749, 1000009748, 1000009747, 1000009746, 1000009745, 1000009744, 1000009743, 1000009742, 1000009741, 1000009740, 1000009739, 1000009738, 1000009737, 1000009736, 1000009735, 1000009734, 1000009733, 1000009732, 1000009731, 1000009730, 1000009729, 1000009728, 1000009727, 1000009726, 1000009725, 1000009724, 1000009723, 1000009722, 1000009721, 1000009720, 1000009719, 1000009718, 1000009717, 1000009716, 1000009715, 1000009714, 1000009713, 1000009712, 1000009711, 1000009710, 1000009709, 1000009708, 1000009707, 1000009706, 1000009705, 1000009704, 1000009703, 1000009702, 1000009701, 1000009700, 1000009699, 1000009698, 1000009697, 1000009696, 1000009695, 1000009694, 1000009693, 1000009692, 1000009691, 1000009690, 1000009689, 1000009688, 1000009687, 1000009686, 1000009685, 1000009684, 1000009683, 1000009682, 1000009681, 1000009680, 1000009679, 1000009678, 1000009677, 1000009676, 1000009675, 1000009674, 1000009673, 1000009672, 1000009671, 1000009670, 1000009669, 1000009668, 1000009667, 1000009666, 1000009665, 1000009664, 1000009663, 1000009662, 1000009661, 1000009660, 1000009659, 1000009658, 1000009657, 1000009656, 1000009655
+10-19 18:00:33.564  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:33.829  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:34.336  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:34.805  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:35.258  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:35.877  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:36.437  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:36.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:36.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:36.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:36.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:36.506 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:36.948 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:36.955 21104 22181 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:36.962  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:37.457  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:37.457 21104 22003 I WifiScanner: onFullResults
+10-19 18:00:37.457 21104 21249 I WifiScanner: onFullResults
+10-19 18:00:37.457 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:37.464 21104 22181 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:37.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:37.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:37.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:37.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:37.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:37.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:37.490 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:37.908  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:38.357  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:38.830  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:39.308  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:39.726  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:40.266  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:40.330 21104 21188 I ActivityScheduler: nextTriggerTime: 1321214693, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:40.753  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:41.251  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:41.338 21104 21683 I NearbyPresence: (REDACTED) %s verified [==] new request %s equals to the old request
+10-19 18:00:41.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:41.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:41.488 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:41.488 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:41.493 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:41.737  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:42.260  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:42.458 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:42.463 21104 22181 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:42.485 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:42.485 21104 23957 I WifiScanner: onFullResults
+10-19 18:00:42.485 21104 21199 I WifiScanner: onFullResults
+10-19 18:00:42.504 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:42.531 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:42.532 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:42.532 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:42.532 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:42.534 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:42.534 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:42.535 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:42.774  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:43.442  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:44.225  9466  9529 W ratelimit: Single process limit 50/s drop 7 lines.
+10-19 18:00:44.586  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:45.232  9466  9529 W ratelimit: Single process limit 50/s drop 26 lines.
+10-19 18:00:45.586  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:46.002  9466  9529 W ratelimit: Single process limit 50/s drop 5 lines.
+10-19 18:00:46.013  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:46.388  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:46.491 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:46.491 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:46.491 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:46.492 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:46.582 21104 22416 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:00:46.612 21104 22416 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:00:46.633  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:46.642 21104 22416 I SemanticLocation: (REDACTED) [Inferrer] %s%s
+10-19 18:00:47.000  9466  9529 W ratelimit: Single process limit 50/s drop 9 lines.
+10-19 18:00:47.000  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:47.219  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:47.483 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:47.491 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:47.626  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:47.986 21104 22224 I WifiScanner: onFullResults
+10-19 18:00:47.987 21104 22617 I WifiScanner: onFullResults
+10-19 18:00:47.989 21104 22003 I WifiScanner: onFullResults
+10-19 18:00:48.008 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:48.031 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:48.031 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:48.031 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:48.031 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:48.033 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:48.033 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:48.034 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:48.088  9466  9529 W ratelimit: Single process limit 50/s drop 9 lines.
+10-19 18:00:49.002  9466  9529 W ratelimit: Single process limit 50/s drop 32 lines.
+10-19 18:00:49.085  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:49.300  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:49.520  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:50.033  9466  9529 W ratelimit: Single process limit 50/s drop 40 lines.
+10-19 18:00:50.857 21104 21188 I ActivityScheduler: nextTriggerTime: 1321225220, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:00:51.034  9466  9529 W ratelimit: Single process limit 50/s drop 43 lines.
+10-19 18:00:51.153  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:51.398  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:51.494 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:51.494 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:51.494 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:51.495 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:51.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:52.248  9466  9529 W ratelimit: Single process limit 50/s drop 26 lines.
+10-19 18:00:52.638  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:52.989 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:52.995 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:53.002  9466  9529 W ratelimit: Single process limit 50/s drop 10 lines.
+10-19 18:00:53.010 21104 22224 I WifiScanner: onFullResults
+10-19 18:00:53.011 21104 22617 I WifiScanner: onFullResults
+10-19 18:00:53.011 21104 22003 I WifiScanner: onFullResults
+10-19 18:00:53.047 21104 22181 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:53.084 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:53.085 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:53.085 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:53.085 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:53.088 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:53.089 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:53.091 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:53.128  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:54.059  9466  9529 W ratelimit: Single process limit 50/s drop 42 lines.
+10-19 18:00:54.169  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:54.386  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:55.005  9466  9529 W ratelimit: Single process limit 50/s drop 33 lines.
+10-19 18:00:55.803 21104 22070 I CastDatabase: Saving the database
+10-19 18:00:55.810 21104 22070 I SQLiteCastStore: [CastNetworkInfo] saved: 0, skipped: 0, [CastDeviceInfo]: saved 0, skipped 0, [ProbedNetworks]: saved 0, skipped: 0, [ProbedSocketAddress]: saved 0, skipped: 0, [Network-Device pairs]: saved: 0
+10-19 18:00:56.033  9466  9529 W ratelimit: Single process limit 50/s drop 53 lines.
+10-19 18:00:56.137  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:56.397  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:56.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:56.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:56.500 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:56.500 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:56.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:57.001  9466  9529 W ratelimit: Single process limit 50/s drop 36 lines.
+10-19 18:00:57.064  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:57.296  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:57.498 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:57.498 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:57.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:57.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:57.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:57.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:58.014 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:00:58.019 21104 22415 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:00:58.050  9466  9529 W ratelimit: Single process limit 50/s drop 57 lines.
+10-19 18:00:58.751 21104 21249 I WifiScanner: onFullResults
+10-19 18:00:58.751 21104 22003 I WifiScanner: onFullResults
+10-19 18:00:58.752 21104 22224 I WifiScanner: onFullResults
+10-19 18:00:58.764 21104 22416 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:00:58.799 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:58.799 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:58.800 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:58.800 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:00:58.802 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:58.802 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:00:58.803 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:00:59.015  9466  9529 W ratelimit: Single process limit 50/s drop 44 lines.
+10-19 18:00:59.191  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:00:59.421  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:00.003  9466  9529 W ratelimit: Single process limit 50/s drop 37 lines.
+10-19 18:01:00.068  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:00.289  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:00.513  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:01.000  9466  9529 W ratelimit: Single process limit 50/s drop 39 lines.
+10-19 18:01:01.107  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:01.389 21104 21188 I ActivityScheduler: nextTriggerTime: 1321235752, in 4999ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:01:02.020  9466  9529 W ratelimit: Single process limit 50/s drop 24 lines.
+10-19 18:01:02.154 11830 11872 I earchbox:search: Explicit concurrent copying GC freed 1911KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 12MB/24MB, paused 273us,121us total 355.460ms
+10-19 18:01:02.163  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:02.299 22765 22765 I .android.videos: Using CollectorTypeCC GC.
+10-19 18:01:02.302 22765 22765 E .android.videos: Not starting debugger since process cannot load the jdwp agent.
+10-19 18:01:02.316 22765 22765 E .android.videos: BBinder_init Processname  <pre-initialized>  
+10-19 18:01:02.316 22765 22765 E .android.videos: BBinder_init hasGetProcessName  <pre-initialized>
+10-19 18:01:02.352 22765 22765 W .android.videos: Failed to find entry 'classes.dex': Entry not found
+10-19 18:01:02.353 22765 22765 W .android.videos: Failed to find entry 'classes.dex': Entry not found
+10-19 18:01:02.354 22765 22765 W .android.videos: Failed to find entry 'classes.dex': Entry not found
+10-19 18:01:02.403 11830 11872 I earchbox:search: Explicit concurrent copying GC freed 248KB AllocSpace bytes, 0(0B) LOS objects, 49% free, 12MB/24MB, paused 191us,123us total 241.790ms
+10-19 18:01:02.406 11830 11872 I app_process: Native memory cannot be purged, Android API level < 28.
+10-19 18:01:02.491 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:02.491 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:02.491 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:02.492 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:02.508 21104 22415 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 18:01:02.526  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:02.831 22765 22796 W PlayMovies: mgk.run:22 User config found
+10-19 18:01:02.832 22765 22796 W PlayMovies: mgk.run:33 Loading user config
+10-19 18:01:02.891 22765 22765 W .android.videos: Method void sez.c(android.app.Activity) failed lock verification and will run slower.
+10-19 18:01:02.891 22765 22765 W .android.videos: Common causes for lock verification issues are non-optimized dex code
+10-19 18:01:02.891 22765 22765 W .android.videos: and incorrect proguard optimizations.
+10-19 18:01:02.917 22765 22809 E SQLiteLog: (5) statement aborts at 2: [PRAGMA journal_mode=TRUNCATE] database is locked
+10-19 18:01:02.917 22765 22809 W SQLiteConnection: Could not change the database journal mode of '/data/user/0/com.google.android.videos/databases/purchase_store.db' from 'wal' to 'TRUNCATE' because the database is locked.  This usually means that there are other open connections to the database which prevents the database from enabling or disabling write-ahead logging mode.  Proceeding without changing the journal mode.
+10-19 18:01:02.930 22765 22796 W PlayMovies: qi.invokeSuspend:54 Observing cache file clear_cache_file_name.tmp
+10-19 18:01:02.955 22765 22765 W PlayMovies: kxr.onCreate:494 Installer Package: com.android.vending
+10-19 18:01:02.963 22765 22765 W MediaSessionCompat: Couldn't find a unique registered media button receiver in the given context.
+10-19 18:01:02.999 22765 22765 I MediaRouter: Skip setBluetoothA2dpOn(): types=8388615, isPlaybackActive()=false, BT route=null
+10-19 18:01:03.036 22765 22765 W AxMediaRouter: Ignoring attempt to select selected route: MediaRouter.RouteInfo{ uniqueId=DEFAULT_ROUTE, name=Phone, description=null, iconUri=null, enabled=true, isSystemRoute=true, connectionState=0, canDisconnect=false, playbackType=0, playbackStream=3, deviceType=0, volumeHandling=1, volume=5, volumeMax=15, presentationDisplayId=-1, extras=null, settingsIntent=null, providerPackageName=android }
+10-19 18:01:03.062 22765 22831 W MediaCodec-JNI: pid:22765,client name:com.google.android.videos
+10-19 18:01:03.085 22765 22831 W AudioCapabilities: Unsupported mime audio/x-ms-wma
+10-19 18:01:03.092 22765 22831 W AudioCapabilities: Unsupported mime audio/x-ms-wma
+10-19 18:01:03.093 22765 22831 W AudioCapabilities: Unsupported mime audio/mpeg-L1
+10-19 18:01:03.093 22765 22831 W AudioCapabilities: Unsupported mime audio/mpeg-L2
+10-19 18:01:03.093 22765 22831 W AudioCapabilities: Unsupported mime audio/mpeg-L1
+10-19 18:01:03.094 22765 22831 W AudioCapabilities: Unsupported mime audio/mpeg-L2
+10-19 18:01:03.094 22765 22831 W AudioCapabilities: Unsupported mime audio/ra
+10-19 18:01:03.094 22765 22831 W AudioCapabilities: Unsupported mime audio/ra
+10-19 18:01:03.094 22765 22831 W AudioCapabilities: Unsupported mime audio/alac
+10-19 18:01:03.094 22765 22831 W AudioCapabilities: Unsupported mime audio/alac
+10-19 18:01:03.095 22765 22831 W AudioCapabilities: Unsupported mime audio/ape
+10-19 18:01:03.095 22765 22831 W AudioCapabilities: Unsupported mime audio/x-ape
+10-19 18:01:03.095 22765 22831 W AudioCapabilities: Unsupported mime audio/ape
+10-19 18:01:03.095 22765 22831 W AudioCapabilities: Unsupported mime audio/x-ape
+10-19 18:01:03.096 22765 22831 W AudioCapabilities: Unsupported mime audio/adpcm
+10-19 18:01:03.096 22765 22831 W AudioCapabilities: Unsupported mime audio/x-ms-adpcm
+10-19 18:01:03.096 22765 22831 W AudioCapabilities: Unsupported mime audio/pcm
+10-19 18:01:03.097 22765 22831 W AudioCapabilities: Unsupported mime audio/pcm
+10-19 18:01:03.097 22765 22831 W AudioCapabilities: Unsupported mime audio/dsd
+10-19 18:01:03.097 22765 22831 W AudioCapabilities: Unsupported mime audio/dsd
+10-19 18:01:03.098 22765 22831 W VideoCapabilities: Unsupported mime video/rv
+10-19 18:01:03.099 22765 22831 W VideoCapabilities: Unsupported mime video/rv
+10-19 18:01:03.100 22765 22831 W VideoCapabilities: Unsupported mime video/x-ms-wmv
+10-19 18:01:03.100 22765 22831 W VideoCapabilities: Unsupported mime video/x-ms-wmv2
+10-19 18:01:03.101 22765 22831 W VideoCapabilities: Unsupported mime video/x-ms-wmv
+10-19 18:01:03.101 22765 22831 W VideoCapabilities: Unsupported mime video/x-ms-wmv2
+10-19 18:01:03.102 22765 22831 W VideoCapabilities: Unsupported mime video/divx3
+10-19 18:01:03.102 22765 22831 W VideoCapabilities: Unsupported mime video/divx3
+10-19 18:01:03.102 22765 22831 W VideoCapabilities: Unsupported mime video/flv1
+10-19 18:01:03.102 22765 22831 W VideoCapabilities: Unsupported mime video/x-flv
+10-19 18:01:03.103 22765 22831 W VideoCapabilities: Unsupported mime video/flv1
+10-19 18:01:03.103 22765 22831 W VideoCapabilities: Unsupported mime video/x-flv
+10-19 18:01:03.103 22765 22831 W VideoCapabilities: Unsupported mime video/mjpeg
+10-19 18:01:03.103 22765 22831 W VideoCapabilities: Unsupported mime video/x-motion-jpeg
+10-19 18:01:03.110 22765 22831 W VideoCapabilities: Unsupported mime video/mjpeg
+10-19 18:01:03.110 22765 22831 W VideoCapabilities: Unsupported mime video/x-motion-jpeg
+10-19 18:01:03.111 22765 22831 W AudioCapabilities: Unsupported mime audio/x-adpcm-dvi-ima
+10-19 18:01:03.111 22765 22831 W AudioCapabilities: Unsupported mime audio/x-adpcm-dvi-ima
+10-19 18:01:03.111 22765 22831 W AudioCapabilities: Unsupported mime audio/x-adpcm-ms
+10-19 18:01:03.112 22765 22831 W AudioCapabilities: Unsupported mime audio/x-adpcm-ms
+10-19 18:01:03.112 22765 22831 W AudioCapabilities: Unsupported mime audio/alac
+10-19 18:01:03.112 22765 22831 W AudioCapabilities: Unsupported mime audio/alac
+10-19 18:01:03.120 22765 22831 W VideoCapabilities: Unsupported mime image/vnd.android.heic
+10-19 18:01:03.121 22765 22831 W VideoCapabilities: Unsupported mime image/vnd.android.heic
+10-19 18:01:03.121 22765 22831 W VideoCapabilities: Unsupported mime image/vnd.android.heic
+10-19 18:01:03.121 22765 22831 W VideoCapabilities: Unsupported mime image/vnd.android.heic
+10-19 18:01:03.134  9466  9529 W ratelimit: Single process limit 50/s drop 8 lines.
+10-19 18:01:03.171 22765 22819 W WM-Processor: Didn't find WorkSpec for id WorkGenerationalId(workSpecId=67980816-74d6-466f-a332-e3303af01031, generation=0)
+10-19 18:01:03.186 22765 22819 E PlayMovies: mev.a:83 No worker key associated with this task with tags: [google_tv_widget_tag, com.google.android.apps.googletv.app.services.workmanager.WorkerWrapper]
+10-19 18:01:03.269  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:03.655  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:03.753 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:03.758 21104 22181 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:03.766 21104 22617 I WifiScanner: onFullResults
+10-19 18:01:03.766 21104 21118 I WifiScanner: onFullResults
+10-19 18:01:03.767 21104 21249 I WifiScanner: onFullResults
+10-19 18:01:03.809 21104 22415 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:03.828 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:03.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:03.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:03.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:03.830 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:03.830 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:03.831 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:04.044  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:04.414  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:04.810  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:05.175  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:05.562  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:06.186  9466  9529 W ratelimit: Single process limit 50/s drop 8 lines.
+10-19 18:01:06.346  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:06.739  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:07.117  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:07.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:07.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:07.499 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:07.500 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:07.501  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:07.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:08.006  9466  9529 W ratelimit: Single process limit 50/s drop 38 lines.
+10-19 18:01:08.025  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:08.205  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:08.388  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:08.773 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:08.782 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:09.279 21104 21249 I WifiScanner: onFullResults
+10-19 18:01:09.280 21104 22647 I WifiScanner: onFullResults
+10-19 18:01:09.280 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:09.293 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:09.326 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:09.326 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:09.326 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:09.327 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:09.328 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:09.328 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:09.329 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:10.752  9466  9466 W ratelimit: Single process limit 50/s drop 32 lines.
+10-19 18:01:10.769  9466  9529 I DMABUFHEAPS: Using DMA-BUF heap named: mtk_mm
+10-19 18:01:11.445  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 18:01:11.449  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 18:01:11.454  5589  5589 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
+10-19 18:01:11.562  5589 23011 I DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():123 onReceive() : Action = android.intent.action.SCREEN_ON
+10-19 18:01:11.562  5589 23011 I DeviceStatusMonitor: DeviceStatusMonitor.updateCountryInfo():139 updateCountryInfo(), notifyAnyway = false
+10-19 18:01:11.692 21104 22415 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
+10-19 18:01:11.708 21104 21104 I CastMediaRouteProvider: Published 0 routes
+10-19 18:01:11.943 21104 21127 I MdnsServiceBrowser: (REDACTED) registering %s
+10-19 18:01:11.984 21104 23957 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+10-19 18:01:11.984 21104 23957 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+10-19 18:01:11.992 21104 22617 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+10-19 18:01:11.993 21104 22617 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+10-19 18:01:11.995 21104 22617 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
+10-19 18:01:11.995 21104 22617 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
+10-19 18:01:12.255 21104 21188 I ActivityScheduler: nextTriggerTime: 1321246618, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:01:12.369 21104 21114 I .gms.persistent: Background young concurrent copying GC freed 16MB AllocSpace bytes, 1(16KB) LOS objects, 44% free, 20MB/36MB, paused 593us,124us total 142.808ms
+10-19 18:01:12.544 21104 22241 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
+10-19 18:01:12.598 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:12.599 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:12.599 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:12.600 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:12.611 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:12.924 14485 14485 I bnlz    : onStart
+10-19 18:01:12.935 14485 14485 I bldh    : (REDACTED) [%s] onStart()
+10-19 18:01:12.935 14485 14485 I blfn    : Reloading theme data
+10-19 18:01:12.948 14485 14485 I bnlz    : onResume
+10-19 18:01:13.145  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:01:13.151  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:01:13.170  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.171  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.171  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.172  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.172  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.172  7096  7112 E VivoAudioPolicyProxyNative: VivoAudioPolicyProxy getInstanceInter: binding to vivoaudiopolicy service failed, service up?
+10-19 18:01:13.172  7096  7112 I AudioRecord: set final client name com.google.android.googlequicksearchbox(0)
+10-19 18:01:13.174  7096  7112 E word_detector_0: RecordingActivityTracker(): binding to audio service failed, service up?
+10-19 18:01:13.174  7096  7112 I AudioRecord: set(): getPolicyInputSourceForVoip mAttributes inputsource=1999, input source= 1999,flags:0
+10-19 18:01:13.176 21104 22227 I NearbySharing: Screen is unlocked
+10-19 18:01:13.177 21104 22227 I NearbySharing: Uwb feature is off.
+10-19 18:01:13.177 21104 22227 I NearbySharing: Uwb feature is off.
+10-19 18:01:13.177 21104 22227 I NearbySharing: Stopping scanning because Bluetooth is disabled.
+10-19 18:01:13.180 21104 22227 I NearbySharing: Stopping Fast Init advertisement because Bluetooth is off.
+10-19 18:01:13.180 21104 22227 I NearbySharing: Stopping advertising because Bluetooth is disabled.
+10-19 18:01:13.198 20471 20471 W fbservices-stub:InitStatus: Not blocking Service (6589620)
+10-19 18:01:13.198 20471 20471 W fbservices-stub:InitStatus: Not blocking Service (6589620)
+10-19 18:01:13.205 21104 23149 I NearbyMediums: ModuleInitializer handles incoming intent android.intent.action.USER_PRESENT
+10-19 18:01:13.210 21104 22226 I Nearby  : (REDACTED) Beginning attempt #%d out of %d for %s...
+10-19 18:01:13.212 21104 22226 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore default scan mode.
+10-19 18:01:13.213 21104 22227 I NearbySharing: Starting scanning for Fast Initiation.
+10-19 18:01:13.213 21104 22226 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore device name
+10-19 18:01:13.214 21104 22227 I NearbySharing: Failed to scan for FastInitiation. Scanning is not supported on this device.
+10-19 18:01:13.214 21104 22227 I NearbySharing: Dismissing HUN as there's no device nearby.
+10-19 18:01:13.219 21104 21104 I RCNIntentOperation: RCN is disabled on this network.
+10-19 18:01:13.232  7096  7112 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.232  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.232  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.233 21163 23152 I PersonalSafety: ConnectivityProtectionLockingIntentOperation: cancelled task [CONTEXT service_id=310 ]
+10-19 18:01:13.233  7096  7126 E VivoAudioPolicyProxyNative: VivoAudioPolicyProxy getInstanceInter: binding to vivoaudiopolicy service failed, service up?
+10-19 18:01:13.235  7096  7112 I native  : I0000 00:00:1760877073.235112    7112 soda_client.cc:330] Starting capture.
+10-19 18:01:13.235  7096  7112 I native  : I0000 00:00:1760877073.235282    7112 soda_async_impl.cc:651] SODA session starting (require_hotword:1, hotword_timeout_in_millis:0, trigger_type:TRIGGER_TYPE_UNSPECIFIED, hybrid_asr_config.mode:MODE_DEFAULT)
+10-19 18:01:13.240  7096  7130 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.259  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.318  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:13.364  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:13.365  7096  7120 I native  : I0000 00:00:1760877073.365600    7120 soda_async_impl.cc:1357] SODA received first mic audio buffer, size in bytes: 320, format: 1, channels: 1, sample rate: 16000
+10-19 18:01:13.745  7096  7120 I native  : I0000 00:00:1760877073.745581    7120 soda_async_impl.cc:1126] Not receiving any loopback audio in 500ms. Last audio received time: 1970-01-01T05:30:00+05:30, Current time: 2025-10-19T18:01:13.745579643+05:30
+10-19 18:01:14.030  5589  5589 I StylusModule: StylusModule.onUpdateToolType():800 Update tool type = 0
+10-19 18:01:14.279 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:14.283 21104 22181 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:14.297 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:14.297 21104 21250 I WifiScanner: onFullResults
+10-19 18:01:14.298 21104 22617 I WifiScanner: onFullResults
+10-19 18:01:14.322 21104 22415 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:14.361 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:14.362 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:14.362 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:14.362 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:14.363 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:14.363 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:14.365 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:14.420  5589  5589 I StylusModule: StylusModule.onUpdateToolType():800 Update tool type = 0
+10-19 18:01:15.469  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:17.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:17.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:17.490 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:17.490 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:17.518 21104 22415 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:01:17.527 21104 22415 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:01:17.534 21104 22415 I SemanticLocation: (REDACTED) [Inferrer] %s%s
+10-19 18:01:17.567  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:18.914 18831 23773 I PlayCommon: [46098] Preparing logs for uploading
+10-19 18:01:18.934 18831 23773 W PlayCommon: [46098] No account for auth token provided
+10-19 18:01:18.937 18831 23773 I PlayCommon: [46098] Connecting to server: https://play.googleapis.com/play/log?format=raw&proto_v2=true
+10-19 18:01:19.303 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:19.310 21104 22416 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:19.329 18831 23773 I PlayCommon: [46098] Successfully uploaded logs.
+10-19 18:01:19.653  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:19.798 21104 21250 I WifiScanner: onFullResults
+10-19 18:01:19.799 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:19.799 21104 22617 I WifiScanner: onFullResults
+10-19 18:01:19.811 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:19.854 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:19.854 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:19.854 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:19.855 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:19.857 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:19.857 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:19.858 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:21.671 21104 22227 I NearbyPresence: (REDACTED) %s verified [==] new request %s equals to the old request
+10-19 18:01:21.741  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:22.486 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:22.486 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:22.486 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:22.486 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:22.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:23.824  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:24.802 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:24.812 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:24.830 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:24.831 21104 21250 I WifiScanner: onFullResults
+10-19 18:01:24.831 21104 22617 I WifiScanner: onFullResults
+10-19 18:01:24.869 21104 22416 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:24.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:24.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:24.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:24.909 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:24.911 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:24.915 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:24.916 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:25.920  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:27.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:27.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:27.513 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:27.513 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:27.518 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:28.005  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:28.126  9466  9477 I om.vivo.gallery: Background concurrent copying GC freed 11MB AllocSpace bytes, 78(6532KB) LOS objects, 49% free, 13MB/27MB, paused 232us,109us total 135.806ms
+10-19 18:01:28.215 21104 22070 I SemanticLocation: New activity record out of order; sorting [CONTEXT service_id=173 ]
+10-19 18:01:28.217 21104 21188 I ActivityScheduler: nextTriggerTime: 1321262580, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:01:29.834 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:29.841 21104 22416 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:30.095  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:30.346 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:30.348 21104 22617 I WifiScanner: onFullResults
+10-19 18:01:30.350 21104 21119 I WifiScanner: onFullResults
+10-19 18:01:30.369 21104 22181 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:30.413 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:30.414 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:30.414 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:30.414 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:30.417 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:30.418 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:30.421 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:32.189  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:32.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:32.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:32.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:32.513 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:32.528 21104 22070 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 18:01:34.276  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:35.345 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:35.352 21104 22415 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:35.372 21104 21250 I WifiScanner: onFullResults
+10-19 18:01:35.372 21104 21119 I WifiScanner: onFullResults
+10-19 18:01:35.373 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:35.428 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:35.472 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:35.473 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:35.473 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:35.473 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:35.476 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:35.477 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:35.479 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:36.366  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:37.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:37.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:37.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:37.513 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:37.518 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:38.459  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:38.741 21104 21188 I ActivityScheduler: nextTriggerTime: 1321273104, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:01:39.502 13315 13315 I Choreographer: Skipped 17384 frames!  The application may be doing too much work on its main thread.
+10-19 18:01:39.518 21163 23191 I Authzen : [DeviceStateSyncManager] The server is in sync with current state. Nothing to do
+10-19 18:01:39.550 13315 28144 E fb4a.msys: E[N mccw.liger]onReadError(732)=>read/error - ex: AsyncSocketException: recv() failed (peer=[2a03:2880:f33d:8:face:b00c:0:38d9]:5222), type = Internal error, errno = 103 (Software caused connection abort), errno: 103
+10-19 18:01:39.560 13315 28010 E fb4a.msys: E[N WA]WCCXMPPStreamDisconnectImmediately(763)=>[WARNING] xmpp/disconnect/immediate in state=2 reason=xmpp/idle/timeout
+10-19 18:01:39.565 13315 28010 E fb4a.msys: E[N WA]_WCCXMPPStreamDisconnectHandler(326)=>xmpp/disconnect - WCIStreamStateErrorCode: 1, domain: WCIStreamState, subdomain: happyeyeballs: Error Domain=WCIStreamState Code=1 UserInfo=0x219fb2a5c0 {MCFErrorDirectUnderlyingErrorKey=0xb4000076606969d0 "Error Domain=happyeyeballs Code=1"}
+10-19 18:01:39.565 13315 28017 E fb4a.msys: E[N MQTT]readErr(151)=>TCPStreamTransport readErr
+10-19 18:01:39.565 13315 28017 E fb4a.msys: E[N MQTT]onReadError(657)=>Read Error: AsyncSocketException: recv() failed (peer=[2a03:2880:f33d:90:face:b00c:0:8e]:443), type = Internal error, errno = 103 (Software caused connection abort)
+10-19 18:01:39.567 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultLifecycleEventHandler(2067)=>[INFO] connection/xmpp/lifecycle_event/not-connected, [297.0783s]
+10-19 18:01:39.567 13315 28010 E fb4a.msys: E[N WA]_WCCXMPPStreamDoDisconnect(1147)=>xmpp/disconnect - flags: 0
+10-19 18:01:39.568 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultEmitStateChange(3041)=>[INFO] connection/new_state/not-connected [connection_id=982308813, wcc_source=1, wcc_reason=0]
+10-19 18:01:39.592 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultDisconnectHandler(2191)=>[INFO] connection/disconnected/[did-connect, did-read-bytes]
+10-19 18:01:39.594 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultEmitStateChange(3041)=>[INFO] connection/new_state/not-connected [connection_id=-1, wcc_source=2, wcc_reason=10]
+10-19 18:01:39.599 13315 28137 E fb4a.msys: E[C mem.context]_NetworkStateChangedCallbackOnExecutionContext(7797)=>[INFO]skip the network state change source=4
+10-19 18:01:39.628 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultReconnectFromWeakRef(1351)=>connection/reconnect reconnection aborted, should not connect
+10-19 18:01:39.647 13315 13315 W fb4a.AppComponentFactory: Instantiating Service
+10-19 18:01:39.741 13315 13315 E fb4a.Execution: Redirecting MSYS Execution scheduling from the UI thread to a custom executor
+10-19 18:01:39.747 13315 13315 E fb4a.Execution: Redirecting MSYS Execution scheduling from the UI thread to a custom executor
+10-19 18:01:39.759 13315 28035 I omnistore_android_logger: Connect message: queueName: facebook_universal_prefs_v2:100004092123749, gvid: 1
+10-19 18:01:39.759 13315 13315 E fb4a.Execution: Redirecting MSYS Execution scheduling from the UI thread to a custom executor
+10-19 18:01:39.761 13315 28035 I omnistore_android_logger: Client sent connect message
+10-19 18:01:39.765 13315 13315 W fb4a.AppComponentFactory: Instantiating Service
+10-19 18:01:39.768 13315 28137 E fb4a.msys: E[C mem.context]_LogNetworkStateUpdate(7651)=>[Critical] network_state/prev/1/new/1/source/0
+10-19 18:01:39.769 13315 28137 E fb4a.msys: E[C mem.context]_MaybeWCCConnectionConnectOnExecutionContext(2554)=>[INFO] Maybe attempt WCCConnectionConnect, tokenReason=6
+10-19 18:01:39.770 13315 13315 E fb4a.SlowAppComponent: 0ms: SystemJobService instantiating…
+10-19 18:01:39.771 13315 13315 E fb4a.SlowAppComponent: 117ms: ConditionalWorkerService instantiating…
+10-19 18:01:39.771 13315 13315 E fb4a.SlowAppComponent: Main thread was blocked for 123ms in the background starting with SystemJobService
+10-19 18:01:39.775 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultEmitStateChange(3041)=>[INFO] connection/new_state/connecting [connection_id=982308814, wcc_source=0, wcc_reason=8]
+10-19 18:01:39.803 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultDoConnectWithAuthKeys(1491)=>[INFO] connection/connect/start/[host=chat-e2ee-mini.facebook.com port=5222]/[57.144.122.8:5222]
+10-19 18:01:39.804 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultLifecycleEventHandler(2059)=>[INFO] connection/xmpp/lifecycle_event/will-connect
+10-19 18:01:39.856 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultLifecycleEventHandler(2067)=>[INFO] connection/xmpp/lifecycle_event/did-connect, [0.0514s]
+10-19 18:01:39.869 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultLifecycleEventHandler(2067)=>[INFO] connection/xmpp/lifecycle_event/did-send-initial-payload, [0.0127s]
+10-19 18:01:40.216 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultLifecycleEventHandler(2067)=>[INFO] connection/xmpp/lifecycle_event/will-handshake, [0.3459s]
+10-19 18:01:40.219 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultLifecycleEventHandler(2067)=>[INFO] connection/xmpp/lifecycle_event/did-handshake, [0.0023s]
+10-19 18:01:40.223 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultReceiveHandler(2220)=>[INFO] connection/receive/login-success
+10-19 18:01:40.224 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultEmitStateChange(3041)=>[INFO] connection/new_state/connected [connection_id=982308814, wcc_source=0, wcc_reason=8]
+10-19 18:01:40.236 13315 28137 E fb4a.msys: E[C mem.context]_ScheduleBackgroundDisconnectionTaskIfNeededOnExecutionContext(3683)=>[INFO] background/disconnect_schedule/duration/120
+10-19 18:01:40.237 13315 28125 E fb4a.msys: E[N MCCWLigerStream]_NetworkChangedCallbackInternal(57)=>skip the network state change source=4
+10-19 18:01:40.239 13315 28137 E fb4a.msys: E[C mem.context]_NetworkStateChangedCallbackOnExecutionContext(7797)=>[INFO]skip the network state change source=4
+10-19 18:01:40.241 13315 28010 E fb4a.msys: E[N WA]_WCCConnectionDefaultReconnectFromWeakRef(1358)=>[INFO] connection/reconnect reconnection aborted, already logged in
+10-19 18:01:40.372 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:40.378 21104 22415 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:40.562  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:40.878 21104 21119 I WifiScanner: onFullResults
+10-19 18:01:40.879 21104 22003 I WifiScanner: onFullResults
+10-19 18:01:40.879 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:40.892 21104 22181 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:40.921 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:40.922 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:40.923 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:40.924 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:40.928 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:40.928 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:40.930 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:42.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:42.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:42.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:42.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:42.509 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:42.652  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:43.350  7096  7120 I native  : I0000 00:00:1760877103.349731    7120 soda_async_impl.cc:1383] Current audio timestamp: 1760877103225264
+10-19 18:01:43.367  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:01:44.737  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:45.873 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:45.877 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:45.894 21104 21118 I WifiScanner: onFullResults
+10-19 18:01:45.895 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:45.895 21104 22003 I WifiScanner: onFullResults
+10-19 18:01:45.937 21104 22415 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:45.971 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:45.972 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:45.972 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:45.972 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:45.974 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:45.975 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:45.976 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:46.835  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:47.508 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:47.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:47.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:47.560 21104 22181 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:01:47.568 21104 22181 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:01:47.575 21104 22181 I SemanticLocation: (REDACTED) [Inferrer] %s%s
+10-19 18:01:48.939  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:49.086  9466  9477 I om.vivo.gallery: Background concurrent copying GC freed 9998KB AllocSpace bytes, 76(5876KB) LOS objects, 49% free, 13MB/27MB, paused 179us,89us total 182.732ms
+10-19 18:01:50.898 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:50.904 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:51.042  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:51.410 21104 21118 I WifiScanner: onFullResults
+10-19 18:01:51.411 21104 22003 I WifiScanner: onFullResults
+10-19 18:01:51.411 21104 21118 I WifiScanner: onFullResults
+10-19 18:01:51.430 21104 22416 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:51.470 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:51.470 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:51.470 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:51.471 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:51.473 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:51.473 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:51.474 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:52.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:52.507 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:52.507 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:52.507 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:52.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:53.144  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:54.297 21104 22415 I SemanticLocation: New activity record out of order; sorting [CONTEXT service_id=173 ]
+10-19 18:01:54.302 21104 21188 I ActivityScheduler: nextTriggerTime: 1321288665, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:01:55.243  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:56.413 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:01:56.422 21104 22415 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:01:56.447 21104 23957 I WifiScanner: onFullResults
+10-19 18:01:56.448 21104 22003 I WifiScanner: onFullResults
+10-19 18:01:56.449 21104 21118 I WifiScanner: onFullResults
+10-19 18:01:56.487 21104 22181 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:01:56.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:56.508 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:56.508 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:56.508 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:56.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:56.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:56.525 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:01:57.335  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:01:57.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:57.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:57.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:57.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:01:57.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:01:59.417  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:01.441 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:01.446 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:01.521  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:01.962 21104 22003 I WifiScanner: onFullResults
+10-19 18:02:01.963 21104 23957 I WifiScanner: onFullResults
+10-19 18:02:01.963 21104 21118 I WifiScanner: onFullResults
+10-19 18:02:01.970 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:01.991 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:01.991 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:01.992 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:01.992 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:01.994 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:01.997 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:01.999 21104 22415 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 18:02:02.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:02.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:02.510 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:02.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:02.514 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:03.738 14485 14485 I bnlz    : onPause
+10-19 18:02:03.773  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:03.774  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:03.775  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:03.776  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:03.809  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:04.165 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-19 18:02:04.198 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:04.199 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#149](f:0,a:1) destructor()
+10-19 18:02:04.200 14485 14485 D BufferQueueConsumer: [VRI[Launcher]#149(BLAST Consumer)149](id:389500000095,api:0,p:-1,c:14485) disconnect
+10-19 18:02:04.203 14485 14485 I bnlz    : onStop
+10-19 18:02:05.922  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:06.649 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-19 18:02:06.673 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:06.673 14485 14485 D BufferQueueConsumer: [](id:389500000096,api:0,p:-1,c:14485) connect: controlledByApp=false
+10-19 18:02:06.673 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#150](f:0,a:0) constructor()
+10-19 18:02:06.673 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#150](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-19 18:02:06.682 14485 14785 D BLASTBufferQueue: [VRI[Launcher]#150](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=640242201807698(auto) mPendingTransactions.size=0 graphicBufferId=62212601283611 transform=0
+10-19 18:02:06.683 14485 14485 I bnlz    : onStart
+10-19 18:02:06.689 14485 14485 I bldh    : (REDACTED) [%s] onStart()
+10-19 18:02:06.689 14485 14485 I blfn    : Reloading theme data
+10-19 18:02:06.689 14485 14485 I bnlz    : onResume
+10-19 18:02:06.780  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:06.781  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:06.781  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:06.782  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:06.954 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:06.956 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:06.970 21104 22647 I WifiScanner: onFullResults
+10-19 18:02:06.970 21104 21250 I WifiScanner: onFullResults
+10-19 18:02:06.970 21104 22003 I WifiScanner: onFullResults
+10-19 18:02:07.001 21104 22415 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:07.018 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:07.019 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:07.019 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:07.019 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:07.020 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:07.021 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:07.480 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:07.480 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:07.480 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:07.480 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:07.480 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:07.481 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:07.482 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:08.013  5720 14148 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:08.619  1870  3779 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 860, arg2: 1238, arg3: 12794, arg4: 1088, name: com.a1taxi.a1taxicustomer
+10-19 18:02:08.622 14485 14485 I bnlz    : onPause
+10-19 18:02:08.695  1870  2894 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 860, arg2: 1238, arg3: 12794, arg4: 1088, name: com.a1taxi.a1taxicustomer
+10-19 18:02:08.773  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:08.774  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:08.774  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.a1taxicustomer, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:08.775  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:09.050 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-19 18:02:09.093 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:09.094 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#150](f:0,a:1) destructor()
+10-19 18:02:09.094 14485 14485 D BufferQueueConsumer: [VRI[Launcher]#150(BLAST Consumer)150](id:389500000096,api:0,p:-1,c:14485) disconnect
+10-19 18:02:09.096 14485 14485 I bnlz    : onStop
+10-19 18:02:10.111  5720 14148 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:10.320 21104 21188 I ActivityScheduler: nextTriggerTime: 1321304683, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:02:10.968  1870  3777 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 12794, arg4: 1088, name: com.a1taxi.a1taxicustomer
+10-19 18:02:11.970 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:11.977 21104 22416 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:12.031 21104 23263 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
+10-19 18:02:12.041 21104 23263 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
+10-19 18:02:12.203  5720 14148 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:12.464 21104 21250 I WifiScanner: onFullResults
+10-19 18:02:12.464 21104 21250 I WifiScanner: onFullResults
+10-19 18:02:12.464 21104 21249 I WifiScanner: onFullResults
+10-19 18:02:12.473 21104 22416 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:12.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:12.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:12.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:12.488 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:12.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:12.495 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:12.495 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:12.495 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:12.495 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:12.495 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:12.496 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:12.496 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:12.498 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:12.652 21104 23263 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
+10-19 18:02:12.660 21104 23263 I PhenotypeResourceReader: unable to find any Phenotype resource metadata for com.a1taxi.a1taxicustomer
+10-19 18:02:12.670 21104 23318 I FusedOrientationManager: Registering orientation client. [CONTEXT service_id=6 ]
+10-19 18:02:12.718  1870  2610 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 1080, arg2: 2056, arg3: 12794, arg4: 1187, name: com.a1taxi.a1taxicustomer
+10-19 18:02:13.348  7096  7120 I native  : I0000 00:00:1760877133.348354    7120 soda_async_impl.cc:1383] Current audio timestamp: 1760877133225264
+10-19 18:02:13.388  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:02:13.491 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:13.492 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:13.492 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:13.492 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:13.493 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:13.493 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:13.769  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:13.769  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:13.772  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.a1taxicustomer, inputType=4001, inputTypeString=Normal[CapSentences], enableLearning=true, autoCorrection=true, autoComplete=true, imeOptions=3, privateImeOptions=null, actionName=SEARCH, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=2000, label=null, fieldId=3019, fieldName=null, extras=Bundle[mParcelledData.dataSize=404], hintText=non-empty, hintLocales=[]}}, false)
+10-19 18:02:13.775  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:14.297  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:15.081  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:15.082  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:15.083  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.a1taxicustomer, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:15.084  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:16.403  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:17.465 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:17.470 21104 23320 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:17.479 21104 21249 I WifiScanner: onFullResults
+10-19 18:02:17.479 21104 21250 I WifiScanner: onFullResults
+10-19 18:02:17.480 21104 22647 I WifiScanner: onFullResults
+10-19 18:02:17.517 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:17.535 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:17.535 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:17.535 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:17.536 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:17.539 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:17.542 21104 23320 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 18:02:18.501 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:18.501 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:18.501 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:18.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:18.503 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:18.506 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:18.511  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:18.535 21104 23319 I GmsCoreXrpcWrapper: (REDACTED) Returning a channel provider with trafficStatsTag=%d trafficStatsUid=%d
+10-19 18:02:18.553 21163 21163 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+10-19 18:02:18.553 21163 21163 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+10-19 18:02:18.611 21104 23320 E ievv    : *~*~*~ Previous channel {0} was garbage collected without being shut down! ~*~*~*
+10-19 18:02:18.611 21104 23320 E ievv    :     Make sure to call shutdown()/shutdownNow()
+10-19 18:02:18.611 21104 23320 E ievv    : java.lang.RuntimeException: ManagedChannel allocation site
+10-19 18:02:18.611 21104 23320 E ievv    : 	at ievu.<init>(:com.google.android.gms@254031035@25.40.31 (260400-816341114):21)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at ievv.<init>(:com.google.android.gms@254031035@25.40.31 (260400-816341114):10)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at ievt.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):250)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at iegb.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):5)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at cnxf.h(:com.google.android.gms@254031035@25.40.31 (260400-816341114):150)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at gsvy.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):154)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at ghbq.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):13)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at gpol.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):3)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at gpnm.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):19)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at gpon.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):5)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at bckr.c(:com.google.android.gms@254031035@25.40.31 (260400-816341114):50)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at bckr.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):73)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1156)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:651)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at bcqi.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):8)
+10-19 18:02:18.611 21104 23320 E ievv    : 	at java.lang.Thread.run(Thread.java:1119)
+10-19 18:02:18.832 21104 22161 I cn_CronetUrlRequestContext: destroyNativeStreamLocked org.chromium.net.impl.CronetBidirectionalStream@f7ecdd1
+10-19 18:02:19.562 21104 23319 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 1321788925]
+10-19 18:02:19.596 21104 21104 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-19 18:02:19.603 21104 23320 I AlarmManager: setExactAndAllowWhileIdle [name: FcmRetry type: 2 triggerAtMillis: 1321428965]
+10-19 18:02:19.608 21104 23319 I AlarmManager: setExactAndAllowWhileIdle [name: GCM_HB_ALARM type: 2 triggerAtMillis: 1321788971]
+10-19 18:02:19.661 18414 18422 I adbd    : jdwp connection from 19744
+10-19 18:02:19.878 21104 22226 I PhenotypeResourceReader: unable to find any Phenotype resource metadata for com.a1taxi.a1taxicustomer
+10-19 18:02:19.927  1870  2894 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 970, arg2: 825, arg3: 12794, arg4: 1395, name: com.a1taxi.a1taxicustomer
+10-19 18:02:20.298  1870  3607 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 12794, arg4: 1187, name: com.a1taxi.a1taxicustomer
+10-19 18:02:20.378 21163 22741 I MdiSyncModule: (REDACTED) Receiving API connection from package '%s'...
+10-19 18:02:20.382 21163 22741 I MdiSyncModule: API connection successful!
+10-19 18:02:20.601  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:20.642 21104 21199 W ProviderHelper: Unknown dynamite feature providerinstaller.dynamite
+10-19 18:02:21.084 14485 14485 I bnlz    : onStart
+10-19 18:02:21.085 14485 14485 I bldh    : (REDACTED) [%s] onStart()
+10-19 18:02:21.085 14485 14485 I blfn    : Reloading theme data
+10-19 18:02:21.086 14485 14485 I bnlz    : onResume
+10-19 18:02:21.086 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-19 18:02:21.139 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:21.140 14485 14485 D BufferQueueConsumer: [](id:389500000097,api:0,p:-1,c:14485) connect: controlledByApp=false
+10-19 18:02:21.140 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#151](f:0,a:0) constructor()
+10-19 18:02:21.140 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#151](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-19 18:02:21.152 14485 14785 D BLASTBufferQueue: [VRI[Launcher]#151](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=640256672097622(auto) mPendingTransactions.size=0 graphicBufferId=62212601283618 transform=0
+10-19 18:02:21.678 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:21.679 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:21.692  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:21.693  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:21.694  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:21.696  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:21.719  1870  3779 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 12794, arg4: 1395, name: com.a1taxi.a1taxicustomer
+10-19 18:02:22.099 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:22.099 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:22.107  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:22.108  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:22.108  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:22.109  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:22.136 14485 14485 I bnlz    : onPause
+10-19 18:02:22.172 14485 26446 V ClearcutMetricXmitter: Transmission is done.
+10-19 18:02:22.478 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:22.480 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:22.559 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-19 18:02:22.586 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:22.588 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#151](f:0,a:3) destructor()
+10-19 18:02:22.588 14485 14485 D BufferQueueConsumer: [VRI[Launcher]#151(BLAST Consumer)151](id:389500000097,api:0,p:-1,c:14485) disconnect
+10-19 18:02:22.596 14485 14485 I bnlz    : onStop
+10-19 18:02:22.696  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:22.921  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:22.922  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:22.923  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:22.924  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:22.974 21104 22617 I WifiScanner: onFullResults
+10-19 18:02:22.974 21104 21143 I WifiScanner: onFullResults
+10-19 18:02:22.974 21104 22224 I WifiScanner: onFullResults
+10-19 18:02:22.978 21104 23361 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:22.993 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:22.993 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:22.993 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:22.993 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:22.994 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:22.995 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:23.473 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:23.474 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:23.474 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:23.474 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:23.474 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:23.475 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:23.475 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:24.363 21104 22226 I PhenotypeResourceReader: unable to find any Phenotype resource metadata for com.a1taxi.driverpro
+10-19 18:02:24.471  1870  3354 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 882, arg2: 550, arg3: 15934, arg4: 771, name: com.a1taxi.driverpro
+10-19 18:02:24.786  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:25.354 21104 21104 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+10-19 18:02:25.500  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:25.502  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:25.503  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:25.506  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:25.814 21104 21188 I ActivityScheduler: nextTriggerTime: 1321320177, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:02:26.878  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:27.973 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:27.976 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:27.987 21104 21143 I WifiScanner: onFullResults
+10-19 18:02:27.988 21104 22617 I WifiScanner: onFullResults
+10-19 18:02:27.989 21104 22224 I WifiScanner: onFullResults
+10-19 18:02:28.038 21104 22416 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:28.071 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:28.071 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:28.071 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:28.071 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:28.073 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:28.075 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:28.425  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:28.427  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:28.429  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:28.433  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:28.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:28.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:28.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:28.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:28.506 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:28.506 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:28.508 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:28.509 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:28.543 18831 18857 I Finsky  : [45982] Stats for Executor: LightweightExecutor ubw@691a097[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 5294]
+10-19 18:02:28.544 18831 18857 I Finsky  : [45982] Stats for Executor: BlockingExecutor ubw@6b99284[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 660]
+10-19 18:02:28.544 18831 18857 I Finsky  : [45982] Stats for Executor: bgExecutor ubw@dbfca6d[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 12951]
+10-19 18:02:28.978  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:29.060  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:29.061  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:29.062  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:29.066  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:29.644 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-19 18:02:29.644 14485 14485 I bnlz    : onStart
+10-19 18:02:29.645 14485 14485 I bldh    : (REDACTED) [%s] onStart()
+10-19 18:02:29.645 14485 14485 I blfn    : Reloading theme data
+10-19 18:02:29.646 14485 14485 I bnlz    : onResume
+10-19 18:02:29.672 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:29.673 14485 14485 D BufferQueueConsumer: [](id:389500000098,api:0,p:-1,c:14485) connect: controlledByApp=false
+10-19 18:02:29.673 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#152](f:0,a:0) constructor()
+10-19 18:02:29.673 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#152](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-19 18:02:29.684 14485 14785 D BLASTBufferQueue: [VRI[Launcher]#152](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=640265203677546(auto) mPendingTransactions.size=0 graphicBufferId=62212601283625 transform=0
+10-19 18:02:30.159 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:30.159 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:30.177  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:30.178  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:30.179  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:30.180  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:30.181  1870  3779 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 15934, arg4: 771, name: com.a1taxi.driverpro
+10-19 18:02:30.868  1870  3777 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 970, arg2: 825, arg3: 12794, arg4: 1395, name: com.a1taxi.a1taxicustomer
+10-19 18:02:30.891 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:30.891 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:30.911  1870  3777 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 970, arg2: 825, arg3: 12794, arg4: 1395, name: com.a1taxi.a1taxicustomer
+10-19 18:02:30.973 14485 14485 I bnlz    : onPause
+10-19 18:02:30.983  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:30.984  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:30.985  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.a1taxicustomer, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:30.987  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:30.994 14485 15090 V ClearcutMetricXmitter: Transmission is done.
+10-19 18:02:31.342  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:31.396 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-19 18:02:31.434 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:31.435 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#152](f:0,a:3) destructor()
+10-19 18:02:31.436 14485 14485 D BufferQueueConsumer: [VRI[Launcher]#152(BLAST Consumer)152](id:389500000098,api:0,p:-1,c:14485) disconnect
+10-19 18:02:31.438 14485 14485 I bnlz    : onStop
+10-19 18:02:31.470  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:31.474  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:31.474  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.a1taxicustomer, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:31.475  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:31.500  1870  2891 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 12794, arg4: 1395, name: com.a1taxi.a1taxicustomer
+10-19 18:02:32.448 21104 23314 I PhenotypeResourceReader: unable to find any Phenotype resource metadata for com.a1taxi.a1taxicustomer
+10-19 18:02:32.481  1870  2929 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 860, arg2: 1238, arg3: 12794, arg4: 1819, name: com.a1taxi.a1taxicustomer
+10-19 18:02:32.990 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:32.995 21104 22070 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:33.494 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:33.494 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:33.494 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:33.494 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:33.561 21104 23617 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:02:33.579 21163 21163 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.service.START pkg=com.google.android.gms }
+10-19 18:02:33.587 21104 23617 I TFLite-in-PlayServices: Created interpreter.
+10-19 18:02:33.612 21104 23617 I SemanticLocation: (REDACTED) [Inferrer] %s%s
+10-19 18:02:33.741 21104 22617 I WifiScanner: onFullResults
+10-19 18:02:33.741 21104 21143 I WifiScanner: onFullResults
+10-19 18:02:33.742 21104 22224 I WifiScanner: onFullResults
+10-19 18:02:33.748 21104 22070 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:33.775 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:33.775 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:33.775 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:33.775 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:33.776 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:33.777 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:33.777 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:33.778 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:34.225  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:34.226  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:34.226  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.a1taxicustomer, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:34.227  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:35.514 14485 14485 I bnlz    : onStart
+10-19 18:02:35.516 14485 14485 I bldh    : (REDACTED) [%s] onStart()
+10-19 18:02:35.516 14485 14485 I blfn    : Reloading theme data
+10-19 18:02:35.517 14485 14485 I bnlz    : onResume
+10-19 18:02:35.525 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-19 18:02:35.543  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:35.564 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:35.564 14485 14485 D BufferQueueConsumer: [](id:389500000099,api:0,p:-1,c:14485) connect: controlledByApp=false
+10-19 18:02:35.565 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#153](f:0,a:0) constructor()
+10-19 18:02:35.565 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#153](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-19 18:02:35.573 14485 14785 D BLASTBufferQueue: [VRI[Launcher]#153](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=640271092911393(auto) mPendingTransactions.size=0 graphicBufferId=62212601283632 transform=0
+10-19 18:02:36.083 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:36.083 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:36.101  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:36.103  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:36.104  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:36.105  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:36.132  1870  2610 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -2, arg2: -1, arg3: 12794, arg4: 1819, name: com.a1taxi.a1taxicustomer
+10-19 18:02:36.720  1870  3606 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 882, arg2: 550, arg3: 15934, arg4: 771, name: com.a1taxi.driverpro
+10-19 18:02:36.732 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:36.733 14485 14485 I bnft    : (REDACTED) onApplyWindowInsets: systemWindowInsets=%s
+10-19 18:02:36.768  1870  3343 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 882, arg2: 550, arg3: 15934, arg4: 771, name: com.a1taxi.driverpro
+10-19 18:02:36.807 14485 14485 I bnlz    : onPause
+10-19 18:02:36.810  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:36.811  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:36.811  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:36.812  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:36.814 14485 15090 V ClearcutMetricXmitter: Transmission is done.
+10-19 18:02:37.247 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-19 18:02:37.269 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:37.269 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#153](f:0,a:3) destructor()
+10-19 18:02:37.269 14485 14485 D BufferQueueConsumer: [VRI[Launcher]#153(BLAST Consumer)153](id:389500000099,api:0,p:-1,c:14485) disconnect
+10-19 18:02:37.278 14485 14485 I bnlz    : onStop
+10-19 18:02:37.689  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:37.887  1870  2929 D AutofillSession: createPendingIntent for request 2338
+10-19 18:02:37.892  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:37.893  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:37.899  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:37.911  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=7002, inputTypeString=Number, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=6, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=3000, label=null, fieldId=2233, fieldName=null, extras=Bundle[mParcelledData.dataSize=404], hintText=non-empty, hintLocales=[]}}, false)
+10-19 18:02:37.911  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:37.912  5589  5589 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():221 Unregister key sequence nfz{labelResId=0, callback=gds@44dc24b, lastModifier=0, keyCodes=[57, 57], actions=[1, 0]}
+10-19 18:02:37.912  5589  5589 I HardKeyTracker: HardKeyTracker.unregisterKeySequence():221 Unregister key sequence nfz{labelResId=0, callback=gds@b4c9ae6, lastModifier=0, keyCodes=[58, 58], actions=[1, 0]}
+10-19 18:02:37.973 21163 21163 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.wallet.service.BIND pkg=com.google.android.gms }
+10-19 18:02:37.973 21163 21163 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.wallet.service.BIND pkg=com.google.android.gms }
+10-19 18:02:37.983 21104 23616 W anqe    : Failed to retrieve prediction data. [CONTEXT service_id=177 ]
+10-19 18:02:37.983 21104 23616 W anqe    : java.util.concurrent.ExecutionException: fnpd: No active MDD filegroup android-autofill-infinitedata found for the table autofill-domain-predictions-prod-spanner.
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.j(:com.google.android.gms@254031035@25.40.31 (260400-816341114):21)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkk.v(:com.google.android.gms@254031035@25.40.31 (260400-816341114):107)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.get(:com.google.android.gms@254031035@25.40.31 (260400-816341114):2)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at anqe.e(:com.google.android.gms@254031035@25.40.31 (260400-816341114):81)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at anqe.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):124)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at anno.call(:com.google.android.gms@254031035@25.40.31 (260400-816341114):5)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at java.util.concurrent.FutureTask.run(FutureTask.java:317)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at bckr.c(:com.google.android.gms@254031035@25.40.31 (260400-816341114):50)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at bckr.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):73)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1156)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:651)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at bcqi.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):8)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at java.lang.Thread.run(Thread.java:1119)
+10-19 18:02:37.983 21104 23616 W anqe    : Caused by: fnpd: No active MDD filegroup android-autofill-infinitedata found for the table autofill-domain-predictions-prod-spanner.
+10-19 18:02:37.983 21104 23616 W anqe    : 	at fnpr.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):13)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpjr.d(:com.google.android.gms@254031035@25.40.31 (260400-816341114):3)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpjt.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):130)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpma.execute(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.f(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.m(:com.google.android.gms@254031035@25.40.31 (260400-816341114):99)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.r(:com.google.android.gms@254031035@25.40.31 (260400-816341114):17)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpko.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):77)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpma.execute(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.f(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.m(:com.google.android.gms@254031035@25.40.31 (260400-816341114):99)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.t(:com.google.android.gms@254031035@25.40.31 (260400-816341114):26)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpjr.e(:com.google.android.gms@254031035@25.40.31 (260400-816341114):3)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpjt.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):138)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpma.execute(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.f(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.m(:com.google.android.gms@254031035@25.40.31 (260400-816341114):99)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.r(:com.google.android.gms@254031035@25.40.31 (260400-816341114):17)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpko.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):77)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpma.execute(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.f(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.m(:com.google.android.gms@254031035@25.40.31 (260400-816341114):99)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.t(:com.google.android.gms@254031035@25.40.31 (260400-816341114):26)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpmx.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):5)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpma.execute(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.f(:com.google.android.gms@254031035@25.40.31 (260400-816341114):1)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.m(:com.google.android.gms@254031035@25.40.31 (260400-816341114):99)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkb.t(:com.google.android.gms@254031035@25.40.31 (260400-816341114):26)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkm.e(:com.google.android.gms@254031035@25.40.31 (260400-816341114):3)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpko.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):44)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpod.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):64)
+10-19 18:02:37.983 21104 23616 W anqe    : 	... 6 more
+10-19 18:02:37.983 21104 23616 W anqe    : Caused by: flxc: Requested group not found.
+10-19 18:02:37.983 21104 23616 W anqe    : 	at flxa.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):30)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at fmce.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):19)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at ghbr.a(:com.google.android.gms@254031035@25.40.31 (260400-816341114):13)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpkm.d(:com.google.android.gms@254031035@25.40.31 (260400-816341114):3)
+10-19 18:02:37.983 21104 23616 W anqe    : 	at gpko.run(:com.google.android.gms@254031035@25.40.31 (260400-816341114):38)
+10-19 18:02:37.983 21104 23616 W anqe    : 	... 7 more
+10-19 18:02:37.991 21104 22226 I PasswordSaveInfoFactory: Form is missing passwords. [CONTEXT service_id=177 ]
+10-19 18:02:38.006 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s%s)
+10-19 18:02:38.012 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s) finished in %s
+10-19 18:02:38.020 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s%s)
+10-19 18:02:38.022 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s) finished in %s
+10-19 18:02:38.024 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s%s)
+10-19 18:02:38.026 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s) finished in %s
+10-19 18:02:38.028 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s%s)
+10-19 18:02:38.033 21163  8733 I SyncManager: (REDACTED) Executing sync(type=%s) finished in %s
+10-19 18:02:38.041 21163 22741 I AutofillPreferences: The stored preference is not current autofill service. Clean permission. [CONTEXT service_id=177 ]
+10-19 18:02:38.041 21163 22741 I AutofillPreferences: cleanPermission [CONTEXT service_id=177 ]
+10-19 18:02:38.042 21163 21163 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.auth.api.phone.service.InternalService.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalApiService }
+10-19 18:02:38.042 21163 21163 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.auth.api.phone.service.InternalService.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalApiService }
+10-19 18:02:38.053 21163 22741 I AutofillPreferences: The stored preference is not current autofill service. Clean permission. [CONTEXT service_id=177 ]
+10-19 18:02:38.053 21163 22741 I AutofillPreferences: cleanPermission [CONTEXT service_id=177 ]
+10-19 18:02:38.320 18831 18857 I Finsky  : [45982] Stats for Executor: GrpcBackgroundExecutor ubw@6657fa[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 15]
+10-19 18:02:38.372  1870  1870 D AutofillSession: Service did not request to wait for delayed fill response.
+10-19 18:02:38.471 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:38.472 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:38.472 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:38.473 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:38.475 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:38.742 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:38.752 21104 23622 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:38.763 21104 22617 I WifiScanner: onFullResults
+10-19 18:02:38.767 21104 21142 I WifiScanner: onFullResults
+10-19 18:02:38.768 21104 21250 I WifiScanner: onFullResults
+10-19 18:02:38.808 21104 23361 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:38.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:38.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:38.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:38.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:38.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:38.829 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:38.830 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:38.830 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:38.832 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:38.950  5589  5589 I StylusModule: StylusModule.onUpdateToolType():800 Update tool type = 1
+10-19 18:02:38.956  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1439 onStartInputView(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=7002, inputTypeString=Number, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=6, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=3000, label=null, fieldId=2233, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=11, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=non-empty, hintLocales=[]}}, false)
+10-19 18:02:38.960  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():108 systemKeyboardHeightRatio:1.000000.
+10-19 18:02:38.963  5589  5589 I AndroidIME: InputBundleManager.loadActiveInputBundleId():528 loadActiveInputBundleId: und-Latn-x-number, number
+10-19 18:02:38.968  5589  5589 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():581 activateKeyboard(): type=prime, status=INACTIVE, imeDef=mkk{stringId=number, language=und-Latn-x-number, languageTag=und-Latn-x-number, processedConditions={}, className=com.google.android.libraries.inputmethod.ime.DummyIme, label=2132019216, keyEventInterpreter=null, inlineComposing=true, autoCapital=false, announceAutoSelectedCandidate=false, statusIcon=0, indicatorIcon=0, indicatorLabel=null, displayAppCompletions=false, extraValues=mkd{}, processors=mmb@7d3d911, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=false, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=mlk@821ce4, phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=false}
+10-19 18:02:38.968  5589  5589 I KeyboardManager: KeyboardManager.requestKeyboard():248 Creating keyboard prime, imeId=number, cacheKey=theme,!gsf,!pgsans,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,GOOGLE_ICONS,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.748144,POPUP,SCREEN_SHORTEST_WIDTH=393,SCREEN_SHORTEST_WIDTH_NO_SCALE=393,XXHDPI,bottom4dp,enable_emoji_kitchen_browse_color_v2=true,enable_google_fonts_icons=true,enable_popup_on_keypress=true,keyboard_redesign_google_sans=true,non_linear_scale,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff131313-ffffffff-4d9204e36e3ccb6a165e3e3dbe763ce0,roundedchip,silkpopup
+10-19 18:02:38.978  5589  5589 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():224 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinNumberKeyboard@508e2c3
+10-19 18:02:38.979  5589  5589 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():611 doActivateKeyboard(): prime
+10-19 18:02:39.002  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.002  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.getKeyboardInitialStates():175 
+10-19 18:02:39.008  5589  5589 W Keyboard: Keyboard.getKeyboardViewHelper():609 null helper is returned: keyboardDef=mle{processedConditions={enable_access_points_in_password_number=true, enable_correction_settings_updates=true, layout_9key_split=false, language=en-US, deprecate_long_press_space_for_ime_picker=false, show_suggestion_strip=true, device=phone, expressions=normal}, globalConditions={global_theme_key=theme,!gsf,!pgsans,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,GOOGLE_ICONS,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.748144,POPUP,SCREEN_SHORTEST_WIDTH=393,SCREEN_SHORTEST_WIDTH_NO_SCALE=393,XXHDPI,bottom4dp,enable_emoji_kitchen_browse_color_v2=true,enable_google_fonts_icons=true,enable_popup_on_keypress=true,keyboard_redesign_google_sans=true,non_linear_scale,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff131313-ffffffff-4d9204e36e3ccb6a165e3e3dbe763ce0,roundedchip,silkpopup, global_locale=en_US, global_density_dpi=440, global_orientation=1}, className=.latin.keyboard.LatinNumberKeyboard, resourceIds=[#0x7f17086b], initialStates=0, keyboardViewDefs=[mls{direction=LOCALE, id=#0x7f0b0224, isScalable=false, layoutId=#0x7f0e0500, type=HEADER, touchable=true, defaultShow=true}, mls{direction=null, id=#0x7f0b0224, isScalable=true, layoutId=#0x7f0e0556, type=BODY, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e05f1, recentKeyLayoutId=0, recentKeyPopupLayoutId=0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=0}, type=FLOATING_CANDIDATES, helpersCreated=[lxm@e7604a8, lxm@f9b5bc1, null, null], context.getResources().getConfiguration(): {1.0 405mcc869mnc [en_US] ldltr sw393dp w393dp h790dp 440dpi nrml long port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2392) mAppBounds=Rect(0, 103 - 1080, 2276) mMaxBounds=Rect(0, 0 - 1080, 2392) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 isEmbedding:false} s.5420 fontWeightAdjustment=0 themeId=2 themeParameter=0 nightModeLevel = -1 typefaceChanged=0.0 ?spacesystem eaMode=1}
+10-19 18:02:39.009  5589  5589 W Keyboard: Keyboard.getKeyboardViewHelper():609 null helper is returned: keyboardDef=mle{processedConditions={enable_access_points_in_password_number=true, enable_correction_settings_updates=true, layout_9key_split=false, language=en-US, deprecate_long_press_space_for_ime_picker=false, show_suggestion_strip=true, device=phone, expressions=normal}, globalConditions={global_theme_key=theme,!gsf,!pgsans,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,GOOGLE_ICONS,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.748144,POPUP,SCREEN_SHORTEST_WIDTH=393,SCREEN_SHORTEST_WIDTH_NO_SCALE=393,XXHDPI,bottom4dp,enable_emoji_kitchen_browse_color_v2=true,enable_google_fonts_icons=true,enable_popup_on_keypress=true,keyboard_redesign_google_sans=true,non_linear_scale,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff131313-ffffffff-4d9204e36e3ccb6a165e3e3dbe763ce0,roundedchip,silkpopup, global_locale=en_US, global_density_dpi=440, global_orientation=1}, className=.latin.keyboard.LatinNumberKeyboard, resourceIds=[#0x7f17086b], initialStates=0, keyboardViewDefs=[mls{direction=LOCALE, id=#0x7f0b0224, isScalable=false, layoutId=#0x7f0e0500, type=HEADER, touchable=true, defaultShow=true}, mls{direction=null, id=#0x7f0b0224, isScalable=true, layoutId=#0x7f0e0556, type=BODY, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e05f1, recentKeyLayoutId=0, recentKeyPopupLayoutId=0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=0}, type=WIDGET, helpersCreated=[lxm@e7604a8, lxm@f9b5bc1, null, null], context.getResources().getConfiguration(): {1.0 405mcc869mnc [en_US] ldltr sw393dp w393dp h790dp 440dpi nrml long port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2392) mAppBounds=Rect(0, 103 - 1080, 2276) mMaxBounds=Rect(0, 0 - 1080, 2392) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 isEmbedding:false} s.5420 fontWeightAdjustment=0 themeId=2 themeParameter=0 nightModeLevel = -1 typefaceChanged=0.0 ?spacesystem eaMode=1}
+10-19 18:02:39.010  5589  5589 I AndroidIME: InputBundleManager.startInput():358 startInput() with mlo[keyboardType=prime, payload=null]
+10-19 18:02:39.011  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.onActivate():120 
+10-19 18:02:39.017  5589  5589 I LanguagePromoExtension: LanguagePromoExtension.checkDisplayPreconditions():174 Not show language promo: exceeds the max display times.
+10-19 18:02:39.018  5589  5589 I NewLanguagePromptExtension: NewLanguagePromptExtension.onActivate():189 Not activated NewLanguagePromptExtension: not a normal text input box.
+10-19 18:02:39.020  5589  5589 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():109 cancelShutdown()
+10-19 18:02:39.020  5589  5589 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():121 syncLanguagePacks()
+10-19 18:02:39.021  5589  5589 I VoiceInputManager: VoiceInputManager.onKeyboardActivated():1173 onKeyboardActivated() [UD]
+10-19 18:02:39.021  5589  6558 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():217 maybeScheduleAutoPackDownloadForFallback()
+10-19 18:02:39.021  5589  6558 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():205 maybeScheduleAutoPackDownload() for language tag en-US
+10-19 18:02:39.022  5589  5589 I PkModeUpdater: PkModeUpdater.onActivate():74 onActivate false true
+10-19 18:02:39.022  5589  5589 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():318 Accessory input mode started: null
+10-19 18:02:39.022  5589  5589 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():161 keyboard accessory_candidates_consumer is not activated before!
+10-19 18:02:39.023  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:39.023  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.023  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.023  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:39.023  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.023  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.023  5589  5589 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():811 interface mas is not activate
+10-19 18:02:39.027  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:39.035  3458  3458 V InlinePresentationRendererServiceImpl: onRenderSuggestion: width=-2, height=-2
+10-19 18:02:39.043  5589  5589 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2287), rotation: ROTATION_0
+10-19 18:02:39.043  5589  5589 D BufferQueueConsumer: [](id:15d500000862,api:0,p:-1,c:5589) connect: controlledByApp=false
+10-19 18:02:39.044  5589  5589 D BLASTBufferQueue: [VRI[InputMethod]#2146](f:0,a:0) constructor()
+10-19 18:02:39.044  5589  5589 D BLASTBufferQueue: [VRI[InputMethod]#2146](f:0,a:0) update width=1080 height=2287 format=-2 mTransformHint=0
+10-19 18:02:39.045  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:39.045  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.045  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.045  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:39.045  5589  5589 I WindowMetricsNotification: WindowMetricsNotification.notifyWithWindow():166 
+10-19 18:02:39.046  5589  5589 I WindowMetricsNotification: WindowMetricsNotification.notify():159 pfu[bounds=Rect(0, 105 - 1080, 2392), insets=Rect(0, 0 - 0, 116), densityDpi=440, smallestScreenWidthDp=393, displayWidth=1080, displayHeight=2392, xdpi=387.43, ydpi=387.43, isTrustable=true, displayId=0]; DisplayMetrics{density=2.75, width=1080, height=2392, scaledDensity=2.75, xdpi=387.43, ydpi=387.43}
+10-19 18:02:39.057  3458  3458 V InlineSuggestionRenderService: width=-2, height=-2, measuredSize=660x121
+10-19 18:02:39.070  3458  3458 D ViewRootImpl: AppSizeAfterRelayout, size: Point(660, 121), rotation: ROTATION_0
+10-19 18:02:39.071  3458  3458 D BufferQueueConsumer: [](id:d82000001ef,api:0,p:-1,c:3458) connect: controlledByApp=false
+10-19 18:02:39.071  3458  3458 D BLASTBufferQueue: [VRI[]#495](f:0,a:0) constructor()
+10-19 18:02:39.071  3458  3458 D BLASTBufferQueue: [VRI[]#495](f:0,a:0) update width=660 height=121 format=-2 mTransformHint=0
+10-19 18:02:39.073  5589  5657 D BLASTBufferQueue: [VRI[InputMethod]#2146](f:0,a:1) acquireNextBufferLocked size=1080x2287 mFrameNumber=1 applyTransaction=true mTimestamp=640274593328316(auto) mPendingTransactions.size=0 graphicBufferId=24004572224563 transform=0
+10-19 18:02:39.077  5589  5589 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():325 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{9a4bdd2 V.E...... ........ 0,0-1080,121}
+10-19 18:02:39.077  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.078  5589  5589 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():325 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{84bc248 V.E...... ........ 0,0-1080,580}
+10-19 18:02:39.078  1870  1976 D AutofillSession: onShown(): 2, 1
+10-19 18:02:39.078  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.078  5589  5589 I GlobeKeyExtension: GlobeKeyExtension$1.onKeyboardViewShown():72 maybeDisableLanguageSwitchKeyPref when the keyboard is shown
+10-19 18:02:39.078  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.maybeDisableLanguageSwitchKeyPref():200 maybeDisableLanguageSwitchKeyPref hasGlobeKeyBeenDisabled: false, shouldDisableLanguageSwitchKey: false
+10-19 18:02:39.078  5589  5589 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+10-19 18:02:39.084  3458 31463 D BLASTBufferQueue: [VRI[]#495](f:0,a:1) acquireNextBufferLocked size=660x121 mFrameNumber=1 applyTransaction=true mTimestamp=640274603708085(auto) mPendingTransactions.size=0 graphicBufferId=14851996913034 transform=0
+10-19 18:02:39.087  5589  5589 I ProactiveSuggestionsHolderManager: ProactiveSuggestionsHolderManager$2.display():195 Requesting to show proactive suggestions: AUTO_FILL PREEMPTIVE_WITH_SUPPRESSION
+10-19 18:02:39.095  5589  5589 D BufferQueueConsumer: [](id:15d500000863,api:0,p:-1,c:5589) connect: controlledByApp=false
+10-19 18:02:39.096  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2147](f:0,a:0) constructor()
+10-19 18:02:39.096  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2147](f:0,a:0) update width=770 height=121 format=-2 mTransformHint=0
+10-19 18:02:39.097  1870  2929 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 770, arg2: 121, arg3: 5589, arg4: 105641, name: com.google.android.inputmethod.latin
+10-19 18:02:39.101  5589  5589 I ProactiveSuggestionsHolderManager: ProactiveSuggestionsHolderManager$Holder.setSuggestionsAndShow():898 succeed to show proactive suggestions AUTO_FILL PREEMPTIVE_WITH_SUPPRESSION
+10-19 18:02:39.102 21163 21163 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 18:02:39.102 21163 21163 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.common.BIND_SHARED_PREFS pkg=com.google.android.gms }
+10-19 18:02:39.110  5589  5589 W NotificationCenter: NotificationCenter$NotificationQueue.notifyPendingNotificationsOnExecutor():877 Heavy notify work detected on UI thread: [ncb->jtu] takes 23ms
+10-19 18:02:39.112  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:39.113  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.113  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.113  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:39.117  5589  5589 D BufferQueueConsumer: [](id:15d500000864,api:0,p:-1,c:5589) connect: controlledByApp=false
+10-19 18:02:39.117  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2148](f:0,a:0) constructor()
+10-19 18:02:39.118  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2148](f:0,a:0) update width=660 height=121 format=-2 mTransformHint=0
+10-19 18:02:39.120  1870  3261 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 660, arg2: 121, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.124  5589  5657 D BLASTBufferQueue: [SurfaceView[InputMethod]#2148](f:0,a:1) acquireNextBufferLocked size=660x121 mFrameNumber=1 applyTransaction=true mTimestamp=640274644500931(auto) mPendingTransactions.size=0 graphicBufferId=24004572224564 transform=0
+10-19 18:02:39.125  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 330, arg2: 13, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.126  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 770, arg2: 121, arg3: 5589, arg4: 105641, name: com.google.android.inputmethod.latin
+10-19 18:02:39.132  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 402, arg2: 37, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.135  1870  2891 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 460, arg2: 55, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.149  1870  3606 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 514, arg2: 73, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.166  1870  3261 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 560, arg2: 89, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.181  1870  3261 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 596, arg2: 101, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.199  1870  3606 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 624, arg2: 109, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.217  1870  3606 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 646, arg2: 117, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.234  1870  3606 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 658, arg2: 121, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.251  1870  3606 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 660, arg2: 121, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.790  5720 14148 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:39.903  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:39.913  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 5589, arg4: 106908, name: com.google.android.inputmethod.latin
+10-19 18:02:39.914  5589  5657 E BufferQueueProducer: [SurfaceView[InputMethod]#2148(BLAST Consumer)2148](id:15d500000864,api:0,p:-1,c:5589) disconnect: not connected (req=1)
+10-19 18:02:39.914  5589  5657 W libEGL  : EGLNativeWindowType 0xb4000077e015c050 disconnect failed
+10-19 18:02:39.915  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2148](f:0,a:1) destructor()
+10-19 18:02:39.915  5589  5589 D BufferQueueConsumer: [SurfaceView[InputMethod]#2148(BLAST Consumer)2148](id:15d500000864,api:0,p:-1,c:5589) disconnect
+10-19 18:02:39.918  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:39.923  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:39.923  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.923  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.924  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:39.928  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:39.978  1870  2891 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 5589, arg4: 105641, name: com.google.android.inputmethod.latin
+10-19 18:02:39.978  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2147](f:0,a:0) destructor()
+10-19 18:02:39.979  5589  5589 D BufferQueueConsumer: [SurfaceView[InputMethod]#2147(BLAST Consumer)2147](id:15d500000863,api:0,p:-1,c:5589) disconnect
+10-19 18:02:39.983  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:39.983  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.983  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:39.984  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:40.066  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:40.067  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:40.067  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:40.068  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:40.136  3458  3458 V InlineSuggestionRenderService: Releasing inline suggestion view host
+10-19 18:02:40.153  3458  3458 D BLASTBufferQueue: [VRI[]#495](f:0,a:4) destructor()
+10-19 18:02:40.154  3458  3458 D BufferQueueConsumer: [VRI[]#495(BLAST Consumer)495](id:d82000001ef,api:0,p:-1,c:3458) disconnect
+10-19 18:02:40.170  3458  3458 V InlineSuggestionRenderService: Removed the inline suggestion from the cache, current size=0
+10-19 18:02:40.300  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:40.833  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:41.160  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:41.693  3458  3458 V InlinePresentationRendererServiceImpl: onRenderSuggestion: width=-2, height=-2
+10-19 18:02:41.697  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:41.698  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=7002, inputTypeString=Number, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=6, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=3000, label=null, fieldId=2233, fieldName=null, extras=Bundle[mParcelledData.dataSize=404], hintText=non-empty, hintLocales=[]}}, true)
+10-19 18:02:41.698  5589  5589 W SessionManager: SessionManager.beginSession():53 Try to begin an already begun session [INPUT_SESSION], end it first
+10-19 18:02:41.698  5589  5589 W SessionManager: SessionManager.endSession():96 Child session [INPUT_VIEW_SESSION] is not ended while ending session [{INPUT_SESSION=1760877157911, INPUT_VIEW_SESSION=1760877158956, IME_SESSION=1760877158964}], ending it now.
+10-19 18:02:41.698  5589  5589 W SessionManager: SessionManager.endSession():96 Child session [IME_SESSION] is not ended while ending session [{INPUT_SESSION=1760877157911, INPUT_VIEW_SESSION=1760877158956, IME_SESSION=1760877158964}], ending it now.
+10-19 18:02:41.701  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:41.702  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInputView():1439 onStartInputView(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=7002, inputTypeString=Number, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=6, privateImeOptions=null, actionName=DONE, actionLabel=null, initialSelStart=0, initialSelEnd=0, initialCapsMode=3000, label=null, fieldId=2233, fieldName=null, extras=Bundle[{android.support.text.emoji.emojiCompat_metadataVersion=11, androidx.core.view.inputmethod.EditorInfoCompat.STYLUS_HANDWRITING_ENABLED=true, android.support.text.emoji.emojiCompat_replaceAll=false}], hintText=non-empty, hintLocales=[]}}, true)
+10-19 18:02:41.702  3458  3458 V InlineSuggestionRenderService: width=-2, height=-2, measuredSize=660x121
+10-19 18:02:41.703  5589  5589 W SessionManager: SessionManager.endSession():88 Try to end a not begun session [IME_SESSION].
+10-19 18:02:41.704  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.getOemKeyboardHeightRatio():108 systemKeyboardHeightRatio:1.000000.
+10-19 18:02:41.706  5589  5589 I AndroidIME: InputBundleManager.loadActiveInputBundleId():528 loadActiveInputBundleId: und-Latn-x-number, number
+10-19 18:02:41.706  5589  5589 I KeyboardWrapper: KeyboardWrapper.activateKeyboard():581 activateKeyboard(): type=prime, status=INACTIVE, imeDef=mkk{stringId=number, language=und-Latn-x-number, languageTag=und-Latn-x-number, processedConditions={}, className=com.google.android.libraries.inputmethod.ime.DummyIme, label=2132019216, keyEventInterpreter=null, inlineComposing=true, autoCapital=false, announceAutoSelectedCandidate=false, statusIcon=0, indicatorIcon=0, indicatorLabel=null, displayAppCompletions=false, extraValues=mkd{}, processors=mmb@7d3d911, unacceptableMetaKeys=4098, languageSpecificSettings=0, asciiCapable=false, alwaysShowSuggestions=false, useAsciiPasswordKeyboard=false, keyboardGroupDef=mlk@821ce4, phenotypeFlagId=0, localizationLanguageTag=null, supportsInlineSuggestion=false}
+10-19 18:02:41.706  5589  5589 I KeyboardManager: KeyboardManager.requestKeyboard():248 Creating keyboard prime, imeId=number, cacheKey=theme,!gsf,!pgsans,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,GOOGLE_ICONS,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.748144,POPUP,SCREEN_SHORTEST_WIDTH=393,SCREEN_SHORTEST_WIDTH_NO_SCALE=393,XXHDPI,bottom4dp,enable_emoji_kitchen_browse_color_v2=true,enable_google_fonts_icons=true,enable_popup_on_keypress=true,keyboard_redesign_google_sans=true,non_linear_scale,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff131313-ffffffff-4d9204e36e3ccb6a165e3e3dbe763ce0,roundedchip,silkpopup
+10-19 18:02:41.707  5589  5589 I KeyboardWrapper: KeyboardWrapper.onKeyboardReady():224 onKeyboardReady(): type=prime(prime), kb=com.google.android.apps.inputmethod.latin.keyboard.LatinNumberKeyboard@508e2c3
+10-19 18:02:41.707  5589  5589 I KeyboardWrapper: KeyboardWrapper.doActivateKeyboard():611 doActivateKeyboard(): prime
+10-19 18:02:41.711  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.711  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+10-19 18:02:41.711  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.getKeyboardInitialStates():175 
+10-19 18:02:41.711  5589  5589 W Keyboard: Keyboard.getKeyboardViewHelper():609 null helper is returned: keyboardDef=mle{processedConditions={enable_access_points_in_password_number=true, enable_correction_settings_updates=true, layout_9key_split=false, language=en-US, deprecate_long_press_space_for_ime_picker=false, show_suggestion_strip=true, device=phone, expressions=normal}, globalConditions={global_theme_key=theme,!gsf,!pgsans,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,GOOGLE_ICONS,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.748144,POPUP,SCREEN_SHORTEST_WIDTH=393,SCREEN_SHORTEST_WIDTH_NO_SCALE=393,XXHDPI,bottom4dp,enable_emoji_kitchen_browse_color_v2=true,enable_google_fonts_icons=true,enable_popup_on_keypress=true,keyboard_redesign_google_sans=true,non_linear_scale,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff131313-ffffffff-4d9204e36e3ccb6a165e3e3dbe763ce0,roundedchip,silkpopup, global_locale=en_US, global_density_dpi=440, global_orientation=1}, className=.latin.keyboard.LatinNumberKeyboard, resourceIds=[#0x7f17086b], initialStates=0, keyboardViewDefs=[mls{direction=LOCALE, id=#0x7f0b0224, isScalable=false, layoutId=#0x7f0e0500, type=HEADER, touchable=true, defaultShow=true}, mls{direction=null, id=#0x7f0b0224, isScalable=true, layoutId=#0x7f0e0556, type=BODY, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e05f1, recentKeyLayoutId=0, recentKeyPopupLayoutId=0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=0}, type=FLOATING_CANDIDATES, helpersCreated=[lxm@e7604a8, lxm@f9b5bc1, null, null], context.getResources().getConfiguration(): {1.0 405mcc869mnc [en_US] ldltr sw393dp w393dp h790dp 440dpi nrml long port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2392) mAppBounds=Rect(0, 103 - 1080, 2276) mMaxBounds=Rect(0, 0 - 1080, 2392) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 isEmbedding:false} s.5420 fontWeightAdjustment=0 themeId=2 themeParameter=0 nightModeLevel = -1 typefaceChanged=0.0 ?spacesystem eaMode=1}
+10-19 18:02:41.712  5589  5589 W Keyboard: Keyboard.getKeyboardViewHelper():609 null helper is returned: keyboardDef=mle{processedConditions={enable_access_points_in_password_number=true, enable_correction_settings_updates=true, layout_9key_split=false, language=en-US, deprecate_long_press_space_for_ime_picker=false, show_suggestion_strip=true, device=phone, expressions=normal}, globalConditions={global_theme_key=theme,!gsf,!pgsans,!pgsf,!use_system_font,BORDER,FLAVOR_DPI=XXHDPI,GOOGLE_ICONS,KEYBOARD_WIDTH_CATEGORY=NORMAL,KEY_BORDER_SHAPE=1,LIGHT_THEME=false,PHYSICAL_DIAGONAL=5.748144,POPUP,SCREEN_SHORTEST_WIDTH=393,SCREEN_SHORTEST_WIDTH_NO_SCALE=393,XXHDPI,bottom4dp,enable_emoji_kitchen_browse_color_v2=true,enable_google_fonts_icons=true,enable_popup_on_keypress=true,keyboard_redesign_google_sans=true,non_linear_scale,noshadow,overlay_builtin_dynamic_color_dark_base.binarypb:gm3-dark-ff131313-ffffffff-4d9204e36e3ccb6a165e3e3dbe763ce0,roundedchip,silkpopup, global_locale=en_US, global_density_dpi=440, global_orientation=1}, className=.latin.keyboard.LatinNumberKeyboard, resourceIds=[#0x7f17086b], initialStates=0, keyboardViewDefs=[mls{direction=LOCALE, id=#0x7f0b0224, isScalable=false, layoutId=#0x7f0e0500, type=HEADER, touchable=true, defaultShow=true}, mls{direction=null, id=#0x7f0b0224, isScalable=true, layoutId=#0x7f0e0556, type=BODY, touchable=true, defaultShow=true}], persistentStates=0, persistentStatesPrefKey=null, popupBubbleLayoutId=#0x7f0e05f1, recentKeyLayoutId=0, recentKeyPopupLayoutId=0, recentKeyType=null, rememberRecentKey=NONE, sessionStates=0}, type=WIDGET, helpersCreated=[lxm@e7604a8, lxm@f9b5bc1, null, null], context.getResources().getConfiguration(): {1.0 405mcc869mnc [en_US] ldltr sw393dp w393dp h790dp 440dpi nrml long port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1080, 2392) mAppBounds=Rect(0, 103 - 1080, 2276) mMaxBounds=Rect(0, 0 - 1080, 2392) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0 isEmbedding:false} s.5420 fontWeightAdjustment=0 themeId=2 themeParameter=0 nightModeLevel = -1 typefaceChanged=0.0 ?spacesystem eaMode=1}
+10-19 18:02:41.712  5589  5589 I AndroidIME: InputBundleManager.startInput():358 startInput() with mlo[keyboardType=prime, payload=null]
+10-19 18:02:41.712  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.onDeactivate():144 
+10-19 18:02:41.712  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:41.716  5589  5589 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():131 shutdown()
+10-19 18:02:41.716  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.onActivate():120 
+10-19 18:02:41.717  3458  3458 D ViewRootImpl: AppSizeAfterRelayout, size: Point(660, 121), rotation: ROTATION_0
+10-19 18:02:41.717  3458  3458 D BufferQueueConsumer: [](id:d82000001f0,api:0,p:-1,c:3458) connect: controlledByApp=false
+10-19 18:02:41.717  3458  3458 D BLASTBufferQueue: [VRI[]#496](f:0,a:0) constructor()
+10-19 18:02:41.717  3458  3458 D BLASTBufferQueue: [VRI[]#496](f:0,a:0) update width=660 height=121 format=-2 mTransformHint=0
+10-19 18:02:41.718  5589  5589 I LanguagePromoExtension: LanguagePromoExtension.checkDisplayPreconditions():174 Not show language promo: exceeds the max display times.
+10-19 18:02:41.719  5589  5589 I NewLanguagePromptExtension: NewLanguagePromptExtension.onActivate():189 Not activated NewLanguagePromptExtension: not a normal text input box.
+10-19 18:02:41.719  5589  5589 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.cancelShutdown():109 cancelShutdown()
+10-19 18:02:41.719  5589  5589 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.syncLanguagePacks():121 syncLanguagePacks()
+10-19 18:02:41.719  5589  5589 I VoiceInputManager: VoiceInputManager.onKeyboardActivated():1173 onKeyboardActivated() [UD]
+10-19 18:02:41.719  5589  6558 I SpeechFactory: SpeechRecognitionFactory.maybeScheduleAutoPackDownloadForFallback():217 maybeScheduleAutoPackDownloadForFallback()
+10-19 18:02:41.719  5589  5589 I PkModeUpdater: PkModeUpdater.onActivate():74 onActivate false true
+10-19 18:02:41.719  5589  6558 I FallbackOnDeviceRecognitionProvider: FallbackOnDeviceRecognitionProvider.maybeScheduleAutoPackDownload():205 maybeScheduleAutoPackDownload() for language tag en-US
+10-19 18:02:41.719  5589  5589 I AccessoryInputModeManager: AccessoryInputModeManager.onModeStarted():318 Accessory input mode started: null
+10-19 18:02:41.720  5589  5589 W SupplementaryKeyboardsWrapper: SupplementaryKeyboardsWrapper.deactivateKeyboard():161 keyboard accessory_candidates_consumer is not activated before!
+10-19 18:02:41.721  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:41.721  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.721  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.721  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:41.721  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.721  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.721  5589  5589 W ExtensionWrapper: ExtensionWrapper.setExtensionViewVisibility():811 interface mas is not activate
+10-19 18:02:41.722  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:41.722  3458 31463 D BLASTBufferQueue: [VRI[]#496](f:0,a:1) acquireNextBufferLocked size=660x121 mFrameNumber=1 applyTransaction=true mTimestamp=640277242358470(auto) mPendingTransactions.size=0 graphicBufferId=14851996913040 transform=0
+10-19 18:02:41.725  3458  3510 D InlineSuggestionRenderService: getSurfacePackage
+10-19 18:02:41.726  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:41.726  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.726  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.726  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:41.727  5589  5589 I WindowMetricsNotification: WindowMetricsNotification.notifyWithWindow():166 
+10-19 18:02:41.727  5589  5589 I WindowMetricsNotification: WindowMetricsNotification.notify():159 pfu[bounds=Rect(0, 105 - 1080, 2392), insets=Rect(0, 0 - 0, 116), densityDpi=440, smallestScreenWidthDp=393, displayWidth=1080, displayHeight=2392, xdpi=387.43, ydpi=387.43, isTrustable=true, displayId=0]; DisplayMetrics{density=2.75, width=1080, height=2392, scaledDensity=2.75, xdpi=387.43, ydpi=387.43}
+10-19 18:02:41.729  5589  5589 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():325 onKeyboardViewShown: keyboardType=prime, keyboardViewType=HEADER keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{9a4bdd2 V.E...... ........ 0,0-1080,121}
+10-19 18:02:41.730  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.730  5589  5589 I GoogleInputMethodService: GoogleInputMethodService$1.onKeyboardViewShown():325 onKeyboardViewShown: keyboardType=prime, keyboardViewType=BODY keyboardView=com.google.android.libraries.inputmethod.widgets.SoftKeyboardView{84bc248 V.E...... ........ 0,0-1080,580}
+10-19 18:02:41.730  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.730  5589  5589 I GlobeKeyExtension: GlobeKeyExtension$1.onKeyboardViewShown():72 maybeDisableLanguageSwitchKeyPref when the keyboard is shown
+10-19 18:02:41.730  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.maybeDisableLanguageSwitchKeyPref():200 maybeDisableLanguageSwitchKeyPref hasGlobeKeyBeenDisabled: false, shouldDisableLanguageSwitchKey: false
+10-19 18:02:41.730  5589  5589 I NewLanguagePromptExtension: NewLanguagePromptExtension$1.onKeyboardViewShown():88 Not show new language banner: not prime keyboard, or the extension not activated.
+10-19 18:02:41.733  5589  5589 I ProactiveSuggestionsHolderManager: ProactiveSuggestionsHolderManager$2.display():195 Requesting to show proactive suggestions: AUTO_FILL PREEMPTIVE_WITH_SUPPRESSION
+10-19 18:02:41.736  5589  5589 D BufferQueueConsumer: [](id:15d500000865,api:0,p:-1,c:5589) connect: controlledByApp=false
+10-19 18:02:41.736  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2149](f:0,a:0) constructor()
+10-19 18:02:41.736  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2149](f:0,a:0) update width=770 height=121 format=-2 mTransformHint=0
+10-19 18:02:41.737  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 770, arg2: 121, arg3: 5589, arg4: 105641, name: com.google.android.inputmethod.latin
+10-19 18:02:41.738  5589  5589 I ProactiveSuggestionsHolderManager: ProactiveSuggestionsHolderManager$Holder.setSuggestionsAndShow():898 succeed to show proactive suggestions AUTO_FILL PREEMPTIVE_WITH_SUPPRESSION
+10-19 18:02:41.739  5589  5589 I ProactiveSuggestionsHolderManager: ProactiveSuggestionsHolderManager$2.display():195 Requesting to show proactive suggestions: AUTO_FILL PREEMPTIVE_WITH_SUPPRESSION
+10-19 18:02:41.739  5589  5589 I ProactiveSuggestionsHolderManager: ProactiveSuggestionsHolderManager$Holder.setSuggestionsAndShow():898 succeed to show proactive suggestions AUTO_FILL PREEMPTIVE_WITH_SUPPRESSION
+10-19 18:02:41.740  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:41.750  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:41.750  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.750  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:41.750  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:41.754  5589  5589 D BufferQueueConsumer: [](id:15d500000866,api:0,p:-1,c:5589) connect: controlledByApp=false
+10-19 18:02:41.754  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2150](f:0,a:0) constructor()
+10-19 18:02:41.754  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2150](f:0,a:0) update width=660 height=121 format=-2 mTransformHint=0
+10-19 18:02:41.757  1870  3606 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 660, arg2: 121, arg3: 5589, arg4: 106914, name: com.google.android.inputmethod.latin
+10-19 18:02:41.761  5589  5657 D BLASTBufferQueue: [SurfaceView[InputMethod]#2150](f:0,a:1) acquireNextBufferLocked size=660x121 mFrameNumber=1 applyTransaction=true mTimestamp=640277280953239(auto) mPendingTransactions.size=0 graphicBufferId=24004572224571 transform=0
+10-19 18:02:41.763  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 660, arg2: 121, arg3: 5589, arg4: 106914, name: com.google.android.inputmethod.latin
+10-19 18:02:41.764  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: 770, arg2: 121, arg3: 5589, arg4: 105641, name: com.google.android.inputmethod.latin
+10-19 18:02:41.881  5720 14795 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:42.126 21104 21188 I ActivityScheduler: nextTriggerTime: 1321336490, in 5000ms, detectorType: 39, FULL_TYPE alarmWindowMillis: 625
+10-19 18:02:42.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:42.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:42.505 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:42.509 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:42.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:42.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:42.798  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInputView():1571 onFinishInputView(false)
+10-19 18:02:42.798  5589  5589 I GlobeKeyExtension: GlobeKeyExtension.onDeactivate():144 
+10-19 18:02:42.799  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:42.801  1870  3603 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 5589, arg4: 106914, name: com.google.android.inputmethod.latin
+10-19 18:02:42.801  5589  5657 E BufferQueueProducer: [SurfaceView[InputMethod]#2150(BLAST Consumer)2150](id:15d500000866,api:0,p:-1,c:5589) disconnect: not connected (req=1)
+10-19 18:02:42.802  5589  5657 W libEGL  : EGLNativeWindowType 0xb4000077e020ed90 disconnect failed
+10-19 18:02:42.802  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2150](f:0,a:1) destructor()
+10-19 18:02:42.802  5589  5589 D BufferQueueConsumer: [SurfaceView[InputMethod]#2150(BLAST Consumer)2150](id:15d500000866,api:0,p:-1,c:5589) disconnect
+10-19 18:02:42.804  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:42.804  5589  5589 I VoiceInputManagerWrapper: VoiceInputManagerWrapper.shutdown():131 shutdown()
+10-19 18:02:42.805  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id spell_check_add_to_dictionary not found in tooltipManager.
+10-19 18:02:42.811  5589  5589 D BLASTBufferQueue: [SurfaceView[InputMethod]#2149](f:0,a:0) destructor()
+10-19 18:02:42.811  5589  5589 D BufferQueueConsumer: [SurfaceView[InputMethod]#2149(BLAST Consumer)2149](id:15d500000865,api:0,p:-1,c:5589) disconnect
+10-19 18:02:42.811  1870  2929 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 5589, arg4: 105641, name: com.google.android.inputmethod.latin
+10-19 18:02:42.811  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+10-19 18:02:42.855  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:42.855  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:42.856  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:42.856  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:42.896  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:42.897  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:42.897  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id SUGGESTION_VIEW_EDU_MINI_DIALOG not found in tooltipManager.
+10-19 18:02:42.897  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:42.898  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:42.898  5589  5589 I HardKeyTracker: HardKeyTracker.registerKeySequence():170 Register key sequence nfz{labelResId=0, callback=gds@b8b0c57, lastModifier=0, keyCodes=[57, 57], actions=[1, 0]}
+10-19 18:02:42.899  5589  5589 I HardKeyTracker: HardKeyTracker.registerKeySequence():170 Register key sequence nfz{labelResId=0, callback=gds@3dec562, lastModifier=0, keyCodes=[58, 58], actions=[1, 0]}
+10-19 18:02:42.920  5589  5589 I KeyboardModeUtils: KeyboardModeUtils.getKeyboardBottomOffset():435 inch: 0.000000 ydpi: 387.429993 adjustKeyboardBottomByDisplaySize: false currentDensityDpi: 440 defaultDensityDpi: 440 keyboardBottomToScreenPx: 0 keyboardBottomToNavBarPx: -116 navBarHeight: 116
+10-19 18:02:42.920  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:42.921  5589  5589 I KeyboardHeightUtil: KeyboardHeightUtil.calculateMaxKeyboardBodyHeight():50 leave 267 height for app when ime window height:2171, header height:121 and isFullscreenMode:false, so the max keyboard body height is:1783
+10-19 18:02:42.921  5589  5589 I AndroidIME: KeyboardViewManager.updateKeyboardBodyViewHolderPaddingBottom():472 Set finalPaddingBottom = 5 while holderPaddingBottom = 5; navigationHeight = 116
+10-19 18:02:43.065  3458  3458 V InlineSuggestionRenderService: Releasing inline suggestion view host
+10-19 18:02:43.080  3458  3458 D BLASTBufferQueue: [VRI[]#496](f:0,a:4) destructor()
+10-19 18:02:43.080  3458  3458 D BufferQueueConsumer: [VRI[]#496(BLAST Consumer)496](id:d82000001f0,api:0,p:-1,c:3458) disconnect
+10-19 18:02:43.089  3458  3458 V InlineSuggestionRenderService: Removed the inline suggestion from the cache, current size=0
+10-19 18:02:43.346  7096  7120 I native  : I0000 00:00:1760877163.346280    7120 soda_async_impl.cc:1383] Current audio timestamp: 1760877163225264
+10-19 18:02:43.394 21104 21142 I IPCThreadState: oneway function results for code 1 on binder at 0xb4000077d0177f70 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+10-19 18:02:43.405  7096  7126 W ProxyAndroidLoggerBackend: Too many Flogger logs received before configuration. Dropping old logs.
+10-19 18:02:43.418  5589  5589 W TooltipLifecycleManager: TooltipLifecycleManager.dismissTooltips():153 Tooltip with id undo_access_point_promotion_banner not found in tooltipManager.
+10-19 18:02:43.452  5589  5589 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2287), rotation: ROTATION_0
+10-19 18:02:43.453  5589  5589 D BLASTBufferQueue: [VRI[InputMethod]#2146](f:0,a:4) destructor()
+10-19 18:02:43.453  5589  5589 D BufferQueueConsumer: [VRI[InputMethod]#2146(BLAST Consumer)2146](id:15d500000862,api:0,p:-1,c:5589) disconnect
+10-19 18:02:43.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:43.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:43.502 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:43.504 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:43.507 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:43.768 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:43.775 21104 23618 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:43.978  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:44.531 21104 22617 I WifiScanner: onFullResults
+10-19 18:02:44.532 21104 21142 I WifiScanner: onFullResults
+10-19 18:02:44.532 21104 22617 I WifiScanner: onFullResults
+10-19 18:02:44.538 21104 22416 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:44.565 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:44.565 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:44.565 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:44.566 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:44.567 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:44.567 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:44.568 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:46.063  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:48.026  1870  2929 D BatteryStatsService: noteVideoSurfaceChanged  noteWhich: 49,arg1: -1, arg2: -1, arg3: 15934, arg4: 771, name: com.a1taxi.driverpro
+10-19 18:02:48.155  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:48.511 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:48.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:48.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:48.512 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:48.524 21104 22416 I SemanticLocation: [InfMgr] No location reports after filtering [CONTEXT service_id=173 ]
+10-19 18:02:49.532 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:49.539 21104 23622 W SystemServiceRegistry: No service published for: wifirtt
+10-19 18:02:49.557 21104 21250 I WifiScanner: onFullResults
+10-19 18:02:49.559 21104 22225 I WifiScanner: onFullResults
+10-19 18:02:49.559 21104 21142 I WifiScanner: onFullResults
+10-19 18:02:49.612 21104 22416 I FrewleTileCacheManagerV: (REDACTED) Fetched %d AP models from cache
+10-19 18:02:49.652 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:49.653 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:49.653 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:49.653 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:49.654 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:49.654 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:49.655 21104 21184 I fznc    : Received empty WiFi-RTT scan. [CONTEXT service_id=6 ]
+10-19 18:02:50.253  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:52.315 21163 21163 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.inappreach.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-19 18:02:52.338  5720 14222 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:53.007 21163 21163 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.wallet.service.BIND pkg=com.google.android.gms }
+10-19 18:02:53.062 21163 21163 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.auth.api.phone.service.InternalService.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsInternalApiService }
+10-19 18:02:53.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:53.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:53.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:53.487 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too close
+10-19 18:02:53.489 21104 21184 I FusedLocation: (REDACTED) location delivery to %s blocked - too fast
+10-19 18:02:53.495 14485 14485 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-19 18:02:53.527 14485 14485 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-19 18:02:53.527 14485 14485 D BufferQueueConsumer: [](id:38950000009a,api:0,p:-1,c:14485) connect: controlledByApp=false
+10-19 18:02:53.530 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#154](f:0,a:0) constructor()
+10-19 18:02:53.530 14485 14485 D BLASTBufferQueue: [VRI[Launcher]#154](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-19 18:02:53.558 14485 14785 D BLASTBufferQueue: [VRI[Launcher]#154](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=640289078327778(auto) mPendingTransactions.size=0 graphicBufferId=62212601283639 transform=0
+10-19 18:02:53.561 14485 14485 I bnlz    : onStart
+10-19 18:02:53.562 14485 14485 I bldh    : (REDACTED) [%s] onStart()
+10-19 18:02:53.562 14485 14485 I blfn    : Reloading theme data
+10-19 18:02:53.563 14485 14485 I bnlz    : onResume
+10-19 18:02:53.573 21163 21163 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.inappreach.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-19 18:02:53.582  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2085 
+10-19 18:02:53.583  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 0, locked = false
+10-19 18:02:53.583  5589  5589 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1346 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-19 18:02:53.584  5589  5589 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():100 repeatCheckTimes = 1, locked = false
+10-19 18:02:54.434  5720 14148 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-19 18:02:54.560 21104 21188 W Settings: Setting airplane_mode_on has moved from android.provider.Settings.System to android.provider.Settings.Global, returning read-only value.
+10-19 18:02:54.568 21104 23361 W SystemServiceRegistry: No service published for: wifirtt
