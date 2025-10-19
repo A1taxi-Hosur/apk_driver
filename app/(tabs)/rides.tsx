@@ -331,9 +331,12 @@ export default function RidesScreen() {
       }
     } catch (error) {
       console.error('❌ EXCEPTION in handleCompleteRide:', error);
-      console.error('❌ Error details:', error.message);
-      console.error('❌ Error stack:', error.stack);
-      Alert.alert('Error', 'An error occurred while completing the ride.');
+      console.error('❌ Error type:', typeof error);
+      console.error('❌ Error details:', error?.message || String(error));
+      console.error('❌ Error stack:', error?.stack);
+
+      const errorMessage = error?.message || error?.toString() || 'Unknown error';
+      Alert.alert('Error', `Failed to complete trip: ${errorMessage}`);
     }
   };
 
