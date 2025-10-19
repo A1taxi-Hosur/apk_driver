@@ -27,7 +27,6 @@ import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../utils/supabase';
 import { openGoogleMapsNavigation } from '../../utils/maps';
 import OTPModal from '../../components/OTPModal';
-import TripCompletionModal from '../../components/TripCompletionModal';
 import { FareCalculationService } from '../../services/FareCalculationService';
 import { TripLocationTracker } from '../../services/TripLocationTracker';
 
@@ -70,8 +69,6 @@ export default function ScheduledScreen() {
   const [showOTPModal, setShowOTPModal] = useState(false);
   const [otpModalType, setOTPModalType] = useState<'pickup' | 'drop' | 'verify-pickup'>('pickup');
   const [currentOTP, setCurrentOTP] = useState('');
-  const [showCompletionModal, setShowCompletionModal] = useState(false);
-  const [completionData, setCompletionData] = useState(null);
 
   useEffect(() => {
     if (driver) {
@@ -603,18 +600,6 @@ export default function ScheduledScreen() {
 
       console.log('✅ Scheduled booking completed successfully');
 
-      // Prepare completion data for modal (exclude details to avoid React Native render error)
-      const { details, ...fareBreakdownWithoutDetails } = fareBreakdown;
-      const completionData = {
-        distance: actualDistanceKm,
-        duration: actualDurationMinutes,
-        fareBreakdown: fareBreakdownWithoutDetails,
-        pickup_address: currentBooking.pickup_address,
-        destination_address: currentBooking.destination_address,
-        booking_type: currentBooking.booking_type,
-        rental_hours: currentBooking.rental_hours
-      };
-
       // Update driver status back to online
       console.log('✅ Setting driver status to online...');
       await updateDriverStatus('online');
@@ -640,9 +625,25 @@ export default function ScheduledScreen() {
       await loadScheduledBookings();
       console.log('✅ Scheduled bookings reloaded');
 
-      // Show completion modal
-      setCompletionData(completionData);
-      setShowCompletionModal(true);
+      // Show completion alert with trip details
+      const completionMessage =
+        `Trip Completed Successfully!\n\n` +
+        `Distance: ${actualDistanceKm.toFixed(1)} km\n` +
+        `Duration: ${actualDurationMinutes} min\n` +
+        `Total Fare: ₹${fareBreakdown.total_fare.toFixed(2)}\n\n` +
+        `Breakdown:\n` +
+        `Base Fare: ₹${fareBreakdown.base_fare.toFixed(2)}\n` +
+        `Distance Fare: ₹${fareBreakdown.distance_fare.toFixed(2)}\n` +
+        `Time Fare: ₹${fareBreakdown.time_fare.toFixed(2)}\n` +
+        `Platform Fee: ₹${fareBreakdown.platform_fee.toFixed(2)}\n` +
+        `GST: ₹${(fareBreakdown.gst_on_charges + fareBreakdown.gst_on_platform_fee).toFixed(2)}`;
+
+      Alert.alert('Trip Completed', completionMessage, [
+        {
+          text: 'OK',
+          onPress: () => console.log('Completion alert dismissed')
+        }
+      ]);
 
     } catch (error) {
       console.error('❌ Exception completing scheduled trip:', error);
@@ -991,18 +992,6 @@ export default function ScheduledScreen() {
         onVerify={handleOTPVerification}
         onClose={() => setShowOTPModal(false)}
       />
-
-      {/* Trip Completion Modal */}
-      {completionData && (
-        <TripCompletionModal
-          visible={showCompletionModal}
-          tripData={completionData}
-          onClose={() => {
-            setShowCompletionModal(false);
-            setCompletionData(null);
-          }}
-        />
-      )}
     </SafeAreaView>
   );
 }
