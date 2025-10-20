@@ -487,6 +487,7 @@ export default function ScheduledScreen() {
             console.log('⚠️ Using time-based duration (fallback):', actualDurationMinutes);
           }
         }
+        }
       }
 
       console.log('📊 Final trip metrics:', {
