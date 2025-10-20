@@ -258,7 +258,9 @@ export class FareCalculationService {
             pickupLat,
             pickupLng,
             dropLat,
-            dropLng
+            dropLng,
+            actualDistanceKm,
+            actualDurationMinutes
           );
           break;
 
@@ -610,7 +612,9 @@ export class FareCalculationService {
             pickupLat,
             pickupLng,
             dropLat,
-            dropLng
+            dropLng,
+            actualDistanceKm,
+            actualDurationMinutes
           );
           break;
 
@@ -1819,12 +1823,16 @@ export class FareCalculationService {
     pickupLat: number,
     pickupLng: number,
     dropLat: number,
-    dropLng: number
+    dropLng: number,
+    actualDistanceKm?: number,
+    actualDurationMinutes?: number
   ): Promise<FareBreakdown> {
     console.log('=== CALCULATING AIRPORT FARE ===');
     console.log('Vehicle Type:', vehicleType);
     console.log('Pickup coordinates:', pickupLat, pickupLng);
     console.log('Drop coordinates:', dropLat, dropLng);
+    console.log('GPS Distance:', actualDistanceKm, 'km');
+    console.log('GPS Duration:', actualDurationMinutes, 'minutes');
 
     // Get airport fare configuration
     const { data: airportFares, error } = await supabase
@@ -1889,16 +1897,52 @@ export class FareCalculationService {
 
     const platformFee = parseFloat(fareMatrix?.platform_fee?.toString() || '20');
 
+    // Determine which distance to use for fare calculation
+    let distanceForFare: number;
+    let distanceFare = 0;
+    let perKmRate = 0;
+
+    if (actualDistanceKm && actualDistanceKm > 0) {
+      // Use GPS-tracked distance if available
+      distanceForFare = actualDistanceKm;
+      console.log('✅ Using GPS-tracked distance for fare calculation:', actualDistanceKm.toFixed(2), 'km');
+
+      // Calculate per-km fare based on GPS distance
+      // Use the fixed fare as a reference for 40km, calculate per-km rate
+      const referenceDistance = 40; // km (typical airport distance)
+      perKmRate = fare / referenceDistance;
+      distanceFare = actualDistanceKm * perKmRate;
+
+      console.log('💰 Dynamic airport fare calculation:', {
+        referenceFare: fare,
+        referenceDistance,
+        perKmRate: perKmRate.toFixed(2),
+        actualDistanceKm: actualDistanceKm.toFixed(2),
+        calculatedDistanceFare: distanceFare.toFixed(2),
+        calculation: `${actualDistanceKm.toFixed(2)} km × ₹${perKmRate.toFixed(2)}/km = ₹${distanceFare.toFixed(2)}`
+      });
+    } else {
+      // Fallback to fixed package fare if GPS not available
+      distanceForFare = calculateDistance(
+        { latitude: pickupLat, longitude: pickupLng },
+        { latitude: dropLat, longitude: dropLng }
+      );
+      distanceFare = fare;
+      console.log('⚠️ GPS distance not available, using package fare:', fare);
+    }
+
     // Calculate GST
-    const gstOnCharges = fare * 0.05; // 5% GST on base fare
+    const gstOnCharges = distanceFare * 0.05; // 5% GST on distance fare
     const gstOnPlatformFee = platformFee * 0.18; // 18% GST on platform fee
 
-    const totalFareRaw = fare + platformFee + gstOnCharges + gstOnPlatformFee;
+    const totalFareRaw = distanceFare + platformFee + gstOnCharges + gstOnPlatformFee;
     const totalFare = this.roundFare(totalFareRaw);
 
     console.log('💰 Airport fare breakdown:', {
-      baseFare: fare,
       direction,
+      distanceForFare: distanceForFare.toFixed(2) + 'km',
+      distanceFare: distanceFare.toFixed(2),
+      perKmRate: perKmRate > 0 ? perKmRate.toFixed(2) : 'N/A',
       platformFee,
       gstOnCharges,
       gstOnPlatformFee,
@@ -1909,8 +1953,8 @@ export class FareCalculationService {
     return {
       booking_type: 'airport',
       vehicle_type: vehicleType,
-      base_fare: fare,
-      distance_fare: 0,
+      base_fare: 0,
+      distance_fare: distanceFare,
       time_fare: 0,
       surge_charges: 0,
       deadhead_charges: 0,
@@ -1921,12 +1965,9 @@ export class FareCalculationService {
       driver_allowance: 0,
       total_fare: totalFare,
       details: {
-        actual_distance_km: calculateDistance(
-          { latitude: pickupLat, longitude: pickupLng },
-          { latitude: dropLat, longitude: dropLng }
-        ),
-        actual_duration_minutes: 0,
-        per_km_rate: 0,
+        actual_distance_km: actualDistanceKm || distanceForFare,
+        actual_duration_minutes: actualDurationMinutes || 0,
+        per_km_rate: perKmRate,
         direction: direction
       }
     };
