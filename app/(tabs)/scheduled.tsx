@@ -529,7 +529,9 @@ export default function ScheduledScreen() {
           currentBooking.pickup_latitude,
           currentBooking.pickup_longitude,
           currentBooking.destination_latitude,
-          currentBooking.destination_longitude
+          currentBooking.destination_longitude,
+          actualDistanceKm,
+          actualDurationMinutes
         );
       } else {
         throw new Error('Invalid booking type');
@@ -1368,7 +1370,9 @@ async function calculateAirportFare(
   pickupLat: number,
   pickupLng: number,
   dropLat: number,
-  dropLng: number
+  dropLng: number,
+  actualDistanceKm?: number,
+  actualDurationMinutes?: number
 ) {
   // Fetch airport fare package using RPC (bypasses RLS)
   const { data: airportFares, error } = await supabase
@@ -1427,8 +1431,8 @@ async function calculateAirportFare(
     driver_allowance: 0,
     total_fare: totalFare,
     details: {
-      actual_distance_km: calculateDistance(pickupLat, pickupLng, dropLat, dropLng),
-      actual_duration_minutes: 0,
+      actual_distance_km: actualDistanceKm || calculateDistance(pickupLat, pickupLng, dropLat, dropLng),
+      actual_duration_minutes: actualDurationMinutes || 0,
       per_km_rate: 0,
       direction: isHosurToAirport ? 'Hosur to Airport' : 'Airport to Hosur',
       package_fare: Number(packageFare),
