@@ -340,12 +340,6 @@ export default function ScheduledScreen() {
           pointsUsed: gpsPointsUsed
         });
 
-        // If GPS returned 0 or very low distance, use Google Maps fallback
-        if (gpsDistanceRaw < 1 && gpsPointsUsed < 3) {
-          console.warn('⚠️ GPS tracking insufficient (distance < 1km or < 3 points), using Google Maps API...');
-          throw new Error('Insufficient GPS data');
-        }
-
         // For outstation trips, GPS tracks one-way, so multiply by 2 for round trip
         if (currentBooking.booking_type === 'outstation') {
           actualDistanceKm = gpsDistanceRaw * 2;
@@ -356,7 +350,7 @@ export default function ScheduledScreen() {
           });
         } else {
           actualDistanceKm = gpsDistanceRaw;
-          console.log('✅ GPS-tracked distance for rental:', {
+          console.log('✅ GPS-tracked distance for rental/airport:', {
             distanceKm: actualDistanceKm.toFixed(2),
             note: 'GPS distance (not doubled)'
           });
@@ -368,34 +362,36 @@ export default function ScheduledScreen() {
           'scheduled'
         );
 
-        if (gpsDuration.durationMinutes > 0) {
-          actualDurationMinutes = gpsDuration.durationMinutes;
-          console.log('✅ Using GPS-tracked duration:', {
-            durationMinutes: actualDurationMinutes,
-            method: 'Real GPS tracking'
-          });
-        } else {
-          // Fallback: calculate from scheduled time
-          const startTime = currentBooking.scheduled_time
-            ? new Date(currentBooking.scheduled_time).getTime()
-            : new Date(currentBooking.created_at).getTime();
-          const currentTime = Date.now();
-          actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
-          console.log('⚠️ Using time-based duration (fallback):', {
-            durationMinutes: actualDurationMinutes,
-            method: 'Scheduled time to completion'
-          });
-        }
+        actualDurationMinutes = gpsDuration.durationMinutes || 1; // Minimum 1 minute
 
-        console.log('✅ GPS-tracked distance for scheduled trip:', {
+        console.log('✅ GPS-tracked distance and duration for scheduled trip:', {
           distanceKm: actualDistanceKm.toFixed(2),
           durationMinutes: actualDurationMinutes,
           gpsPointsUsed,
           bookingType: currentBooking.booking_type,
-          method: 'Real GPS tracking'
+          method: 'Real GPS tracking with timestamps'
         });
       } catch (error) {
-        console.warn('⚠️ GPS distance calculation failed, using Google Maps API fallback:', error);
+        console.warn('⚠️ GPS distance calculation failed:', error);
+
+        // Check if error is due to driver not moving
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        if (errorMessage.includes('Driver did not move') || errorMessage.includes('displacement')) {
+          console.warn('⚠️ DRIVER DID NOT MOVE - Using minimal distance');
+
+          // Driver hasn't moved - use minimal distance
+          actualDistanceKm = 0.1; // 100 meters minimum
+          actualDurationMinutes = 1; // 1 minute minimum
+
+          console.log('✅ Stationary driver detected:', {
+            distanceKm: actualDistanceKm,
+            durationMinutes: actualDurationMinutes,
+            reason: 'Driver did not move significantly'
+          });
+
+          // DO NOT fallback to Google Maps - use minimal distance
+        } else {
+          console.warn('⚠️ GPS tracking error, attempting Google Maps fallback:', error);
 
         // Fallback to Google Maps Directions API
         try {
@@ -467,29 +463,29 @@ export default function ScheduledScreen() {
               note: 'Straight-line × 1.3 (roads), not doubled'
             });
           }
-        }
 
-        // Calculate duration from GPS tracking data
-        try {
-          const gpsDuration = await TripLocationTracker.calculateTripDuration(
-            currentBooking.id,
-            'scheduled'
-          );
+          // Calculate duration from GPS tracking data for fallback scenarios
+          try {
+            const gpsDuration = await TripLocationTracker.calculateTripDuration(
+              currentBooking.id,
+              'scheduled'
+            );
 
-          if (gpsDuration.durationMinutes > 0) {
-            actualDurationMinutes = gpsDuration.durationMinutes;
-            console.log('✅ Using GPS-tracked duration:', actualDurationMinutes);
-          } else {
-            throw new Error('No GPS duration available');
+            if (gpsDuration.durationMinutes > 0) {
+              actualDurationMinutes = gpsDuration.durationMinutes;
+              console.log('✅ Using GPS-tracked duration:', actualDurationMinutes);
+            } else {
+              throw new Error('No GPS duration available');
+            }
+          } catch (durationError) {
+            // Fallback: calculate from scheduled time
+            const startTime = currentBooking.scheduled_time
+              ? new Date(currentBooking.scheduled_time).getTime()
+              : new Date(currentBooking.created_at).getTime();
+            const currentTime = Date.now();
+            actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
+            console.log('⚠️ Using time-based duration (fallback):', actualDurationMinutes);
           }
-        } catch (durationError) {
-          // Fallback: calculate from scheduled time
-          const startTime = currentBooking.scheduled_time
-            ? new Date(currentBooking.scheduled_time).getTime()
-            : new Date(currentBooking.created_at).getTime();
-          const currentTime = Date.now();
-          actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
-          console.log('⚠️ Using time-based duration (fallback):', actualDurationMinutes);
         }
       }
 

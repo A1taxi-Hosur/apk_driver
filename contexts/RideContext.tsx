@@ -708,37 +708,43 @@ export function RideProvider({ children }: RideProviderProps) {
           pointsUsed: gpsPointsUsed
         })
 
-        // If GPS returned 0 or very low distance, use Google Maps fallback
-        if (gpsDistanceRaw < 0.5 && gpsPointsUsed < 3) {
-          console.warn('⚠️ GPS tracking insufficient (distance < 0.5km or < 3 points), using Google Maps API...')
-          throw new Error('Insufficient GPS data')
-        }
-
         actualDistanceKm = gpsDistanceRaw
 
-        // Calculate duration from ride start time
-        // For outstation/scheduled trips, use scheduled_time; otherwise use created_at
-        const startTimeString = ride.booking_type === 'outstation' && ride.scheduled_time
-          ? ride.scheduled_time
-          : ride.created_at
-        const rideStartTime = startTimeString ? new Date(startTimeString).getTime() : Date.now()
-        const currentTime = Date.now()
-        actualDurationMinutes = Math.round((currentTime - rideStartTime) / (1000 * 60))
+        // Calculate duration from GPS timestamps (actual travel time)
+        const gpsDuration = await TripLocationTracker.calculateTripDuration(rideId, 'regular')
+        actualDurationMinutes = gpsDuration.durationMinutes || 1 // Minimum 1 minute
 
-        console.log('✅ GPS-tracked distance:', {
+        console.log('✅ GPS-tracked distance and duration:', {
           distanceKm: actualDistanceKm.toFixed(2),
           durationMinutes: actualDurationMinutes,
           durationHours: (actualDurationMinutes / 60).toFixed(2),
-          durationDays: Math.ceil(actualDurationMinutes / 60 / 24),
           gpsPointsUsed,
-          startTime: startTimeString,
           bookingType: ride.booking_type,
-          method: 'Real GPS tracking'
+          method: 'Real GPS tracking with timestamps'
         })
       } catch (error) {
-        console.warn('⚠️ GPS distance calculation failed, using Google Maps API fallback:', error)
+        console.warn('⚠️ GPS distance calculation failed:', error)
 
-        // Fallback to Google Maps Directions API
+        // Check if error is due to driver not moving
+        const errorMessage = error instanceof Error ? error.message : String(error)
+        if (errorMessage.includes('Driver did not move') || errorMessage.includes('displacement')) {
+          console.warn('⚠️ DRIVER DID NOT MOVE - Using minimal distance')
+
+          // Driver hasn't moved - use minimal distance
+          actualDistanceKm = 0.1 // 100 meters minimum
+          actualDurationMinutes = 1 // 1 minute minimum
+
+          console.log('✅ Stationary driver detected:', {
+            distanceKm: actualDistanceKm,
+            durationMinutes: actualDurationMinutes,
+            reason: 'Driver did not move significantly'
+          })
+
+          // DO NOT throw - continue with minimal distance
+        } else {
+          console.warn('⚠️ GPS tracking error, attempting Google Maps fallback:', error)
+
+          // Fallback to Google Maps Directions API
         try {
           const { googleMapsService } = await import('../services/googleMapsService')
 
@@ -790,6 +796,7 @@ export function RideProvider({ children }: RideProviderProps) {
             actualDistanceKm: actualDistanceKm.toFixed(2),
             actualDurationMinutes
           })
+          }
         }
       }
 
