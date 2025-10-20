@@ -800,18 +800,42 @@ export function RideProvider({ children }: RideProviderProps) {
         }
       }
 
-      console.log('🚨 Trip metrics (Real GPS-tracked distance):', {
+      // Get final GPS drop-off location (last recorded point)
+      let finalDropLat = destLat
+      let finalDropLng = destLng
+
+      try {
+        const { data: lastGPSPoint } = await supabase
+          .from('trip_location_history')
+          .select('latitude, longitude')
+          .eq('ride_id', rideId)
+          .order('recorded_at', { ascending: false })
+          .limit(1)
+          .single()
+
+        if (lastGPSPoint) {
+          finalDropLat = lastGPSPoint.latitude
+          finalDropLng = lastGPSPoint.longitude
+          console.log('✅ Using final GPS drop-off location:', { finalDropLat, finalDropLng })
+        } else {
+          console.log('⚠️ No GPS points found, using booking destination')
+        }
+      } catch (error) {
+        console.warn('⚠️ Could not fetch final GPS location, using booking destination:', error)
+      }
+
+      console.log('�� Trip metrics (Real GPS-tracked distance):', {
         actualDistanceKm: actualDistanceKm.toFixed(2),
         actualDurationMinutes,
         gpsPointsUsed,
         pickupLat,
         pickupLng,
-        dropLat: destLat,
-        dropLng: destLng,
+        dropLat: finalDropLat,
+        dropLng: finalDropLng,
         method: 'GPS Breadcrumb Tracking'
       })
 
-      // Calculate fare using FareCalculationService
+      // Calculate fare using FareCalculationService with GPS drop-off location
       console.log('🚨 About to call FareCalculationService.calculateAndStoreTripFare...')
       const fareResult = await FareCalculationService.calculateAndStoreTripFare(
         rideId,
@@ -819,8 +843,8 @@ export function RideProvider({ children }: RideProviderProps) {
         actualDurationMinutes,
         parseFloat(ride.pickup_latitude.toString()),
         parseFloat(ride.pickup_longitude.toString()),
-        parseFloat(ride.destination_latitude.toString()),
-        parseFloat(ride.destination_longitude.toString()),
+        finalDropLat,
+        finalDropLng,
         {
           driver_id: driver.id,
           customer_id: ride.customer_id,

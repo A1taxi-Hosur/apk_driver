@@ -1272,45 +1272,11 @@ export class FareCalculationService {
     dropLat: number,
     dropLng: number
   ): Promise<FareBreakdown> {
-    console.log('=== CALCULATING RENTAL FARE (ACTUAL DISTANCE & TIME) ===');
+    console.log('=== CALCULATING RENTAL FARE (AUTO-SELECT PACKAGE BASED ON GPS) ===');
     console.log('Vehicle Type:', vehicleType);
-    console.log('Selected Hours:', selectedHours);
-    console.log('Actual Distance:', actualDistanceKm, 'km');
-    console.log('Actual Duration:', actualDurationMinutes, 'minutes');
-
-    // Get rental fare for the selected package
-    const { data: rentalFares, error } = await supabase
-      .from('rental_fares')
-      .select('*')
-      .eq('vehicle_type', vehicleType)
-      .eq('duration_hours', selectedHours)
-      .eq('is_active', true)
-      .order('is_popular', { ascending: false })
-      .limit(1);
-
-    if (error || !rentalFares || rentalFares.length === 0) {
-      console.error('Error fetching rental fare:', error);
-      console.error('❌ No rental fare found for:', {
-        vehicle_type: vehicleType,
-        duration_hours: selectedHours,
-        is_active: true
-      });
-      throw new Error(`Rental fare configuration not found for ${vehicleType} vehicle with ${selectedHours} hours package`);
-    }
-
-    const rentalFare = rentalFares[0];
-    const baseFare = rentalFare.base_fare;
-    const kmIncluded = rentalFare.km_included;
-    const extraKmRate = rentalFare.extra_km_rate;
-    const extraMinuteRate = rentalFare.extra_minute_rate || 0;
-
-    console.log('✅ Rental package details:', {
-      package_name: rentalFare.package_name,
-      base_fare: baseFare,
-      km_included: kmIncluded,
-      extra_km_rate: extraKmRate,
-      extra_minute_rate: extraMinuteRate
-    });
+    console.log('Selected Hours (from booking):', selectedHours);
+    console.log('Actual GPS Distance:', actualDistanceKm, 'km');
+    console.log('Actual GPS Duration:', actualDurationMinutes, 'minutes (', (actualDurationMinutes / 60).toFixed(2), 'hours)');
 
     // Hosur bus stand coordinates
     const hosurBusStand = { lat: 12.7401984, lng: 77.824 };
@@ -1321,21 +1287,101 @@ export class FareCalculationService {
       { latitude: hosurBusStand.lat, longitude: hosurBusStand.lng }
     );
 
-    console.log('📍 Distance calculation:', {
-      drop_off: { lat: dropLat, lng: dropLng },
-      hosur_bus_stand: hosurBusStand,
-      distance_to_hosur: distanceToHosur.toFixed(2) + ' km'
-    });
-
     // Total distance including return to Hosur bus stand
     const totalDistanceWithReturn = actualDistanceKm + distanceToHosur;
+    const actualDurationHours = actualDurationMinutes / 60;
 
-    console.log('📊 Total distance with return:', {
+    console.log('📍 Distance calculation:', {
       actual_distance: actualDistanceKm,
       distance_to_hosur: distanceToHosur,
       total_with_return: totalDistanceWithReturn,
-      package_km_included: kmIncluded
+      actual_duration_hours: actualDurationHours.toFixed(2)
     });
+
+    // Get ALL rental packages for this vehicle type
+    const { data: allRentalFares, error } = await supabase
+      .from('rental_fares')
+      .select('*')
+      .eq('vehicle_type', vehicleType)
+      .eq('is_active', true)
+      .order('duration_hours', { ascending: true });
+
+    if (error || !allRentalFares || allRentalFares.length === 0) {
+      console.error('Error fetching rental fares:', error);
+      throw new Error(`No rental packages found for ${vehicleType}`);
+    }
+
+    console.log('📦 Available rental packages:', allRentalFares.map(f => ({
+      package: f.package_name,
+      hours: f.duration_hours,
+      km: f.km_included,
+      base_fare: f.base_fare
+    })));
+
+    // Find the best matching package based on actual usage
+    // Package must cover both distance AND time
+    let bestPackage = null;
+    let minimumCost = Infinity;
+
+    for (const pkg of allRentalFares) {
+      const packageHours = pkg.duration_hours;
+      const packageKm = pkg.km_included;
+      const baseFare = pkg.base_fare;
+      const extraKmRate = pkg.extra_km_rate;
+      const extraMinuteRate = pkg.extra_minute_rate || 0;
+
+      // Calculate extra charges for this package
+      let extraKmCharges = 0;
+      if (totalDistanceWithReturn > packageKm) {
+        extraKmCharges = (totalDistanceWithReturn - packageKm) * extraKmRate;
+      }
+
+      let extraTimeCharges = 0;
+      const packageMinutes = packageHours * 60;
+      if (actualDurationMinutes > packageMinutes) {
+        extraTimeCharges = (actualDurationMinutes - packageMinutes) * extraMinuteRate;
+      }
+
+      const totalCost = baseFare + extraKmCharges + extraTimeCharges;
+
+      console.log(`📊 Package ${pkg.package_name}:`, {
+        hours: packageHours,
+        km: packageKm,
+        base_fare: baseFare,
+        extra_km: totalDistanceWithReturn > packageKm ? totalDistanceWithReturn - packageKm : 0,
+        extra_km_charges: extraKmCharges,
+        extra_time: actualDurationMinutes > packageMinutes ? actualDurationMinutes - packageMinutes : 0,
+        extra_time_charges: extraTimeCharges,
+        total_cost: totalCost
+      });
+
+      // Select package with minimum total cost
+      if (totalCost < minimumCost) {
+        minimumCost = totalCost;
+        bestPackage = pkg;
+      }
+    }
+
+    if (!bestPackage) {
+      console.error('❌ Could not find suitable package');
+      throw new Error('No suitable rental package found');
+    }
+
+    console.log('✅ BEST PACKAGE SELECTED:', {
+      package_name: bestPackage.package_name,
+      duration_hours: bestPackage.duration_hours,
+      km_included: bestPackage.km_included,
+      base_fare: bestPackage.base_fare,
+      total_cost: minimumCost,
+      reason: 'Minimum total cost including base + extra km + extra time'
+    });
+
+    const rentalFare = bestPackage;
+    const baseFare = rentalFare.base_fare;
+    const kmIncluded = rentalFare.km_included;
+    const extraKmRate = rentalFare.extra_km_rate;
+    const extraMinuteRate = rentalFare.extra_minute_rate || 0;
+    const packageHours = rentalFare.duration_hours;
 
     // Calculate extra KM charges based on total distance (actual + return to Hosur)
     let extraKmCharges = 0;
@@ -1357,7 +1403,7 @@ export class FareCalculationService {
     // Calculate extra time charges based on ACTUAL duration
     let extraTimeCharges = 0;
     let extraMinutes = 0;
-    const packageMinutes = selectedHours * 60;
+    const packageMinutes = packageHours * 60;
     if (actualDurationMinutes > packageMinutes) {
       extraMinutes = actualDurationMinutes - packageMinutes;
       extraTimeCharges = extraMinutes * extraMinuteRate;

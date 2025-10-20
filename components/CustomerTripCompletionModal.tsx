@@ -203,8 +203,7 @@ export default function CustomerTripCompletionModal({
                 <MapPin size={20} color="#64748B" />
                 <Text style={styles.summaryLabel}>Distance:</Text>
                 <Text style={styles.summaryValue}>
-                  {(tripData.fareBreakdown.details?.actual_distance_km || tripData.distance).toFixed(2)} km
-                  {tripData.booking_type === 'outstation' ? ' (GPS-tracked)' : ' (Road Distance)'}
+                  {(tripData.fareBreakdown.details?.actual_distance_km || tripData.distance).toFixed(2)} km (GPS-tracked)
                 </Text>
               </View>
 
