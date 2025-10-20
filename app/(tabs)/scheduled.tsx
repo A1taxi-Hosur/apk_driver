@@ -629,6 +629,12 @@ export default function ScheduledScreen() {
       console.log('✅ Scheduled bookings reloaded');
 
       // Prepare completion data for modal
+      console.log('=== PREPARING SCHEDULED TRIP COMPLETION DATA ===');
+      console.log('📦 actualDistanceKm:', actualDistanceKm);
+      console.log('📦 actualDurationMinutes:', actualDurationMinutes);
+      console.log('📦 fareBreakdown:', JSON.stringify(fareBreakdown, null, 2));
+      console.log('📦 driverData:', JSON.stringify(driverData, null, 2));
+
       const tripCompletionData = {
         distance: actualDistanceKm,
         duration: actualDurationMinutes,
@@ -647,9 +653,14 @@ export default function ScheduledScreen() {
         ride_id: currentBooking.id
       };
 
+      console.log('=== TRIP COMPLETION DATA PREPARED ===');
+      console.log('📦 Complete tripCompletionData:', JSON.stringify(tripCompletionData, null, 2));
+
       // Show completion modal
+      console.log('🎯 Setting completion modal state...');
       setCompletionData(tripCompletionData);
       setShowCompletionModal(true);
+      console.log('✅ Modal state updated - should show now!');
 
     } catch (error) {
       console.error('❌ Exception completing scheduled trip:', error);

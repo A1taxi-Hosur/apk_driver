@@ -93,7 +93,9 @@ export default function TripCompletionModal({
                 <MapPin size={20} color="#64748B" />
                 <Text style={styles.summaryLabel}>Distance</Text>
               </View>
-              <Text style={styles.summaryValue}>{tripData.distance.toFixed(2)} km</Text>
+              <Text style={styles.summaryValue}>
+                {(tripData.fareBreakdown?.details?.actual_distance_km || tripData.distance).toFixed(2)} km
+              </Text>
             </View>
 
             <View style={styles.summaryRow}>
@@ -101,7 +103,9 @@ export default function TripCompletionModal({
                 <Clock size={20} color="#64748B" />
                 <Text style={styles.summaryLabel}>Duration</Text>
               </View>
-              <Text style={styles.summaryValue}>{tripData.duration} mins</Text>
+              <Text style={styles.summaryValue}>
+                {tripData.fareBreakdown?.details?.actual_duration_minutes || tripData.duration} mins
+              </Text>
             </View>
 
             {isRentalOrOutstationOrAirport && tripData.rental_hours && (

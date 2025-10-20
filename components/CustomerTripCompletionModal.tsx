@@ -76,6 +76,11 @@ export default function CustomerTripCompletionModal({
   const [isSubmittingRating, setIsSubmittingRating] = useState(false);
   const [hasSubmittedRating, setHasSubmittedRating] = useState(false);
 
+  console.log('🎯 CustomerTripCompletionModal RENDER');
+  console.log('  - visible:', visible);
+  console.log('  - tripData exists:', !!tripData);
+  console.log('  - tripData:', JSON.stringify(tripData, null, 2));
+
   const formatCurrency = (amount: number | undefined | null) => {
     if (amount == null || amount === undefined) {
       return `₹0.00`;
