@@ -250,8 +250,6 @@ export default function CustomerTripCompletionModal({
                   <View style={styles.fareItem}>
                     <Text style={styles.fareLabel}>
                       {tripData.fareBreakdown.details?.package_name || 'Rental Package'}
-                      {tripData.rental_hours && tripData.fareBreakdown.details?.base_km_included &&
-                       ` (${tripData.rental_hours}hr, ${tripData.fareBreakdown.details?.base_km_included}km)`}
                     </Text>
                     <Text style={styles.fareValue}>{formatCurrency(tripData.fareBreakdown.base_fare)}</Text>
                   </View>

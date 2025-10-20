@@ -1143,14 +1143,16 @@ export class FareCalculationService {
     });
 
     // Calculate deadhead charges using proper zone detection
+    // Only apply if driver actually traveled (distance > 0.5 km)
     console.log('🎯 About to calculate deadhead charges with params:', {
+      actualDistanceKm,
       dropLat,
       dropLng,
       perKmRate,
       zonesCount: zones?.length || 0
     });
 
-    const deadheadResult = this.calculateDeadheadCharges(dropLat, dropLng, perKmRate, zones);
+    const deadheadResult = this.calculateDeadheadCharges(dropLat, dropLng, perKmRate, zones, actualDistanceKm);
     const deadheadCharges = Number(deadheadResult.deadheadCharges) || 0;
 
     console.log('🎯 Deadhead charges result:', {
@@ -2022,17 +2024,31 @@ export class FareCalculationService {
   /**
    * Calculate deadhead charges based on zone detection
    * Applies only for regular rides when drop-off is between inner and outer ring zones
+   * AND when driver actually traveled (distance > 0.5 km)
    */
   private static calculateDeadheadCharges(
     dropLat: number,
     dropLng: number,
     perKmRate: number,
-    zones: any[]
+    zones: any[],
+    actualDistanceKm: number
   ): { deadheadCharges: number; zoneDetected: string; isInnerZone: boolean } {
     console.log('=== CALCULATING DEADHEAD CHARGES ===');
+    console.log('Actual Distance Traveled:', actualDistanceKm, 'km');
     console.log('Drop-off coordinates:', dropLat, dropLng);
     console.log('Per km rate:', perKmRate);
     console.log('Zones received:', zones?.length || 0);
+
+    // Do NOT apply deadhead charges if driver barely moved (< 0.5 km)
+    if (actualDistanceKm < 0.5) {
+      console.log('⚠️ Driver did not travel significantly (< 0.5 km)');
+      console.log('⚠️ NO DEADHEAD CHARGES will be applied');
+      return {
+        deadheadCharges: 0,
+        zoneDetected: 'N/A - Stationary',
+        isInnerZone: false
+      };
+    }
 
     if (zones && zones.length > 0) {
       console.log('Zone data received:');

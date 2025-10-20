@@ -722,6 +722,22 @@ export function RideProvider({ children }: RideProviderProps) {
           bookingType: ride.booking_type,
           method: 'Real GPS tracking with timestamps'
         })
+
+        // Check if GPS returned zero distance (driver didn't move or insufficient GPS points)
+        if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
+          console.warn('⚠️ GPS returned zero distance or insufficient points')
+          console.warn('⚠️ Driver did not move OR GPS tracking failed')
+
+          // Use minimal distance instead of falling back to Google Maps
+          actualDistanceKm = 0.1 // 100 meters minimum
+          actualDurationMinutes = 1 // 1 minute minimum
+
+          console.log('✅ Using minimal distance for stationary driver:', {
+            distanceKm: actualDistanceKm,
+            durationMinutes: actualDurationMinutes,
+            reason: 'Zero GPS distance detected'
+          })
+        }
       } catch (error) {
         console.warn('⚠️ GPS distance calculation failed:', error)
 

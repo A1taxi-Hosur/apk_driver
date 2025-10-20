@@ -371,6 +371,22 @@ export default function ScheduledScreen() {
           bookingType: currentBooking.booking_type,
           method: 'Real GPS tracking with timestamps'
         });
+
+        // Check if GPS returned zero distance (driver didn't move or insufficient GPS points)
+        if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
+          console.warn('⚠️ GPS returned zero distance or insufficient points');
+          console.warn('⚠️ Driver did not move OR GPS tracking failed');
+
+          // Use minimal distance instead of falling back to Google Maps
+          actualDistanceKm = 0.1; // 100 meters minimum
+          actualDurationMinutes = 1; // 1 minute minimum
+
+          console.log('✅ Using minimal distance for stationary driver:', {
+            distanceKm: actualDistanceKm,
+            durationMinutes: actualDurationMinutes,
+            reason: 'Zero GPS distance detected'
+          });
+        }
       } catch (error) {
         console.warn('⚠️ GPS distance calculation failed:', error);
 
@@ -1138,11 +1154,18 @@ async function calculateOutstationFare(
     scheduledTime
   });
 
-  // Safety check: Ensure distance is valid
-  if (actualDistanceKm <= 0) {
-    console.error('❌ [OUTSTATION-COMPLETION] Invalid distance:', actualDistanceKm);
-    throw new Error('Invalid GPS distance: ' + actualDistanceKm + 'km. GPS tracking may have failed.');
+  // Allow zero distance for stationary drivers (will be charged minimal fare)
+  if (actualDistanceKm < 0) {
+    console.error('❌ [OUTSTATION-COMPLETION] Negative distance detected:', actualDistanceKm);
+    actualDistanceKm = 0.1; // Use minimal distance
   }
+
+  if (actualDistanceKm === 0) {
+    console.warn('⚠️ [OUTSTATION-COMPLETION] Zero distance - driver did not move');
+    actualDistanceKm = 0.1; // 100 meters minimum for fare calculation
+  }
+
+  console.log('✅ [OUTSTATION-COMPLETION] Final distance for calculation:', actualDistanceKm);
 
   // Calculate number of days
   const startTime = scheduledTime ? new Date(scheduledTime) : new Date();
