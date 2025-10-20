@@ -474,9 +474,11 @@ const styles = StyleSheet.create({
     paddingTop: 20,
     paddingBottom: 20,
     maxHeight: '90%',
+    flex: 1,
   },
   scrollView: {
-    flex: 1,
+    flexGrow: 1,
+    flexShrink: 1,
   },
   scrollContent: {
     paddingBottom: 20,
