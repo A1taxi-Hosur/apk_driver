@@ -514,7 +514,7 @@ export function RideProvider({ children }: RideProviderProps) {
       await loadRides()
 
       // Start trip location tracking
-      await TripLocationTracker.startTripTracking(rideId, 'regular', driver.user_id)
+      await TripLocationTracker.startTripTracking(rideId, 'regular', driver.id)
 
       console.log('✅ Pickup OTP verified and ride started')
       return true

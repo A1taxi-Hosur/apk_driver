@@ -1,6 +1,31 @@
 import * as Location from 'expo-location';
+import * as TaskManager from 'expo-task-manager';
 import { Platform } from 'react-native';
 import { supabase } from '../utils/supabase';
+
+const TRIP_LOCATION_TASK = 'trip-location-tracking';
+
+// Background task for trip location tracking
+TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
+  if (error) {
+    console.error('❌ Trip location task error:', error);
+    return;
+  }
+
+  if (data) {
+    const { locations } = data as any;
+    if (locations && locations.length > 0) {
+      const location = locations[0];
+      console.log('📍 Trip background location:', {
+        lat: location.coords.latitude.toFixed(6),
+        lng: location.coords.longitude.toFixed(6),
+      });
+
+      // The actual recording will happen in the class method
+      // This task just ensures location updates continue in background
+    }
+  }
+});
 
 interface LocationPoint {
   latitude: number;
@@ -37,33 +62,78 @@ class TripLocationTrackerService {
         return true;
       }
 
-      // Request location permissions
-      const { status } = await Location.getForegroundPermissionsAsync();
-      if (status !== 'granted') {
-        console.error('❌ Location permission not granted');
+      // Request both foreground and background location permissions
+      const { status: foregroundStatus } = await Location.getForegroundPermissionsAsync();
+      if (foregroundStatus !== 'granted') {
+        console.error('❌ Foreground location permission not granted');
         return false;
+      }
+
+      // Request background permission for native platforms
+      if (Platform.OS !== 'web') {
+        const { status: backgroundStatus } = await Location.getBackgroundPermissionsAsync();
+        if (backgroundStatus !== 'granted') {
+          console.warn('⚠️ Background location permission not granted - tracking may stop when app is backgrounded');
+        }
       }
 
       // Initialize location points array for this trip
       this.locationPoints.set(tripId, []);
       this.isTracking.set(tripId, true);
 
-      // Record initial location
+      // Record initial location immediately
       await this.recordLocationPoint(tripId, tripType, driverId);
 
-      // Start interval to record location every 5 seconds
-      const interval = setInterval(async () => {
-        if (!this.isTracking.get(tripId)) {
-          clearInterval(interval);
-          this.trackingIntervals.delete(tripId);
-          return;
+      if (Platform.OS === 'web') {
+        // Web: Use interval-based tracking
+        console.log('🌐 Starting web-based interval tracking (every 5 seconds)');
+        const interval = setInterval(async () => {
+          if (!this.isTracking.get(tripId)) {
+            clearInterval(interval);
+            this.trackingIntervals.delete(tripId);
+            return;
+          }
+          await this.recordLocationPoint(tripId, tripType, driverId);
+        }, 5000);
+
+        this.trackingIntervals.set(tripId, interval);
+      } else {
+        // Native: Use background location tracking
+        console.log('📱 Starting native background location tracking');
+
+        // Check if task is already defined and remove it
+        const isTaskDefined = await TaskManager.isTaskDefinedAsync(TRIP_LOCATION_TASK);
+        if (isTaskDefined) {
+          await Location.stopLocationUpdatesAsync(TRIP_LOCATION_TASK);
+          console.log('🔄 Stopped existing background task');
         }
-        await this.recordLocationPoint(tripId, tripType, driverId);
-      }, 5000); // Every 5 seconds
 
-      this.trackingIntervals.set(tripId, interval);
+        // Start background location updates
+        await Location.startLocationUpdatesAsync(TRIP_LOCATION_TASK, {
+          accuracy: Location.Accuracy.BestForNavigation,
+          timeInterval: 5000, // Update every 5 seconds
+          distanceInterval: 10, // Or every 10 meters
+          foregroundService: {
+            notificationTitle: 'Trip in Progress',
+            notificationBody: 'Recording your trip location',
+          },
+          pausesUpdatesAutomatically: false,
+        });
 
-      console.log('✅ Trip GPS tracking started (5-second intervals)');
+        // Also start foreground interval for immediate updates
+        const interval = setInterval(async () => {
+          if (!this.isTracking.get(tripId)) {
+            clearInterval(interval);
+            this.trackingIntervals.delete(tripId);
+            return;
+          }
+          await this.recordLocationPoint(tripId, tripType, driverId);
+        }, 5000);
+
+        this.trackingIntervals.set(tripId, interval);
+      }
+
+      console.log('✅ Trip GPS tracking started with background support');
       return true;
     } catch (error) {
       console.error('❌ Error starting trip tracking:', error);
@@ -145,11 +215,36 @@ class TripLocationTrackerService {
         this.trackingIntervals.delete(tripId);
       }
 
+      // Stop background location tracking on native platforms
+      if (Platform.OS !== 'web') {
+        try {
+          const isTaskDefined = await TaskManager.isTaskDefinedAsync(TRIP_LOCATION_TASK);
+          if (isTaskDefined) {
+            await Location.stopLocationUpdatesAsync(TRIP_LOCATION_TASK);
+            console.log('✅ Background location tracking stopped');
+          }
+        } catch (bgError) {
+          console.warn('⚠️ Error stopping background tracking:', bgError);
+        }
+      }
+
       // Mark as not tracking
       this.isTracking.set(tripId, false);
 
       const pointsCount = this.locationPoints.get(tripId)?.length || 0;
-      console.log(`✅ Trip GPS tracking stopped. Total points recorded: ${pointsCount}`);
+      console.log(`✅ Trip GPS tracking stopped. Total points recorded in memory: ${pointsCount}`);
+
+      // Query database for actual count
+      try {
+        const { count } = await supabase
+          .from('trip_location_history')
+          .select('*', { count: 'exact', head: true })
+          .eq('ride_id', tripId);
+
+        console.log(`📊 Total points in database: ${count || 0}`);
+      } catch (dbError) {
+        console.warn('⚠️ Could not query database for point count');
+      }
     } catch (error) {
       console.error('❌ Error stopping trip tracking:', error);
     }
