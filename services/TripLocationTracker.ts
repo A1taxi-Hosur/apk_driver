@@ -1,11 +1,14 @@
 import * as Location from 'expo-location';
 import * as TaskManager from 'expo-task-manager';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Platform } from 'react-native';
 import { supabase } from '../utils/supabase';
 
 const TRIP_LOCATION_TASK = 'trip-location-tracking';
+const ACTIVE_TRIP_KEY = 'active_trip_tracking';
 
 // Background task for trip location tracking
+// This runs even when app is backgrounded or closed
 TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
   if (error) {
     console.error('❌ Trip location task error:', error);
@@ -16,13 +19,49 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
     const { locations } = data as any;
     if (locations && locations.length > 0) {
       const location = locations[0];
-      console.log('📍 Trip background location:', {
-        lat: location.coords.latitude.toFixed(6),
-        lng: location.coords.longitude.toFixed(6),
-      });
 
-      // The actual recording will happen in the class method
-      // This task just ensures location updates continue in background
+      try {
+        // Get active trip info from storage
+        const activeTripJson = await AsyncStorage.getItem(ACTIVE_TRIP_KEY);
+        if (!activeTripJson) {
+          console.log('⚠️ No active trip found in background task');
+          return;
+        }
+
+        const activeTrip = JSON.parse(activeTripJson);
+        const { tripId, tripType, driverId } = activeTrip;
+
+        console.log('📍 Background location update:', {
+          lat: location.coords.latitude.toFixed(6),
+          lng: location.coords.longitude.toFixed(6),
+          tripId: tripId.substring(0, 8) + '...',
+        });
+
+        // Save location point directly to database
+        const locationPoint = {
+          [tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id']: tripId,
+          driver_id: driverId,
+          latitude: location.coords.latitude,
+          longitude: location.coords.longitude,
+          accuracy: location.coords.accuracy || null,
+          speed: location.coords.speed || null,
+          heading: location.coords.heading || null,
+          altitude: location.coords.altitude || null,
+          recorded_at: new Date().toISOString(),
+        };
+
+        const { error: insertError } = await supabase
+          .from('trip_location_history')
+          .insert(locationPoint);
+
+        if (insertError) {
+          console.error('❌ Background: Error saving location:', insertError);
+        } else {
+          console.log('✅ Background: Location saved to database');
+        }
+      } catch (bgError) {
+        console.error('❌ Background task processing error:', bgError);
+      }
     }
   }
 });
@@ -81,6 +120,15 @@ class TripLocationTrackerService {
       this.locationPoints.set(tripId, []);
       this.isTracking.set(tripId, true);
 
+      // Store active trip context for background task
+      await AsyncStorage.setItem(ACTIVE_TRIP_KEY, JSON.stringify({
+        tripId,
+        tripType,
+        driverId,
+        startedAt: new Date().toISOString()
+      }));
+      console.log('✅ Active trip context stored for background tracking');
+
       // Record initial location immediately
       await this.recordLocationPoint(tripId, tripType, driverId);
 
@@ -109,6 +157,7 @@ class TripLocationTrackerService {
         }
 
         // Start background location updates
+        // The background task will handle saving locations to database
         await Location.startLocationUpdatesAsync(TRIP_LOCATION_TASK, {
           accuracy: Location.Accuracy.BestForNavigation,
           timeInterval: 5000, // Update every 5 seconds
@@ -118,19 +167,11 @@ class TripLocationTrackerService {
             notificationBody: 'Recording your trip location',
           },
           pausesUpdatesAutomatically: false,
+          deferredUpdatesInterval: 5000, // Batch updates every 5 seconds
         });
 
-        // Also start foreground interval for immediate updates
-        const interval = setInterval(async () => {
-          if (!this.isTracking.get(tripId)) {
-            clearInterval(interval);
-            this.trackingIntervals.delete(tripId);
-            return;
-          }
-          await this.recordLocationPoint(tripId, tripType, driverId);
-        }, 5000);
-
-        this.trackingIntervals.set(tripId, interval);
+        console.log('✅ Background location task started');
+        console.log('📍 Location will be tracked even when app is in background');
       }
 
       console.log('✅ Trip GPS tracking started with background support');
@@ -213,6 +254,14 @@ class TripLocationTrackerService {
       if (interval) {
         clearInterval(interval);
         this.trackingIntervals.delete(tripId);
+      }
+
+      // Clear active trip context from AsyncStorage
+      try {
+        await AsyncStorage.removeItem(ACTIVE_TRIP_KEY);
+        console.log('✅ Active trip context cleared');
+      } catch (storageError) {
+        console.warn('⚠️ Error clearing trip context:', storageError);
       }
 
       // Stop background location tracking on native platforms
