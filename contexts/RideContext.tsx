@@ -726,17 +726,48 @@ export function RideProvider({ children }: RideProviderProps) {
         // Check if GPS returned zero distance (driver didn't move or insufficient GPS points)
         if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
           console.warn('⚠️ GPS returned zero distance or insufficient points')
-          console.warn('⚠️ Driver did not move OR GPS tracking failed')
+          console.warn('⚠️ GPS tracking failed - falling back to Google Maps')
 
-          // Use minimal distance instead of falling back to Google Maps
-          actualDistanceKm = 0.1 // 100 meters minimum
-          actualDurationMinutes = 1 // 1 minute minimum
+          // Fallback to Google Maps Directions API
+          try {
+            const { googleMapsService } = await import('../services/googleMapsService')
 
-          console.log('✅ Using minimal distance for stationary driver:', {
-            distanceKm: actualDistanceKm,
-            durationMinutes: actualDurationMinutes,
-            reason: 'Zero GPS distance detected'
-          })
+            const routeData = await googleMapsService.getDirections(
+              {
+                latitude: pickupLat,
+                longitude: pickupLng
+              },
+              {
+                latitude: destLat,
+                longitude: destLng
+              }
+            )
+
+            if (routeData && routeData.distance > 0) {
+              actualDistanceKm = routeData.distance
+              actualDurationMinutes = Math.round(routeData.duration / 60) || 1 // Minimum 1 minute
+
+              console.log('✅ Google Maps fallback distance:', {
+                distanceKm: actualDistanceKm.toFixed(2),
+                durationMinutes: actualDurationMinutes,
+                method: 'Google Maps Directions API (GPS failed)'
+              })
+            } else {
+              throw new Error('Google Maps API returned no route')
+            }
+          } catch (googleError) {
+            console.warn('⚠️ Google Maps also failed, using minimal distance:', googleError)
+
+            // Only use minimal distance if Google Maps also fails
+            actualDistanceKm = 0.1 // 100 meters minimum
+            actualDurationMinutes = 1 // 1 minute minimum
+
+            console.log('✅ Using minimal distance as last resort:', {
+              distanceKm: actualDistanceKm,
+              durationMinutes: actualDurationMinutes,
+              reason: 'Both GPS and Google Maps failed'
+            })
+          }
         }
       } catch (error) {
         console.warn('⚠️ GPS distance calculation failed:', error)

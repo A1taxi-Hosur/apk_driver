@@ -375,17 +375,62 @@ export default function ScheduledScreen() {
         // Check if GPS returned zero distance (driver didn't move or insufficient GPS points)
         if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
           console.warn('⚠️ GPS returned zero distance or insufficient points');
-          console.warn('⚠️ Driver did not move OR GPS tracking failed');
+          console.warn('⚠️ GPS tracking failed - falling back to Google Maps');
 
-          // Use minimal distance instead of falling back to Google Maps
-          actualDistanceKm = 0.1; // 100 meters minimum
-          actualDurationMinutes = 1; // 1 minute minimum
+          // Fallback to Google Maps Directions API
+          try {
+            const { googleMapsService } = await import('../../services/googleMapsService');
 
-          console.log('✅ Using minimal distance for stationary driver:', {
-            distanceKm: actualDistanceKm,
-            durationMinutes: actualDurationMinutes,
-            reason: 'Zero GPS distance detected'
-          });
+            const routeData = await googleMapsService.getDirections(
+              {
+                latitude: currentBooking.pickup_latitude,
+                longitude: currentBooking.pickup_longitude
+              },
+              {
+                latitude: currentBooking.destination_latitude,
+                longitude: currentBooking.destination_longitude
+              }
+            );
+
+            if (routeData && routeData.distance > 0) {
+              const oneWayDistance = routeData.distance;
+
+              // For outstation trips, double for round trip
+              if (currentBooking.booking_type === 'outstation') {
+                actualDistanceKm = oneWayDistance * 2;
+                actualDurationMinutes = Math.round(routeData.duration / 60) || 1;
+                console.log('✅ Google Maps fallback (outstation):', {
+                  oneWayDistance: oneWayDistance.toFixed(2),
+                  roundTripDistance: actualDistanceKm.toFixed(2),
+                  durationMinutes: actualDurationMinutes,
+                  method: 'Google Maps Directions API (GPS failed)',
+                  note: 'Distance × 2 for round trip'
+                });
+              } else {
+                actualDistanceKm = oneWayDistance;
+                actualDurationMinutes = Math.round(routeData.duration / 60) || 1;
+                console.log('✅ Google Maps fallback (rental/airport):', {
+                  distanceKm: actualDistanceKm.toFixed(2),
+                  durationMinutes: actualDurationMinutes,
+                  method: 'Google Maps Directions API (GPS failed)'
+                });
+              }
+            } else {
+              throw new Error('Google Maps API returned no route');
+            }
+          } catch (googleError) {
+            console.warn('⚠️ Google Maps also failed, using minimal distance:', googleError);
+
+            // Only use minimal distance if Google Maps also fails
+            actualDistanceKm = 0.1; // 100 meters minimum
+            actualDurationMinutes = 1; // 1 minute minimum
+
+            console.log('✅ Using minimal distance as last resort:', {
+              distanceKm: actualDistanceKm,
+              durationMinutes: actualDurationMinutes,
+              reason: 'Both GPS and Google Maps failed'
+            });
+          }
         }
       } catch (error) {
         console.warn('⚠️ GPS distance calculation failed:', error);
