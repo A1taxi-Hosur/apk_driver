@@ -372,10 +372,13 @@ export default function ScheduledScreen() {
           method: 'Real GPS tracking with timestamps'
         });
 
-        // Check if GPS returned zero distance (driver didn't move or insufficient GPS points)
-        if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
+        // Check if GPS tracking was successful
+        if (actualDistanceKm > 0 && gpsPointsUsed >= 2) {
+          console.log('🎯 GPS tracking successful! Using GPS distance (handles multiple stops, loops, etc.)');
+          // GPS worked perfectly - no fallback needed
+        } else if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
           console.warn('⚠️ GPS returned zero distance or insufficient points');
-          console.warn('⚠️ GPS tracking failed - falling back to Google Maps');
+          console.warn('⚠️ GPS tracking failed - falling back to Google Maps (straight route only)');
 
           // Fallback to Google Maps Directions API
           try {
