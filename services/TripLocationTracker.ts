@@ -9,6 +9,8 @@ const TRIP_CONTEXT_KEY = 'active_trip_context';
 // Background task definition - MUST be at module level
 // Runs even when app is closed/backgrounded on Android
 TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
+  console.log('🔔 Background task triggered!');
+
   if (error) {
     console.error('❌ Background GPS error:', error);
     return;
@@ -16,56 +18,74 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
 
   if (data) {
     const { locations } = data as any;
+    console.log(`📡 Received ${locations?.length || 0} location(s)`);
+
     if (locations && locations.length > 0) {
       const location = locations[0];
 
       try {
         // Get trip context from AsyncStorage (persists across app restarts)
+        console.log('🔍 Looking for trip context in AsyncStorage...');
         const contextJson = await AsyncStorage.getItem(TRIP_CONTEXT_KEY);
+
         if (!contextJson) {
-          console.warn('⚠️ Background: No trip context in storage');
+          console.warn('⚠️ Background: No trip context in storage (key:', TRIP_CONTEXT_KEY, ')');
           return;
         }
 
+        console.log('📦 Found trip context:', contextJson);
         const { tripId, tripType, driverId } = JSON.parse(contextJson);
 
         if (!tripId || !tripType || !driverId) {
-          console.warn('⚠️ Background: Invalid trip context');
+          console.warn('⚠️ Background: Invalid trip context', { tripId, tripType, driverId });
           return;
         }
 
         console.log('📍 Background GPS:', {
+          tripId,
+          tripType,
           lat: location.coords.latitude.toFixed(6),
           lng: location.coords.longitude.toFixed(6),
           accuracy: location.coords.accuracy?.toFixed(1) + 'm',
+          timestamp: new Date(location.timestamp).toISOString(),
         });
 
         // Save to database immediately
+        const insertData = {
+          [tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id']: tripId,
+          driver_id: driverId,
+          latitude: location.coords.latitude,
+          longitude: location.coords.longitude,
+          accuracy: location.coords.accuracy || null,
+          speed: location.coords.speed || null,
+          heading: location.coords.heading || null,
+          altitude: location.coords.altitude || null,
+          recorded_at: new Date(location.timestamp).toISOString(),
+        };
+
+        console.log('💾 Inserting to trip_location_history:', insertData);
+
         const { error: insertError } = await supabase
           .from('trip_location_history')
-          .insert({
-            [tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id']: tripId,
-            driver_id: driverId,
-            latitude: location.coords.latitude,
-            longitude: location.coords.longitude,
-            accuracy: location.coords.accuracy || null,
-            speed: location.coords.speed || null,
-            heading: location.coords.heading || null,
-            altitude: location.coords.altitude || null,
-            recorded_at: new Date(location.timestamp).toISOString(),
-          });
+          .insert(insertData);
 
         if (insertError) {
-          console.error('❌ Background: Insert error:', insertError.message);
+          console.error('❌ Background: Insert error:', insertError.message, insertError);
         } else {
-          console.log('✅ Background: GPS saved');
+          console.log('✅ Background: GPS point saved to database!');
         }
       } catch (bgError) {
         console.error('❌ Background: Error:', bgError);
       }
+    } else {
+      console.warn('⚠️ No location data in update');
     }
+  } else {
+    console.warn('⚠️ No data in task');
   }
 });
+
+console.log('✅ TripLocationTracker: Background task registered');
 
 class TripLocationTrackerService {
   private isTracking: Map<string, boolean> = new Map();
@@ -106,18 +126,25 @@ class TripLocationTrackerService {
       console.log('✅ Permissions granted');
 
       // Store trip context in AsyncStorage for background task
-      await AsyncStorage.setItem(
-        TRIP_CONTEXT_KEY,
-        JSON.stringify({ tripId, tripType, driverId })
-      );
-      console.log('💾 Trip context saved to storage');
+      const contextData = { tripId, tripType, driverId };
+      await AsyncStorage.setItem(TRIP_CONTEXT_KEY, JSON.stringify(contextData));
+      console.log('💾 Trip context saved to storage:', contextData);
+
+      // Verify it was saved
+      const savedContext = await AsyncStorage.getItem(TRIP_CONTEXT_KEY);
+      console.log('✅ Verified saved context:', savedContext);
 
       // Stop existing task if any
       const isRegistered = await TaskManager.isTaskRegisteredAsync(TRIP_LOCATION_TASK);
+      console.log('📋 Task already registered:', isRegistered);
+
       if (isRegistered) {
         console.log('🔄 Stopping existing task...');
         await Location.stopLocationUpdatesAsync(TRIP_LOCATION_TASK);
+        console.log('✅ Existing task stopped');
       }
+
+      console.log('🚀 Starting location updates with task:', TRIP_LOCATION_TASK);
 
       // Start background tracking
       await Location.startLocationUpdatesAsync(TRIP_LOCATION_TASK, {
@@ -134,11 +161,18 @@ class TripLocationTrackerService {
         pausesUpdatesAutomatically: false,
       });
 
+      console.log('✅ Location updates started successfully');
+
+      // Verify task is now registered
+      const nowRegistered = await TaskManager.isTaskRegisteredAsync(TRIP_LOCATION_TASK);
+      console.log('📋 Task now registered:', nowRegistered);
+
       this.isTracking.set(tripId, true);
 
-      console.log('✅ Background GPS started');
+      console.log('✅ Background GPS tracking started');
       console.log('📱 Foreground service active');
-      console.log('🌍 Tracking even when app closed');
+      console.log('🌍 Will track even when app is closed');
+      console.log('⏱️  GPS updates every 3 seconds or 5 meters');
 
       return true;
     } catch (error) {

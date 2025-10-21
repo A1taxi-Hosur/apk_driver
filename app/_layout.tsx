@@ -9,6 +9,9 @@ import { LocationProvider } from '@/contexts/LocationContext';
 import { RideProvider } from '@/contexts/RideContext';
 import { useAuth } from '@/contexts/AuthContext';
 
+// CRITICAL: Import TripLocationTracker to register background task BEFORE app loads
+import '@/services/TripLocationTracker';
+
 function RootLayoutNav() {
   const { session, loading } = useAuth();
   const { driver } = useAuth();
