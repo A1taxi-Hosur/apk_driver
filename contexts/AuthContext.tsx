@@ -347,19 +347,17 @@ export function AuthProvider({ children }: AuthProviderProps) {
       // FOR TESTING: Force status to online
       console.log('🧪 TESTING MODE ACTIVE - Ensuring driver is ONLINE and AVAILABLE')
       try {
-        const { error: statusUpdateError } = await supabase
-          .from('drivers')
-          .update({
-            status: 'online',
-            is_verified: true,
-            updated_at: new Date().toISOString()
+        const { data: statusResult, error: statusUpdateError } = await supabase
+          .rpc('update_driver_status_by_id', {
+            p_driver_id: driver.id,
+            p_status: 'online'
           })
-          .eq('id', driver.id)
-        
+
         if (statusUpdateError) {
           console.error('❌ Error setting default online status:', statusUpdateError)
         } else {
           console.log('✅ Driver status set to ONLINE and VERIFIED for testing')
+          console.log('✅ Status update result:', statusResult)
           // Create new driver object with updated status (immutable update)
           const updatedDriver = {
             ...driver,
@@ -459,34 +457,26 @@ export function AuthProvider({ children }: AuthProviderProps) {
       if (isActualChange) {
         console.log('📊 WRITING TO DATABASE - This is the authoritative source of truth')
 
-        // When going online, ensure driver is verified and available for customers
-        const updateData: any = {
-          status,
-          updated_at: new Date().toISOString()
-        };
-
         if (status === 'online') {
           console.log('🟢 Driver going ONLINE - ensuring availability for customers');
-          updateData.is_verified = true; // Ensure driver is verified when online
         }
 
         const { data: updatedData, error } = await supabase
-          .from('drivers')
-          .update(updateData)
-          .eq('id', driver.id)
-          .select()
-          .maybeSingle()
+          .rpc('update_driver_status_by_id', {
+            p_driver_id: driver.id,
+            p_status: status
+          })
 
         if (error) {
           console.error('Error updating driver status:', error)
           throw error
         }
-        
+
         console.log('✅ Database updated successfully')
         console.log('✅ Updated driver data:', updatedData)
         console.log('✅ Status is now PERMANENTLY set to:', status)
         console.log('✅ No automatic processes will change this status')
-        
+
         if (status === 'online') {
           console.log('✅ Driver is now VERIFIED and AVAILABLE for customer bookings')
         }
