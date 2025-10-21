@@ -361,20 +361,45 @@ class TripLocationTrackerService {
   ): Promise<{ distanceKm: number; pointsUsed: number }> {
     try {
       console.log('=== CALCULATING GPS DISTANCE ===');
+      console.log('Trip ID:', tripId);
+      console.log('Trip Type:', tripType);
+
+      const columnName = tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id';
+      console.log('Querying column:', columnName, '=', tripId);
 
       const { data: points, error } = await supabase
         .from('trip_location_history')
         .select('latitude, longitude, recorded_at, accuracy')
-        .eq(tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id', tripId)
+        .eq(columnName, tripId)
         .order('recorded_at', { ascending: true });
+
+      console.log('Query result - points:', points?.length, 'error:', error);
 
       if (error) {
         console.error('❌ Fetch error:', error);
+
+        await supabase.from('debug_logs').insert({
+          ride_id: tripType === 'regular' ? tripId : null,
+          scheduled_booking_id: tripType === 'scheduled' ? tripId : null,
+          log_type: 'gps_query_error',
+          message: 'Failed to fetch GPS points',
+          data: { error: error.message, tripType, columnName }
+        });
+
         return { distanceKm: 0, pointsUsed: 0 };
       }
 
       if (!points || points.length < 2) {
         console.warn(`⚠️ Only ${points?.length || 0} points`);
+
+        await supabase.from('debug_logs').insert({
+          ride_id: tripType === 'regular' ? tripId : null,
+          scheduled_booking_id: tripType === 'scheduled' ? tripId : null,
+          log_type: 'gps_insufficient_points',
+          message: 'Insufficient GPS points for calculation',
+          data: { pointsFound: points?.length || 0, tripType, columnName }
+        });
+
         return { distanceKm: 0, pointsUsed: points?.length || 0 };
       }
 
