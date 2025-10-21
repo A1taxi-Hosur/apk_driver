@@ -560,19 +560,8 @@ export function RideProvider({ children }: RideProviderProps) {
       setCurrentRide(updatedRide)
       console.log('✅ Ride started successfully')
 
-      // Start GPS tracking for this trip
-      console.log('🚀 Starting GPS tracking for trip...')
-      const trackingStarted = await TripLocationTracker.startTripTracking(
-        rideId,
-        'regular',
-        driver.id
-      )
-
-      if (trackingStarted) {
-        console.log('✅ GPS tracking started for trip')
-      } else {
-        console.warn('⚠️ Failed to start GPS tracking, but ride will continue')
-      }
+      // Note: GPS tracking already started in verifyPickupOTP
+      // No need to start again here
     } catch (error) {
       console.error('Exception starting ride:', error)
       setError('Failed to start ride')

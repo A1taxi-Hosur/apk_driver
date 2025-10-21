@@ -1,8 +1,10 @@
 import * as Location from 'expo-location';
 import * as TaskManager from 'expo-task-manager';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { supabase } from '../utils/supabase';
 
 const TRIP_LOCATION_TASK = 'trip-location-tracking';
+const TRIP_CONTEXT_KEY = 'active_trip_context';
 
 // Background task definition - MUST be at module level
 // Runs even when app is closed/backgrounded on Android
@@ -18,16 +20,14 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
       const location = locations[0];
 
       try {
-        // Get task registration info to extract trip context
-        const tasks = await TaskManager.getRegisteredTasksAsync();
-        const tripTask = tasks.find(t => t.taskName === TRIP_LOCATION_TASK);
-
-        if (!tripTask || !tripTask.options) {
-          console.warn('⚠️ Background: No trip context');
+        // Get trip context from AsyncStorage (persists across app restarts)
+        const contextJson = await AsyncStorage.getItem(TRIP_CONTEXT_KEY);
+        if (!contextJson) {
+          console.warn('⚠️ Background: No trip context in storage');
           return;
         }
 
-        const { tripId, tripType, driverId } = (tripTask.options as any);
+        const { tripId, tripType, driverId } = JSON.parse(contextJson);
 
         if (!tripId || !tripType || !driverId) {
           console.warn('⚠️ Background: Invalid trip context');
@@ -105,6 +105,13 @@ class TripLocationTrackerService {
 
       console.log('✅ Permissions granted');
 
+      // Store trip context in AsyncStorage for background task
+      await AsyncStorage.setItem(
+        TRIP_CONTEXT_KEY,
+        JSON.stringify({ tripId, tripType, driverId })
+      );
+      console.log('💾 Trip context saved to storage');
+
       // Stop existing task if any
       const isRegistered = await TaskManager.isTaskRegisteredAsync(TRIP_LOCATION_TASK);
       if (isRegistered) {
@@ -125,11 +132,7 @@ class TripLocationTrackerService {
         },
         activityType: Location.ActivityType.AutomotiveNavigation,
         pausesUpdatesAutomatically: false,
-        // Store trip context in options
-        tripId,
-        tripType,
-        driverId,
-      } as any);
+      });
 
       this.isTracking.set(tripId, true);
 
@@ -156,6 +159,10 @@ class TripLocationTrackerService {
         await Location.stopLocationUpdatesAsync(TRIP_LOCATION_TASK);
         console.log('✅ Background task stopped');
       }
+
+      // Clear trip context from storage
+      await AsyncStorage.removeItem(TRIP_CONTEXT_KEY);
+      console.log('🗑️ Trip context cleared from storage');
 
       this.isTracking.set(tripId, false);
 
