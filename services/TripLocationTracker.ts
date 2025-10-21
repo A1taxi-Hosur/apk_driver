@@ -336,9 +336,9 @@ class TripLocationTrackerService {
 
       this.isTracking.set(tripId, false);
 
-      // Query GPS points count
+      // Query GPS points count using service role for reliable access
       try {
-        const { count } = await supabase
+        const { count } = await supabaseBackground
           .from('trip_location_history')
           .select('*', { count: 'exact', head: true })
           .or(`ride_id.eq.${tripId},scheduled_booking_id.eq.${tripId}`);
@@ -367,7 +367,10 @@ class TripLocationTrackerService {
       const columnName = tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id';
       console.log('Querying column:', columnName, '=', tripId);
 
-      const { data: points, error } = await supabase
+      // Use supabaseBackground (service role) to bypass RLS for reliable GPS data access
+      // GPS data is already validated during insertion (driver_id check)
+      // This ensures trip completion can always read historical GPS data
+      const { data: points, error } = await supabaseBackground
         .from('trip_location_history')
         .select('latitude, longitude, recorded_at, accuracy')
         .eq(columnName, tripId)
@@ -483,7 +486,8 @@ class TripLocationTrackerService {
     tripType: 'regular' | 'scheduled'
   ): Promise<{ durationMinutes: number; pointsUsed: number }> {
     try {
-      const { data: points, error } = await supabase
+      // Use supabaseBackground (service role) to bypass RLS for reliable GPS data access
+      const { data: points, error } = await supabaseBackground
         .from('trip_location_history')
         .select('recorded_at')
         .eq(tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id', tripId)
