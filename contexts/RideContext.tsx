@@ -986,6 +986,11 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('=== PREPARING COMPLETION DATA ===')
       console.log('Raw fareBreakdown from service:', JSON.stringify(fareResult.fareBreakdown, null, 2))
 
+      console.log('🚨🚨🚨 CRITICAL CHECK - fareResult.fareBreakdown.details:');
+      console.log('  fareResult.fareBreakdown.details:', fareResult.fareBreakdown.details);
+      console.log('  fareResult.fareBreakdown.details.actual_distance_km:', fareResult.fareBreakdown.details?.actual_distance_km);
+      console.log('  Expected value (actualDistanceKm):', actualDistanceKm);
+
       const completionData = {
         distance: actualDistanceKm,
         duration: actualDurationMinutes,
@@ -1015,6 +1020,10 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Completion data object:', JSON.stringify(completionData, null, 2))
       console.log('Platform fee in completion data:', completionData.fareBreakdown.platform_fee)
       console.log('Total fare in completion data:', completionData.fareBreakdown.total_fare)
+      console.log('🚨🚨🚨 DISTANCE VALUES IN COMPLETION DATA:');
+      console.log('  completionData.distance:', completionData.distance);
+      console.log('  completionData.fareBreakdown.details:', completionData.fareBreakdown.details);
+      console.log('  completionData.fareBreakdown.details.actual_distance_km:', completionData.fareBreakdown.details?.actual_distance_km);
       console.log('=== ABOUT TO RETURN COMPLETION DATA ===')
 
       await DebugLogger.log(rideId, 'completion_data', 'Trip completion data prepared', {
