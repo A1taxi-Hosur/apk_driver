@@ -712,9 +712,14 @@ export function RideProvider({ children }: RideProviderProps) {
           method: 'Real GPS tracking with timestamps'
         })
 
+        console.log('🚨🚨🚨 CRITICAL: actualDistanceKm BEFORE condition check:', actualDistanceKm);
+        console.log('🚨🚨🚨 CRITICAL: gpsPointsUsed:', gpsPointsUsed);
+        console.log('🚨🚨🚨 CRITICAL: Condition check will be:', actualDistanceKm > 0 && gpsPointsUsed >= 2);
+
         // Check if GPS tracking was successful
         if (actualDistanceKm > 0 && gpsPointsUsed >= 2) {
-          console.log('🎯 GPS tracking successful! Using GPS distance (handles multiple stops, loops, etc.)')
+          console.log('🎯🎯🎯 GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
+          console.log('🎯 Will use this value for fare calculation')
           // GPS worked perfectly - no fallback needed
         } else if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
           console.warn('⚠️ GPS returned zero distance or insufficient points')
@@ -875,7 +880,12 @@ export function RideProvider({ children }: RideProviderProps) {
       })
 
       // Calculate fare using FareCalculationService with GPS drop-off location
+      console.log('🚨🚨🚨 FINAL VALUES BEFORE FARE CALCULATION 🚨🚨🚨')
+      console.log('🚨 actualDistanceKm:', actualDistanceKm)
+      console.log('🚨 actualDurationMinutes:', actualDurationMinutes)
+      console.log('🚨 gpsPointsUsed:', gpsPointsUsed)
       console.log('🚨 About to call FareCalculationService.calculateAndStoreTripFare...')
+
       const fareResult = await FareCalculationService.calculateAndStoreTripFare(
         rideId,
         actualDistanceKm,
