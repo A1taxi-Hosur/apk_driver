@@ -87,6 +87,21 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
           console.error('❌ Background: Insert error:', insertError.message, insertError);
         } else {
           console.log('✅ Background: GPS point saved to database!');
+
+          // Log every 10th point to track if GPS stops
+          const randomCheck = Math.random() < 0.1; // 10% chance
+          if (randomCheck) {
+            try {
+              await supabaseBackground.from('debug_logs').insert({
+                ride_id: tripId,
+                log_type: 'gps_heartbeat',
+                message: 'GPS still running',
+                data: { lat: location.coords.latitude, lng: location.coords.longitude, timestamp: new Date().toISOString() }
+              });
+            } catch (e) {
+              // Silent fail
+            }
+          }
         }
       } catch (bgError) {
         console.error('❌ Background: Error:', bgError);
@@ -160,19 +175,21 @@ class TripLocationTrackerService {
 
       console.log('🚀 Starting location updates with task:', TRIP_LOCATION_TASK);
 
-      // Start background tracking
+      // Start background tracking with aggressive settings to prevent Android from killing it
       await Location.startLocationUpdatesAsync(TRIP_LOCATION_TASK, {
         accuracy: Location.Accuracy.BestForNavigation,
-        timeInterval: 3000, // Every 3 seconds
-        distanceInterval: 5, // Or every 5 meters
+        timeInterval: 2000, // Every 2 seconds (more frequent = less likely to be killed)
+        distanceInterval: 3, // Or every 3 meters
         showsBackgroundLocationIndicator: true,
+        deferredUpdatesInterval: 2000, // Force frequent updates
         foregroundService: {
-          notificationTitle: '🚗 Trip in Progress',
-          notificationBody: 'Recording trip location',
+          notificationTitle: '🚗 A1 Taxi - Trip in Progress',
+          notificationBody: 'GPS tracking active - DO NOT close this notification',
           notificationColor: '#FF6B35',
         },
         activityType: Location.ActivityType.AutomotiveNavigation,
-        pausesUpdatesAutomatically: false,
+        pausesUpdatesAutomatically: false, // NEVER pause
+        mayShowUserSettingsDialog: false, // Don't interrupt
       });
 
       console.log('✅ Location updates started successfully');
@@ -186,7 +203,25 @@ class TripLocationTrackerService {
       console.log('✅ Background GPS tracking started');
       console.log('📱 Foreground service active');
       console.log('🌍 Will track even when app is closed');
-      console.log('⏱️  GPS updates every 3 seconds or 5 meters');
+      console.log('⏱️  GPS updates every 2 seconds or 3 meters');
+      console.log('⚠️  IMPORTANT: Keep the notification visible - closing it may stop GPS');
+
+      // Log to database for debugging
+      try {
+        const { createClient } = await import('@supabase/supabase-js');
+        const supabaseUrl = 'https://hmxudhnztqpxyvmkcaqo.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhteHVkaG56dHFweHl2bWtjYXFvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjUzNDUyMjUsImV4cCI6MjA0MDkyMTIyNX0.4rQsRsJy_0ypAqE9mVxUf8GbAWLdvx_4YVtcB1wxf50';
+        const supabaseLog = createClient(supabaseUrl, supabaseKey);
+
+        await supabaseLog.from('debug_logs').insert({
+          ride_id: tripId,
+          log_type: 'gps_tracking_started',
+          message: 'Background GPS tracking started',
+          data: { tripId, tripType, driverId, timestamp: new Date().toISOString() }
+        });
+      } catch (e) {
+        console.warn('Could not log GPS start to database:', e);
+      }
 
       return true;
     } catch (error) {
