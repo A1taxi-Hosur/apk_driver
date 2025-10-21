@@ -384,6 +384,8 @@ class TripLocationTrackerService {
       // Calculate distance
       let totalDistance = 0;
       let validSegments = 0;
+      let filteredSegments = 0;
+      let filteredDistanceKm = 0;
 
       for (let i = 1; i < points.length; i++) {
         const prev = points[i - 1];
@@ -396,10 +398,31 @@ class TripLocationTrackerService {
           curr.longitude
         );
 
-        // Filter GPS jumps (max 200m per segment)
-        if (segDist < 0.2) {
+        // Calculate time difference between points
+        const timeDiffMs = new Date(curr.recorded_at).getTime() - new Date(prev.recorded_at).getTime();
+        const timeDiffSeconds = timeDiffMs / 1000;
+
+        // Calculate implied speed (km/h)
+        const impliedSpeedKmh = (segDist / timeDiffSeconds) * 3600;
+
+        // Smart filtering based on time and speed
+        // Allow segments if:
+        // 1. Distance < 200m (normal case)
+        // 2. OR distance < 500m AND speed < 120 km/h (highway driving)
+        // 3. OR distance < 1km AND time gap > 30s (GPS throttling, but reasonable speed)
+        const isValidSegment =
+          segDist < 0.2 ||
+          (segDist < 0.5 && impliedSpeedKmh < 120) ||
+          (segDist < 1.0 && timeDiffSeconds > 30 && impliedSpeedKmh < 150);
+
+        if (isValidSegment) {
           totalDistance += segDist;
           validSegments++;
+        } else {
+          // Log filtered segments for debugging
+          filteredSegments++;
+          filteredDistanceKm += segDist;
+          console.warn(`⚠️ Filtered GPS jump: ${segDist.toFixed(3)}km in ${timeDiffSeconds.toFixed(0)}s (${impliedSpeedKmh.toFixed(0)} km/h)`);
         }
       }
 
@@ -407,8 +430,15 @@ class TripLocationTrackerService {
         totalKm: totalDistance.toFixed(3),
         points: points.length,
         segments: validSegments,
+        filteredSegments: filteredSegments,
+        filteredDistanceKm: filteredDistanceKm.toFixed(3),
         avgPerSegment: (totalDistance / validSegments).toFixed(3) + ' km'
       });
+
+      if (filteredSegments > 0) {
+        console.warn(`⚠️ ${filteredSegments} segments filtered (${filteredDistanceKm.toFixed(3)} km lost)`);
+        console.warn('⚠️ This may indicate GPS jumps or high-speed driving with throttled GPS');
+      }
 
       return {
         distanceKm: totalDistance,
