@@ -4,6 +4,7 @@ import { useAuth } from './AuthContext'
 import { FareCalculationService } from '../services/FareCalculationService'
 import { TripLocationTracker } from '../services/TripLocationTracker'
 import { notificationSoundService } from '../services/NotificationSoundService'
+import { DebugLogger } from '../utils/debugLogger'
 
 type Ride = {
   id: string
@@ -712,6 +713,14 @@ export function RideProvider({ children }: RideProviderProps) {
           method: 'Real GPS tracking with timestamps'
         })
 
+        // Save to database for later review
+        await DebugLogger.log(rideId, 'gps_calculation', 'GPS distance calculated', {
+          actualDistanceKm,
+          actualDurationMinutes,
+          gpsPointsUsed,
+          condition_check: actualDistanceKm > 0 && gpsPointsUsed >= 2
+        });
+
         console.log('🚨🚨🚨 CRITICAL: actualDistanceKm BEFORE condition check:', actualDistanceKm);
         console.log('🚨🚨🚨 CRITICAL: gpsPointsUsed:', gpsPointsUsed);
         console.log('🚨🚨🚨 CRITICAL: Condition check will be:', actualDistanceKm > 0 && gpsPointsUsed >= 2);
@@ -720,10 +729,23 @@ export function RideProvider({ children }: RideProviderProps) {
         if (actualDistanceKm > 0 && gpsPointsUsed >= 2) {
           console.log('🎯🎯🎯 GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
           console.log('🎯 Will use this value for fare calculation')
+
+          await DebugLogger.log(rideId, 'distance_decision', 'Using GPS distance', {
+            actualDistanceKm,
+            gpsPointsUsed,
+            decision: 'GPS_SUCCESS'
+          });
+
           // GPS worked perfectly - no fallback needed
         } else if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
           console.warn('⚠️ GPS returned zero distance or insufficient points')
           console.warn('⚠️ GPS tracking failed - falling back to Google Maps (straight route only)')
+
+          await DebugLogger.log(rideId, 'distance_decision', 'GPS failed - using fallback', {
+            actualDistanceKm,
+            gpsPointsUsed,
+            decision: 'FALLBACK_TO_GOOGLE_MAPS'
+          });
 
           // Fallback to Google Maps Directions API
           try {
@@ -886,6 +908,16 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('🚨 gpsPointsUsed:', gpsPointsUsed)
       console.log('🚨 About to call FareCalculationService.calculateAndStoreTripFare...')
 
+      await DebugLogger.log(rideId, 'before_fare_calculation', 'Final values before fare calculation', {
+        actualDistanceKm,
+        actualDurationMinutes,
+        gpsPointsUsed,
+        pickupLat,
+        pickupLng,
+        finalDropLat,
+        finalDropLng
+      });
+
       const fareResult = await FareCalculationService.calculateAndStoreTripFare(
         rideId,
         actualDistanceKm,
@@ -984,6 +1016,13 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Platform fee in completion data:', completionData.fareBreakdown.platform_fee)
       console.log('Total fare in completion data:', completionData.fareBreakdown.total_fare)
       console.log('=== ABOUT TO RETURN COMPLETION DATA ===')
+
+      await DebugLogger.log(rideId, 'completion_data', 'Trip completion data prepared', {
+        distance: completionData.distance,
+        duration: completionData.duration,
+        fareBreakdown_details: completionData.fareBreakdown.details,
+        total_fare: completionData.fareBreakdown.total_fare
+      });
 
       return { success: true, completionData }
 
