@@ -776,148 +776,40 @@ export function RideProvider({ children }: RideProviderProps) {
         console.log('🚨 CRITICAL: Condition check will be:', actualDistanceKm > 0 && gpsPointsUsed >= 2);
 
         // Check if GPS tracking was successful
-        if (actualDistanceKm > 0 && gpsPointsUsed >= 2) {
-          console.log('✅ [STEP 7] GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
-          console.log('✅ Will use this value for fare calculation')
-          console.log('✅ No fallback needed')
+        if (actualDistanceKm <= 0 || gpsPointsUsed < 2) {
+          console.error('❌ [STEP 7] GPS tracking failed!')
+          console.error('❌ actualDistanceKm:', actualDistanceKm)
+          console.error('❌ gpsPointsUsed:', gpsPointsUsed)
+          console.error('❌ Cannot complete trip without GPS data')
 
-          await DebugLogger.log(rideId, 'distance_decision', 'Using GPS distance', {
+          await DebugLogger.log(rideId, 'distance_error', 'GPS tracking failed', {
             actualDistanceKm,
             gpsPointsUsed,
-            decision: 'GPS_SUCCESS'
+            error: 'Insufficient GPS data'
           });
 
-          // GPS worked perfectly - no fallback needed
-        } else if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
-          console.warn('❌ [STEP 7-FALLBACK] GPS returned zero distance or insufficient points')
-          console.warn('❌ actualDistanceKm:', actualDistanceKm)
-          console.warn('❌ gpsPointsUsed:', gpsPointsUsed)
-          console.warn('❌ GPS tracking failed - falling back to Google Maps (straight route only)')
-
-          await DebugLogger.log(rideId, 'distance_decision', 'GPS failed - using fallback', {
-            actualDistanceKm,
-            gpsPointsUsed,
-            decision: 'FALLBACK_TO_GOOGLE_MAPS',
-            reason: actualDistanceKm === 0 ? 'Zero distance' : 'Insufficient GPS points'
-          });
-
-          // Fallback to Google Maps Directions API
-          try {
-            const { googleMapsService } = await import('../services/googleMapsService')
-
-            const routeData = await googleMapsService.getDirections(
-              {
-                latitude: pickupLat,
-                longitude: pickupLng
-              },
-              {
-                latitude: destLat,
-                longitude: destLng
-              }
-            )
-
-            if (routeData && routeData.distance > 0) {
-              actualDistanceKm = routeData.distance
-              actualDurationMinutes = Math.round(routeData.duration / 60) || 1 // Minimum 1 minute
-
-              console.log('✅ Google Maps fallback distance:', {
-                distanceKm: actualDistanceKm.toFixed(2),
-                durationMinutes: actualDurationMinutes,
-                method: 'Google Maps Directions API (GPS failed)'
-              })
-            } else {
-              throw new Error('Google Maps API returned no route')
-            }
-          } catch (googleError) {
-            console.warn('⚠️ Google Maps also failed, using minimal distance:', googleError)
-
-            // Only use minimal distance if Google Maps also fails
-            actualDistanceKm = 0.1 // 100 meters minimum
-            actualDurationMinutes = 1 // 1 minute minimum
-
-            console.log('✅ Using minimal distance as last resort:', {
-              distanceKm: actualDistanceKm,
-              durationMinutes: actualDurationMinutes,
-              reason: 'Both GPS and Google Maps failed'
-            })
-          }
+          setError('GPS tracking failed. Cannot calculate fare without GPS data. Please try again.')
+          return { success: false }
         }
+
+        console.log('✅ [STEP 7] GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
+        console.log('✅ Will use this value for fare calculation')
+
+        await DebugLogger.log(rideId, 'distance_decision', 'Using GPS distance', {
+          actualDistanceKm,
+          gpsPointsUsed,
+          decision: 'GPS_SUCCESS'
+        });
       } catch (error) {
-        console.warn('⚠️ GPS distance calculation failed:', error)
+        console.error('❌ GPS distance calculation failed:', error)
 
-        // Check if error is due to driver not moving
-        const errorMessage = error instanceof Error ? error.message : String(error)
-        if (errorMessage.includes('Driver did not move') || errorMessage.includes('displacement')) {
-          console.warn('⚠️ DRIVER DID NOT MOVE - Using minimal distance')
+        await DebugLogger.log(rideId, 'gps_calculation_error', 'GPS calculation threw error', {
+          error: error instanceof Error ? error.message : String(error),
+          gpsPointsUsed
+        });
 
-          // Driver hasn't moved - use minimal distance
-          actualDistanceKm = 0.1 // 100 meters minimum
-          actualDurationMinutes = 1 // 1 minute minimum
-
-          console.log('✅ Stationary driver detected:', {
-            distanceKm: actualDistanceKm,
-            durationMinutes: actualDurationMinutes,
-            reason: 'Driver did not move significantly'
-          })
-
-          // DO NOT throw - continue with minimal distance
-        } else {
-          console.warn('⚠️ GPS tracking error, attempting Google Maps fallback:', error)
-
-          // Fallback to Google Maps Directions API
-        try {
-          const { googleMapsService } = await import('../services/googleMapsService')
-
-          const routeData = await googleMapsService.getDirections(
-            {
-              latitude: pickupLat,
-              longitude: pickupLng
-            },
-            {
-              latitude: destLat,
-              longitude: destLng
-            }
-          )
-
-          if (routeData && routeData.distance > 0) {
-            actualDistanceKm = routeData.distance
-            actualDurationMinutes = Math.round(routeData.duration / 60)
-
-            console.log('✅ Google Maps fallback distance:', {
-              distanceKm: actualDistanceKm.toFixed(2),
-              durationMinutes: actualDurationMinutes,
-              method: 'Google Maps Directions API'
-            })
-          } else {
-            throw new Error('Google Maps API returned no route')
-          }
-        } catch (googleError) {
-          console.warn('⚠️ Google Maps fallback also failed, using straight-line distance:', googleError)
-
-          // For outstation/scheduled trips, use scheduled_time; otherwise use created_at
-          const startTimeString = ride.booking_type === 'outstation' && ride.scheduled_time
-            ? ride.scheduled_time
-            : ride.created_at
-          const rideStartTime = startTimeString ? new Date(startTimeString).getTime() : Date.now()
-          const currentTime = Date.now()
-          actualDurationMinutes = Math.round((currentTime - rideStartTime) / (1000 * 60))
-
-          const R = 6371
-          const dLat = (destLat - pickupLat) * Math.PI / 180
-          const dLon = (destLng - pickupLng) * Math.PI / 180
-          const a =
-            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-            Math.cos(pickupLat * Math.PI / 180) * Math.cos(destLat * Math.PI / 180) *
-            Math.sin(dLon / 2) * Math.sin(dLon / 2)
-          const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-          actualDistanceKm = R * c
-
-          console.log('⚠️ Using fallback straight-line calculation:', {
-            actualDistanceKm: actualDistanceKm.toFixed(2),
-            actualDurationMinutes
-          })
-          }
-        }
+        setError('GPS tracking failed. Cannot complete trip without GPS data.')
+        return { success: false }
       }
 
       // Get final GPS drop-off location (last recorded point)
