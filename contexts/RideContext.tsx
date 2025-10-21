@@ -689,22 +689,28 @@ export function RideProvider({ children }: RideProviderProps) {
 
       try {
         // Calculate distance from GPS breadcrumbs
+        console.log('🔍 [STEP 1] Calling TripLocationTracker.calculateTripDistance...')
         const gpsDistance = await TripLocationTracker.calculateTripDistance(rideId, 'regular')
         const gpsDistanceRaw = gpsDistance.distanceKm
         gpsPointsUsed = gpsDistance.pointsUsed
 
-        console.log('📍 GPS distance result (raw):', {
+        console.log('📍 [STEP 2] GPS distance result (raw):', {
           distanceKm: gpsDistanceRaw,
-          pointsUsed: gpsPointsUsed
+          pointsUsed: gpsPointsUsed,
+          valueType: typeof gpsDistanceRaw,
+          isZero: gpsDistanceRaw === 0,
+          isGreaterThanZero: gpsDistanceRaw > 0
         })
 
         actualDistanceKm = gpsDistanceRaw
+
+        console.log('📍 [STEP 3] actualDistanceKm assigned:', actualDistanceKm)
 
         // Calculate duration from GPS timestamps (actual travel time)
         const gpsDuration = await TripLocationTracker.calculateTripDuration(rideId, 'regular')
         actualDurationMinutes = gpsDuration.durationMinutes || 1 // Minimum 1 minute
 
-        console.log('✅ GPS-tracked distance and duration:', {
+        console.log('✅ [STEP 4] GPS-tracked distance and duration:', {
           distanceKm: actualDistanceKm.toFixed(2),
           durationMinutes: actualDurationMinutes,
           durationHours: (actualDurationMinutes / 60).toFixed(2),
@@ -713,22 +719,67 @@ export function RideProvider({ children }: RideProviderProps) {
           method: 'Real GPS tracking with timestamps'
         })
 
+        // Calculate straight-line distance for comparison
+        const R = 6371 // Earth radius in km
+        const dLat = (destLat - pickupLat) * Math.PI / 180
+        const dLon = (destLng - pickupLng) * Math.PI / 180
+        const a =
+          Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(pickupLat * Math.PI / 180) * Math.cos(destLat * Math.PI / 180) *
+          Math.sin(dLon / 2) * Math.sin(dLon / 2)
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+        const straightLineDistanceKm = R * c
+
+        console.log('📏 [STEP 5] Distance comparison:', {
+          gpsDistance: actualDistanceKm.toFixed(2) + ' km',
+          straightLineDistance: straightLineDistanceKm.toFixed(2) + ' km',
+          ratio: (actualDistanceKm / straightLineDistanceKm).toFixed(2),
+          percentOfStraightLine: ((actualDistanceKm / straightLineDistanceKm) * 100).toFixed(1) + '%'
+        })
+
+        // Validate GPS distance against straight-line distance
+        if (actualDistanceKm < straightLineDistanceKm * 0.5) {
+          console.warn('⚠️ [VALIDATION WARNING] GPS distance is suspiciously low!');
+          console.warn('⚠️ GPS distance (' + actualDistanceKm.toFixed(2) + ' km) is less than 50% of straight-line distance (' + straightLineDistanceKm.toFixed(2) + ' km)');
+          console.warn('⚠️ This suggests GPS tracking may have stopped mid-trip or filtering is too aggressive');
+
+          await DebugLogger.log(rideId, 'distance_validation_warning', 'GPS distance unusually low', {
+            gpsDistanceKm: actualDistanceKm,
+            straightLineDistanceKm: straightLineDistanceKm,
+            ratio: actualDistanceKm / straightLineDistanceKm,
+            gpsPointsUsed
+          });
+        } else if (actualDistanceKm > straightLineDistanceKm * 3) {
+          console.warn('⚠️ [VALIDATION WARNING] GPS distance seems too high!');
+          console.warn('⚠️ GPS distance (' + actualDistanceKm.toFixed(2) + ' km) is more than 3x straight-line distance (' + straightLineDistanceKm.toFixed(2) + ' km)');
+          console.warn('⚠️ This suggests GPS jumps or erratic tracking');
+
+          await DebugLogger.log(rideId, 'distance_validation_warning', 'GPS distance unusually high', {
+            gpsDistanceKm: actualDistanceKm,
+            straightLineDistanceKm: straightLineDistanceKm,
+            ratio: actualDistanceKm / straightLineDistanceKm,
+            gpsPointsUsed
+          });
+        }
+
         // Save to database for later review
         await DebugLogger.log(rideId, 'gps_calculation', 'GPS distance calculated', {
           actualDistanceKm,
           actualDurationMinutes,
           gpsPointsUsed,
+          straightLineDistanceKm,
           condition_check: actualDistanceKm > 0 && gpsPointsUsed >= 2
         });
 
-        console.log('🚨🚨🚨 CRITICAL: actualDistanceKm BEFORE condition check:', actualDistanceKm);
-        console.log('🚨🚨🚨 CRITICAL: gpsPointsUsed:', gpsPointsUsed);
-        console.log('🚨🚨🚨 CRITICAL: Condition check will be:', actualDistanceKm > 0 && gpsPointsUsed >= 2);
+        console.log('🚨 [STEP 6] CRITICAL: actualDistanceKm BEFORE condition check:', actualDistanceKm);
+        console.log('🚨 CRITICAL: gpsPointsUsed:', gpsPointsUsed);
+        console.log('🚨 CRITICAL: Condition check will be:', actualDistanceKm > 0 && gpsPointsUsed >= 2);
 
         // Check if GPS tracking was successful
         if (actualDistanceKm > 0 && gpsPointsUsed >= 2) {
-          console.log('🎯🎯🎯 GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
-          console.log('🎯 Will use this value for fare calculation')
+          console.log('✅ [STEP 7] GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
+          console.log('✅ Will use this value for fare calculation')
+          console.log('✅ No fallback needed')
 
           await DebugLogger.log(rideId, 'distance_decision', 'Using GPS distance', {
             actualDistanceKm,
@@ -738,13 +789,16 @@ export function RideProvider({ children }: RideProviderProps) {
 
           // GPS worked perfectly - no fallback needed
         } else if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
-          console.warn('⚠️ GPS returned zero distance or insufficient points')
-          console.warn('⚠️ GPS tracking failed - falling back to Google Maps (straight route only)')
+          console.warn('❌ [STEP 7-FALLBACK] GPS returned zero distance or insufficient points')
+          console.warn('❌ actualDistanceKm:', actualDistanceKm)
+          console.warn('❌ gpsPointsUsed:', gpsPointsUsed)
+          console.warn('❌ GPS tracking failed - falling back to Google Maps (straight route only)')
 
           await DebugLogger.log(rideId, 'distance_decision', 'GPS failed - using fallback', {
             actualDistanceKm,
             gpsPointsUsed,
-            decision: 'FALLBACK_TO_GOOGLE_MAPS'
+            decision: 'FALLBACK_TO_GOOGLE_MAPS',
+            reason: actualDistanceKm === 0 ? 'Zero distance' : 'Insufficient GPS points'
           });
 
           // Fallback to Google Maps Directions API
@@ -902,11 +956,11 @@ export function RideProvider({ children }: RideProviderProps) {
       })
 
       // Calculate fare using FareCalculationService with GPS drop-off location
-      console.log('🚨🚨🚨 FINAL VALUES BEFORE FARE CALCULATION 🚨🚨🚨')
-      console.log('🚨 actualDistanceKm:', actualDistanceKm)
-      console.log('🚨 actualDurationMinutes:', actualDurationMinutes)
-      console.log('🚨 gpsPointsUsed:', gpsPointsUsed)
-      console.log('🚨 About to call FareCalculationService.calculateAndStoreTripFare...')
+      console.log('[STEP 9] FINAL VALUES BEFORE FARE CALCULATION')
+      console.log('[STEP 9] actualDistanceKm:', actualDistanceKm, 'km (TYPE:', typeof actualDistanceKm + ')')
+      console.log('[STEP 9] actualDurationMinutes:', actualDurationMinutes, 'minutes')
+      console.log('[STEP 9] gpsPointsUsed:', gpsPointsUsed, 'points')
+      console.log('[STEP 9] About to call FareCalculationService.calculateAndStoreTripFare...')
 
       await DebugLogger.log(rideId, 'before_fare_calculation', 'Final values before fare calculation', {
         actualDistanceKm,
@@ -940,21 +994,31 @@ export function RideProvider({ children }: RideProviderProps) {
         }
       )
 
-      console.log('🚨 FareCalculationService result:', fareResult)
+      console.log('[STEP 10] FareCalculationService result:', fareResult)
 
       if (!fareResult.success) {
-        console.error('❌ Fare calculation failed:', fareResult.error)
+        console.error('[STEP 10] Fare calculation failed:', fareResult.error)
         setError('Failed to calculate fare: ' + fareResult.error)
         return { success: false }
       }
 
       if (!fareResult.fareBreakdown) {
-        console.error('❌ No fare breakdown returned')
+        console.error('[STEP 10] No fare breakdown returned')
         setError('No fare breakdown available')
         return { success: false }
       }
 
-      console.log('✅ Fare calculated successfully:', fareResult.fareBreakdown)
+      console.log('[STEP 10] Fare calculated successfully!')
+      console.log('[STEP 10] Fare breakdown distance used:', fareResult.fareBreakdown.details.actual_distance_km, 'km')
+      console.log('[STEP 10] Fare breakdown duration used:', fareResult.fareBreakdown.details.actual_duration_minutes, 'minutes')
+      console.log('[STEP 10] Total fare:', fareResult.fareBreakdown.total_fare)
+
+      await DebugLogger.log(rideId, 'fare_calculated', 'Fare calculation completed', {
+        distanceUsedInFare: fareResult.fareBreakdown.details.actual_distance_km,
+        durationUsedInFare: fareResult.fareBreakdown.details.actual_duration_minutes,
+        totalFare: fareResult.fareBreakdown.total_fare,
+        distanceMatchesInput: fareResult.fareBreakdown.details.actual_distance_km === actualDistanceKm
+      });
 
       // Update ride status to completed using RPC
       const { data: completionResult, error: updateError } = await supabase
