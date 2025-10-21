@@ -1,10 +1,24 @@
 import * as Location from 'expo-location';
 import * as TaskManager from 'expo-task-manager';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { createClient } from '@supabase/supabase-js';
 import { supabase } from '../utils/supabase';
 
 const TRIP_LOCATION_TASK = 'trip-location-tracking';
 const TRIP_CONTEXT_KEY = 'active_trip_context';
+
+// Create Supabase client for background task with SERVICE ROLE KEY
+// Background tasks run in separate JS context and can't maintain auth sessions
+// Service role key bypasses RLS - needed for inserting GPS points from background
+const SUPABASE_URL = 'https://whubaypabojomdyfqxcf.supabase.co';
+const SUPABASE_SERVICE_ROLE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndodWJheXBhYm9qb21keWZxeGNmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NjcwNjAzMSwiZXhwIjoyMDcyMjgyMDMxfQ.HQA62hKrAOhylo1zLO6NdnCO9AC0Z6mipssIIM-pw4Q';
+
+const supabaseBackground = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, {
+  auth: {
+    persistSession: false,
+    autoRefreshToken: false
+  }
+});
 
 // Background task definition - MUST be at module level
 // Runs even when app is closed/backgrounded on Android
@@ -65,7 +79,7 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
 
         console.log('💾 Inserting to trip_location_history:', insertData);
 
-        const { error: insertError } = await supabase
+        const { error: insertError } = await supabaseBackground
           .from('trip_location_history')
           .insert(insertData);
 
