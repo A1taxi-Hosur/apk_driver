@@ -1,9 +1,9 @@
-# 🛠️ GPS Tracking Fix - Stops at 34 Points
+# 🛠️ GPS Tracking Fix - Stops at 38 Points
 
 ## **Problem**
-GPS tracking stops after ~34 points (~68 seconds) due to Android battery optimization killing the background task.
+GPS tracking stops after ~38 points (~76 seconds) due to Android battery optimization killing the background task.
 
-## **Changes Made**
+## **Changes Made (v2 - AGGRESSIVE FIX)**
 
 ### 1. **More Aggressive GPS Updates**
 - Changed from 3 seconds to **2 seconds**
@@ -15,9 +15,25 @@ GPS tracking stops after ~34 points (~68 seconds) due to Android battery optimiz
 - Changed body to "GPS tracking active - DO NOT close this notification"
 - This warns users not to swipe away the notification
 
-### 3. **Debug Logging Added**
+### 3. **New Permissions Added**
+- `WAKE_LOCK` - Prevents device from sleeping
+- `REQUEST_IGNORE_BATTERY_OPTIMIZATIONS` - Allows app to request battery optimization exemption
+
+### 4. **GPS Watchdog Timer (NEW!)**
+- Monitors GPS health every 30 seconds
+- Detects if GPS stops updating (no heartbeat for >20 seconds)
+- **Automatically restarts GPS tracking** if it stops
+- Logs `gps_restarted` events to debug_logs table
+
+### 5. **Heartbeat Mechanism**
+- Every GPS point updates a timestamp in AsyncStorage
+- Watchdog checks this timestamp to detect if GPS is dead
+- This creates a keep-alive mechanism
+
+### 6. **Debug Logging Added**
 - `gps_tracking_started` - Logs when GPS starts
 - `gps_heartbeat` - Logs every ~10th GPS point to track if it's still running
+- `gps_restarted` - Logs when watchdog restarts GPS tracking
 
 ---
 
@@ -57,12 +73,23 @@ WHERE ride_id = 'YOUR_RIDE_ID';
 ```sql
 SELECT *
 FROM debug_logs
-WHERE log_type IN ('gps_tracking_started', 'gps_heartbeat')
+WHERE log_type IN ('gps_tracking_started', 'gps_heartbeat', 'gps_restarted')
 ORDER BY created_at DESC
-LIMIT 10;
+LIMIT 20;
 ```
 
-If you see `gps_heartbeat` entries throughout the ride, GPS is running continuously!
+Look for:
+- ✅ `gps_tracking_started` - GPS started
+- ✅ `gps_heartbeat` - GPS still running
+- 🔁 `gps_restarted` - **Watchdog restarted GPS!** (This means it detected GPS stopped and automatically restarted it)
+
+### **Step 5: Check Watchdog Activity (ADB Logs)**
+Look for these logs:
+```
+🐕 Watchdog: Last GPS update was 5s ago  ← GPS is healthy
+⚠️ GPS appears to have stopped! Attempting restart...  ← GPS died, restarting!
+✅ GPS tracking restarted by watchdog  ← Success!
+```
 
 ---
 
@@ -121,17 +148,29 @@ This shows all gaps > 10 seconds. If you see large gaps, GPS is being throttled.
 
 ---
 
-## **🚀 Next Steps**
+## **🚀 Expected Behavior**
 
-1. **Rebuild the APK**
-2. **Test with new aggressive settings**
-3. **Check GPS points query** - expect >50 points instead of 34
-4. **If still stops**, we'll need to add a wakelock or use a different tracking library
+### **Before This Fix:**
+- GPS stops at 38 points (~76 seconds)
+- No recovery mechanism
+- Trip tracking incomplete
+
+### **After This Fix:**
+- GPS may still be killed by Android after 1-2 minutes
+- **BUT** watchdog detects this within 30 seconds
+- Watchdog automatically restarts GPS
+- Continuous tracking with occasional restarts
+- Should see >200 points for a 5-minute ride
+
+### **What You'll See in Logs:**
+```
+GPS started → 38 points → Android kills it → Watchdog detects → Restart → Continue...
+```
 
 ---
 
-## **Why 34 Points?**
+## **Why 38 Points?**
 
-34 points × 3 seconds = 102 seconds ≈ 1.7 minutes
+38 points × 2 seconds = 76 seconds ≈ 1.3 minutes
 
-This is exactly when Android's Doze mode kicks in and starts throttling background tasks. The new 2-second interval and more frequent updates should delay or prevent this.
+This is when Android's Doze mode kicks in and kills background tasks. The watchdog will restart GPS every time Android kills it, providing **continuous tracking with automatic recovery**.

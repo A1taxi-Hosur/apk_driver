@@ -6,6 +6,7 @@ import { supabase } from '../utils/supabase';
 
 const TRIP_LOCATION_TASK = 'trip-location-tracking';
 const TRIP_CONTEXT_KEY = 'active_trip_context';
+const HEARTBEAT_KEY = 'gps_heartbeat_timestamp';
 
 // Create Supabase client for background task with SERVICE ROLE KEY
 // Background tasks run in separate JS context and can't maintain auth sessions
@@ -87,6 +88,9 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
           console.error('❌ Background: Insert error:', insertError.message, insertError);
         } else {
           console.log('✅ Background: GPS point saved to database!');
+
+          // Update heartbeat timestamp to show task is alive
+          await AsyncStorage.setItem(HEARTBEAT_KEY, Date.now().toString());
 
           // Log every 10th point to track if GPS stops
           const randomCheck = Math.random() < 0.1; // 10% chance
@@ -223,6 +227,9 @@ class TripLocationTrackerService {
         console.warn('Could not log GPS start to database:', e);
       }
 
+      // Start watchdog to monitor GPS health
+      this.startWatchdog(tripId, tripType, driverId);
+
       return true;
     } catch (error) {
       console.error('❌ Start tracking error:', error);
@@ -231,11 +238,91 @@ class TripLocationTrackerService {
   }
 
   /**
+   * Watchdog timer to restart GPS if it stops
+   */
+  private watchdogInterval: NodeJS.Timeout | null = null;
+
+  private startWatchdog(tripId: string, tripType: 'regular' | 'scheduled', driverId: string): void {
+    console.log('🐕 Starting GPS watchdog');
+
+    // Check every 30 seconds
+    this.watchdogInterval = setInterval(async () => {
+      try {
+        const heartbeatTimestamp = await AsyncStorage.getItem(HEARTBEAT_KEY);
+
+        if (heartbeatTimestamp) {
+          const lastHeartbeat = parseInt(heartbeatTimestamp, 10);
+          const timeSinceLastUpdate = Date.now() - lastHeartbeat;
+          const secondsSinceUpdate = Math.floor(timeSinceLastUpdate / 1000);
+
+          console.log(`🐕 Watchdog: Last GPS update was ${secondsSinceUpdate}s ago`);
+
+          // If no update for 20 seconds, GPS might be dead - try to restart
+          if (secondsSinceUpdate > 20) {
+            console.warn('⚠️ GPS appears to have stopped! Attempting restart...');
+
+            try {
+              // Stop existing task
+              const isRegistered = await TaskManager.isTaskRegisteredAsync(TRIP_LOCATION_TASK);
+              if (isRegistered) {
+                await Location.stopLocationUpdatesAsync(TRIP_LOCATION_TASK);
+              }
+
+              // Wait a moment
+              await new Promise(resolve => setTimeout(resolve, 1000));
+
+              // Restart with same settings
+              await Location.startLocationUpdatesAsync(TRIP_LOCATION_TASK, {
+                accuracy: Location.Accuracy.BestForNavigation,
+                timeInterval: 2000,
+                distanceInterval: 3,
+                showsBackgroundLocationIndicator: true,
+                deferredUpdatesInterval: 2000,
+                foregroundService: {
+                  notificationTitle: '🚗 A1 Taxi - Trip in Progress',
+                  notificationBody: 'GPS tracking active - DO NOT close this notification',
+                  notificationColor: '#FF6B35',
+                },
+                activityType: Location.ActivityType.AutomotiveNavigation,
+                pausesUpdatesAutomatically: false,
+                mayShowUserSettingsDialog: false,
+              });
+
+              console.log('✅ GPS tracking restarted by watchdog');
+
+              // Log restart to database
+              await supabaseBackground.from('debug_logs').insert({
+                ride_id: tripId,
+                log_type: 'gps_restarted',
+                message: 'Watchdog restarted GPS tracking',
+                data: { secondsSinceUpdate, timestamp: new Date().toISOString() }
+              });
+            } catch (restartError) {
+              console.error('❌ Watchdog failed to restart GPS:', restartError);
+            }
+          }
+        } else {
+          console.warn('⚠️ Watchdog: No heartbeat found');
+        }
+      } catch (error) {
+        console.error('❌ Watchdog error:', error);
+      }
+    }, 30000); // Check every 30 seconds
+  }
+
+  /**
    * Stop background GPS tracking
    */
   async stopTripTracking(tripId: string): Promise<void> {
     try {
       console.log('=== STOPPING BACKGROUND GPS ===');
+
+      // Stop watchdog
+      if (this.watchdogInterval) {
+        clearInterval(this.watchdogInterval);
+        this.watchdogInterval = null;
+        console.log('🐕 Watchdog stopped');
+      }
 
       const isRegistered = await TaskManager.isTaskRegisteredAsync(TRIP_LOCATION_TASK);
       if (isRegistered) {
