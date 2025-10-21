@@ -777,29 +777,48 @@ export function RideProvider({ children }: RideProviderProps) {
 
         // Check if GPS tracking was successful
         if (actualDistanceKm <= 0 || gpsPointsUsed < 2) {
-          console.error('❌ [STEP 7] GPS tracking failed!')
-          console.error('❌ actualDistanceKm:', actualDistanceKm)
-          console.error('❌ gpsPointsUsed:', gpsPointsUsed)
-          console.error('❌ Cannot complete trip without GPS data')
+          console.warn('⚠️ [STEP 7] GPS returned zero or insufficient data')
+          console.warn('⚠️ actualDistanceKm:', actualDistanceKm)
+          console.warn('⚠️ gpsPointsUsed:', gpsPointsUsed)
 
-          await DebugLogger.log(rideId, 'distance_error', 'GPS tracking failed', {
+          // Special case: If driver didn't move (straight-line distance < 100m), use minimal distance
+          if (straightLineDistanceKm < 0.1) {
+            console.warn('⚠️ Driver appears stationary (< 100m displacement)')
+            actualDistanceKm = 0.1 // 100 meters minimum
+            actualDurationMinutes = 1 // 1 minute minimum
+
+            await DebugLogger.log(rideId, 'distance_decision', 'Using minimal distance for stationary driver', {
+              straightLineDistanceKm,
+              actualDistanceKm,
+              gpsPointsUsed,
+              decision: 'MINIMAL_DISTANCE'
+            });
+
+            console.log('✅ Using minimal distance for stationary driver:', actualDistanceKm, 'km')
+          } else {
+            // Driver moved significantly but GPS failed - this is an error
+            console.error('❌ GPS tracking failed but driver moved', straightLineDistanceKm.toFixed(2), 'km')
+
+            await DebugLogger.log(rideId, 'distance_error', 'GPS tracking failed', {
+              actualDistanceKm,
+              gpsPointsUsed,
+              straightLineDistanceKm,
+              error: 'GPS failed despite significant movement'
+            });
+
+            setError('GPS tracking failed. Cannot calculate fare without GPS data. Please ensure location services are enabled.')
+            return { success: false }
+          }
+        } else {
+          console.log('✅ [STEP 7] GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
+          console.log('✅ Will use this value for fare calculation')
+
+          await DebugLogger.log(rideId, 'distance_decision', 'Using GPS distance', {
             actualDistanceKm,
             gpsPointsUsed,
-            error: 'Insufficient GPS data'
+            decision: 'GPS_SUCCESS'
           });
-
-          setError('GPS tracking failed. Cannot calculate fare without GPS data. Please try again.')
-          return { success: false }
         }
-
-        console.log('✅ [STEP 7] GPS tracking successful! Using GPS distance:', actualDistanceKm, 'km')
-        console.log('✅ Will use this value for fare calculation')
-
-        await DebugLogger.log(rideId, 'distance_decision', 'Using GPS distance', {
-          actualDistanceKm,
-          gpsPointsUsed,
-          decision: 'GPS_SUCCESS'
-        });
       } catch (error) {
         console.error('❌ GPS distance calculation failed:', error)
 
