@@ -29,19 +29,25 @@ class NotificationSoundService {
 
   async playNotificationSound() {
     try {
+      console.log('🔊 playNotificationSound called - Platform:', Platform.OS);
       await this.initialize();
 
       if (Platform.OS === 'web') {
+        console.log('🌐 Web platform detected, using web notification sound');
         this.playWebNotificationSound();
         return;
       }
 
+      console.log('📱 Native platform detected');
+
       if (this.sound) {
+        console.log('🔄 Unloading previous sound');
         await this.sound.unloadAsync();
         this.sound = null;
       }
 
       try {
+        console.log('📂 Loading notification.mp3 file...');
         const { sound } = await Audio.Sound.createAsync(
           require('../assets/sounds/notification.mp3'),
           { shouldPlay: true, volume: 1.0 },
@@ -49,11 +55,13 @@ class NotificationSoundService {
         );
 
         this.sound = sound;
+        console.log('✅ Sound loaded successfully, playing now...');
         await sound.playAsync();
 
-        console.log('🔊 Playing notification sound');
+        console.log('🔊 Notification sound is playing');
       } catch (soundError) {
-        console.log('⚠️ Could not load notification.mp3, using fallback sound');
+        console.error('⚠️ Could not load notification.mp3:', soundError);
+        console.log('⚠️ Using fallback sound');
         this.playFallbackSound();
       }
     } catch (error) {
