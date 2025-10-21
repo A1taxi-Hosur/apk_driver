@@ -1,8 +1,8 @@
-# Vehicle Type Filtering Fix
+# Vehicle Type Filtering Fix - AC Requests Bug
 
-## Problem
+## Critical Bug Found and Fixed
 
-When a customer sends a ride request by selecting the **sedan** vehicle type, the driver with **sedan_ac** vehicle couldn't see the ride notification.
+The ride notification system had a **critical bug** that prevented sedan_ac, hatchback_ac, suv_ac, and suv drivers from receiving ride notifications when customers requested AC vehicles.
 
 ## Root Cause
 
