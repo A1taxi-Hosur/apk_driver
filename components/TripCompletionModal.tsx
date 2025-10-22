@@ -35,6 +35,8 @@ interface TripCompletionModalProps {
         actual_duration_minutes: number;
         per_km_rate: number;
       };
+      zone_detected?: string;
+      is_inner_zone?: boolean;
     };
     pickup_address: string;
     destination_address: string;
@@ -68,6 +70,26 @@ export default function TripCompletionModal({
   console.log('✅✅✅ RENDERING TRIP COMPLETION SCREEN - THIS SHOULD DEFINITELY SHOW!');
 
   const isRentalOrOutstationOrAirport = ['rental', 'outstation', 'airport'].includes(tripData.booking_type);
+
+  // Only show deadhead charges if drop-off is in the deadhead zone (between inner and outer ring)
+  const isInDeadheadZone =
+    tripData.fareBreakdown.zone_detected === 'Between Inner and Outer Ring' ||
+    (!tripData.fareBreakdown.is_inner_zone &&
+     tripData.fareBreakdown.zone_detected &&
+     tripData.fareBreakdown.zone_detected !== 'Beyond Outer Zone' &&
+     tripData.fareBreakdown.zone_detected !== 'Unknown' &&
+     tripData.fareBreakdown.zone_detected !== 'N/A - Stationary');
+
+  const shouldShowDeadheadCharges =
+    tripData.fareBreakdown.deadhead_charges > 0 && isInDeadheadZone;
+
+  console.log('🎯 Deadhead zone check:', {
+    zone_detected: tripData.fareBreakdown.zone_detected,
+    is_inner_zone: tripData.fareBreakdown.is_inner_zone,
+    deadhead_charges: tripData.fareBreakdown.deadhead_charges,
+    isInDeadheadZone,
+    shouldShowDeadheadCharges
+  });
 
   return (
     <View style={styles.fullScreenOverlay}>
@@ -166,7 +188,7 @@ export default function TripCompletionModal({
                   </View>
                 )}
 
-                {tripData.fareBreakdown.deadhead_charges > 0 && (
+                {shouldShowDeadheadCharges && (
                   <View style={styles.fareRow}>
                     <Text style={styles.fareLabel}>Deadhead Charges</Text>
                     <Text style={styles.fareValue}>{formatCurrency(tripData.fareBreakdown.deadhead_charges)}</Text>
@@ -217,7 +239,7 @@ export default function TripCompletionModal({
                   </View>
                 )}
 
-                {tripData.fareBreakdown.deadhead_charges > 0 && (
+                {shouldShowDeadheadCharges && (
                   <View style={styles.fareRow}>
                     <Text style={styles.fareLabel}>Deadhead Charges</Text>
                     <Text style={styles.fareValue}>{formatCurrency(tripData.fareBreakdown.deadhead_charges)}</Text>
