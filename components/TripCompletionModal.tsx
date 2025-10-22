@@ -71,24 +71,15 @@ export default function TripCompletionModal({
 
   const isRentalOrOutstationOrAirport = ['rental', 'outstation', 'airport'].includes(tripData.booking_type);
 
-  // Only show deadhead charges if drop-off is in the deadhead zone (between inner and outer ring)
-  const isInDeadheadZone =
-    tripData.fareBreakdown.zone_detected === 'Between Inner and Outer Ring' ||
-    (!tripData.fareBreakdown.is_inner_zone &&
-     tripData.fareBreakdown.zone_detected &&
-     tripData.fareBreakdown.zone_detected !== 'Beyond Outer Zone' &&
-     tripData.fareBreakdown.zone_detected !== 'Unknown' &&
-     tripData.fareBreakdown.zone_detected !== 'N/A - Stationary');
+  // Simple rule: Show deadhead charges if there's a value > 0
+  // If it's zero (inner zone or no deadhead), don't show it
+  const shouldShowDeadheadCharges = tripData.fareBreakdown.deadhead_charges > 0;
 
-  const shouldShowDeadheadCharges =
-    tripData.fareBreakdown.deadhead_charges > 0 && isInDeadheadZone;
-
-  console.log('🎯 Deadhead zone check:', {
-    zone_detected: tripData.fareBreakdown.zone_detected,
-    is_inner_zone: tripData.fareBreakdown.is_inner_zone,
+  console.log('🎯 Deadhead charges display check:', {
     deadhead_charges: tripData.fareBreakdown.deadhead_charges,
-    isInDeadheadZone,
-    shouldShowDeadheadCharges
+    shouldShowDeadheadCharges,
+    zone_detected: tripData.fareBreakdown.zone_detected,
+    is_inner_zone: tripData.fareBreakdown.is_inner_zone
   });
 
   return (
