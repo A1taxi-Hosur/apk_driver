@@ -8,6 +8,7 @@ const TRIP_LOCATION_TASK = 'trip-location-tracking';
 const TRIP_CONTEXT_KEY = 'active_trip_context';
 const HEARTBEAT_KEY = 'gps_heartbeat_timestamp';
 const LAST_GPS_POINT_KEY = 'last_gps_point';
+const GPS_POINTS_CACHE_KEY = 'gps_points_cache_'; // Prefix for trip-specific cache
 
 // Create Supabase client for background task with SERVICE ROLE KEY
 // Background tasks run in separate JS context and can't maintain auth sessions
@@ -122,6 +123,34 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
 
           // Update heartbeat timestamp to show task is alive
           await AsyncStorage.setItem(HEARTBEAT_KEY, Date.now().toString());
+        }
+
+        // ALWAYS cache GPS point locally (even if Supabase insert fails)
+        // This ensures trip completion works offline
+        try {
+          const cacheKey = `${GPS_POINTS_CACHE_KEY}${tripId}`;
+          const existingCacheJson = await AsyncStorage.getItem(cacheKey);
+          const existingCache = existingCacheJson ? JSON.parse(existingCacheJson) : [];
+
+          // Add new point to cache
+          existingCache.push({
+            latitude: location.coords.latitude,
+            longitude: location.coords.longitude,
+            accuracy: location.coords.accuracy,
+            speed: location.coords.speed,
+            recorded_at: new Date(location.timestamp).toISOString()
+          });
+
+          // Keep only last 2000 points to avoid storage issues
+          if (existingCache.length > 2000) {
+            existingCache.shift(); // Remove oldest point
+          }
+
+          await AsyncStorage.setItem(cacheKey, JSON.stringify(existingCache));
+          console.log(`💾 GPS point cached locally (${existingCache.length} total)`);
+        } catch (cacheError) {
+          console.warn('⚠️ Failed to cache GPS point locally:', cacheError);
+        }
 
           // Log every 10th point to track if GPS stops
           const randomCheck = Math.random() < 0.1; // 10% chance
@@ -386,6 +415,18 @@ class TripLocationTrackerService {
       await AsyncStorage.removeItem(TRIP_CONTEXT_KEY);
       await AsyncStorage.removeItem(LAST_GPS_POINT_KEY);
       await AsyncStorage.removeItem(HEARTBEAT_KEY);
+
+      // Clear GPS points cache (keep it for 1 hour after trip ends for completion retry)
+      // Don't delete immediately to allow offline trip completion
+      setTimeout(async () => {
+        try {
+          await AsyncStorage.removeItem(`${GPS_POINTS_CACHE_KEY}${tripId}`);
+          console.log('🗑️ GPS cache cleared (1 hour after trip end)');
+        } catch (e) {
+          console.warn('⚠️ Failed to clear GPS cache:', e);
+        }
+      }, 3600000); // 1 hour
+
       console.log('🗑️ Trip context and GPS state cleared from storage');
 
       this.isTracking.set(tripId, false);
@@ -408,6 +449,7 @@ class TripLocationTrackerService {
 
   /**
    * Calculate distance from GPS breadcrumbs
+   * Works OFFLINE by using locally cached GPS points as fallback
    */
   async calculateTripDistance(
     tripId: string,
@@ -418,49 +460,71 @@ class TripLocationTrackerService {
       console.log('Trip ID:', tripId);
       console.log('Trip Type:', tripType);
 
-      const columnName = tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id';
-      console.log('Querying column:', columnName, '=', tripId);
+      let points: any[] | null = null;
+      let dataSource = 'unknown';
 
-      // Use supabaseBackground (service role) to bypass RLS for reliable GPS data access
-      // GPS data is already validated during insertion (driver_id check)
-      // This ensures trip completion can always read historical GPS data
-      const { data: points, error } = await supabaseBackground
-        .from('trip_location_history')
-        .select('latitude, longitude, recorded_at, accuracy')
-        .eq(columnName, tripId)
-        .order('recorded_at', { ascending: true });
+      // TRY 1: Fetch from Supabase (online)
+      try {
+        const columnName = tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id';
+        console.log('📡 Trying Supabase - column:', columnName, '=', tripId);
 
-      console.log('Query result - points:', points?.length, 'error:', error);
+        const { data: supabasePoints, error } = await supabaseBackground
+          .from('trip_location_history')
+          .select('latitude, longitude, recorded_at, accuracy')
+          .eq(columnName, tripId)
+          .order('recorded_at', { ascending: true });
 
-      if (error) {
-        console.error('❌ Fetch error:', error);
-
-        await supabase.from('debug_logs').insert({
-          ride_id: tripType === 'regular' ? tripId : null,
-          scheduled_booking_id: tripType === 'scheduled' ? tripId : null,
-          log_type: 'gps_query_error',
-          message: 'Failed to fetch GPS points',
-          data: { error: error.message, tripType, columnName }
-        });
-
-        return { distanceKm: 0, pointsUsed: 0 };
+        if (!error && supabasePoints && supabasePoints.length > 0) {
+          points = supabasePoints;
+          dataSource = 'supabase';
+          console.log(`✅ Got ${points.length} points from Supabase`);
+        } else {
+          console.warn('⚠️ Supabase query failed or empty:', error?.message || 'No data');
+        }
+      } catch (supabaseError) {
+        console.warn('⚠️ Supabase unavailable (offline?):', supabaseError);
       }
 
-      if (!points || points.length < 2) {
-        console.warn(`⚠️ Only ${points?.length || 0} points`);
+      // TRY 2: Load from local cache (offline fallback)
+      if (!points || points.length === 0) {
+        console.log('📱 Trying local cache (offline mode)...');
+        try {
+          const cacheKey = `${GPS_POINTS_CACHE_KEY}${tripId}`;
+          const cacheJson = await AsyncStorage.getItem(cacheKey);
 
-        await supabase.from('debug_logs').insert({
-          ride_id: tripType === 'regular' ? tripId : null,
-          scheduled_booking_id: tripType === 'scheduled' ? tripId : null,
-          log_type: 'gps_insufficient_points',
-          message: 'Insufficient GPS points for calculation',
-          data: { pointsFound: points?.length || 0, tripType, columnName }
-        });
+          if (cacheJson) {
+            const cachedPoints = JSON.parse(cacheJson);
+            if (cachedPoints && cachedPoints.length > 0) {
+              points = cachedPoints;
+              dataSource = 'local_cache';
+              console.log(`✅ Got ${points.length} points from local cache (OFFLINE MODE)`);
+            }
+          }
+        } catch (cacheError) {
+          console.error('❌ Failed to load from cache:', cacheError);
+        }
+      }
+
+      // FAIL: No data from either source
+      if (!points || points.length < 2) {
+        console.error(`❌ Insufficient GPS data from ${dataSource}:`, points?.length || 0);
+
+        try {
+          await supabase.from('debug_logs').insert({
+            ride_id: tripType === 'regular' ? tripId : null,
+            scheduled_booking_id: tripType === 'scheduled' ? tripId : null,
+            log_type: 'gps_calculation_failed',
+            message: 'No GPS points available (tried Supabase + local cache)',
+            data: { pointsFound: points?.length || 0, tripType, dataSource }
+          });
+        } catch (e) {
+          // Silent fail - we're likely offline
+        }
 
         return { distanceKm: 0, pointsUsed: points?.length || 0 };
       }
 
-      console.log(`📍 ${points.length} GPS points`);
+      console.log(`📍 ${points.length} GPS points (source: ${dataSource})`);
       console.log(`🕐 ${points[0].recorded_at} → ${points[points.length - 1].recorded_at}`);
 
       // Calculate distance
@@ -534,20 +598,53 @@ class TripLocationTrackerService {
 
   /**
    * Calculate duration from GPS timestamps
+   * Works OFFLINE by using locally cached GPS points as fallback
    */
   async calculateTripDuration(
     tripId: string,
     tripType: 'regular' | 'scheduled'
   ): Promise<{ durationMinutes: number; pointsUsed: number }> {
     try {
-      // Use supabaseBackground (service role) to bypass RLS for reliable GPS data access
-      const { data: points, error } = await supabaseBackground
-        .from('trip_location_history')
-        .select('recorded_at')
-        .eq(tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id', tripId)
-        .order('recorded_at', { ascending: true });
+      let points: any[] | null = null;
+      let dataSource = 'unknown';
 
-      if (error || !points || points.length < 2) {
+      // TRY 1: Fetch from Supabase (online)
+      try {
+        const { data: supabasePoints, error } = await supabaseBackground
+          .from('trip_location_history')
+          .select('recorded_at')
+          .eq(tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id', tripId)
+          .order('recorded_at', { ascending: true });
+
+        if (!error && supabasePoints && supabasePoints.length > 0) {
+          points = supabasePoints;
+          dataSource = 'supabase';
+        }
+      } catch (supabaseError) {
+        console.warn('⚠️ Supabase unavailable for duration calc:', supabaseError);
+      }
+
+      // TRY 2: Load from local cache (offline fallback)
+      if (!points || points.length === 0) {
+        try {
+          const cacheKey = `${GPS_POINTS_CACHE_KEY}${tripId}`;
+          const cacheJson = await AsyncStorage.getItem(cacheKey);
+
+          if (cacheJson) {
+            const cachedPoints = JSON.parse(cacheJson);
+            if (cachedPoints && cachedPoints.length > 0) {
+              points = cachedPoints;
+              dataSource = 'local_cache';
+              console.log(`✅ Using local cache for duration (OFFLINE MODE)`);
+            }
+          }
+        } catch (cacheError) {
+          console.error('❌ Failed to load from cache for duration:', cacheError);
+        }
+      }
+
+      if (!points || points.length < 2) {
+        console.warn(`⚠️ Insufficient data for duration from ${dataSource}`);
         return { durationMinutes: 1, pointsUsed: points?.length || 0 };
       }
 
@@ -555,7 +652,7 @@ class TripLocationTrackerService {
       const last = new Date(points[points.length - 1].recorded_at).getTime();
       const minutes = Math.max(1, Math.round((last - first) / 60000));
 
-      console.log('✅ Duration:', {
+      console.log(`✅ Duration (${dataSource}):`, {
         minutes,
         hours: (minutes / 60).toFixed(2),
         points: points.length
@@ -563,6 +660,7 @@ class TripLocationTrackerService {
 
       return { durationMinutes: minutes, pointsUsed: points.length };
     } catch (error) {
+      console.error('❌ Duration calculation error:', error);
       return { durationMinutes: 1, pointsUsed: 0 };
     }
   }
