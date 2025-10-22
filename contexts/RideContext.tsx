@@ -31,6 +31,7 @@ type Ride = {
   cancellation_reason: string | null
   booking_type: 'regular' | 'rental' | 'outstation' | 'airport'
   vehicle_type: string
+  trip_type: 'one_way' | 'round_trip' | null
   rental_hours: number | null
   pickup_otp: string | null
   drop_otp: string | null
@@ -702,9 +703,27 @@ export function RideProvider({ children }: RideProviderProps) {
           isGreaterThanZero: gpsDistanceRaw > 0
         })
 
-        actualDistanceKm = gpsDistanceRaw
-
-        console.log('📍 [STEP 3] actualDistanceKm assigned:', actualDistanceKm)
+        // GPS tracks the ACTUAL distance traveled by the driver
+        // For ONE-WAY outstation trips, we need to double the distance because:
+        // - Customer only books pickup → destination
+        // - Driver must return empty (destination → Hosur)
+        // - GPS only tracks the one-way journey with customer
+        // For ROUND-TRIP or other bookings, GPS tracks the full journey already
+        if (ride.booking_type === 'outstation' && ride.trip_type === 'one_way') {
+          actualDistanceKm = gpsDistanceRaw * 2
+          console.log('📍 [STEP 3] GPS distance DOUBLED for ONE-WAY outstation trip:', {
+            oneWayGpsDistance: gpsDistanceRaw.toFixed(2),
+            totalDistanceCharged: actualDistanceKm.toFixed(2),
+            note: 'GPS distance × 2 because driver returns empty'
+          })
+        } else {
+          actualDistanceKm = gpsDistanceRaw
+          console.log('📍 [STEP 3] actualDistanceKm assigned:', {
+            distance: actualDistanceKm,
+            bookingType: ride.booking_type,
+            tripType: ride.trip_type || 'N/A'
+          })
+        }
 
         // Calculate duration from GPS timestamps (actual travel time)
         const gpsDuration = await TripLocationTracker.calculateTripDuration(rideId, 'regular')
