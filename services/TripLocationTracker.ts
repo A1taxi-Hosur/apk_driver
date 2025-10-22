@@ -179,21 +179,34 @@ class TripLocationTrackerService {
 
       console.log('🚀 Starting location updates with task:', TRIP_LOCATION_TASK);
 
-      // Start background tracking with aggressive settings to prevent Android from killing it
+      // FORCEFUL GPS tracking - will aggressively track even when app is killed
+      // Uses Android foreground service to prevent battery optimization from killing it
       await Location.startLocationUpdatesAsync(TRIP_LOCATION_TASK, {
+        // GPS ACCURACY - Use highest precision available
         accuracy: Location.Accuracy.BestForNavigation,
-        timeInterval: 2000, // Every 2 seconds (more frequent = less likely to be killed)
-        distanceInterval: 3, // Or every 3 meters
-        showsBackgroundLocationIndicator: true,
-        deferredUpdatesInterval: 2000, // Force frequent updates
+
+        // ULTRA-AGGRESSIVE TRACKING INTERVALS
+        timeInterval: 1000, // Every 1 second (MAXIMUM frequency)
+        distanceInterval: 1, // Every 1 meter (MAXIMUM sensitivity)
+
+        // PREVENT GPS FROM EVER PAUSING
+        showsBackgroundLocationIndicator: true, // Show blue bar on iOS
+        deferredUpdatesInterval: 1000, // Force updates every second
+        pausesUpdatesAutomatically: false, // NEVER EVER pause
+
+        // ANDROID FOREGROUND SERVICE - Critical for background tracking
         foregroundService: {
-          notificationTitle: '🚗 A1 Taxi - Trip in Progress',
-          notificationBody: 'GPS tracking active - DO NOT close this notification',
-          notificationColor: '#FF6B35',
+          notificationTitle: '🚗 A1 Taxi - Active Trip',
+          notificationBody: 'GPS tracking - Keep this notification visible',
+          notificationColor: '#FF0000', // RED to stand out
+          killServiceOnDestroy: false, // Don't kill when notification is swiped
         },
+
+        // ACTIVITY TYPE - Tell OS this is navigation (highest priority)
         activityType: Location.ActivityType.AutomotiveNavigation,
-        pausesUpdatesAutomatically: false, // NEVER pause
-        mayShowUserSettingsDialog: false, // Don't interrupt
+
+        // NEVER ASK USER - Don't show dialogs that could interrupt tracking
+        mayShowUserSettingsDialog: false,
       });
 
       console.log('✅ Location updates started successfully');
@@ -204,11 +217,17 @@ class TripLocationTrackerService {
 
       this.isTracking.set(tripId, true);
 
-      console.log('✅ Background GPS tracking started');
-      console.log('📱 Foreground service active');
-      console.log('🌍 Will track even when app is closed');
-      console.log('⏱️  GPS updates every 2 seconds or 3 meters');
-      console.log('⚠️  IMPORTANT: Keep the notification visible - closing it may stop GPS');
+      console.log('✅ ========================================');
+      console.log('✅ ULTRA-AGGRESSIVE GPS TRACKING STARTED');
+      console.log('✅ ========================================');
+      console.log('📱 Android Foreground Service: ACTIVE');
+      console.log('🌍 Works even when app is KILLED/CLOSED');
+      console.log('⏱️  Update Interval: EVERY 1 SECOND OR 1 METER');
+      console.log('🎯 Accuracy: BEST FOR NAVIGATION (Highest)');
+      console.log('🔴 RED notification will be visible');
+      console.log('⚠️  CRITICAL: Do NOT swipe away the notification');
+      console.log('⚠️  CRITICAL: Do NOT enable battery optimization for this app');
+      console.log('✅ ========================================');
 
       // Log to database for debugging
       try {
@@ -243,9 +262,9 @@ class TripLocationTrackerService {
   private watchdogInterval: NodeJS.Timeout | null = null;
 
   private startWatchdog(tripId: string, tripType: 'regular' | 'scheduled', driverId: string): void {
-    console.log('🐕 Starting GPS watchdog');
+    console.log('🐕 Starting GPS watchdog (checks every 10 seconds)');
 
-    // Check every 30 seconds
+    // Check every 10 seconds (more frequent monitoring)
     this.watchdogInterval = setInterval(async () => {
       try {
         const heartbeatTimestamp = await AsyncStorage.getItem(HEARTBEAT_KEY);
@@ -257,8 +276,9 @@ class TripLocationTrackerService {
 
           console.log(`🐕 Watchdog: Last GPS update was ${secondsSinceUpdate}s ago`);
 
-          // If no update for 20 seconds, GPS might be dead - try to restart
-          if (secondsSinceUpdate > 20) {
+          // If no update for 10 seconds, GPS might be dead - try to restart
+          // (We expect updates every 1 second, so 10 seconds is a serious gap)
+          if (secondsSinceUpdate > 10) {
             console.warn('⚠️ GPS appears to have stopped! Attempting restart...');
 
             try {
@@ -271,20 +291,21 @@ class TripLocationTrackerService {
               // Wait a moment
               await new Promise(resolve => setTimeout(resolve, 1000));
 
-              // Restart with same settings
+              // Restart with FORCEFUL settings
               await Location.startLocationUpdatesAsync(TRIP_LOCATION_TASK, {
                 accuracy: Location.Accuracy.BestForNavigation,
-                timeInterval: 2000,
-                distanceInterval: 3,
+                timeInterval: 1000,
+                distanceInterval: 1,
                 showsBackgroundLocationIndicator: true,
-                deferredUpdatesInterval: 2000,
+                deferredUpdatesInterval: 1000,
+                pausesUpdatesAutomatically: false,
                 foregroundService: {
-                  notificationTitle: '🚗 A1 Taxi - Trip in Progress',
-                  notificationBody: 'GPS tracking active - DO NOT close this notification',
-                  notificationColor: '#FF6B35',
+                  notificationTitle: '🚗 A1 Taxi - Active Trip',
+                  notificationBody: 'GPS tracking - Keep this notification visible',
+                  notificationColor: '#FF0000',
+                  killServiceOnDestroy: false,
                 },
                 activityType: Location.ActivityType.AutomotiveNavigation,
-                pausesUpdatesAutomatically: false,
                 mayShowUserSettingsDialog: false,
               });
 
@@ -307,7 +328,7 @@ class TripLocationTrackerService {
       } catch (error) {
         console.error('❌ Watchdog error:', error);
       }
-    }, 30000); // Check every 30 seconds
+    }, 10000); // Check every 10 seconds (more aggressive monitoring)
   }
 
   /**
