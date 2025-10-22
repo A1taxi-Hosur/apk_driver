@@ -47,6 +47,8 @@ interface CustomerTripCompletionModalProps {
         within_allowance?: boolean;
         package_name?: string;
       };
+      zone_detected?: string;
+      is_inner_zone?: boolean;
     };
     pickup_address: string;
     destination_address: string;
@@ -80,6 +82,26 @@ export default function CustomerTripCompletionModal({
   console.log('  - visible:', visible);
   console.log('  - tripData exists:', !!tripData);
   console.log('  - tripData:', JSON.stringify(tripData, null, 2));
+
+  // Only show deadhead charges if drop-off is in the deadhead zone (between inner and outer ring)
+  const isInDeadheadZone =
+    tripData?.fareBreakdown?.zone_detected === 'Between Inner and Outer Ring' ||
+    (!tripData?.fareBreakdown?.is_inner_zone &&
+     tripData?.fareBreakdown?.zone_detected &&
+     tripData?.fareBreakdown?.zone_detected !== 'Beyond Outer Zone' &&
+     tripData?.fareBreakdown?.zone_detected !== 'Unknown' &&
+     tripData?.fareBreakdown?.zone_detected !== 'N/A - Stationary');
+
+  const shouldShowDeadheadCharges =
+    tripData?.fareBreakdown?.deadhead_charges > 0 && isInDeadheadZone;
+
+  console.log('🎯 Deadhead zone check:', {
+    zone_detected: tripData?.fareBreakdown?.zone_detected,
+    is_inner_zone: tripData?.fareBreakdown?.is_inner_zone,
+    deadhead_charges: tripData?.fareBreakdown?.deadhead_charges,
+    isInDeadheadZone,
+    shouldShowDeadheadCharges
+  });
 
   const formatCurrency = (amount: number | undefined | null) => {
     if (amount == null || amount === undefined) {
@@ -336,7 +358,7 @@ export default function CustomerTripCompletionModal({
                     </View>
                   )}
 
-                  {tripData.fareBreakdown.deadhead_charges > 0 && (
+                  {shouldShowDeadheadCharges && (
                     <View style={styles.fareItem}>
                       <Text style={styles.fareLabel}>Deadhead Charges</Text>
                       <Text style={styles.fareValue}>{formatCurrency(tripData.fareBreakdown.deadhead_charges)}</Text>

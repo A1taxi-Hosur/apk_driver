@@ -977,13 +977,15 @@ export function RideProvider({ children }: RideProviderProps) {
           time_fare: fareResult.fareBreakdown.time_fare,
           surge_charges: fareResult.fareBreakdown.surge_charges,
           deadhead_charges: fareResult.fareBreakdown.deadhead_charges,
-          platform_fee: fareResult.fareBreakdown.platform_fee, // Direct assignment
+          platform_fee: fareResult.fareBreakdown.platform_fee,
           gst_on_charges: fareResult.fareBreakdown.gst_on_charges,
           gst_on_platform_fee: fareResult.fareBreakdown.gst_on_platform_fee,
           extra_km_charges: fareResult.fareBreakdown.extra_km_charges,
           driver_allowance: fareResult.fareBreakdown.driver_allowance,
-          total_fare: fareResult.fareBreakdown.total_fare, // Direct assignment
-          details: fareResult.fareBreakdown.details
+          total_fare: fareResult.fareBreakdown.total_fare,
+          details: fareResult.fareBreakdown.details,
+          zone_detected: fareResult.fareBreakdown.zone_detected,
+          is_inner_zone: fareResult.fareBreakdown.is_inner_zone
         },
         pickup_address: ride.pickup_address,
         destination_address: ride.destination_address,

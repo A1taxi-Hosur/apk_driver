@@ -683,7 +683,9 @@ export default function RidesScreen() {
             actual_distance_km: 0,
             actual_duration_minutes: 0,
             per_km_rate: 0,
-          }
+          },
+          zone_detected: undefined,
+          is_inner_zone: undefined
         },
         pickup_address: '',
         destination_address: '',
