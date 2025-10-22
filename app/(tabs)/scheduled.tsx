@@ -341,15 +341,27 @@ export default function ScheduledScreen() {
         });
 
         // GPS tracks the ACTUAL distance traveled by the driver
-        // Whether it's one-way, round trip, with detours, or multiple stops
-        // GPS breadcrumb tracking captures the real distance
-        actualDistanceKm = gpsDistanceRaw;
-
-        console.log('✅ GPS-tracked distance for scheduled trip:', {
-          distanceKm: actualDistanceKm.toFixed(2),
-          bookingType: currentBooking.booking_type,
-          note: 'Actual GPS distance traveled (includes all movements, stops, detours)'
-        });
+        // For ONE-WAY outstation trips, we need to double the distance because:
+        // - Customer only books pickup → destination
+        // - Driver must return empty (destination → Hosur)
+        // - GPS only tracks the one-way journey with customer
+        // For ROUND-TRIP or other bookings, GPS tracks the full journey already
+        if (currentBooking.booking_type === 'outstation' && currentBooking.trip_type === 'one_way') {
+          actualDistanceKm = gpsDistanceRaw * 2;
+          console.log('✅ GPS-tracked distance for ONE-WAY outstation trip (doubled):', {
+            oneWayGpsDistance: gpsDistanceRaw.toFixed(2),
+            totalDistanceCharged: actualDistanceKm.toFixed(2),
+            note: 'GPS distance × 2 because driver returns empty'
+          });
+        } else {
+          actualDistanceKm = gpsDistanceRaw;
+          console.log('✅ GPS-tracked distance for scheduled trip:', {
+            distanceKm: actualDistanceKm.toFixed(2),
+            bookingType: currentBooking.booking_type,
+            tripType: currentBooking.trip_type || 'N/A',
+            note: 'Actual GPS distance traveled (includes all movements, stops, detours)'
+          });
+        }
 
         // Calculate duration from GPS tracking data
         const gpsDuration = await TripLocationTracker.calculateTripDuration(
