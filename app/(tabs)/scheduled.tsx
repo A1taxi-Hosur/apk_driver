@@ -375,182 +375,48 @@ export default function ScheduledScreen() {
         // Check if GPS tracking was successful
         if (actualDistanceKm > 0 && gpsPointsUsed >= 2) {
           console.log('🎯 GPS tracking successful! Using GPS distance (handles multiple stops, loops, etc.)');
-          // GPS worked perfectly - no fallback needed
-        } else if (actualDistanceKm === 0 || gpsPointsUsed < 2) {
-          console.warn('⚠️ GPS returned zero distance or insufficient points');
-          console.warn('⚠️ GPS tracking failed - falling back to Google Maps (straight route only)');
+          // GPS worked perfectly - use it
+        } else {
+          console.error('❌ GPS tracking failed for scheduled trip');
+          console.error('❌ GPS returned:', {
+            distanceKm: actualDistanceKm,
+            pointsUsed: gpsPointsUsed
+          });
 
-          // Fallback to Google Maps Directions API
-          try {
-            const { googleMapsService } = await import('../../services/googleMapsService');
-
-            const routeData = await googleMapsService.getDirections(
-              {
-                latitude: currentBooking.pickup_latitude,
-                longitude: currentBooking.pickup_longitude
-              },
-              {
-                latitude: currentBooking.destination_latitude,
-                longitude: currentBooking.destination_longitude
-              }
-            );
-
-            if (routeData && routeData.distance > 0) {
-              const oneWayDistance = routeData.distance;
-
-              // For outstation trips, double for round trip
-              if (currentBooking.booking_type === 'outstation') {
-                actualDistanceKm = oneWayDistance * 2;
-                actualDurationMinutes = Math.round(routeData.duration / 60) || 1;
-                console.log('✅ Google Maps fallback (outstation):', {
-                  oneWayDistance: oneWayDistance.toFixed(2),
-                  roundTripDistance: actualDistanceKm.toFixed(2),
-                  durationMinutes: actualDurationMinutes,
-                  method: 'Google Maps Directions API (GPS failed)',
-                  note: 'Distance × 2 for round trip'
-                });
-              } else {
-                actualDistanceKm = oneWayDistance;
-                actualDurationMinutes = Math.round(routeData.duration / 60) || 1;
-                console.log('✅ Google Maps fallback (rental/airport):', {
-                  distanceKm: actualDistanceKm.toFixed(2),
-                  durationMinutes: actualDurationMinutes,
-                  method: 'Google Maps Directions API (GPS failed)'
-                });
-              }
-            } else {
-              throw new Error('Google Maps API returned no route');
-            }
-          } catch (googleError) {
-            console.warn('⚠️ Google Maps also failed, using minimal distance:', googleError);
-
-            // Only use minimal distance if Google Maps also fails
-            actualDistanceKm = 0.1; // 100 meters minimum
-            actualDurationMinutes = 1; // 1 minute minimum
-
-            console.log('✅ Using minimal distance as last resort:', {
-              distanceKm: actualDistanceKm,
-              durationMinutes: actualDurationMinutes,
-              reason: 'Both GPS and Google Maps failed'
-            });
-          }
+          Alert.alert(
+            'GPS Tracking Error',
+            'GPS tracking failed. Cannot complete trip without accurate GPS data. Please ensure location services are enabled and try again.',
+            [{ text: 'OK' }]
+          );
+          return;
         }
       } catch (error) {
-        console.warn('⚠️ GPS distance calculation failed:', error);
+        console.error('❌ GPS distance calculation exception:', error);
 
-        // Check if error is due to driver not moving
+        // Check if error is due to driver not moving (stationary)
         const errorMessage = error instanceof Error ? error.message : String(error);
         if (errorMessage.includes('Driver did not move') || errorMessage.includes('displacement')) {
-          console.warn('⚠️ DRIVER DID NOT MOVE - Using minimal distance');
+          console.warn('⚠️ Driver appears stationary - using minimal distance');
 
-          // Driver hasn't moved - use minimal distance
+          // Driver hasn't moved significantly - use minimal distance
           actualDistanceKm = 0.1; // 100 meters minimum
           actualDurationMinutes = 1; // 1 minute minimum
 
-          console.log('✅ Stationary driver detected:', {
+          console.log('✅ Stationary driver handled:', {
             distanceKm: actualDistanceKm,
             durationMinutes: actualDurationMinutes,
             reason: 'Driver did not move significantly'
           });
-
-          // DO NOT fallback to Google Maps - use minimal distance
         } else {
-          console.warn('⚠️ GPS tracking error, attempting Google Maps fallback:', error);
+          // Real GPS error - cannot complete trip
+          console.error('❌ GPS tracking failed:', error);
 
-        // Fallback to Google Maps Directions API
-        try {
-          const { googleMapsService } = await import('../../services/googleMapsService');
-
-          const routeData = await googleMapsService.getDirections(
-            {
-              latitude: currentBooking.pickup_latitude,
-              longitude: currentBooking.pickup_longitude
-            },
-            {
-              latitude: currentBooking.destination_latitude,
-              longitude: currentBooking.destination_longitude
-            }
+          Alert.alert(
+            'GPS Tracking Error',
+            'GPS tracking failed. Cannot complete trip without accurate GPS data. Please ensure location services are enabled and try again.',
+            [{ text: 'OK' }]
           );
-
-          if (routeData && routeData.distance > 0) {
-            const oneWayDistance = routeData.distance;
-
-            // For outstation trips, always double for round trip (up and down)
-            if (currentBooking.booking_type === 'outstation') {
-              actualDistanceKm = oneWayDistance * 2;
-              console.log('✅ Using Google Maps distance (outstation):', {
-                oneWayDistance: oneWayDistance.toFixed(2),
-                roundTripDistance: actualDistanceKm.toFixed(2),
-                note: 'Distance × 2 for round trip (outstation)'
-              });
-            } else {
-              actualDistanceKm = oneWayDistance;
-              console.log('✅ Using Google Maps distance (rental):', {
-                distanceKm: actualDistanceKm.toFixed(2),
-                note: 'Distance not doubled (rental)'
-              });
-            }
-          } else {
-            throw new Error('Google Maps returned invalid distance');
-          }
-        } catch (googleMapsError) {
-          console.warn('⚠️ Google Maps fallback failed, using straight-line distance:', googleMapsError);
-
-          // Last resort: straight-line distance with 1.3x multiplier for road routing
-          const pickupLat = currentBooking.pickup_latitude;
-          const pickupLng = currentBooking.pickup_longitude;
-          const destLat = currentBooking.destination_latitude;
-          const destLng = currentBooking.destination_longitude;
-
-          const R = 6371;
-          const dLat = (destLat - pickupLat) * Math.PI / 180;
-          const dLon = (destLng - pickupLng) * Math.PI / 180;
-          const a =
-            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-            Math.cos(pickupLat * Math.PI / 180) * Math.cos(destLat * Math.PI / 180) *
-            Math.sin(dLon / 2) * Math.sin(dLon / 2);
-          const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-          const oneWayDistance = R * c * 1.3; // Apply 1.3x multiplier for realistic road distance
-
-          // For outstation trips, always double for round trip
-          if (currentBooking.booking_type === 'outstation') {
-            actualDistanceKm = oneWayDistance * 2;
-            console.log('⚠️ Using straight-line distance (outstation):', {
-              oneWayDistance: oneWayDistance.toFixed(2),
-              roundTripDistance: actualDistanceKm.toFixed(2),
-              note: 'Straight-line × 1.3 (roads) × 2 (round trip)'
-            });
-          } else {
-            actualDistanceKm = oneWayDistance;
-            console.log('⚠️ Using straight-line distance (rental):', {
-              distanceKm: actualDistanceKm.toFixed(2),
-              note: 'Straight-line × 1.3 (roads), not doubled'
-            });
-          }
-
-          // Calculate duration from GPS tracking data for fallback scenarios
-          try {
-            const gpsDuration = await TripLocationTracker.calculateTripDuration(
-              currentBooking.id,
-              'scheduled'
-            );
-
-            if (gpsDuration.durationMinutes > 0) {
-              actualDurationMinutes = gpsDuration.durationMinutes;
-              console.log('✅ Using GPS-tracked duration:', actualDurationMinutes);
-            } else {
-              throw new Error('No GPS duration available');
-            }
-          } catch (durationError) {
-            // Fallback: calculate from scheduled time
-            const startTime = currentBooking.scheduled_time
-              ? new Date(currentBooking.scheduled_time).getTime()
-              : new Date(currentBooking.created_at).getTime();
-            const currentTime = Date.now();
-            actualDurationMinutes = Math.round((currentTime - startTime) / (1000 * 60));
-            console.log('⚠️ Using time-based duration (fallback):', actualDurationMinutes);
-          }
-        }
+          return;
         }
       }
 
