@@ -41,8 +41,13 @@ class NotificationSoundService {
       console.log('📱 Native platform detected');
 
       if (this.sound) {
-        console.log('🔄 Unloading previous sound');
-        await this.sound.unloadAsync();
+        console.log('🔄 Stopping and unloading previous sound');
+        try {
+          await this.sound.stopAsync();
+          await this.sound.unloadAsync();
+        } catch (cleanupError) {
+          console.log('⚠️ Error during sound cleanup:', cleanupError);
+        }
         this.sound = null;
       }
 
@@ -50,7 +55,7 @@ class NotificationSoundService {
         console.log('📂 Loading notification.mp3 file...');
         const { sound } = await Audio.Sound.createAsync(
           require('../assets/sounds/notification.mp3'),
-          { shouldPlay: true, volume: 1.0 },
+          { shouldPlay: false, volume: 1.0 },
           this.onPlaybackStatusUpdate
         );
 
@@ -155,9 +160,18 @@ class NotificationSoundService {
     ]);
   }
 
-  private onPlaybackStatusUpdate = (status: any) => {
+  private onPlaybackStatusUpdate = async (status: any) => {
     if (status.didJustFinish) {
       console.log('✅ Notification sound finished playing');
+      if (this.sound) {
+        try {
+          await this.sound.unloadAsync();
+          this.sound = null;
+          console.log('✅ Sound unloaded after playback');
+        } catch (error) {
+          console.error('❌ Error unloading sound after playback:', error);
+        }
+      }
     }
     if (status.error) {
       console.error('❌ Playback error:', status.error);
@@ -167,6 +181,11 @@ class NotificationSoundService {
   async cleanup() {
     try {
       if (this.sound) {
+        try {
+          await this.sound.stopAsync();
+        } catch (stopError) {
+          console.log('⚠️ Error stopping sound during cleanup:', stopError);
+        }
         await this.sound.unloadAsync();
         this.sound = null;
       }
