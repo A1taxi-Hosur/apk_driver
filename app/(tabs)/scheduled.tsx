@@ -340,21 +340,16 @@ export default function ScheduledScreen() {
           pointsUsed: gpsPointsUsed
         });
 
-        // For outstation trips, GPS tracks one-way, so multiply by 2 for round trip
-        if (currentBooking.booking_type === 'outstation') {
-          actualDistanceKm = gpsDistanceRaw * 2;
-          console.log('✅ GPS-tracked distance for outstation (doubled):', {
-            oneWayDistance: gpsDistanceRaw.toFixed(2),
-            roundTripDistance: actualDistanceKm.toFixed(2),
-            note: 'GPS distance × 2 for round trip'
-          });
-        } else {
-          actualDistanceKm = gpsDistanceRaw;
-          console.log('✅ GPS-tracked distance for rental/airport:', {
-            distanceKm: actualDistanceKm.toFixed(2),
-            note: 'GPS distance (not doubled)'
-          });
-        }
+        // GPS tracks the ACTUAL distance traveled by the driver
+        // Whether it's one-way, round trip, with detours, or multiple stops
+        // GPS breadcrumb tracking captures the real distance
+        actualDistanceKm = gpsDistanceRaw;
+
+        console.log('✅ GPS-tracked distance for scheduled trip:', {
+          distanceKm: actualDistanceKm.toFixed(2),
+          bookingType: currentBooking.booking_type,
+          note: 'Actual GPS distance traveled (includes all movements, stops, detours)'
+        });
 
         // Calculate duration from GPS tracking data
         const gpsDuration = await TripLocationTracker.calculateTripDuration(
