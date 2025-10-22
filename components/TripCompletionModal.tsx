@@ -200,6 +200,13 @@ export default function TripCompletionModal({
                   </View>
                 )}
 
+                {tripData.fareBreakdown.gst_on_platform_fee > 0 && (
+                  <View style={styles.fareRow}>
+                    <Text style={styles.fareLabel}>GST on Platform Fee</Text>
+                    <Text style={styles.fareValue}>{formatCurrency(tripData.fareBreakdown.gst_on_platform_fee)}</Text>
+                  </View>
+                )}
+
                 <View style={styles.separator} />
 
                 <View style={styles.totalRow}>
