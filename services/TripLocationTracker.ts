@@ -7,6 +7,7 @@ import { supabase } from '../utils/supabase';
 const TRIP_LOCATION_TASK = 'trip-location-tracking';
 const TRIP_CONTEXT_KEY = 'active_trip_context';
 const HEARTBEAT_KEY = 'gps_heartbeat_timestamp';
+const LAST_GPS_POINT_KEY = 'last_gps_point';
 
 // Create Supabase client for background task with SERVICE ROLE KEY
 // Background tasks run in separate JS context and can't maintain auth sessions
@@ -65,6 +66,28 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
           timestamp: new Date(location.timestamp).toISOString(),
         });
 
+        // Check for duplicate GPS point to prevent database spam
+        const lastPointJson = await AsyncStorage.getItem(LAST_GPS_POINT_KEY);
+        const currentPointKey = `${location.coords.latitude}_${location.coords.longitude}_${location.timestamp}`;
+
+        if (lastPointJson) {
+          const lastPoint = JSON.parse(lastPointJson);
+          // Skip if exact same coordinates and timestamp (duplicate)
+          if (lastPoint.key === currentPointKey) {
+            console.log('⚠️ Background: Skipping duplicate GPS point');
+            return;
+          }
+
+          // Skip if coordinates are identical and less than 2 seconds apart
+          const timeDiff = Math.abs(location.timestamp - lastPoint.timestamp);
+          if (lastPoint.lat === location.coords.latitude &&
+              lastPoint.lng === location.coords.longitude &&
+              timeDiff < 2000) {
+            console.log('⚠️ Background: Skipping duplicate GPS point (same coords, < 2s)');
+            return;
+          }
+        }
+
         // Save to database immediately
         const insertData = {
           [tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id']: tripId,
@@ -88,6 +111,14 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
           console.error('❌ Background: Insert error:', insertError.message, insertError);
         } else {
           console.log('✅ Background: GPS point saved to database!');
+
+          // Store last GPS point to prevent duplicates
+          await AsyncStorage.setItem(LAST_GPS_POINT_KEY, JSON.stringify({
+            key: currentPointKey,
+            lat: location.coords.latitude,
+            lng: location.coords.longitude,
+            timestamp: location.timestamp
+          }));
 
           // Update heartbeat timestamp to show task is alive
           await AsyncStorage.setItem(HEARTBEAT_KEY, Date.now().toString());
@@ -351,9 +382,11 @@ class TripLocationTrackerService {
         console.log('✅ Background task stopped');
       }
 
-      // Clear trip context from storage
+      // Clear trip context and last GPS point from storage
       await AsyncStorage.removeItem(TRIP_CONTEXT_KEY);
-      console.log('🗑️ Trip context cleared from storage');
+      await AsyncStorage.removeItem(LAST_GPS_POINT_KEY);
+      await AsyncStorage.removeItem(HEARTBEAT_KEY);
+      console.log('🗑️ Trip context and GPS state cleared from storage');
 
       this.isTracking.set(tripId, false);
 
