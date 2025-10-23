@@ -20,6 +20,7 @@ import { calculateDistance, openGoogleMapsNavigation } from '../../utils/maps';
 import RideRequestModal from '../../components/RideRequestModal';
 import OTPModal from '../../components/OTPModal';
 import MapView from '../../components/MapView';
+import { notificationSoundService } from '../../services/NotificationSoundService';
 import TripCompletionModal from '../../components/TripCompletionModal';
 import { BackgroundLocationService } from '../../services/BackgroundLocationService';
 
@@ -644,6 +645,8 @@ export default function RidesScreen() {
         onAccept={handleAcceptRide}
         onDecline={handleDeclineRide}
         onClose={() => {
+          // Stop notification sound when modal is closed without action
+          notificationSoundService.stopNotificationSound();
           setShowRideRequestModal(false);
           setSelectedRideRequest(null);
         }}

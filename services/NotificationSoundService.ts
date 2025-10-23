@@ -160,6 +160,28 @@ class NotificationSoundService {
     ]);
   }
 
+  async stopNotificationSound() {
+    try {
+      console.log('🛑 Stopping notification sound');
+
+      if (this.sound) {
+        console.log('🔇 Sound is playing, stopping now...');
+        try {
+          await this.sound.stopAsync();
+          await this.sound.unloadAsync();
+          this.sound = null;
+          console.log('✅ Notification sound stopped successfully');
+        } catch (stopError) {
+          console.error('❌ Error stopping sound:', stopError);
+        }
+      } else {
+        console.log('ℹ️ No sound currently playing');
+      }
+    } catch (error) {
+      console.error('❌ Error in stopNotificationSound:', error);
+    }
+  }
+
   private onPlaybackStatusUpdate = async (status: any) => {
     if (status.didJustFinish) {
       console.log('✅ Notification sound finished playing');

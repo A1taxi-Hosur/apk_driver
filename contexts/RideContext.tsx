@@ -375,6 +375,10 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
       console.log('Driver ID:', driver.id)
 
+      // Stop notification sound immediately when accepting
+      console.log('🛑 Stopping notification sound (ride accepted)')
+      await notificationSoundService.stopNotificationSound()
+
       // Use RPC function to accept ride (more reliable than edge function)
       const { data: result, error } = await supabase.rpc('accept_ride_rpc', {
         p_ride_id: rideId,
@@ -417,6 +421,10 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('=== DECLINING RIDE ===')
       console.log('Ride ID:', rideId)
 
+      // Stop notification sound when declining
+      console.log('🛑 Stopping notification sound (ride declined)')
+      await notificationSoundService.stopNotificationSound()
+
       // Mark notification as read (declined) using RPC
       await supabase.rpc('mark_ride_notification_as_read', {
         p_user_id: driver.user_id,
@@ -425,7 +433,7 @@ export function RideProvider({ children }: RideProviderProps) {
 
       // Remove from pending rides
       setPendingRides(prev => prev.filter(ride => ride.id !== rideId))
-      
+
       console.log('✅ Ride declined')
     } catch (error) {
       console.error('Exception declining ride:', error)
