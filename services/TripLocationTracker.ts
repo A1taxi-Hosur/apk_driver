@@ -104,26 +104,28 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
 
         console.log('💾 Inserting to trip_location_history:', insertData);
 
+        // Try to save to Supabase (may fail if offline)
         const { error: insertError } = await supabaseBackground
           .from('trip_location_history')
           .insert(insertData);
 
         if (insertError) {
-          console.error('❌ Background: Insert error:', insertError.message, insertError);
+          console.error('❌ Background: Insert error (offline?):', insertError.message);
         } else {
           console.log('✅ Background: GPS point saved to database!');
-
-          // Store last GPS point to prevent duplicates
-          await AsyncStorage.setItem(LAST_GPS_POINT_KEY, JSON.stringify({
-            key: currentPointKey,
-            lat: location.coords.latitude,
-            lng: location.coords.longitude,
-            timestamp: location.timestamp
-          }));
-
-          // Update heartbeat timestamp to show task is alive
-          await AsyncStorage.setItem(HEARTBEAT_KEY, Date.now().toString());
         }
+
+        // ALWAYS update local state (works offline)
+        // Store last GPS point to prevent duplicates
+        await AsyncStorage.setItem(LAST_GPS_POINT_KEY, JSON.stringify({
+          key: currentPointKey,
+          lat: location.coords.latitude,
+          lng: location.coords.longitude,
+          timestamp: location.timestamp
+        }));
+
+        // Update heartbeat timestamp to show task is alive
+        await AsyncStorage.setItem(HEARTBEAT_KEY, Date.now().toString());
 
         // ALWAYS cache GPS point locally (even if Supabase insert fails)
         // This ensures trip completion works offline
@@ -147,7 +149,7 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
           }
 
           await AsyncStorage.setItem(cacheKey, JSON.stringify(existingCache));
-          console.log(`💾 GPS point cached locally (${existingCache.length} total)`);
+          console.log(`💾 GPS point cached locally (${existingCache.length} total) [${insertError ? 'OFFLINE' : 'online'}]`);
         } catch (cacheError) {
           console.warn('⚠️ Failed to cache GPS point locally:', cacheError);
         }
