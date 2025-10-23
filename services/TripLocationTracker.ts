@@ -154,19 +154,18 @@ TaskManager.defineTask(TRIP_LOCATION_TASK, async ({ data, error }) => {
           console.warn('⚠️ Failed to cache GPS point locally:', cacheError);
         }
 
-          // Log every 10th point to track if GPS stops
-          const randomCheck = Math.random() < 0.1; // 10% chance
-          if (randomCheck) {
-            try {
-              await supabaseBackground.from('debug_logs').insert({
-                ride_id: tripId,
-                log_type: 'gps_heartbeat',
-                message: 'GPS still running',
-                data: { lat: location.coords.latitude, lng: location.coords.longitude, timestamp: new Date().toISOString() }
-              });
-            } catch (e) {
-              // Silent fail
-            }
+        // Log every 10th point to track if GPS stops
+        const randomCheck = Math.random() < 0.1; // 10% chance
+        if (randomCheck) {
+          try {
+            await supabaseBackground.from('debug_logs').insert({
+              ride_id: tripId,
+              log_type: 'gps_heartbeat',
+              message: 'GPS still running',
+              data: { lat: location.coords.latitude, lng: location.coords.longitude, timestamp: new Date().toISOString() }
+            });
+          } catch (e) {
+            // Silent fail
           }
         }
       } catch (bgError) {
