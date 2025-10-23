@@ -5,6 +5,7 @@ import { FareCalculationService } from '../services/FareCalculationService'
 import { TripLocationTracker } from '../services/TripLocationTracker'
 import { notificationSoundService } from '../services/NotificationSoundService'
 import { DebugLogger } from '../utils/debugLogger'
+import { calculateDistance } from '../utils/maps'
 
 type Ride = {
   id: string
@@ -877,14 +878,21 @@ export function RideProvider({ children }: RideProviderProps) {
             finalDropLng,
             recorded_at: lastGPSPoint.recorded_at
           })
-          console.log('📍 GPS drop-off vs Booking destination:', {
-            gps_location: { lat: finalDropLat, lng: finalDropLng },
-            booking_destination: { lat: destLat, lng: destLng },
-            difference_km: calculateDistance(
+
+          // Log distance difference for debugging
+          try {
+            const distanceDiff = calculateDistance(
               { latitude: finalDropLat, longitude: finalDropLng },
               { latitude: destLat, longitude: destLng }
-            ).toFixed(2)
-          })
+            )
+            console.log('📍 GPS drop-off vs Booking destination:', {
+              gps_location: { lat: finalDropLat, lng: finalDropLng },
+              booking_destination: { lat: destLat, lng: destLng },
+              difference_km: distanceDiff.toFixed(2)
+            })
+          } catch (err) {
+            console.log('⚠️ Could not calculate distance difference:', err)
+          }
         } else {
           console.log('⚠️ No GPS points found, using booking destination')
         }
