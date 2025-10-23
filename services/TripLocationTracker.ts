@@ -556,11 +556,13 @@ class TripLocationTrackerService {
         // Allow segments if:
         // 1. Distance < 200m (normal case)
         // 2. OR distance < 500m AND speed < 120 km/h (highway driving)
-        // 3. OR distance < 1km AND time gap > 30s (GPS throttling, but reasonable speed)
+        // 3. OR distance < 2km AND time gap > 30s AND speed < 100 km/h (offline period with GPS throttling)
+        // 4. OR distance < 5km AND time gap > 60s AND speed < 150 km/h (very long offline periods)
         const isValidSegment =
           segDist < 0.2 ||
           (segDist < 0.5 && impliedSpeedKmh < 120) ||
-          (segDist < 1.0 && timeDiffSeconds > 30 && impliedSpeedKmh < 150);
+          (segDist < 2.0 && timeDiffSeconds > 30 && impliedSpeedKmh < 100) ||
+          (segDist < 5.0 && timeDiffSeconds > 60 && impliedSpeedKmh < 150);
 
         if (isValidSegment) {
           totalDistance += segDist;
@@ -585,6 +587,26 @@ class TripLocationTrackerService {
       if (filteredSegments > 0) {
         console.warn(`⚠️ ${filteredSegments} segments filtered (${filteredDistanceKm.toFixed(3)} km lost)`);
         console.warn('⚠️ This may indicate GPS jumps or high-speed driving with throttled GPS');
+      }
+
+      // Log distance calculation to database for debugging
+      try {
+        await supabaseBackground.from('debug_logs').insert({
+          ride_id: tripType === 'regular' ? tripId : null,
+          scheduled_booking_id: tripType === 'scheduled' ? tripId : null,
+          log_type: 'distance_calculated',
+          message: `Distance: ${totalDistance.toFixed(2)} km from ${points.length} points (${dataSource})`,
+          data: {
+            totalKm: parseFloat(totalDistance.toFixed(3)),
+            points: points.length,
+            validSegments,
+            filteredSegments,
+            filteredKm: parseFloat(filteredDistanceKm.toFixed(3)),
+            dataSource
+          }
+        });
+      } catch (e) {
+        // Silent fail - likely offline
       }
 
       return {
