@@ -461,24 +461,24 @@ class TripLocationTrackerService {
       console.log('Trip ID:', tripId);
       console.log('Trip Type:', tripType);
 
-      let points: any[] | null = null;
+      let supabasePoints: any[] = [];
+      let cachedPoints: any[] = [];
       let dataSource = 'unknown';
 
-      // TRY 1: Fetch from Supabase (online)
+      // STEP 1: Fetch from Supabase (gets points that were saved online)
       try {
         const columnName = tripType === 'regular' ? 'ride_id' : 'scheduled_booking_id';
-        console.log('📡 Trying Supabase - column:', columnName, '=', tripId);
+        console.log('📡 Fetching from Supabase - column:', columnName, '=', tripId);
 
-        const { data: supabasePoints, error } = await supabaseBackground
+        const { data, error } = await supabaseBackground
           .from('trip_location_history')
           .select('latitude, longitude, recorded_at, accuracy')
           .eq(columnName, tripId)
           .order('recorded_at', { ascending: true });
 
-        if (!error && supabasePoints && supabasePoints.length > 0) {
-          points = supabasePoints;
-          dataSource = 'supabase';
-          console.log(`✅ Got ${points.length} points from Supabase`);
+        if (!error && data && data.length > 0) {
+          supabasePoints = data;
+          console.log(`✅ Got ${supabasePoints.length} points from Supabase`);
         } else {
           console.warn('⚠️ Supabase query failed or empty:', error?.message || 'No data');
         }
@@ -486,24 +486,40 @@ class TripLocationTrackerService {
         console.warn('⚠️ Supabase unavailable (offline?):', supabaseError);
       }
 
-      // TRY 2: Load from local cache (offline fallback)
-      if (!points || points.length === 0) {
-        console.log('📱 Trying local cache (offline mode)...');
-        try {
-          const cacheKey = `${GPS_POINTS_CACHE_KEY}${tripId}`;
-          const cacheJson = await AsyncStorage.getItem(cacheKey);
+      // STEP 2: Load from local cache (gets ALL points including offline ones)
+      try {
+        const cacheKey = `${GPS_POINTS_CACHE_KEY}${tripId}`;
+        const cacheJson = await AsyncStorage.getItem(cacheKey);
 
-          if (cacheJson) {
-            const cachedPoints = JSON.parse(cacheJson);
-            if (cachedPoints && cachedPoints.length > 0) {
-              points = cachedPoints;
-              dataSource = 'local_cache';
-              console.log(`✅ Got ${points.length} points from local cache (OFFLINE MODE)`);
-            }
+        if (cacheJson) {
+          const parsed = JSON.parse(cacheJson);
+          if (parsed && parsed.length > 0) {
+            cachedPoints = parsed;
+            console.log(`✅ Got ${cachedPoints.length} points from local cache`);
           }
-        } catch (cacheError) {
-          console.error('❌ Failed to load from cache:', cacheError);
         }
+      } catch (cacheError) {
+        console.error('❌ Failed to load from cache:', cacheError);
+      }
+
+      // STEP 3: Merge points - prefer cache if it has more points (covers offline periods)
+      let points: any[] | null = null;
+
+      if (cachedPoints.length > supabasePoints.length) {
+        // Cache has more points - likely contains offline data
+        points = cachedPoints;
+        dataSource = 'local_cache (has more points)';
+        console.log(`✅ Using cache (${cachedPoints.length} points) over Supabase (${supabasePoints.length} points)`);
+      } else if (supabasePoints.length > 0) {
+        // Supabase has same or more points - use it
+        points = supabasePoints;
+        dataSource = 'supabase';
+        console.log(`✅ Using Supabase (${supabasePoints.length} points)`);
+      } else if (cachedPoints.length > 0) {
+        // Only cache has points
+        points = cachedPoints;
+        dataSource = 'local_cache_only';
+        console.log(`✅ Using cache only (${cachedPoints.length} points)`);
       }
 
       // FAIL: No data from either source
@@ -552,17 +568,25 @@ class TripLocationTrackerService {
         // Calculate implied speed (km/h)
         const impliedSpeedKmh = (segDist / timeDiffSeconds) * 3600;
 
-        // Smart filtering based on time and speed
-        // Allow segments if:
-        // 1. Distance < 200m (normal case)
-        // 2. OR distance < 500m AND speed < 120 km/h (highway driving)
-        // 3. OR distance < 2km AND time gap > 30s AND speed < 100 km/h (offline period with GPS throttling)
-        // 4. OR distance < 5km AND time gap > 60s AND speed < 150 km/h (very long offline periods)
-        const isValidSegment =
-          segDist < 0.2 ||
-          (segDist < 0.5 && impliedSpeedKmh < 120) ||
-          (segDist < 2.0 && timeDiffSeconds > 30 && impliedSpeedKmh < 100) ||
-          (segDist < 5.0 && timeDiffSeconds > 60 && impliedSpeedKmh < 150);
+        // Smart filtering to catch GPS jumps/teleports
+        // If using cache, points are consecutive so we trust all normal segments
+        // If using Supabase, apply aggressive filtering for large gaps (offline periods)
+        let isValidSegment = false;
+
+        if (dataSource.includes('cache')) {
+          // Using cache = consecutive GPS points
+          // Only filter obvious GPS jumps (impossible speeds > 200 km/h)
+          isValidSegment = impliedSpeedKmh < 200;
+        } else {
+          // Using Supabase = might have gaps from offline periods
+          // Apply progressive filtering based on time gaps and speed
+          isValidSegment =
+            segDist < 0.2 ||  // Normal consecutive points
+            (segDist < 0.5 && impliedSpeedKmh < 120) ||  // Highway driving
+            (segDist < 2.0 && timeDiffSeconds > 30 && impliedSpeedKmh < 100) ||  // Short offline period
+            (segDist < 5.0 && timeDiffSeconds > 60 && impliedSpeedKmh < 150) ||  // Medium offline period
+            (timeDiffSeconds > 120 && impliedSpeedKmh < 150);  // Long offline period (2+ minutes)
+        }
 
         if (isValidSegment) {
           totalDistance += segDist;
