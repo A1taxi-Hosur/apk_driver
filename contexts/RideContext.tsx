@@ -858,23 +858,33 @@ export function RideProvider({ children }: RideProviderProps) {
         return { success: false }
       }
 
-      // Get final GPS drop-off location (last recorded point)
+      // Get final GPS drop-off location (last recorded point) using RPC to bypass RLS
       let finalDropLat = destLat
       let finalDropLng = destLng
 
       try {
-        const { data: lastGPSPoint } = await supabase
-          .from('trip_location_history')
-          .select('latitude, longitude')
-          .eq('ride_id', rideId)
-          .order('recorded_at', { ascending: false })
-          .limit(1)
-          .single()
+        const { data: lastGPSPoint, error: gpsError } = await supabase
+          .rpc('get_last_gps_location', { p_ride_id: rideId })
 
-        if (lastGPSPoint) {
+        if (gpsError) {
+          console.error('⚠️ Error fetching GPS location:', gpsError)
+          console.log('⚠️ Falling back to booking destination')
+        } else if (lastGPSPoint && lastGPSPoint.latitude && lastGPSPoint.longitude) {
           finalDropLat = lastGPSPoint.latitude
           finalDropLng = lastGPSPoint.longitude
-          console.log('✅ Using final GPS drop-off location:', { finalDropLat, finalDropLng })
+          console.log('✅ Using final GPS drop-off location:', {
+            finalDropLat,
+            finalDropLng,
+            recorded_at: lastGPSPoint.recorded_at
+          })
+          console.log('📍 GPS drop-off vs Booking destination:', {
+            gps_location: { lat: finalDropLat, lng: finalDropLng },
+            booking_destination: { lat: destLat, lng: destLng },
+            difference_km: calculateDistance(
+              { latitude: finalDropLat, longitude: finalDropLng },
+              { latitude: destLat, longitude: destLng }
+            ).toFixed(2)
+          })
         } else {
           console.log('⚠️ No GPS points found, using booking destination')
         }
