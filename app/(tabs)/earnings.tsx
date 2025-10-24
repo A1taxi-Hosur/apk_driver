@@ -38,6 +38,12 @@ type RideEarning = {
   customer?: {
     full_name: string;
   };
+  platform_fee?: number;
+  gst_on_platform_fee?: number;
+  gst_on_charges?: number;
+  ride_charges?: number;
+  commission_11_percent?: number;
+  you_owe_total?: number;
 };
 
 type EarningsData = {
@@ -51,6 +57,9 @@ type EarningsData = {
   totalDistance: number;
   totalHours: number;
   avgRating: number;
+  youOweToday: number;
+  youOweWeek: number;
+  youOweMonth: number;
 };
 
 export default function EarningsScreen() {
@@ -67,6 +76,9 @@ export default function EarningsScreen() {
     totalDistance: 0,
     totalHours: 0,
     avgRating: 0,
+    youOweToday: 0,
+    youOweWeek: 0,
+    youOweMonth: 0,
   });
   const [recentTransactions, setRecentTransactions] = useState<RideEarning[]>([]);
   const [loading, setLoading] = useState(true);
@@ -85,9 +97,9 @@ export default function EarningsScreen() {
       console.log('=== LOADING EARNINGS DATA ===');
       console.log('Driver ID:', driver.id);
       
-      // Fetch all completed rides for this driver using RPC
+      // Fetch all completed rides for this driver with commission breakdown using RPC
       const { data: rides, error } = await supabase
-        .rpc('get_driver_completed_rides', {
+        .rpc('get_driver_earnings_with_commission', {
           p_driver_id: driver.id
         });
 
@@ -120,15 +132,28 @@ export default function EarningsScreen() {
       let totalDuration = 0;
       let totalRatings = 0;
       let ratedRides = 0;
+      let todayYouOwe = 0;
+      let weekYouOwe = 0;
+      let monthYouOwe = 0;
 
       completedRides.forEach(ride => {
         const rideDate = new Date(ride.created_at);
         const fareAmount = ride.fare_amount || 0;
+        const youOweAmount = ride.you_owe_total || 0;
 
         // Add to total earnings
-        if (rideDate >= monthStart) monthEarnings += fareAmount;
-        if (rideDate >= weekStart) weekEarnings += fareAmount;
-        if (rideDate >= todayStart) todayEarnings += fareAmount;
+        if (rideDate >= monthStart) {
+          monthEarnings += fareAmount;
+          monthYouOwe += youOweAmount;
+        }
+        if (rideDate >= weekStart) {
+          weekEarnings += fareAmount;
+          weekYouOwe += youOweAmount;
+        }
+        if (rideDate >= todayStart) {
+          todayEarnings += fareAmount;
+          todayYouOwe += youOweAmount;
+        }
 
         // Payment method totals
         if (ride.payment_method === 'cash') {
@@ -164,6 +189,9 @@ export default function EarningsScreen() {
         totalDistance: Math.round(totalDistance * 10) / 10,
         totalHours,
         avgRating: Math.round(avgRating * 10) / 10,
+        youOweToday: Math.round(todayYouOwe * 100) / 100,
+        youOweWeek: Math.round(weekYouOwe * 100) / 100,
+        youOweMonth: Math.round(monthYouOwe * 100) / 100,
       };
 
       console.log('📊 Calculated earnings:', earningsData);
@@ -191,6 +219,15 @@ export default function EarningsScreen() {
       case 'week': return earnings.week;
       case 'month': return earnings.month;
       default: return earnings.today;
+    }
+  };
+
+  const getCurrentPeriodYouOwe = () => {
+    switch (selectedPeriod) {
+      case 'today': return earnings.youOweToday;
+      case 'week': return earnings.youOweWeek;
+      case 'month': return earnings.youOweMonth;
+      default: return earnings.youOweToday;
     }
   };
 
@@ -284,6 +321,24 @@ export default function EarningsScreen() {
             From {selectedPeriod === 'today' ? 'today\'s' : 
                   selectedPeriod === 'week' ? 'this week\'s' : 'this month\'s'} rides
           </Text>
+        </View>
+
+        {/* You Owe Card */}
+        <View style={styles.youOweCard}>
+          <View style={styles.youOweHeader}>
+            <Text style={styles.youOweLabel}>You Owe (Commission to Owner)</Text>
+          </View>
+          <Text style={styles.youOweAmount}>
+            {formatCurrency(getCurrentPeriodYouOwe())}
+          </Text>
+          <Text style={styles.youOweSubtext}>
+            Platform fee + GST + 11% commission
+          </Text>
+          <View style={styles.youOweBreakdown}>
+            <Text style={styles.youOweBreakdownText}>
+              Includes: Platform Fee, GST on Platform Fee, GST on Charges, and 11% of ride charges
+            </Text>
+          </View>
         </View>
 
         {/* Stats Grid */}
@@ -513,6 +568,55 @@ const styles = StyleSheet.create({
   earningsSubtext: {
     fontSize: 14,
     color: '#64748B',
+  },
+  youOweCard: {
+    backgroundColor: '#FEF2F2',
+    borderRadius: 16,
+    padding: 24,
+    marginBottom: 20,
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#FCA5A5',
+    shadowColor: '#EF4444',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  youOweHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  youOweLabel: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#DC2626',
+  },
+  youOweAmount: {
+    fontSize: 32,
+    fontWeight: '700',
+    color: '#DC2626',
+    marginBottom: 8,
+  },
+  youOweSubtext: {
+    fontSize: 13,
+    color: '#991B1B',
+    marginBottom: 12,
+    fontWeight: '500',
+  },
+  youOweBreakdown: {
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    borderRadius: 8,
+    marginTop: 4,
+  },
+  youOweBreakdownText: {
+    fontSize: 11,
+    color: '#64748B',
+    textAlign: 'center',
+    lineHeight: 16,
   },
   statsGrid: {
     flexDirection: 'row',
