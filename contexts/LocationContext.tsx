@@ -216,7 +216,7 @@ export function LocationProvider({ children }: LocationProviderProps) {
       console.log('Driver:', driver.user?.full_name)
       console.log('Status:', driver.status)
       
-      const success = await BackgroundLocationService.startBackgroundLocationTracking(driver.user_id)
+      const success = await BackgroundLocationService.startBackgroundLocationTracking(driver.user_id, driver.id)
       setBackgroundTrackingStarted(success)
       setIsBackgroundTrackingActive(success)
       

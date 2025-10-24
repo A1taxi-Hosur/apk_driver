@@ -8,6 +8,8 @@ const BACKGROUND_LOCATION_TASK = 'background-location-task';
 const BACKGROUND_FETCH_TASK = 'background-fetch-task';
 const DRIVER_SESSION_KEY = 'driver_session';
 const WEB_LOCATION_INTERVAL_KEY = 'web_location_interval';
+const DRIVER_ID_KEY = 'background_driver_id';
+const DRIVER_USER_ID_KEY = 'background_driver_user_id';
 
 // Background location task for native platforms
 TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
@@ -19,19 +21,24 @@ TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
   if (data) {
     const { locations } = data as any;
     console.log('📍 Background location update:', locations);
-    
-    // Check if driver is still online
-    const isDriverOnline = await checkDriverOnlineStatus();
-    if (!isDriverOnline) {
-      console.log('❌ Driver is offline, stopping background location');
-      await stopBackgroundLocationTracking();
-      return;
-    }
 
-    // Send location to database
+    // CRITICAL: Always try to send location first, then check status
+    // This ensures we don't lose location data during active trips
     if (locations && locations.length > 0) {
       const location = locations[0];
-      await sendLocationToDatabase(location);
+      const locationSent = await sendLocationToDatabase(location);
+
+      // Only check driver status if location was NOT sent (driver might be offline)
+      // If location was sent successfully, driver has active trip or is online
+      if (!locationSent) {
+        const isDriverOnline = await checkDriverOnlineStatus();
+        if (!isDriverOnline) {
+          console.log('❌ Driver is offline and no active trip, will stop on next check');
+          // Note: Cannot call stopBackgroundLocationTracking from here
+          // Service will stop on next iteration when status check fails again
+          return;
+        }
+      }
     }
   }
 });
@@ -39,16 +46,9 @@ TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
 // Background fetch task for periodic location updates
 TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
   console.log('📍 Background fetch triggered for location update');
-  
-  try {
-    // Check if driver is online
-    const isDriverOnline = await checkDriverOnlineStatus();
-    if (!isDriverOnline) {
-      console.log('❌ Driver is offline, skipping background location update');
-      return BackgroundFetch.BackgroundFetchResult.NoData;
-    }
 
-    // Get current location
+  try {
+    // Get current location first
     const { status } = await Location.getForegroundPermissionsAsync();
     if (status !== 'granted') {
       console.log('❌ Location permission not granted');
@@ -61,9 +61,19 @@ TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
     });
 
     if (location) {
-      await sendLocationToDatabase(location);
-      console.log('✅ Background location update successful');
-      return BackgroundFetch.BackgroundFetchResult.NewData;
+      const locationSent = await sendLocationToDatabase(location);
+
+      if (locationSent) {
+        console.log('✅ Background location update successful');
+        return BackgroundFetch.BackgroundFetchResult.NewData;
+      } else {
+        // Location not sent, check if driver should continue
+        const isDriverOnline = await checkDriverOnlineStatus();
+        if (!isDriverOnline) {
+          console.log('❌ Driver is offline, skipping background location update');
+          return BackgroundFetch.BackgroundFetchResult.NoData;
+        }
+      }
     }
 
     return BackgroundFetch.BackgroundFetchResult.NoData;
@@ -75,8 +85,44 @@ TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
 
 async function checkDriverOnlineStatus(): Promise<boolean> {
   try {
+    // First try to get driver ID from dedicated storage
+    const driverId = await AsyncStorage.getItem(DRIVER_ID_KEY);
+
+    if (driverId) {
+      // Check database to see if driver should track location
+      // This works even if local session is stale
+      const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
+      const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
+
+      if (supabaseUrl && supabaseAnonKey) {
+        try {
+          const response = await fetch(`${supabaseUrl}/rest/v1/rpc/should_driver_track_location`, {
+            method: 'POST',
+            headers: {
+              'apikey': supabaseAnonKey,
+              'Authorization': `Bearer ${supabaseAnonKey}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ p_driver_id: driverId }),
+            signal: AbortSignal.timeout(5000)
+          });
+
+          if (response.ok) {
+            const result = await response.json();
+            console.log('📊 Driver tracking status from DB:', result);
+            return result.should_track || false;
+          }
+        } catch (dbError) {
+          console.error('⚠️ Could not check driver status from DB:', dbError.message);
+          // Continue to fallback method
+        }
+      }
+    }
+
+    // Fallback to session-based check
     const storedSession = await AsyncStorage.getItem(DRIVER_SESSION_KEY);
     if (!storedSession) {
+      console.log('❌ No driver session and no driver ID available');
       return false;
     }
 
@@ -86,34 +132,47 @@ async function checkDriverOnlineStatus(): Promise<boolean> {
     // Check if session is not too old (24 hours)
     const sessionAge = Date.now() - sessionData.timestamp;
     if (sessionAge > 24 * 60 * 60 * 1000) {
+      console.log('⚠️ Session is older than 24 hours');
       return false;
     }
 
     // Driver should continue updating location if online OR busy
-    return driver && (driver.status === 'online' || driver.status === 'busy');
+    const shouldTrack = driver && (driver.status === 'online' || driver.status === 'busy');
+    console.log('📊 Driver tracking status from session:', shouldTrack, driver?.status);
+    return shouldTrack;
   } catch (error) {
     console.error('Error checking driver status:', error);
     return false;
   }
 }
 
-async function sendLocationToDatabase(location: any) {
+async function sendLocationToDatabase(location: any): Promise<boolean> {
   try {
-    const storedSession = await AsyncStorage.getItem(DRIVER_SESSION_KEY);
-    if (!storedSession) {
-      console.log('❌ No driver session for background location update');
-      return;
+    // Try to get driver ID from dedicated storage (more reliable than session)
+    let driverId = await AsyncStorage.getItem(DRIVER_ID_KEY);
+    let driverUserId = await AsyncStorage.getItem(DRIVER_USER_ID_KEY);
+
+    // Fallback to session if dedicated storage not available
+    if (!driverId || !driverUserId) {
+      const storedSession = await AsyncStorage.getItem(DRIVER_SESSION_KEY);
+      if (!storedSession) {
+        console.log('❌ No driver session for background location update');
+        return false;
+      }
+
+      const sessionData = JSON.parse(storedSession);
+      const driver = sessionData.driver;
+
+      if (!driver?.id || !driver?.user_id) {
+        console.log('❌ No driver id/user_id for background location update');
+        return false;
+      }
+
+      driverId = driver.id;
+      driverUserId = driver.user_id;
     }
 
-    const sessionData = JSON.parse(storedSession);
-    const driver = sessionData.driver;
-
-    if (!driver?.id || !driver?.user_id) {
-      console.log('❌ No driver id/user_id for background location update');
-      return;
-    }
-
-    console.log('📤 Background location update via RPC...');
+    console.log('📤 Background location update via RPC...', { driverId, lat: location.coords.latitude, lng: location.coords.longitude });
 
     // Get environment variables
     const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
@@ -122,7 +181,7 @@ async function sendLocationToDatabase(location: any) {
     // Validate environment variables
     if (!supabaseUrl || !supabaseAnonKey) {
       console.error('❌ Supabase credentials not configured');
-      return;
+      return false;
     }
 
     // Use RPC function to update location (bypasses RLS)
@@ -136,7 +195,7 @@ async function sendLocationToDatabase(location: any) {
           'Prefer': 'return=representation'
         },
         body: JSON.stringify({
-          p_driver_id: driver.id,
+          p_driver_id: driverId,
           p_latitude: location.coords.latitude,
           p_longitude: location.coords.longitude,
           p_heading: location.coords.heading || null,
@@ -150,20 +209,25 @@ async function sendLocationToDatabase(location: any) {
         const result = await rpcResponse.json();
         if (result && result.success) {
           console.log('✅ Background location updated via RPC:', result.action);
+          return true;
         } else {
           console.error('❌ RPC returned error:', result?.error);
+          return false;
         }
       } else {
         const errorText = await rpcResponse.text();
         console.error('❌ RPC request failed:', rpcResponse.status, errorText);
+        return false;
       }
     } catch (rpcError) {
       console.error('❌ RPC exception:', rpcError.message);
+      return false;
     }
 
   } catch (error) {
     console.error('❌ Exception in background location update:', error.message);
     console.log('⚠️ Background location service will continue running');
+    return false;
   }
 }
 
@@ -249,11 +313,19 @@ async function stopWebBackgroundTracking(): Promise<void> {
 }
 
 export class BackgroundLocationService {
-  static async startBackgroundLocationTracking(driverUserId: string): Promise<boolean> {
+  static async startBackgroundLocationTracking(driverUserId: string, driverId?: string): Promise<boolean> {
     try {
       console.log('=== STARTING BACKGROUND LOCATION TRACKING ===');
       console.log('Driver User ID:', driverUserId);
+      console.log('Driver ID:', driverId);
       console.log('Platform:', Platform.OS);
+
+      // Store driver IDs in dedicated storage for background task access
+      if (driverId) {
+        await AsyncStorage.setItem(DRIVER_ID_KEY, driverId);
+        await AsyncStorage.setItem(DRIVER_USER_ID_KEY, driverUserId);
+        console.log('✅ Stored driver IDs for background access');
+      }
 
       if (Platform.OS === 'web') {
         console.log('🌐 Web platform: Starting web-based background tracking');
@@ -269,17 +341,20 @@ export class BackgroundLocationService {
 
       console.log('✅ Background location permission granted');
 
-      // Start background location tracking
+      // Start background location tracking with aggressive settings
       await Location.startLocationUpdatesAsync(BACKGROUND_LOCATION_TASK, {
         accuracy: Location.Accuracy.BestForNavigation,
         timeInterval: 5000, // Every 5 seconds
         distanceInterval: 5, // Every 5 meters
         deferredUpdatesInterval: 5000,
+        showsBackgroundLocationIndicator: true,
         foregroundService: {
-          notificationTitle: 'A1 Taxi - Driver Online',
-          notificationBody: 'Sharing location with customers for ride requests',
+          notificationTitle: 'A1 Taxi - Driver Active',
+          notificationBody: 'Location tracking active. Do not close this notification.',
           notificationColor: '#2563EB',
         },
+        pausesUpdatesAutomatically: false, // CRITICAL: Never pause updates
+        activityType: Location.ActivityType.AutomotiveNavigation, // Highest priority
       });
 
       // Also register background fetch as fallback
@@ -307,6 +382,10 @@ export class BackgroundLocationService {
       if (Platform.OS === 'web') {
         return await stopWebBackgroundTracking();
       }
+
+      // Clear stored driver IDs
+      await AsyncStorage.removeItem(DRIVER_ID_KEY);
+      await AsyncStorage.removeItem(DRIVER_USER_ID_KEY);
 
       // Check if task is registered
       const isRegistered = await TaskManager.isTaskRegisteredAsync(BACKGROUND_LOCATION_TASK);
