@@ -1120,7 +1120,7 @@ export class FareCalculationService {
     console.log('Is final platform fee NaN?', isNaN(platformFee));
 
     const baseFare = Number(fareMatrix.base_fare) || 0;
-    const baseKmIncluded = 4; // Base fare includes 4km
+    const baseKmIncluded = 3; // Base fare includes 3km
     const perKmRate = Number(fareMatrix.per_km_rate) || 0;
     const surgeMultiplier = Number(fareMatrix.surge_multiplier) || 1;
     
