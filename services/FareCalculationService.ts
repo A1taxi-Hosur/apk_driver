@@ -320,44 +320,45 @@ export class FareCalculationService {
 
         case 'rental':
           const rentalResult = await supabase
-            .from('rental_trip_completions')
-            .insert({
-              ride_id: rideId,
-              driver_id: driverDetails?.driver_id,
-              customer_id: driverDetails?.customer_id,
-              booking_type: ride.booking_type,
-              vehicle_type: ride.vehicle_type,
-              trip_type: ride.trip_type,
-              pickup_address: ride.pickup_address,
-              destination_address: ride.destination_address || '',
-              rental_hours: ride.rental_hours || 0,
-              actual_hours_used: Math.ceil(actualDurationMinutes / 60),
-              actual_distance_km: actualDistanceKm,
-              actual_duration_minutes: actualDurationMinutes,
-              base_fare: fareBreakdown.base_fare,
-              hourly_charges: fareBreakdown.time_fare,
-              distance_fare: fareBreakdown.distance_fare,
-              extra_km_charges: fareBreakdown.extra_km_charges,
-              extra_hour_charges: fareBreakdown.surge_charges,
-              platform_fee: fareBreakdown.platform_fee,
-              gst_on_charges: fareBreakdown.gst_on_charges,
-              gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              total_fare: fareBreakdown.total_fare,
-              fare_details: fareBreakdown,
-              completed_at: new Date().toISOString(),
-              driver_name: driverDetails?.driver_name || 'Driver',
-              driver_phone: driverDetails?.driver_phone || '',
-              driver_rating: driverDetails?.driver_rating,
-              vehicle_id: driverDetails?.vehicle_id,
-              vehicle_make: driverDetails?.vehicle_make || '',
-              vehicle_model: driverDetails?.vehicle_model || '',
-              vehicle_color: driverDetails?.vehicle_color || '',
-              vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
-            })
-            .select()
-            .single();
-          completionError = rentalResult.error;
-          tripCompletion = rentalResult.data;
+            .rpc('insert_rental_trip_completion', {
+              p_ride_id: rideId,
+              p_driver_id: driverDetails?.driver_id,
+              p_customer_id: driverDetails?.customer_id,
+              p_booking_type: ride.booking_type,
+              p_vehicle_type: ride.vehicle_type,
+              p_trip_type: ride.trip_type,
+              p_pickup_address: ride.pickup_address,
+              p_destination_address: ride.destination_address || '',
+              p_rental_hours: ride.rental_hours || 0,
+              p_actual_hours_used: Math.ceil(actualDurationMinutes / 60),
+              p_actual_distance_km: actualDistanceKm,
+              p_actual_duration_minutes: actualDurationMinutes,
+              p_base_fare: fareBreakdown.base_fare,
+              p_hourly_charges: fareBreakdown.time_fare,
+              p_distance_fare: fareBreakdown.distance_fare,
+              p_extra_km_charges: fareBreakdown.extra_km_charges,
+              p_extra_hour_charges: fareBreakdown.surge_charges,
+              p_platform_fee: fareBreakdown.platform_fee,
+              p_gst_on_charges: fareBreakdown.gst_on_charges,
+              p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
+              p_total_fare: fareBreakdown.total_fare,
+              p_fare_details: fareBreakdown,
+              p_completed_at: new Date().toISOString(),
+              p_driver_name: driverDetails?.driver_name || 'Driver',
+              p_driver_phone: driverDetails?.driver_phone || '',
+              p_driver_rating: driverDetails?.driver_rating,
+              p_vehicle_id: driverDetails?.vehicle_id,
+              p_vehicle_make: driverDetails?.vehicle_make || '',
+              p_vehicle_model: driverDetails?.vehicle_model || '',
+              p_vehicle_color: driverDetails?.vehicle_color || '',
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+            });
+
+          if (rentalResult.error || !rentalResult.data?.success) {
+            completionError = rentalResult.error || { message: rentalResult.data?.error };
+          } else {
+            tripCompletion = { id: rentalResult.data.completion_id };
+          }
           break;
 
         case 'outstation':
@@ -375,116 +376,91 @@ export class FareCalculationService {
           console.log('  - actual_distance_km:', fareBreakdown.details.actual_distance_km);
           console.log('  - actual_duration_minutes:', fareBreakdown.details.actual_duration_minutes);
 
-          const insertData = {
-            ride_id: rideId,
-            driver_id: driverDetails?.driver_id,
-            customer_id: driverDetails?.customer_id,
-            booking_type: ride.booking_type,
-            vehicle_type: ride.vehicle_type,
-            trip_type: ride.trip_type,
-            pickup_address: ride.pickup_address,
-            destination_address: ride.destination_address,
-            scheduled_time: ride.scheduled_time,
-            actual_distance_km: fareBreakdown.details.actual_distance_km,
-            actual_duration_minutes: fareBreakdown.details.actual_duration_minutes,
-            actual_days: fareBreakdown.details.days_calculated || Math.ceil(actualDurationMinutes / (60 * 24)),
-            base_fare: fareBreakdown.base_fare,
-            distance_fare: fareBreakdown.distance_fare,
-            per_day_charges: 0,
-            driver_allowance: fareBreakdown.driver_allowance,
-            extra_km_charges: fareBreakdown.extra_km_charges,
-            toll_charges: 0,
-            platform_fee: fareBreakdown.platform_fee,
-            gst_on_charges: fareBreakdown.gst_on_charges,
-            gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-            total_fare: fareBreakdown.total_fare,
-            fare_details: fareBreakdown,
-            completed_at: new Date().toISOString(),
-            driver_name: driverDetails?.driver_name || 'Driver',
-            driver_phone: driverDetails?.driver_phone || '',
-            driver_rating: driverDetails?.driver_rating,
-            vehicle_id: driverDetails?.vehicle_id,
-            vehicle_make: driverDetails?.vehicle_make || '',
-            vehicle_model: driverDetails?.vehicle_model || '',
-            vehicle_color: driverDetails?.vehicle_color || '',
-            vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
-          };
-
-          console.log('Insert data object:', JSON.stringify(insertData, null, 2));
-
           const outstationResult = await supabase
-            .from('outstation_trip_completions')
-            .insert(insertData)
-            .select()
-            .single();
+            .rpc('insert_outstation_trip_completion', {
+              p_ride_id: rideId,
+              p_driver_id: driverDetails?.driver_id,
+              p_customer_id: driverDetails?.customer_id,
+              p_booking_type: ride.booking_type,
+              p_vehicle_type: ride.vehicle_type,
+              p_trip_type: ride.trip_type,
+              p_pickup_address: ride.pickup_address,
+              p_destination_address: ride.destination_address,
+              p_actual_distance_km: fareBreakdown.details.actual_distance_km,
+              p_actual_duration_minutes: fareBreakdown.details.actual_duration_minutes,
+              p_actual_days: fareBreakdown.details.days_calculated || Math.ceil(actualDurationMinutes / (60 * 24)),
+              p_base_fare: fareBreakdown.base_fare,
+              p_distance_fare: fareBreakdown.distance_fare,
+              p_per_day_charges: 0,
+              p_driver_allowance: fareBreakdown.driver_allowance,
+              p_extra_km_charges: fareBreakdown.extra_km_charges,
+              p_toll_charges: 0,
+              p_platform_fee: fareBreakdown.platform_fee,
+              p_gst_on_charges: fareBreakdown.gst_on_charges,
+              p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
+              p_total_fare: fareBreakdown.total_fare,
+              p_fare_details: fareBreakdown,
+              p_scheduled_time: ride.scheduled_time,
+              p_completed_at: new Date().toISOString(),
+              p_driver_name: driverDetails?.driver_name || 'Driver',
+              p_driver_phone: driverDetails?.driver_phone || '',
+              p_driver_rating: driverDetails?.driver_rating,
+              p_vehicle_id: driverDetails?.vehicle_id,
+              p_vehicle_make: driverDetails?.vehicle_make || '',
+              p_vehicle_model: driverDetails?.vehicle_model || '',
+              p_vehicle_color: driverDetails?.vehicle_color || '',
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+            });
 
-          if (outstationResult.error) {
-            console.error('❌ Error inserting outstation trip completion:', outstationResult.error);
+          if (outstationResult.error || !outstationResult.data?.success) {
+            console.error('❌ Error inserting outstation trip completion:', outstationResult.error || outstationResult.data?.error);
+            completionError = outstationResult.error || { message: outstationResult.data?.error };
           } else {
             console.log('✅ Outstation trip completion stored successfully');
-            console.log('Stored data:', JSON.stringify(outstationResult.data, null, 2));
-
-            // CRITICAL VERIFICATION: Check if stored values match calculated values
-            const storedTotal = parseFloat(outstationResult.data?.total_fare?.toString() || '0');
-            const calculatedTotal = fareBreakdown.total_fare;
-
-            if (storedTotal !== calculatedTotal) {
-              console.error('🚨 MISMATCH DETECTED! 🚨');
-              console.error('Calculated total_fare:', calculatedTotal);
-              console.error('Stored total_fare:', storedTotal);
-              console.error('Difference:', Math.abs(storedTotal - calculatedTotal));
-            } else {
-              console.log('✅ VERIFICATION PASSED: Stored total matches calculated total:', calculatedTotal);
-            }
-
-            console.log('Component verification:');
-            console.log('  Base fare - Calculated:', fareBreakdown.base_fare, '| Stored:', outstationResult.data?.base_fare);
-            console.log('  Platform fee - Calculated:', fareBreakdown.platform_fee, '| Stored:', outstationResult.data?.platform_fee);
-            console.log('  GST on charges - Calculated:', fareBreakdown.gst_on_charges, '| Stored:', outstationResult.data?.gst_on_charges);
-            console.log('  Total fare - Calculated:', fareBreakdown.total_fare, '| Stored:', outstationResult.data?.total_fare);
+            console.log('Completion ID:', outstationResult.data.completion_id);
+            tripCompletion = { id: outstationResult.data.completion_id };
           }
-          completionError = outstationResult.error;
-          tripCompletion = outstationResult.data;
           break;
 
         case 'airport':
           const airportResult = await supabase
-            .from('airport_trip_completions')
-            .insert({
-              ride_id: rideId,
-              driver_id: driverDetails?.driver_id,
-              customer_id: driverDetails?.customer_id,
-              booking_type: ride.booking_type,
-              vehicle_type: ride.vehicle_type,
-              trip_type: ride.trip_type,
-              pickup_address: ride.pickup_address,
-              destination_address: ride.destination_address,
-              scheduled_time: ride.scheduled_time,
-              actual_distance_km: actualDistanceKm,
-              actual_duration_minutes: actualDurationMinutes,
-              base_fare: fareBreakdown.base_fare,
-              distance_fare: fareBreakdown.distance_fare,
-              airport_surcharge: fareBreakdown.surge_charges,
-              time_fare: fareBreakdown.time_fare,
-              platform_fee: fareBreakdown.platform_fee,
-              gst_on_charges: fareBreakdown.gst_on_charges,
-              gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              total_fare: fareBreakdown.total_fare,
-              fare_details: fareBreakdown,
-              completed_at: new Date().toISOString(),
-              driver_name: driverDetails?.driver_name || 'Driver',
-              driver_phone: driverDetails?.driver_phone || '',
-              driver_rating: driverDetails?.driver_rating,
-              vehicle_id: driverDetails?.vehicle_id,
-              vehicle_make: driverDetails?.vehicle_make || '',
-              vehicle_model: driverDetails?.vehicle_model || '',
-              vehicle_color: driverDetails?.vehicle_color || '',
-              vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
-            })
-            .select()
-            .single();
-          completionError = airportResult.error;
-          tripCompletion = airportResult.data;
+            .rpc('insert_airport_trip_completion', {
+              p_ride_id: rideId,
+              p_driver_id: driverDetails?.driver_id,
+              p_customer_id: driverDetails?.customer_id,
+              p_booking_type: ride.booking_type,
+              p_vehicle_type: ride.vehicle_type,
+              p_trip_type: ride.trip_type,
+              p_pickup_address: ride.pickup_address,
+              p_destination_address: ride.destination_address,
+              p_actual_distance_km: actualDistanceKm,
+              p_actual_duration_minutes: actualDurationMinutes,
+              p_base_fare: fareBreakdown.base_fare,
+              p_distance_fare: fareBreakdown.distance_fare,
+              p_airport_surcharge: fareBreakdown.surge_charges,
+              p_time_fare: fareBreakdown.time_fare,
+              p_platform_fee: fareBreakdown.platform_fee,
+              p_gst_on_charges: fareBreakdown.gst_on_charges,
+              p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
+              p_total_fare: fareBreakdown.total_fare,
+              p_fare_details: fareBreakdown,
+              p_scheduled_time: ride.scheduled_time,
+              p_completed_at: new Date().toISOString(),
+              p_driver_name: driverDetails?.driver_name || 'Driver',
+              p_driver_phone: driverDetails?.driver_phone || '',
+              p_driver_rating: driverDetails?.driver_rating,
+              p_vehicle_id: driverDetails?.vehicle_id,
+              p_vehicle_make: driverDetails?.vehicle_make || '',
+              p_vehicle_model: driverDetails?.vehicle_model || '',
+              p_vehicle_color: driverDetails?.vehicle_color || '',
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+            });
+
+          if (airportResult.error || !airportResult.data?.success) {
+            completionError = airportResult.error || { message: airportResult.data?.error };
+          } else {
+            tripCompletion = { id: airportResult.data.completion_id };
+          }
           break;
 
         default:
@@ -839,141 +815,137 @@ export class FareCalculationService {
         case 'rental':
           console.log('📝 Storing rental trip completion...');
           const rentalResult = await supabase
-            .from('rental_trip_completions')
-            .insert({
-              scheduled_booking_id: bookingId,
-              driver_id: driverDetails.driver_id,
-              customer_id: driverDetails.customer_id,
-              booking_type: booking.booking_type,
-              vehicle_type: booking.vehicle_type,
-              pickup_address: booking.pickup_address,
-              destination_address: booking.destination_address,
-              rental_hours: booking.rental_hours,
-              actual_hours_used: actualDurationMinutes / 60,
-              actual_distance_km: actualDistanceKm,
-              actual_duration_minutes: actualDurationMinutes,
-              base_fare: roundedFareBreakdown.base_fare,
-              hourly_charges: 0,
-              distance_fare: roundedFareBreakdown.distance_fare,
-              extra_km_charges: roundedFareBreakdown.extra_km_charges,
-              extra_hour_charges: 0,
-              platform_fee: roundedFareBreakdown.platform_fee,
-              gst_on_charges: roundedFareBreakdown.gst_on_charges,
-              gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
-              total_fare: roundedFareBreakdown.total_fare,
-              fare_details: sanitizedFareDetails,
-              completed_at: new Date().toISOString(),
-              driver_name: driverDetails.driver_name,
-              driver_phone: driverDetails.driver_phone || '',
-              driver_rating: driverDetails.driver_rating,
-              vehicle_id: driverDetails.vehicle_id,
-              vehicle_make: driverDetails.vehicle_make || '',
-              vehicle_model: driverDetails.vehicle_model || '',
-              vehicle_color: driverDetails.vehicle_color || '',
-              vehicle_license_plate: driverDetails.vehicle_license_plate || ''
-            })
-            .select()
-            .single();
+            .rpc('insert_rental_trip_completion', {
+              p_scheduled_booking_id: bookingId,
+              p_driver_id: driverDetails.driver_id,
+              p_customer_id: driverDetails.customer_id,
+              p_booking_type: booking.booking_type,
+              p_vehicle_type: booking.vehicle_type,
+              p_trip_type: booking.trip_type,
+              p_pickup_address: booking.pickup_address,
+              p_destination_address: booking.destination_address,
+              p_rental_hours: booking.rental_hours,
+              p_actual_hours_used: actualDurationMinutes / 60,
+              p_actual_distance_km: actualDistanceKm,
+              p_actual_duration_minutes: actualDurationMinutes,
+              p_base_fare: roundedFareBreakdown.base_fare,
+              p_hourly_charges: 0,
+              p_distance_fare: roundedFareBreakdown.distance_fare,
+              p_extra_km_charges: roundedFareBreakdown.extra_km_charges,
+              p_extra_hour_charges: 0,
+              p_platform_fee: roundedFareBreakdown.platform_fee,
+              p_gst_on_charges: roundedFareBreakdown.gst_on_charges,
+              p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
+              p_total_fare: roundedFareBreakdown.total_fare,
+              p_fare_details: sanitizedFareDetails,
+              p_completed_at: new Date().toISOString(),
+              p_driver_name: driverDetails.driver_name,
+              p_driver_phone: driverDetails.driver_phone || '',
+              p_driver_rating: driverDetails.driver_rating,
+              p_vehicle_id: driverDetails.vehicle_id,
+              p_vehicle_make: driverDetails.vehicle_make || '',
+              p_vehicle_model: driverDetails.vehicle_model || '',
+              p_vehicle_color: driverDetails.vehicle_color || '',
+              p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
+            });
 
-          completionError = rentalResult.error;
-          console.log('✅ Rental completion stored:', rentalResult.data);
-          console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
-          if (completionError) {
+          if (rentalResult.error || !rentalResult.data?.success) {
+            completionError = rentalResult.error || { message: rentalResult.data?.error };
             console.error('❌ Rental completion error:', completionError);
+          } else {
+            console.log('✅ Rental completion stored, ID:', rentalResult.data.completion_id);
+            console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
           }
           break;
 
         case 'outstation':
           console.log('📝 Storing outstation trip completion...');
           const outstationResult = await supabase
-            .from('outstation_trip_completions')
-            .insert({
-              scheduled_booking_id: bookingId,
-              driver_id: driverDetails.driver_id,
-              customer_id: driverDetails.customer_id,
-              booking_type: booking.booking_type,
-              vehicle_type: booking.vehicle_type,
-              trip_type: booking.trip_type,
-              pickup_address: booking.pickup_address,
-              destination_address: booking.destination_address,
-              scheduled_time: booking.scheduled_time,
-              actual_distance_km: actualDistanceKm,
-              actual_duration_minutes: actualDurationMinutes,
-              actual_days: roundedFareBreakdown.details.days_calculated || 1,
-              base_fare: roundedFareBreakdown.base_fare,
-              distance_fare: roundedFareBreakdown.distance_fare,
-              per_day_charges: 0,
-              driver_allowance: roundedFareBreakdown.driver_allowance,
-              extra_km_charges: roundedFareBreakdown.extra_km_charges,
-              toll_charges: 0,
-              platform_fee: roundedFareBreakdown.platform_fee,
-              gst_on_charges: roundedFareBreakdown.gst_on_charges,
-              gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
-              total_fare: roundedFareBreakdown.total_fare,
-              fare_details: sanitizedFareDetails,
-              completed_at: new Date().toISOString(),
-              driver_name: driverDetails.driver_name,
-              driver_phone: driverDetails.driver_phone || '',
-              driver_rating: driverDetails.driver_rating,
-              vehicle_id: driverDetails.vehicle_id,
-              vehicle_make: driverDetails.vehicle_make || '',
-              vehicle_model: driverDetails.vehicle_model || '',
-              vehicle_color: driverDetails.vehicle_color || '',
-              vehicle_license_plate: driverDetails.vehicle_license_plate || ''
-            })
-            .select()
-            .single();
+            .rpc('insert_outstation_trip_completion', {
+              p_scheduled_booking_id: bookingId,
+              p_driver_id: driverDetails.driver_id,
+              p_customer_id: driverDetails.customer_id,
+              p_booking_type: booking.booking_type,
+              p_vehicle_type: booking.vehicle_type,
+              p_trip_type: booking.trip_type,
+              p_pickup_address: booking.pickup_address,
+              p_destination_address: booking.destination_address,
+              p_actual_distance_km: actualDistanceKm,
+              p_actual_duration_minutes: actualDurationMinutes,
+              p_actual_days: roundedFareBreakdown.details.days_calculated || 1,
+              p_base_fare: roundedFareBreakdown.base_fare,
+              p_distance_fare: roundedFareBreakdown.distance_fare,
+              p_per_day_charges: 0,
+              p_driver_allowance: roundedFareBreakdown.driver_allowance,
+              p_extra_km_charges: roundedFareBreakdown.extra_km_charges,
+              p_toll_charges: 0,
+              p_platform_fee: roundedFareBreakdown.platform_fee,
+              p_gst_on_charges: roundedFareBreakdown.gst_on_charges,
+              p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
+              p_total_fare: roundedFareBreakdown.total_fare,
+              p_fare_details: sanitizedFareDetails,
+              p_scheduled_time: booking.scheduled_time,
+              p_completed_at: new Date().toISOString(),
+              p_driver_name: driverDetails.driver_name,
+              p_driver_phone: driverDetails.driver_phone || '',
+              p_driver_rating: driverDetails.driver_rating,
+              p_vehicle_id: driverDetails.vehicle_id,
+              p_vehicle_make: driverDetails.vehicle_make || '',
+              p_vehicle_model: driverDetails.vehicle_model || '',
+              p_vehicle_color: driverDetails.vehicle_color || '',
+              p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
+            });
 
-          completionError = outstationResult.error;
-          console.log('✅ Outstation completion stored:', outstationResult.data);
-          console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
-          if (completionError) {
+          if (outstationResult.error || !outstationResult.data?.success) {
+            completionError = outstationResult.error || { message: outstationResult.data?.error };
             console.error('❌ Outstation completion error:', completionError);
+          } else {
+            console.log('✅ Outstation completion stored, ID:', outstationResult.data.completion_id);
+            console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
           }
           break;
 
         case 'airport':
           console.log('📝 Storing airport trip completion...');
           const airportResult = await supabase
-            .from('airport_trip_completions')
-            .insert({
-              scheduled_booking_id: bookingId,
-              driver_id: driverDetails.driver_id,
-              customer_id: driverDetails.customer_id,
-              booking_type: booking.booking_type,
-              vehicle_type: booking.vehicle_type,
-              pickup_address: booking.pickup_address,
-              destination_address: booking.destination_address,
-              scheduled_time: booking.scheduled_time,
-              actual_distance_km: actualDistanceKm,
-              actual_duration_minutes: actualDurationMinutes,
-              base_fare: roundedFareBreakdown.base_fare,
-              distance_fare: roundedFareBreakdown.distance_fare,
-              airport_surcharge: 0,
-              time_fare: roundedFareBreakdown.time_fare || 0,
-              platform_fee: roundedFareBreakdown.platform_fee,
-              gst_on_charges: roundedFareBreakdown.gst_on_charges,
-              gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
-              total_fare: roundedFareBreakdown.total_fare,
-              fare_details: sanitizedFareDetails,
-              completed_at: new Date().toISOString(),
-              driver_name: driverDetails.driver_name,
-              driver_phone: driverDetails.driver_phone || '',
-              driver_rating: driverDetails.driver_rating,
-              vehicle_id: driverDetails.vehicle_id,
-              vehicle_make: driverDetails.vehicle_make || '',
-              vehicle_model: driverDetails.vehicle_model || '',
-              vehicle_color: driverDetails.vehicle_color || '',
-              vehicle_license_plate: driverDetails.vehicle_license_plate || ''
-            })
-            .select()
-            .single();
+            .rpc('insert_airport_trip_completion', {
+              p_scheduled_booking_id: bookingId,
+              p_driver_id: driverDetails.driver_id,
+              p_customer_id: driverDetails.customer_id,
+              p_booking_type: booking.booking_type,
+              p_vehicle_type: booking.vehicle_type,
+              p_trip_type: booking.trip_type,
+              p_pickup_address: booking.pickup_address,
+              p_destination_address: booking.destination_address,
+              p_actual_distance_km: actualDistanceKm,
+              p_actual_duration_minutes: actualDurationMinutes,
+              p_base_fare: roundedFareBreakdown.base_fare,
+              p_distance_fare: roundedFareBreakdown.distance_fare,
+              p_airport_surcharge: 0,
+              p_time_fare: roundedFareBreakdown.time_fare || 0,
+              p_platform_fee: roundedFareBreakdown.platform_fee,
+              p_gst_on_charges: roundedFareBreakdown.gst_on_charges,
+              p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
+              p_total_fare: roundedFareBreakdown.total_fare,
+              p_fare_details: sanitizedFareDetails,
+              p_scheduled_time: booking.scheduled_time,
+              p_completed_at: new Date().toISOString(),
+              p_driver_name: driverDetails.driver_name,
+              p_driver_phone: driverDetails.driver_phone || '',
+              p_driver_rating: driverDetails.driver_rating,
+              p_vehicle_id: driverDetails.vehicle_id,
+              p_vehicle_make: driverDetails.vehicle_make || '',
+              p_vehicle_model: driverDetails.vehicle_model || '',
+              p_vehicle_color: driverDetails.vehicle_color || '',
+              p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
+            });
 
-          completionError = airportResult.error;
-          console.log('✅ Airport completion stored:', airportResult.data);
-          console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
-          if (completionError) {
+          if (airportResult.error || !airportResult.data?.success) {
+            completionError = airportResult.error || { message: airportResult.data?.error };
             console.error('❌ Airport completion error:', completionError);
+          } else {
+            console.log('✅ Airport completion stored, ID:', airportResult.data.completion_id);
+            console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
           }
           break;
 
