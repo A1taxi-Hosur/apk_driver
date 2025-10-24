@@ -1515,36 +1515,137 @@ export class FareCalculationService {
     if (tripType === 'one_way') {
       console.log('🛣️ ONE-WAY TRIP CALCULATION');
 
-      const { data: outstationFares, error } = await supabase
-        .from('outstation_fares')
+      // For one-way trips, double the GPS distance for billing
+      // E.g., 50km GPS distance = 100km billing distance
+      const billingDistance = actualDistanceKm * 2;
+
+      console.log('📏 One-way distance calculation:', {
+        actualGpsDistance: actualDistanceKm,
+        billingDistance,
+        calculation: `${actualDistanceKm} km (GPS) × 2 = ${billingDistance} km (billing)`
+      });
+
+      // Try to use slab system for one-way trips (same as round trip logic)
+      const { data: slabPackages, error: slabError } = await supabase
+        .from('outstation_packages')
         .select('*')
         .eq('vehicle_type', vehicleType)
         .eq('is_active', true)
+        .eq('use_slab_system', true)
         .order('created_at', { ascending: false })
         .limit(1);
 
-      if (error || !outstationFares || outstationFares.length === 0) {
-        console.error('Error fetching outstation fare:', error);
-        console.error('❌ No outstation fare found for:', {
-          vehicle_type: vehicleType,
-          is_active: true
+      if (slabError || !slabPackages || slabPackages.length === 0) {
+        console.error('⚠️ Slab package not found for one-way trip, using fallback');
+
+        // Fallback: use per-km rate from outstation_fares
+        const { data: outstationFares, error } = await supabase
+          .from('outstation_fares')
+          .select('*')
+          .eq('vehicle_type', vehicleType)
+          .eq('is_active', true)
+          .order('created_at', { ascending: false })
+          .limit(1);
+
+        if (error || !outstationFares || outstationFares.length === 0) {
+          throw new Error(`Outstation fare configuration not found for ${vehicleType} vehicle`);
+        }
+
+        const outstationConfig = outstationFares[0];
+        const baseFare = outstationConfig.base_fare;
+        const perKmRate = outstationConfig.per_km_rate;
+
+        const kmFare = billingDistance * perKmRate;
+
+        const { data: fareMatrix } = await supabase
+          .from('fare_matrix')
+          .select('platform_fee')
+          .eq('booking_type', 'outstation')
+          .eq('vehicle_type', vehicleType)
+          .eq('is_active', true)
+          .single();
+
+        const platformFee = parseFloat(fareMatrix?.platform_fee?.toString() || '10');
+        const chargesSubtotal = baseFare + kmFare;
+        const gstOnCharges = chargesSubtotal * 0.05;
+        const gstOnPlatformFee = platformFee * 0.18;
+        const totalFareRaw = baseFare + kmFare + platformFee + gstOnCharges + gstOnPlatformFee;
+        const totalFare = this.roundFare(totalFareRaw);
+
+        console.log('💰 ONE-WAY FALLBACK CALCULATION (no slabs):', {
+          baseFare,
+          billingDistance,
+          perKmRate,
+          kmFare,
+          platformFee,
+          totalFare
         });
-        throw new Error(`Outstation fare configuration not found for ${vehicleType} vehicle`);
+
+        return {
+          booking_type: 'outstation',
+          vehicle_type: vehicleType,
+          base_fare: baseFare,
+          distance_fare: kmFare,
+          time_fare: 0,
+          surge_charges: 0,
+          deadhead_charges: 0,
+          platform_fee: platformFee,
+          gst_on_charges: gstOnCharges,
+          gst_on_platform_fee: gstOnPlatformFee,
+          extra_km_charges: 0,
+          driver_allowance: 0,
+          total_fare: totalFare,
+          details: {
+            actual_distance_km: actualDistanceKm,
+            actual_duration_minutes: actualDurationMinutes,
+            per_km_rate: perKmRate,
+            days_calculated: numberOfDays,
+            within_allowance: true,
+            total_km_travelled: actualDistanceKm,
+            billing_distance: billingDistance,
+            direction: 'one_way',
+            pricing_method: 'PER_KM'
+          }
+        };
       }
 
-      const outstationConfig = outstationFares[0];
-      const baseFare = outstationConfig.base_fare;
-      const perKmRate = outstationConfig.per_km_rate;
+      // Use slab system for one-way trip
+      const slabPackage = slabPackages[0];
+      const slabs = [
+        { distance: 10, maxRoundTripKm: 20, fare: slabPackage.slab_10km },
+        { distance: 20, maxRoundTripKm: 40, fare: slabPackage.slab_20km },
+        { distance: 30, maxRoundTripKm: 60, fare: slabPackage.slab_30km },
+        { distance: 40, maxRoundTripKm: 80, fare: slabPackage.slab_40km },
+        { distance: 50, maxRoundTripKm: 100, fare: slabPackage.slab_50km },
+        { distance: 60, maxRoundTripKm: 120, fare: slabPackage.slab_60km },
+        { distance: 70, maxRoundTripKm: 140, fare: slabPackage.slab_70km },
+        { distance: 80, maxRoundTripKm: 160, fare: slabPackage.slab_80km },
+        { distance: 90, maxRoundTripKm: 180, fare: slabPackage.slab_90km },
+        { distance: 100, maxRoundTripKm: 200, fare: slabPackage.slab_100km },
+        { distance: 110, maxRoundTripKm: 220, fare: slabPackage.slab_110km },
+        { distance: 120, maxRoundTripKm: 240, fare: slabPackage.slab_120km },
+        { distance: 130, maxRoundTripKm: 260, fare: slabPackage.slab_130km },
+        { distance: 140, maxRoundTripKm: 280, fare: slabPackage.slab_140km },
+        { distance: 150, maxRoundTripKm: 300, fare: slabPackage.slab_150km }
+      ];
 
-      console.log('✅ Outstation config loaded:', {
-        base_fare: baseFare,
-        per_km_rate: perKmRate
+      console.log('🔍 Slab selection for one-way billing distance:', billingDistance, 'km');
+
+      // Find slab based on billing distance (actual GPS × 2)
+      const selectedSlab = slabs.find(s => billingDistance <= s.maxRoundTripKm) || slabs[slabs.length - 1];
+
+      console.log('✅ Selected slab:', {
+        slabName: `${selectedSlab.distance}km slab`,
+        coversUpTo: `${selectedSlab.maxRoundTripKm}km`,
+        actualGpsDistance: actualDistanceKm,
+        billingDistance,
+        slabFare: selectedSlab.fare
       });
 
-      // ONE WAY: base_fare + (km_travelled × price_per_km × 2)
-      const kmFare = actualDistanceKm * perKmRate * 2;
+      const slabFare = parseFloat(selectedSlab.fare?.toString() || '0');
+      const extraKm = Math.max(0, billingDistance - selectedSlab.maxRoundTripKm);
+      const extraKmCharges = extraKm > 0 ? extraKm * parseFloat(slabPackage.extra_km_rate?.toString() || '0') : 0;
 
-      // Get platform fee from fare matrix
       const { data: fareMatrix } = await supabase
         .from('fare_matrix')
         .select('platform_fee')
@@ -1554,50 +1655,56 @@ export class FareCalculationService {
         .single();
 
       const platformFee = parseFloat(fareMatrix?.platform_fee?.toString() || '10');
-
-      // Calculate GST
-      const chargesSubtotal = baseFare + kmFare;
-      const gstOnCharges = chargesSubtotal * 0.05; // 5% GST
-      const gstOnPlatformFee = platformFee * 0.18; // 18% GST
-
-      const totalFareRaw = baseFare + kmFare + platformFee + gstOnCharges + gstOnPlatformFee;
+      const chargesSubtotal = slabFare + extraKmCharges;
+      const gstOnCharges = chargesSubtotal * 0.05;
+      const gstOnPlatformFee = platformFee * 0.18;
+      const totalFareRaw = slabFare + extraKmCharges + platformFee + gstOnCharges + gstOnPlatformFee;
       const totalFare = this.roundFare(totalFareRaw);
 
-      console.log('💰 ONE-WAY CALCULATION:', {
-        baseFare,
-        actualDistanceKm,
-        perKmRate,
-        kmFare,
-        calculation: `${baseFare} + (${actualDistanceKm} × ${perKmRate} × 2) = ${baseFare} + ${kmFare}`,
+      console.log('💰 ONE-WAY SLAB CALCULATION:', {
+        selectedSlab: `${selectedSlab.distance}km slab (covers up to ${selectedSlab.maxRoundTripKm}km)`,
+        actualGpsDistance: actualDistanceKm,
+        billingDistance,
+        slabFare,
+        extraKm,
+        extraKmRate: slabPackage.extra_km_rate,
+        extraKmCharges,
         platformFee,
         gstOnCharges,
         gstOnPlatformFee,
         totalFareRaw,
-        totalFare
+        totalFare,
+        note: 'One-way trip: GPS distance × 2 for billing, then apply slab'
       });
 
       return {
         booking_type: 'outstation',
         vehicle_type: vehicleType,
-        base_fare: baseFare,
-        distance_fare: kmFare,
+        base_fare: slabFare,
+        distance_fare: 0,
         time_fare: 0,
         surge_charges: 0,
         deadhead_charges: 0,
         platform_fee: platformFee,
         gst_on_charges: gstOnCharges,
         gst_on_platform_fee: gstOnPlatformFee,
-        extra_km_charges: 0,
+        extra_km_charges: extraKmCharges,
         driver_allowance: 0,
         total_fare: totalFare,
         details: {
           actual_distance_km: actualDistanceKm,
           actual_duration_minutes: actualDurationMinutes,
-          per_km_rate: perKmRate,
+          per_km_rate: parseFloat(slabPackage.extra_km_rate?.toString() || '0'),
           days_calculated: numberOfDays,
-          within_allowance: true,
+          within_allowance: extraKm === 0,
+          package_name: `${selectedSlab.distance}km Slab (covers up to ${selectedSlab.maxRoundTripKm}km)`,
+          extra_km: extraKm,
+          base_km_included: selectedSlab.maxRoundTripKm,
+          slab_fare: slabFare,
+          billing_distance: billingDistance,
           total_km_travelled: actualDistanceKm,
-          direction: 'one_way'
+          direction: 'one_way',
+          pricing_method: 'SLAB'
         }
       };
     }
