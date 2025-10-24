@@ -35,6 +35,7 @@ type ScheduledBooking = {
   id: string;
   customer_id: string;
   booking_type: 'outstation' | 'rental' | 'airport';
+  trip_type?: 'one_way' | 'round_trip' | null;
   vehicle_type: string;
   pickup_address: string;
   destination_address: string;
@@ -512,6 +513,15 @@ export default function ScheduledScreen() {
           vehicle_model: driverData?.vehicles?.model,
           vehicle_color: driverData?.vehicles?.color,
           vehicle_license_plate: driverData?.vehicles?.registration_number
+        },
+        {
+          booking_type: currentBooking.booking_type,
+          vehicle_type: currentBooking.vehicle_type,
+          trip_type: currentBooking.trip_type || null,
+          pickup_address: currentBooking.pickup_address,
+          destination_address: currentBooking.destination_address,
+          rental_hours: currentBooking.rental_hours,
+          scheduled_time: currentBooking.scheduled_time
         }
       );
 

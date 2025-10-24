@@ -783,24 +783,41 @@ export class FareCalculationService {
       vehicle_model?: string;
       vehicle_color?: string;
       vehicle_license_plate?: string;
+    },
+    bookingDetails?: {
+      booking_type: string;
+      vehicle_type: string;
+      trip_type: string | null;
+      pickup_address: string;
+      destination_address: string;
+      rental_hours?: number;
+      scheduled_time: string | null;
     }
-  ): Promise<{ success: boolean; error?: string }> {
+  ): Promise<{ success: boolean; error?: string; fareBreakdown?: any }> {
     try {
       console.log('=== STORING PRE-CALCULATED FARE BREAKDOWN ===');
       console.log('Booking ID:', bookingId);
       console.log('Fare breakdown received:', JSON.stringify(fareBreakdown, null, 2));
 
-      // Get booking details
-      const { data: booking, error: bookingError } = await supabase
-        .from('scheduled_bookings')
-        .select('*')
-        .eq('id', bookingId)
-        .single();
-
-      if (bookingError || !booking) {
-        console.error('Error fetching booking:', bookingError);
-        return { success: false, error: 'Booking not found' };
+      // Use booking details passed from caller (which already has access via RPC)
+      // This avoids RLS issues when trying to fetch booking after completion
+      if (!bookingDetails) {
+        console.error('❌ Booking details not provided - cannot store completion');
+        return { success: false, error: 'Booking details required' };
       }
+
+      const booking = {
+        id: bookingId,
+        booking_type: bookingDetails.booking_type,
+        vehicle_type: bookingDetails.vehicle_type,
+        trip_type: bookingDetails.trip_type,
+        pickup_address: bookingDetails.pickup_address,
+        destination_address: bookingDetails.destination_address,
+        rental_hours: bookingDetails.rental_hours,
+        scheduled_time: bookingDetails.scheduled_time
+      };
+
+      console.log('📝 Using booking details from caller:', JSON.stringify(booking, null, 2));
 
       // Round the total fare and sanitize for JSON storage
       const roundedFareBreakdown = {
@@ -988,7 +1005,10 @@ export class FareCalculationService {
       }
 
       console.log('✅ Fare breakdown stored successfully');
-      return { success: true };
+      return {
+        success: true,
+        fareBreakdown: roundedFareBreakdown
+      };
 
     } catch (error: any) {
       console.error('Exception storing fare breakdown:', error);
