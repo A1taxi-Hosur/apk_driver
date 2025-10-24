@@ -8,6 +8,7 @@ import {
   Dimensions,
   ActivityIndicator,
   RefreshControl,
+  Modal,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import {
@@ -16,7 +17,8 @@ import {
   Calendar,
   CreditCard,
   Clock,
-  Car
+  Car,
+  X
 } from 'lucide-react-native';
 import { useAuth } from '../../contexts/AuthContext';
 import { supabase } from '../../utils/supabase';
@@ -69,6 +71,7 @@ export default function EarningsScreen() {
   const [selectedPeriod, setSelectedPeriod] = useState<'today' | 'week' | 'month' | 'date'>('today');
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [selectedDateStats, setSelectedDateStats] = useState<PeriodStats | null>(null);
+  const [showCalendarModal, setShowCalendarModal] = useState(false);
   const emptyPeriodStats: PeriodStats = {
     rides: 0,
     earnings: 0,
@@ -285,21 +288,44 @@ export default function EarningsScreen() {
     setSelectedPeriod('date');
     const stats = calculateDateStats(date, allRides);
     setSelectedDateStats(stats);
+    setShowCalendarModal(false);
   };
 
-  const generateCalendarDays = () => {
+  const generateCalendarGrid = () => {
     const now = new Date();
     const currentMonth = now.getMonth();
     const currentYear = now.getFullYear();
     const firstDay = new Date(currentYear, currentMonth, 1);
     const lastDay = new Date(currentYear, currentMonth + 1, 0);
     const daysInMonth = lastDay.getDate();
+    const startDayOfWeek = firstDay.getDay(); // 0 = Sunday
 
-    const days: Date[] = [];
-    for (let i = 1; i <= daysInMonth; i++) {
-      days.push(new Date(currentYear, currentMonth, i));
+    const calendar: (Date | null)[][] = [];
+    let week: (Date | null)[] = [];
+
+    // Fill empty cells before month starts
+    for (let i = 0; i < startDayOfWeek; i++) {
+      week.push(null);
     }
-    return days;
+
+    // Fill days of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+      week.push(new Date(currentYear, currentMonth, day));
+      if (week.length === 7) {
+        calendar.push(week);
+        week = [];
+      }
+    }
+
+    // Fill remaining empty cells
+    if (week.length > 0) {
+      while (week.length < 7) {
+        week.push(null);
+      }
+      calendar.push(week);
+    }
+
+    return calendar;
   };
 
   const formatCurrency = (amount: number) => {
@@ -365,48 +391,19 @@ export default function EarningsScreen() {
           ))}
         </View>
 
-        {/* Mini Calendar */}
-        <View style={styles.calendarCard}>
-          <View style={styles.calendarHeader}>
-            <Calendar size={18} color="#2563EB" />
-            <Text style={styles.calendarTitle}>
-              {new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })}
-            </Text>
-          </View>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.calendarScroll}>
-            {generateCalendarDays().map((day, index) => {
-              const isSelected = selectedPeriod === 'date' &&
-                selectedDate.getDate() === day.getDate() &&
-                selectedDate.getMonth() === day.getMonth();
-              const isToday = day.toDateString() === new Date().toDateString();
-              return (
-                <TouchableOpacity
-                  key={index}
-                  style={[
-                    styles.calendarDay,
-                    isSelected && styles.calendarDaySelected,
-                    isToday && !isSelected && styles.calendarDayToday
-                  ]}
-                  onPress={() => handleDateSelect(day)}
-                >
-                  <Text style={[
-                    styles.calendarDayText,
-                    isSelected && styles.calendarDayTextSelected,
-                    isToday && !isSelected && styles.calendarDayTextToday
-                  ]}>
-                    {day.getDate()}
-                  </Text>
-                  <Text style={[
-                    styles.calendarDayName,
-                    isSelected && styles.calendarDayNameSelected
-                  ]}>
-                    {day.toLocaleDateString('en-IN', { weekday: 'short' })}
-                  </Text>
-                </TouchableOpacity>
-              );
-            })}
-          </ScrollView>
-        </View>
+        {/* Calendar Button */}
+        <TouchableOpacity
+          style={styles.calendarButton}
+          onPress={() => setShowCalendarModal(true)}
+        >
+          <Calendar size={18} color="#2563EB" />
+          <Text style={styles.calendarButtonText}>
+            {selectedPeriod === 'date'
+              ? selectedDate.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' })
+              : new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })
+            }
+          </Text>
+        </TouchableOpacity>
 
         {/* Main Earnings Card */}
         <View style={styles.mainEarningsCard}>
@@ -579,6 +576,72 @@ export default function EarningsScreen() {
           </View>
         </View>
       </ScrollView>
+
+      {/* Calendar Modal */}
+      <Modal
+        visible={showCalendarModal}
+        transparent={true}
+        animationType="fade"
+        onRequestClose={() => setShowCalendarModal(false)}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.calendarModal}>
+            <View style={styles.calendarModalHeader}>
+              <Text style={styles.calendarModalTitle}>
+                {new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })}
+              </Text>
+              <TouchableOpacity onPress={() => setShowCalendarModal(false)}>
+                <X size={24} color="#64748B" />
+              </TouchableOpacity>
+            </View>
+
+            {/* Week days header */}
+            <View style={styles.weekDaysHeader}>
+              {['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'].map((day) => (
+                <Text key={day} style={styles.weekDayText}>{day}</Text>
+              ))}
+            </View>
+
+            {/* Calendar Grid */}
+            <View style={styles.calendarGrid}>
+              {generateCalendarGrid().map((week, weekIndex) => (
+                <View key={weekIndex} style={styles.calendarWeek}>
+                  {week.map((day, dayIndex) => {
+                    if (!day) {
+                      return <View key={dayIndex} style={styles.calendarEmptyCell} />;
+                    }
+
+                    const isSelected = selectedPeriod === 'date' &&
+                      selectedDate.getDate() === day.getDate() &&
+                      selectedDate.getMonth() === day.getMonth();
+                    const isToday = day.toDateString() === new Date().toDateString();
+
+                    return (
+                      <TouchableOpacity
+                        key={dayIndex}
+                        style={[
+                          styles.calendarCell,
+                          isSelected && styles.calendarCellSelected,
+                          isToday && !isSelected && styles.calendarCellToday
+                        ]}
+                        onPress={() => handleDateSelect(day)}
+                      >
+                        <Text style={[
+                          styles.calendarCellText,
+                          isSelected && styles.calendarCellTextSelected,
+                          isToday && !isSelected && styles.calendarCellTextToday
+                        ]}>
+                          {day.getDate()}
+                        </Text>
+                      </TouchableOpacity>
+                    );
+                  })}
+                </View>
+              ))}
+            </View>
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
@@ -894,61 +957,100 @@ const styles = StyleSheet.create({
     color: '#64748B',
     textAlign: 'center',
   },
-  calendarCard: {
+  calendarButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
     backgroundColor: '#FFFFFF',
     borderRadius: 12,
     padding: 16,
     marginBottom: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 4,
+    elevation: 2,
   },
-  calendarHeader: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 12,
-  },
-  calendarTitle: {
+  calendarButtonText: {
     fontSize: 16,
     fontWeight: '600',
     color: '#1E293B',
     marginLeft: 8,
   },
-  calendarScroll: {
-    flexDirection: 'row',
-  },
-  calendarDay: {
-    width: 60,
-    paddingVertical: 12,
-    paddingHorizontal: 8,
-    marginRight: 8,
-    backgroundColor: '#F8FAFC',
-    borderRadius: 8,
+  modalOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    justifyContent: 'center',
     alignItems: 'center',
   },
-  calendarDaySelected: {
-    backgroundColor: '#2563EB',
+  calendarModal: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
+    padding: 20,
+    width: width - 40,
+    maxWidth: 400,
   },
-  calendarDayToday: {
-    backgroundColor: '#DBEAFE',
-    borderWidth: 1,
-    borderColor: '#2563EB',
+  calendarModalHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 20,
   },
-  calendarDayText: {
+  calendarModalTitle: {
     fontSize: 18,
     fontWeight: '700',
     color: '#1E293B',
-    marginBottom: 4,
   },
-  calendarDayTextSelected: {
-    color: '#FFFFFF',
+  weekDaysHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 12,
   },
-  calendarDayTextToday: {
-    color: '#2563EB',
-  },
-  calendarDayName: {
-    fontSize: 11,
+  weekDayText: {
+    fontSize: 12,
+    fontWeight: '600',
     color: '#64748B',
-    textTransform: 'uppercase',
+    width: 40,
+    textAlign: 'center',
   },
-  calendarDayNameSelected: {
+  calendarGrid: {
+    gap: 8,
+  },
+  calendarWeek: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginBottom: 8,
+  },
+  calendarCell: {
+    width: 40,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+    backgroundColor: '#F8FAFC',
+  },
+  calendarCellSelected: {
+    backgroundColor: '#2563EB',
+  },
+  calendarCellToday: {
+    backgroundColor: '#DBEAFE',
+    borderWidth: 2,
+    borderColor: '#2563EB',
+  },
+  calendarEmptyCell: {
+    width: 40,
+    height: 40,
+  },
+  calendarCellText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#1E293B',
+  },
+  calendarCellTextSelected: {
     color: '#FFFFFF',
+    fontWeight: '700',
+  },
+  calendarCellTextToday: {
+    color: '#2563EB',
+    fontWeight: '700',
   },
 });
