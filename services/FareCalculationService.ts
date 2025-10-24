@@ -322,11 +322,12 @@ export class FareCalculationService {
           const rentalResult = await supabase
             .rpc('insert_rental_trip_completion', {
               p_ride_id: rideId,
+              p_scheduled_booking_id: null,
               p_driver_id: driverDetails?.driver_id,
               p_customer_id: driverDetails?.customer_id,
-              p_booking_type: ride.booking_type,
+              p_booking_type: 'rental',
               p_vehicle_type: ride.vehicle_type,
-              p_trip_type: ride.trip_type,
+              p_trip_type: null,
               p_pickup_address: ride.pickup_address,
               p_destination_address: ride.destination_address || '',
               p_rental_hours: ride.rental_hours || 0,
@@ -379,11 +380,12 @@ export class FareCalculationService {
           const outstationResult = await supabase
             .rpc('insert_outstation_trip_completion', {
               p_ride_id: rideId,
+              p_scheduled_booking_id: null,
               p_driver_id: driverDetails?.driver_id,
               p_customer_id: driverDetails?.customer_id,
-              p_booking_type: ride.booking_type,
+              p_booking_type: 'outstation',
               p_vehicle_type: ride.vehicle_type,
-              p_trip_type: ride.trip_type,
+              p_trip_type: ride.trip_type || 'one_way',
               p_pickup_address: ride.pickup_address,
               p_destination_address: ride.destination_address,
               p_actual_distance_km: fareBreakdown.details.actual_distance_km,
@@ -426,11 +428,12 @@ export class FareCalculationService {
           const airportResult = await supabase
             .rpc('insert_airport_trip_completion', {
               p_ride_id: rideId,
+              p_scheduled_booking_id: null,
               p_driver_id: driverDetails?.driver_id,
               p_customer_id: driverDetails?.customer_id,
-              p_booking_type: ride.booking_type,
+              p_booking_type: 'airport',
               p_vehicle_type: ride.vehicle_type,
-              p_trip_type: ride.trip_type,
+              p_trip_type: null,
               p_pickup_address: ride.pickup_address,
               p_destination_address: ride.destination_address,
               p_actual_distance_km: actualDistanceKm,
