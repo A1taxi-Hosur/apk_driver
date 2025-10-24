@@ -517,10 +517,19 @@ export default function ScheduledScreen() {
 
       if (!completionResult.success) {
         console.error('❌ Failed to store trip completion:', completionResult.error);
-        // Continue anyway - don't block user, but log the error
+
+        // CRITICAL: Alert admin/user that data was not saved
+        Alert.alert(
+          'Warning: Data Not Saved',
+          `Trip was marked as completed, but fare details could not be saved to the database. Error: ${completionResult.error}. Please contact support with booking ID: ${currentBooking.id}`,
+          [{ text: 'OK' }]
+        );
+
+        // Continue anyway - booking is marked complete, but admin needs to know
       } else {
         console.log('✅ Pre-calculated fare breakdown stored successfully');
         console.log('✅ Stored total fare:', fareBreakdown.total_fare);
+        console.log('✅ Completion ID:', completionResult.fareBreakdown?.completion_id);
       }
 
       // Update booking status to completed

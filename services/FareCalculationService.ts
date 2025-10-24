@@ -817,6 +817,12 @@ export class FareCalculationService {
       switch (booking.booking_type) {
         case 'rental':
           console.log('📝 Storing rental trip completion...');
+          console.log('📝 Rental booking details:', {
+            bookingId,
+            rental_hours: booking.rental_hours,
+            actual_hours_used: actualDurationMinutes / 60
+          });
+
           const rentalResult = await supabase
             .rpc('insert_rental_trip_completion', {
               p_scheduled_booking_id: bookingId,
@@ -824,21 +830,21 @@ export class FareCalculationService {
               p_customer_id: driverDetails.customer_id,
               p_booking_type: booking.booking_type,
               p_vehicle_type: booking.vehicle_type,
-              p_trip_type: booking.trip_type,
+              p_trip_type: booking.trip_type || 'one_way',
               p_pickup_address: booking.pickup_address,
               p_destination_address: booking.destination_address,
-              p_rental_hours: booking.rental_hours,
+              p_rental_hours: booking.rental_hours || 4,
               p_actual_hours_used: actualDurationMinutes / 60,
               p_actual_distance_km: actualDistanceKm,
               p_actual_duration_minutes: actualDurationMinutes,
-              p_base_fare: roundedFareBreakdown.base_fare,
+              p_base_fare: roundedFareBreakdown.base_fare || 0,
               p_hourly_charges: 0,
-              p_distance_fare: roundedFareBreakdown.distance_fare,
-              p_extra_km_charges: roundedFareBreakdown.extra_km_charges,
+              p_distance_fare: roundedFareBreakdown.distance_fare || 0,
+              p_extra_km_charges: roundedFareBreakdown.extra_km_charges || 0,
               p_extra_hour_charges: 0,
-              p_platform_fee: roundedFareBreakdown.platform_fee,
-              p_gst_on_charges: roundedFareBreakdown.gst_on_charges,
-              p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
+              p_platform_fee: roundedFareBreakdown.platform_fee || 0,
+              p_gst_on_charges: roundedFareBreakdown.gst_on_charges || 0,
+              p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee || 0,
               p_total_fare: roundedFareBreakdown.total_fare,
               p_fare_details: sanitizedFareDetails,
               p_completed_at: new Date().toISOString(),
@@ -852,9 +858,12 @@ export class FareCalculationService {
               p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
             });
 
+          console.log('📝 Rental RPC result:', JSON.stringify(rentalResult, null, 2));
+
           if (rentalResult.error || !rentalResult.data?.success) {
             completionError = rentalResult.error || { message: rentalResult.data?.error };
             console.error('❌ Rental completion error:', completionError);
+            console.error('❌ Error details:', JSON.stringify(completionError, null, 2));
           } else {
             console.log('✅ Rental completion stored, ID:', rentalResult.data.completion_id);
             console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
@@ -863,6 +872,19 @@ export class FareCalculationService {
 
         case 'outstation':
           console.log('📝 Storing outstation trip completion...');
+          console.log('📝 Booking details:', {
+            bookingId,
+            booking_type: booking.booking_type,
+            vehicle_type: booking.vehicle_type,
+            trip_type: booking.trip_type,
+            scheduled_time: booking.scheduled_time
+          });
+          console.log('📝 Fare breakdown:', JSON.stringify(roundedFareBreakdown, null, 2));
+
+          // Ensure trip_type has a valid value (fallback to 'one_way' if null)
+          const tripType = booking.trip_type || 'one_way';
+          console.log('📝 Using trip_type:', tripType);
+
           const outstationResult = await supabase
             .rpc('insert_outstation_trip_completion', {
               p_scheduled_booking_id: bookingId,
@@ -870,21 +892,21 @@ export class FareCalculationService {
               p_customer_id: driverDetails.customer_id,
               p_booking_type: booking.booking_type,
               p_vehicle_type: booking.vehicle_type,
-              p_trip_type: booking.trip_type,
+              p_trip_type: tripType,
               p_pickup_address: booking.pickup_address,
               p_destination_address: booking.destination_address,
               p_actual_distance_km: actualDistanceKm,
               p_actual_duration_minutes: actualDurationMinutes,
-              p_actual_days: roundedFareBreakdown.details.days_calculated || 1,
-              p_base_fare: roundedFareBreakdown.base_fare,
-              p_distance_fare: roundedFareBreakdown.distance_fare,
+              p_actual_days: roundedFareBreakdown.details?.days_calculated || 1,
+              p_base_fare: roundedFareBreakdown.base_fare || 0,
+              p_distance_fare: roundedFareBreakdown.distance_fare || 0,
               p_per_day_charges: 0,
-              p_driver_allowance: roundedFareBreakdown.driver_allowance,
-              p_extra_km_charges: roundedFareBreakdown.extra_km_charges,
+              p_driver_allowance: roundedFareBreakdown.driver_allowance || 0,
+              p_extra_km_charges: roundedFareBreakdown.extra_km_charges || 0,
               p_toll_charges: 0,
-              p_platform_fee: roundedFareBreakdown.platform_fee,
-              p_gst_on_charges: roundedFareBreakdown.gst_on_charges,
-              p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
+              p_platform_fee: roundedFareBreakdown.platform_fee || 0,
+              p_gst_on_charges: roundedFareBreakdown.gst_on_charges || 0,
+              p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee || 0,
               p_total_fare: roundedFareBreakdown.total_fare,
               p_fare_details: sanitizedFareDetails,
               p_scheduled_time: booking.scheduled_time,
@@ -899,9 +921,12 @@ export class FareCalculationService {
               p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
             });
 
+          console.log('📝 RPC result:', JSON.stringify(outstationResult, null, 2));
+
           if (outstationResult.error || !outstationResult.data?.success) {
             completionError = outstationResult.error || { message: outstationResult.data?.error };
             console.error('❌ Outstation completion error:', completionError);
+            console.error('❌ Error details:', JSON.stringify(completionError, null, 2));
           } else {
             console.log('✅ Outstation completion stored, ID:', outstationResult.data.completion_id);
             console.log('✅ Rounded total fare:', roundedFareBreakdown.total_fare);
