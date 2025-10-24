@@ -46,40 +46,47 @@ type RideEarning = {
   you_owe_total?: number;
 };
 
-type EarningsData = {
-  today: number;
-  week: number;
-  month: number;
-  totalRides: number;
-  avgPerRide: number;
+type PeriodStats = {
+  rides: number;
+  earnings: number;
+  youOwe: number;
+  distance: number;
+  duration: number;
   cashEarnings: number;
   digitalEarnings: number;
-  totalDistance: number;
-  totalHours: number;
-  avgRating: number;
-  youOweToday: number;
-  youOweWeek: number;
-  youOweMonth: number;
+  ratings: number;
+  ratedRides: number;
+};
+
+type EarningsData = {
+  today: PeriodStats;
+  week: PeriodStats;
+  month: PeriodStats;
 };
 
 export default function EarningsScreen() {
   const { driver } = useAuth();
-  const [selectedPeriod, setSelectedPeriod] = useState<'today' | 'week' | 'month'>('today');
-  const [earnings, setEarnings] = useState<EarningsData>({
-    today: 0,
-    week: 0,
-    month: 0,
-    totalRides: 0,
-    avgPerRide: 0,
+  const [selectedPeriod, setSelectedPeriod] = useState<'today' | 'week' | 'month' | 'date'>('today');
+  const [selectedDate, setSelectedDate] = useState<Date>(new Date());
+  const [selectedDateStats, setSelectedDateStats] = useState<PeriodStats | null>(null);
+  const emptyPeriodStats: PeriodStats = {
+    rides: 0,
+    earnings: 0,
+    youOwe: 0,
+    distance: 0,
+    duration: 0,
     cashEarnings: 0,
     digitalEarnings: 0,
-    totalDistance: 0,
-    totalHours: 0,
-    avgRating: 0,
-    youOweToday: 0,
-    youOweWeek: 0,
-    youOweMonth: 0,
+    ratings: 0,
+    ratedRides: 0,
+  };
+
+  const [earnings, setEarnings] = useState<EarningsData>({
+    today: { ...emptyPeriodStats },
+    week: { ...emptyPeriodStats },
+    month: { ...emptyPeriodStats },
   });
+  const [allRides, setAllRides] = useState<RideEarning[]>([]);
   const [recentTransactions, setRecentTransactions] = useState<RideEarning[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -122,80 +129,85 @@ export default function EarningsScreen() {
       const weekStart = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
       const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
 
-      // Calculate earnings by period
-      let todayEarnings = 0;
-      let weekEarnings = 0;
-      let monthEarnings = 0;
-      let cashTotal = 0;
-      let digitalTotal = 0;
-      let totalDistance = 0;
-      let totalDuration = 0;
-      let totalRatings = 0;
-      let ratedRides = 0;
-      let todayYouOwe = 0;
-      let weekYouOwe = 0;
-      let monthYouOwe = 0;
+      // Initialize period stats
+      const todayStats: PeriodStats = { ...emptyPeriodStats };
+      const weekStats: PeriodStats = { ...emptyPeriodStats };
+      const monthStats: PeriodStats = { ...emptyPeriodStats };
 
       completedRides.forEach(ride => {
         const rideDate = new Date(ride.created_at);
         const fareAmount = ride.fare_amount || 0;
         const youOweAmount = ride.you_owe_total || 0;
+        const distance = ride.distance_km || 0;
+        const duration = ride.duration_minutes || 0;
+        const rating = ride.rating || 0;
 
-        // Add to total earnings
+        // Update month stats
         if (rideDate >= monthStart) {
-          monthEarnings += fareAmount;
-          monthYouOwe += youOweAmount;
+          monthStats.rides++;
+          monthStats.earnings += fareAmount;
+          monthStats.youOwe += youOweAmount;
+          monthStats.distance += distance;
+          monthStats.duration += duration;
+          if (ride.payment_method === 'cash') {
+            monthStats.cashEarnings += fareAmount;
+          } else {
+            monthStats.digitalEarnings += fareAmount;
+          }
+          if (rating > 0) {
+            monthStats.ratings += rating;
+            monthStats.ratedRides++;
+          }
         }
+
+        // Update week stats
         if (rideDate >= weekStart) {
-          weekEarnings += fareAmount;
-          weekYouOwe += youOweAmount;
+          weekStats.rides++;
+          weekStats.earnings += fareAmount;
+          weekStats.youOwe += youOweAmount;
+          weekStats.distance += distance;
+          weekStats.duration += duration;
+          if (ride.payment_method === 'cash') {
+            weekStats.cashEarnings += fareAmount;
+          } else {
+            weekStats.digitalEarnings += fareAmount;
+          }
+          if (rating > 0) {
+            weekStats.ratings += rating;
+            weekStats.ratedRides++;
+          }
         }
+
+        // Update today stats
         if (rideDate >= todayStart) {
-          todayEarnings += fareAmount;
-          todayYouOwe += youOweAmount;
-        }
-
-        // Payment method totals
-        if (ride.payment_method === 'cash') {
-          cashTotal += fareAmount;
-        } else {
-          digitalTotal += fareAmount;
-        }
-
-        // Distance and duration
-        if (ride.distance_km) totalDistance += ride.distance_km;
-        if (ride.duration_minutes) totalDuration += ride.duration_minutes;
-
-        // Ratings
-        if (ride.rating) {
-          totalRatings += ride.rating;
-          ratedRides++;
+          todayStats.rides++;
+          todayStats.earnings += fareAmount;
+          todayStats.youOwe += youOweAmount;
+          todayStats.distance += distance;
+          todayStats.duration += duration;
+          if (ride.payment_method === 'cash') {
+            todayStats.cashEarnings += fareAmount;
+          } else {
+            todayStats.digitalEarnings += fareAmount;
+          }
+          if (rating > 0) {
+            todayStats.ratings += rating;
+            todayStats.ratedRides++;
+          }
         }
       });
 
-      const totalEarnings = monthEarnings;
-      const avgPerRide = completedRides.length > 0 ? totalEarnings / completedRides.length : 0;
-      const avgRating = ratedRides > 0 ? totalRatings / ratedRides : 0;
-      const totalHours = Math.round(totalDuration / 60 * 10) / 10; // Convert to hours
-
       const earningsData: EarningsData = {
-        today: todayEarnings,
-        week: weekEarnings,
-        month: monthEarnings,
-        totalRides: completedRides.length,
-        avgPerRide,
-        cashEarnings: cashTotal,
-        digitalEarnings: digitalTotal,
-        totalDistance: Math.round(totalDistance * 10) / 10,
-        totalHours,
-        avgRating: Math.round(avgRating * 10) / 10,
-        youOweToday: Math.round(todayYouOwe * 100) / 100,
-        youOweWeek: Math.round(weekYouOwe * 100) / 100,
-        youOweMonth: Math.round(monthYouOwe * 100) / 100,
+        today: todayStats,
+        week: weekStats,
+        month: monthStats,
       };
 
       console.log('📊 Calculated earnings:', earningsData);
       setEarnings(earningsData);
+
+      // Store all rides for date selection
+      setAllRides(completedRides);
 
       // Set recent transactions (last 10 rides)
       setRecentTransactions(completedRides.slice(0, 10));
@@ -213,21 +225,48 @@ export default function EarningsScreen() {
     setRefreshing(false);
   };
 
-  const getCurrentPeriodEarnings = () => {
+  const calculateDateStats = (date: Date, rides: RideEarning[]): PeriodStats => {
+    const dayStart = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+    const dayEnd = new Date(dayStart.getTime() + 24 * 60 * 60 * 1000);
+
+    const dateStats: PeriodStats = { ...emptyPeriodStats };
+
+    rides.forEach(ride => {
+      const rideDate = new Date(ride.created_at);
+      if (rideDate >= dayStart && rideDate < dayEnd) {
+        const fareAmount = ride.fare_amount || 0;
+        const youOweAmount = ride.you_owe_total || 0;
+        const distance = ride.distance_km || 0;
+        const duration = ride.duration_minutes || 0;
+        const rating = ride.rating || 0;
+
+        dateStats.rides++;
+        dateStats.earnings += fareAmount;
+        dateStats.youOwe += youOweAmount;
+        dateStats.distance += distance;
+        dateStats.duration += duration;
+        if (ride.payment_method === 'cash') {
+          dateStats.cashEarnings += fareAmount;
+        } else {
+          dateStats.digitalEarnings += fareAmount;
+        }
+        if (rating > 0) {
+          dateStats.ratings += rating;
+          dateStats.ratedRides++;
+        }
+      }
+    });
+
+    return dateStats;
+  };
+
+  const getCurrentPeriodStats = (): PeriodStats => {
     switch (selectedPeriod) {
       case 'today': return earnings.today;
       case 'week': return earnings.week;
       case 'month': return earnings.month;
+      case 'date': return selectedDateStats || emptyPeriodStats;
       default: return earnings.today;
-    }
-  };
-
-  const getCurrentPeriodYouOwe = () => {
-    switch (selectedPeriod) {
-      case 'today': return earnings.youOweToday;
-      case 'week': return earnings.youOweWeek;
-      case 'month': return earnings.youOweMonth;
-      default: return earnings.youOweToday;
     }
   };
 
@@ -236,8 +275,31 @@ export default function EarningsScreen() {
       case 'today': return 'Today';
       case 'week': return 'This Week';
       case 'month': return 'This Month';
+      case 'date': return selectedDate.toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
       default: return 'Today';
     }
+  };
+
+  const handleDateSelect = (date: Date) => {
+    setSelectedDate(date);
+    setSelectedPeriod('date');
+    const stats = calculateDateStats(date, allRides);
+    setSelectedDateStats(stats);
+  };
+
+  const generateCalendarDays = () => {
+    const now = new Date();
+    const currentMonth = now.getMonth();
+    const currentYear = now.getFullYear();
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+    const daysInMonth = lastDay.getDate();
+
+    const days: Date[] = [];
+    for (let i = 1; i <= daysInMonth; i++) {
+      days.push(new Date(currentYear, currentMonth, i));
+    }
+    return days;
   };
 
   const formatCurrency = (amount: number) => {
@@ -303,6 +365,49 @@ export default function EarningsScreen() {
           ))}
         </View>
 
+        {/* Mini Calendar */}
+        <View style={styles.calendarCard}>
+          <View style={styles.calendarHeader}>
+            <Calendar size={18} color="#2563EB" />
+            <Text style={styles.calendarTitle}>
+              {new Date().toLocaleDateString('en-IN', { month: 'long', year: 'numeric' })}
+            </Text>
+          </View>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.calendarScroll}>
+            {generateCalendarDays().map((day, index) => {
+              const isSelected = selectedPeriod === 'date' &&
+                selectedDate.getDate() === day.getDate() &&
+                selectedDate.getMonth() === day.getMonth();
+              const isToday = day.toDateString() === new Date().toDateString();
+              return (
+                <TouchableOpacity
+                  key={index}
+                  style={[
+                    styles.calendarDay,
+                    isSelected && styles.calendarDaySelected,
+                    isToday && !isSelected && styles.calendarDayToday
+                  ]}
+                  onPress={() => handleDateSelect(day)}
+                >
+                  <Text style={[
+                    styles.calendarDayText,
+                    isSelected && styles.calendarDayTextSelected,
+                    isToday && !isSelected && styles.calendarDayTextToday
+                  ]}>
+                    {day.getDate()}
+                  </Text>
+                  <Text style={[
+                    styles.calendarDayName,
+                    isSelected && styles.calendarDayNameSelected
+                  ]}>
+                    {day.toLocaleDateString('en-IN', { weekday: 'short' })}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </ScrollView>
+        </View>
+
         {/* Main Earnings Card */}
         <View style={styles.mainEarningsCard}>
           <View style={styles.earningsHeader}>
@@ -310,12 +415,12 @@ export default function EarningsScreen() {
             <View style={styles.trendingContainer}>
               <TrendingUp size={20} color="#10B981" />
               <Text style={styles.trendingText}>
-                {earnings.totalRides > 0 ? `${earnings.totalRides} rides` : 'No rides'}
+                {getCurrentPeriodStats().rides > 0 ? `${getCurrentPeriodStats().rides} rides` : 'No rides'}
               </Text>
             </View>
           </View>
           <Text style={styles.mainEarningsAmount}>
-            {formatCurrency(getCurrentPeriodEarnings())}
+            {formatCurrency(getCurrentPeriodStats().earnings)}
           </Text>
           <Text style={styles.earningsSubtext}>
             From {selectedPeriod === 'today' ? 'today\'s' : 
@@ -329,7 +434,7 @@ export default function EarningsScreen() {
             <Text style={styles.youOweLabel}>You Owe (Commission to Owner)</Text>
           </View>
           <Text style={styles.youOweAmount}>
-            {formatCurrency(getCurrentPeriodYouOwe())}
+            {formatCurrency(getCurrentPeriodStats().youOwe)}
           </Text>
           <Text style={styles.youOweSubtext}>
             Platform fee + GST + 11% commission
@@ -345,25 +450,25 @@ export default function EarningsScreen() {
         <View style={styles.statsGrid}>
           <View style={styles.statCard}>
             <Car size={24} color="#2563EB" />
-            <Text style={styles.statValue}>{earnings.totalRides}</Text>
+            <Text style={styles.statValue}>{getCurrentPeriodStats().rides}</Text>
             <Text style={styles.statLabel}>Total Rides</Text>
           </View>
           
           <View style={styles.statCard}>
             <IndianRupee size={24} color="#10B981" />
-            <Text style={styles.statValue}>{formatCurrency(earnings.avgPerRide)}</Text>
+            <Text style={styles.statValue}>{formatCurrency(getCurrentPeriodStats().rides > 0 ? getCurrentPeriodStats().earnings / getCurrentPeriodStats().rides : 0)}</Text>
             <Text style={styles.statLabel}>Avg per Ride</Text>
           </View>
           
           <View style={styles.statCard}>
             <Clock size={24} color="#F59E0B" />
-            <Text style={styles.statValue}>{earnings.totalHours}hrs</Text>
+            <Text style={styles.statValue}>{Math.round(getCurrentPeriodStats().duration / 60 * 10) / 10}hrs</Text>
             <Text style={styles.statLabel}>Online Time</Text>
           </View>
           
           <View style={styles.statCard}>
             <TrendingUp size={24} color="#8B5CF6" />
-            <Text style={styles.statValue}>{earnings.avgRating || 'N/A'}</Text>
+            <Text style={styles.statValue}>{getCurrentPeriodStats().ratedRides > 0 ? Math.round(getCurrentPeriodStats().ratings / getCurrentPeriodStats().ratedRides * 10) / 10 : 'N/A'}</Text>
             <Text style={styles.statLabel}>Rating</Text>
           </View>
         </View>
@@ -377,7 +482,7 @@ export default function EarningsScreen() {
               <View style={styles.paymentMethodInfo}>
                 <Text style={styles.paymentMethodLabel}>Digital Payments</Text>
                 <Text style={styles.paymentMethodAmount}>
-                  {formatCurrency(earnings.digitalEarnings)}
+                  {formatCurrency(getCurrentPeriodStats().digitalEarnings)}
                 </Text>
               </View>
             </View>
@@ -387,7 +492,7 @@ export default function EarningsScreen() {
               <View style={styles.paymentMethodInfo}>
                 <Text style={styles.paymentMethodLabel}>Cash Payments</Text>
                 <Text style={styles.paymentMethodAmount}>
-                  {formatCurrency(earnings.cashEarnings)}
+                  {formatCurrency(getCurrentPeriodStats().cashEarnings)}
                 </Text>
               </View>
             </View>
@@ -397,11 +502,11 @@ export default function EarningsScreen() {
           <View style={styles.additionalStats}>
             <View style={styles.additionalStatItem}>
               <Text style={styles.additionalStatLabel}>Total Distance</Text>
-              <Text style={styles.additionalStatValue}>{earnings.totalDistance} km</Text>
+              <Text style={styles.additionalStatValue}>{Math.round(getCurrentPeriodStats().distance * 10) / 10} km</Text>
             </View>
             <View style={styles.additionalStatItem}>
               <Text style={styles.additionalStatLabel}>Total Hours</Text>
-              <Text style={styles.additionalStatValue}>{earnings.totalHours} hrs</Text>
+              <Text style={styles.additionalStatValue}>{Math.round(getCurrentPeriodStats().duration / 60 * 10) / 10} hrs</Text>
             </View>
           </View>
         </View>
@@ -456,19 +561,19 @@ export default function EarningsScreen() {
           <Text style={styles.cardTitle}>Performance Summary</Text>
           <View style={styles.performanceGrid}>
             <View style={styles.performanceItem}>
-              <Text style={styles.performanceValue}>{earnings.totalRides}</Text>
+              <Text style={styles.performanceValue}>{getCurrentPeriodStats().rides}</Text>
               <Text style={styles.performanceLabel}>Completed Rides</Text>
             </View>
             <View style={styles.performanceItem}>
-              <Text style={styles.performanceValue}>{earnings.totalDistance} km</Text>
+              <Text style={styles.performanceValue}>{Math.round(getCurrentPeriodStats().distance * 10) / 10} km</Text>
               <Text style={styles.performanceLabel}>Distance Covered</Text>
             </View>
             <View style={styles.performanceItem}>
-              <Text style={styles.performanceValue}>{earnings.avgRating || 'N/A'}</Text>
+              <Text style={styles.performanceValue}>{getCurrentPeriodStats().ratedRides > 0 ? Math.round(getCurrentPeriodStats().ratings / getCurrentPeriodStats().ratedRides * 10) / 10 : 'N/A'}</Text>
               <Text style={styles.performanceLabel}>Average Rating</Text>
             </View>
             <View style={styles.performanceItem}>
-              <Text style={styles.performanceValue}>{formatCurrency(earnings.avgPerRide)}</Text>
+              <Text style={styles.performanceValue}>{formatCurrency(getCurrentPeriodStats().rides > 0 ? getCurrentPeriodStats().earnings / getCurrentPeriodStats().rides : 0)}</Text>
               <Text style={styles.performanceLabel}>Avg Fare/Ride</Text>
             </View>
           </View>
@@ -788,5 +893,62 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#64748B',
     textAlign: 'center',
+  },
+  calendarCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 20,
+  },
+  calendarHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  calendarTitle: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#1E293B',
+    marginLeft: 8,
+  },
+  calendarScroll: {
+    flexDirection: 'row',
+  },
+  calendarDay: {
+    width: 60,
+    paddingVertical: 12,
+    paddingHorizontal: 8,
+    marginRight: 8,
+    backgroundColor: '#F8FAFC',
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  calendarDaySelected: {
+    backgroundColor: '#2563EB',
+  },
+  calendarDayToday: {
+    backgroundColor: '#DBEAFE',
+    borderWidth: 1,
+    borderColor: '#2563EB',
+  },
+  calendarDayText: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#1E293B',
+    marginBottom: 4,
+  },
+  calendarDayTextSelected: {
+    color: '#FFFFFF',
+  },
+  calendarDayTextToday: {
+    color: '#2563EB',
+  },
+  calendarDayName: {
+    fontSize: 11,
+    color: '#64748B',
+    textTransform: 'uppercase',
+  },
+  calendarDayNameSelected: {
+    color: '#FFFFFF',
   },
 });
