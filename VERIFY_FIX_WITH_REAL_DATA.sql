@@ -1,39 +1,27 @@
 -- ============================================================================
--- VERIFY: Check if trip completions are being saved with fare breakdown
+-- Check table structure and test with real data
 -- ============================================================================
 
--- 1. Show the most recent outstation trip completion
-SELECT 
-  id,
-  ride_id,
-  driver_id,
-  booking_type,
-  trip_type,
-  actual_distance_km,
-  actual_duration_minutes,
-  base_fare,
-  total_fare,
-  fare_details,  -- THIS is the fare breakdown (should be stored as JSONB)
-  created_at
-FROM outstation_trip_completions
-ORDER BY created_at DESC
-LIMIT 1;
+-- 1. Check if scheduled_booking_id column exists
+SELECT column_name, data_type
+FROM information_schema.columns
+WHERE table_name = 'outstation_trip_completions'
+ORDER BY ordinal_position;
 
--- Expected: Should show the trip completion we just created
--- The fare_details column should contain: {"test": true}
-
--- 2. Verify the fare_details is proper JSONB
-SELECT 
-  id,
-  ride_id,
-  fare_details,
-  fare_details->>'test' as test_value,  -- Extract the 'test' key
-  pg_typeof(fare_details) as data_type   -- Should be 'jsonb'
-FROM outstation_trip_completions
-ORDER BY created_at DESC
-LIMIT 1;
-
--- Expected:
--- - fare_details: {"test": true}
--- - test_value: "true"
--- - data_type: jsonb
+-- 2. Test with minimal required data (no scheduled_booking_id)
+SELECT insert_outstation_trip_completion(
+  p_ride_id := gen_random_uuid(),
+  p_driver_id := gen_random_uuid(),
+  p_customer_id := gen_random_uuid(),
+  p_booking_type := 'outstation',
+  p_vehicle_type := 'sedan',
+  p_trip_type := 'one_way',
+  p_pickup_address := 'Test Pickup',
+  p_destination_address := 'Test Destination',
+  p_actual_distance_km := 100,
+  p_actual_duration_minutes := 120,
+  p_actual_days := 1,
+  p_base_fare := 1000,
+  p_total_fare := 1200,
+  p_fare_details := '{"test": "value"}'::jsonb
+) as result;
