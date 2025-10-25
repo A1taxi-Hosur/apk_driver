@@ -23,6 +23,7 @@ import MapView from '../../components/MapView';
 import { notificationSoundService } from '../../services/NotificationSoundService';
 import TripCompletionModal from '../../components/TripCompletionModal';
 import { BackgroundLocationService } from '../../services/BackgroundLocationService';
+import { useGPSHealthMonitor } from '../../hooks/useGPSHealthMonitor';
 
 export default function RidesScreen() {
   const { driver, updateDriverStatus } = useAuth();
@@ -58,6 +59,13 @@ export default function RidesScreen() {
   }>({
     visible: false,
     data: null
+  });
+
+  // GPS Health Monitoring - Alert driver if GPS stops working
+  useGPSHealthMonitor({
+    tripId: currentRide?.id || null,
+    tripType: 'regular',
+    isActive: currentRide?.status === 'in_progress'
   });
 
   // Debug: Track component state changes
