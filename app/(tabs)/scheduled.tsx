@@ -335,6 +335,12 @@ export default function ScheduledScreen() {
       let actualDurationMinutes = 0;
       let gpsPointsUsed = 0;
 
+      // IMPORTANT: Default NULL trip_type to 'one_way' for outstation bookings
+      // Declare this outside try block so it's accessible later
+      const effectiveTripType = currentBooking.booking_type === 'outstation' && !currentBooking.trip_type
+        ? 'one_way'
+        : currentBooking.trip_type;
+
       try {
         // Calculate distance from GPS breadcrumbs
         const gpsDistance = await TripLocationTracker.calculateTripDistance(
@@ -355,11 +361,6 @@ export default function ScheduledScreen() {
         // - Driver must return empty (destination → Hosur)
         // - GPS only tracks the one-way journey with customer
         // For ROUND-TRIP or other bookings, GPS tracks the full journey already
-
-        // IMPORTANT: Default NULL trip_type to 'one_way' for outstation bookings
-        const effectiveTripType = currentBooking.booking_type === 'outstation' && !currentBooking.trip_type
-          ? 'one_way'
-          : currentBooking.trip_type;
 
         if (currentBooking.booking_type === 'outstation' && effectiveTripType === 'one_way') {
           actualDistanceKm = gpsDistanceRaw * 2;
