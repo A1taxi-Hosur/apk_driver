@@ -9,12 +9,13 @@ import {
   ScrollView,
   TextInput,
   Alert,
-  Linking,
   ActivityIndicator,
   Platform,
 } from 'react-native';
 import { CircleCheck as CheckCircle, MapPin, Clock, X, Star, User, Car, Phone, Download } from 'lucide-react-native';
 import { supabase } from '../utils/supabase';
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
 
 const { width } = Dimensions.get('window');
 
@@ -195,9 +196,59 @@ export default function CustomerTripCompletionModal({
           link.click();
           Alert.alert('Success', 'Bill downloaded successfully!');
         } else {
-          // On mobile, open the PDF in browser or share
-          const pdfUrl = result.pdf;
-          await Linking.openURL(pdfUrl);
+          // On mobile, save to device storage
+          console.log('📱 Saving PDF to device storage...');
+
+          // Extract base64 data from data URL
+          const base64Data = result.pdf.split(',')[1];
+
+          // Create filename with timestamp
+          const timestamp = new Date().getTime();
+          const filename = `Trip_Invoice_${tripData.ride_id.substring(0, 8)}_${timestamp}.pdf`;
+          const fileUri = `${FileSystem.documentDirectory}${filename}`;
+
+          // Write PDF to device storage
+          await FileSystem.writeAsStringAsync(fileUri, base64Data, {
+            encoding: FileSystem.EncodingType.Base64,
+          });
+
+          console.log('✅ PDF saved to:', fileUri);
+
+          // Check if sharing is available
+          const isSharingAvailable = await Sharing.isAvailableAsync();
+
+          if (isSharingAvailable) {
+            // Show option to save or share
+            Alert.alert(
+              'Bill Downloaded',
+              `Bill saved successfully!\n\nLocation: ${filename}\n\nWould you like to share or save it to another location?`,
+              [
+                {
+                  text: 'Done',
+                  style: 'cancel',
+                },
+                {
+                  text: 'Share/Save',
+                  onPress: async () => {
+                    try {
+                      await Sharing.shareAsync(fileUri, {
+                        mimeType: 'application/pdf',
+                        dialogTitle: 'Save or Share Bill',
+                        UTI: 'com.adobe.pdf',
+                      });
+                    } catch (shareError) {
+                      console.error('Error sharing:', shareError);
+                    }
+                  },
+                },
+              ]
+            );
+          } else {
+            Alert.alert(
+              'Success',
+              `Bill saved successfully!\n\nLocation: ${filename}\n\nYou can find it in your Downloads folder.`
+            );
+          }
         }
       } else {
         throw new Error('Invalid response from server');
