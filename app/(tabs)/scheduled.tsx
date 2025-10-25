@@ -347,19 +347,27 @@ export default function ScheduledScreen() {
         // - Driver must return empty (destination → Hosur)
         // - GPS only tracks the one-way journey with customer
         // For ROUND-TRIP or other bookings, GPS tracks the full journey already
-        if (currentBooking.booking_type === 'outstation' && currentBooking.trip_type === 'one_way') {
+
+        // IMPORTANT: Default NULL trip_type to 'one_way' for outstation bookings
+        const effectiveTripType = currentBooking.booking_type === 'outstation' && !currentBooking.trip_type
+          ? 'one_way'
+          : currentBooking.trip_type;
+
+        if (currentBooking.booking_type === 'outstation' && effectiveTripType === 'one_way') {
           actualDistanceKm = gpsDistanceRaw * 2;
           console.log('✅ GPS-tracked distance for ONE-WAY outstation trip (doubled):', {
             oneWayGpsDistance: gpsDistanceRaw.toFixed(2),
             totalDistanceCharged: actualDistanceKm.toFixed(2),
-            note: 'GPS distance × 2 because driver returns empty'
+            originalTripType: currentBooking.trip_type,
+            effectiveTripType: effectiveTripType,
+            note: 'GPS distance × 2 because driver returns empty (NULL defaults to one_way)'
           });
         } else {
           actualDistanceKm = gpsDistanceRaw;
           console.log('✅ GPS-tracked distance for scheduled trip:', {
             distanceKm: actualDistanceKm.toFixed(2),
             bookingType: currentBooking.booking_type,
-            tripType: currentBooking.trip_type || 'N/A',
+            tripType: effectiveTripType || 'N/A',
             note: 'Actual GPS distance traveled (includes all movements, stops, detours)'
           });
         }
@@ -391,12 +399,30 @@ export default function ScheduledScreen() {
             pointsUsed: gpsPointsUsed
           });
 
-          Alert.alert(
-            'GPS Tracking Error',
-            'GPS tracking failed. Cannot complete trip without accurate GPS data. Please ensure location services are enabled and try again.',
-            [{ text: 'OK' }]
-          );
-          return;
+          // For outstation trips with GPS failure, use minimum estimated distance
+          // This is a fallback when GPS tracking completely fails (0 points)
+          if (currentBooking.booking_type === 'outstation' && gpsPointsUsed === 0) {
+            console.warn('⚠️ GPS collected 0 points - using minimum estimated distance');
+
+            // Use minimum slab distance (20 km one-way = 40 km round trip)
+            // Admin MUST verify actual distance later
+            actualDistanceKm = 40; // Minimum chargeable distance for outstation
+            actualDurationMinutes = 60; // 1 hour estimate
+
+            console.log('⚠️ Using fallback distance for failed GPS:', {
+              fallbackDistance: actualDistanceKm,
+              note: 'Admin must verify and adjust actual distance in completion record'
+            });
+
+            // Continue with completion using fallback distance
+          } else {
+            Alert.alert(
+              'GPS Tracking Error',
+              'GPS tracking failed. Cannot complete trip without accurate GPS data. Please ensure location services are enabled and try again.',
+              [{ text: 'OK' }]
+            );
+            return;
+          }
         }
       } catch (error) {
         console.error('❌ GPS distance calculation exception:', error);
@@ -517,7 +543,7 @@ export default function ScheduledScreen() {
         {
           booking_type: currentBooking.booking_type,
           vehicle_type: currentBooking.vehicle_type,
-          trip_type: currentBooking.trip_type || null,
+          trip_type: effectiveTripType || null,
           pickup_address: currentBooking.pickup_address,
           destination_address: currentBooking.destination_address,
           rental_hours: currentBooking.rental_hours,
