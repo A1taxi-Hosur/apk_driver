@@ -807,7 +807,20 @@ export default function ScheduledScreen() {
               <Text style={styles.customerName}>
                 {currentBooking.customer?.full_name || 'Customer'}
               </Text>
-              <TouchableOpacity style={styles.phoneButton}>
+              <TouchableOpacity
+                style={styles.phoneButton}
+                onPress={() => {
+                  if (currentBooking.customer?.phone_number) {
+                    Alert.alert(
+                      'Customer Contact',
+                      `Phone: ${currentBooking.customer.phone_number}`,
+                      [{ text: 'OK' }]
+                    );
+                  } else {
+                    Alert.alert('Info', 'Customer phone number not available');
+                  }
+                }}
+              >
                 <Phone size={16} color="#2563EB" />
               </TouchableOpacity>
             </View>
