@@ -3,7 +3,6 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useRouter, useSegments } from 'expo-router';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
-import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { LocationProvider } from '@/contexts/LocationContext';
 import { RideProvider } from '@/contexts/RideContext';
@@ -76,8 +75,6 @@ const styles = StyleSheet.create({
 });
 
 export default function RootLayout() {
-  useFrameworkReady();
-
   return (
     <AuthProvider>
       <LocationProvider>

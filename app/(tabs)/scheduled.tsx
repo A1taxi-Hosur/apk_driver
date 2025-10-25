@@ -28,7 +28,6 @@ import { supabase } from '../../utils/supabase';
 import { openGoogleMapsNavigation } from '../../utils/maps';
 import OTPModal from '../../components/OTPModal';
 import CustomerTripCompletionModal from '../../components/CustomerTripCompletionModal';
-import { useGPSHealthMonitor } from '../../hooks/useGPSHealthMonitor';
 import { FareCalculationService } from '../../services/FareCalculationService';
 import { TripLocationTracker } from '../../services/TripLocationTracker';
 
@@ -74,13 +73,6 @@ export default function ScheduledScreen() {
   const [currentOTP, setCurrentOTP] = useState('');
   const [showCompletionModal, setShowCompletionModal] = useState(false);
   const [completionData, setCompletionData] = useState<any>(null);
-
-  // GPS Health Monitoring - Alert driver if GPS stops working during scheduled trip
-  useGPSHealthMonitor({
-    tripId: currentBooking?.id || null,
-    tripType: 'scheduled',
-    isActive: currentBooking?.status === 'in_progress'
-  });
 
   useEffect(() => {
     if (driver) {
