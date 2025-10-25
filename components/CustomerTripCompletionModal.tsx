@@ -9,8 +9,12 @@ import {
   ScrollView,
   TextInput,
   Alert,
+  Linking,
+  ActivityIndicator,
+  Platform,
 } from 'react-native';
-import { CircleCheck as CheckCircle, MapPin, Clock, X, Star, User, Car, Phone } from 'lucide-react-native';
+import { CircleCheck as CheckCircle, MapPin, Clock, X, Star, User, Car, Phone, Download } from 'lucide-react-native';
+import { supabase } from '../utils/supabase';
 
 const { width } = Dimensions.get('window');
 
@@ -77,6 +81,7 @@ export default function CustomerTripCompletionModal({
   const [feedback, setFeedback] = useState<string>('');
   const [isSubmittingRating, setIsSubmittingRating] = useState(false);
   const [hasSubmittedRating, setHasSubmittedRating] = useState(false);
+  const [isDownloadingPDF, setIsDownloadingPDF] = useState(false);
 
   console.log('🎯 CustomerTripCompletionModal RENDER');
   console.log('  - visible:', visible);
@@ -139,6 +144,70 @@ export default function CustomerTripCompletionModal({
       Alert.alert('Error', 'Failed to submit rating. Please try again.');
     } finally {
       setIsSubmittingRating(false);
+    }
+  };
+
+  const handleDownloadBill = async () => {
+    if (!tripData.ride_id) {
+      Alert.alert('Error', 'Unable to download bill. Trip information is missing.');
+      return;
+    }
+
+    try {
+      setIsDownloadingPDF(true);
+      console.log('📄 Generating PDF bill...');
+
+      // Call edge function to generate PDF
+      const { data: sessionData } = await supabase.auth.getSession();
+      const token = sessionData?.session?.access_token;
+
+      if (!token) {
+        throw new Error('Not authenticated');
+      }
+
+      const apiUrl = `${process.env.EXPO_PUBLIC_SUPABASE_URL}/functions/v1/generate-trip-bill`;
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          completionId: tripData.ride_id,
+          tripType: tripData.booking_type || 'regular'
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to generate PDF');
+      }
+
+      const result = await response.json();
+
+      if (result.success && result.pdf) {
+        // On web, download the PDF
+        if (Platform.OS === 'web') {
+          const link = document.createElement('a');
+          link.href = result.pdf;
+          link.download = result.filename;
+          link.click();
+          Alert.alert('Success', 'Bill downloaded successfully!');
+        } else {
+          // On mobile, open the PDF in browser or share
+          const pdfUrl = result.pdf;
+          await Linking.openURL(pdfUrl);
+        }
+      } else {
+        throw new Error('Invalid response from server');
+      }
+
+    } catch (error) {
+      console.error('Error downloading bill:', error);
+      Alert.alert('Error', 'Failed to download bill. Please try again.');
+    } finally {
+      setIsDownloadingPDF(false);
     }
   };
 
@@ -460,10 +529,27 @@ export default function CustomerTripCompletionModal({
             )}
           </ScrollView>
 
-          {/* Done Button */}
-          <TouchableOpacity style={styles.doneButton} onPress={onClose}>
-            <Text style={styles.doneButtonText}>Done</Text>
-          </TouchableOpacity>
+          {/* Action Buttons */}
+          <View style={styles.actionButtons}>
+            <TouchableOpacity
+              style={[styles.downloadButton, isDownloadingPDF && styles.downloadButtonDisabled]}
+              onPress={handleDownloadBill}
+              disabled={isDownloadingPDF}
+            >
+              {isDownloadingPDF ? (
+                <ActivityIndicator size="small" color="#FFFFFF" />
+              ) : (
+                <>
+                  <Download size={20} color="#FFFFFF" />
+                  <Text style={styles.downloadButtonText}>Download Bill</Text>
+                </>
+              )}
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.doneButton} onPress={onClose}>
+              <Text style={styles.doneButtonText}>Done</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </Modal>
@@ -731,13 +817,36 @@ const styles = StyleSheet.create({
     color: '#10B981',
     marginTop: 16,
   },
+  actionButtons: {
+    flexDirection: 'row',
+    gap: 12,
+    marginTop: 16,
+    marginBottom: 20,
+  },
+  downloadButton: {
+    backgroundColor: '#3B82F6',
+    borderRadius: 12,
+    paddingVertical: 16,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 8,
+    flex: 1,
+  },
+  downloadButtonDisabled: {
+    backgroundColor: '#93C5FD',
+  },
+  downloadButtonText: {
+    fontSize: 16,
+    fontWeight: '600',
+    color: '#FFFFFF',
+  },
   doneButton: {
     backgroundColor: '#10B981',
     borderRadius: 12,
     paddingVertical: 16,
     alignItems: 'center',
-    marginTop: 16,
-    marginBottom: 20,
+    flex: 1,
   },
   doneButtonText: {
     fontSize: 16,
