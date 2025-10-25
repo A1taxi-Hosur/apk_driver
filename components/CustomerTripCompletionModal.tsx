@@ -12,7 +12,7 @@ import {
   ActivityIndicator,
   Platform,
 } from 'react-native';
-import { CircleCheck as CheckCircle, MapPin, Clock, X, Star, User, Car, Phone, Download } from 'lucide-react-native';
+import { CircleCheck as CheckCircle, MapPin, Clock, X, Star } from 'lucide-react-native';
 import { supabase } from '../utils/supabase';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
@@ -288,47 +288,6 @@ export default function CustomerTripCompletionModal({
             contentContainerStyle={styles.scrollContent}
             showsVerticalScrollIndicator={true}
           >
-            {/* Driver Information */}
-            {tripData.driver_name && (
-              <View style={styles.driverSection}>
-                <Text style={styles.sectionTitle}>Driver Information</Text>
-                <View style={styles.driverCard}>
-                  <View style={styles.driverInfo}>
-                    <User size={24} color="#2563EB" />
-                    <View style={styles.driverDetails}>
-                      <Text style={styles.driverName}>{tripData.driver_name}</Text>
-                      {tripData.driver_phone && (
-                        <View style={styles.driverPhoneRow}>
-                          <Phone size={14} color="#64748B" />
-                          <Text style={styles.driverPhone}>{tripData.driver_phone}</Text>
-                        </View>
-                      )}
-                      {tripData.driver_rating && (
-                        <View style={styles.driverRatingRow}>
-                          <Star size={14} color="#F59E0B" fill="#F59E0B" />
-                          <Text style={styles.driverRatingText}>{tripData.driver_rating.toFixed(1)}</Text>
-                        </View>
-                      )}
-                    </View>
-                  </View>
-
-                  {/* Vehicle Info */}
-                  {tripData.vehicle_make && (
-                    <View style={styles.vehicleInfo}>
-                      <Car size={20} color="#64748B" />
-                      <View style={styles.vehicleDetails}>
-                        <Text style={styles.vehicleText}>
-                          {tripData.vehicle_color} {tripData.vehicle_make} {tripData.vehicle_model}
-                        </Text>
-                        {tripData.vehicle_license_plate && (
-                          <Text style={styles.vehiclePlate}>{tripData.vehicle_license_plate}</Text>
-                        )}
-                      </View>
-                    </View>
-                  )}
-                </View>
-              </View>
-            )}
 
             {/* Trip Summary */}
             <View style={styles.tripSummary}>
@@ -582,21 +541,6 @@ export default function CustomerTripCompletionModal({
 
           {/* Action Buttons */}
           <View style={styles.actionButtons}>
-            <TouchableOpacity
-              style={[styles.downloadButton, isDownloadingPDF && styles.downloadButtonDisabled]}
-              onPress={handleDownloadBill}
-              disabled={isDownloadingPDF}
-            >
-              {isDownloadingPDF ? (
-                <ActivityIndicator size="small" color="#FFFFFF" />
-              ) : (
-                <>
-                  <Download size={20} color="#FFFFFF" />
-                  <Text style={styles.downloadButtonText}>Download Bill</Text>
-                </>
-              )}
-            </TouchableOpacity>
-
             <TouchableOpacity style={styles.doneButton} onPress={onClose}>
               <Text style={styles.doneButtonText}>Done</Text>
             </TouchableOpacity>
@@ -869,35 +813,14 @@ const styles = StyleSheet.create({
     marginTop: 16,
   },
   actionButtons: {
-    flexDirection: 'row',
-    gap: 12,
     marginTop: 16,
     marginBottom: 20,
-  },
-  downloadButton: {
-    backgroundColor: '#3B82F6',
-    borderRadius: 12,
-    paddingVertical: 16,
-    alignItems: 'center',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    gap: 8,
-    flex: 1,
-  },
-  downloadButtonDisabled: {
-    backgroundColor: '#93C5FD',
-  },
-  downloadButtonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#FFFFFF',
   },
   doneButton: {
     backgroundColor: '#10B981',
     borderRadius: 12,
     paddingVertical: 16,
     alignItems: 'center',
-    flex: 1,
   },
   doneButtonText: {
     fontSize: 16,
