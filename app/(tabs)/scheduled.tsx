@@ -285,9 +285,8 @@ export default function ScheduledScreen() {
         return;
       }
 
-      // Update driver status to 'busy' when trip starts
-      await updateDriverStatus('busy');
-      console.log('✅ Driver status set to busy');
+      // Driver status is automatically set to 'busy' by the RPC function
+      console.log('✅ Trip started - driver status automatically updated to busy');
 
       await loadScheduledBookings();
 
