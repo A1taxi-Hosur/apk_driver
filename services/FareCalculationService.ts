@@ -268,6 +268,31 @@ export class FareCalculationService {
           return { success: false, error: 'Invalid booking type' };
       }
 
+      // Apply promo discount to actual calculated fare (not estimated fare)
+      let actualPromoDiscount = 0;
+      let finalTotalFare = fareBreakdown.total_fare;
+
+      if (ride.promo_code && ride.promo_discount && ride.original_fare) {
+        // Calculate promo percentage from original booking
+        const promoPercentage = (parseFloat(ride.promo_discount.toString()) / parseFloat(ride.original_fare.toString())) * 100;
+
+        // Apply the same percentage to the ACTUAL calculated fare
+        actualPromoDiscount = (fareBreakdown.total_fare * promoPercentage) / 100;
+        actualPromoDiscount = this.roundFare(actualPromoDiscount);
+
+        // Calculate final fare after promo
+        finalTotalFare = fareBreakdown.total_fare - actualPromoDiscount;
+        finalTotalFare = this.roundFare(finalTotalFare);
+
+        console.log('📊 PROMO CALCULATION:');
+        console.log('  Original estimated fare:', ride.original_fare);
+        console.log('  Original promo discount:', ride.promo_discount);
+        console.log('  Promo percentage:', promoPercentage.toFixed(2) + '%');
+        console.log('  Actual calculated fare:', fareBreakdown.total_fare);
+        console.log('  Actual promo discount:', actualPromoDiscount);
+        console.log('  Final fare after promo:', finalTotalFare);
+      }
+
       // Store trip completion record in the appropriate table based on booking type
       let completionError = null;
       let tripCompletion = null;
@@ -296,7 +321,7 @@ export class FareCalculationService {
               p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
               p_extra_km_charges: fareBreakdown.extra_km_charges,
               p_driver_allowance: fareBreakdown.driver_allowance,
-              p_total_fare: fareBreakdown.total_fare,
+              p_total_fare: finalTotalFare,
               p_fare_details: fareBreakdown,
               p_rental_hours: ride.rental_hours,
               p_scheduled_time: ride.scheduled_time,
@@ -310,8 +335,8 @@ export class FareCalculationService {
               p_vehicle_color: driverDetails?.vehicle_color || '',
               p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
               p_promo_code: ride.promo_code || null,
-              p_promo_discount: ride.promo_discount || null,
-              p_original_fare: ride.original_fare || null
+              p_promo_discount: actualPromoDiscount || null,
+              p_original_fare: fareBreakdown.total_fare
             });
 
           if (regularResult.error || !regularResult.data?.success) {
@@ -345,7 +370,7 @@ export class FareCalculationService {
               p_platform_fee: fareBreakdown.platform_fee,
               p_gst_on_charges: fareBreakdown.gst_on_charges,
               p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              p_total_fare: fareBreakdown.total_fare,
+              p_total_fare: finalTotalFare,
               p_fare_details: fareBreakdown,
               p_completed_at: new Date().toISOString(),
               p_driver_name: driverDetails?.driver_name || 'Driver',
@@ -357,8 +382,8 @@ export class FareCalculationService {
               p_vehicle_color: driverDetails?.vehicle_color || '',
               p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
               p_promo_code: ride.promo_code || null,
-              p_promo_discount: ride.promo_discount || null,
-              p_original_fare: ride.original_fare || null
+              p_promo_discount: actualPromoDiscount || null,
+              p_original_fare: fareBreakdown.total_fare
             });
 
           if (rentalResult.error || !rentalResult.data?.success) {
@@ -406,7 +431,7 @@ export class FareCalculationService {
               p_platform_fee: fareBreakdown.platform_fee,
               p_gst_on_charges: fareBreakdown.gst_on_charges,
               p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              p_total_fare: fareBreakdown.total_fare,
+              p_total_fare: finalTotalFare,
               p_fare_details: fareBreakdown,
               p_scheduled_time: ride.scheduled_time,
               p_completed_at: new Date().toISOString(),
@@ -419,8 +444,8 @@ export class FareCalculationService {
               p_vehicle_color: driverDetails?.vehicle_color || '',
               p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
               p_promo_code: ride.promo_code || null,
-              p_promo_discount: ride.promo_discount || null,
-              p_original_fare: ride.original_fare || null
+              p_promo_discount: actualPromoDiscount || null,
+              p_original_fare: fareBreakdown.total_fare
             });
 
           if (outstationResult.error || !outstationResult.data?.success) {
@@ -454,7 +479,7 @@ export class FareCalculationService {
               p_platform_fee: fareBreakdown.platform_fee,
               p_gst_on_charges: fareBreakdown.gst_on_charges,
               p_gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              p_total_fare: fareBreakdown.total_fare,
+              p_total_fare: finalTotalFare,
               p_fare_details: fareBreakdown,
               p_scheduled_time: ride.scheduled_time,
               p_completed_at: new Date().toISOString(),
@@ -467,8 +492,8 @@ export class FareCalculationService {
               p_vehicle_color: driverDetails?.vehicle_color || '',
               p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
               p_promo_code: ride.promo_code || null,
-              p_promo_discount: ride.promo_discount || null,
-              p_original_fare: ride.original_fare || null
+              p_promo_discount: actualPromoDiscount || null,
+              p_original_fare: fareBreakdown.total_fare
             });
 
           if (airportResult.error || !airportResult.data?.success) {
@@ -615,6 +640,31 @@ export class FareCalculationService {
 
       console.log('✅ Fare breakdown calculated:', fareBreakdown);
 
+      // Apply promo discount to actual calculated fare (not estimated fare)
+      let actualPromoDiscount = 0;
+      let finalTotalFare = fareBreakdown.total_fare;
+
+      if (booking.promo_code && booking.promo_discount && booking.fare_amount) {
+        // Calculate promo percentage from original booking
+        const promoPercentage = (parseFloat(booking.promo_discount.toString()) / parseFloat(booking.fare_amount.toString())) * 100;
+
+        // Apply the same percentage to the ACTUAL calculated fare
+        actualPromoDiscount = (fareBreakdown.total_fare * promoPercentage) / 100;
+        actualPromoDiscount = this.roundFare(actualPromoDiscount);
+
+        // Calculate final fare after promo
+        finalTotalFare = fareBreakdown.total_fare - actualPromoDiscount;
+        finalTotalFare = this.roundFare(finalTotalFare);
+
+        console.log('📊 SCHEDULED BOOKING PROMO CALCULATION:');
+        console.log('  Original estimated fare:', booking.fare_amount);
+        console.log('  Original promo discount:', booking.promo_discount);
+        console.log('  Promo percentage:', promoPercentage.toFixed(2) + '%');
+        console.log('  Actual calculated fare:', fareBreakdown.total_fare);
+        console.log('  Actual promo discount:', actualPromoDiscount);
+        console.log('  Final fare after promo:', finalTotalFare);
+      }
+
       // Store in appropriate completion table
       let completionError: any = null;
       let tripCompletion: any = null;
@@ -644,8 +694,11 @@ export class FareCalculationService {
               platform_fee: fareBreakdown.platform_fee,
               gst_on_charges: fareBreakdown.gst_on_charges,
               gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              total_fare: fareBreakdown.total_fare,
+              total_fare: finalTotalFare,
               fare_details: fareBreakdown,
+              promo_code: booking.promo_code || null,
+              promo_discount: actualPromoDiscount || null,
+              original_fare: fareBreakdown.total_fare,
               driver_name: driverDetails.driver_name,
               driver_phone: driverDetails.driver_phone || '',
               driver_rating: driverDetails.driver_rating,
@@ -691,8 +744,11 @@ export class FareCalculationService {
               platform_fee: fareBreakdown.platform_fee,
               gst_on_charges: fareBreakdown.gst_on_charges,
               gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              total_fare: fareBreakdown.total_fare,
+              total_fare: finalTotalFare,
               fare_details: fareBreakdown,
+              promo_code: booking.promo_code || null,
+              promo_discount: actualPromoDiscount || null,
+              original_fare: fareBreakdown.total_fare,
               driver_name: driverDetails.driver_name,
               driver_phone: driverDetails.driver_phone || '',
               driver_rating: driverDetails.driver_rating,
@@ -734,8 +790,11 @@ export class FareCalculationService {
               platform_fee: fareBreakdown.platform_fee,
               gst_on_charges: fareBreakdown.gst_on_charges,
               gst_on_platform_fee: fareBreakdown.gst_on_platform_fee,
-              total_fare: fareBreakdown.total_fare,
+              total_fare: finalTotalFare,
               fare_details: fareBreakdown,
+              promo_code: booking.promo_code || null,
+              promo_discount: actualPromoDiscount || null,
+              original_fare: fareBreakdown.total_fare,
               driver_name: driverDetails.driver_name,
               driver_phone: driverDetails.driver_phone || '',
               driver_rating: driverDetails.driver_rating,
