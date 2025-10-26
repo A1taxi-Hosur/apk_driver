@@ -1046,9 +1046,9 @@ export function RideProvider({ children }: RideProviderProps) {
         destination_address: ride.destination_address,
         booking_type: ride.booking_type,
         rental_hours: ride.rental_hours,
-        promo_code: ride.promo_code,
-        promo_discount: ride.promo_discount,
-        original_fare: ride.original_fare
+        promo_code: fareResult.promo_code || null,
+        promo_discount: fareResult.promo_discount || null,
+        original_fare: fareResult.original_fare || null
       }
 
       console.log('=== COMPLETION DATA PREPARED ===')

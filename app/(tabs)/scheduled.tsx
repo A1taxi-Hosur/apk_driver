@@ -501,6 +501,31 @@ export default function ScheduledScreen() {
       console.log('✅ Fare calculated:', fareBreakdown.total_fare);
       console.log('📊 Complete fare breakdown:', JSON.stringify(fareBreakdown, null, 2));
 
+      // Apply promo discount if applicable
+      let actualPromoDiscount = 0;
+      let originalFareBeforePromo = fareBreakdown.total_fare;
+
+      if (currentBooking.promo_code && currentBooking.promo_discount && currentBooking.original_fare) {
+        // Calculate promo percentage from original booking
+        const promoPercentage = (parseFloat(currentBooking.promo_discount.toString()) / parseFloat(currentBooking.original_fare.toString())) * 100;
+
+        // Apply the same percentage to the ACTUAL calculated fare
+        actualPromoDiscount = (fareBreakdown.total_fare * promoPercentage) / 100;
+        actualPromoDiscount = Math.round(actualPromoDiscount); // Round to nearest rupee
+
+        // Calculate final fare after promo
+        fareBreakdown.total_fare = fareBreakdown.total_fare - actualPromoDiscount;
+        fareBreakdown.total_fare = Math.round(fareBreakdown.total_fare);
+
+        console.log('📊 PROMO APPLIED:');
+        console.log('  Original estimated fare:', currentBooking.original_fare);
+        console.log('  Original promo discount:', currentBooking.promo_discount);
+        console.log('  Promo percentage:', promoPercentage + '%');
+        console.log('  Actual calculated fare (before promo):', originalFareBeforePromo);
+        console.log('  Recalculated promo discount:', actualPromoDiscount);
+        console.log('  Final fare (after promo):', fareBreakdown.total_fare);
+      }
+
       // Get driver details for completion record
       const { data: driverData } = await supabase
         .from('drivers')
@@ -632,9 +657,9 @@ export default function ScheduledScreen() {
         vehicle_color: driverData?.vehicles?.color,
         vehicle_license_plate: driverData?.vehicles?.registration_number,
         ride_id: currentBooking.id,
-        promo_code: currentBooking.promo_code,
-        promo_discount: currentBooking.promo_discount,
-        original_fare: currentBooking.original_fare
+        promo_code: actualPromoDiscount > 0 ? currentBooking.promo_code : null,
+        promo_discount: actualPromoDiscount > 0 ? actualPromoDiscount : null,
+        original_fare: actualPromoDiscount > 0 ? originalFareBeforePromo : null
       };
 
       console.log('=== TRIP COMPLETION DATA PREPARED ===');

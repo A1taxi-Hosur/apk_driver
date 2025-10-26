@@ -532,7 +532,20 @@ export class FareCalculationService {
         .eq('id', rideId);
 
       console.log('✅ Trip fare calculated and stored successfully');
-      return { success: true, fareBreakdown };
+
+      // Return updated fareBreakdown with promo-adjusted total_fare
+      const completionFareBreakdown = {
+        ...fareBreakdown,
+        total_fare: finalTotalFare
+      };
+
+      return {
+        success: true,
+        fareBreakdown: completionFareBreakdown,
+        promo_code: ride.promo_code || null,
+        promo_discount: actualPromoDiscount || null,
+        original_fare: fareBreakdown.total_fare
+      };
 
     } catch (error) {
       console.error('Exception calculating trip fare:', error);
@@ -833,7 +846,19 @@ export class FareCalculationService {
 
       console.log('✅ Trip completion stored successfully:', tripCompletion);
 
-      return { success: true, fareBreakdown };
+      // Return updated fareBreakdown with promo-adjusted total_fare
+      const completionFareBreakdown = {
+        ...fareBreakdown,
+        total_fare: finalTotalFare
+      };
+
+      return {
+        success: true,
+        fareBreakdown: completionFareBreakdown,
+        promo_code: booking.promo_code || null,
+        promo_discount: actualPromoDiscount || null,
+        original_fare: fareBreakdown.total_fare
+      };
     } catch (error: any) {
       console.error('Exception calculating scheduled booking fare:', error);
       return { success: false, error: error.message };
