@@ -308,7 +308,10 @@ export class FareCalculationService {
               p_vehicle_make: driverDetails?.vehicle_make || '',
               p_vehicle_model: driverDetails?.vehicle_model || '',
               p_vehicle_color: driverDetails?.vehicle_color || '',
-              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
+              p_promo_code: ride.promo_code || null,
+              p_promo_discount: ride.promo_discount || null,
+              p_original_fare: ride.original_fare || null
             });
 
           if (regularResult.error || !regularResult.data?.success) {
@@ -352,7 +355,10 @@ export class FareCalculationService {
               p_vehicle_make: driverDetails?.vehicle_make || '',
               p_vehicle_model: driverDetails?.vehicle_model || '',
               p_vehicle_color: driverDetails?.vehicle_color || '',
-              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
+              p_promo_code: ride.promo_code || null,
+              p_promo_discount: ride.promo_discount || null,
+              p_original_fare: ride.original_fare || null
             });
 
           if (rentalResult.error || !rentalResult.data?.success) {
@@ -411,7 +417,10 @@ export class FareCalculationService {
               p_vehicle_make: driverDetails?.vehicle_make || '',
               p_vehicle_model: driverDetails?.vehicle_model || '',
               p_vehicle_color: driverDetails?.vehicle_color || '',
-              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
+              p_promo_code: ride.promo_code || null,
+              p_promo_discount: ride.promo_discount || null,
+              p_original_fare: ride.original_fare || null
             });
 
           if (outstationResult.error || !outstationResult.data?.success) {
@@ -456,7 +465,10 @@ export class FareCalculationService {
               p_vehicle_make: driverDetails?.vehicle_make || '',
               p_vehicle_model: driverDetails?.vehicle_model || '',
               p_vehicle_color: driverDetails?.vehicle_color || '',
-              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || ''
+              p_vehicle_license_plate: driverDetails?.vehicle_license_plate || '',
+              p_promo_code: ride.promo_code || null,
+              p_promo_discount: ride.promo_discount || null,
+              p_original_fare: ride.original_fare || null
             });
 
           if (airportResult.error || !airportResult.data?.success) {
