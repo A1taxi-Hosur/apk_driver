@@ -398,12 +398,19 @@ export function RideProvider({ children }: RideProviderProps) {
       if (result?.success) {
         console.log('✅ Ride accepted successfully via RPC')
         console.log('Ride code:', result.ride_code)
+        console.log('RPC returned ride status:', result.status)
+        console.log('RPC returned driver_id:', result.driver_id)
 
         // Update local driver status
         await updateDriverStatus('busy')
 
+        // Small delay to ensure database update propagates
+        await new Promise(resolve => setTimeout(resolve, 500))
+
         // Refresh rides to get updated data
+        console.log('🔄 Refreshing rides after acceptance...')
         await loadRides()
+        console.log('✅ Rides refreshed')
 
         return true
       } else {
