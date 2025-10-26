@@ -42,6 +42,9 @@ interface TripCompletionModalProps {
     destination_address: string;
     booking_type: string;
     rental_hours?: number | null;
+    promo_code?: string | null;
+    promo_discount?: number | null;
+    original_fare?: number | null;
   };
   onClose: () => void;
 }
@@ -207,12 +210,36 @@ export default function TripCompletionModal({
                   </View>
                 )}
 
+                {/* Promo Code Info */}
+                {tripData.promo_code && tripData.promo_discount && tripData.original_fare && (
+                  <>
+                    <View style={styles.separator} />
+                    <View style={styles.promoInfoSection}>
+                      <Text style={styles.promoSectionTitle}>🎟️ Customer Used Promo Code</Text>
+                      <View style={styles.fareRow}>
+                        <Text style={styles.fareLabel}>Original Fare</Text>
+                        <Text style={styles.fareValue}>{formatCurrency(tripData.original_fare)}</Text>
+                      </View>
+                      <View style={styles.fareRow}>
+                        <Text style={styles.promoDiscountLabel}>Promo Discount ({tripData.promo_code})</Text>
+                        <Text style={styles.promoDiscountValue}>-{formatCurrency(tripData.promo_discount)}</Text>
+                      </View>
+                    </View>
+                  </>
+                )}
+
                 <View style={styles.separator} />
 
                 <View style={styles.totalRow}>
                   <Text style={styles.totalLabel}>Your Earnings</Text>
                   <Text style={styles.totalValue}>{formatCurrency(tripData.fareBreakdown.total_fare)}</Text>
                 </View>
+
+                {tripData.promo_code && (
+                  <Text style={styles.promoNote}>
+                    💡 Final fare already includes promo discount
+                  </Text>
+                )}
               </>
             )}
 
@@ -435,6 +462,35 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: '700',
     color: '#10B981',
+  },
+  promoInfoSection: {
+    backgroundColor: '#F0F9FF',
+    borderRadius: 8,
+    padding: 12,
+    marginVertical: 8,
+  },
+  promoSectionTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1E40AF',
+    marginBottom: 8,
+  },
+  promoDiscountLabel: {
+    fontSize: 14,
+    color: '#10B981',
+    fontWeight: '500',
+  },
+  promoDiscountValue: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: '#10B981',
+  },
+  promoNote: {
+    fontSize: 12,
+    color: '#64748B',
+    fontStyle: 'italic',
+    textAlign: 'center',
+    marginTop: 8,
   },
   doneButton: {
     backgroundColor: '#10B981',

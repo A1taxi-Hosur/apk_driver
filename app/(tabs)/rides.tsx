@@ -538,6 +538,30 @@ export default function RidesScreen() {
                 </TouchableOpacity>
               </View>
 
+              {/* Promo Code Info */}
+              {currentRide.promo_code && currentRide.promo_discount && currentRide.original_fare && (
+                <View style={styles.promoInfoCard}>
+                  <View style={styles.promoHeader}>
+                    <Text style={styles.promoIcon}>🎟️</Text>
+                    <Text style={styles.promoLabel}>Customer used promo code</Text>
+                  </View>
+                  <View style={styles.promoBreakdown}>
+                    <View style={styles.promoRow}>
+                      <Text style={styles.promoText}>Original Fare:</Text>
+                      <Text style={styles.promoValue}>₹{Number(currentRide.original_fare).toFixed(2)}</Text>
+                    </View>
+                    <View style={styles.promoRow}>
+                      <Text style={styles.promoDiscount}>Promo ({currentRide.promo_code}):</Text>
+                      <Text style={styles.promoDiscountValue}>-₹{Number(currentRide.promo_discount).toFixed(2)}</Text>
+                    </View>
+                    <View style={[styles.promoRow, styles.promoFinalRow]}>
+                      <Text style={styles.promoFinal}>Final Fare (to collect):</Text>
+                      <Text style={styles.promoFinalValue}>₹{Number(currentRide.fare_amount).toFixed(2)}</Text>
+                    </View>
+                  </View>
+                </View>
+              )}
+
               {/* Ride Stats */}
               <View style={styles.rideStats}>
                 <View style={styles.statItem}>
@@ -906,6 +930,71 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  promoInfoCard: {
+    backgroundColor: '#F0F9FF',
+    borderRadius: 12,
+    padding: 16,
+    marginBottom: 16,
+    borderWidth: 1,
+    borderColor: '#BFDBFE',
+  },
+  promoHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  promoIcon: {
+    fontSize: 20,
+    marginRight: 8,
+  },
+  promoLabel: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1E40AF',
+  },
+  promoBreakdown: {
+    gap: 8,
+  },
+  promoRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  promoText: {
+    fontSize: 14,
+    color: '#64748B',
+  },
+  promoValue: {
+    fontSize: 14,
+    fontWeight: '500',
+    color: '#1E293B',
+  },
+  promoDiscount: {
+    fontSize: 14,
+    color: '#10B981',
+    fontWeight: '500',
+  },
+  promoDiscountValue: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#10B981',
+  },
+  promoFinalRow: {
+    paddingTop: 8,
+    borderTopWidth: 1,
+    borderTopColor: '#BFDBFE',
+    marginTop: 4,
+  },
+  promoFinal: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1E40AF',
+  },
+  promoFinalValue: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: '#1E40AF',
   },
   rideStats: {
     flexDirection: 'row',

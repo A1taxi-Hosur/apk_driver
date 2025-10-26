@@ -67,6 +67,9 @@ interface CustomerTripCompletionModalProps {
     vehicle_color?: string;
     vehicle_license_plate?: string;
     ride_id?: string;
+    promo_code?: string | null;
+    promo_discount?: number | null;
+    original_fare?: number | null;
   };
   onClose: () => void;
   onRatingSubmit?: (rideId: string, rating: number, feedback: string) => Promise<void>;
@@ -474,6 +477,24 @@ export default function CustomerTripCompletionModal({
                     </View>
                   )}
 
+                  {/* Promo Code Info */}
+                  {tripData.promo_code && tripData.promo_discount && tripData.original_fare && (
+                    <>
+                      <View style={styles.separator} />
+                      <View style={styles.promoInfoSection}>
+                        <Text style={styles.promoSectionTitle}>🎟️ Promo Code Applied</Text>
+                        <View style={styles.fareItem}>
+                          <Text style={styles.fareLabel}>Original Fare</Text>
+                          <Text style={styles.fareValue}>{formatCurrency(tripData.original_fare)}</Text>
+                        </View>
+                        <View style={styles.fareItem}>
+                          <Text style={styles.promoDiscountLabel}>Promo ({tripData.promo_code})</Text>
+                          <Text style={styles.promoDiscountValue}>-{formatCurrency(tripData.promo_discount)}</Text>
+                        </View>
+                      </View>
+                    </>
+                  )}
+
                   <View style={styles.separator} />
 
                   <View style={styles.totalFareItem}>
@@ -482,6 +503,12 @@ export default function CustomerTripCompletionModal({
                       {formatCurrency(tripData.fareBreakdown.total_fare)}
                     </Text>
                   </View>
+
+                  {tripData.promo_code && (
+                    <Text style={styles.promoNote}>
+                      💡 Discount already applied to total fare
+                    </Text>
+                  )}
                 </>
               )}
             </View>
@@ -756,6 +783,35 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     color: '#10B981',
+  },
+  promoInfoSection: {
+    backgroundColor: '#F0F9FF',
+    borderRadius: 8,
+    padding: 12,
+    marginVertical: 8,
+  },
+  promoSectionTitle: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#1E40AF',
+    marginBottom: 8,
+  },
+  promoDiscountLabel: {
+    fontSize: 14,
+    color: '#10B981',
+    fontWeight: '500',
+  },
+  promoDiscountValue: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: '#10B981',
+  },
+  promoNote: {
+    fontSize: 12,
+    color: '#64748B',
+    fontStyle: 'italic',
+    textAlign: 'center',
+    marginTop: 8,
   },
   ratingSection: {
     backgroundColor: '#F9FAFB',

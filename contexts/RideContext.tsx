@@ -36,6 +36,9 @@ type Ride = {
   rental_hours: number | null
   pickup_otp: string | null
   drop_otp: string | null
+  promo_code: string | null
+  promo_discount: number | null
+  original_fare: number | null
   created_at: string
   updated_at: string
   scheduled_time: string | null

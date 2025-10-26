@@ -122,6 +122,9 @@ export interface Database {
           drop_otp: string | null
           special_instructions: string | null
           trip_type: 'one_way' | 'round_trip'
+          promo_code: string | null
+          promo_discount: number | null
+          original_fare: number | null
           created_at: string
           updated_at: string
           scheduled_time: string | null
