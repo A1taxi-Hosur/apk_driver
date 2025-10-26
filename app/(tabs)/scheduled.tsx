@@ -573,7 +573,12 @@ export default function ScheduledScreen() {
           destination_address: currentBooking.destination_address,
           rental_hours: currentBooking.rental_hours,
           scheduled_time: currentBooking.scheduled_time
-        }
+        },
+        actualPromoDiscount > 0 ? {
+          promo_code: currentBooking.promo_code,
+          promo_discount: actualPromoDiscount,
+          original_fare: originalFareBeforePromo
+        } : undefined
       );
 
       if (!completionResult.success) {

@@ -894,6 +894,11 @@ export class FareCalculationService {
       destination_address: string;
       rental_hours?: number;
       scheduled_time: string | null;
+    },
+    promoDetails?: {
+      promo_code: string | null;
+      promo_discount: number | null;
+      original_fare: number | null;
     }
   ): Promise<{ success: boolean; error?: string; fareBreakdown?: any }> {
     try {
@@ -961,6 +966,7 @@ export class FareCalculationService {
               p_distance_fare: roundedFareBreakdown.distance_fare || 0,
               p_extra_km_charges: roundedFareBreakdown.extra_km_charges || 0,
               p_extra_hour_charges: 0,
+              p_deadhead_charges: roundedFareBreakdown.deadhead_charges || 0,
               p_platform_fee: roundedFareBreakdown.platform_fee || 0,
               p_gst_on_charges: roundedFareBreakdown.gst_on_charges || 0,
               p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee || 0,
@@ -974,7 +980,10 @@ export class FareCalculationService {
               p_vehicle_make: driverDetails.vehicle_make || '',
               p_vehicle_model: driverDetails.vehicle_model || '',
               p_vehicle_color: driverDetails.vehicle_color || '',
-              p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
+              p_vehicle_license_plate: driverDetails.vehicle_license_plate || '',
+              p_promo_code: promoDetails?.promo_code || null,
+              p_promo_discount: promoDetails?.promo_discount || null,
+              p_original_fare: promoDetails?.original_fare || null
             });
 
           console.log('📝 Rental RPC result:', JSON.stringify(rentalResult, null, 2));
@@ -1022,6 +1031,7 @@ export class FareCalculationService {
               p_per_day_charges: 0,
               p_driver_allowance: roundedFareBreakdown.driver_allowance || 0,
               p_extra_km_charges: roundedFareBreakdown.extra_km_charges || 0,
+              p_deadhead_charges: roundedFareBreakdown.deadhead_charges || 0,
               p_toll_charges: 0,
               p_platform_fee: roundedFareBreakdown.platform_fee || 0,
               p_gst_on_charges: roundedFareBreakdown.gst_on_charges || 0,
@@ -1037,7 +1047,10 @@ export class FareCalculationService {
               p_vehicle_make: driverDetails.vehicle_make || '',
               p_vehicle_model: driverDetails.vehicle_model || '',
               p_vehicle_color: driverDetails.vehicle_color || '',
-              p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
+              p_vehicle_license_plate: driverDetails.vehicle_license_plate || '',
+              p_promo_code: promoDetails?.promo_code || null,
+              p_promo_discount: promoDetails?.promo_discount || null,
+              p_original_fare: promoDetails?.original_fare || null
             });
 
           console.log('📝 RPC result:', JSON.stringify(outstationResult, null, 2));
@@ -1070,6 +1083,7 @@ export class FareCalculationService {
               p_distance_fare: roundedFareBreakdown.distance_fare,
               p_airport_surcharge: 0,
               p_time_fare: roundedFareBreakdown.time_fare || 0,
+              p_deadhead_charges: roundedFareBreakdown.deadhead_charges || 0,
               p_platform_fee: roundedFareBreakdown.platform_fee,
               p_gst_on_charges: roundedFareBreakdown.gst_on_charges,
               p_gst_on_platform_fee: roundedFareBreakdown.gst_on_platform_fee,
@@ -1084,7 +1098,10 @@ export class FareCalculationService {
               p_vehicle_make: driverDetails.vehicle_make || '',
               p_vehicle_model: driverDetails.vehicle_model || '',
               p_vehicle_color: driverDetails.vehicle_color || '',
-              p_vehicle_license_plate: driverDetails.vehicle_license_plate || ''
+              p_vehicle_license_plate: driverDetails.vehicle_license_plate || '',
+              p_promo_code: promoDetails?.promo_code || null,
+              p_promo_discount: promoDetails?.promo_discount || null,
+              p_original_fare: promoDetails?.original_fare || null
             });
 
           if (airportResult.error || !airportResult.data?.success) {
