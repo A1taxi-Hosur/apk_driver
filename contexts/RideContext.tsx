@@ -350,7 +350,7 @@ export function RideProvider({ children }: RideProviderProps) {
           // Play notification sound if we have new pending rides
           if (rideRequests.length > previousPendingCount && rideRequests.length > 0) {
             console.log('🔊 New ride request detected! Playing notification sound')
-            notificationSoundService.playRideRequestNotification()
+            await notificationSoundService.playRideRequestNotification()
           }
 
           setPreviousPendingCount(rideRequests.length)

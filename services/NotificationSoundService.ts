@@ -5,6 +5,9 @@ import { Platform } from 'react-native';
 class NotificationSoundService {
   private sound: Audio.Sound | null = null;
   private isInitialized: boolean = false;
+  private isPlaying: boolean = false;
+  private lastPlayTime: number = 0;
+  private readonly DEBOUNCE_MS = 3000; // Prevent playing sound within 3 seconds
 
   async initialize() {
     if (this.isInitialized) {
@@ -18,6 +21,8 @@ class NotificationSoundService {
           playsInSilentModeIOS: true,
           staysActiveInBackground: true,
           shouldDuckAndroid: true,
+          interruptionModeIOS: 1, // Mix with other audio
+          interruptionModeAndroid: 1, // Duck other audio
         });
       }
       this.isInitialized = true;
@@ -30,7 +35,24 @@ class NotificationSoundService {
   async playNotificationSound() {
     try {
       console.log('🔊 playNotificationSound called - Platform:', Platform.OS);
+
+      // Debounce: Prevent playing sound too frequently
+      const now = Date.now();
+      const timeSinceLastPlay = now - this.lastPlayTime;
+      if (timeSinceLastPlay < this.DEBOUNCE_MS) {
+        console.log(`⏸️ Skipping sound - debounce active (${timeSinceLastPlay}ms since last play)`);
+        return;
+      }
+
+      // Check if already playing
+      if (this.isPlaying) {
+        console.log('⏸️ Sound already playing, skipping');
+        return;
+      }
+
       await this.initialize();
+      this.lastPlayTime = now;
+      this.isPlaying = true;
 
       if (Platform.OS === 'web') {
         console.log('🌐 Web platform detected, using web notification sound');
@@ -40,16 +62,8 @@ class NotificationSoundService {
 
       console.log('📱 Native platform detected');
 
-      if (this.sound) {
-        console.log('🔄 Stopping and unloading previous sound');
-        try {
-          await this.sound.stopAsync();
-          await this.sound.unloadAsync();
-        } catch (cleanupError) {
-          console.log('⚠️ Error during sound cleanup:', cleanupError);
-        }
-        this.sound = null;
-      }
+      // Force cleanup any existing sound
+      await this.forceCleanup();
 
       try {
         console.log('📂 Loading notification.mp3 file...');
@@ -64,13 +78,23 @@ class NotificationSoundService {
         await sound.playAsync();
 
         console.log('🔊 Notification sound is playing');
+
+        // Auto cleanup after 5 seconds if sound doesn't finish
+        setTimeout(() => {
+          if (this.isPlaying) {
+            console.log('⏰ Auto-cleanup timeout reached');
+            this.forceCleanup();
+          }
+        }, 5000);
       } catch (soundError) {
         console.error('⚠️ Could not load notification.mp3:', soundError);
         console.log('⚠️ Using fallback sound');
+        this.isPlaying = false;
         this.playFallbackSound();
       }
     } catch (error) {
       console.error('❌ Error playing notification sound:', error);
+      this.isPlaying = false;
       this.playFallbackSound();
     }
   }
@@ -152,7 +176,12 @@ class NotificationSoundService {
   }
 
   async playRideRequestNotification() {
-    console.log('🚨 Playing ride request notification');
+    console.log('🚨 ============================================');
+    console.log('🚨 RIDE REQUEST NOTIFICATION TRIGGERED');
+    console.log('🚨 Timestamp:', new Date().toISOString());
+    console.log('🚨 Last play time:', this.lastPlayTime ? new Date(this.lastPlayTime).toISOString() : 'never');
+    console.log('🚨 Is playing:', this.isPlaying);
+    console.log('🚨 ============================================');
 
     await Promise.all([
       this.playNotificationSound(),
@@ -160,23 +189,25 @@ class NotificationSoundService {
     ]);
   }
 
+  private async forceCleanup() {
+    if (this.sound) {
+      console.log('🔄 Force cleaning up previous sound');
+      try {
+        await this.sound.stopAsync();
+        await this.sound.unloadAsync();
+      } catch (cleanupError) {
+        console.log('⚠️ Error during sound cleanup:', cleanupError);
+      }
+      this.sound = null;
+    }
+    this.isPlaying = false;
+  }
+
   async stopNotificationSound() {
     try {
       console.log('🛑 Stopping notification sound');
-
-      if (this.sound) {
-        console.log('🔇 Sound is playing, stopping now...');
-        try {
-          await this.sound.stopAsync();
-          await this.sound.unloadAsync();
-          this.sound = null;
-          console.log('✅ Notification sound stopped successfully');
-        } catch (stopError) {
-          console.error('❌ Error stopping sound:', stopError);
-        }
-      } else {
-        console.log('ℹ️ No sound currently playing');
-      }
+      await this.forceCleanup();
+      console.log('✅ Notification sound stopped successfully');
     } catch (error) {
       console.error('❌ Error in stopNotificationSound:', error);
     }
@@ -185,6 +216,7 @@ class NotificationSoundService {
   private onPlaybackStatusUpdate = async (status: any) => {
     if (status.didJustFinish) {
       console.log('✅ Notification sound finished playing');
+      this.isPlaying = false;
       if (this.sound) {
         try {
           await this.sound.unloadAsync();
@@ -197,20 +229,13 @@ class NotificationSoundService {
     }
     if (status.error) {
       console.error('❌ Playback error:', status.error);
+      this.isPlaying = false;
     }
   };
 
   async cleanup() {
     try {
-      if (this.sound) {
-        try {
-          await this.sound.stopAsync();
-        } catch (stopError) {
-          console.log('⚠️ Error stopping sound during cleanup:', stopError);
-        }
-        await this.sound.unloadAsync();
-        this.sound = null;
-      }
+      await this.forceCleanup();
       console.log('✅ Notification sound service cleaned up');
     } catch (error) {
       console.error('❌ Error cleaning up notification sound service:', error);
