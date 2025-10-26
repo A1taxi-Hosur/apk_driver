@@ -631,7 +631,10 @@ export default function ScheduledScreen() {
         vehicle_model: driverData?.vehicles?.model,
         vehicle_color: driverData?.vehicles?.color,
         vehicle_license_plate: driverData?.vehicles?.registration_number,
-        ride_id: currentBooking.id
+        ride_id: currentBooking.id,
+        promo_code: currentBooking.promo_code,
+        promo_discount: currentBooking.promo_discount,
+        original_fare: currentBooking.original_fare
       };
 
       console.log('=== TRIP COMPLETION DATA PREPARED ===');

@@ -1038,7 +1038,10 @@ export function RideProvider({ children }: RideProviderProps) {
         pickup_address: ride.pickup_address,
         destination_address: ride.destination_address,
         booking_type: ride.booking_type,
-        rental_hours: ride.rental_hours
+        rental_hours: ride.rental_hours,
+        promo_code: ride.promo_code,
+        promo_discount: ride.promo_discount,
+        original_fare: ride.original_fare
       }
 
       console.log('=== COMPLETION DATA PREPARED ===')
