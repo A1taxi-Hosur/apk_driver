@@ -193,6 +193,26 @@ Deno.serve(async (req: Request) => {
       }
     });
 
+    // Subtotal line if promo exists
+    if (completionData.promo_code && completionData.promo_discount && completionData.original_fare) {
+      doc.setFontSize(10);
+      doc.setFont("helvetica", "normal");
+      doc.line(15, yPos, 195, yPos);
+      yPos += 7;
+      doc.text("Subtotal (Before Promo)", 15, yPos);
+      doc.text(`₹${parseFloat(completionData.original_fare).toFixed(2)}`, 180, yPos, { align: "right" });
+      yPos += 7;
+
+      // Promo discount
+      doc.setFontSize(10);
+      doc.setFont("helvetica", "normal");
+      doc.setTextColor(0, 150, 0); // Green color for discount
+      doc.text(`Promo Discount (${completionData.promo_code})`, 15, yPos);
+      doc.text(`-₹${parseFloat(completionData.promo_discount).toFixed(2)}`, 180, yPos, { align: "right" });
+      yPos += 7;
+      doc.setTextColor(0, 0, 0); // Reset to black
+    }
+
     // Total
     doc.setFontSize(12);
     doc.setFont("helvetica", "bold");
