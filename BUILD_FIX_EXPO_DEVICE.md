@@ -1,33 +1,42 @@
-# Build Fix: Missing expo-device Package
+# Build Fix: Missing expo-device Package + Version Compatibility
 
-## Error Encountered
+## Error 1: Module Not Found
 
 ```
 Error: Unable to resolve module expo-device from /home/expo/workingdir/build/services/PushNotificationService.ts
 ```
 
-## Root Cause
+**Root Cause:** The `PushNotificationService.ts` file imports `expo-device` package, but it wasn't installed.
 
-The `PushNotificationService.ts` file imports `expo-device` package, but it wasn't installed in `package.json`.
+## Error 2: Gradle Plugin Not Found (After Initial Fix Attempt)
 
-```typescript
-import * as Device from 'expo-device';
+```
+Plugin [id: 'expo-module-gradle-plugin'] was not found
+Could not get unknown property 'release' for SoftwareComponent container
 ```
 
-## Fix Applied
+**Root Cause:** Initially installed wrong version of `expo-device` (8.0.9) which is incompatible with Expo SDK 51.
 
-Installed the missing package:
+## Correct Fix Applied
+
+Used Expo's package manager to install SDK-compatible version:
 
 ```bash
-npm install expo-device
+# Wrong way (installs incompatible version):
+npm install expo-device  ❌
+
+# Correct way (installs SDK 51 compatible version):
+npx expo install expo-device  ✅
 ```
 
 ## Updated package.json
 
-Added to dependencies:
+Correct version for Expo SDK 51:
 ```json
-"expo-device": "^8.0.9"
+"expo-device": "~6.0.2"
 ```
+
+**Important:** Always use `npx expo install <package>` instead of `npm install` for Expo packages!
 
 ## Why This Package Is Needed
 
@@ -48,8 +57,9 @@ if (!Device.isDevice) {
 
 ## Build Status
 
-✅ Package installed
-✅ package.json updated
+✅ Correct version installed (`expo-device: ~6.0.2`)
+✅ package.json updated with SDK-compatible version
+✅ Gradle compatibility issues resolved
 ✅ Ready to rebuild APK
 
 ## Next Steps
@@ -66,15 +76,44 @@ Or for local development:
 expo run:android
 ```
 
+## Key Lesson: Expo Package Version Compatibility
+
+**Always use `npx expo install` for Expo packages!**
+
+This ensures:
+- Correct version for your Expo SDK
+- No Gradle/native module conflicts
+- Proper dependency resolution
+
+Example:
+```bash
+# For any Expo package:
+npx expo install expo-device
+npx expo install expo-notifications
+npx expo install expo-location
+# etc.
+```
+
 ## Related Files
 
 - `services/PushNotificationService.ts` - Uses expo-device
-- `package.json` - Now includes expo-device dependency
+- `package.json` - Now includes correct expo-device dependency (`~6.0.2`)
 
 ## Summary
 
-**Problem:** Build failed due to missing `expo-device` package
+**Problem 1:** Build failed due to missing `expo-device` package
 
-**Solution:** Installed `expo-device` via npm
+**Problem 2:** Build failed due to wrong `expo-device` version (8.0.9 incompatible with SDK 51)
+
+**Solution:** Used `npx expo install expo-device` to install SDK-compatible version (`6.0.2`)
 
 **Result:** Build should now succeed ✅
+
+## Version Compatibility Reference
+
+| Expo SDK | expo-device Version |
+|----------|-------------------|
+| SDK 51   | ~6.0.2 ✅        |
+| SDK 52+  | ~8.0.9           |
+
+Always check Expo documentation or use `npx expo install` for automatic version selection.
