@@ -5,9 +5,7 @@ import { Platform } from 'react-native';
 class NotificationSoundService {
   private sound: Audio.Sound | null = null;
   private isInitialized: boolean = false;
-  private isPlaying: boolean = false;
-  private lastPlayTime: number = 0;
-  private readonly DEBOUNCE_MS = 3000; // Prevent playing sound within 3 seconds
+  private soundInstanceId: number = 0; // Track sound instances to prevent stale callbacks
 
   async initialize() {
     if (this.isInitialized) {
@@ -35,24 +33,9 @@ class NotificationSoundService {
   async playNotificationSound() {
     try {
       console.log('🔊 playNotificationSound called - Platform:', Platform.OS);
-
-      // Debounce: Prevent playing sound too frequently
-      const now = Date.now();
-      const timeSinceLastPlay = now - this.lastPlayTime;
-      if (timeSinceLastPlay < this.DEBOUNCE_MS) {
-        console.log(`⏸️ Skipping sound - debounce active (${timeSinceLastPlay}ms since last play)`);
-        return;
-      }
-
-      // Check if already playing
-      if (this.isPlaying) {
-        console.log('⏸️ Sound already playing, skipping');
-        return;
-      }
+      console.log('🔊 Timestamp:', new Date().toISOString());
 
       await this.initialize();
-      this.lastPlayTime = now;
-      this.isPlaying = true;
 
       if (Platform.OS === 'web') {
         console.log('🌐 Web platform detected, using web notification sound');
@@ -62,15 +45,19 @@ class NotificationSoundService {
 
       console.log('📱 Native platform detected');
 
-      // Force cleanup any existing sound
+      // Force cleanup any existing sound before creating new one
       await this.forceCleanup();
 
+      // Increment instance ID to invalidate old callbacks
+      this.soundInstanceId++;
+      const currentInstanceId = this.soundInstanceId;
+
       try {
-        console.log('📂 Loading notification.mp3 file...');
+        console.log('📂 Loading notification.mp3 file... (Instance:', currentInstanceId, ')');
         const { sound } = await Audio.Sound.createAsync(
           require('../assets/sounds/notification.mp3'),
           { shouldPlay: false, volume: 1.0 },
-          this.onPlaybackStatusUpdate
+          (status) => this.onPlaybackStatusUpdate(status, currentInstanceId)
         );
 
         this.sound = sound;
@@ -79,22 +66,20 @@ class NotificationSoundService {
 
         console.log('🔊 Notification sound is playing');
 
-        // Auto cleanup after 5 seconds if sound doesn't finish
+        // Auto cleanup after 5 seconds as safety measure
         setTimeout(() => {
-          if (this.isPlaying) {
-            console.log('⏰ Auto-cleanup timeout reached');
+          if (this.soundInstanceId === currentInstanceId && this.sound) {
+            console.log('⏰ Auto-cleanup timeout reached for instance', currentInstanceId);
             this.forceCleanup();
           }
         }, 5000);
       } catch (soundError) {
         console.error('⚠️ Could not load notification.mp3:', soundError);
         console.log('⚠️ Using fallback sound');
-        this.isPlaying = false;
         this.playFallbackSound();
       }
     } catch (error) {
       console.error('❌ Error playing notification sound:', error);
-      this.isPlaying = false;
       this.playFallbackSound();
     }
   }
@@ -200,7 +185,6 @@ class NotificationSoundService {
       }
       this.sound = null;
     }
-    this.isPlaying = false;
   }
 
   async stopNotificationSound() {
@@ -213,10 +197,15 @@ class NotificationSoundService {
     }
   }
 
-  private onPlaybackStatusUpdate = async (status: any) => {
+  private onPlaybackStatusUpdate = async (status: any, instanceId: number) => {
+    // Ignore callbacks from old sound instances
+    if (instanceId !== this.soundInstanceId) {
+      console.log('⚠️ Ignoring callback from old sound instance', instanceId);
+      return;
+    }
+
     if (status.didJustFinish) {
-      console.log('✅ Notification sound finished playing');
-      this.isPlaying = false;
+      console.log('✅ Notification sound finished playing (Instance:', instanceId, ')');
       if (this.sound) {
         try {
           await this.sound.unloadAsync();
@@ -229,7 +218,6 @@ class NotificationSoundService {
     }
     if (status.error) {
       console.error('❌ Playback error:', status.error);
-      this.isPlaying = false;
     }
   };
 
