@@ -4,6 +4,7 @@ import { useAuth } from './AuthContext'
 import { FareCalculationService } from '../services/FareCalculationService'
 import { TripLocationTracker } from '../services/TripLocationTracker'
 import { notificationSoundService } from '../services/NotificationSoundService'
+import { rideNotificationService } from '../services/RideNotificationService'
 import { DebugLogger } from '../utils/debugLogger'
 import { calculateDistance } from '../utils/maps'
 
@@ -98,8 +99,9 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Driver ID:', driver.id)
       console.log('Driver Status:', driver.status)
 
-      // Initialize notification sound service
+      // Initialize notification services
       notificationSoundService.initialize()
+      rideNotificationService.initialize()
 
       // Load initial rides
       loadRides()
@@ -200,6 +202,19 @@ export function RideProvider({ children }: RideProviderProps) {
         // Play notification sound and vibration
         console.log('🔊 Playing notification sound and vibration')
         await notificationSoundService.playRideRequestNotification()
+
+        // Show visual notification over other apps
+        const rideData = notification.data
+        await rideNotificationService.showRideRequestNotification({
+          rideId: rideData.ride_id,
+          rideCode: rideData.ride_code || 'N/A',
+          pickupAddress: rideData.pickup_address || 'Unknown pickup',
+          destinationAddress: rideData.destination_address || 'Unknown destination',
+          customerName: rideData.customer_name || 'Customer',
+          fareAmount: rideData.fare_amount || 0,
+          distance: rideData.distance,
+          bookingType: rideData.booking_type || 'regular',
+        })
 
         // Refresh rides to get the new request
         await loadRides()
@@ -347,10 +362,22 @@ export function RideProvider({ children }: RideProviderProps) {
               }
             }))
 
-          // Play notification sound if we have new pending rides
+          // Play notification sound and show visual notification if we have new pending rides
           if (rideRequests.length > previousPendingCount && rideRequests.length > 0) {
             console.log('🔊 New ride request detected! Playing notification sound')
             await notificationSoundService.playRideRequestNotification()
+
+            // Show visual notification for the newest ride
+            const newestRide = rideRequests[0]
+            await rideNotificationService.showRideRequestNotification({
+              rideId: newestRide.id,
+              rideCode: newestRide.ride_code,
+              pickupAddress: newestRide.pickup_address,
+              destinationAddress: newestRide.destination_address,
+              customerName: newestRide.customer?.full_name || 'Customer',
+              fareAmount: newestRide.fare_amount || 0,
+              bookingType: newestRide.booking_type,
+            })
           }
 
           setPreviousPendingCount(rideRequests.length)
@@ -379,9 +406,11 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
       console.log('Driver ID:', driver.id)
 
-      // Stop notification sound immediately when accepting
-      console.log('🛑 Stopping notification sound (ride accepted)')
+      // Stop notification sound and clear notifications immediately when accepting
+      console.log('🛑 Stopping notification sound and clearing notifications (ride accepted)')
       await notificationSoundService.stopNotificationSound()
+      await rideNotificationService.dismissAllNotifications()
+      await rideNotificationService.clearBadge()
 
       // Use RPC function to accept ride (more reliable than edge function)
       const { data: result, error } = await supabase.rpc('accept_ride_rpc', {
@@ -432,9 +461,11 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('=== DECLINING RIDE ===')
       console.log('Ride ID:', rideId)
 
-      // Stop notification sound when declining
-      console.log('🛑 Stopping notification sound (ride declined)')
+      // Stop notification sound and clear notifications when declining
+      console.log('🛑 Stopping notification sound and clearing notifications (ride declined)')
       await notificationSoundService.stopNotificationSound()
+      await rideNotificationService.dismissAllNotifications()
+      await rideNotificationService.clearBadge()
 
       // Mark notification as read (declined) using RPC
       await supabase.rpc('mark_ride_notification_as_read', {

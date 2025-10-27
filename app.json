@@ -62,6 +62,15 @@
         {
           "backgroundFetchInterval": 10
         }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/images/icon.png",
+          "color": "#ffffff",
+          "sounds": ["./assets/sounds/notification.mp3"],
+          "mode": "production"
+        }
       ]
     ],
     "extra": {
