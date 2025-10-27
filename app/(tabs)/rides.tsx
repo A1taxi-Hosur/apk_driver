@@ -39,7 +39,6 @@ export default function RidesScreen() {
     startRide,
     generateDropOTP,
     completeRide,
-    cancelRide,
     refreshRides,
     clearCurrentRide,
     clearError
@@ -341,25 +340,6 @@ export default function RidesScreen() {
     }
   };
 
-  const handleCancelRide = () => {
-    Alert.alert(
-      'Cancel Ride',
-      'Are you sure you want to cancel this ride?',
-      [
-        { text: 'No', style: 'cancel' },
-        {
-          text: 'Yes',
-          style: 'destructive',
-          onPress: async () => {
-            if (currentRide) {
-              await cancelRide(currentRide.id, 'Driver cancelled');
-            }
-          }
-        }
-      ]
-    );
-  };
-
   const handleDirectionsToPickup = async () => {
     if (!currentRide) return;
     
@@ -592,16 +572,10 @@ export default function RidesScreen() {
             {/* Action Buttons */}
             <View style={styles.actionButtons}>
               {currentRide.status === 'accepted' && (
-                <>
-                  <TouchableOpacity style={styles.arrivedButton} onPress={handleDriverArrived}>
-                    <Navigation size={20} color="#FFFFFF" />
-                    <Text style={styles.buttonText}>Mark as Arrived</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.cancelButton} onPress={handleCancelRide}>
-                    <XCircle size={20} color="#FFFFFF" />
-                    <Text style={styles.buttonText}>Cancel</Text>
-                  </TouchableOpacity>
-                </>
+                <TouchableOpacity style={styles.arrivedButton} onPress={handleDriverArrived}>
+                  <Navigation size={20} color="#FFFFFF" />
+                  <Text style={styles.buttonText}>Mark as Arrived</Text>
+                </TouchableOpacity>
               )}
 
               {currentRide.status === 'driver_arrived' && (
@@ -1020,15 +994,6 @@ const styles = StyleSheet.create({
   arrivedButton: {
     flex: 1,
     backgroundColor: '#2563EB',
-    borderRadius: 12,
-    paddingVertical: 14,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cancelButton: {
-    flex: 1,
-    backgroundColor: '#EF4444',
     borderRadius: 12,
     paddingVertical: 14,
     flexDirection: 'row',

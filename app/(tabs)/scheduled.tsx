@@ -682,44 +682,6 @@ export default function ScheduledScreen() {
     }
   };
 
-  const handleCancelBooking = () => {
-    Alert.alert(
-      'Cancel Booking',
-      'Are you sure you want to cancel this scheduled booking?',
-      [
-        { text: 'No', style: 'cancel' },
-        {
-          text: 'Yes',
-          style: 'destructive',
-          onPress: async () => {
-            if (currentBooking && driver?.id) {
-              try {
-                const { data: result, error } = await supabase
-                  .rpc('update_scheduled_booking_status', {
-                    p_booking_id: currentBooking.id,
-                    p_driver_id: driver.id,
-                    p_status: 'cancelled'
-                  });
-
-                if (error || !result?.success) {
-                  Alert.alert('Error', 'Failed to cancel booking');
-                  return;
-                }
-
-                await updateDriverStatus('online');
-                setCurrentBooking(null);
-                await loadScheduledBookings();
-              } catch (error) {
-                console.error('Error cancelling booking:', error);
-                Alert.alert('Error', 'Failed to cancel booking');
-              }
-            }
-          }
-        }
-      ]
-    );
-  };
-
   const handleDirectionsToPickup = async () => {
     if (!currentBooking) return;
     
@@ -910,16 +872,10 @@ export default function ScheduledScreen() {
             {/* Action Buttons */}
             <View style={styles.actionButtons}>
               {currentBooking.status === 'assigned' && (
-                <>
-                  <TouchableOpacity style={styles.arrivedButton} onPress={handleDriverArrived}>
-                    <Navigation size={20} color="#FFFFFF" />
-                    <Text style={styles.buttonText}>Mark as Arrived</Text>
-                  </TouchableOpacity>
-                  <TouchableOpacity style={styles.cancelButton} onPress={handleCancelBooking}>
-                    <XCircle size={20} color="#FFFFFF" />
-                    <Text style={styles.buttonText}>Cancel</Text>
-                  </TouchableOpacity>
-                </>
+                <TouchableOpacity style={styles.arrivedButton} onPress={handleDriverArrived}>
+                  <Navigation size={20} color="#FFFFFF" />
+                  <Text style={styles.buttonText}>Mark as Arrived</Text>
+                </TouchableOpacity>
               )}
 
               {currentBooking.status === 'driver_arrived' && (
@@ -1689,15 +1645,6 @@ const styles = StyleSheet.create({
   arrivedButton: {
     flex: 1,
     backgroundColor: '#2563EB',
-    borderRadius: 12,
-    paddingVertical: 14,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  cancelButton: {
-    flex: 1,
-    backgroundColor: '#EF4444',
     borderRadius: 12,
     paddingVertical: 14,
     flexDirection: 'row',
