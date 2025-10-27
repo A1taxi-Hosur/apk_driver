@@ -137,12 +137,14 @@ export default function ProfileScreen() {
           </View>
           
           <View style={styles.ratingContainer}>
-            <Star size={20} color="#F59E0B" />
+            <Star size={20} color="#F59E0B" fill={profileStats && profileStats.total_ratings > 0 ? "#F59E0B" : "transparent"} />
             {loadingStats ? (
               <ActivityIndicator size="small" color="#F59E0B" style={{ marginLeft: 4 }} />
             ) : (
               <Text style={styles.ratingText}>
-                {profileStats?.average_rating ? profileStats.average_rating.toFixed(1) : 'N/A'}
+                {profileStats && profileStats.total_ratings > 0
+                  ? profileStats.average_rating.toFixed(1)
+                  : '0.0'}
               </Text>
             )}
           </View>
@@ -164,11 +166,15 @@ export default function ProfileScreen() {
             ) : (
               <>
                 <Text style={styles.statValue}>
-                  {profileStats?.average_rating ? profileStats.average_rating.toFixed(1) : 'N/A'}
+                  {profileStats && profileStats.total_ratings > 0
+                    ? profileStats.average_rating.toFixed(1)
+                    : '0.0'}
                 </Text>
-                {profileStats && profileStats.total_ratings > 0 && (
-                  <Text style={styles.statSubtext}>({profileStats.total_ratings} ratings)</Text>
-                )}
+                <Text style={styles.statSubtext}>
+                  {profileStats && profileStats.total_ratings > 0
+                    ? `(${profileStats.total_ratings} ratings)`
+                    : '(No ratings yet)'}
+                </Text>
               </>
             )}
             <Text style={styles.statLabel}>Rating</Text>
