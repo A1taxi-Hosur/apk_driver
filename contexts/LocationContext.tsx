@@ -42,18 +42,45 @@ export function LocationProvider({ children }: LocationProviderProps) {
   const [isTracking, setIsTracking] = useState(false)
   const [locationSubscription, setLocationSubscription] = useState<Location.LocationSubscription | null>(null)
   const [isBackgroundTrackingActive, setIsBackgroundTrackingActive] = useState(false)
-  
+  const isMountedRef = React.useRef(true)
+
   const { driver } = useAuth()
   const [hasInitialized, setHasInitialized] = useState(false)
   const [backgroundTrackingStarted, setBackgroundTrackingStarted] = useState(false)
   const [isHandlingActiveDriver, setIsHandlingActiveDriver] = useState(false)
 
+  // Safe state setters that check if component is mounted
+  const safeSetCurrentLocation = (location: Location.LocationObject | null) => {
+    if (isMountedRef.current) setCurrentLocation(location)
+  }
+
+  const safeSetCurrentAddress = (address: string | null) => {
+    if (isMountedRef.current) setCurrentAddress(address)
+  }
+
+  const safeSetLocationPermission = (permission: boolean) => {
+    if (isMountedRef.current) setLocationPermission(permission)
+  }
+
+  const safeSetIsTracking = (tracking: boolean) => {
+    if (isMountedRef.current) setIsTracking(tracking)
+  }
+
   useEffect(() => {
+    isMountedRef.current = true
     console.log('=== LOCATION PROVIDER INITIALIZATION ===')
     // Request location permission immediately when component mounts
     if (!hasInitialized) {
       requestLocationPermissionOnStartup()
       setHasInitialized(true)
+    }
+
+    return () => {
+      isMountedRef.current = false
+      // Clean up location tracking on unmount
+      if (locationSubscription) {
+        locationSubscription.remove()
+      }
     }
   }, [])
 

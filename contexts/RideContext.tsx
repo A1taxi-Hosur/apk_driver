@@ -90,9 +90,13 @@ export function RideProvider({ children }: RideProviderProps) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [previousPendingCount, setPreviousPendingCount] = useState(0)
+  const [isLoadingRides, setIsLoadingRides] = useState(false)
+  const isMountedRef = React.useRef(true)
   const { driver, updateDriverStatus } = useAuth()
 
   useEffect(() => {
+    isMountedRef.current = true
+
     if (driver) {
       console.log('=== RIDE CONTEXT INITIALIZED ===')
       console.log('Driver:', driver.user?.full_name)
@@ -106,20 +110,28 @@ export function RideProvider({ children }: RideProviderProps) {
       // Load initial rides
       loadRides()
 
-      // Set up real-time subscriptions
-      setupRealTimeSubscriptions()
+      // Set up real-time subscriptions with cleanup
+      const unsubscribe = setupRealTimeSubscriptions()
 
       // Set up auto-refresh every 2 seconds
       const refreshInterval = setInterval(() => {
-        console.log('🔄 Auto-refreshing rides (2-second interval)...')
-        loadRides()
+        if (isMountedRef.current) {
+          console.log('🔄 Auto-refreshing rides (2-second interval)...')
+          loadRides()
+        }
       }, 2000)
 
       return () => {
-        console.log('🛑 Cleaning up auto-refresh interval')
+        console.log('🛑 Cleaning up RideContext...')
+        isMountedRef.current = false
         clearInterval(refreshInterval)
+        if (unsubscribe) unsubscribe()
         notificationSoundService.cleanup()
       }
+    }
+
+    return () => {
+      isMountedRef.current = false
     }
   }, [driver])
 
@@ -223,13 +235,21 @@ export function RideProvider({ children }: RideProviderProps) {
   }
 
   const loadRides = async () => {
-    if (!driver) return
+    if (!driver || !isMountedRef.current) return
+
+    // Prevent concurrent loadRides calls
+    if (isLoadingRides) {
+      console.log('⏸️ loadRides already in progress, skipping...')
+      return
+    }
 
     try {
+      setIsLoadingRides(true)
       console.log('=== LOADING RIDES ===')
       console.log('Driver ID:', driver.id)
       console.log('Driver User ID:', driver.user_id)
-      
+
+      if (!isMountedRef.current) return
       setLoading(true)
 
       // Load current ride (accepted, in_progress, driver_arrived)
@@ -251,7 +271,9 @@ export function RideProvider({ children }: RideProviderProps) {
             email: currentRideData[0].customer_email
           }
         } : null
-        setCurrentRide(ride)
+        if (isMountedRef.current) {
+          setCurrentRide(ride)
+        }
         console.log('✅ Current ride loaded:', ride ? {
           id: ride.id,
           status: ride.status,
@@ -380,11 +402,15 @@ export function RideProvider({ children }: RideProviderProps) {
             })
           }
 
-          setPreviousPendingCount(rideRequests.length)
-          setPendingRides(rideRequests)
+          if (isMountedRef.current) {
+            setPreviousPendingCount(rideRequests.length)
+            setPendingRides(rideRequests)
+          }
           console.log('✅ Pending rides loaded:', rideRequests.length)
         } else {
-          setPendingRides([])
+          if (isMountedRef.current) {
+            setPendingRides([])
+          }
           console.log('✅ No pending ride notifications')
         }
         }
@@ -392,9 +418,14 @@ export function RideProvider({ children }: RideProviderProps) {
 
     } catch (error) {
       console.error('Exception loading rides:', error)
-      setError('Failed to load rides')
+      if (isMountedRef.current) {
+        setError('Failed to load rides')
+      }
     } finally {
-      setLoading(false)
+      if (isMountedRef.current) {
+        setLoading(false)
+      }
+      setIsLoadingRides(false)
     }
   }
 
