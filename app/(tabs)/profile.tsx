@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -6,15 +6,49 @@ import {
   ScrollView,
   TouchableOpacity,
   Platform,
+  ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { User, Car, LogOut, Star, Shield, MapPin } from 'lucide-react-native';
 import { useAuth } from '../../contexts/AuthContext';
 import { useLocation } from '../../contexts/LocationContext';
+import { supabase } from '../../utils/supabase';
 
 export default function ProfileScreen() {
   const { signOut, driver, updateDriverStatus } = useAuth();
   const { currentAddress } = useLocation();
+  const [profileStats, setProfileStats] = useState<{
+    completed_rides: number;
+    average_rating: number;
+    total_ratings: number;
+  } | null>(null);
+  const [loadingStats, setLoadingStats] = useState(true);
+
+  useEffect(() => {
+    if (driver?.id) {
+      loadProfileStats();
+    }
+  }, [driver?.id]);
+
+  const loadProfileStats = async () => {
+    try {
+      setLoadingStats(true);
+      const { data, error } = await supabase
+        .rpc('get_driver_profile_stats', {
+          p_driver_id: driver?.id
+        });
+
+      if (error) {
+        console.error('Error loading profile stats:', error);
+      } else {
+        setProfileStats(data);
+      }
+    } catch (error) {
+      console.error('Exception loading profile stats:', error);
+    } finally {
+      setLoadingStats(false);
+    }
+  };
 
   const getStatusColor = (status: string | undefined) => {
     switch (status) {
@@ -104,23 +138,40 @@ export default function ProfileScreen() {
           
           <View style={styles.ratingContainer}>
             <Star size={20} color="#F59E0B" />
-            <Text style={styles.ratingText}>{driver?.rating || '5.0'}</Text>
+            {loadingStats ? (
+              <ActivityIndicator size="small" color="#F59E0B" style={{ marginLeft: 4 }} />
+            ) : (
+              <Text style={styles.ratingText}>
+                {profileStats?.average_rating ? profileStats.average_rating.toFixed(1) : 'N/A'}
+              </Text>
+            )}
           </View>
         </View>
 
         {/* Stats Cards */}
         <View style={styles.statsContainer}>
           <View style={styles.statCard}>
-            <Text style={styles.statValue}>{driver?.total_rides || 0}</Text>
+            {loadingStats ? (
+              <ActivityIndicator size="small" color="#2563EB" />
+            ) : (
+              <Text style={styles.statValue}>{profileStats?.completed_rides || 0}</Text>
+            )}
             <Text style={styles.statLabel}>Total Rides</Text>
           </View>
           <View style={styles.statCard}>
-            <Text style={styles.statValue}>{driver?.rating || '5.0'}</Text>
+            {loadingStats ? (
+              <ActivityIndicator size="small" color="#F59E0B" />
+            ) : (
+              <>
+                <Text style={styles.statValue}>
+                  {profileStats?.average_rating ? profileStats.average_rating.toFixed(1) : 'N/A'}
+                </Text>
+                {profileStats && profileStats.total_ratings > 0 && (
+                  <Text style={styles.statSubtext}>({profileStats.total_ratings} ratings)</Text>
+                )}
+              </>
+            )}
             <Text style={styles.statLabel}>Rating</Text>
-          </View>
-          <View style={styles.statCard}>
-            <Text style={styles.statValue}>100%</Text>
-            <Text style={styles.statLabel}>Acceptance</Text>
           </View>
         </View>
 
@@ -287,6 +338,11 @@ const styles = StyleSheet.create({
   statLabel: {
     fontSize: 12,
     color: '#64748B',
+  },
+  statSubtext: {
+    fontSize: 10,
+    color: '#94A3B8',
+    marginTop: 2,
   },
   vehicleCard: {
     backgroundColor: '#FFFFFF',
