@@ -5,6 +5,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import { supabase } from '../utils/supabase'
 import { rideNotificationService } from '../services/RideNotificationService'
 import { backgroundRideMonitor } from '../services/BackgroundRideMonitor'
+import { pushNotificationService } from '../services/PushNotificationService'
 
 type Driver = Database['public']['Tables']['drivers']['Row'] & {
   user: Database['public']['Tables']['users']['Row']
@@ -132,6 +133,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
             setDriver(completeDriver)
             setLoading(false)
             console.log('✅ Session restored from Supabase client')
+
+            // Register for push notifications
+            try {
+              await pushNotificationService.registerForPushNotifications(completeDriver.id);
+              console.log('✅ Push notifications registered on app launch');
+            } catch (pushError) {
+              console.error('⚠️ Error registering push notifications on launch:', pushError);
+            }
 
             // If driver is online, start background monitoring
             if (completeDriver.status === 'online' || completeDriver.status === 'busy') {
@@ -410,14 +419,22 @@ export function AuthProvider({ children }: AuthProviderProps) {
       // Step 6: Set state
       setUser(userData as any)
       setDriver(completeDriver)
-      
+
+      // Step 6.5: Register for push notifications
+      try {
+        await pushNotificationService.registerForPushNotifications(completeDriver.id);
+        console.log('✅ Push notifications registered after login');
+      } catch (pushError) {
+        console.error('⚠️ Error registering push notifications after login:', pushError);
+      }
+
       // Step 7: Store session
       await AsyncStorage.setItem(DRIVER_SESSION_KEY, JSON.stringify({
         user: userData,
         driver: completeDriver,
         timestamp: Date.now()
       }))
-      
+
       console.log('✅ Authentication completed - LocationContext will handle location setup')
       
       // Note: Location permission will be requested by LocationContext on startup
