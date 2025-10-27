@@ -11,6 +11,9 @@ import { useAuth } from '@/contexts/AuthContext';
 // CRITICAL: Import TripLocationTracker to register background task BEFORE app loads
 import '@/services/TripLocationTracker';
 
+// CRITICAL: Import RideNotificationService to configure notification handler BEFORE app loads
+import '@/services/RideNotificationService';
+
 function RootLayoutNav() {
   const { session, loading } = useAuth();
   const { driver } = useAuth();
