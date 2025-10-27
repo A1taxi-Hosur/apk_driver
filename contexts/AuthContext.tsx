@@ -371,37 +371,70 @@ export function AuthProvider({ children }: AuthProviderProps) {
         throw new Error('Your driver account is pending verification. Please contact your administrator.')
       }
       
-      // CRITICAL: Get the ACTUAL current status from database
-      console.log('=== RETRIEVING CURRENT DRIVER STATUS ===')
+      // CRITICAL: Check for active trips before setting status
+      console.log('=== CHECKING DRIVER STATUS ===')
       console.log('✅ Driver profile loaded successfully')
       console.log('📊 CURRENT status from database:', driver.status)
       console.log('📊 Status retrieved at:', new Date().toISOString())
-      console.log('📊 TESTING MODE: Setting status to ONLINE by default')
-      
-      // FOR TESTING: Force status to online
-      console.log('🧪 TESTING MODE ACTIVE - Ensuring driver is ONLINE and AVAILABLE')
+
+      // Check if driver has active trip
+      console.log('🔍 Checking for active trips...')
       try {
-        const { data: statusResult, error: statusUpdateError } = await supabase
-          .rpc('update_driver_status_by_id', {
-            p_driver_id: driver.id,
-            p_status: 'online'
+        const { data: hasActiveTrip, error: activeTripError } = await supabase
+          .rpc('check_driver_has_active_trip', {
+            p_driver_id: driver.id
           })
 
-        if (statusUpdateError) {
-          console.error('❌ Error setting default online status:', statusUpdateError)
+        if (activeTripError) {
+          console.error('❌ Error checking active trip:', activeTripError)
+        }
+
+        console.log('🔍 Active trip check result:', hasActiveTrip)
+
+        // Determine correct status based on active trips
+        let correctStatus: 'online' | 'busy' | 'offline';
+
+        if (hasActiveTrip) {
+          // If driver has active trip, they should be BUSY
+          correctStatus = 'busy';
+          console.log('🚗 Driver has active trip - setting status to BUSY')
+        } else if (driver.status === 'offline') {
+          // If they were offline and have no active trip, keep offline
+          correctStatus = 'offline';
+          console.log('💤 Driver was offline - keeping status as OFFLINE')
         } else {
-          console.log('✅ Driver status set to ONLINE and VERIFIED for testing')
-          console.log('✅ Status update result:', statusResult)
-          // Create new driver object with updated status (immutable update)
-          const updatedDriver = {
-            ...driver,
-            status: 'online',
-            is_verified: true
+          // Otherwise, set to online (default for login)
+          correctStatus = 'online';
+          console.log('✅ No active trip - setting status to ONLINE')
+        }
+
+        // Update status in database only if it needs to change
+        if (driver.status !== correctStatus) {
+          console.log(`🔄 Updating status from ${driver.status} to ${correctStatus}`)
+          const { data: statusResult, error: statusUpdateError } = await supabase
+            .rpc('update_driver_status_by_id', {
+              p_driver_id: driver.id,
+              p_status: correctStatus
+            })
+
+          if (statusUpdateError) {
+            console.error('❌ Error updating status:', statusUpdateError)
+          } else {
+            console.log('✅ Driver status updated to:', correctStatus)
+            console.log('✅ Status update result:', statusResult)
           }
-          driver = updatedDriver // Use updated driver object
+        } else {
+          console.log(`✅ Status already correct (${correctStatus}) - no update needed`)
+        }
+
+        // Update driver object with correct status
+        driver = {
+          ...driver,
+          status: correctStatus,
+          is_verified: true
         }
       } catch (error) {
-        console.error('❌ Exception setting default status:', error)
+        console.error('❌ Exception checking/updating status:', error)
       }
       
       // Step 5: Combine data
@@ -412,9 +445,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
       }
       
       console.log('=== FINAL STATUS CONFIRMATION ===')
-      console.log('📊 Driver logged in with TESTING status:', completeDriver.status)
-      console.log('🧪 TESTING MODE: Driver defaulted to ONLINE')
-      console.log('📊 Status will remain ONLINE until manually changed')
+      console.log('📊 Driver logged in with status:', completeDriver.status)
+      console.log('✅ Status determined based on active trips')
+      console.log('📊 Status will change automatically when accepting/completing rides')
       
       // Step 6: Set state
       setUser(userData as any)
@@ -490,11 +523,32 @@ export function AuthProvider({ children }: AuthProviderProps) {
       console.log(`=== ${changeType} ===`)
       console.log('🔄 Updating driver status from:', driver.status, 'to:', status)
       console.log('📊 Change type:', changeType)
+
+      // CRITICAL: Prevent going offline if there's an active trip
+      if (status === 'offline' && isActualChange) {
+        console.log('🔍 Checking for active trips before going offline...')
+        const { data: hasActiveTrip, error: activeTripError } = await supabase
+          .rpc('check_driver_has_active_trip', {
+            p_driver_id: driver.id
+          })
+
+        if (activeTripError) {
+          console.error('❌ Error checking active trip:', activeTripError)
+        }
+
+        if (hasActiveTrip) {
+          console.warn('⚠️ Cannot go offline - driver has active trip')
+          console.warn('⚠️ Please complete or cancel the current trip first')
+          throw new Error('Cannot go offline while you have an active trip. Please complete or cancel the current trip first.')
+        }
+        console.log('✅ No active trips - safe to go offline')
+      }
+
       console.log('📊 Database will be updated with new status')
       console.log('📊 Timestamp:', new Date().toISOString())
       console.log('📊 This change is PERMANENT and will persist across app sessions')
       console.log('📊 Status will remain', status, 'until explicitly changed again by user or ride lifecycle')
-      
+
       // Only update database if this is an actual change
       if (isActualChange) {
         console.log('📊 WRITING TO DATABASE - This is the authoritative source of truth')
