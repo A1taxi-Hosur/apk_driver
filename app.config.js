@@ -26,6 +26,23 @@ export default {
     },
     android: {
       package: "com.a1taxi.driverpro",
+      adaptiveIcon: {
+        foregroundImage: "./assets/images/icon.png",
+        backgroundColor: "#ffffff"
+      },
+      permissions: [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "POST_NOTIFICATIONS",
+        "VIBRATE",
+        "SYSTEM_ALERT_WINDOW",
+        "USE_FULL_SCREEN_INTENT",
+        "WAKE_LOCK",
+        "RECEIVE_BOOT_COMPLETED"
+      ],
       config: {
         googleMaps: {
           apiKey: "AIzaSyBIHJUk4DuAG7tjp_gIdNhUJdpBKN1eM2Q"
@@ -47,6 +64,15 @@ export default {
           locationWhenInUsePermission: "A1 Taxi needs location access to find nearby ride requests, share your location with customers, and provide accurate pickup and drop-off services.",
           isAndroidBackgroundLocationEnabled: true,
           isAndroidForegroundServiceEnabled: true
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          icon: "./assets/images/icon.png",
+          color: "#2563EB",
+          sounds: ["./assets/sounds/notification.mp3"],
+          mode: "production"
         }
       ],
       [

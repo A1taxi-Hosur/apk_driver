@@ -1,5 +1,5 @@
 import * as Notifications from 'expo-notifications';
-import { Platform } from 'react-native';
+import { Platform, AppState, Linking } from 'react-native';
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -8,6 +8,16 @@ Notifications.setNotificationHandler({
     shouldSetBadge: true,
     priority: Notifications.AndroidNotificationPriority.MAX,
   }),
+});
+
+// Add notification response listener to auto-open app
+Notifications.addNotificationResponseReceivedListener((response) => {
+  console.log('📱 Notification tapped, opening app...');
+  const data = response.notification.request.content.data;
+  if (data.type === 'ride_request') {
+    console.log('🚗 Ride request notification tapped, ride ID:', data.rideId);
+    // App will already open, just log for debugging
+  }
 });
 
 class RideNotificationService {
@@ -45,8 +55,10 @@ class RideNotificationService {
   }
 
   private async setupAndroidNotificationChannel() {
+    // Create high-priority channel for ride requests
     await Notifications.setNotificationChannelAsync(this.notificationChannelId, {
       name: 'Ride Requests',
+      description: 'Critical notifications for incoming ride requests',
       importance: Notifications.AndroidImportance.MAX,
       vibrationPattern: [0, 250, 250, 250],
       lightColor: '#FF6B6B',
@@ -58,7 +70,17 @@ class RideNotificationService {
       showBadge: true,
     });
 
-    console.log('✅ Android notification channel configured for heads-up display');
+    // Also create a foreground service channel for persistent notification
+    await Notifications.setNotificationChannelAsync('driver-foreground-service', {
+      name: 'Driver Service',
+      description: 'Keeps driver app active to receive ride requests',
+      importance: Notifications.AndroidImportance.LOW,
+      enableVibrate: false,
+      enableLights: false,
+      showBadge: false,
+    });
+
+    console.log('✅ Android notification channels configured');
   }
 
   async showRideRequestNotification(rideData: {
@@ -74,6 +96,9 @@ class RideNotificationService {
     await this.initialize();
 
     try {
+      console.log('🔔 Showing ride request notification...');
+      console.log('📱 App State:', AppState.currentState);
+
       const notificationId = await Notifications.scheduleNotificationAsync({
         content: {
           title: '🚗 New Ride Request!',
@@ -82,6 +107,7 @@ class RideNotificationService {
             rideId: rideData.rideId,
             rideCode: rideData.rideCode,
             type: 'ride_request',
+            action: 'open_app',
           },
           sound: 'notification.mp3',
           priority: Notifications.AndroidNotificationPriority.MAX,
@@ -98,10 +124,64 @@ class RideNotificationService {
       });
 
       console.log('🔔 Ride request notification displayed:', notificationId);
+
+      // On Android, try to bring app to foreground if it's in background
+      if (Platform.OS === 'android' && AppState.currentState !== 'active') {
+        console.log('📱 App is in background, notification should wake it');
+      }
+
       return notificationId;
     } catch (error) {
       console.error('❌ Error showing ride request notification:', error);
       return null;
+    }
+  }
+
+  async startForegroundService() {
+    if (Platform.OS !== 'android') {
+      return;
+    }
+
+    await this.initialize();
+
+    try {
+      console.log('🚀 Starting foreground service notification...');
+
+      const notificationId = await Notifications.scheduleNotificationAsync({
+        content: {
+          title: 'A1 Taxi - Driver Online',
+          body: 'Listening for ride requests...',
+          data: {
+            type: 'foreground_service',
+          },
+          priority: Notifications.AndroidNotificationPriority.LOW,
+          ...(Platform.OS === 'android' && {
+            channelId: 'driver-foreground-service',
+            sticky: true,
+            autoDismiss: false,
+          }),
+        },
+        trigger: null,
+      });
+
+      console.log('✅ Foreground service notification started:', notificationId);
+      return notificationId;
+    } catch (error) {
+      console.error('❌ Error starting foreground service:', error);
+      return null;
+    }
+  }
+
+  async stopForegroundService(notificationId: string) {
+    if (Platform.OS !== 'android') {
+      return;
+    }
+
+    try {
+      await Notifications.dismissNotificationAsync(notificationId);
+      console.log('✅ Foreground service notification stopped');
+    } catch (error) {
+      console.error('❌ Error stopping foreground service:', error);
     }
   }
 

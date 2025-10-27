@@ -6,6 +6,9 @@ class NotificationSoundService {
   private sound: Audio.Sound | null = null;
   private isInitialized: boolean = false;
   private soundInstanceId: number = 0; // Track sound instances to prevent stale callbacks
+  private lastPlayTime: number = 0;
+  private isPlaying: boolean = false;
+  private playQueue: Promise<void> = Promise.resolve();
 
   async initialize() {
     if (this.isInitialized) {
@@ -31,15 +34,32 @@ class NotificationSoundService {
   }
 
   async playNotificationSound() {
+    // Queue the play request to prevent overlapping plays
+    this.playQueue = this.playQueue.then(() => this._playNotificationSoundInternal());
+    return this.playQueue;
+  }
+
+  private async _playNotificationSoundInternal() {
     try {
       console.log('🔊 playNotificationSound called - Platform:', Platform.OS);
       console.log('🔊 Timestamp:', new Date().toISOString());
+      console.log('🔊 Is currently playing:', this.isPlaying);
+
+      // If already playing, force cleanup and continue
+      if (this.isPlaying) {
+        console.log('⚠️ Sound already playing, forcing cleanup');
+        await this.forceCleanup();
+      }
+
+      this.isPlaying = true;
+      this.lastPlayTime = Date.now();
 
       await this.initialize();
 
       if (Platform.OS === 'web') {
         console.log('🌐 Web platform detected, using web notification sound');
         this.playWebNotificationSound();
+        this.isPlaying = false;
         return;
       }
 
@@ -56,7 +76,7 @@ class NotificationSoundService {
         console.log('📂 Loading notification.mp3 file... (Instance:', currentInstanceId, ')');
         const { sound } = await Audio.Sound.createAsync(
           require('../assets/sounds/notification.mp3'),
-          { shouldPlay: false, volume: 1.0 },
+          { shouldPlay: false, volume: 1.0, isLooping: false },
           (status) => this.onPlaybackStatusUpdate(status, currentInstanceId)
         );
 
@@ -71,16 +91,19 @@ class NotificationSoundService {
           if (this.soundInstanceId === currentInstanceId && this.sound) {
             console.log('⏰ Auto-cleanup timeout reached for instance', currentInstanceId);
             this.forceCleanup();
+            this.isPlaying = false;
           }
         }, 5000);
       } catch (soundError) {
         console.error('⚠️ Could not load notification.mp3:', soundError);
         console.log('⚠️ Using fallback sound');
         this.playFallbackSound();
+        this.isPlaying = false;
       }
     } catch (error) {
       console.error('❌ Error playing notification sound:', error);
       this.playFallbackSound();
+      this.isPlaying = false;
     }
   }
 
@@ -206,6 +229,7 @@ class NotificationSoundService {
 
     if (status.didJustFinish) {
       console.log('✅ Notification sound finished playing (Instance:', instanceId, ')');
+      this.isPlaying = false;
       if (this.sound) {
         try {
           await this.sound.unloadAsync();
@@ -218,6 +242,7 @@ class NotificationSoundService {
     }
     if (status.error) {
       console.error('❌ Playback error:', status.error);
+      this.isPlaying = false;
     }
   };
 
