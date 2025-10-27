@@ -3,6 +3,8 @@ import { Session, User } from '@supabase/supabase-js'
 import { Database } from '../types/database'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { supabase } from '../utils/supabase'
+import { rideNotificationService } from '../services/RideNotificationService'
+import { backgroundRideMonitor } from '../services/BackgroundRideMonitor'
 
 type Driver = Database['public']['Tables']['drivers']['Row'] & {
   user: Database['public']['Tables']['users']['Row']
@@ -130,6 +132,18 @@ export function AuthProvider({ children }: AuthProviderProps) {
             setDriver(completeDriver)
             setLoading(false)
             console.log('✅ Session restored from Supabase client')
+
+            // If driver is online, start background monitoring
+            if (completeDriver.status === 'online' || completeDriver.status === 'busy') {
+              console.log('🟢 Driver is online, starting background services...');
+              try {
+                await backgroundRideMonitor.startMonitoring();
+                console.log('✅ Background monitoring started on app launch');
+              } catch (bgError) {
+                console.error('⚠️ Error starting background monitoring on launch:', bgError);
+              }
+            }
+
             return
           } else {
             console.log('⚠️ No driver record found for existing session or query error:', sessionDriverError)
@@ -207,6 +221,17 @@ export function AuthProvider({ children }: AuthProviderProps) {
               setDriver(freshDriverData)
 
               console.log('✅ Session restored with CURRENT database status:', freshDriverData.status)
+
+              // If driver is online, start background monitoring
+              if (freshDriverData.status === 'online' || freshDriverData.status === 'busy') {
+                console.log('🟢 Driver is online, starting background services...');
+                try {
+                  await backgroundRideMonitor.startMonitoring();
+                  console.log('✅ Background monitoring started on session restore');
+                } catch (bgError) {
+                  console.error('⚠️ Error starting background monitoring on restore:', bgError);
+                }
+              }
             }
           } catch (fetchError) {
             console.error('Error fetching current driver status:', fetchError)
@@ -459,6 +484,40 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
         if (status === 'online') {
           console.log('🟢 Driver going ONLINE - ensuring availability for customers');
+
+          // Start foreground service notification
+          try {
+            await rideNotificationService.showForegroundServiceNotification();
+            console.log('✅ Foreground service notification started');
+          } catch (fgError) {
+            console.error('⚠️ Error starting foreground service:', fgError);
+          }
+
+          // Start background ride monitoring
+          try {
+            await backgroundRideMonitor.startMonitoring();
+            console.log('✅ Background ride monitoring started');
+          } catch (bgError) {
+            console.error('⚠️ Error starting background monitoring:', bgError);
+          }
+        } else if (status === 'offline') {
+          console.log('🔴 Driver going OFFLINE - cleaning up services');
+
+          // Stop foreground service notification
+          try {
+            await rideNotificationService.dismissAllRideNotifications();
+            console.log('✅ Foreground service notification dismissed');
+          } catch (fgError) {
+            console.error('⚠️ Error dismissing foreground service:', fgError);
+          }
+
+          // Stop background ride monitoring
+          try {
+            await backgroundRideMonitor.stopMonitoring();
+            console.log('✅ Background ride monitoring stopped');
+          } catch (bgError) {
+            console.error('⚠️ Error stopping background monitoring:', bgError);
+          }
         }
 
         const { data: updatedData, error } = await supabase
