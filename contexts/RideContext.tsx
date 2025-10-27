@@ -171,9 +171,22 @@ export function RideProvider({ children }: RideProviderProps) {
           handleNotificationUpdate(payload)
         }
       )
+      .on(
+        'postgres_changes',
+        {
+          event: 'UPDATE',
+          schema: 'public',
+          table: 'drivers',
+          filter: `id=eq.${driver.id}`
+        },
+        (payload) => {
+          console.log('🔔 Real-time driver status update:', payload)
+          handleDriverStatusUpdate(payload)
+        }
+      )
       .subscribe()
 
-    console.log('✅ Real-time subscriptions established')
+    console.log('✅ Real-time subscriptions established (rides, notifications, driver status)')
 
     return () => {
       console.log('🔌 Cleaning up real-time subscriptions')
@@ -181,14 +194,40 @@ export function RideProvider({ children }: RideProviderProps) {
     }
   }
 
-  const handleRideUpdate = (payload: any) => {
+  const handleDriverStatusUpdate = async (payload: any) => {
+    console.log('=== HANDLING DRIVER STATUS UPDATE ===')
+    console.log('Event type:', payload.eventType)
+    console.log('New driver data:', payload.new)
+
+    if (payload.eventType === 'UPDATE' && payload.new) {
+      const updatedDriver = payload.new
+
+      if (updatedDriver.status && driver && updatedDriver.status !== driver.status) {
+        console.log(`✅ Driver status changed: ${driver.status} → ${updatedDriver.status}`)
+        console.log('🔄 Syncing driver status in AuthContext')
+
+        // Update driver status via AuthContext (this updates local state)
+        await updateDriverStatus(updatedDriver.status)
+
+        console.log('✅ Driver status synced successfully via real-time update')
+
+        // If driver went back to online, refresh rides to show available requests
+        if (updatedDriver.status === 'online') {
+          console.log('🔄 Driver is now online - refreshing available rides')
+          await loadRides()
+        }
+      }
+    }
+  }
+
+  const handleRideUpdate = async (payload: any) => {
     console.log('=== HANDLING RIDE UPDATE ===')
     console.log('Event type:', payload.eventType)
     console.log('Ride data:', payload.new || payload.old)
 
     if (payload.eventType === 'UPDATE' && payload.new) {
       const updatedRide = payload.new
-      
+
       // Update current ride if it matches
       setCurrentRide(prev => {
         if (prev && prev.id === updatedRide.id) {
@@ -197,6 +236,48 @@ export function RideProvider({ children }: RideProviderProps) {
         }
         return prev
       })
+
+      // CRITICAL: Sync driver status when ride is cancelled or completed
+      if (updatedRide.status === 'cancelled' || updatedRide.status === 'completed') {
+        console.log(`🔄 Ride ${updatedRide.status} - syncing driver status from database`)
+
+        if (!driver) return
+
+        try {
+          // Fetch updated driver status from database
+          const { data: driverData, error } = await supabase
+            .from('drivers')
+            .select('status')
+            .eq('id', driver.id)
+            .single()
+
+          if (error) {
+            console.error('❌ Error fetching driver status:', error)
+            return
+          }
+
+          if (driverData && driverData.status !== driver.status) {
+            console.log(`✅ Driver status changed: ${driver.status} → ${driverData.status}`)
+            console.log('🔄 Updating local driver status to match database')
+
+            // Update driver status via AuthContext (this updates local state)
+            await updateDriverStatus(driverData.status)
+
+            console.log('✅ Driver status synced successfully')
+
+            // Clear current ride if cancelled or completed
+            if (updatedRide.id === currentRide?.id) {
+              console.log('🗑️ Clearing current ride from state')
+              setCurrentRide(null)
+              await loadRides()
+            }
+          } else {
+            console.log('✅ Driver status already up-to-date:', driverData?.status)
+          }
+        } catch (error) {
+          console.error('❌ Exception syncing driver status:', error)
+        }
+      }
     }
   }
 
