@@ -20,8 +20,9 @@ TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
       console.error(`[${timestamp}] ❌ Background location task error:`, error);
       console.error(`[${timestamp}] Error name:`, error.name);
       console.error(`[${timestamp}] Error message:`, error.message);
-      // Don't return - task will continue running
-      return;
+      console.log(`[${timestamp}] 🔄 Task will continue running despite error`);
+      // CRITICAL: Do NOT return here! Task must continue running
+      // Just log the error and continue to completion
     }
 
     if (data) {
