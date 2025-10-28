@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useRouter, useSegments } from 'expo-router';
-import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import { View, ActivityIndicator, StyleSheet, Platform } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { LocationProvider } from '@/contexts/LocationContext';
@@ -82,10 +82,44 @@ export default function RootLayout() {
   const router = useRouter();
 
   useEffect(() => {
-    console.log('📱 Setting up notification response handlers...');
+    console.log('📱 Setting up push notification handlers...');
+
+    // CRITICAL: Configure Android notification channel for high-priority notifications
+    // This is ESSENTIAL for ride request notifications to work like Uber/Ola
+    if (Platform.OS === 'android') {
+      Notifications.setNotificationChannelAsync('ride-requests-urgent', {
+        name: 'Ride Requests (Urgent)',
+        description: 'High-priority notifications for new ride requests',
+        importance: Notifications.AndroidImportance.MAX,
+        vibrationPattern: [0, 250, 250, 250],
+        sound: 'notification.mp3',
+        enableLights: true,
+        lightColor: '#10B981',
+        enableVibrate: true,
+        showBadge: true,
+        lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
+      }).then(() => {
+        console.log('✅ Android notification channel created: ride-requests-urgent');
+      }).catch((error) => {
+        console.error('❌ Error creating notification channel:', error);
+      });
+    }
+
+    // CRITICAL: Configure how notifications behave when received
+    // This is what makes them work like Uber/Ola
+    Notifications.setNotificationHandler({
+      handleNotification: async () => ({
+        shouldShowAlert: true,      // Show alert even when app is in foreground
+        shouldPlaySound: true,       // Play sound
+        shouldSetBadge: true,        // Show badge
+        priority: Notifications.AndroidNotificationPriority.MAX,  // Maximum priority
+      }),
+    });
+
+    console.log('✅ Notification behavior configured (will show alerts, sound, and badge)');
 
     // Handle notification tap when app is running or in background
-    const subscription = Notifications.addNotificationResponseReceivedListener(
+    const tapSubscription = Notifications.addNotificationResponseReceivedListener(
       async (response) => {
         const data = response.notification.request.content.data;
 
@@ -101,6 +135,20 @@ export default function RootLayout() {
         }
       }
     );
+
+    // Handle notification received while app is in foreground
+    const receivedSubscription = Notifications.addNotificationReceivedListener((notification) => {
+      const data = notification.request.content.data;
+      console.log('📱 Notification received while app is open:', data);
+
+      // Log to help debugging
+      if (data.type === 'ride_request') {
+        console.log('🚗 New ride request notification received');
+        console.log('Ride ID:', data.rideId);
+        console.log('Customer:', data.customerName);
+        console.log('Pickup:', data.pickupAddress);
+      }
+    });
 
     // Handle when app was opened from notification (app was killed)
     Notifications.getLastNotificationResponseAsync().then((response) => {
@@ -118,11 +166,12 @@ export default function RootLayout() {
       }
     });
 
-    console.log('✅ Notification response handlers configured');
+    console.log('✅ All notification handlers configured');
 
     return () => {
-      console.log('🔌 Cleaning up notification subscription');
-      subscription.remove();
+      console.log('🔌 Cleaning up notification subscriptions');
+      tapSubscription.remove();
+      receivedSubscription.remove();
     };
   }, []);
 
