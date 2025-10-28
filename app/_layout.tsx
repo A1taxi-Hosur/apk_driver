@@ -15,6 +15,9 @@ import '@/services/TripLocationTracker';
 // CRITICAL: Import RideNotificationService to configure notification handler BEFORE app loads
 import '@/services/RideNotificationService';
 
+// CRITICAL: Import BackgroundNotificationHandler to handle notifications when app is CLOSED
+import '@/services/BackgroundNotificationHandler';
+
 function RootLayoutNav() {
   const { session, loading } = useAuth();
   const { driver } = useAuth();
@@ -83,6 +86,12 @@ export default function RootLayout() {
 
   useEffect(() => {
     console.log('📱 Setting up push notification handlers...');
+
+    // CRITICAL: Register background notification task for when app is CLOSED
+    (async () => {
+      const { registerBackgroundNotificationTask } = await import('@/services/BackgroundNotificationHandler');
+      await registerBackgroundNotificationTask();
+    })();
 
     // CRITICAL: Configure Android notification channel for high-priority notifications
     // This is ESSENTIAL for ride request notifications to work like Uber/Ola

@@ -12,7 +12,8 @@
       "infoPlist": {
         "UIBackgroundModes": [
           "location",
-          "fetch"
+          "fetch",
+          "remote-notification"
         ]
       }
     },
@@ -28,9 +29,11 @@
         "ACCESS_BACKGROUND_LOCATION",
         "FOREGROUND_SERVICE",
         "FOREGROUND_SERVICE_LOCATION",
+        "POST_NOTIFICATIONS",
         "WAKE_LOCK",
+        "USE_FULL_SCREEN_INTENT",
         "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS",
-        "SYSTEM_ALERT_WINDOW"
+        "RECEIVE_BOOT_COMPLETED"
       ],
       "config": {
         "googleMaps": {
@@ -68,9 +71,14 @@
         "expo-notifications",
         {
           "icon": "./assets/images/icon.png",
-          "color": "#ffffff",
+          "color": "#10B981",
           "sounds": ["./assets/sounds/notification.mp3"],
-          "mode": "production"
+          "mode": "production",
+          "android": {
+            "icon": "./assets/images/icon.png",
+            "color": "#10B981",
+            "defaultChannel": "ride-requests-urgent"
+          }
         }
       ]
     ],
