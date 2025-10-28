@@ -627,9 +627,18 @@ export function RideProvider({ children }: RideProviderProps) {
         console.error('❌ Failed to accept ride:', result?.error)
         setError(result?.error || 'Failed to accept ride')
 
-        // Don't update driver status or refresh rides when acceptance failed
-        // The ride is already removed from pending list above
-        // This prevents showing unavailable rides
+        // CRITICAL: Prevent auto-refresh from loading stale data
+        // Block loadRides for 3 seconds to prevent race condition
+        setIsLoadingRides(true)
+        console.log('🚫 Blocking auto-refresh for 3 seconds after failed acceptance')
+
+        // Force refresh after blocking period to clean up any stale data
+        setTimeout(async () => {
+          console.log('🔄 Refreshing rides after failed acceptance cooldown')
+          setIsLoadingRides(false)
+          await loadRides()
+          console.log('✅ Stale data cleaned up')
+        }, 3000)
 
         return false
       }
