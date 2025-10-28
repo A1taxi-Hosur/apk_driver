@@ -28,14 +28,47 @@ class PushNotificationService {
       // Request permissions if not granted
       if (existingStatus !== 'granted') {
         console.log('📋 Requesting notification permissions...');
-        const { status } = await Notifications.requestPermissionsAsync();
+        const { status } = await Notifications.requestPermissionsAsync({
+          android: {
+            allowAlert: true,
+            allowBadge: true,
+            allowSound: true,
+            allowAnnouncements: true,
+            allowDisplayInCarPlay: false,
+          },
+        });
         finalStatus = status;
       }
 
       if (finalStatus !== 'granted') {
-        console.warn('⚠️ Notification permissions not granted');
+        console.warn('⚠️ Notification permissions not granted:', finalStatus);
+        console.warn('⚠️ User needs to enable notifications in Settings');
+
+        // Show alert with instructions
+        if (Platform.OS === 'android') {
+          const { Alert, Linking } = await import('react-native');
+          Alert.alert(
+            'Notification Permission Required',
+            'A1 Taxi needs notification permissions to:\n\n' +
+            '• Alert you of new ride requests\n' +
+            '• Show ride updates\n' +
+            '• Play notification sounds\n\n' +
+            'Please enable notifications in Settings.\n\n' +
+            'Also enable "Display over other apps" for urgent ride alerts.',
+            [
+              { text: 'Cancel', style: 'cancel' },
+              {
+                text: 'Open Settings',
+                onPress: () => Linking.openSettings()
+              }
+            ]
+          );
+        }
+
         return null;
       }
+
+      console.log('✅ Notification permissions granted');
 
       // Get Expo push token
       console.log('🔑 Getting Expo push token...');

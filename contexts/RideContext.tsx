@@ -92,6 +92,8 @@ export function RideProvider({ children }: RideProviderProps) {
   const [previousPendingCount, setPreviousPendingCount] = useState(0)
   const [isLoadingRides, setIsLoadingRides] = useState(false)
   const isMountedRef = React.useRef(true)
+  const lastLoadRidesTime = React.useRef<number>(0)
+  const processedNotifications = React.useRef<Set<string>>(new Set())
   const { driver, updateDriverStatus } = useAuth()
 
   useEffect(() => {
@@ -289,8 +291,24 @@ export function RideProvider({ children }: RideProviderProps) {
       const notification = payload.new
 
       if (notification.type === 'ride_request' && notification.data?.ride_id) {
+        const rideId = notification.data.ride_id
+
+        // CRITICAL: Deduplicate notification processing
+        if (processedNotifications.current.has(rideId)) {
+          console.log('⏭️ Notification already processed for ride:', rideId)
+          return
+        }
+
+        // Mark as processed
+        processedNotifications.current.add(rideId)
+
+        // Clean up old processed notifications after 5 minutes
+        setTimeout(() => {
+          processedNotifications.current.delete(rideId)
+        }, 5 * 60 * 1000)
+
         console.log('🚗 New ride request notification received')
-        console.log('Ride ID from notification:', notification.data.ride_id)
+        console.log('Ride ID from notification:', rideId)
 
         // Play notification sound and vibration
         console.log('🔊 Playing notification sound and vibration')
@@ -309,7 +327,7 @@ export function RideProvider({ children }: RideProviderProps) {
           bookingType: rideData.booking_type || 'regular',
         })
 
-        // Refresh rides to get the new request
+        // Refresh rides to get the new request (debounced by loadRides)
         await loadRides()
       }
     }
@@ -317,6 +335,14 @@ export function RideProvider({ children }: RideProviderProps) {
 
   const loadRides = async () => {
     if (!driver || !isMountedRef.current) return
+
+    // Debounce: Don't load rides if called within last 500ms
+    const now = Date.now()
+    if (now - lastLoadRidesTime.current < 500) {
+      console.log('⏸️ loadRides called too soon, debouncing...')
+      return
+    }
+    lastLoadRidesTime.current = now
 
     // Prevent concurrent loadRides calls
     if (isLoadingRides) {

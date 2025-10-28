@@ -356,14 +356,50 @@ export class BackgroundLocationService {
         return await startWebBackgroundTracking(driverUserId);
       }
 
-      // Request background location permission
-      const { status: backgroundStatus } = await Location.requestBackgroundPermissionsAsync();
-      if (backgroundStatus !== 'granted') {
-        console.log('❌ Background location permission not granted');
-        return false;
-      }
+      // Check current background permission status
+      const { status: currentBackgroundStatus } = await Location.getBackgroundPermissionsAsync();
+      console.log('📍 Current background permission status:', currentBackgroundStatus);
 
-      console.log('✅ Background location permission granted');
+      // Request background location permission if not granted
+      if (currentBackgroundStatus !== 'granted') {
+        console.log('📱 Requesting background location permission...');
+
+        const { status: backgroundStatus } = await Location.requestBackgroundPermissionsAsync();
+
+        if (backgroundStatus !== 'granted') {
+          console.log('❌ Background location permission not granted:', backgroundStatus);
+          console.log('⚠️ User needs to grant "Allow all the time" permission in Settings');
+
+          // Show alert on native platforms
+          if (Platform.OS !== 'web') {
+            const { Alert } = require('react-native');
+            Alert.alert(
+              'Background Location Required',
+              'A1 Taxi needs "Allow all the time" location permission to:\n\n' +
+              '• Track your location while driving\n' +
+              '• Send your location to customers\n' +
+              '• Work even when the app is closed\n\n' +
+              'Please enable "Allow all the time" in location settings.',
+              [
+                { text: 'Cancel', style: 'cancel' },
+                {
+                  text: 'Open Settings',
+                  onPress: () => {
+                    const { Linking } = require('react-native');
+                    Linking.openSettings();
+                  }
+                }
+              ]
+            );
+          }
+
+          return false;
+        }
+
+        console.log('✅ Background location permission granted:', backgroundStatus);
+      } else {
+        console.log('✅ Background location permission already granted');
+      }
 
       // Start background location tracking with aggressive settings optimized for Android
       await Location.startLocationUpdatesAsync(BACKGROUND_LOCATION_TASK, {
@@ -453,8 +489,23 @@ export class BackgroundLocationService {
         }
       }
 
+      // Check both if task is registered AND if background permission is granted
       const isRegistered = await TaskManager.isTaskRegisteredAsync(BACKGROUND_LOCATION_TASK);
-      return isRegistered;
+
+      if (!isRegistered) {
+        return false;
+      }
+
+      // Also verify background permission is still granted
+      const { status } = await Location.getBackgroundPermissionsAsync();
+      const isActive = isRegistered && status === 'granted';
+
+      console.log('📍 Background location status check:');
+      console.log('  - Task registered:', isRegistered);
+      console.log('  - Background permission:', status);
+      console.log('  - Is active:', isActive);
+
+      return isActive;
     } catch (error) {
       console.error('Error checking background location status:', error);
       return false;
