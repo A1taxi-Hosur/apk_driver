@@ -627,6 +627,13 @@ export function RideProvider({ children }: RideProviderProps) {
         console.error('❌ Failed to accept ride:', result?.error)
         setError(result?.error || 'Failed to accept ride')
 
+        // CRITICAL: Ensure ride is not in currentRide
+        // If somehow the database has stale data, force clear it
+        if (currentRide?.id === rideId) {
+          console.error('🚨 CRITICAL: Failed ride is in currentRide! Force clearing...')
+          setCurrentRide(null)
+        }
+
         // CRITICAL: Prevent auto-refresh from loading stale data
         // Block loadRides for 3 seconds to prevent race condition
         setIsLoadingRides(true)
@@ -637,6 +644,16 @@ export function RideProvider({ children }: RideProviderProps) {
           console.log('🔄 Refreshing rides after failed acceptance cooldown')
           setIsLoadingRides(false)
           await loadRides()
+
+          // Double-check: If the failed ride is still in currentRide, clear it
+          setCurrentRide(prev => {
+            if (prev?.id === rideId) {
+              console.error('🚨 CRITICAL: Failed ride STILL in currentRide after refresh! Clearing...')
+              return null
+            }
+            return prev
+          })
+
           console.log('✅ Stale data cleaned up')
         }, 3000)
 

@@ -198,20 +198,32 @@ export default function RidesScreen() {
     
     const success = await acceptRide(selectedRideRequest.id);
     console.log('🚗 Accept ride function result:', success)
-    
+
     if (success) {
       console.log('✅ RIDE ACCEPTED SUCCESSFULLY')
       console.log('✅ Closing modal and clearing selected ride...')
       setShowRideRequestModal(false)
       setSelectedRideRequest(null)
-      
+
       // Show success message
       Alert.alert('Success', 'Ride accepted successfully!')
       console.log('✅ Success alert shown')
       console.log('✅ Ride should now appear in current ride section')
     } else {
       console.error('❌ FAILED TO ACCEPT RIDE')
-      Alert.alert('Error', 'Failed to accept ride. Please try again.')
+      console.error('❌ Ride ID:', selectedRideRequest.id)
+      console.error('❌ Ride should be removed from UI and NOT show in currentRide')
+
+      // CRITICAL: Close modal and clear selection on failure too
+      // User shouldn't see a ride they can't accept
+      setShowRideRequestModal(false)
+      setSelectedRideRequest(null)
+
+      // Show specific error from RPC (shown via error state in RideContext)
+      Alert.alert(
+        'Ride Unavailable',
+        error || 'This ride is no longer available. It may have been accepted by another driver.'
+      )
     }
   };
 
