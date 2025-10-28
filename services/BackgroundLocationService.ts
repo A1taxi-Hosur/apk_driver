@@ -214,44 +214,83 @@ async function sendLocationToDatabase(location: any): Promise<boolean> {
     }
 
     // Use RPC function to update location (bypasses RLS)
-    try {
-      const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/update_driver_location_rpc`, {
-        method: 'POST',
-        headers: {
-          'apikey': supabaseAnonKey,
-          'Authorization': `Bearer ${supabaseAnonKey}`,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=representation'
-        },
-        body: JSON.stringify({
-          p_driver_id: driverId,
-          p_latitude: location.coords.latitude,
-          p_longitude: location.coords.longitude,
-          p_heading: location.coords.heading || null,
-          p_speed: location.coords.speed || null,
-          p_accuracy: location.coords.accuracy || null
-        }),
-        signal: AbortSignal.timeout(8000)
-      });
+    // CRITICAL: Longer timeout + retry logic for Android Doze mode
+    // Network requests can be delayed/queued when phone is idle
+    let attempts = 0;
+    const maxAttempts = 2;
 
-      if (rpcResponse.ok) {
-        const result = await rpcResponse.json();
-        if (result && result.success) {
-          console.log('✅ Background location updated via RPC:', result.action);
-          return true;
+    while (attempts < maxAttempts) {
+      attempts++;
+
+      try {
+        console.log(`📡 Location update attempt ${attempts}/${maxAttempts}`);
+
+        const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/update_driver_location_rpc`, {
+          method: 'POST',
+          headers: {
+            'apikey': supabaseAnonKey,
+            'Authorization': `Bearer ${supabaseAnonKey}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=representation'
+          },
+          body: JSON.stringify({
+            p_driver_id: driverId,
+            p_latitude: location.coords.latitude,
+            p_longitude: location.coords.longitude,
+            p_heading: location.coords.heading || null,
+            p_speed: location.coords.speed || null,
+            p_accuracy: location.coords.accuracy || null
+          }),
+          signal: AbortSignal.timeout(15000) // 15 seconds - longer for Doze mode
+        });
+
+        if (rpcResponse.ok) {
+          const result = await rpcResponse.json();
+          if (result && result.success) {
+            console.log('✅ Background location updated via RPC:', result.action);
+            return true; // SUCCESS!
+          } else {
+            console.error(`❌ Attempt ${attempts}: RPC returned error:`, result?.error);
+            if (attempts < maxAttempts) {
+              console.log('🔄 Retrying in 1 second...');
+              await new Promise(resolve => setTimeout(resolve, 1000));
+              continue; // Try again
+            }
+            return false;
+          }
         } else {
-          console.error('❌ RPC returned error:', result?.error);
+          const errorText = await rpcResponse.text();
+          console.error(`❌ Attempt ${attempts}: RPC request failed:`, rpcResponse.status, errorText);
+          if (attempts < maxAttempts) {
+            console.log('🔄 Retrying in 1 second...');
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            continue;
+          }
           return false;
         }
-      } else {
-        const errorText = await rpcResponse.text();
-        console.error('❌ RPC request failed:', rpcResponse.status, errorText);
+      } catch (rpcError: any) {
+        console.error(`❌ Attempt ${attempts}: RPC exception:`, rpcError.message);
+
+        // Timeout errors are common in Doze mode - retry!
+        if (rpcError.name === 'TimeoutError' && attempts < maxAttempts) {
+          console.log('⏰ Request timed out (Android Doze?), retrying in 2 seconds...');
+          await new Promise(resolve => setTimeout(resolve, 2000));
+          continue;
+        }
+
+        if (attempts < maxAttempts) {
+          console.log('🔄 Retrying after exception in 1 second...');
+          await new Promise(resolve => setTimeout(resolve, 1000));
+          continue;
+        }
+
         return false;
       }
-    } catch (rpcError) {
-      console.error('❌ RPC exception:', rpcError.message);
-      return false;
     }
+
+    // If we get here, all attempts failed
+    console.error('❌ All location update attempts failed');
+    return false;
 
   } catch (error) {
     console.error('❌ Exception in background location update:', error.message);
@@ -406,42 +445,25 @@ export class BackgroundLocationService {
         console.log('✅ Background location permission already granted');
       }
 
-      // Start background location tracking with ULTRA-AGGRESSIVE settings for Android
+      // Start background location tracking with aggressive settings optimized for Android
       await Location.startLocationUpdatesAsync(BACKGROUND_LOCATION_TASK, {
-        // MAXIMUM GPS accuracy for taxi navigation
         accuracy: Location.Accuracy.BestForNavigation,
-
-        // EVERY 2 SECONDS - More aggressive than before
-        timeInterval: 2000,
-
-        // Report EVERY location regardless of distance
-        distanceInterval: 0,
-
-        // Force immediate updates - no deferring
-        deferredUpdatesInterval: 2000,
-
-        // Show location indicator on iOS
+        timeInterval: 3000, // Every 3 seconds
+        distanceInterval: 0, // Report every location change regardless of distance
+        deferredUpdatesInterval: 3000, // Match timeInterval
         showsBackgroundLocationIndicator: true,
-
-        // CRITICAL: Android Foreground Service - prevents battery optimization from killing it
         foregroundService: {
-          notificationTitle: '🚕 A1 Taxi - Driver Online',
-          notificationBody: 'Location tracking active. DO NOT SWIPE AWAY.',
-          notificationColor: '#FF0000', // RED for high visibility
-          // CRITICAL: killServiceOnDestroy MUST be false
-          killServiceOnDestroy: false,
+          notificationTitle: 'A1 Taxi - Driver Online',
+          notificationBody: 'Tracking your location. Tap to open app.',
+          notificationColor: '#10B981',
         },
-
-        // NEVER EVER pause - this is THE most critical setting
-        pausesUpdatesAutomatically: false,
-
-        // Tell Android this is automotive navigation (highest priority)
-        activityType: Location.ActivityType.AutomotiveNavigation,
+        pausesUpdatesAutomatically: false, // CRITICAL: Never pause updates
+        activityType: Location.ActivityType.AutomotiveNavigation, // Highest priority for constant tracking
 
         // Android-specific optimizations
         ...(Platform.OS === 'android' && {
-          // Don't show settings dialog during tracking
-          mayShowUserSettingsDialog: false,
+          // These settings prevent Android from pausing the service
+          mayShowUserSettingsDialog: true, // Allow prompting user for better settings
         }),
       });
 
@@ -457,16 +479,9 @@ export class BackgroundLocationService {
         console.warn('⚠️ Could not register background fetch (non-critical):', fetchError);
       }
 
-      console.log('✅ ========================================');
-      console.log('✅ BACKGROUND LOCATION TRACKING STARTED');
-      console.log('✅ ========================================');
-      console.log('📱 Android Foreground Service: ACTIVE');
-      console.log('🔴 RED notification is visible');
-      console.log('⏱️  Update every 2 seconds');
-      console.log('🌍 Works when app is CLOSED');
-      console.log('⚠️  CRITICAL: Do NOT swipe notification');
-      console.log('⚠️  CRITICAL: Disable battery optimization');
-      console.log('✅ ========================================');
+      console.log('✅ Background location tracking started');
+      console.log('✅ Foreground service notification will be shown');
+      console.log('✅ Location will update every 3 seconds even when app is closed');
 
       return true;
     } catch (error) {
