@@ -81,7 +81,7 @@ export default {
       [
         "expo-background-fetch",
         {
-          backgroundFetchInterval: 10
+          backgroundFetchInterval: 60 // Minimum interval in seconds (Android enforces 15-minute minimum anyway)
         }
       ]
     ],

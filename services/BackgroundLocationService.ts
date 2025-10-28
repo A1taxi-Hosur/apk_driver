@@ -13,72 +13,96 @@ const DRIVER_USER_ID_KEY = 'background_driver_user_id';
 
 // Background location task for native platforms
 TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
+  const timestamp = new Date().toISOString();
+
   if (error) {
-    console.error('Background location task error:', error);
+    console.error(`[${timestamp}] ❌ Background location task error:`, error);
     return;
   }
 
   if (data) {
     const { locations } = data as any;
-    console.log('📍 Background location update:', locations);
+    console.log(`[${timestamp}] 📍 Background location task triggered with ${locations?.length || 0} locations`);
 
     // CRITICAL: Always try to send location first, then check status
     // This ensures we don't lose location data during active trips
     if (locations && locations.length > 0) {
-      const location = locations[0];
-      const locationSent = await sendLocationToDatabase(location);
+      // Process all locations (sometimes batch arrives)
+      for (const location of locations) {
+        console.log(`[${timestamp}] 📍 Processing location: ${location.coords.latitude}, ${location.coords.longitude}`);
+        const locationSent = await sendLocationToDatabase(location);
 
-      // Only check driver status if location was NOT sent (driver might be offline)
-      // If location was sent successfully, driver has active trip or is online
-      if (!locationSent) {
-        const isDriverOnline = await checkDriverOnlineStatus();
-        if (!isDriverOnline) {
-          console.log('❌ Driver is offline and no active trip, will stop on next check');
-          // Note: Cannot call stopBackgroundLocationTracking from here
-          // Service will stop on next iteration when status check fails again
-          return;
+        if (locationSent) {
+          console.log(`[${timestamp}] ✅ Location sent successfully`);
+        } else {
+          console.log(`[${timestamp}] ⚠️ Location not sent, checking driver status...`);
+
+          // Only check driver status if location was NOT sent
+          const isDriverOnline = await checkDriverOnlineStatus();
+          if (!isDriverOnline) {
+            console.log(`[${timestamp}] ❌ Driver is offline and no active trip`);
+            // Note: Cannot call stopBackgroundLocationTracking from here
+            // Service will continue until manually stopped
+            return;
+          } else {
+            console.log(`[${timestamp}] ✅ Driver is online, will retry location send`);
+          }
         }
       }
+    } else {
+      console.log(`[${timestamp}] ⚠️ No locations in background task data`);
     }
+  } else {
+    console.log(`[${timestamp}] ⚠️ No data in background task`);
   }
+
+  console.log(`[${timestamp}] ✅ Background location task completed`);
 });
 
-// Background fetch task for periodic location updates
+// Background fetch task for periodic location updates (fallback for when main task pauses)
 TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
-  console.log('📍 Background fetch triggered for location update');
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] 📍 Background fetch triggered (fallback mechanism)`);
 
   try {
+    // Check if driver should be tracking
+    const isDriverOnline = await checkDriverOnlineStatus();
+    if (!isDriverOnline) {
+      console.log(`[${timestamp}] ❌ Driver is offline, skipping background fetch`);
+      return BackgroundFetch.BackgroundFetchResult.NoData;
+    }
+
     // Get current location first
     const { status } = await Location.getForegroundPermissionsAsync();
     if (status !== 'granted') {
-      console.log('❌ Location permission not granted');
+      console.log(`[${timestamp}] ❌ Location permission not granted`);
       return BackgroundFetch.BackgroundFetchResult.Failed;
     }
 
+    console.log(`[${timestamp}] 📍 Fetching current location via background fetch...`);
+
     const location = await Location.getCurrentPositionAsync({
-      accuracy: Location.Accuracy.BestForNavigation,
-      timeout: 15000,
+      accuracy: Location.Accuracy.Balanced, // Use balanced to save battery during fallback
+      timeout: 10000,
     });
 
     if (location) {
+      console.log(`[${timestamp}] 📍 Got location: ${location.coords.latitude}, ${location.coords.longitude}`);
       const locationSent = await sendLocationToDatabase(location);
 
       if (locationSent) {
-        console.log('✅ Background location update successful');
+        console.log(`[${timestamp}] ✅ Background fetch location update successful`);
         return BackgroundFetch.BackgroundFetchResult.NewData;
       } else {
-        // Location not sent, check if driver should continue
-        const isDriverOnline = await checkDriverOnlineStatus();
-        if (!isDriverOnline) {
-          console.log('❌ Driver is offline, skipping background location update');
-          return BackgroundFetch.BackgroundFetchResult.NoData;
-        }
+        console.log(`[${timestamp}] ⚠️ Background fetch could not send location`);
+        return BackgroundFetch.BackgroundFetchResult.NoData;
       }
     }
 
+    console.log(`[${timestamp}] ⚠️ Background fetch got no location`);
     return BackgroundFetch.BackgroundFetchResult.NoData;
   } catch (error) {
-    console.error('❌ Background fetch error:', error);
+    console.error(`[${timestamp}] ❌ Background fetch error:`, error);
     return BackgroundFetch.BackgroundFetchResult.Failed;
   }
 });
@@ -341,28 +365,39 @@ export class BackgroundLocationService {
 
       console.log('✅ Background location permission granted');
 
-      // Start background location tracking with aggressive settings
+      // Start background location tracking with aggressive settings optimized for Android
       await Location.startLocationUpdatesAsync(BACKGROUND_LOCATION_TASK, {
         accuracy: Location.Accuracy.BestForNavigation,
-        timeInterval: 5000, // Every 5 seconds
-        distanceInterval: 5, // Every 5 meters
-        deferredUpdatesInterval: 5000,
+        timeInterval: 3000, // Every 3 seconds (more frequent to prevent system from pausing)
+        distanceInterval: 0, // Report every location change regardless of distance
+        deferredUpdatesInterval: 3000, // Match timeInterval
         showsBackgroundLocationIndicator: true,
         foregroundService: {
-          notificationTitle: 'A1 Taxi - Driver Active',
-          notificationBody: 'Location tracking active. Do not close this notification.',
-          notificationColor: '#2563EB',
+          notificationTitle: 'A1 Taxi - Driver Online',
+          notificationBody: 'Tracking your location. Tap to open app.',
+          notificationColor: '#10B981',
         },
         pausesUpdatesAutomatically: false, // CRITICAL: Never pause updates
-        activityType: Location.ActivityType.AutomotiveNavigation, // Highest priority
+        activityType: Location.ActivityType.AutomotiveNavigation, // Highest priority for constant tracking
+
+        // Android-specific optimizations
+        ...(Platform.OS === 'android' && {
+          // These settings prevent Android from pausing the service
+          mayShowUserSettingsDialog: true, // Allow prompting user for better settings
+        }),
       });
 
-      // Also register background fetch as fallback
-      await BackgroundFetch.registerTaskAsync(BACKGROUND_FETCH_TASK, {
-        minimumInterval: 5, // 5 seconds
-        stopOnTerminate: false,
-        startOnBoot: true,
-      });
+      // Also register background fetch as fallback (Android will run this every ~15 minutes minimum)
+      try {
+        await BackgroundFetch.registerTaskAsync(BACKGROUND_FETCH_TASK, {
+          minimumInterval: 60, // 60 seconds (Android will still enforce 15-minute minimum)
+          stopOnTerminate: false,
+          startOnBoot: true,
+        });
+        console.log('✅ Background fetch registered as fallback');
+      } catch (fetchError) {
+        console.warn('⚠️ Could not register background fetch (non-critical):', fetchError);
+      }
 
       console.log('✅ Background location tracking started');
       console.log('✅ Foreground service notification will be shown');
