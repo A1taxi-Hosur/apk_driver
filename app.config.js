@@ -38,7 +38,6 @@ export default {
         "FOREGROUND_SERVICE_LOCATION",
         "POST_NOTIFICATIONS",
         "VIBRATE",
-        "SYSTEM_ALERT_WINDOW",
         "USE_FULL_SCREEN_INTENT",
         "WAKE_LOCK",
         "RECEIVE_BOOT_COMPLETED"
