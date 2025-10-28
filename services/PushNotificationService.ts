@@ -48,13 +48,15 @@ class PushNotificationService {
         if (Platform.OS === 'android') {
           const { Alert, Linking } = await import('react-native');
           Alert.alert(
-            'Notification Permission Required',
-            'A1 Taxi needs notification permissions to:\n\n' +
-            '• Alert you of new ride requests\n' +
-            '• Show ride updates\n' +
-            '• Play notification sounds\n\n' +
-            'Please enable notifications in Settings.\n\n' +
-            'Also enable "Display over other apps" for urgent ride alerts.',
+            'Notification Permissions Required',
+            'A1 Taxi needs notification permissions to alert you of ride requests.\n\n' +
+            '📱 STEP 1: Enable Notifications\n' +
+            '• Settings → Apps → A1 Taxi → Notifications → ON\n\n' +
+            '📱 STEP 2: Enable "Display over other apps"\n' +
+            '• Settings → Apps → A1 Taxi → Display over other apps\n' +
+            '• Tap "Allow restricted settings" at bottom\n' +
+            '• Turn ON the permission\n\n' +
+            '⚠️ Both permissions are required for ride alerts!',
             [
               { text: 'Cancel', style: 'cancel' },
               {
@@ -69,6 +71,44 @@ class PushNotificationService {
       }
 
       console.log('✅ Notification permissions granted');
+
+      // CRITICAL: Guide user to enable "Display over other apps" separately
+      if (Platform.OS === 'android') {
+        console.log('📱 Checking if user needs to enable "Display over other apps"...');
+
+        // Show one-time guide for Display over other apps
+        const AsyncStorage = (await import('@react-native-async-storage/async-storage')).default;
+        const displayOverAppsGuideShown = await AsyncStorage.getItem('@display_over_apps_guide_shown');
+
+        if (!displayOverAppsGuideShown) {
+          const { Alert, Linking } = await import('react-native');
+
+          setTimeout(() => {
+            Alert.alert(
+              'Important: Enable "Display over other apps"',
+              '🚨 CRITICAL PERMISSION for ride alerts:\n\n' +
+              '1. Go to Settings → Apps → A1 Taxi\n' +
+              '2. Tap "Display over other apps"\n' +
+              '3. Tap "Allow restricted settings" (at bottom)\n' +
+              '4. Turn ON the permission\n\n' +
+              'Without this, you will NOT see ride request alerts!',
+              [
+                {
+                  text: 'Remind Later',
+                  style: 'cancel'
+                },
+                {
+                  text: 'Open Settings Now',
+                  onPress: async () => {
+                    await AsyncStorage.setItem('@display_over_apps_guide_shown', 'true');
+                    Linking.openSettings();
+                  }
+                }
+              ]
+            );
+          }, 1000);
+        }
+      }
 
       // Get Expo push token
       console.log('🔑 Getting Expo push token...');

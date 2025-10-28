@@ -450,8 +450,21 @@ export function RideProvider({ children }: RideProviderProps) {
 
           // Convert valid notifications to ride objects
           // Only show regular rides in pendingRides - rental/outstation/airport are admin-assigned
+          // CRITICAL: Deduplicate by ride_id to prevent showing same ride multiple times
+          const uniqueRideIds = new Set<string>()
           const rideRequests = validNotifications
-            .filter(n => n.data?.ride_id && n.data?.booking_type === 'regular')
+            .filter(n => {
+              if (!n.data?.ride_id || n.data?.booking_type !== 'regular') {
+                return false
+              }
+              // Deduplicate: Only keep first occurrence of each ride_id
+              if (uniqueRideIds.has(n.data.ride_id)) {
+                console.log('⚠️ Duplicate notification found for ride:', n.data.ride_id)
+                return false
+              }
+              uniqueRideIds.add(n.data.ride_id)
+              return true
+            })
             .map(n => ({
               id: n.data.ride_id,
               ride_code: n.data.ride_code || 'N/A',
