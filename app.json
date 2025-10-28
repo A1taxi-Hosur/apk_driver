@@ -77,12 +77,10 @@
           "android": {
             "icon": "./assets/images/icon.png",
             "color": "#10B981",
-            "defaultChannel": "ride-requests-urgent"
+            "defaultChannel": "ride-requests-urgent",
+            "useNextNotificationsApi": true
           }
         }
-      ],
-      [
-        "@react-native-firebase/app"
       ]
     ],
     "extra": {

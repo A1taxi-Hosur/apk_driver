@@ -71,7 +71,13 @@ export default {
           icon: "./assets/images/icon.png",
           color: "#2563EB",
           sounds: ["./assets/sounds/notification.mp3"],
-          mode: "production"
+          mode: "production",
+          android: {
+            icon: "./assets/images/icon.png",
+            color: "#10B981",
+            defaultChannel: "ride-requests-urgent",
+            useNextNotificationsApi: true
+          }
         }
       ],
       [
@@ -82,9 +88,6 @@ export default {
         {
           backgroundFetchInterval: 60 // Minimum interval in seconds (Android enforces 15-minute minimum anyway)
         }
-      ],
-      [
-        "@react-native-firebase/app"
       ]
     ],
     extra: {
