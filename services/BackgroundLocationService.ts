@@ -40,18 +40,11 @@ TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
             if (locationSent) {
               console.log(`[${timestamp}] ✅ Location sent successfully`);
             } else {
-              console.log(`[${timestamp}] ⚠️ Location not sent, checking driver status...`);
-
-              // Only check driver status if location was NOT sent
-              const isDriverOnline = await checkDriverOnlineStatus();
-              if (!isDriverOnline) {
-                console.log(`[${timestamp}] ❌ Driver is offline and no active trip`);
-                // Note: Cannot call stopBackgroundLocationTracking from here
-                // Service will continue until manually stopped
-                return;
-              } else {
-                console.log(`[${timestamp}] ✅ Driver is online, will retry location send`);
-              }
+              console.log(`[${timestamp}] ⚠️ Location not sent (driver might be offline or network issue)`);
+              // CRITICAL: Do NOT stop the task here!
+              // The background task should continue running regardless of driver status
+              // The task will only stop when explicitly stopped by the app
+              // This ensures location tracking is always active when driver is online
             }
           } catch (locError) {
             console.error(`[${timestamp}] ❌ Error processing single location:`, locError);
@@ -79,12 +72,9 @@ TaskManager.defineTask(BACKGROUND_FETCH_TASK, async () => {
   console.log(`[${timestamp}] 📍 Background fetch triggered (fallback mechanism)`);
 
   try {
-    // Check if driver should be tracking
-    const isDriverOnline = await checkDriverOnlineStatus();
-    if (!isDriverOnline) {
-      console.log(`[${timestamp}] ❌ Driver is offline, skipping background fetch`);
-      return BackgroundFetch.BackgroundFetchResult.NoData;
-    }
+    // CRITICAL: Always attempt to get and send location
+    // Do NOT check driver status first - let sendLocationToDatabase handle it
+    // This ensures location updates continue even if status check fails
 
     // Get current location first
     const { status } = await Location.getForegroundPermissionsAsync();
