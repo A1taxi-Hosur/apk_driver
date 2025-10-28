@@ -125,6 +125,10 @@ async function checkDriverOnlineStatus(): Promise<boolean> {
 
       if (supabaseUrl && supabaseAnonKey) {
         try {
+          // Create timeout manually (AbortSignal.timeout not available in Hermes)
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 5000);
+
           const response = await fetch(`${supabaseUrl}/rest/v1/rpc/should_driver_track_location`, {
             method: 'POST',
             headers: {
@@ -133,8 +137,10 @@ async function checkDriverOnlineStatus(): Promise<boolean> {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ p_driver_id: driverId }),
-            signal: AbortSignal.timeout(5000)
+            signal: controller.signal
           });
+
+          clearTimeout(timeoutId);
 
           if (response.ok) {
             const result = await response.json();
@@ -214,83 +220,51 @@ async function sendLocationToDatabase(location: any): Promise<boolean> {
     }
 
     // Use RPC function to update location (bypasses RLS)
-    // CRITICAL: Longer timeout + retry logic for Android Doze mode
-    // Network requests can be delayed/queued when phone is idle
-    let attempts = 0;
-    const maxAttempts = 2;
+    // Note: Using longer timeout for Android Doze mode (network can be delayed)
+    try {
+      // Create timeout manually (AbortSignal.timeout not available in Hermes)
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 seconds
 
-    while (attempts < maxAttempts) {
-      attempts++;
+      const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/update_driver_location_rpc`, {
+        method: 'POST',
+        headers: {
+          'apikey': supabaseAnonKey,
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=representation'
+        },
+        body: JSON.stringify({
+          p_driver_id: driverId,
+          p_latitude: location.coords.latitude,
+          p_longitude: location.coords.longitude,
+          p_heading: location.coords.heading || null,
+          p_speed: location.coords.speed || null,
+          p_accuracy: location.coords.accuracy || null
+        }),
+        signal: controller.signal
+      });
 
-      try {
-        console.log(`📡 Location update attempt ${attempts}/${maxAttempts}`);
+      clearTimeout(timeoutId); // Clear timeout on success
 
-        const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/update_driver_location_rpc`, {
-          method: 'POST',
-          headers: {
-            'apikey': supabaseAnonKey,
-            'Authorization': `Bearer ${supabaseAnonKey}`,
-            'Content-Type': 'application/json',
-            'Prefer': 'return=representation'
-          },
-          body: JSON.stringify({
-            p_driver_id: driverId,
-            p_latitude: location.coords.latitude,
-            p_longitude: location.coords.longitude,
-            p_heading: location.coords.heading || null,
-            p_speed: location.coords.speed || null,
-            p_accuracy: location.coords.accuracy || null
-          }),
-          signal: AbortSignal.timeout(15000) // 15 seconds - longer for Doze mode
-        });
-
-        if (rpcResponse.ok) {
-          const result = await rpcResponse.json();
-          if (result && result.success) {
-            console.log('✅ Background location updated via RPC:', result.action);
-            return true; // SUCCESS!
-          } else {
-            console.error(`❌ Attempt ${attempts}: RPC returned error:`, result?.error);
-            if (attempts < maxAttempts) {
-              console.log('🔄 Retrying in 1 second...');
-              await new Promise(resolve => setTimeout(resolve, 1000));
-              continue; // Try again
-            }
-            return false;
-          }
+      if (rpcResponse.ok) {
+        const result = await rpcResponse.json();
+        if (result && result.success) {
+          console.log('✅ Background location updated via RPC:', result.action);
+          return true;
         } else {
-          const errorText = await rpcResponse.text();
-          console.error(`❌ Attempt ${attempts}: RPC request failed:`, rpcResponse.status, errorText);
-          if (attempts < maxAttempts) {
-            console.log('🔄 Retrying in 1 second...');
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            continue;
-          }
+          console.error('❌ RPC returned error:', result?.error);
           return false;
         }
-      } catch (rpcError: any) {
-        console.error(`❌ Attempt ${attempts}: RPC exception:`, rpcError.message);
-
-        // Timeout errors are common in Doze mode - retry!
-        if (rpcError.name === 'TimeoutError' && attempts < maxAttempts) {
-          console.log('⏰ Request timed out (Android Doze?), retrying in 2 seconds...');
-          await new Promise(resolve => setTimeout(resolve, 2000));
-          continue;
-        }
-
-        if (attempts < maxAttempts) {
-          console.log('🔄 Retrying after exception in 1 second...');
-          await new Promise(resolve => setTimeout(resolve, 1000));
-          continue;
-        }
-
+      } else {
+        const errorText = await rpcResponse.text();
+        console.error('❌ RPC request failed:', rpcResponse.status, errorText);
         return false;
       }
+    } catch (rpcError: any) {
+      console.error('❌ RPC exception:', rpcError.message);
+      return false;
     }
-
-    // If we get here, all attempts failed
-    console.error('❌ All location update attempts failed');
-    return false;
 
   } catch (error) {
     console.error('❌ Exception in background location update:', error.message);
