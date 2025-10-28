@@ -3,6 +3,7 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { useRouter, useSegments } from 'expo-router';
 import { View, ActivityIndicator, StyleSheet } from 'react-native';
+import * as Notifications from 'expo-notifications';
 import { AuthProvider } from '@/contexts/AuthContext';
 import { LocationProvider } from '@/contexts/LocationContext';
 import { RideProvider } from '@/contexts/RideContext';
@@ -78,6 +79,53 @@ const styles = StyleSheet.create({
 });
 
 export default function RootLayout() {
+  const router = useRouter();
+
+  useEffect(() => {
+    console.log('📱 Setting up notification response handlers...');
+
+    // Handle notification tap when app is running or in background
+    const subscription = Notifications.addNotificationResponseReceivedListener(
+      async (response) => {
+        const data = response.notification.request.content.data;
+
+        console.log('📱 Notification tapped:', data);
+
+        if (data.type === 'ride_request' && data.rideId) {
+          console.log('🚗 Navigating to ride:', data.rideId);
+
+          // Wait a moment for app to initialize if it was in background
+          setTimeout(() => {
+            router.push('/(tabs)/rides');
+          }, 500);
+        }
+      }
+    );
+
+    // Handle when app was opened from notification (app was killed)
+    Notifications.getLastNotificationResponseAsync().then((response) => {
+      if (response) {
+        const data = response.notification.request.content.data;
+
+        if (data.type === 'ride_request' && data.rideId) {
+          console.log('📱 App opened from notification (was killed):', data.rideId);
+
+          // Wait longer for app to fully initialize from killed state
+          setTimeout(() => {
+            router.push('/(tabs)/rides');
+          }, 1500);
+        }
+      }
+    });
+
+    console.log('✅ Notification response handlers configured');
+
+    return () => {
+      console.log('🔌 Cleaning up notification subscription');
+      subscription.remove();
+    };
+  }, []);
+
   return (
     <AuthProvider>
       <LocationProvider>

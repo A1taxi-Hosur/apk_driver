@@ -10,9 +10,11 @@ import {
   Alert,
   Linking,
   Platform,
+  Pressable,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { MapPin, Clock, IndianRupee, User, Navigation, Phone, CircleCheck as CheckCircle, Circle as XCircle, CircleAlert as AlertCircle, Car, Power } from 'lucide-react-native';
+import Animated, { useAnimatedStyle, withRepeat, withSequence, withTiming } from 'react-native-reanimated';
+import { MapPin, Clock, IndianRupee, User, Navigation, Phone, CircleCheck as CheckCircle, Circle as XCircle, CircleAlert as AlertCircle, Car, Power, Bell } from 'lucide-react-native';
 import { useAuth } from '../../contexts/AuthContext';
 import { useRide } from '../../contexts/RideContext';
 import { useLocation } from '../../contexts/LocationContext';
@@ -23,6 +25,40 @@ import MapView from '../../components/MapView';
 import { notificationSoundService } from '../../services/NotificationSoundService';
 import TripCompletionModal from '../../components/TripCompletionModal';
 import { BackgroundLocationService } from '../../services/BackgroundLocationService';
+
+// Pending Ride Alert Component
+function PendingRideAlert({ count, onPress }: { count: number; onPress: () => void }) {
+  // Pulse animation for the background
+  const pulseStyle = useAnimatedStyle(() => {
+    return {
+      opacity: withRepeat(
+        withSequence(
+          withTiming(1, { duration: 800 }),
+          withTiming(0.3, { duration: 800 })
+        ),
+        -1,
+        true
+      ),
+    };
+  });
+
+  return (
+    <Pressable style={styles.rideAlertButton} onPress={onPress}>
+      <Animated.View style={[styles.rideAlertPulse, pulseStyle]} />
+      <View style={styles.rideAlertContent}>
+        <Bell size={28} color="#FFFFFF" />
+        <View style={styles.rideAlertTextContainer}>
+          <Text style={styles.rideAlertTitle}>
+            {count} NEW RIDE{count > 1 ? 'S' : ''}!
+          </Text>
+          <Text style={styles.rideAlertSubtitle}>
+            TAP TO VIEW & ACCEPT
+          </Text>
+        </View>
+      </View>
+    </Pressable>
+  );
+}
 
 export default function RidesScreen() {
   const { driver, updateDriverStatus } = useAuth();
@@ -412,6 +448,18 @@ export default function RidesScreen() {
             <Text style={styles.statusText}>{driver?.status?.toUpperCase() || 'OFFLINE'}</Text>
           </View>
         </View>
+
+        {/* NEW RIDE ALERT BUTTON */}
+        {pendingRides.length > 0 && !currentRide && (
+          <PendingRideAlert
+            count={pendingRides.length}
+            onPress={() => {
+              console.log('🚗 Alert button tapped - showing first pending ride');
+              setSelectedRideRequest(pendingRides[0]);
+              setShowRideRequestModal(true);
+            }}
+          />
+        )}
 
         {/* Driver Status Card */}
         <View style={styles.statusCard}>
@@ -1120,5 +1168,54 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: '600',
     marginLeft: 8,
+  },
+  // Ride Alert Button Styles
+  rideAlertButton: {
+    backgroundColor: '#DC2626',
+    borderRadius: 16,
+    marginHorizontal: 16,
+    marginBottom: 16,
+    marginTop: 8,
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    elevation: 12,
+    shadowColor: '#DC2626',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.6,
+    shadowRadius: 12,
+    borderWidth: 3,
+    borderColor: '#FFFFFF',
+    overflow: 'hidden',
+  },
+  rideAlertPulse: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 16,
+  },
+  rideAlertContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  rideAlertTextContainer: {
+    marginLeft: 12,
+    alignItems: 'center',
+  },
+  rideAlertTitle: {
+    color: '#FFFFFF',
+    fontSize: 22,
+    fontWeight: 'bold',
+    letterSpacing: 0.5,
+  },
+  rideAlertSubtitle: {
+    color: '#FFFFFF',
+    fontSize: 13,
+    marginTop: 2,
+    fontWeight: '600',
+    opacity: 0.95,
   },
 });

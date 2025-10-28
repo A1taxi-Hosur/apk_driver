@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 import { Session, User } from '@supabase/supabase-js'
+import { Alert, Linking, Platform } from 'react-native'
 import { Database } from '../types/database'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import { supabase } from '../utils/supabase'
@@ -37,6 +38,58 @@ interface AuthProviderProps {
 }
 
 const DRIVER_SESSION_KEY = 'driver_session'
+const BATTERY_GUIDE_SHOWN_KEY = '@battery_guide_shown'
+
+// Function to check and prompt for battery optimization
+async function checkAndPromptBatteryOptimization() {
+  if (Platform.OS !== 'android') {
+    return; // Only applicable to Android
+  }
+
+  try {
+    // Check if we've shown this before
+    const hasSeenGuide = await AsyncStorage.getItem(BATTERY_GUIDE_SHOWN_KEY);
+
+    if (!hasSeenGuide) {
+      console.log('📱 Showing battery optimization guide');
+
+      Alert.alert(
+        '⚠️ Important: Enable Reliable Notifications',
+        'To ensure you never miss ride requests:\n\n' +
+        '1. Open Settings\n' +
+        '2. Search for "A1 Taxi"\n' +
+        '3. Tap "Battery"\n' +
+        '4. Select "Unrestricted"\n\n' +
+        'This prevents Android from stopping notifications when the app is closed.',
+        [
+          {
+            text: 'Remind Me Later',
+            style: 'cancel',
+          },
+          {
+            text: "Don't Show Again",
+            onPress: () => {
+              AsyncStorage.setItem(BATTERY_GUIDE_SHOWN_KEY, 'true');
+              console.log('✅ Battery guide dismissed permanently');
+            },
+          },
+          {
+            text: 'Open Settings',
+            onPress: () => {
+              Linking.openSettings();
+              AsyncStorage.setItem(BATTERY_GUIDE_SHOWN_KEY, 'true');
+              console.log('✅ Opening device settings');
+            },
+          },
+        ]
+      );
+    } else {
+      console.log('✅ Battery guide already shown previously');
+    }
+  } catch (error) {
+    console.error('❌ Error checking battery guide status:', error);
+  }
+}
 
 export function AuthProvider({ children }: AuthProviderProps) {
   const [session, setSession] = useState<Session | null>(null)
@@ -460,6 +513,15 @@ export function AuthProvider({ children }: AuthProviderProps) {
       } catch (pushError) {
         console.error('⚠️ Error registering push notifications after login:', pushError);
       }
+
+      // Step 6.6: Show battery optimization guide (after a delay)
+      setTimeout(async () => {
+        try {
+          await checkAndPromptBatteryOptimization();
+        } catch (error) {
+          console.error('⚠️ Error showing battery optimization guide:', error);
+        }
+      }, 3000);
 
       // Step 7: Store session
       await AsyncStorage.setItem(DRIVER_SESSION_KEY, JSON.stringify({

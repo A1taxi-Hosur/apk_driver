@@ -101,8 +101,8 @@ class RideNotificationService {
 
       const notificationId = await Notifications.scheduleNotificationAsync({
         content: {
-          title: '🚗 New Ride Request!',
-          body: `${rideData.customerName}\n📍 ${rideData.pickupAddress}\n💰 ₹${rideData.fareAmount}`,
+          title: '🚗 NEW RIDE REQUEST!',
+          body: `${rideData.customerName}\n📍 ${rideData.pickupAddress}\n💰 ₹${rideData.fareAmount}${rideData.distance ? ` • ${rideData.distance.toFixed(1)} km` : ''}\n\n⏰ TAP NOW TO ACCEPT!`,
           data: {
             rideId: rideData.rideId,
             rideCode: rideData.rideCode,
@@ -111,13 +111,14 @@ class RideNotificationService {
           },
           sound: 'notification.mp3',
           priority: Notifications.AndroidNotificationPriority.MAX,
-          vibrate: [0, 250, 250, 250],
+          vibrate: [0, 250, 250, 250, 250, 250], // Longer, more noticeable vibration
           badge: 1,
           categoryIdentifier: 'ride-request',
           ...(Platform.OS === 'android' && {
             channelId: this.notificationChannelId,
             sticky: true,
             autoDismiss: false,
+            color: '#DC2626', // Red color for urgency
           }),
         },
         trigger: null,
