@@ -557,6 +557,29 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('Ride ID:', rideId)
       console.log('Driver ID:', driver.id)
 
+      // CRITICAL: Frontend validation - Check if driver already has active ride
+      // This prevents unnecessary RPC calls and provides immediate feedback
+      if (currentRide) {
+        console.error('❌ FRONTEND VALIDATION FAILED: Driver already has active ride')
+        console.error('Current ride ID:', currentRide.id)
+        console.error('Current ride status:', currentRide.status)
+        setError('You already have an active ride. Please complete it before accepting another.')
+        return false
+      }
+
+      // Double-check: Verify no rides with active status
+      const activeStatuses = ['accepted', 'driver_arrived', 'in_progress']
+      const hasActiveRide = currentRide && activeStatuses.includes(currentRide.status)
+
+      if (hasActiveRide) {
+        console.error('❌ FRONTEND VALIDATION FAILED: Active ride detected')
+        console.error('Active ride:', currentRide)
+        setError('You already have an active ride. Please complete it before accepting another.')
+        return false
+      }
+
+      console.log('✅ Frontend validation passed: No active rides')
+
       // Stop notification sound and clear notifications immediately when accepting
       console.log('🛑 Stopping notification sound and clearing notifications (ride accepted)')
       await notificationSoundService.stopNotificationSound()

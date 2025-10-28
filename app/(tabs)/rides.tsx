@@ -709,6 +709,7 @@ export default function RidesScreen() {
           setShowRideRequestModal(false);
           setSelectedRideRequest(null);
         }}
+        hasActiveRide={!!currentRide}
       />
 
       {/* OTP Modal */}

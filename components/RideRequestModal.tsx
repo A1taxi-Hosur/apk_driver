@@ -26,6 +26,7 @@ interface RideRequestModalProps {
   onAccept: () => void;
   onDecline: () => void;
   onClose: () => void;
+  hasActiveRide?: boolean; // NEW: Disable accept if driver has active ride
 }
 
 export default function RideRequestModal({
@@ -34,6 +35,7 @@ export default function RideRequestModal({
   onAccept,
   onDecline,
   onClose,
+  hasActiveRide = false,
 }: RideRequestModalProps) {
   const { currentLocation } = useLocation();
   const [tripDistance, setTripDistance] = useState<number | null>(null);
@@ -246,22 +248,37 @@ export default function RideRequestModal({
 
           {/* Action Buttons */}
           <View style={styles.actionButtons}>
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.declineButton}
               onPress={onDecline}
             >
               <X size={24} color="#FFFFFF" />
               <Text style={styles.declineButtonText}>Decline</Text>
             </TouchableOpacity>
-            
-            <TouchableOpacity 
-              style={styles.acceptButton}
-              onPress={onAccept}
+
+            <TouchableOpacity
+              style={[
+                styles.acceptButton,
+                hasActiveRide && styles.acceptButtonDisabled
+              ]}
+              onPress={hasActiveRide ? undefined : onAccept}
+              disabled={hasActiveRide}
             >
               <Check size={24} color="#FFFFFF" />
-              <Text style={styles.acceptButtonText}>Accept Ride</Text>
+              <Text style={styles.acceptButtonText}>
+                {hasActiveRide ? 'Already On Ride' : 'Accept Ride'}
+              </Text>
             </TouchableOpacity>
           </View>
+
+          {/* Warning message if driver has active ride */}
+          {hasActiveRide && (
+            <View style={styles.warningContainer}>
+              <Text style={styles.warningText}>
+                ⚠️ You already have an active ride. Please complete it before accepting another.
+              </Text>
+            </View>
+          )}
 
         </View>
       </View>
@@ -454,6 +471,23 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     marginLeft: 8,
+  },
+  acceptButtonDisabled: {
+    backgroundColor: '#94A3B8',
+    opacity: 0.6,
+  },
+  warningContainer: {
+    marginTop: 16,
+    padding: 12,
+    backgroundColor: '#FEF3C7',
+    borderRadius: 8,
+    borderLeftWidth: 4,
+    borderLeftColor: '#F59E0B',
+  },
+  warningText: {
+    fontSize: 13,
+    color: '#92400E',
+    lineHeight: 18,
   },
   timerSection: {
     flexDirection: 'row',
