@@ -69,6 +69,10 @@ export function LocationProvider({ children }: LocationProviderProps) {
   useEffect(() => {
     isMountedRef.current = true
     console.log('=== LOCATION PROVIDER INITIALIZATION ===')
+
+    // Check actual background tracking status on mount
+    checkBackgroundTrackingStatus()
+
     // Request location permission immediately when component mounts
     if (!hasInitialized) {
       requestLocationPermissionOnStartup()
@@ -83,6 +87,32 @@ export function LocationProvider({ children }: LocationProviderProps) {
       }
     }
   }, [])
+
+  const checkBackgroundTrackingStatus = async () => {
+    try {
+      const isActive = await BackgroundLocationService.isBackgroundLocationActive()
+      console.log('📍 Background tracking status check:', isActive)
+      setIsBackgroundTrackingActive(isActive)
+      setBackgroundTrackingStarted(isActive)
+
+      // If driver is online but background tracking is not active, try to start it
+      if (!isActive && driver && (driver.status === 'online' || driver.status === 'busy') && locationPermission) {
+        console.log('⚠️ Driver is online but background tracking is inactive, attempting to restart...')
+        await startBackgroundTracking()
+      }
+    } catch (error) {
+      console.error('❌ Error checking background tracking status:', error)
+    }
+  }
+
+  // Periodically check background tracking status every 10 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      checkBackgroundTrackingStatus()
+    }, 10000) // Check every 10 seconds
+
+    return () => clearInterval(intervalId)
+  }, [driver?.status, locationPermission])
 
   useEffect(() => {
     console.log('=== DRIVER STATUS CHANGE DETECTED ===')
@@ -233,31 +263,41 @@ export function LocationProvider({ children }: LocationProviderProps) {
   }
 
   const startBackgroundTracking = async (): Promise<boolean> => {
-    if (!driver?.user_id || backgroundTrackingStarted) {
+    if (!driver?.user_id) {
       console.log('❌ No driver available for background tracking')
       return false
+    }
+
+    // Check if already active
+    const isAlreadyActive = await BackgroundLocationService.isBackgroundLocationActive()
+    if (isAlreadyActive) {
+      console.log('✅ Background tracking already active')
+      setIsBackgroundTrackingActive(true)
+      setBackgroundTrackingStarted(true)
+      return true
     }
 
     try {
       console.log('=== STARTING BACKGROUND LOCATION TRACKING ===')
       console.log('Driver:', driver.user?.full_name)
       console.log('Status:', driver.status)
-      
+
       const success = await BackgroundLocationService.startBackgroundLocationTracking(driver.user_id, driver.id)
       setBackgroundTrackingStarted(success)
       setIsBackgroundTrackingActive(success)
-      
+
       if (success) {
         console.log('✅ Background location tracking started successfully')
-        console.log('✅ Driver location will be sent every 5 seconds even when app is closed')
+        console.log('✅ Driver location will be sent every 3 seconds even when app is closed')
       } else {
         console.log('❌ Failed to start background location tracking')
       }
-      
+
       return success
     } catch (error) {
       console.error('❌ Error starting background tracking:', error)
       setIsBackgroundTrackingActive(false)
+      setBackgroundTrackingStarted(false)
       return false
     }
   }
