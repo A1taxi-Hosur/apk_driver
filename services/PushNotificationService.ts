@@ -3,6 +3,7 @@ import * as Device from 'expo-device';
 import { Platform } from 'react-native';
 import { supabase } from '../utils/supabase';
 import Constants from 'expo-constants';
+import { debugLog } from '../utils/debugLogger';
 
 class PushNotificationService {
   private pushToken: string | null = null;
@@ -13,20 +14,26 @@ class PushNotificationService {
    */
   async registerForPushNotifications(driverId: string): Promise<string | null> {
     try {
+      debugLog('PushNotificationService', 'Starting registration', { driverId });
       console.log('📱 Registering for push notifications...');
 
       // Check if physical device
       if (!Device.isDevice) {
+        debugLog('PushNotificationService', 'Not a physical device - skipping', {});
         console.warn('⚠️ Push notifications only work on physical devices');
         return null;
       }
 
+      debugLog('PushNotificationService', 'Is physical device', { deviceName: Device.deviceName });
+
       // Check existing permissions
       const { status: existingStatus } = await Notifications.getPermissionsAsync();
+      debugLog('PushNotificationService', 'Existing permission status', { status: existingStatus });
       let finalStatus = existingStatus;
 
       // Request permissions if not granted
       if (existingStatus !== 'granted') {
+        debugLog('PushNotificationService', 'Requesting permissions', {});
         console.log('📋 Requesting notification permissions...');
         const { status } = await Notifications.requestPermissionsAsync({
           android: {
@@ -38,6 +45,7 @@ class PushNotificationService {
           },
         });
         finalStatus = status;
+        debugLog('PushNotificationService', 'Permission request result', { status: finalStatus });
       }
 
       if (finalStatus !== 'granted') {
