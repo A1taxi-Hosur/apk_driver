@@ -562,31 +562,32 @@ export function RideProvider({ children }: RideProviderProps) {
         return false
       }
 
+      // CRITICAL: Always mark notification as read and remove from pending list
+      // This must happen for BOTH success and failure cases
+      console.log('📝 Marking notification as read for ride:', rideId)
+      const { data: markResult, error: markError } = await supabase.rpc('mark_ride_notification_as_read', {
+        p_user_id: driver.user_id,
+        p_ride_id: rideId
+      })
+
+      if (markError) {
+        console.error('❌ Error marking notification as read:', markError)
+      } else {
+        console.log('✅ Notification marked as read:', markResult)
+      }
+
+      // Immediately remove from pending rides (prevents showing unavailable rides)
+      setPendingRides(prev => {
+        const filtered = prev.filter(ride => ride.id !== rideId)
+        console.log(`✅ Removed ride from pending list. ${prev.length} → ${filtered.length} rides`)
+        return filtered
+      })
+
       if (result?.success) {
         console.log('✅ Ride accepted successfully via RPC')
         console.log('Ride code:', result.ride_code)
         console.log('RPC returned ride status:', result.status)
         console.log('RPC returned driver_id:', result.driver_id)
-
-        // Mark notification as read (accepted)
-        console.log('📝 Marking notification as read for ride:', rideId)
-        const { data: markResult, error: markError } = await supabase.rpc('mark_ride_notification_as_read', {
-          p_user_id: driver.user_id,
-          p_ride_id: rideId
-        })
-
-        if (markError) {
-          console.error('❌ Error marking notification as read:', markError)
-        } else {
-          console.log('✅ Notification marked as read:', markResult)
-        }
-
-        // Immediately remove from pending rides
-        setPendingRides(prev => {
-          const filtered = prev.filter(ride => ride.id !== rideId)
-          console.log(`✅ Removed accepted ride from pending list. ${prev.length} → ${filtered.length} rides`)
-          return filtered
-        })
 
         // Update local driver status
         await updateDriverStatus('busy')
@@ -612,11 +613,25 @@ export function RideProvider({ children }: RideProviderProps) {
       } else {
         console.error('❌ Failed to accept ride:', result?.error)
         setError(result?.error || 'Failed to accept ride')
+
+        // Don't update driver status or refresh rides when acceptance failed
+        // The ride is already removed from pending list above
+        // This prevents showing unavailable rides
+
         return false
       }
     } catch (error) {
       console.error('Exception accepting ride:', error)
       setError('Failed to accept ride')
+
+      // Remove ride from pending list even on exception
+      // This prevents showing unavailable rides
+      setPendingRides(prev => {
+        const filtered = prev.filter(ride => ride.id !== rideId)
+        console.log(`✅ Removed ride from pending list (exception). ${prev.length} → ${filtered.length} rides`)
+        return filtered
+      })
+
       return false
     }
   }
