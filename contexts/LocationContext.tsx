@@ -98,10 +98,25 @@ export function LocationProvider({ children }: LocationProviderProps) {
       // If driver is online but background tracking is not active, try to start it
       if (!isActive && driver && (driver.status === 'online' || driver.status === 'busy') && locationPermission) {
         console.log('⚠️ Driver is online but background tracking is inactive, attempting to restart...')
-        await startBackgroundTracking()
+        console.log('📊 Driver details:', {
+          id: driver.id,
+          user_id: driver.user_id,
+          status: driver.status
+        })
+
+        const restarted = await startBackgroundTracking()
+
+        if (restarted) {
+          console.log('✅ Background tracking successfully restarted')
+          setIsBackgroundTrackingActive(true)
+          setBackgroundTrackingStarted(true)
+        } else {
+          console.error('❌ Failed to restart background tracking')
+        }
       }
     } catch (error) {
       console.error('❌ Error checking background tracking status:', error)
+      console.error('Error details:', error)
     }
   }
 

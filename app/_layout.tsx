@@ -151,20 +151,25 @@ export default function RootLayout() {
     });
 
     // Handle when app was opened from notification (app was killed)
-    Notifications.getLastNotificationResponseAsync().then((response) => {
-      if (response) {
-        const data = response.notification.request.content.data;
+    // Only available on native platforms (iOS/Android)
+    if (Platform.OS !== 'web') {
+      Notifications.getLastNotificationResponseAsync().then((response) => {
+        if (response) {
+          const data = response.notification.request.content.data;
 
-        if (data.type === 'ride_request' && data.rideId) {
-          console.log('📱 App opened from notification (was killed):', data.rideId);
+          if (data.type === 'ride_request' && data.rideId) {
+            console.log('📱 App opened from notification (was killed):', data.rideId);
 
-          // Wait longer for app to fully initialize from killed state
-          setTimeout(() => {
-            router.push('/(tabs)/rides');
-          }, 1500);
+            // Wait longer for app to fully initialize from killed state
+            setTimeout(() => {
+              router.push('/(tabs)/rides');
+            }, 1500);
+          }
         }
-      }
-    });
+      }).catch((error) => {
+        console.error('❌ Error getting last notification response:', error);
+      });
+    }
 
     console.log('✅ All notification handlers configured');
 

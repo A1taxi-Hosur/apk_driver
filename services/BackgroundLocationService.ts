@@ -15,48 +15,62 @@ const DRIVER_USER_ID_KEY = 'background_driver_user_id';
 TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
   const timestamp = new Date().toISOString();
 
-  if (error) {
-    console.error(`[${timestamp}] ❌ Background location task error:`, error);
-    return;
-  }
+  try {
+    if (error) {
+      console.error(`[${timestamp}] ❌ Background location task error:`, error);
+      console.error(`[${timestamp}] Error name:`, error.name);
+      console.error(`[${timestamp}] Error message:`, error.message);
+      // Don't return - task will continue running
+      return;
+    }
 
-  if (data) {
-    const { locations } = data as any;
-    console.log(`[${timestamp}] 📍 Background location task triggered with ${locations?.length || 0} locations`);
+    if (data) {
+      const { locations } = data as any;
+      console.log(`[${timestamp}] 📍 Background location task triggered with ${locations?.length || 0} locations`);
 
-    // CRITICAL: Always try to send location first, then check status
-    // This ensures we don't lose location data during active trips
-    if (locations && locations.length > 0) {
-      // Process all locations (sometimes batch arrives)
-      for (const location of locations) {
-        console.log(`[${timestamp}] 📍 Processing location: ${location.coords.latitude}, ${location.coords.longitude}`);
-        const locationSent = await sendLocationToDatabase(location);
+      // CRITICAL: Always try to send location first, then check status
+      // This ensures we don't lose location data during active trips
+      if (locations && locations.length > 0) {
+        // Process all locations (sometimes batch arrives)
+        for (const location of locations) {
+          try {
+            console.log(`[${timestamp}] 📍 Processing location: ${location.coords.latitude}, ${location.coords.longitude}`);
+            const locationSent = await sendLocationToDatabase(location);
 
-        if (locationSent) {
-          console.log(`[${timestamp}] ✅ Location sent successfully`);
-        } else {
-          console.log(`[${timestamp}] ⚠️ Location not sent, checking driver status...`);
+            if (locationSent) {
+              console.log(`[${timestamp}] ✅ Location sent successfully`);
+            } else {
+              console.log(`[${timestamp}] ⚠️ Location not sent, checking driver status...`);
 
-          // Only check driver status if location was NOT sent
-          const isDriverOnline = await checkDriverOnlineStatus();
-          if (!isDriverOnline) {
-            console.log(`[${timestamp}] ❌ Driver is offline and no active trip`);
-            // Note: Cannot call stopBackgroundLocationTracking from here
-            // Service will continue until manually stopped
-            return;
-          } else {
-            console.log(`[${timestamp}] ✅ Driver is online, will retry location send`);
+              // Only check driver status if location was NOT sent
+              const isDriverOnline = await checkDriverOnlineStatus();
+              if (!isDriverOnline) {
+                console.log(`[${timestamp}] ❌ Driver is offline and no active trip`);
+                // Note: Cannot call stopBackgroundLocationTracking from here
+                // Service will continue until manually stopped
+                return;
+              } else {
+                console.log(`[${timestamp}] ✅ Driver is online, will retry location send`);
+              }
+            }
+          } catch (locError) {
+            console.error(`[${timestamp}] ❌ Error processing single location:`, locError);
+            // Continue to next location
           }
         }
+      } else {
+        console.log(`[${timestamp}] ⚠️ No locations in background task data`);
       }
     } else {
-      console.log(`[${timestamp}] ⚠️ No locations in background task data`);
+      console.log(`[${timestamp}] ⚠️ No data in background task`);
     }
-  } else {
-    console.log(`[${timestamp}] ⚠️ No data in background task`);
-  }
 
-  console.log(`[${timestamp}] ✅ Background location task completed`);
+    console.log(`[${timestamp}] ✅ Background location task completed`);
+  } catch (taskError) {
+    console.error(`[${timestamp}] ❌ Critical error in background location task:`, taskError);
+    console.error(`[${timestamp}] Task will continue running despite error`);
+    // Task continues running
+  }
 });
 
 // Background fetch task for periodic location updates (fallback for when main task pauses)
