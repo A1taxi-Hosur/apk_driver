@@ -1236,14 +1236,19 @@ export function RideProvider({ children }: RideProviderProps) {
       console.log('✅ Ride marked as completed in database')
       console.log('✅ Trip completion data already stored by FareCalculationService')
 
+      // AGGRESSIVE: Clear current ride IMMEDIATELY for instant UI update
+      setCurrentRide(null)
+      console.log('✅ Current ride cleared immediately for instant UI update')
+
       // Update driver status back to online
       await updateDriverStatus('online')
       console.log('✅ Driver status updated to online')
 
-      // Small delay to ensure database updates propagate
-      await new Promise(resolve => setTimeout(resolve, 500))
+      // AGGRESSIVE: Force immediate refresh of rides
+      await loadRides()
+      console.log('✅ Rides refreshed immediately after completion')
 
-      // Prepare completion data for modal BEFORE clearing current ride
+      // Prepare completion data for modal
       console.log('=== PREPARING COMPLETION DATA ===')
       console.log('Raw fareBreakdown from service:', JSON.stringify(fareResult.fareBreakdown, null, 2))
 

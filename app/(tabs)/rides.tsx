@@ -94,6 +94,7 @@ export default function RidesScreen() {
     visible: false,
     data: null
   });
+  const [forceRenderKey, setForceRenderKey] = useState(0);
 
   // Debug: Track component state changes
   useEffect(() => {
@@ -745,6 +746,14 @@ export default function RidesScreen() {
         console.log('🚨 TRIP COMPLETION MODAL CLOSED');
         setCompletionModalState({ visible: false, data: null });
         await clearCurrentRide();
+
+        // AGGRESSIVE: Force immediate UI refresh after modal closes
+        console.log('🔄 Forcing immediate UI refresh after completion modal close');
+        await refreshRides();
+
+        // AGGRESSIVE: Force component re-render to reflect status change
+        setForceRenderKey(prev => prev + 1);
+        console.log('✅ Forced component re-render for instant status update');
       }}
     />
     </>
