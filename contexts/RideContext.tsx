@@ -542,8 +542,31 @@ export function RideProvider({ children }: RideProviderProps) {
         console.log('RPC returned ride status:', result.status)
         console.log('RPC returned driver_id:', result.driver_id)
 
+        // Mark notification as read (accepted)
+        console.log('📝 Marking notification as read for ride:', rideId)
+        const { data: markResult, error: markError } = await supabase.rpc('mark_ride_notification_as_read', {
+          p_user_id: driver.user_id,
+          p_ride_id: rideId
+        })
+
+        if (markError) {
+          console.error('❌ Error marking notification as read:', markError)
+        } else {
+          console.log('✅ Notification marked as read:', markResult)
+        }
+
+        // Immediately remove from pending rides
+        setPendingRides(prev => {
+          const filtered = prev.filter(ride => ride.id !== rideId)
+          console.log(`✅ Removed accepted ride from pending list. ${prev.length} → ${filtered.length} rides`)
+          return filtered
+        })
+
         // Update local driver status
         await updateDriverStatus('busy')
+
+        // Prevent loadRides for 2 seconds to avoid race conditions
+        setIsLoadingRides(true)
 
         // Small delay to ensure database update propagates
         await new Promise(resolve => setTimeout(resolve, 500))
@@ -552,6 +575,12 @@ export function RideProvider({ children }: RideProviderProps) {
         console.log('🔄 Refreshing rides after acceptance...')
         await loadRides()
         console.log('✅ Rides refreshed')
+
+        // Re-enable loadRides after cooldown
+        setTimeout(() => {
+          setIsLoadingRides(false)
+          console.log('✅ Ready to load new rides after accept cooldown')
+        }, 2000)
 
         return true
       } else {
@@ -580,15 +609,33 @@ export function RideProvider({ children }: RideProviderProps) {
       await rideNotificationService.clearBadge()
 
       // Mark notification as read (declined) using RPC
-      await supabase.rpc('mark_ride_notification_as_read', {
+      console.log('📝 Marking notification as read for ride:', rideId)
+      const { data: markResult, error: markError } = await supabase.rpc('mark_ride_notification_as_read', {
         p_user_id: driver.user_id,
         p_ride_id: rideId
       })
 
-      // Remove from pending rides
-      setPendingRides(prev => prev.filter(ride => ride.id !== rideId))
+      if (markError) {
+        console.error('❌ Error marking notification as read:', markError)
+      } else {
+        console.log('✅ Notification marked as read:', markResult)
+      }
 
-      console.log('✅ Ride declined')
+      // Immediately remove from pending rides (don't wait for auto-refresh)
+      setPendingRides(prev => {
+        const filtered = prev.filter(ride => ride.id !== rideId)
+        console.log(`✅ Removed ride from pending list. ${prev.length} → ${filtered.length} rides`)
+        return filtered
+      })
+
+      // Also ensure no loadRides happens for 3 seconds after decline
+      setIsLoadingRides(true)
+      setTimeout(() => {
+        setIsLoadingRides(false)
+        console.log('✅ Ready to load new rides after decline cooldown')
+      }, 3000)
+
+      console.log('✅ Ride declined successfully')
     } catch (error) {
       console.error('Exception declining ride:', error)
       setError('Failed to decline ride')
