@@ -406,25 +406,42 @@ export class BackgroundLocationService {
         console.log('✅ Background location permission already granted');
       }
 
-      // Start background location tracking with aggressive settings optimized for Android
+      // Start background location tracking with ULTRA-AGGRESSIVE settings for Android
       await Location.startLocationUpdatesAsync(BACKGROUND_LOCATION_TASK, {
+        // MAXIMUM GPS accuracy for taxi navigation
         accuracy: Location.Accuracy.BestForNavigation,
-        timeInterval: 3000, // Every 3 seconds (more frequent to prevent system from pausing)
-        distanceInterval: 0, // Report every location change regardless of distance
-        deferredUpdatesInterval: 3000, // Match timeInterval
+
+        // EVERY 2 SECONDS - More aggressive than before
+        timeInterval: 2000,
+
+        // Report EVERY location regardless of distance
+        distanceInterval: 0,
+
+        // Force immediate updates - no deferring
+        deferredUpdatesInterval: 2000,
+
+        // Show location indicator on iOS
         showsBackgroundLocationIndicator: true,
+
+        // CRITICAL: Android Foreground Service - prevents battery optimization from killing it
         foregroundService: {
-          notificationTitle: 'A1 Taxi - Driver Online',
-          notificationBody: 'Tracking your location. Tap to open app.',
-          notificationColor: '#10B981',
+          notificationTitle: '🚕 A1 Taxi - Driver Online',
+          notificationBody: 'Location tracking active. DO NOT SWIPE AWAY.',
+          notificationColor: '#FF0000', // RED for high visibility
+          // CRITICAL: killServiceOnDestroy MUST be false
+          killServiceOnDestroy: false,
         },
-        pausesUpdatesAutomatically: false, // CRITICAL: Never pause updates
-        activityType: Location.ActivityType.AutomotiveNavigation, // Highest priority for constant tracking
+
+        // NEVER EVER pause - this is THE most critical setting
+        pausesUpdatesAutomatically: false,
+
+        // Tell Android this is automotive navigation (highest priority)
+        activityType: Location.ActivityType.AutomotiveNavigation,
 
         // Android-specific optimizations
         ...(Platform.OS === 'android' && {
-          // These settings prevent Android from pausing the service
-          mayShowUserSettingsDialog: true, // Allow prompting user for better settings
+          // Don't show settings dialog during tracking
+          mayShowUserSettingsDialog: false,
         }),
       });
 
@@ -440,10 +457,17 @@ export class BackgroundLocationService {
         console.warn('⚠️ Could not register background fetch (non-critical):', fetchError);
       }
 
-      console.log('✅ Background location tracking started');
-      console.log('✅ Foreground service notification will be shown');
-      console.log('✅ Location will update every 5 seconds even when app is closed');
-      
+      console.log('✅ ========================================');
+      console.log('✅ BACKGROUND LOCATION TRACKING STARTED');
+      console.log('✅ ========================================');
+      console.log('📱 Android Foreground Service: ACTIVE');
+      console.log('🔴 RED notification is visible');
+      console.log('⏱️  Update every 2 seconds');
+      console.log('🌍 Works when app is CLOSED');
+      console.log('⚠️  CRITICAL: Do NOT swipe notification');
+      console.log('⚠️  CRITICAL: Disable battery optimization');
+      console.log('✅ ========================================');
+
       return true;
     } catch (error) {
       console.error('❌ Error starting background location tracking:', error);
