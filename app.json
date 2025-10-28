@@ -80,6 +80,9 @@
             "defaultChannel": "ride-requests-urgent"
           }
         }
+      ],
+      [
+        "@react-native-firebase/app"
       ]
     ],
     "extra": {

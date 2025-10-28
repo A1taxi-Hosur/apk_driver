@@ -82,6 +82,9 @@ export default {
         {
           backgroundFetchInterval: 60 // Minimum interval in seconds (Android enforces 15-minute minimum anyway)
         }
+      ],
+      [
+        "@react-native-firebase/app"
       ]
     ],
     extra: {
