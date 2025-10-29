@@ -3,7 +3,7 @@ import * as Location from 'expo-location'
 import { supabase } from '../utils/supabase'
 import { useAuth } from './AuthContext'
 import { calculateDistance, getCurrentLocationWithGoogleMaps, reverseGeocode } from '../utils/maps'
-import { Platform } from 'react-native'
+import { Platform, AppState, AppStateStatus } from 'react-native'
 import { BackgroundLocationService } from '../services/BackgroundLocationService'
 
 interface LocationContextType {
@@ -69,15 +69,22 @@ export function LocationProvider({ children }: LocationProviderProps) {
   useEffect(() => {
     isMountedRef.current = true
     console.log('=== LOCATION PROVIDER INITIALIZATION ===')
+    console.log('=== APP RESTARTED / REOPENED - Checking location tracking state ===')
 
-    // Check actual background tracking status on mount
-    checkBackgroundTrackingStatus()
+    // CRITICAL: Immediately check and restore background tracking on app restart
+    // This ensures location tracking continues working after app is closed and reopened
+    const initializeLocationTracking = async () => {
+      // Check actual background tracking status on mount
+      await checkBackgroundTrackingStatus()
 
-    // Request location permission immediately when component mounts
-    if (!hasInitialized) {
-      requestLocationPermissionOnStartup()
-      setHasInitialized(true)
+      // Request location permission immediately when component mounts
+      if (!hasInitialized) {
+        await requestLocationPermissionOnStartup()
+        setHasInitialized(true)
+      }
     }
+
+    initializeLocationTracking()
 
     return () => {
       isMountedRef.current = false
@@ -96,23 +103,39 @@ export function LocationProvider({ children }: LocationProviderProps) {
       setBackgroundTrackingStarted(isActive)
 
       // If driver is online but background tracking is not active, try to start it
-      if (!isActive && driver && (driver.status === 'online' || driver.status === 'busy') && locationPermission) {
-        console.log('⚠️ Driver is online but background tracking is inactive, attempting to restart...')
+      // This is CRITICAL for app restart scenario
+      if (!isActive && driver && (driver.status === 'online' || driver.status === 'busy')) {
+        console.log('⚠️ Driver is online but background tracking is inactive')
         console.log('📊 Driver details:', {
           id: driver.id,
           user_id: driver.user_id,
-          status: driver.status
+          status: driver.status,
+          locationPermission
         })
 
+        // Wait for location permission if not yet granted
+        if (!locationPermission) {
+          console.log('⚠️ Waiting for location permission before restarting tracking...')
+          return
+        }
+
+        console.log('🔄 Attempting to restart background tracking...')
         const restarted = await startBackgroundTracking()
 
         if (restarted) {
-          console.log('✅ Background tracking successfully restarted')
+          console.log('✅ Background tracking successfully restarted after app reopened')
           setIsBackgroundTrackingActive(true)
           setBackgroundTrackingStarted(true)
         } else {
           console.error('❌ Failed to restart background tracking')
+          console.error('⚠️ Driver may appear offline to customers until tracking is restarted')
         }
+      } else if (isActive) {
+        console.log('✅ Background tracking is active and working correctly')
+      } else if (!driver) {
+        console.log('ℹ️ No driver session found')
+      } else if (driver.status === 'offline') {
+        console.log('ℹ️ Driver is offline, background tracking not needed')
       }
     } catch (error) {
       console.error('❌ Error checking background tracking status:', error)
@@ -127,6 +150,31 @@ export function LocationProvider({ children }: LocationProviderProps) {
     }, 10000) // Check every 10 seconds
 
     return () => clearInterval(intervalId)
+  }, [driver?.status, locationPermission])
+
+  // CRITICAL: Detect when app comes back to foreground and restart tracking if needed
+  // This handles the case where user closes app and reopens it
+  useEffect(() => {
+    const subscription = AppState.addEventListener('change', async (nextAppState: AppStateStatus) => {
+      console.log('📱 App state changed to:', nextAppState)
+
+      if (nextAppState === 'active') {
+        console.log('=== APP CAME TO FOREGROUND ===')
+        console.log('🔍 Checking if location tracking needs to be restarted...')
+
+        // Wait a moment for app to fully initialize
+        setTimeout(async () => {
+          await checkBackgroundTrackingStatus()
+        }, 1000)
+      } else if (nextAppState === 'background') {
+        console.log('=== APP WENT TO BACKGROUND ===')
+        console.log('ℹ️ Background location tracking should continue via BackgroundLocationService')
+      }
+    })
+
+    return () => {
+      subscription.remove()
+    }
   }, [driver?.status, locationPermission])
 
   useEffect(() => {
