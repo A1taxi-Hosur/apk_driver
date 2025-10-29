@@ -71,13 +71,7 @@ export default {
           icon: "./assets/images/icon.png",
           color: "#2563EB",
           sounds: ["./assets/sounds/notification.mp3"],
-          mode: "production",
-          android: {
-            icon: "./assets/images/icon.png",
-            color: "#10B981",
-            defaultChannel: "ride-requests-urgent",
-            useNextNotificationsApi: true
-          }
+          mode: "production"
         }
       ],
       [

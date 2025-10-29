@@ -13,6 +13,9 @@ import { debugLog } from '@/utils/debugLogger';
 // CRITICAL: Import TripLocationTracker to register background task BEFORE app loads
 import '@/services/TripLocationTracker';
 
+// CRITICAL: Import RideNotificationService to configure notification handler BEFORE app loads
+import '@/services/RideNotificationService';
+
 // CRITICAL: Import BackgroundNotificationHandler to handle notifications when app is CLOSED
 import '@/services/BackgroundNotificationHandler';
 

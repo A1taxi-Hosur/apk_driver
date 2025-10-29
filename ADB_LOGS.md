@@ -1,2097 +1,5448 @@
---------- beginning of main
-10-29 14:44:51.353  5720 14147 D SQLiteQueryBuilder: SELECT _id, _data FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id>1000016595 AND (width > 0 AND height > 0))) LIMIT 5000 OFFSET 0
-10-29 14:44:51.365  5720 14147 D SQLiteQueryBuilder: SELECT _id, _data FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id>1000016420 AND (width > 0 AND height > 0))) LIMIT 5000 OFFSET 0
-10-29 14:44:51.417  5720 14147 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:44:51.436  5720 14147 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:44:51.798  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:44:51.864  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:44:52.093  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:44:57.461  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id>1000016595 AND (width > 0 AND height > 0))) LIMIT 5000 OFFSET 0
-10-29 14:44:57.471  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id>1000016420 AND (width > 0 AND height > 0))) LIMIT 5000 OFFSET 0
-10-29 14:44:57.510  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:44:57.538  5720 14093 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:44:57.861  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:44:57.924  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:44:58.162  5720 14093 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:00.339 18285 18285 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
-10-29 14:45:00.339 18285 18285 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
-10-29 14:45:00.340 18285 18285 I PkDeviceHelper: PkDeviceHelper.refreshDevices():93 refreshing devices
-10-29 14:45:00.539 18285 16158 I DeviceStatusMonitor: DeviceStatusMonitor.handleBroadcast():123 onReceive() : Action = android.intent.action.SCREEN_ON
-10-29 14:45:00.539 18285 16158 I DeviceStatusMonitor: DeviceStatusMonitor.updateCountryInfo():139 updateCountryInfo(), notifyAnyway = false
-10-29 14:45:00.669 10830 16031 W DatabaseProcessor: processLocalDevices: failed to get the network info with non-null networkId.
-10-29 14:45:00.680 10830 10830 I CastMediaRouteProvider: Published 0 routes
-10-29 14:45:00.707 10830 15980 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
-10-29 14:45:00.707 10830 15980 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
-10-29 14:45:00.720 10830 15980 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
-10-29 14:45:00.721 10830 15980 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
-10-29 14:45:00.728 10830 10884 I NullBinder: NullBinder for android.net.action.RECOMMEND_NETWORKS triggering remote TransactionTooLargeException due to Service without Chimera impl, calling uid: 1000, calling pid: 0
-10-29 14:45:00.728 10830 10884 W .gms.persistent: Large reply transaction of 1056768 bytes, interface descriptor , code 1
-10-29 14:45:00.838 10830 10860 I MdnsServiceBrowser: (REDACTED) registering %s
-10-29 14:45:01.210 10830 16030 I NearbySharing: Network state changed: NetworkState(isRestricted=false, isOnline=true, isCongested=false, isMetered=false, isWifiConnected=true)
-10-29 14:45:02.632 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~7a5k4itB3Z_szCXdEaZA9Q==/cards.uni.app.credit-86UrRGbHWWZK9N4-pOaU1g==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:02.789 10830 16002 I NearbySharing: Screen is unlocked
-10-29 14:45:02.789 10830 16002 I NearbySharing: Uwb feature is off.
-10-29 14:45:02.789 10830 16002 I NearbySharing: Uwb feature is off.
-10-29 14:45:02.789 10830 16002 I NearbySharing: Stopping scanning because Bluetooth is disabled.
-10-29 14:45:02.790 10830 16002 I NearbySharing: Stopping Fast Init advertisement because Bluetooth is off.
-10-29 14:45:02.790 10830 16002 I NearbySharing: Stopping advertising because Bluetooth is disabled.
-10-29 14:45:02.805 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:02.807 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:02.836 10830 16002 I NearbySharing: Starting scanning for Fast Initiation.
-10-29 14:45:02.838 10830 16002 I NearbySharing: Failed to scan for FastInitiation. Scanning is not supported on this device.
-10-29 14:45:02.839 10830 16002 I NearbySharing: Dismissing HUN as there's no device nearby.
-10-29 14:45:02.871  9313 16312 I PersonalSafety: ConnectivityProtectionLockingIntentOperation: cancelled task [CONTEXT service_id=310 ]
-10-29 14:45:02.876 10830 16319 I NearbyMediums: ModuleInitializer handles incoming intent android.intent.action.USER_PRESENT
-10-29 14:45:02.880 10830 16002 I Nearby  : (REDACTED) Beginning attempt #%d out of %d for %s...
-10-29 14:45:02.884 10830 16002 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore default scan mode.
-10-29 14:45:02.885 10830 16002 I NearbyMediums: BluetoothAdapter's name was not set by Nearby Connections, ignoring call to restore device name
-10-29 14:45:02.892 10830 10830 I RCNIntentOperation: RCN is disabled on this network.
-10-29 14:45:03.059 10830 16002 I PhenotypeResourceReader: unable to find any Phenotype resource metadata for cards.uni.app.credit
-10-29 14:45:03.158  9313 16358 I AdvertisingIdClient: shouldSendLog 2173234459
-10-29 14:45:03.158  9313 16358 I AdvertisingIdClient: GetInfoInternal elapse 4ms
-10-29 14:45:04.125 27267 27336 I Finsky  : [87131] AIM: AppInfoManager-Perf > Destroying AppInfoManager ...
-10-29 14:45:04.275  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:04.288  5720  5734 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:45:04.561  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:04.601  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:45:04.787  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:05.053 27267 27349 I Finsky  : [87140] AIM: AppInfoManager-Perf > Destroying AppInfoManager ...
-10-29 14:45:07.293 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:07.634  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +370ms
-10-29 14:45:07.642 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:07.642 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:07.642 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:07.643 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:07.692  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:07.728  5720  5734 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
---------- beginning of crash
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 15671
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: get@1:704383
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: _loop@1:933305
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: initialize@1:906463
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: __guard@1:110731
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:07.927 15671 16430 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:08.052 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:08.052 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:08.053 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:08.054 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:08.614  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:08.651  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:45:08.818  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:10.315 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:10.319 15764 15764 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-29 14:45:10.322 15764 15764 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-29 14:45:10.324 15764 15764 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-29 14:45:10.332 15764 15764 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-29 14:45:10.332 15764 15764 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-29 14:45:10.341 15764 15764 D CompatChangeReporter: Compat change id reported: 242716250; UID 10578; state: ENABLED
-10-29 14:45:10.359 15764 15764 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-29 14:45:10.368 15764 15764 D nativeloader: Configuring clns-7 for other apk /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64:/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-29 14:45:10.388 15764 15764 V GraphicsEnvironment: Currently set values for:
-10-29 14:45:10.388 15764 15764 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-29 14:45:10.388 15764 15764 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-29 14:45:10.388 15764 15764 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-29 14:45:10.389 15764 15764 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-29 14:45:10.455 15764 15764 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-29 14:45:10.455 15764 15764 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-29 14:45:10.457 15764 15764 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-29 14:45:10.467 15764 15764 V SoLoader: Init SoLoader delegate
-10-29 14:45:10.494 15764 15764 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-29 14:45:10.543 15764 15764 V SoLoader: libhermes.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.546 15764 15764 V SoLoader: libjsi.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.547 15764 15764 V SoLoader: libfolly_runtime.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.548 15764 15764 V SoLoader: libglog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.548 15764 15764 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.548 15764 15764 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.549 15764 15764 D SoLoader: libm.so found on /system/lib64
-10-29 14:45:10.549 15764 15764 D SoLoader: libm.so loaded implicitly
-10-29 14:45:10.549 15764 15764 V SoLoader: libc++_shared.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.550 15764 15764 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.550 15764 15764 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.550 15764 15764 D SoLoader: libc.so found on /system/lib64
-10-29 14:45:10.550 15764 15764 D SoLoader: libc.so loaded implicitly
-10-29 14:45:10.550 15764 15764 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.550 15764 15764 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.550 15764 15764 D SoLoader: libdl.so found on /system/lib64
-10-29 14:45:10.550 15764 15764 D SoLoader: libdl.so loaded implicitly
-10-29 14:45:10.551 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.552 15764 15764 D SoLoader: libc++_shared.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.553 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.553 15764 15764 D SoLoader: libglog.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.554 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.554 15764 15764 D SoLoader: libfolly_runtime.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.556 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.556 15764 15764 D SoLoader: libjsi.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.556 15764 15764 V SoLoader: libfbjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.557 15764 15764 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.557 15764 15764 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.557 15764 15764 D SoLoader: libandroid.so found on /system/lib64
-10-29 14:45:10.557 15764 15764 D SoLoader: libandroid.so loaded implicitly
-10-29 14:45:10.557 15764 15764 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.557 15764 15764 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.557 15764 15764 D SoLoader: liblog.so found on /system/lib64
-10-29 14:45:10.557 15764 15764 D SoLoader: liblog.so loaded implicitly
-10-29 14:45:10.558 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.558 15764 15764 D SoLoader: libfbjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.559 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.560 15764 15764 D SoLoader: libhermes.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.560 15764 15764 V SoLoader: libhermes_executor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.563 15764 15764 V SoLoader: libreactnativejni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.565 15764 15764 V SoLoader: libyoga.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.567 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.567 15764 15764 D SoLoader: libyoga.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.568 15764 15764 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.569 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.569 15764 15764 D SoLoader: libreactperfloggerjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.570 15764 15764 V SoLoader: libreact_render_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.572 15764 15764 V SoLoader: libreact_render_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.573 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.573 15764 15764 D SoLoader: libreact_render_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.574 15764 15764 V SoLoader: libreact_render_graphics.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.575 15764 15764 V SoLoader: libreact_utils.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.576 15764 15764 V SoLoader: libreact_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.578 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.578 15764 15764 D SoLoader: libreact_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.578 15764 15764 V SoLoader: libjsinspector.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.580 15764 15764 V SoLoader: libreact_featureflags.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.581 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.581 15764 15764 D SoLoader: libreact_featureflags.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.582 15764 15764 V SoLoader: libruntimeexecutor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.583 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.583 15764 15764 D SoLoader: libruntimeexecutor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.584 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.584 15764 15764 D SoLoader: libjsinspector.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.585 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.585 15764 15764 D SoLoader: libreact_utils.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.586 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.586 15764 15764 D SoLoader: libreact_render_graphics.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.586 15764 15764 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.588 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.588 15764 15764 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.589 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.589 15764 15764 D SoLoader: libreact_render_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.591 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.592 15764 15764 D SoLoader: libreactnativejni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.593 15764 15764 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.593 15764 15764 D SoLoader: libhermes_executor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.602 15764 16503 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.604 15764 15764 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-29 14:45:10.605 15764 15764 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:10.605 15764 15764 I M-ProMotion: M-ProMotion is disabled
-10-29 14:45:10.605 15764 16505 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:10.610 15764 15764 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-29 14:45:10.612 15764 15764 W HWUI    : Unknown dataspace 0
-10-29 14:45:10.629 15764 15764 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 14:45:10.629 15764 15764 D BufferQueueConsumer: [](id:3d9400000000,api:0,p:-1,c:15764) connect: controlledByApp=false
-10-29 14:45:10.630 15764 15764 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-29 14:45:10.630 15764 15764 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-29 14:45:10.641 15764 16503 I ExpoModulesCore: ✅ AppContext was initialized
-10-29 14:45:10.642 15764 16493 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-29 14:45:10.657 10830 16002 I NearbyPresence: (REDACTED) %s verified [==] new request %s equals to the old request
-10-29 14:45:10.686 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-29 14:45:10.688 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-29 14:45:10.689 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-29 14:45:10.691 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-29 14:45:10.692 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-29 14:45:10.693 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-29 14:45:10.694 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-29 14:45:10.696 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-29 14:45:10.697 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-29 14:45:10.697 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-29 14:45:10.698 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-29 14:45:10.698 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-29 14:45:10.699 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-29 14:45:10.700 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-29 14:45:10.700 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-29 14:45:10.700 15764 16493 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-29 14:45:10.701 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-29 14:45:10.701 15764 16493 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1114871366964527(auto) mPendingTransactions.size=0 graphicBufferId=67705864454144 transform=0
-10-29 14:45:10.701 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-29 14:45:10.702 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-29 14:45:10.705 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-29 14:45:10.706 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-29 14:45:10.707 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-29 14:45:10.708 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-29 14:45:10.712 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-29 14:45:10.713 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-29 14:45:10.713 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-29 14:45:10.714 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-29 14:45:10.715 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-29 14:45:10.716 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-29 14:45:10.717 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-29 14:45:10.719 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-29 14:45:10.720 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-29 14:45:10.721 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-29 14:45:10.721 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-29 14:45:10.722 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-29 14:45:10.723 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-29 14:45:10.723 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-29 14:45:10.724 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-29 14:45:10.725 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-29 14:45:10.725 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-29 14:45:10.726 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-29 14:45:10.726 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-29 14:45:10.727 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-29 14:45:10.727 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-29 14:45:10.727  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +292ms
-10-29 14:45:10.727 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-29 14:45:10.728 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-29 14:45:10.729 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-29 14:45:10.729 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-29 14:45:10.729 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-29 14:45:10.730 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-29 14:45:10.731 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-29 14:45:10.731 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-29 14:45:10.732 15764 15764 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{e311d29 V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-10-29 14:45:10.732 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-29 14:45:10.733 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-29 14:45:10.734 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-29 14:45:10.736 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-29 14:45:10.737 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-29 14:45:10.738 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-29 14:45:10.739 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-29 14:45:10.739 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:10.739 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-29 14:45:10.740 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:10.740 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:10.740 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-29 14:45:10.741 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-29 14:45:10.741 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:10.741 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-29 14:45:10.742 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-29 14:45:10.743 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-29 14:45:10.743 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-29 14:45:10.744 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-29 14:45:10.745 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-29 14:45:10.747 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-29 14:45:10.749 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-29 14:45:10.750 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-29 14:45:10.751 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-29 14:45:10.751 15764 16523 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-29 14:45:10.789 15764 16522 V SoLoader: libexpo-modules-core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.791 15764 16522 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.796 15764 16522 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.796 15764 16522 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.798 15764 16522 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.799 15764 16522 D SoLoader: libexpo-modules-core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.799 15764 16522 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.805 15764 16522 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.805 15764 16522 D SoLoader: libturbomodulejsijni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.809 15764 16522 I ExpoModulesCore: ✅ JSI interop was installed
-10-29 14:45:10.809 15764 16522 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-29 14:45:10.815 15764 16522 I ExpoModulesCore: ✅ Constants were exported
-10-29 14:45:10.840 15764 16522 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!classes3.dex): ok
-10-29 14:45:10.843 15764 16522 I ReactNativeJS: Running "main
-10-29 14:45:10.849 15764 16522 V SoLoader: libreactnativeblob.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:10.853 15764 16522 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:10.853 15764 16522 D SoLoader: libreactnativeblob.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:10.857 15764 16522 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-29 14:45:10.857 15764 16522 I ReactNativeJS:   hasAnonKey: true,
-10-29 14:45:10.857 15764 16522 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-29 14:45:10.976 15764 16522 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
-10-29 14:45:10.979 15764 16522 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:10.985 15764 16522 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 15764
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: get@1:704383
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: _loop@1:933305
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: initialize@1:906463
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: __guard@1:110731
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:10.986 15764 16523 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:10.987 15764 16522 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:10.987 15764 16522 E ReactNativeJS: 
-10-29 14:45:10.987 15764 16522 E ReactNativeJS: This error is located at:
-10-29 14:45:10.987 15764 16522 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:10.987 15764 16522 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:10.987 15764 16522 E ReactNativeJS:     in App
-10-29 14:45:10.987 15764 16522 E ReactNativeJS:     in RCTView
-10-29 14:45:10.987 15764 16522 E ReactNativeJS:     in Unknown
-10-29 14:45:10.987 15764 16522 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:10.990 15764 16522 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:10.990 15764 16522 E ReactNativeJS: 
-10-29 14:45:10.990 15764 16522 E ReactNativeJS: This error is located at:
-10-29 14:45:10.990 15764 16522 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:10.990 15764 16522 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:10.990 15764 16522 E ReactNativeJS:     in App
-10-29 14:45:10.990 15764 16522 E ReactNativeJS:     in RCTView
-10-29 14:45:10.990 15764 16522 E ReactNativeJS:     in Unknown
-10-29 14:45:10.990 15764 16522 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:11.108 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:11.109 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:11.109 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:11.110 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:11.454  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:11.461  5720  5734 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:45:11.709  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:11.740  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:45:11.910  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:12.870 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:12.875 16471 16471 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-29 14:45:12.879 16471 16471 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-29 14:45:12.882 16471 16471 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-29 14:45:12.894 16471 16471 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-29 14:45:12.894 16471 16471 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-29 14:45:12.924 16471 16471 D CompatChangeReporter: Compat change id reported: 242716250; UID 10578; state: ENABLED
-10-29 14:45:12.932 16471 16471 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-29 14:45:12.936 16471 16471 D nativeloader: Configuring clns-7 for other apk /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64:/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-29 14:45:12.947 16471 16471 V GraphicsEnvironment: Currently set values for:
-10-29 14:45:12.947 16471 16471 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-29 14:45:12.947 16471 16471 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-29 14:45:12.947 16471 16471 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-29 14:45:12.947 16471 16471 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-29 14:45:12.962 16471 16471 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-29 14:45:12.962 16471 16471 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-29 14:45:12.965 16471 16471 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-29 14:45:12.974 16471 16471 V SoLoader: Init SoLoader delegate
-10-29 14:45:12.992 16471 16471 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-29 14:45:13.022 16471 16471 V SoLoader: libhermes.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.025 16471 16471 V SoLoader: libjsi.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.026 16471 16471 V SoLoader: libfolly_runtime.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.027 16471 16471 V SoLoader: libglog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.027 16471 16471 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.027 16471 16471 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.028 16471 16471 D SoLoader: libm.so found on /system/lib64
-10-29 14:45:13.028 16471 16471 D SoLoader: libm.so loaded implicitly
-10-29 14:45:13.028 16471 16471 V SoLoader: libc++_shared.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.028 16471 16471 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.028 16471 16471 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.028 16471 16471 D SoLoader: libc.so found on /system/lib64
-10-29 14:45:13.028 16471 16471 D SoLoader: libc.so loaded implicitly
-10-29 14:45:13.029 16471 16471 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.029 16471 16471 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.029 16471 16471 D SoLoader: libdl.so found on /system/lib64
-10-29 14:45:13.029 16471 16471 D SoLoader: libdl.so loaded implicitly
-10-29 14:45:13.030 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.030 16471 16471 D SoLoader: libc++_shared.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.031 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.031 16471 16471 D SoLoader: libglog.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.032 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.032 16471 16471 D SoLoader: libfolly_runtime.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.033 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.033 16471 16471 D SoLoader: libjsi.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.033 16471 16471 V SoLoader: libfbjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.034 16471 16471 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.034 16471 16471 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.034 16471 16471 D SoLoader: libandroid.so found on /system/lib64
-10-29 14:45:13.034 16471 16471 D SoLoader: libandroid.so loaded implicitly
-10-29 14:45:13.035 16471 16471 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.035 16471 16471 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.035 16471 16471 D SoLoader: liblog.so found on /system/lib64
-10-29 14:45:13.035 16471 16471 D SoLoader: liblog.so loaded implicitly
-10-29 14:45:13.036 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.036 16471 16471 D SoLoader: libfbjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.037 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.037 16471 16471 D SoLoader: libhermes.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.037 16471 16471 V SoLoader: libhermes_executor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.040 16471 16471 V SoLoader: libreactnativejni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.043 16471 16471 V SoLoader: libyoga.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.044 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.045 16471 16471 D SoLoader: libyoga.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.045 16471 16471 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.047 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.047 16471 16471 D SoLoader: libreactperfloggerjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.047 16471 16471 V SoLoader: libreact_render_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.049 16471 16471 V SoLoader: libreact_render_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.051 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.051 16471 16471 D SoLoader: libreact_render_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.051 16471 16471 V SoLoader: libreact_render_graphics.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.052 16471 16471 V SoLoader: libreact_utils.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.054 16471 16471 V SoLoader: libreact_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.055 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.056 16471 16471 D SoLoader: libreact_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.056 16471 16471 V SoLoader: libjsinspector.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.057 16471 16471 V SoLoader: libreact_featureflags.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.058 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.058 16471 16471 D SoLoader: libreact_featureflags.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.059 16471 16471 V SoLoader: libruntimeexecutor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.060 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.060 16471 16471 D SoLoader: libruntimeexecutor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.061 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.061 16471 16471 D SoLoader: libjsinspector.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.062 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.062 16471 16471 D SoLoader: libreact_utils.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.063 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.063 16471 16471 D SoLoader: libreact_render_graphics.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.063 16471 16471 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.065 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.065 16471 16471 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.066 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.066 16471 16471 D SoLoader: libreact_render_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.068 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.068 16471 16471 D SoLoader: libreactnativejni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.070 16471 16471 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.070 16471 16471 D SoLoader: libhermes_executor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.078 16471 16586 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.081 16471 16471 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-29 14:45:13.081 16471 16471 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:13.081 16471 16471 I M-ProMotion: M-ProMotion is disabled
-10-29 14:45:13.081 16471 16588 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:13.085 16471 16471 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-29 14:45:13.088 16471 16471 W HWUI    : Unknown dataspace 0
-10-29 14:45:13.106 16471 16471 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 14:45:13.106 16471 16471 D BufferQueueConsumer: [](id:405700000000,api:0,p:-1,c:16471) connect: controlledByApp=false
-10-29 14:45:13.107 16471 16471 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-29 14:45:13.107 16471 16471 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-29 14:45:13.112 16471 16586 I ExpoModulesCore: ✅ AppContext was initialized
-10-29 14:45:13.114 16471 16578 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-29 14:45:13.155 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-29 14:45:13.158 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-29 14:45:13.159 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-29 14:45:13.161 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-29 14:45:13.162 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-29 14:45:13.163 16471 16578 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-29 14:45:13.163 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-29 14:45:13.163 16471 16578 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1114873829096143(auto) mPendingTransactions.size=0 graphicBufferId=70742406332416 transform=0
-10-29 14:45:13.164 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-29 14:45:13.165 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-29 14:45:13.167 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-29 14:45:13.167 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-29 14:45:13.176 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-29 14:45:13.180 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-29 14:45:13.181 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-29 14:45:13.183 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-29 14:45:13.184 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-29 14:45:13.185 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-29 14:45:13.186 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-29 14:45:13.188 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-29 14:45:13.190 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-29 14:45:13.192 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-29 14:45:13.193  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +344ms
-10-29 14:45:13.194 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-29 14:45:13.195 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-29 14:45:13.196 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-29 14:45:13.197 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-29 14:45:13.197 16471 16471 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{88218ae V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-10-29 14:45:13.197 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-29 14:45:13.198 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-29 14:45:13.198 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-29 14:45:13.199 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-29 14:45:13.200 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-29 14:45:13.201 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-29 14:45:13.202 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-29 14:45:13.203 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-29 14:45:13.203 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-29 14:45:13.203 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:13.204 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-29 14:45:13.204 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:13.205 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:13.205 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:13.205 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-29 14:45:13.206 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-29 14:45:13.207 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-29 14:45:13.208 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-29 14:45:13.208 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-29 14:45:13.209 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-29 14:45:13.209 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-29 14:45:13.210 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-29 14:45:13.211 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-29 14:45:13.211 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-29 14:45:13.212 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-29 14:45:13.213 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-29 14:45:13.213 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-29 14:45:13.213 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-29 14:45:13.214 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-29 14:45:13.214 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-29 14:45:13.215 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-29 14:45:13.216 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-29 14:45:13.216 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-29 14:45:13.217 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-29 14:45:13.218 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-29 14:45:13.219 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-29 14:45:13.219 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-29 14:45:13.220 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-29 14:45:13.221 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-29 14:45:13.222 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-29 14:45:13.222 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-29 14:45:13.223 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-29 14:45:13.223 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-29 14:45:13.224 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-29 14:45:13.224 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-29 14:45:13.225 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-29 14:45:13.226 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-29 14:45:13.227 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-29 14:45:13.228 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-29 14:45:13.228 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-29 14:45:13.229 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-29 14:45:13.229 16471 16600 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-29 14:45:13.261 16471 16599 V SoLoader: libexpo-modules-core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.263 16471 16599 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.267 16471 16599 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.268 16471 16599 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.269 16471 16599 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.270 16471 16599 D SoLoader: libexpo-modules-core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.271 16471 16599 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.275 16471 16599 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.276 16471 16599 D SoLoader: libturbomodulejsijni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.280 16471 16599 I ExpoModulesCore: ✅ JSI interop was installed
-10-29 14:45:13.280 16471 16599 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-29 14:45:13.286 16471 16599 I ExpoModulesCore: ✅ Constants were exported
-10-29 14:45:13.310 16471 16599 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!classes3.dex): ok
-10-29 14:45:13.313 16471 16599 I ReactNativeJS: Running "main
-10-29 14:45:13.318 16471 16599 V SoLoader: libreactnativeblob.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:13.322 16471 16599 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:13.322 16471 16599 D SoLoader: libreactnativeblob.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:13.326 16471 16599 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-29 14:45:13.326 16471 16599 I ReactNativeJS:   hasAnonKey: true,
-10-29 14:45:13.326 16471 16599 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-29 14:45:13.465 16471 16599 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
-10-29 14:45:13.466 16471 16599 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:13.467 16471 16599 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:13.468 16471 16599 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:13.468 16471 16599 E ReactNativeJS: 
-10-29 14:45:13.468 16471 16599 E ReactNativeJS: This error is located at:
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in App
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in RCTView
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in Unknown
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:13.468 16471 16599 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:13.468 16471 16599 E ReactNativeJS: 
-10-29 14:45:13.468 16471 16599 E ReactNativeJS: This error is located at:
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in App
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in RCTView
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in Unknown
-10-29 14:45:13.468 16471 16599 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 16471
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: get@1:704383
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: _loop@1:933305
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: initialize@1:906463
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: __guard@1:110731
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:13.469 16471 16600 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:13.482 16471 16600 I Process : Sending signal. PID: 16471 SIG: 9
-10-29 14:45:13.628 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:13.628 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:13.628 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:13.629 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:14.569  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:14.577  5720 14698 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:45:14.837  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:14.891  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:45:15.084  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:15.161 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:15.168 16568 16568 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-29 14:45:15.171 16568 16568 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-29 14:45:15.173 16568 16568 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-29 14:45:15.182 16568 16568 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-29 14:45:15.183 16568 16568 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-29 14:45:15.191 16568 16568 D CompatChangeReporter: Compat change id reported: 242716250; UID 10578; state: ENABLED
-10-29 14:45:15.204 16568 16568 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-29 14:45:15.213 16568 16568 D nativeloader: Configuring clns-7 for other apk /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64:/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-29 14:45:15.234 16568 16568 V GraphicsEnvironment: Currently set values for:
-10-29 14:45:15.234 16568 16568 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-29 14:45:15.234 16568 16568 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-29 14:45:15.234 16568 16568 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-29 14:45:15.234 16568 16568 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-29 14:45:15.309 16568 16568 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-29 14:45:15.309 16568 16568 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-29 14:45:15.312 16568 16568 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-29 14:45:15.323 16568 16568 V SoLoader: Init SoLoader delegate
-10-29 14:45:15.334 16568 16568 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-29 14:45:15.381 16568 16568 V SoLoader: libhermes.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.384 16568 16568 V SoLoader: libjsi.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.385 16568 16568 V SoLoader: libfolly_runtime.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.385 16568 16568 V SoLoader: libglog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.386 16568 16568 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.386 16568 16568 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.386 16568 16568 D SoLoader: libm.so found on /system/lib64
-10-29 14:45:15.386 16568 16568 D SoLoader: libm.so loaded implicitly
-10-29 14:45:15.387 16568 16568 V SoLoader: libc++_shared.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.387 16568 16568 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.387 16568 16568 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.387 16568 16568 D SoLoader: libc.so found on /system/lib64
-10-29 14:45:15.387 16568 16568 D SoLoader: libc.so loaded implicitly
-10-29 14:45:15.388 16568 16568 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.388 16568 16568 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.388 16568 16568 D SoLoader: libdl.so found on /system/lib64
-10-29 14:45:15.388 16568 16568 D SoLoader: libdl.so loaded implicitly
-10-29 14:45:15.389 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.390 16568 16568 D SoLoader: libc++_shared.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.391 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.391 16568 16568 D SoLoader: libglog.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.393 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.393 16568 16568 D SoLoader: libfolly_runtime.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.394 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.394 16568 16568 D SoLoader: libjsi.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.395 16568 16568 V SoLoader: libfbjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.396 16568 16568 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.396 16568 16568 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.396 16568 16568 D SoLoader: libandroid.so found on /system/lib64
-10-29 14:45:15.396 16568 16568 D SoLoader: libandroid.so loaded implicitly
-10-29 14:45:15.396 16568 16568 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.396 16568 16568 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.396 16568 16568 D SoLoader: liblog.so found on /system/lib64
-10-29 14:45:15.396 16568 16568 D SoLoader: liblog.so loaded implicitly
-10-29 14:45:15.397 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.399 16568 16568 D SoLoader: libfbjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.401 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.401 16568 16568 D SoLoader: libhermes.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.401 16568 16568 V SoLoader: libhermes_executor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.405 16568 16568 V SoLoader: libreactnativejni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.407 16568 16568 V SoLoader: libyoga.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.409 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.409 16568 16568 D SoLoader: libyoga.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.410 16568 16568 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.411 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.411 16568 16568 D SoLoader: libreactperfloggerjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.412 16568 16568 V SoLoader: libreact_render_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.414 16568 16568 V SoLoader: libreact_render_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.415 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.415 16568 16568 D SoLoader: libreact_render_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.416 16568 16568 V SoLoader: libreact_render_graphics.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.417 16568 16568 V SoLoader: libreact_utils.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.419 16568 16568 V SoLoader: libreact_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.421 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.421 16568 16568 D SoLoader: libreact_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.421 16568 16568 V SoLoader: libjsinspector.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.422 16568 16568 V SoLoader: libreact_featureflags.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.424 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.424 16568 16568 D SoLoader: libreact_featureflags.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.424 16568 16568 V SoLoader: libruntimeexecutor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.426 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.426 16568 16568 D SoLoader: libruntimeexecutor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.427 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.427 16568 16568 D SoLoader: libjsinspector.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.428 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.429 16568 16568 D SoLoader: libreact_utils.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.430 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.430 16568 16568 D SoLoader: libreact_render_graphics.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.430 16568 16568 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.432 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.432 16568 16568 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.433 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.433 16568 16568 D SoLoader: libreact_render_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.435 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.435 16568 16568 D SoLoader: libreactnativejni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.437 16568 16568 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.437 16568 16568 D SoLoader: libhermes_executor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.445 16568 16673 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.448 16568 16568 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-29 14:45:15.448 16568 16568 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:15.448 16568 16568 I M-ProMotion: M-ProMotion is disabled
-10-29 14:45:15.448 16568 16675 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:15.452 16568 16568 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-29 14:45:15.457 16568 16568 W HWUI    : Unknown dataspace 0
-10-29 14:45:15.474 16568 16568 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 14:45:15.474 16568 16568 D BufferQueueConsumer: [](id:40b800000000,api:0,p:-1,c:16568) connect: controlledByApp=false
-10-29 14:45:15.475 16568 16568 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-29 14:45:15.475 16568 16568 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-29 14:45:15.485 16568 16663 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-29 14:45:15.487 16568 16673 I ExpoModulesCore: ✅ AppContext was initialized
-10-29 14:45:15.531 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-29 14:45:15.534 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-29 14:45:15.534 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-29 14:45:15.534 16568 16663 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-29 14:45:15.535 16568 16663 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1114876200952143(auto) mPendingTransactions.size=0 graphicBufferId=71159018160128 transform=0
-10-29 14:45:15.536 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-29 14:45:15.537 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-29 14:45:15.538 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-29 14:45:15.539 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-29 14:45:15.540 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-29 14:45:15.541 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-29 14:45:15.542 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-29 14:45:15.543 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-29 14:45:15.543 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-29 14:45:15.544 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-29 14:45:15.545 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-29 14:45:15.545 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-29 14:45:15.546 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-29 14:45:15.546 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-29 14:45:15.547 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-29 14:45:15.549 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-29 14:45:15.551 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-29 14:45:15.552 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-29 14:45:15.552 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-29 14:45:15.553 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-29 14:45:15.553 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-29 14:45:15.553 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-29 14:45:15.554 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-29 14:45:15.554 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-29 14:45:15.555 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-29 14:45:15.556 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-29 14:45:15.557 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-29 14:45:15.558 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-29 14:45:15.558 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-29 14:45:15.559 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-29 14:45:15.560 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-29 14:45:15.561 16568 16568 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{88218ae V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-10-29 14:45:15.561  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +272ms
-10-29 14:45:15.561 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-29 14:45:15.562 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-29 14:45:15.563 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-29 14:45:15.563 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-29 14:45:15.564 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-29 14:45:15.565 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-29 14:45:15.565 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-29 14:45:15.566 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-29 14:45:15.566 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-29 14:45:15.567 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-29 14:45:15.567 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-29 14:45:15.568 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-29 14:45:15.569 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-29 14:45:15.569 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-29 14:45:15.570 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:15.570 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-29 14:45:15.570 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:15.570 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-29 14:45:15.571 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-29 14:45:15.571 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:15.572 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-29 14:45:15.572 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:15.572 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-29 14:45:15.574 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-29 14:45:15.575 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-29 14:45:15.576 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-29 14:45:15.576 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-29 14:45:15.578 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-29 14:45:15.578 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-29 14:45:15.579 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-29 14:45:15.580 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-29 14:45:15.581 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-29 14:45:15.582 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-29 14:45:15.583 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-29 14:45:15.584 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-29 14:45:15.585 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-29 14:45:15.586 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-29 14:45:15.586 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-29 14:45:15.587 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-29 14:45:15.588 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-29 14:45:15.589 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-29 14:45:15.589 16568 16687 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-29 14:45:15.623 16568 16686 V SoLoader: libexpo-modules-core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.625 16568 16686 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.629 16568 16686 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.629 16568 16686 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.631 16568 16686 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.632 16568 16686 D SoLoader: libexpo-modules-core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.633 16568 16686 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.638 16568 16686 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.638 16568 16686 D SoLoader: libturbomodulejsijni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.642 16568 16686 I ExpoModulesCore: ✅ JSI interop was installed
-10-29 14:45:15.642 16568 16686 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-29 14:45:15.648 16568 16686 I ExpoModulesCore: ✅ Constants were exported
-10-29 14:45:15.672 16568 16686 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!classes3.dex): ok
-10-29 14:45:15.677 16568 16686 I ReactNativeJS: Running "main
-10-29 14:45:15.682 16568 16686 V SoLoader: libreactnativeblob.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:15.687 16568 16686 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:15.687 16568 16686 D SoLoader: libreactnativeblob.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:15.690 16568 16686 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-29 14:45:15.690 16568 16686 I ReactNativeJS:   hasAnonKey: true,
-10-29 14:45:15.690 16568 16686 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-29 14:45:15.808 16568 16686 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
-10-29 14:45:15.809 16568 16686 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:15.811 16568 16686 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:15.811 16568 16686 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:15.811 16568 16686 E ReactNativeJS: 
-10-29 14:45:15.811 16568 16686 E ReactNativeJS: This error is located at:
-10-29 14:45:15.811 16568 16686 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:15.811 16568 16686 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:15.811 16568 16686 E ReactNativeJS:     in App
-10-29 14:45:15.811 16568 16686 E ReactNativeJS:     in RCTView
-10-29 14:45:15.811 16568 16686 E ReactNativeJS:     in Unknown
-10-29 14:45:15.811 16568 16686 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:15.812 16568 16686 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:15.812 16568 16686 E ReactNativeJS: 
-10-29 14:45:15.812 16568 16686 E ReactNativeJS: This error is located at:
-10-29 14:45:15.812 16568 16686 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:15.812 16568 16686 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:15.812 16568 16686 E ReactNativeJS:     in App
-10-29 14:45:15.812 16568 16686 E ReactNativeJS:     in RCTView
-10-29 14:45:15.812 16568 16686 E ReactNativeJS:     in Unknown
-10-29 14:45:15.812 16568 16686 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 16568
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: get@1:704383
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: _loop@1:933305
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: initialize@1:906463
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: __guard@1:110731
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:15.813 16568 16687 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:15.843 16568 16568 D VRI[MainActivity]: visibilityChanged oldVisibility=true newVisibility=false
-10-29 14:45:15.852 16568 16568 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1, 1), rotation: ROTATION_0
-10-29 14:45:15.852 16568 16568 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) destructor()
-10-29 14:45:15.852 16568 16568 D BufferQueueConsumer: [VRI[MainActivity]#0(BLAST Consumer)0](id:40b800000000,api:0,p:-1,c:16568) disconnect
-10-29 14:45:15.874 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:15.874 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:15.875 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:15.875 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:17.064 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:17.077 16641 16641 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-29 14:45:17.082 16641 16641 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-29 14:45:17.084 16641 16641 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-29 14:45:17.096 16641 16641 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-29 14:45:17.096 16641 16641 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-29 14:45:17.106 16641 16641 D CompatChangeReporter: Compat change id reported: 242716250; UID 10578; state: ENABLED
-10-29 14:45:17.113 16641 16641 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-29 14:45:17.117 16641 16641 D nativeloader: Configuring clns-7 for other apk /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64:/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-29 14:45:17.127 16641 16641 V GraphicsEnvironment: Currently set values for:
-10-29 14:45:17.127 16641 16641 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-29 14:45:17.127 16641 16641 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-29 14:45:17.127 16641 16641 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-29 14:45:17.127 16641 16641 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-29 14:45:17.143 16641 16641 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-29 14:45:17.143 16641 16641 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-29 14:45:17.144 16641 16641 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-29 14:45:17.154 16641 16641 V SoLoader: Init SoLoader delegate
-10-29 14:45:17.174 16641 16641 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-29 14:45:17.204 16641 16641 V SoLoader: libhermes.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.206 16641 16641 V SoLoader: libjsi.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.207 16641 16641 V SoLoader: libfolly_runtime.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.208 16641 16641 V SoLoader: libglog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.209 16641 16641 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.209 16641 16641 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.209 16641 16641 D SoLoader: libm.so found on /system/lib64
-10-29 14:45:17.209 16641 16641 D SoLoader: libm.so loaded implicitly
-10-29 14:45:17.209 16641 16641 V SoLoader: libc++_shared.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.209 16641 16641 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.209 16641 16641 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.209 16641 16641 D SoLoader: libc.so found on /system/lib64
-10-29 14:45:17.209 16641 16641 D SoLoader: libc.so loaded implicitly
-10-29 14:45:17.210 16641 16641 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.210 16641 16641 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.210 16641 16641 D SoLoader: libdl.so found on /system/lib64
-10-29 14:45:17.210 16641 16641 D SoLoader: libdl.so loaded implicitly
-10-29 14:45:17.211 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.211 16641 16641 D SoLoader: libc++_shared.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.212 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.212 16641 16641 D SoLoader: libglog.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.213 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.213 16641 16641 D SoLoader: libfolly_runtime.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.214 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.214 16641 16641 D SoLoader: libjsi.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.214 16641 16641 V SoLoader: libfbjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.215 16641 16641 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.215 16641 16641 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.215 16641 16641 D SoLoader: libandroid.so found on /system/lib64
-10-29 14:45:17.215 16641 16641 D SoLoader: libandroid.so loaded implicitly
-10-29 14:45:17.215 16641 16641 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.215 16641 16641 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.215 16641 16641 D SoLoader: liblog.so found on /system/lib64
-10-29 14:45:17.215 16641 16641 D SoLoader: liblog.so loaded implicitly
-10-29 14:45:17.216 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.217 16641 16641 D SoLoader: libfbjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.218 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.218 16641 16641 D SoLoader: libhermes.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.218 16641 16641 V SoLoader: libhermes_executor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.221 16641 16641 V SoLoader: libreactnativejni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.223 16641 16641 V SoLoader: libyoga.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.225 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.225 16641 16641 D SoLoader: libyoga.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.226 16641 16641 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.227 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.227 16641 16641 D SoLoader: libreactperfloggerjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.227 16641 16641 V SoLoader: libreact_render_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.229 16641 16641 V SoLoader: libreact_render_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.231 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.231 16641 16641 D SoLoader: libreact_render_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.231 16641 16641 V SoLoader: libreact_render_graphics.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.233 16641 16641 V SoLoader: libreact_utils.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.234 16641 16641 V SoLoader: libreact_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.235 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.236 16641 16641 D SoLoader: libreact_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.236 16641 16641 V SoLoader: libjsinspector.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.237 16641 16641 V SoLoader: libreact_featureflags.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.238 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.238 16641 16641 D SoLoader: libreact_featureflags.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.239 16641 16641 V SoLoader: libruntimeexecutor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.240 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.240 16641 16641 D SoLoader: libruntimeexecutor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.241 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.241 16641 16641 D SoLoader: libjsinspector.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.242 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.242 16641 16641 D SoLoader: libreact_utils.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.243 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.243 16641 16641 D SoLoader: libreact_render_graphics.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.243 16641 16641 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.245 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.245 16641 16641 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.246 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.246 16641 16641 D SoLoader: libreact_render_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.248 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.248 16641 16641 D SoLoader: libreactnativejni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.250 16641 16641 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.250 16641 16641 D SoLoader: libhermes_executor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.259 16641 16762 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.261 16641 16641 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-29 14:45:17.261 16641 16641 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:17.261 16641 16641 I M-ProMotion: M-ProMotion is disabled
-10-29 14:45:17.262 16641 16768 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:17.265 16641 16641 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-29 14:45:17.268 16641 16641 W HWUI    : Unknown dataspace 0
-10-29 14:45:17.283 16641 16641 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 14:45:17.284 16641 16641 D BufferQueueConsumer: [](id:410100000000,api:0,p:-1,c:16641) connect: controlledByApp=false
-10-29 14:45:17.285 16641 16641 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-29 14:45:17.285 16641 16641 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-29 14:45:17.292 16641 16743 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-29 14:45:17.294 16641 16762 I ExpoModulesCore: ✅ AppContext was initialized
-10-29 14:45:17.333 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-29 14:45:17.335 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-29 14:45:17.336 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-29 14:45:17.337 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-29 14:45:17.339 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-29 14:45:17.339 16641 16743 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-29 14:45:17.339 16641 16743 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1114878005249758(auto) mPendingTransactions.size=0 graphicBufferId=71472550772736 transform=0
-10-29 14:45:17.340 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-29 14:45:17.340 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-29 14:45:17.342 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-29 14:45:17.343 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-29 14:45:17.343 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-29 14:45:17.344 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-29 14:45:17.344 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-29 14:45:17.346 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-29 14:45:17.348 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-29 14:45:17.350 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-29 14:45:17.351 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-29 14:45:17.351 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-29 14:45:17.352 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-29 14:45:17.354 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-29 14:45:17.355 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-29 14:45:17.356 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-29 14:45:17.356 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-29 14:45:17.357 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-29 14:45:17.357 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-29 14:45:17.357 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-29 14:45:17.358 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-29 14:45:17.359 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-29 14:45:17.359 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-29 14:45:17.360 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-29 14:45:17.361 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-29 14:45:17.361  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +350ms
-10-29 14:45:17.364 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-29 14:45:17.366 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-29 14:45:17.367 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-29 14:45:17.367 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-29 14:45:17.368 16641 16641 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{88218ae V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-10-29 14:45:17.368 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-29 14:45:17.368 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-29 14:45:17.369 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-29 14:45:17.370 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-29 14:45:17.371 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-29 14:45:17.372 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-29 14:45:17.372 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-29 14:45:17.373 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-29 14:45:17.374 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-29 14:45:17.374 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-29 14:45:17.374 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:17.374 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-29 14:45:17.375 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:17.375 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:17.375 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-29 14:45:17.375 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-29 14:45:17.376 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:17.376 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-29 14:45:17.376 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-29 14:45:17.377 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-29 14:45:17.377 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-29 14:45:17.379 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-29 14:45:17.380 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-29 14:45:17.381 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-29 14:45:17.382 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-29 14:45:17.383 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-29 14:45:17.383 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-29 14:45:17.384 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-29 14:45:17.384 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-29 14:45:17.385 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-29 14:45:17.385 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-29 14:45:17.386 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-29 14:45:17.386 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-29 14:45:17.387 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-29 14:45:17.387 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-29 14:45:17.388 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-29 14:45:17.389 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-29 14:45:17.390 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-29 14:45:17.391 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-29 14:45:17.391 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-29 14:45:17.392 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-29 14:45:17.392 16641 16779 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-29 14:45:17.425 16641 16778 V SoLoader: libexpo-modules-core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.427 16641 16778 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.431 16641 16778 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.431 16641 16778 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.433 16641 16778 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.434 16641 16778 D SoLoader: libexpo-modules-core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.434 16641 16778 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.439 16641 16778 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.439 16641 16778 D SoLoader: libturbomodulejsijni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.444 16641 16778 I ExpoModulesCore: ✅ JSI interop was installed
-10-29 14:45:17.444 16641 16778 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-29 14:45:17.451 16641 16778 I ExpoModulesCore: ✅ Constants were exported
-10-29 14:45:17.475 16641 16778 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!classes3.dex): ok
-10-29 14:45:17.478 16641 16778 I ReactNativeJS: Running "main
-10-29 14:45:17.483 16641 16778 V SoLoader: libreactnativeblob.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:17.488 16641 16778 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:17.488 16641 16778 D SoLoader: libreactnativeblob.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:17.491 16641 16778 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-29 14:45:17.491 16641 16778 I ReactNativeJS:   hasAnonKey: true,
-10-29 14:45:17.491 16641 16778 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-29 14:45:17.611 16641 16778 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
-10-29 14:45:17.613 16641 16778 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:17.615 16641 16778 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:17.615 16641 16778 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:17.615 16641 16778 E ReactNativeJS: 
-10-29 14:45:17.615 16641 16778 E ReactNativeJS: This error is located at:
-10-29 14:45:17.615 16641 16778 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:17.615 16641 16778 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:17.615 16641 16778 E ReactNativeJS:     in App
-10-29 14:45:17.615 16641 16778 E ReactNativeJS:     in RCTView
-10-29 14:45:17.615 16641 16778 E ReactNativeJS:     in Unknown
-10-29 14:45:17.615 16641 16778 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:17.616 16641 16778 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:17.616 16641 16778 E ReactNativeJS: 
-10-29 14:45:17.616 16641 16778 E ReactNativeJS: This error is located at:
-10-29 14:45:17.616 16641 16778 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:17.616 16641 16778 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:17.616 16641 16778 E ReactNativeJS:     in App
-10-29 14:45:17.616 16641 16778 E ReactNativeJS:     in RCTView
-10-29 14:45:17.616 16641 16778 E ReactNativeJS:     in Unknown
-10-29 14:45:17.616 16641 16778 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 16641
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: get@1:704383
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: _loop@1:933305
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: initialize@1:906463
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: __guard@1:110731
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:17.618 16641 16779 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:17.641 16641 16779 I Process : Sending signal. PID: 16641 SIG: 9
-10-29 14:45:17.765 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:17.766 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:17.766 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:17.767 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:19.830 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:20.226  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +278ms
-10-29 14:45:20.244 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:20.245 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:20.245 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:20.246 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 16721
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: get@1:704383
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: _loop@1:933305
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: initialize@1:906463
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: __guard@1:110731
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:20.472 16721 16859 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:20.519 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:20.520 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:20.520 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:20.521 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:21.139  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:21.147  5720  5865 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:45:21.406  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:21.437  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:45:21.650 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:21.656 16812 16812 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-29 14:45:21.662 16812 16812 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-29 14:45:21.664 16812 16812 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-29 14:45:21.676 16812 16812 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-29 14:45:21.676 16812 16812 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-29 14:45:21.691 16812 16812 D CompatChangeReporter: Compat change id reported: 242716250; UID 10578; state: ENABLED
-10-29 14:45:21.699 16812 16812 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-29 14:45:21.703 16812 16812 D nativeloader: Configuring clns-7 for other apk /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64:/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-29 14:45:21.715 16812 16812 V GraphicsEnvironment: Currently set values for:
-10-29 14:45:21.716 16812 16812 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-29 14:45:21.716 16812 16812 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-29 14:45:21.716 16812 16812 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-29 14:45:21.716 16812 16812 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-29 14:45:21.733 16812 16812 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-29 14:45:21.733 16812 16812 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-29 14:45:21.735 16812 16812 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-29 14:45:21.744 16812 16812 V SoLoader: Init SoLoader delegate
-10-29 14:45:21.763 16812 16812 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-29 14:45:21.796 16812 16812 V SoLoader: libhermes.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.798 16812 16812 V SoLoader: libjsi.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.799 16812 16812 V SoLoader: libfolly_runtime.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.800 16812 16812 V SoLoader: libglog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.801 16812 16812 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.801 16812 16812 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.801 16812 16812 D SoLoader: libm.so found on /system/lib64
-10-29 14:45:21.801 16812 16812 D SoLoader: libm.so loaded implicitly
-10-29 14:45:21.801 16812 16812 V SoLoader: libc++_shared.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.802 16812 16812 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.802 16812 16812 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.802 16812 16812 D SoLoader: libc.so found on /system/lib64
-10-29 14:45:21.802 16812 16812 D SoLoader: libc.so loaded implicitly
-10-29 14:45:21.802 16812 16812 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.802 16812 16812 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.802 16812 16812 D SoLoader: libdl.so found on /system/lib64
-10-29 14:45:21.802 16812 16812 D SoLoader: libdl.so loaded implicitly
-10-29 14:45:21.804 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.804 16812 16812 D SoLoader: libc++_shared.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.805 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.805 16812 16812 D SoLoader: libglog.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.806 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.806 16812 16812 D SoLoader: libfolly_runtime.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.807 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.807 16812 16812 D SoLoader: libjsi.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.808 16812 16812 V SoLoader: libfbjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.809 16812 16812 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.809 16812 16812 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.809 16812 16812 D SoLoader: libandroid.so found on /system/lib64
-10-29 14:45:21.809 16812 16812 D SoLoader: libandroid.so loaded implicitly
-10-29 14:45:21.809 16812 16812 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.809 16812 16812 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.809 16812 16812 D SoLoader: liblog.so found on /system/lib64
-10-29 14:45:21.809 16812 16812 D SoLoader: liblog.so loaded implicitly
-10-29 14:45:21.810 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.811 16812 16812 D SoLoader: libfbjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.812 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.812 16812 16812 D SoLoader: libhermes.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.812 16812 16812 V SoLoader: libhermes_executor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.816 16812 16812 V SoLoader: libreactnativejni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.818 16812 16812 V SoLoader: libyoga.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.820 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.820 16812 16812 D SoLoader: libyoga.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.820 16812 16812 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.822 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.822 16812 16812 D SoLoader: libreactperfloggerjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.822 16812 16812 V SoLoader: libreact_render_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.824 16812 16812 V SoLoader: libreact_render_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.826 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.826 16812 16812 D SoLoader: libreact_render_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.826 16812 16812 V SoLoader: libreact_render_graphics.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.828 16812 16812 V SoLoader: libreact_utils.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.829 16812 16812 V SoLoader: libreact_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.831 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.831 16812 16812 D SoLoader: libreact_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.831 16812 16812 V SoLoader: libjsinspector.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.832 16812 16812 V SoLoader: libreact_featureflags.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.834 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.834 16812 16812 D SoLoader: libreact_featureflags.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.834 16812 16812 V SoLoader: libruntimeexecutor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.836 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.836 16812 16812 D SoLoader: libruntimeexecutor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.837 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.837 16812 16812 D SoLoader: libjsinspector.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.838 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.838 16812 16812 D SoLoader: libreact_utils.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.839 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.839 16812 16812 D SoLoader: libreact_render_graphics.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.839 16812 16812 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:21.841 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.841 16812 16812 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.842 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.843 16812 16812 D SoLoader: libreact_render_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.845 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.845 16812 16812 D SoLoader: libreactnativejni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.847 16812 16812 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.847 16812 16812 D SoLoader: libhermes_executor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:21.857 16812 16919 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:21.862 16812 16812 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-29 14:45:21.862 16812 16812 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:21.862 16812 16812 I M-ProMotion: M-ProMotion is disabled
-10-29 14:45:21.863 16812 16921 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:21.866 16812 16812 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-29 14:45:21.870 16812 16812 W HWUI    : Unknown dataspace 0
-10-29 14:45:21.888 16812 16812 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 14:45:21.889 16812 16812 D BufferQueueConsumer: [](id:41ac00000000,api:0,p:-1,c:16812) connect: controlledByApp=false
-10-29 14:45:21.890 16812 16812 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-29 14:45:21.890 16812 16812 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-29 14:45:21.893 16812 16919 I ExpoModulesCore: ✅ AppContext was initialized
-10-29 14:45:21.898 16812 16910 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-29 14:45:21.938 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-29 14:45:21.941 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-29 14:45:21.942 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-29 14:45:21.944 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-29 14:45:21.945 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-29 14:45:21.945 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-29 14:45:21.945 16812 16910 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-29 14:45:21.945 16812 16910 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1114882611719528(auto) mPendingTransactions.size=0 graphicBufferId=72206990180352 transform=0
-10-29 14:45:21.946 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-29 14:45:21.947 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-29 14:45:21.949 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-29 14:45:21.949 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-29 14:45:21.951 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-29 14:45:21.951 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-29 14:45:21.952 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-29 14:45:21.953 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-29 14:45:21.955 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-29 14:45:21.955 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-29 14:45:21.956 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-29 14:45:21.956 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-29 14:45:21.958 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-29 14:45:21.959 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-29 14:45:21.959 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-29 14:45:21.959 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-29 14:45:21.960 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-29 14:45:21.960 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-29 14:45:21.961 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-29 14:45:21.962 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-29 14:45:21.962 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-29 14:45:21.963 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-29 14:45:21.964 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-29 14:45:21.966  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +357ms
-10-29 14:45:21.968 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-29 14:45:21.971 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-29 14:45:21.971 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-29 14:45:21.974 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-29 14:45:21.976 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-29 14:45:21.977 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-29 14:45:21.978 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-29 14:45:21.979 16812 16812 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{88218ae V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-10-29 14:45:21.979 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-29 14:45:21.980 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-29 14:45:21.980 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-29 14:45:21.981 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-29 14:45:21.981 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-29 14:45:21.982 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-29 14:45:21.982 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-29 14:45:21.983 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-29 14:45:21.984 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-29 14:45:21.985 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-29 14:45:21.985 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-29 14:45:21.986 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-29 14:45:21.986 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-29 14:45:21.987 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-29 14:45:21.987 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-29 14:45:21.988 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:21.988 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-29 14:45:21.988 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-29 14:45:21.989 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:21.989 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:21.991 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-29 14:45:21.991 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:21.991 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-29 14:45:21.992 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-29 14:45:21.993 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-29 14:45:21.994 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-29 14:45:21.994 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-29 14:45:21.996 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-29 14:45:21.997 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-29 14:45:21.998 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-29 14:45:21.999 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-29 14:45:22.000 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-29 14:45:22.000 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-29 14:45:22.001 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-29 14:45:22.002 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-29 14:45:22.003 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-29 14:45:22.003 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-29 14:45:22.004 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-29 14:45:22.004 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-29 14:45:22.005 16812 16930 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-29 14:45:22.035 16812 16929 V SoLoader: libexpo-modules-core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:22.038 16812 16929 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:22.042 16812 16929 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:22.042 16812 16929 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:22.044 16812 16929 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:22.045 16812 16929 D SoLoader: libexpo-modules-core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:22.045 16812 16929 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:22.051 16812 16929 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:22.051 16812 16929 D SoLoader: libturbomodulejsijni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:22.055 16812 16929 I ExpoModulesCore: ✅ JSI interop was installed
-10-29 14:45:22.055 16812 16929 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-29 14:45:22.060 16812 16929 I ExpoModulesCore: ✅ Constants were exported
-10-29 14:45:22.083 16812 16929 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!classes3.dex): ok
-10-29 14:45:22.087 16812 16929 I ReactNativeJS: Running "main
-10-29 14:45:22.091 16812 16929 V SoLoader: libreactnativeblob.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:22.096 16812 16929 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:22.096 16812 16929 D SoLoader: libreactnativeblob.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:22.100 16812 16929 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-29 14:45:22.100 16812 16929 I ReactNativeJS:   hasAnonKey: true,
-10-29 14:45:22.100 16812 16929 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-29 14:45:22.224  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:22.242 16812 16929 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
-10-29 14:45:22.243 16812 16929 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:22.244 16812 16929 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:22.245 16812 16929 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:22.245 16812 16929 E ReactNativeJS: 
-10-29 14:45:22.245 16812 16929 E ReactNativeJS: This error is located at:
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in App
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in RCTView
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in Unknown
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:22.245 16812 16929 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:22.245 16812 16929 E ReactNativeJS: 
-10-29 14:45:22.245 16812 16929 E ReactNativeJS: This error is located at:
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in App
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in RCTView
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in Unknown
-10-29 14:45:22.245 16812 16929 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 16812
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: get@1:704383
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: _loop@1:933305
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: initialize@1:906463
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: __guard@1:110731
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:22.252 16812 16930 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:22.280 16812 16930 I Process : Sending signal. PID: 16812 SIG: 9
-10-29 14:45:22.386 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:22.387 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:22.387 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:22.387 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:23.399 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:23.808  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +294ms
-10-29 14:45:23.809 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:23.810 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:23.811 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:23.811 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 16899
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: get@1:704383
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: _loop@1:933305
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: initialize@1:906463
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: __guard@1:110731
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:24.036 16899 17027 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:24.090 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:24.091 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:24.092 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:24.094 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:25.139 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:25.143 16970 16970 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-29 14:45:25.151 16970 16970 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-29 14:45:25.153 16970 16970 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-29 14:45:25.167 16970 16970 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-29 14:45:25.167 16970 16970 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-29 14:45:25.192 16970 16970 D CompatChangeReporter: Compat change id reported: 242716250; UID 10578; state: ENABLED
-10-29 14:45:25.201 16970 16970 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-29 14:45:25.205 16970 16970 D nativeloader: Configuring clns-7 for other apk /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64:/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-29 14:45:25.217 16970 16970 V GraphicsEnvironment: Currently set values for:
-10-29 14:45:25.217 16970 16970 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-29 14:45:25.217 16970 16970 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-29 14:45:25.217 16970 16970 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-29 14:45:25.217 16970 16970 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-29 14:45:25.233 16970 16970 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-29 14:45:25.233 16970 16970 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-29 14:45:25.235 16970 16970 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-29 14:45:25.245 16970 16970 V SoLoader: Init SoLoader delegate
-10-29 14:45:25.260 16970 16970 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-29 14:45:25.308 16970 16970 V SoLoader: libhermes.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.311 16970 16970 V SoLoader: libjsi.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.312 16970 16970 V SoLoader: libfolly_runtime.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.312 16970 16970 V SoLoader: libglog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.313 16970 16970 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.313 16970 16970 V SoLoader: libm.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.313 16970 16970 D SoLoader: libm.so found on /system/lib64
-10-29 14:45:25.313 16970 16970 D SoLoader: libm.so loaded implicitly
-10-29 14:45:25.313 16970 16970 V SoLoader: libc++_shared.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.314 16970 16970 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.314 16970 16970 V SoLoader: libc.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.314 16970 16970 D SoLoader: libc.so found on /system/lib64
-10-29 14:45:25.314 16970 16970 D SoLoader: libc.so loaded implicitly
-10-29 14:45:25.314 16970 16970 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.314 16970 16970 V SoLoader: libdl.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.314 16970 16970 D SoLoader: libdl.so found on /system/lib64
-10-29 14:45:25.314 16970 16970 D SoLoader: libdl.so loaded implicitly
-10-29 14:45:25.316 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.316 16970 16970 D SoLoader: libc++_shared.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.317 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.317 16970 16970 D SoLoader: libglog.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.318 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.318 16970 16970 D SoLoader: libfolly_runtime.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.319 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.319 16970 16970 D SoLoader: libjsi.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.319 16970 16970 V SoLoader: libfbjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.320 16970 16970 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.320 16970 16970 V SoLoader: libandroid.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.320 16970 16970 D SoLoader: libandroid.so found on /system/lib64
-10-29 14:45:25.320 16970 16970 D SoLoader: libandroid.so loaded implicitly
-10-29 14:45:25.320 16970 16970 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.320 16970 16970 V SoLoader: liblog.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.320 16970 16970 D SoLoader: liblog.so found on /system/lib64
-10-29 14:45:25.320 16970 16970 D SoLoader: liblog.so loaded implicitly
-10-29 14:45:25.321 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.321 16970 16970 D SoLoader: libfbjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.322 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.323 16970 16970 D SoLoader: libhermes.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.323 16970 16970 V SoLoader: libhermes_executor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.326 16970 16970 V SoLoader: libreactnativejni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.328 16970 16970 V SoLoader: libyoga.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.330 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.330 16970 16970 D SoLoader: libyoga.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.330 16970 16970 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.332 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.332 16970 16970 D SoLoader: libreactperfloggerjni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.332 16970 16970 V SoLoader: libreact_render_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.334 16970 16970 V SoLoader: libreact_render_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.335 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.335 16970 16970 D SoLoader: libreact_render_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.336 16970 16970 V SoLoader: libreact_render_graphics.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.338 16970 16970 V SoLoader: libreact_utils.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.339 16970 16970 V SoLoader: libreact_debug.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.341 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.341 16970 16970 D SoLoader: libreact_debug.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.341 16970 16970 V SoLoader: libjsinspector.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.342 16970 16970 V SoLoader: libreact_featureflags.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.344 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.344 16970 16970 D SoLoader: libreact_featureflags.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.344 16970 16970 V SoLoader: libruntimeexecutor.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.346 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.346 16970 16970 D SoLoader: libruntimeexecutor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.347 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.347 16970 16970 D SoLoader: libjsinspector.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.348 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.348 16970 16970 D SoLoader: libreact_utils.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.349 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.349 16970 16970 D SoLoader: libreact_render_graphics.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.349 16970 16970 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.351 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.351 16970 16970 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.351 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.352 16970 16970 D SoLoader: libreact_render_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.353 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.354 16970 16970 D SoLoader: libreactnativejni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.355 16970 16970 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.355 16970 16970 D SoLoader: libhermes_executor.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.363 16970 17083 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.366 16970 16970 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-29 14:45:25.366 16970 16970 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:25.366 16970 16970 I M-ProMotion: M-ProMotion is disabled
-10-29 14:45:25.367 16970 17089 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 14:45:25.371 16970 16970 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-29 14:45:25.374 16970 16970 W HWUI    : Unknown dataspace 0
-10-29 14:45:25.389 16970 16970 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 14:45:25.390 16970 16970 D BufferQueueConsumer: [](id:424a00000000,api:0,p:-1,c:16970) connect: controlledByApp=false
-10-29 14:45:25.391 16970 16970 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-29 14:45:25.391 16970 16970 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-29 14:45:25.396 16970 17083 I ExpoModulesCore: ✅ AppContext was initialized
-10-29 14:45:25.399 16970 17074 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-29 14:45:25.434 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-29 14:45:25.437 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-29 14:45:25.439 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-29 14:45:25.441 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-29 14:45:25.442 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-29 14:45:25.442 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-29 14:45:25.443 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-29 14:45:25.444 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-29 14:45:25.444 16970 17074 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-29 14:45:25.445 16970 17074 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1114886110628528(auto) mPendingTransactions.size=0 graphicBufferId=72885595013120 transform=0
-10-29 14:45:25.445 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-29 14:45:25.445 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-29 14:45:25.447 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-29 14:45:25.447 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-29 14:45:25.448 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-29 14:45:25.449 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-29 14:45:25.450 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-29 14:45:25.450 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-29 14:45:25.451 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-29 14:45:25.451 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-29 14:45:25.453 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-29 14:45:25.454 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-29 14:45:25.454 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-29 14:45:25.454 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-29 14:45:25.455 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-29 14:45:25.456 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-29 14:45:25.456 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-29 14:45:25.457 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-29 14:45:25.457 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-29 14:45:25.458 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-29 14:45:25.459 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-29 14:45:25.462 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-29 14:45:25.463 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-29 14:45:25.464 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-29 14:45:25.464 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-29 14:45:25.465 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-29 14:45:25.465  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +360ms
-10-29 14:45:25.465 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-29 14:45:25.466 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-29 14:45:25.466 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-29 14:45:25.467 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-29 14:45:25.467 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-29 14:45:25.467 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-29 14:45:25.468 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-29 14:45:25.468 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-29 14:45:25.469 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-29 14:45:25.469 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-29 14:45:25.470 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-29 14:45:25.470 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-29 14:45:25.470 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-29 14:45:25.471 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-29 14:45:25.471 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-29 14:45:25.472 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-29 14:45:25.472 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-29 14:45:25.473 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-29 14:45:25.473 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-29 14:45:25.475 16970 16970 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{88218ae V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
-10-29 14:45:25.475 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-29 14:45:25.476 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-29 14:45:25.476 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-29 14:45:25.477 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-29 14:45:25.478 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-29 14:45:25.479 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-29 14:45:25.479 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:25.479 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:25.480 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:25.480 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:25.481 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-29 14:45:25.482 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-29 14:45:25.482 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-29 14:45:25.483 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-29 14:45:25.484 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-29 14:45:25.484 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-29 14:45:25.485 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-29 14:45:25.485 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-29 14:45:25.486 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-29 14:45:25.487 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-29 14:45:25.487 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-29 14:45:25.488 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-29 14:45:25.489 16970 17101 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-29 14:45:25.519 16970 17100 V SoLoader: libexpo-modules-core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.521 16970 17100 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.525 16970 17100 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.525 16970 17100 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.527 16970 17100 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.528 16970 17100 D SoLoader: libexpo-modules-core.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.528 16970 17100 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.533 16970 17100 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.534 16970 17100 D SoLoader: libturbomodulejsijni.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.538 16970 17100 I ExpoModulesCore: ✅ JSI interop was installed
-10-29 14:45:25.538 16970 17100 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-29 14:45:25.544 16970 17100 I ExpoModulesCore: ✅ Constants were exported
-10-29 14:45:25.565 16970 17100 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!classes3.dex): ok
-10-29 14:45:25.568 16970 17100 I ReactNativeJS: Running "main
-10-29 14:45:25.573 16970 17100 V SoLoader: libreactnativeblob.so not found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/lib/arm64
-10-29 14:45:25.577 16970 17100 D nativeloader: Load /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk): ok
-10-29 14:45:25.577 16970 17100 D SoLoader: libreactnativeblob.so found on /data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/base.apk!/lib/arm64-v8a
-10-29 14:45:25.581 16970 17100 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-29 14:45:25.581 16970 17100 I ReactNativeJS:   hasAnonKey: true,
-10-29 14:45:25.581 16970 17100 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-29 14:45:25.721 16970 17100 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
-10-29 14:45:25.722 16970 17100 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:25.723 16970 17100 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 14:45:25.724 16970 17100 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:25.724 16970 17100 E ReactNativeJS: 
-10-29 14:45:25.724 16970 17100 E ReactNativeJS: This error is located at:
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in App
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in RCTView
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in Unknown
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:25.724 16970 17100 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 14:45:25.724 16970 17100 E ReactNativeJS: 
-10-29 14:45:25.724 16970 17100 E ReactNativeJS: This error is located at:
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in ContextNavigator
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in ExpoRoot
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in App
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in RCTView
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in Unknown
-10-29 14:45:25.724 16970 17100 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 16970
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: get@1:704383
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: _loop@1:933305
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: initialize@1:906463
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: __guard@1:110731
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:25.726 16970 17101 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:25.739 16970 17101 I Process : Sending signal. PID: 16970 SIG: 9
-10-29 14:45:25.841  5720  5734 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:25.863  5720  5734 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:45:25.876 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:25.877 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:25.877 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:25.878 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:26.594  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:26.625  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:45:26.672 15129 15129 I artd    : GetBestInfo: odex next to the dex file (/data/app/~~OauX-ikmsjEHwQiPHd4xew==/com.a1taxi.driverpro-yOTM-ubtCbmput9a5K_nQA==/oat/arm64/base.odex) is kOatUpToDate with filter 'speed-profile' executable 'false'
-10-29 14:45:27.023  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +287ms
-10-29 14:45:27.030 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:27.031 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:27.032 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:27.032 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 17064
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: anonymous@1:2548679
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: anonymous@1:2544987
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: metroRequire@1:91948
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: get@1:704383
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: metroContext@1:704088
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: loadRoute@1:933407
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: getLayoutNode@1:935475
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: _loop@1:933305
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: getRoutes@1:932152
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: getRoutes@1:931380
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: initialize@1:906463
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: anonymous@1:905068
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: useMemo@1:427180
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: anonymous@1:216470
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: ContextNavigator@1:948340
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: renderWithHooks@1:382872
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: beginWork@1:430869
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: workLoopSync@1:416298
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: renderRootSync@1:416129
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: updateContainer@1:422756
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: anonymous@1:431861
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: renderElement@1:250306
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: renderApplication@1:211665
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: anonymous@1:203533
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: runApplication@1:203958
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: __callFunction@1:111349
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: anonymous@1:109791
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: __guard@1:110731
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 14:45:27.267 17064 17184 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 14:45:27.305 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 14:45:27.306 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 14:45:27.306 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 14:45:27.307 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 14:45:27.346  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:29.146  9313 17240 I Authzen : [DeviceStateSyncManager] The server is in sync with current state. Nothing to do
-10-29 14:45:32.633  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:32.653  5720 14698 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:45:32.940  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:32.993  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
-10-29 14:45:33.184  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND ((_id IN () AND (width > 0 AND height > 0))) ORDER BY datetaken DESC, _id DESC
-10-29 14:45:35.924  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
-10-29 14:45:35.941  5720 14698 D SQLiteQueryBuilder: SELECT _id FROM video WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((width > 0 AND height > 0))) ORDER BY _id asc
-10-29 14:45:36.229  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 0
-10-29 14:45:36.281  5720 14698 D SQLiteQueryBuilder: SELECT _id, _data, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.gallery' , 'com.vivo.widget.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (((group_id = 0 OR group_id is null OR _id IN (1000011337, 1000011549)) AND (width > 0 AND height > 0))) ORDER BY _id DESC  LIMIT 5000 OFFSET 5000
+
+C:\Users\Dell\Desktop\platform-tools-latest-windows (1)\platform-tools>adb logcat -v time | findstr "ReactNativeJS"
+10-23 17:48:38.419 I/ReactNativeJS(18100): Γ£à [BILL] PDF shared successfully (mobile)
+10-23 17:48:38.464 I/ReactNativeJS(18100): ≡ƒöä [DRIVER-SERVICE] Polling interval triggered
+10-23 17:48:38.483 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.74861, lng: 77.8299867 },
+10-23 17:48:38.483 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:48:38.483 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:48:38.483 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:38.465Z' }
+10-23 17:48:38.485 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.74861&lng=77.8299867&radius=10'
+10-23 17:48:38.539 I/ReactNativeJS(18100): '≡ƒôì [GPS] Live location update:', { lat: '12.748664', lng: '77.829975', accuracy: '6.06m' }
+10-23 17:48:38.558 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:48:38.558 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":774.3999633789062,"heading":0,"altitudeAccuracy":7.457854747772217,"latitude":12.7486637,"speed":0.07189670205116272,"longitude":77.8299752,"accuracy":6.056000232696533}'
+10-23 17:48:38.559 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486447,"longitude":77.8299961}'
+10-23 17:48:38.559 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:48:38.559 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:48:38.559 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:48:38.559 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:48:38.560 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:48:38.560 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:48:38.560 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:48:38.560 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:38.560 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:38.559Z' }
+10-23 17:48:38.566 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:48:38.568 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:48:38.568 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:48:38.568 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:48:38.568 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:48:38.568 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:48:38.568 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:48:38.568 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:48:38.568 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:48:38.657 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== STARTING IMMEDIATE DRIVER DISPLAY =====
+10-23 17:48:38.657 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Current location available, showing drivers immediately
+10-23 17:48:38.657 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Location details:', { latitude: 12.7486637,
+10-23 17:48:38.657 I/ReactNativeJS(18100):   longitude: 77.8299752,
+10-23 17:48:38.657 I/ReactNativeJS(18100):   accuracy: 6.056000232696533 }
+10-23 17:48:38.657 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Showing ALL vehicle types (no filter applied)
+10-23 17:48:38.658 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Should show drivers on map:', true
+10-23 17:48:38.659 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486637, longitude: 77.8299752 },
+10-23 17:48:38.659 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:48:38.659 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:48:38.659 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:48:38.660 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:48:38.660 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:48:38.663 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486637, lng: 77.8299752 },
+10-23 17:48:38.663 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:48:38.663 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:48:38.665 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486637, lng: 77.8299752 },
+10-23 17:48:38.665 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:48:38.665 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:48:38.665 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:38.664Z' }
+10-23 17:48:38.670 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486637&lng=77.8299752&radius=10'
+10-23 17:48:39.431 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:48:39.431 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:48:39.431 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.74861, lng: 77.8299867 },
+10-23 17:48:39.431 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:48:39.431 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:48:39.432 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:48:39.438 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:48:39.438 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:48:39.438 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486637, lng: 77.8299752 },
+10-23 17:48:39.438 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:48:39.438 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:48:39.438 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:48:39.742 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:48:39.742 I/ReactNativeJS(18100):   details:
+10-23 17:48:39.742 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.742 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.742 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.742 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:48:39.742 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:39.742 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:48:39.754 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:48:39.754 I/ReactNativeJS(18100):   details:
+10-23 17:48:39.754 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:39.754 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:39.754 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:39.754 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:48:39.754 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:39.754 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:48:40.054 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:48:40.054 I/ReactNativeJS(18100):   details:
+10-23 17:48:40.054 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:40.054 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.054 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:30.580202+00:00',
+10-23 17:48:40.054 I/ReactNativeJS(18100):        age_minutes: 0 } ] }
+10-23 17:48:40.054 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:48:40.055 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486637,
+10-23 17:48:40.055 I/ReactNativeJS(18100):   lng: 77.8299752,
+10-23 17:48:40.055 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:48:40.055 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:48:40.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:48:40.057 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:48:40.057 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:48:40.058 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486637,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   lon1: 77.8299752,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   lat2: 12.7486983,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   lon2: 77.829988 }
+10-23 17:48:40.058 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486637,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   longitude1: 77.8299752,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   latitude2: 12.7486983,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   longitude2: 77.829988 }
+10-23 17:48:40.058 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.00003459999999932961,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   lng_diff: 0.000012799999993262645,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:48:40.058 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:48:40.058 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:48:40.058 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:48:40.058 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:48:40.058 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.058 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486637, lng: 77.8299752 } }
+10-23 17:48:40.058 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:48:40.058 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:48:40.058 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:48:40.059 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:48:40.059 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:48:40.059 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486637, lng: 77.8299752 },
+10-23 17:48:40.059 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:48:40.059 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:48:40.059 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:48:40.059 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:48:40.059 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:48:40.060 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":774.3999633789062,"heading":0,"altitudeAccuracy":7.457854747772217,"latitude":12.7486637,"speed":0.07189670205116272,"longitude":77.8299752,"accuracy":6.056000232696533}'
+10-23 17:48:40.060 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486447,"longitude":77.8299961}'
+10-23 17:48:40.060 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:48:40.060 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:48:40.060 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:48:40.060 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:48:40.060 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:48:40.060 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:48:40.060 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:48:40.060 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:40.060 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:40.060Z' }
+10-23 17:48:40.060 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:48:40.060 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:48:40.060 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:48:40.060 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:48:40.060 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:48:40.060 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:48:40.060 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:48:40.060 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:48:40.060 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:48:40.068 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:48:40.069 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:48:40.069 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:40.069 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:48:40.069 I/ReactNativeJS(18100):   drivers:
+10-23 17:48:40.069 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:40.069 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.069 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:48:40.069 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.069 I/ReactNativeJS(18100):        heading: 314.27,
+10-23 17:48:40.069 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:48:40.069 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:48:40.069 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:48:40.069 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:40.069 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:40.069 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:48:40.069 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.069 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:48:40.069 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:48:40.069 I/ReactNativeJS(18100):   heading: 314.27,
+10-23 17:48:40.069 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:30.580202+00:00' }
+10-23 17:48:40.070 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:48:40.070 I/ReactNativeJS(18100):   details:
+10-23 17:48:40.070 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:40.070 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.070 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:30.580202+00:00',
+10-23 17:48:40.070 I/ReactNativeJS(18100):        age_minutes: 0 } ] }
+10-23 17:48:40.070 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:48:40.070 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.74861, lng: 77.8299867, type: 'number', isValid: true }
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:48:40.070 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:48:40.071 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:48:40.071 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.74861,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   lon1: 77.8299867,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   lat2: 12.7486983,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   lon2: 77.829988 }
+10-23 17:48:40.071 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.74861,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   longitude1: 77.8299867,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   latitude2: 12.7486983,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   longitude2: 77.829988 }
+10-23 17:48:40.071 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.00008829999999981908,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   lng_diff: 0.0000012999999938756446,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:48:40.071 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:48:40.071 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:48:40.071 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:48:40.071 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.071 I/ReactNativeJS(18100):   customer_coords: { lat: 12.74861, lng: 77.8299867 } }
+10-23 17:48:40.071 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:48:40.071 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:48:40.071 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:48:40.071 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   customer_location: { lat: 12.74861, lng: 77.8299867 },
+10-23 17:48:40.071 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:48:40.071 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:48:40.071 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling update:', 1, 'drivers'
+10-23 17:48:40.071 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:48:40.074 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:48:40.075 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":774.3999633789062,"heading":0,"altitudeAccuracy":7.457854747772217,"latitude":12.7486637,"speed":0.07189670205116272,"longitude":77.8299752,"accuracy":6.056000232696533}'
+10-23 17:48:40.075 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486447,"longitude":77.8299961}'
+10-23 17:48:40.075 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:48:40.075 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:48:40.075 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:48:40.075 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:48:40.075 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:48:40.075 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:48:40.075 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:48:40.075 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:40.075 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:40.075Z' }
+10-23 17:48:40.075 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:48:40.075 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:48:40.075 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:48:40.075 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:48:40.075 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:48:40.075 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:48:40.075 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:48:40.075 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:48:40.075 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:48:40.082 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:48:40.083 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:48:40.083 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:40.083 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:48:40.083 I/ReactNativeJS(18100):   drivers:
+10-23 17:48:40.083 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:40.083 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.083 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:48:40.083 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.083 I/ReactNativeJS(18100):        heading: 314.27,
+10-23 17:48:40.083 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:48:40.083 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:48:40.083 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:48:40.083 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:40.083 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:40.083 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:48:40.083 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486983, lng: 77.829988 },
+10-23 17:48:40.083 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:48:40.083 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:48:40.083 I/ReactNativeJS(18100):   heading: 314.27,
+10-23 17:48:40.083 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:30.580202+00:00' }
+10-23 17:48:40.145 I/ReactNativeJS(18100): '≡ƒôì [GPS] Live location update:', { lat: '12.748630', lng: '77.829969', accuracy: '4.52m' }
+10-23 17:48:40.146 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:48:40.146 I/ReactNativeJS(  419): '≡ƒôì 5-second location watch update:', { altitude: 774.3999633789062,
+10-23 17:48:40.146 I/ReactNativeJS(  419):   heading: 0,
+10-23 17:48:40.146 I/ReactNativeJS(  419):   altitudeAccuracy: 12.201140403747559,
+10-23 17:48:40.146 I/ReactNativeJS(  419):   latitude: 12.7486296,
+10-23 17:48:40.146 I/ReactNativeJS(  419):   speed: 0.07180365920066833,
+10-23 17:48:40.146 I/ReactNativeJS(  419):   longitude: 77.8299689,
+10-23 17:48:40.146 I/ReactNativeJS(  419):   accuracy: 4.517000198364258 }
+10-23 17:48:40.146 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":774.3999633789062,"heading":0,"altitudeAccuracy":12.201140403747559,"latitude":12.7486296,"speed":0.07180365920066833,"longitude":77.8299689,"accuracy":4.517000198364258}'
+10-23 17:48:40.146 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486447,"longitude":77.8299961}'
+10-23 17:48:40.146 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:48:40.146 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:48:40.146 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:48:40.146 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:48:40.146 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:48:40.146 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:48:40.146 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:48:40.146 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:40.146 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:40.146Z' }
+10-23 17:48:40.146 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:48:40.146 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:48:40.146 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:48:40.146 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:48:40.146 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:48:40.146 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:48:40.146 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:48:40.146 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:48:40.146 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:48:40.154 I/ReactNativeJS(  419): '≡ƒÄ»≡ƒÄ»≡ƒÄ» TripCompletionModal RENDER - visible:', false
+10-23 17:48:40.154 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== STARTING IMMEDIATE DRIVER DISPLAY =====
+10-23 17:48:40.154 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Current location available, showing drivers immediately
+10-23 17:48:40.154 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Location details:', { latitude: 12.7486296,
+10-23 17:48:40.154 I/ReactNativeJS(18100):   longitude: 77.8299689,
+10-23 17:48:40.154 I/ReactNativeJS(18100):   accuracy: 4.517000198364258 }
+10-23 17:48:40.154 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Showing ALL vehicle types (no filter applied)
+10-23 17:48:40.154 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Should show drivers on map:', true
+10-23 17:48:40.154 I/ReactNativeJS(  419): '≡ƒÄ»≡ƒÄ»≡ƒÄ» tripData:', '{\n  "distance": 0,\n  "duration": 0,\n  "fareBreakdown": {\n    "booking_type": "regular",\n    "vehicle_type": "sedan",\n    "base_fare": 0,\n    "distance_fare": 0,\n    "time_fare": 0,\n    "surge_charges": 0,\n    "deadhead_charges": 0,\n    "platform_fee": 0,\n    "gst_on_charges": 0,\n    "gst_on_platform_fee": 0,\n    "extra_km_charges": 0,\n    "driver_allowance": 0,\n    "total_fare": 0,\n    "details": {\n      "actual_distance_km": 0,\n      "actual_duration_minutes": 0,\n      "per_km_rate": 0\n    }\n  },\n  "pickup_address": "",\n  "destination_address": "",\n  "booking_type": "regular",\n  "rental_hours": null\n}'
+10-23 17:48:40.154 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486296, longitude: 77.8299689 },
+10-23 17:48:40.154 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:48:40.154 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:48:40.155 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:48:40.155 I/ReactNativeJS(  419): Γ¥î Not visible - returning null
+10-23 17:48:40.155 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:48:40.155 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:48:40.155 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:40.155 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:48:40.155 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:48:40.155 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:40.155 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:48:40.155 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:48:40.155 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:40.155Z' }
+10-23 17:48:40.155 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486296&lng=77.8299689&radius=10'
+10-23 17:48:40.169 I/ReactNativeJS(  419): '≡ƒôì Background location update:', [ { timestamp: 1761221920119,
+10-23 17:48:40.169 I/ReactNativeJS(  419):     mocked: false,
+10-23 17:48:40.169 I/ReactNativeJS(  419):     coords:
+10-23 17:48:40.169 I/ReactNativeJS(  419):      { altitude: 774.3999633789062,
+10-23 17:48:40.169 I/ReactNativeJS(  419):        heading: 0,
+10-23 17:48:40.169 I/ReactNativeJS(  419):        altitudeAccuracy: 12.201140403747559,
+10-23 17:48:40.169 I/ReactNativeJS(  419):        latitude: 12.7486296,
+10-23 17:48:40.169 I/ReactNativeJS(  419):        speed: 0.07180365920066833,
+10-23 17:48:40.169 I/ReactNativeJS(  419):        longitude: 77.8299689,
+10-23 17:48:40.169 I/ReactNativeJS(  419):        accuracy: 4.517000198364258 } } ]
+10-23 17:48:40.184 I/ReactNativeJS(  419): ≡ƒôñ Background location update via RPC...
+10-23 17:48:40.184 E/ReactNativeJS(  419): Γ¥î Supabase credentials not configured
+10-23 17:48:40.545 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:48:40.545 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:48:40.545 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:40.545 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:48:40.545 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:48:40.545 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:48:40.573 I/ReactNativeJS(  419): === SENDING LOCATION TO EDGE FUNCTION ===
+10-23 17:48:40.573 I/ReactNativeJS(  419): 'Driver User ID:', '1c4ac410-54d8-4b5e-960b-3afcbebd115d'
+10-23 17:48:40.574 I/ReactNativeJS(  419): 'Location:', { latitude: 12.7486296,
+10-23 17:48:40.574 I/ReactNativeJS(  419):   longitude: 77.8299689,
+10-23 17:48:40.574 I/ReactNativeJS(  419):   accuracy: 4.517000198364258 }
+10-23 17:48:40.574 I/ReactNativeJS(  419): ≡ƒôñ Updating location via RPC...
+10-23 17:48:40.808 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:48:40.808 I/ReactNativeJS(18100):   loading: false,
+10-23 17:48:40.808 I/ReactNativeJS(18100):   segments: '(tabs)',
+10-23 17:48:40.808 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:48:40.808 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:48:40.808 I/ReactNativeJS(18100): Γ£à User authenticated and on correct screen
+10-23 17:48:40.815 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:48:40.815 I/ReactNativeJS(18100):   details:
+10-23 17:48:40.815 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.815 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.815 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:48:40.815 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.816 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.816 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.816 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        verified: true },
+10-23 17:48:40.816 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:48:40.816 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:48:40.816 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:48:40.816 I/ReactNativeJS(  419): 'Γ£à Location', 'updated', 'successfully via RPC'
+10-23 17:48:40.816 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:40.816 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:48:41.054 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:48:41.054 I/ReactNativeJS(18100):   details:
+10-23 17:48:41.054 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:41.054 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:41.054 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:48:41.054 I/ReactNativeJS(18100):        age_minutes: 0 } ] }
+10-23 17:48:41.054 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:48:41.054 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486296,
+10-23 17:48:41.054 I/ReactNativeJS(18100):   lng: 77.8299689,
+10-23 17:48:41.054 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:48:41.054 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:48:41.055 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:48:41.055 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:48:41.055 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486296,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   lon1: 77.8299689,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:48:41.055 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486296,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   longitude1: 77.8299689,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:48:41.055 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   lng_diff: 0,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:48:41.055 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:48:41.055 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:48:41.056 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:48:41.056 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:48:41.056 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:48:41.056 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:41.056 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486296, lng: 77.8299689 } }
+10-23 17:48:41.056 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:48:41.056 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:48:41.056 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:48:41.056 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:48:41.056 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:48:41.056 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:41.056 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:48:41.056 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:48:41.056 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:48:41.056 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:48:41.056 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:48:41.057 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":774.3999633789062,"heading":0,"altitudeAccuracy":12.201140403747559,"latitude":12.7486296,"speed":0.07180365920066833,"longitude":77.8299689,"accuracy":4.517000198364258}'
+10-23 17:48:41.057 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486447,"longitude":77.8299961}'
+10-23 17:48:41.057 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:48:41.057 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:48:41.057 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:48:41.057 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:48:41.057 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:48:41.057 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:48:41.057 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:48:41.057 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:41.057 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:41.057Z' }
+10-23 17:48:41.061 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:48:41.062 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:48:41.062 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:48:41.062 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:48:41.062 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:48:41.062 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:48:41.062 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:48:41.062 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:48:41.062 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:48:41.071 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:48:41.071 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:48:41.071 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:41.071 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:48:41.071 I/ReactNativeJS(18100):   drivers:
+10-23 17:48:41.071 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:41.071 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:48:41.071 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:48:41.071 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:41.071 I/ReactNativeJS(18100):        heading: null,
+10-23 17:48:41.071 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:48:41.071 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:48:41.071 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:48:41.072 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:48:41.072 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:48:41.072 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:48:41.072 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:48:41.072 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:48:41.072 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:48:41.072 I/ReactNativeJS(18100):   heading: null,
+10-23 17:48:41.072 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:48:43.397 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:48:43.397 I/ReactNativeJS(18100):   loading: false,
+10-23 17:48:43.397 I/ReactNativeJS(18100):   segments: '(tabs)/profile',
+10-23 17:48:43.397 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:48:43.397 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:48:43.397 I/ReactNativeJS(18100): Γ£à User authenticated and on correct screen
+10-23 17:48:43.975 I/ReactNativeJS(18100): ≡ƒÜ¬ Sign out button pressed
+10-23 17:48:44.625 I/ReactNativeJS(18100): ≡ƒÜ¬ User confirmed sign out
+10-23 17:48:44.625 I/ReactNativeJS(18100): ≡ƒÜ¬ Calling signOut function...
+10-23 17:48:44.625 I/ReactNativeJS(18100): ≡ƒÜ¬ Starting sign out process...
+10-23 17:48:45.187 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:48:45.191 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"unread"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"unread"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"unread"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"unread"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"unread"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"unread"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c2
+10-23 17:48:45.191 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:48:45.192 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:48:45.192 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":774.3999633789062,"heading":0,"altitudeAccuracy":12.201140403747559,"latitude":12.7486296,"speed":0.07180365920066833,"longitude":77.8299689,"accuracy":4.517000198364258}'
+10-23 17:48:45.192 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486447,"longitude":77.8299961}'
+10-23 17:48:45.192 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:48:45.192 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:48:45.192 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:48:45.192 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:48:45.192 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:48:45.192 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:48:45.192 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:48:45.192 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:45.192 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:45.192Z' }
+10-23 17:48:45.193 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:48:45.193 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:48:45.193 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:48:45.193 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:48:45.193 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:48:45.193 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:48:45.193 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:48:45.193 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:48:45.193 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:48:45.278 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:48:45.279 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"unread"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"unread"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"unread"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"unread"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"unread"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"unread"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c2
+10-23 17:48:45.279 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:48:45.279 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:48:45.279 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":774.3999633789062,"heading":0,"altitudeAccuracy":12.201140403747559,"latitude":12.7486296,"speed":0.07180365920066833,"longitude":77.8299689,"accuracy":4.517000198364258}'
+10-23 17:48:45.279 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486447,"longitude":77.8299961}'
+10-23 17:48:45.279 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:48:45.279 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:48:45.279 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:48:45.279 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:48:45.279 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:48:45.279 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:48:45.279 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:48:45.279 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:48:45.279 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:18:45.279Z' }
+10-23 17:48:45.280 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:48:45.280 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:48:45.280 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:48:45.280 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:48:45.280 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:48:45.280 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:48:45.280 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:48:45.280 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:48:45.280 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:48:45.331 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: false,
+10-23 17:48:45.331 I/ReactNativeJS(18100):   loading: false,
+10-23 17:48:45.331 I/ReactNativeJS(18100):   segments: '(tabs)/profile',
+10-23 17:48:45.331 I/ReactNativeJS(18100):   userEmail: undefined,
+10-23 17:48:45.331 I/ReactNativeJS(18100):   userRole: undefined }
+10-23 17:48:45.331 I/ReactNativeJS(18100): ≡ƒöä Redirecting to login - user not authenticated
+10-23 17:48:45.349 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:48:45.350 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:48:45.356 I/ReactNativeJS(18100): Γ£à Sign out completed, redirecting to login...
+10-23 17:48:45.356 I/ReactNativeJS(18100): Γ£à Sign out completed
+10-23 17:48:45.356 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: false,
+10-23 17:48:45.356 I/ReactNativeJS(18100):   loading: false,
+10-23 17:48:45.356 I/ReactNativeJS(18100):   segments: 'auth/login',
+10-23 17:48:45.356 I/ReactNativeJS(18100):   userEmail: undefined,
+10-23 17:48:45.356 I/ReactNativeJS(18100):   userRole: undefined }
+10-23 17:48:50.761 I/ReactNativeJS(18100): ≡ƒÜÇ ===== HANDLE SEND OTP CLICKED =====
+10-23 17:48:50.762 I/ReactNativeJS(18100): '≡ƒô▒ Formatted phone:', '+918608374935'
+10-23 17:48:50.762 I/ReactNativeJS(18100): ΓÅ│ Setting loading true...
+10-23 17:48:50.762 I/ReactNativeJS(18100): ≡ƒô₧ Calling sendOTP...
+10-23 17:48:50.762 I/ReactNativeJS(18100): ≡ƒô▒ ===== SEND OTP STARTING =====
+10-23 17:48:50.762 I/ReactNativeJS(18100): '≡ƒô▒ Phone Number:', '+918608374935'
+10-23 17:48:50.762 I/ReactNativeJS(18100): '≡ƒô▒ Name:', 'Bb'
+10-23 17:48:50.762 I/ReactNativeJS(18100): '≡ƒô▒ Supabase URL:', 'https://whubaypabojomdyfqxcf.supabase.co'
+10-23 17:48:50.762 I/ReactNativeJS(18100): '≡ƒô▒ Anon Key exists:', true
+10-23 17:48:50.762 I/ReactNativeJS(18100): '≡ƒô▒ Request URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/send-otp'
+10-23 17:48:50.762 I/ReactNativeJS(18100): ≡ƒô▒ Making fetch request...
+10-23 17:48:52.376 I/ReactNativeJS(18100): '≡ƒô▒ Response status:', 200
+10-23 17:48:52.377 I/ReactNativeJS(18100): '≡ƒô▒ Response ok:', true
+10-23 17:48:52.378 I/ReactNativeJS(18100): '≡ƒô▒ Response data:', '{\n  "success": true,\n  "message": "OTP generated successfully",\n  "devOtp": "439290",\n  "smsSent": false,\n  "smsError": "Authenticate"\n}'
+10-23 17:48:52.378 I/ReactNativeJS(18100): ≡ƒô▒ Γ£à OTP sent successfully!
+10-23 17:48:52.379 I/ReactNativeJS(18100): '≡ƒô▒ Dev OTP:', '439290'
+10-23 17:48:52.379 I/ReactNativeJS(18100): '≡ƒô▒ SMS Sent:', false
+10-23 17:48:52.379 I/ReactNativeJS(18100): '≡ƒô▒ SMS Error:', 'Authenticate'
+10-23 17:48:52.379 I/ReactNativeJS(18100): ≡ƒô▒ ===== SEND OTP COMPLETE =====
+10-23 17:48:52.380 I/ReactNativeJS(18100): '≡ƒô₧ sendOTP returned:', { error: null,
+10-23 17:48:52.380 I/ReactNativeJS(18100):   otp: '439290',
+10-23 17:48:52.380 I/ReactNativeJS(18100):   smsSent: false,
+10-23 17:48:52.380 I/ReactNativeJS(18100):   smsError: 'Authenticate' }
+10-23 17:48:52.380 I/ReactNativeJS(18100): Γ£à No error in result
+10-23 17:48:52.380 I/ReactNativeJS(18100): '≡ƒô▒ OTP received:', '439290'
+10-23 17:48:52.380 I/ReactNativeJS(18100): '≡ƒô▒ SMS sent status:', false
+10-23 17:48:52.380 I/ReactNativeJS(18100): '≡ƒô▒ SMS error:', 'Authenticate'
+10-23 17:48:52.392 I/ReactNativeJS(18100): '≡ƒÆ¼ Showing alert with message:', 'Your OTP code is: 439290\n\nΓÜá∩╕Å SMS failed: Authenticate\nPlease use the code above.'
+10-23 17:48:52.392 I/ReactNativeJS(18100): ≡ƒº¡ Will navigate to verify-otp after alert
+10-23 17:48:52.392 I/ReactNativeJS(18100): ≡ƒÆ¼ Alert displayed
+10-23 17:48:52.392 I/ReactNativeJS(18100): ≡ƒÜÇ ===== HANDLE SEND OTP END =====
+10-23 17:48:55.480 I/ReactNativeJS(18100): ≡ƒº¡ Alert dismissed, navigating to verify-otp...
+10-23 17:48:55.481 I/ReactNativeJS(18100): '≡ƒº¡ Target params:', { phoneNumber: '+918608374935', name: 'Bb' }
+10-23 17:48:55.505 I/ReactNativeJS(18100): ≡ƒº¡ Navigation triggered
+10-23 17:48:55.506 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: false,
+10-23 17:48:55.506 I/ReactNativeJS(18100):   loading: false,
+10-23 17:48:55.506 I/ReactNativeJS(18100):   segments: 'auth/verify-otp',
+10-23 17:48:55.506 I/ReactNativeJS(18100):   userEmail: undefined,
+10-23 17:48:55.506 I/ReactNativeJS(18100):   userRole: undefined }
+10-23 17:48:55.506 I/ReactNativeJS(18100): ≡ƒöÉ User on verify-otp screen, skipping navigation
+10-23 17:49:02.035 I/ReactNativeJS(  419): ≡ƒôì Background fetch triggered for location update
+10-23 17:49:02.492 I/ReactNativeJS(  419): ≡ƒôñ Background location update via RPC...
+10-23 17:49:02.492 E/ReactNativeJS(  419): Γ¥î Supabase credentials not configured
+10-23 17:49:02.493 I/ReactNativeJS(  419): Γ£à Background location update successful
+10-23 17:49:02.936 I/ReactNativeJS(18100): '≡ƒôª Full response data:', '{\n  "success": true,\n  "customerId": "1",\n  "userId": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n  "session": {\n    "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6IngvRXB5YUxCdnJGSXNwTE0iLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3dodWJheXBhYm9qb21keWZxeGNmLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJlOTVhNGYxNC04OTU4LTQ5ZTktOGVkZS1kODFiODJhN2JhMTIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMjI1NTQzLCJpYXQiOjE3NjEyMjE5NDMsImVtYWlsIjoiOTE4NjA4Mzc0OTM1QGExdGF4aS5hcHAiLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmdWxsX25hbWUiOiJSaWNjbyIsInBob25lX251bWJlciI6Iis5MTg2MDgzNzQ5MzUifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvdHAiLCJ0aW1lc3RhbXAiOjE3NjEyMjE5NDN9XSwic2Vzc2lvbl9pZCI6ImY5MDJiNmI3LWI1ZDYtNDBhOS1hYWM2LTExZjcyYTI2YmViZSIsImlzX2Fub255bW91cyI6ZmFsc2V9.H8elJeb96dem2YaV5ViQhLSx1c1miJugG7t32F1YHGs",\n    "refresh_token": "fuvouebumh2v",\n    "expires_in": 3600,\n    "expires_at": 1761225543,\n    "token_type": "bearer",\n    "user": {\n      "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n      "aud": "authenticated",\n      "role": "authenticated",\n      "email": "918608374935@a1taxi.app",\n      "email_confirmed_at": "2025-10-10T18:50:59.835507Z",\n      "phone": "",\n      "confirmed_at": "2025-10-10T18:50:59.835507Z",\n      "recovery_sent_at": "2025-10-23T12:19:03.003564Z",\n      "last_sign_in_at": "2025-10-23T12:19:03.223924958Z",\n      "app_metadata": {\n        "provider": "email",\n        "providers": [\n          "email"\n        ]\n      },\n      "user_metadata": {\n        "email_verified": true,\n        "full_name": "Ricco",\n        "phone_number": "+918608374935"\n      },\n      "identities": [\n        {\n          "identity_id": "43785572-7543-40c4-8eef-853beacc688b",\n          "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n          "user_id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n          "identity_data": {\n            "email": "918608374935@a1taxi.app",\n            "email_verified": false,\n            "phone_verified": false,\n            "sub": "e95a4f14-8958-49e9-8ede-d81b82a7ba12"\n          },\n          "provider": "email",\n          "last_sign_in_at": "2025-10-10T18:50:59.818589Z",\n          "created_at": "2025-10-10T18:50:59.818651Z",\n          "updated_at": "2025-10-10T18:50:59.818651Z",\n          "email": "918608374935@a1taxi.app"\n        }\n      ],\n      "created_at": "2025-10-10T18:50:59.778879Z",\n      "updated_at": "2025-10-23T12:19:03.248622Z",\n      "is_anonymous": false\n    }\n  },\n  "user": {\n    "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n    "email": "918608374935@a1taxi.app",\n    "phone": "",\n    "user_metadata": {\n      "email_verified": true,\n      "full_name": "Ricco",\n      "phone_number": "+918608374935"\n    }\n  }\n}'
+10-23 17:49:02.937 I/ReactNativeJS(18100): 'Γ£à OTP verified, user ID (UUID):', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:02.937 I/ReactNativeJS(18100): 'Γ£à Customer ID (integer):', '1'
+10-23 17:49:02.937 I/ReactNativeJS(18100): 'Γ£à Session received:', '{\n  "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6IngvRXB5YUxCdnJGSXNwTE0iLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3dodWJheXBhYm9qb21keWZxeGNmLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJlOTVhNGYxNC04OTU4LTQ5ZTktOGVkZS1kODFiODJhN2JhMTIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMjI1NTQzLCJpYXQiOjE3NjEyMjE5NDMsImVtYWlsIjoiOTE4NjA4Mzc0OTM1QGExdGF4aS5hcHAiLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmdWxsX25hbWUiOiJSaWNjbyIsInBob25lX251bWJlciI6Iis5MTg2MDgzNzQ5MzUifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvdHAiLCJ0aW1lc3RhbXAiOjE3NjEyMjE5NDN9XSwic2Vzc2lvbl9pZCI6ImY5MDJiNmI3LWI1ZDYtNDBhOS1hYWM2LTExZjcyYTI2YmViZSIsImlzX2Fub255bW91cyI6ZmFsc2V9.H8elJeb96dem2YaV5ViQhLSx1c1miJugG7t32F1YHGs",\n  "refresh_token": "fuvouebumh2v",\n  "expires_in": 3600,\n  "expires_at": 1761225543,\n  "token_type": "bearer",\n  "user": {\n    "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n    "aud": "authenticated",\n    "role": "authenticated",\n    "email": "918608374935@a1taxi.app",\n    "email_confirmed_at": "2025-10-10T18:50:59.835507Z",\n    "phone": "",\n    "confirmed_at": "2025-10-10T18:50:59.835507Z",\n    "recovery_sent_at": "2025-10-23T12:19:03.003564Z",\n    "last_sign_in_at": "2025-10-23T12:19:03.223924958Z",\n    "app_metadata": {\n      "provider": "email",\n      "providers": [\n        "email"\n      ]\n    },\n    "user_metadata": {\n      "email_verified": true,\n      "full_name": "Ricco",\n      "phone_number": "+918608374935"\n    },\n    "identities": [\n      {\n        "identity_id": "43785572-7543-40c4-8eef-853beacc688b",\n        "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n        "user_id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n        "identity_data": {\n          "email": "918608374935@a1taxi.app",\n          "email_verified": false,\n          "phone_verified": false,\n          "sub": "e95a4f14-8958-49e9-8ede-d81b82a7ba12"\n        },\n        "provider": "email",\n        "last_sign_in_at": "2025-10-10T18:50:59.818589Z",\n        "created_at": "2025-10-10T18:50:59.818651Z",\n        "updated_at": "2025-10-10T18:50:59.818651Z",\n        "email": "918608374935@a1taxi.app"\n      }\n    ],\n    "created_at": "2025-10-10T18:50:59.778879Z",\n    "updated_at": "2025-10-23T12:19:03.248622Z",\n    "is_anonymous": false\n  }\n}'
+10-23 17:49:02.937 I/ReactNativeJS(18100): ≡ƒöÉ Setting Supabase session...
+10-23 17:49:03.304 I/ReactNativeJS(18100): 'Γ£à Supabase session set successfully:', { userId: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-23 17:49:03.304 I/ReactNativeJS(18100):   email: '918608374935@a1taxi.app',
+10-23 17:49:03.304 I/ReactNativeJS(18100):   expiresAt: '2025-10-23T13:19:03.000Z' }
+10-23 17:49:03.305 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:49:03.305 I/ReactNativeJS(18100):   loading: false,
+10-23 17:49:03.305 I/ReactNativeJS(18100):   segments: 'auth/verify-otp',
+10-23 17:49:03.305 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:49:03.305 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:49:03.305 I/ReactNativeJS(18100): ≡ƒöÉ User on verify-otp screen, skipping navigation
+10-23 17:49:03.313 I/ReactNativeJS(18100): Γ£à AsyncStorage data saved
+10-23 17:49:03.314 I/ReactNativeJS(18100): 'Γ£à Setting authenticated user in context with UUID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:03.314 I/ReactNativeJS(18100): 'Γ£à Setting authenticated user in context:', { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-23 17:49:03.314 I/ReactNativeJS(18100):   email: '918608374935@a1taxi.app',
+10-23 17:49:03.314 I/ReactNativeJS(18100):   full_name: 'Ricco',
+10-23 17:49:03.314 I/ReactNativeJS(18100):   phone_number: '+918608374935',
+10-23 17:49:03.314 I/ReactNativeJS(18100):   role: 'customer',
+10-23 17:49:03.314 I/ReactNativeJS(18100):   customer_id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12' }
+10-23 17:49:03.326 I/ReactNativeJS(18100): Γ£à Customer data saved, navigating to home...
+10-23 17:49:03.327 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:49:03.327 I/ReactNativeJS(18100):   loading: false,
+10-23 17:49:03.327 I/ReactNativeJS(18100):   segments: 'auth/verify-otp',
+10-23 17:49:03.327 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:49:03.327 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:49:03.327 I/ReactNativeJS(18100): ≡ƒöÉ User on verify-otp screen, skipping navigation
+10-23 17:49:03.449 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 0
+10-23 17:49:03.449 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[]'
+10-23 17:49:03.449 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:49:03.467 I/ReactNativeJS(18100): '≡ƒÄ» [useRideNotifications] useEffect triggered, user ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:03.467 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== FETCHING NOTIFICATIONS =====
+10-23 17:49:03.467 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] User ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:03.467 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Timestamp:', '2025-10-23T12:19:03.467Z'
+10-23 17:49:03.470 I/ReactNativeJS(18100): ≡ƒöö [BANNER_DEBUG] ===== NOTIFICATION BANNER EFFECT =====
+10-23 17:49:03.470 I/ReactNativeJS(18100): '≡ƒöö [BANNER_DEBUG] Banner summary:', { totalNotifications: 0,
+10-23 17:49:03.470 I/ReactNativeJS(18100):   currentlyVisible: false,
+10-23 17:49:03.470 I/ReactNativeJS(18100):   currentNotification: undefined,
+10-23 17:49:03.470 I/ReactNativeJS(18100):   shownNotificationsCount: 0,
+10-23 17:49:03.470 I/ReactNativeJS(18100):   tripCompletedNotifications: 0,
+10-23 17:49:03.470 I/ReactNativeJS(18100):   unreadTripCompleted: 0 }
+10-23 17:49:03.470 I/ReactNativeJS(18100): ≡ƒô▒ [BANNER_DEBUG] ===== BANNER DISPLAY DECISION =====
+10-23 17:49:03.470 I/ReactNativeJS(18100): '≡ƒÄ» [useRideNotifications] useEffect triggered, user ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:03.470 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== FETCHING NOTIFICATIONS =====
+10-23 17:49:03.470 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] User ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:03.470 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Timestamp:', '2025-10-23T12:19:03.470Z'
+10-23 17:49:03.471 W/ReactNativeJS(18100): ≡ƒÄ» [TRIP_NOTIFICATION] ===== useEffect TRIGGERED - CHECKING FOR COMPLETION NOTIFICATIONS =====
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications array length:', 0
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Total notifications received:', 0
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notification types:', '[]'
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] ride_completed count:', 0
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Unread ride_completed:', 0
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Already shown count:', 0
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Currently visible:', false
+10-23 17:49:03.471 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Filtered completion notifications:', 0
+10-23 17:49:03.471 I/ReactNativeJS(18100): '≡ƒÄ» [useRideNotifications] useEffect triggered, user ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:03.471 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== FETCHING NOTIFICATIONS =====
+10-23 17:49:03.471 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] User ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:49:03.472 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Timestamp:', '2025-10-23T12:19:03.471Z'
+10-23 17:49:03.472 I/ReactNativeJS(18100): ≡ƒô▒ Requesting location permission on app start for all platforms...
+10-23 17:49:03.473 I/ReactNativeJS(18100): '≡ƒô▒ Current platform:', 'android'
+10-23 17:49:03.473 I/ReactNativeJS(18100): '≡ƒöì Requesting location permission for platform:', 'android'
+10-23 17:49:03.473 I/ReactNativeJS(18100): ≡ƒô▒ Requesting Android location permissions...
+10-23 17:49:03.477 I/ReactNativeJS(18100): ≡ƒôè Loading all vehicle configs from fare_matrix table for booking_type=regular
+10-23 17:49:03.478 I/ReactNativeJS(18100): ≡ƒù║∩╕Å Fetching active zones from database...
+10-23 17:49:03.479 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:49:03.479 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 0,
+10-23 17:49:03.479 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:03.479 I/ReactNativeJS(18100):   driversPassedToMap: 0,
+10-23 17:49:03.479 I/ReactNativeJS(18100):   drivers: [] }
+10-23 17:49:03.479 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] No drivers to pass to map (availableDrivers is empty)
+10-23 17:49:03.487 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:49:03.487 I/ReactNativeJS(18100):   loading: false,
+10-23 17:49:03.487 I/ReactNativeJS(18100):   segments: '(tabs)',
+10-23 17:49:03.487 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:49:03.487 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:49:03.487 I/ReactNativeJS(18100): Γ£à User authenticated and on correct screen
+10-23 17:49:03.487 E/ReactNativeJS(18100): 'Error initializing notifications:', { [Error: Make sure to complete the guide at https://docs.expo.dev/push-notifications/fcm-credentials/ : Default FirebaseApp is not initialized in this process com.a1taxi.a1taxicustomer. Make sure to call FirebaseApp.initializeApp(Context) first.] code: 'E_REGISTRATION_FAILED' }
+10-23 17:49:03.496 I/ReactNativeJS(18100): '≡ƒô▒ Fine location permission result:', 'granted'
+10-23 17:49:03.496 I/ReactNativeJS(18100): Γ£à Android fine location permission granted
+10-23 17:49:03.496 I/ReactNativeJS(18100): Γ£à Location permission granted on mount
+10-23 17:49:03.496 I/ReactNativeJS(18100): ≡ƒôì [HOME] Starting location fetch...
+10-23 17:49:03.496 I/ReactNativeJS(18100): ≡ƒöì Enhanced Location Service: Getting current location with address...
+10-23 17:49:03.496 I/ReactNativeJS(18100): '≡ƒöì Platform:', 'android'
+10-23 17:49:03.496 I/ReactNativeJS(18100): ≡ƒôì Enhanced Location Service: Starting location detection...
+10-23 17:49:03.496 I/ReactNativeJS(18100): '≡ƒîì Platform:', 'android'
+10-23 17:49:03.498 I/ReactNativeJS(18100): Γ£à Enhanced Location Service: Permission granted, attempting detection...
+10-23 17:49:03.498 I/ReactNativeJS(18100): ≡ƒÄ» Enhanced Location Service: Attempting high accuracy GPS...
+10-23 17:49:03.498 I/ReactNativeJS(18100): ≡ƒô▒ Using Expo Location for high accuracy...
+10-23 17:49:03.547 I/ReactNativeJS(18100): 'Γ£à Enhanced Location Service: High accuracy location obtained:', { lat: 12.7486283, lng: 77.8299733, accuracy: '2m' }
+10-23 17:49:03.547 I/ReactNativeJS(18100): '≡ƒôì Enhanced Location Service: Got location:', { latitude: 12.7486283, longitude: 77.8299733, accuracy: 2 }
+10-23 17:49:03.547 I/ReactNativeJS(18100): ≡ƒù║∩╕Å Enhanced Location Service: Starting reverse geocoding...
+10-23 17:49:03.548 I/ReactNativeJS(18100): '≡ƒù║∩╕Å Reverse geocoding coordinates:', { latitude: 12.7486283, longitude: 77.8299733 }
+10-23 17:49:03.548 I/ReactNativeJS(18100): '≡ƒÅá Reverse geocoding:', { lat: 12.7486283, lng: 77.8299733 }
+10-23 17:49:03.548 I/ReactNativeJS(18100): '≡ƒîÉ Making proxy request to:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/places-proxy/geocode?latlng=12.7486283%2C77.8299733'
+10-23 17:49:03.900 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== DATABASE QUERY RESULT =====
+10-23 17:49:03.901 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Query result:', { hasError: false,
+10-23 17:49:03.901 I/ReactNativeJS(18100):   errorMessage: undefined,
+10-23 17:49:03.901 I/ReactNativeJS(18100):   errorCode: undefined,
+10-23 17:49:03.901 I/ReactNativeJS(18100):   errorDetails: undefined,
+10-23 17:49:03.901 I/ReactNativeJS(18100):   dataCount: 50,
+10-23 17:49:03.901 I/ReactNativeJS(18100):   tripCompletedCount: 0,
+10-23 17:49:03.901 I/ReactNativeJS(18100):   unreadTripCompletedCount: 0,
+10-23 17:49:03.901 I/ReactNativeJS(18100):   allTypes:
+10-23 17:49:03.901 I/ReactNativeJS(18100):    [ 'ride_completed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):      'ride_status_changed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):      'booking_completed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):      'ride_cancelled' ],
+10-23 17:49:03.901 I/ReactNativeJS(18100):   recentNotifications:
+10-23 17:49:03.901 I/ReactNativeJS(18100):    [ { id: 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        type: 'ride_completed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        title: 'Trip Completed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        age_seconds: 4457 },
+10-23 17:49:03.901 I/ReactNativeJS(18100):      { id: '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        age_seconds: 4457 },
+10-23 17:49:03.901 I/ReactNativeJS(18100):      { id: '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:43:16.126619+00:00',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        age_seconds: 5748 },
+10-23 17:49:03.901 I/ReactNativeJS(18100):      { id: 'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:42:44.627741+00:00',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        age_seconds: 5779 },
+10-23 17:49:03.901 I/ReactNativeJS(18100):      { id: '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:40:18.79365+00:00',
+10-23 17:49:03.901 I/ReactNativeJS(18100):        age_seconds: 5925 } ] }
+10-23 17:49:03.901 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== SETTING NOTIFICATIONS IN STATE =====
+10-23 17:49:03.903 I/ReactNativeJS(18100): 'Γ£à [NOTIFICATIONS] Notifications to set:', { total: 50,
+10-23 17:49:03.903 I/ReactNativeJS(18100):   tripCompleted: 0,
+10-23 17:49:03.903 I/ReactNativeJS(18100):   unreadTripCompleted: 0,
+10-23 17:49:03.903 I/ReactNativeJS(18100):   allNotificationIds:
+10-23 17:49:03.903 I/ReactNativeJS(18100):    [ 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'd29bae80-10e7-4d05-99d5-8dc43f61d814',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'd7d8686d-95ee-4ce0-97da-ed89564b014b',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '755a6269-1daf-4327-ab71-f65e3700bf1a',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '500d07b9-07ca-40df-9d4a-3efcf677a117',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'df4552cd-e9bc-4e40-a8a0-1270b37737db',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'acb2b80a-267e-4b98-acd0-397461aee537',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '60dbc0b5-662a-48af-b01a-55212f6ac6ea',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '0f408121-1188-4550-9f50-919dcc8a4ed1',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '23052592-9d19-442c-b40f-12b90c3da756',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'c9ff3014-54e3-4b30-9f22-eceee292796b',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '879d4bbd-20ad-4253-a1c6-ae7535e7c211',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '286129cf-19e6-41fd-b52f-d17334d0d0f9',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'b55ac709-48d5-4db2-8246-e23f9bd317ec',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '92abe95d-e47d-48fa-8159-b119f5802710',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '73ad244d-a00b-42a9-83e9-97932b9db2d2',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '971613ac-8d86-4ab6-8fe5-49c528ca56ee',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '49f0f7f9-03d6-4211-b47d-0e7738f190fa',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '6a87c30d-c48d-458c-9b94-32dd5e75ac05',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'aee0b7a7-9cb2-4f6b-b53f-fa47642319d0',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '6c1d61c3-6cbd-4310-adfe-6d36bc611939',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '9d9ab6e7-0357-4305-9ba8-e91c0bb29897',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'd952183c-69a7-47dc-a848-d11bc2fff300',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '5a385bc8-147d-4ac2-834c-305ed9db9a05',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'b9365ade-a3a4-4036-b42f-606b88d5fac9',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'd850bf94-823f-497a-b292-075abf5b5a59',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '5d8275c0-6692-44b3-a4ff-4eabba59873e',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '5cfa0487-5d05-42e8-8e92-11a287b3ded0',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '679ed79c-eb21-4609-a2b9-a1d304d4d4ad',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '4196d3c8-e6dd-4a11-8d40-6771aa06de07',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '8d21f749-083a-46d1-9f7e-f7dc5c36ef05',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '0a371105-3196-4055-97ad-b230dba42df5',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '9f010555-c90c-447e-83ae-919809ba8350',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '84dd0357-20ec-4317-b7bd-7b31515219fb',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'caaa4644-cefa-47e6-8c92-60415a52ef4b',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'c6e2da1c-f900-47c8-b289-a88c28451f89',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'c1a54517-80eb-451d-8fbb-26492459f1c4',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      'd3a69945-ed73-4db9-84db-77b1013c8fe2',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '8de5daf3-1c41-4bc6-8e2c-c3873b443cbb',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '93b3c278-21c8-4094-a13b-ae25cea5afa8',
+10-23 17:49:03.903 I/ReactNativeJS(18100):      '057c85ff-f0f5-4a15-9e89-de6dc65465a2' ],
+10-23 17:49:03.903 I/ReactNativeJS(18100):   tripCompletedNotificationIds: [],
+10-23 17:49:03.903 I/ReactNativeJS(18100):   unreadTripCompletedNotificationIds: [] }
+10-23 17:49:03.904 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:49:03.905 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:49:03.905 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:49:03.905 W/ReactNativeJS(18100): ≡ƒÄ» [TRIP_NOTIFICATION] ===== useEffect TRIGGERED - CHECKING FOR COMPLETION NOTIFICATIONS =====
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications array length:', 50
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Total notifications received:', 50
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notification types:', '["ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","booking_completed","booking_completed","booking_completed","booking_completed","booking_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_cancelled","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed"]'
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] ride_completed count:', 7
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Unread ride_completed:', 0
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Already shown count:', 0
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Currently visible:', false
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Filtered completion notifications:', 0
+10-23 17:49:03.906 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:49:03.907 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:49:03.908 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:49:03.908 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== CHECKING FOR IMMEDIATE TRIP COMPLETION =====
+10-23 17:49:03.908 I/ReactNativeJS(18100): Γ¥î [NOTIFICATIONS] No immediate trip completion notifications found
+10-23 17:49:03.909 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Available notification types:', [ 'ride_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_cancelled',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.909 I/ReactNativeJS(18100):   'ride_status_changed' ]
+10-23 17:49:03.909 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Trip completed notifications (all statuses):', []
+10-23 17:49:03.910 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:49:03.911 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:49:03.911 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:49:03.912 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== DATABASE QUERY RESULT =====
+10-23 17:49:03.913 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Query result:', { hasError: false,
+10-23 17:49:03.913 I/ReactNativeJS(18100):   errorMessage: undefined,
+10-23 17:49:03.913 I/ReactNativeJS(18100):   errorCode: undefined,
+10-23 17:49:03.913 I/ReactNativeJS(18100):   errorDetails: undefined,
+10-23 17:49:03.913 I/ReactNativeJS(18100):   dataCount: 50,
+10-23 17:49:03.913 I/ReactNativeJS(18100):   tripCompletedCount: 0,
+10-23 17:49:03.913 I/ReactNativeJS(18100):   unreadTripCompletedCount: 0,
+10-23 17:49:03.913 I/ReactNativeJS(18100):   allTypes:
+10-23 17:49:03.913 I/ReactNativeJS(18100):    [ 'ride_completed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):      'ride_status_changed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):      'booking_completed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):      'ride_cancelled' ],
+10-23 17:49:03.913 I/ReactNativeJS(18100):   recentNotifications:
+10-23 17:49:03.913 I/ReactNativeJS(18100):    [ { id: 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        type: 'ride_completed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        title: 'Trip Completed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        age_seconds: 4457 },
+10-23 17:49:03.913 I/ReactNativeJS(18100):      { id: '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        age_seconds: 4457 },
+10-23 17:49:03.913 I/ReactNativeJS(18100):      { id: '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:43:16.126619+00:00',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        age_seconds: 5748 },
+10-23 17:49:03.913 I/ReactNativeJS(18100):      { id: 'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:42:44.627741+00:00',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        age_seconds: 5779 },
+10-23 17:49:03.913 I/ReactNativeJS(18100):      { id: '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:40:18.79365+00:00',
+10-23 17:49:03.913 I/ReactNativeJS(18100):        age_seconds: 5925 } ] }
+10-23 17:49:03.913 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== SETTING NOTIFICATIONS IN STATE =====
+10-23 17:49:03.914 I/ReactNativeJS(18100): 'Γ£à [NOTIFICATIONS] Notifications to set:', { total: 50,
+10-23 17:49:03.914 I/ReactNativeJS(18100):   tripCompleted: 0,
+10-23 17:49:03.914 I/ReactNativeJS(18100):   unreadTripCompleted: 0,
+10-23 17:49:03.914 I/ReactNativeJS(18100):   allNotificationIds:
+10-23 17:49:03.914 I/ReactNativeJS(18100):    [ 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'd29bae80-10e7-4d05-99d5-8dc43f61d814',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'd7d8686d-95ee-4ce0-97da-ed89564b014b',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '755a6269-1daf-4327-ab71-f65e3700bf1a',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '500d07b9-07ca-40df-9d4a-3efcf677a117',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'df4552cd-e9bc-4e40-a8a0-1270b37737db',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'acb2b80a-267e-4b98-acd0-397461aee537',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '60dbc0b5-662a-48af-b01a-55212f6ac6ea',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '0f408121-1188-4550-9f50-919dcc8a4ed1',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '23052592-9d19-442c-b40f-12b90c3da756',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'c9ff3014-54e3-4b30-9f22-eceee292796b',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '879d4bbd-20ad-4253-a1c6-ae7535e7c211',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '286129cf-19e6-41fd-b52f-d17334d0d0f9',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'b55ac709-48d5-4db2-8246-e23f9bd317ec',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '92abe95d-e47d-48fa-8159-b119f5802710',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '73ad244d-a00b-42a9-83e9-97932b9db2d2',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '971613ac-8d86-4ab6-8fe5-49c528ca56ee',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '49f0f7f9-03d6-4211-b47d-0e7738f190fa',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '6a87c30d-c48d-458c-9b94-32dd5e75ac05',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'aee0b7a7-9cb2-4f6b-b53f-fa47642319d0',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '6c1d61c3-6cbd-4310-adfe-6d36bc611939',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '9d9ab6e7-0357-4305-9ba8-e91c0bb29897',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'd952183c-69a7-47dc-a848-d11bc2fff300',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '5a385bc8-147d-4ac2-834c-305ed9db9a05',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'b9365ade-a3a4-4036-b42f-606b88d5fac9',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'd850bf94-823f-497a-b292-075abf5b5a59',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '5d8275c0-6692-44b3-a4ff-4eabba59873e',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '5cfa0487-5d05-42e8-8e92-11a287b3ded0',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '679ed79c-eb21-4609-a2b9-a1d304d4d4ad',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '4196d3c8-e6dd-4a11-8d40-6771aa06de07',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '8d21f749-083a-46d1-9f7e-f7dc5c36ef05',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '0a371105-3196-4055-97ad-b230dba42df5',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '9f010555-c90c-447e-83ae-919809ba8350',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '84dd0357-20ec-4317-b7bd-7b31515219fb',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'caaa4644-cefa-47e6-8c92-60415a52ef4b',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'c6e2da1c-f900-47c8-b289-a88c28451f89',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'c1a54517-80eb-451d-8fbb-26492459f1c4',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      'd3a69945-ed73-4db9-84db-77b1013c8fe2',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '8de5daf3-1c41-4bc6-8e2c-c3873b443cbb',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '93b3c278-21c8-4094-a13b-ae25cea5afa8',
+10-23 17:49:03.914 I/ReactNativeJS(18100):      '057c85ff-f0f5-4a15-9e89-de6dc65465a2' ],
+10-23 17:49:03.914 I/ReactNativeJS(18100):   tripCompletedNotificationIds: [],
+10-23 17:49:03.914 I/ReactNativeJS(18100):   unreadTripCompletedNotificationIds: [] }
+10-23 17:49:03.916 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== CHECKING FOR IMMEDIATE TRIP COMPLETION =====
+10-23 17:49:03.916 I/ReactNativeJS(18100): Γ¥î [NOTIFICATIONS] No immediate trip completion notifications found
+10-23 17:49:03.917 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Available notification types:', [ 'ride_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_cancelled',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:03.917 I/ReactNativeJS(18100):   'ride_status_changed' ]
+10-23 17:49:03.917 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Trip completed notifications (all statuses):', []
+10-23 17:49:03.920 I/ReactNativeJS(18100): ≡ƒöö [BANNER_DEBUG] ===== NOTIFICATION BANNER EFFECT =====
+10-23 17:49:03.920 I/ReactNativeJS(18100): '≡ƒöö [BANNER_DEBUG] Banner summary:', { totalNotifications: 50,
+10-23 17:49:03.920 I/ReactNativeJS(18100):   currentlyVisible: false,
+10-23 17:49:03.920 I/ReactNativeJS(18100):   currentNotification: undefined,
+10-23 17:49:03.920 I/ReactNativeJS(18100):   shownNotificationsCount: 0,
+10-23 17:49:03.920 I/ReactNativeJS(18100):   tripCompletedNotifications: 0,
+10-23 17:49:03.920 I/ReactNativeJS(18100):   unreadTripCompleted: 0 }
+10-23 17:49:03.921 I/ReactNativeJS(18100): ≡ƒô▒ [BANNER_DEBUG] ===== BANNER DISPLAY DECISION =====
+10-23 17:49:03.922 I/ReactNativeJS(18100): 'Γ£à Fetched zones from database:', { count: 2,
+10-23 17:49:03.922 I/ReactNativeJS(18100):   zones:
+10-23 17:49:03.922 I/ReactNativeJS(18100):    [ { name: 'Inner Ring', city: 'Hosur', radius: 5.88 },
+10-23 17:49:03.922 I/ReactNativeJS(18100):      { name: 'Outer Ring', city: 'Hosur', radius: 13 } ] }
+10-23 17:49:03.923 I/ReactNativeJS(18100): 'Γ£à Loaded active zones:', 2
+10-23 17:49:03.924 I/ReactNativeJS(18100): 'Γ£à Loaded', 6, 'fare configs from fare_matrix table:', [ { vehicle_type: 'hatchback', base_fare: 145, per_km_rate: 25 },
+10-23 17:49:03.924 I/ReactNativeJS(18100):   { vehicle_type: 'hatchback_ac', base_fare: 167, per_km_rate: 27 },
+10-23 17:49:03.924 I/ReactNativeJS(18100):   { vehicle_type: 'sedan', base_fare: 145, per_km_rate: 25 },
+10-23 17:49:03.924 I/ReactNativeJS(18100):   { vehicle_type: 'sedan_ac', base_fare: 160, per_km_rate: 25 },
+10-23 17:49:03.924 I/ReactNativeJS(18100):   { vehicle_type: 'suv', base_fare: 400, per_km_rate: 30 },
+10-23 17:49:03.924 I/ReactNativeJS(18100):   { vehicle_type: 'suv_ac', base_fare: 1500, per_km_rate: 35 } ]
+10-23 17:49:04.381 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== DATABASE QUERY RESULT =====
+10-23 17:49:04.383 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Query result:', { hasError: false,
+10-23 17:49:04.383 I/ReactNativeJS(18100):   errorMessage: undefined,
+10-23 17:49:04.383 I/ReactNativeJS(18100):   errorCode: undefined,
+10-23 17:49:04.383 I/ReactNativeJS(18100):   errorDetails: undefined,
+10-23 17:49:04.383 I/ReactNativeJS(18100):   dataCount: 50,
+10-23 17:49:04.383 I/ReactNativeJS(18100):   tripCompletedCount: 0,
+10-23 17:49:04.383 I/ReactNativeJS(18100):   unreadTripCompletedCount: 0,
+10-23 17:49:04.383 I/ReactNativeJS(18100):   allTypes:
+10-23 17:49:04.383 I/ReactNativeJS(18100):    [ 'ride_completed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):      'ride_status_changed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):      'booking_completed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):      'ride_cancelled' ],
+10-23 17:49:04.383 I/ReactNativeJS(18100):   recentNotifications:
+10-23 17:49:04.383 I/ReactNativeJS(18100):    [ { id: 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        type: 'ride_completed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        title: 'Trip Completed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        age_seconds: 4457 },
+10-23 17:49:04.383 I/ReactNativeJS(18100):      { id: '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        age_seconds: 4457 },
+10-23 17:49:04.383 I/ReactNativeJS(18100):      { id: '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:43:16.126619+00:00',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        age_seconds: 5748 },
+10-23 17:49:04.383 I/ReactNativeJS(18100):      { id: 'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:42:44.627741+00:00',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        age_seconds: 5780 },
+10-23 17:49:04.383 I/ReactNativeJS(18100):      { id: '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:40:18.79365+00:00',
+10-23 17:49:04.383 I/ReactNativeJS(18100):        age_seconds: 5926 } ] }
+10-23 17:49:04.383 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== SETTING NOTIFICATIONS IN STATE =====
+10-23 17:49:04.385 I/ReactNativeJS(18100): 'Γ£à [NOTIFICATIONS] Notifications to set:', { total: 50,
+10-23 17:49:04.385 I/ReactNativeJS(18100):   tripCompleted: 0,
+10-23 17:49:04.385 I/ReactNativeJS(18100):   unreadTripCompleted: 0,
+10-23 17:49:04.385 I/ReactNativeJS(18100):   allNotificationIds:
+10-23 17:49:04.385 I/ReactNativeJS(18100):    [ 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'd29bae80-10e7-4d05-99d5-8dc43f61d814',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'd7d8686d-95ee-4ce0-97da-ed89564b014b',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '755a6269-1daf-4327-ab71-f65e3700bf1a',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '500d07b9-07ca-40df-9d4a-3efcf677a117',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'df4552cd-e9bc-4e40-a8a0-1270b37737db',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'acb2b80a-267e-4b98-acd0-397461aee537',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '60dbc0b5-662a-48af-b01a-55212f6ac6ea',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '0f408121-1188-4550-9f50-919dcc8a4ed1',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '23052592-9d19-442c-b40f-12b90c3da756',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'c9ff3014-54e3-4b30-9f22-eceee292796b',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '879d4bbd-20ad-4253-a1c6-ae7535e7c211',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '286129cf-19e6-41fd-b52f-d17334d0d0f9',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'b55ac709-48d5-4db2-8246-e23f9bd317ec',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '92abe95d-e47d-48fa-8159-b119f5802710',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '73ad244d-a00b-42a9-83e9-97932b9db2d2',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '971613ac-8d86-4ab6-8fe5-49c528ca56ee',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '49f0f7f9-03d6-4211-b47d-0e7738f190fa',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '6a87c30d-c48d-458c-9b94-32dd5e75ac05',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'aee0b7a7-9cb2-4f6b-b53f-fa47642319d0',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '6c1d61c3-6cbd-4310-adfe-6d36bc611939',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '9d9ab6e7-0357-4305-9ba8-e91c0bb29897',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'd952183c-69a7-47dc-a848-d11bc2fff300',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '5a385bc8-147d-4ac2-834c-305ed9db9a05',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'b9365ade-a3a4-4036-b42f-606b88d5fac9',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'd850bf94-823f-497a-b292-075abf5b5a59',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '5d8275c0-6692-44b3-a4ff-4eabba59873e',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '5cfa0487-5d05-42e8-8e92-11a287b3ded0',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '679ed79c-eb21-4609-a2b9-a1d304d4d4ad',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '4196d3c8-e6dd-4a11-8d40-6771aa06de07',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '8d21f749-083a-46d1-9f7e-f7dc5c36ef05',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '0a371105-3196-4055-97ad-b230dba42df5',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '9f010555-c90c-447e-83ae-919809ba8350',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '84dd0357-20ec-4317-b7bd-7b31515219fb',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'caaa4644-cefa-47e6-8c92-60415a52ef4b',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'c6e2da1c-f900-47c8-b289-a88c28451f89',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'c1a54517-80eb-451d-8fbb-26492459f1c4',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      'd3a69945-ed73-4db9-84db-77b1013c8fe2',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '8de5daf3-1c41-4bc6-8e2c-c3873b443cbb',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '93b3c278-21c8-4094-a13b-ae25cea5afa8',
+10-23 17:49:04.385 I/ReactNativeJS(18100):      '057c85ff-f0f5-4a15-9e89-de6dc65465a2' ],
+10-23 17:49:04.385 I/ReactNativeJS(18100):   tripCompletedNotificationIds: [],
+10-23 17:49:04.385 I/ReactNativeJS(18100):   unreadTripCompletedNotificationIds: [] }
+10-23 17:49:04.387 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== CHECKING FOR IMMEDIATE TRIP COMPLETION =====
+10-23 17:49:04.387 I/ReactNativeJS(18100): Γ¥î [NOTIFICATIONS] No immediate trip completion notifications found
+10-23 17:49:04.388 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Available notification types:', [ 'ride_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_cancelled',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:49:04.388 I/ReactNativeJS(18100):   'ride_status_changed' ]
+10-23 17:49:04.389 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Trip completed notifications (all statuses):', []
+10-23 17:49:04.449 I/ReactNativeJS(18100): 'Γ£à Proxy response received:', 'OK'
+10-23 17:49:04.450 I/ReactNativeJS(18100): 'Γ£à Geocoded address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:04.450 I/ReactNativeJS(18100): 'Γ£à Geocoded address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:04.450 I/ReactNativeJS(18100): '≡ƒÅá Enhanced Location Service: Got address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:04.451 I/ReactNativeJS(18100): 'Γ£à [HOME] Location obtained:', { lat: 12.7486283,
+10-23 17:49:04.451 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:49:04.451 I/ReactNativeJS(18100):   address: 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India' }
+10-23 17:49:04.453 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== STARTING IMMEDIATE DRIVER DISPLAY =====
+10-23 17:49:04.453 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Current location available, showing drivers immediately
+10-23 17:49:04.453 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Location details:', { latitude: 12.7486283, longitude: 77.8299733, accuracy: 2 }
+10-23 17:49:04.453 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Showing ALL vehicle types (no filter applied)
+10-23 17:49:04.454 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Should show drivers on map:', true
+10-23 17:49:04.454 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:49:04.454 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:49:04.454 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:49:04.454 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:49:04.454 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:49:04.454 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.454 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:49:04.454 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:49:04.454 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.454 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:49:04.454 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:49:04.454 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:04.454Z' }
+10-23 17:49:04.455 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486283&lng=77.8299733&radius=10'
+10-23 17:49:04.459 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== SHOWING DRIVERS AGAIN =====
+10-23 17:49:04.459 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Not both locations selected, showing drivers on map
+10-23 17:49:04.459 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Pickup coords:', true, 'Destination coords:', false
+10-23 17:49:04.459 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:49:04.459 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:49:04.459 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:49:04.459 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:49:04.459 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:49:04.459 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:49:04.460 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.460 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:49:04.460 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:49:04.460 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.460 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:49:04.460 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:49:04.460 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:04.460Z' }
+10-23 17:49:04.460 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486283&lng=77.8299733&radius=10'
+10-23 17:49:04.462 I/ReactNativeJS(18100): Γ£à [HOME] Location state updated successfully
+10-23 17:49:04.463 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:04.463 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"latitude":12.7486283,"longitude":77.8299733,"altitude":771.7999877929688,"accuracy":2,"altitudeAccuracy":null,"heading":null,"speed":null}'
+10-23 17:49:04.463 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:04.463 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:04.463 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:04.463 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:49:04.463 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:04.463 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:04.463 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:04.463 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:04.463 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:04.463 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:04.463Z' }
+10-23 17:49:04.463 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:04.464 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:04.464 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:04.464 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:04.464 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:04.464 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:04.464 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:04.464 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:04.464 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:04.479 I/ReactNativeJS(18100): ≡ƒôì [HOME] Location loading state set to false
+10-23 17:49:04.527 I/ReactNativeJS(18100): ≡ƒôì [GPS] Starting live GPS tracking (Uber-style)...
+10-23 17:49:04.531 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:04.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"latitude":12.7486283,"longitude":77.8299733,"altitude":771.7999877929688,"accuracy":2,"altitudeAccuracy":null,"heading":null,"speed":null}'
+10-23 17:49:04.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:04.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:04.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:04.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:49:04.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:04.532 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:04.532 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:04.532 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:04.532 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:04.532 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:04.532Z' }
+10-23 17:49:04.532 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:04.532 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:04.532 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:04.532 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:04.532 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:04.532 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:04.532 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:04.532 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:04.532 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:04.541 I/ReactNativeJS(18100): Γ£à [GPS] Live GPS tracking started successfully
+10-23 17:49:04.548 I/ReactNativeJS(18100): '≡ƒôì [GPS] Live location update:', { lat: '12.748628', lng: '77.829973', accuracy: '2.03m' }
+10-23 17:49:04.549 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:04.549 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:04.549 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:04.549 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:04.549 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:04.549 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:49:04.549 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:04.550 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:04.550 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:04.550 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:04.550 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:04.550 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:04.549Z' }
+10-23 17:49:04.550 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:04.550 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:04.550 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:04.550 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:04.550 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:04.550 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:04.550 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:04.550 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:04.550 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:04.559 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== STARTING IMMEDIATE DRIVER DISPLAY =====
+10-23 17:49:04.559 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Current location available, showing drivers immediately
+10-23 17:49:04.559 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Location details:', { latitude: 12.7486283,
+10-23 17:49:04.559 I/ReactNativeJS(18100):   longitude: 77.8299733,
+10-23 17:49:04.559 I/ReactNativeJS(18100):   accuracy: 2.0250000953674316 }
+10-23 17:49:04.559 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Showing ALL vehicle types (no filter applied)
+10-23 17:49:04.559 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Should show drivers on map:', true
+10-23 17:49:04.559 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:49:04.559 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:49:04.559 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:49:04.559 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:49:04.559 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:49:04.559 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:49:04.560 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.560 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:49:04.560 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:49:04.560 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.560 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:49:04.560 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:49:04.560 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:04.560Z' }
+10-23 17:49:04.560 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486283&lng=77.8299733&radius=10'
+10-23 17:49:04.818 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:49:04.818 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:49:04.819 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.819 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:49:04.819 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:49:04.819 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:49:04.878 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:49:04.878 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:49:04.879 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.879 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:49:04.879 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:49:04.879 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:49:04.956 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:49:04.956 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:49:04.956 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:04.956 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:49:04.956 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:49:04.956 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:49:05.092 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:49:05.092 I/ReactNativeJS(18100):   details:
+10-23 17:49:05.092 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.092 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.092 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.092 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:49:05.093 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.093 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:49:05.138 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:49:05.138 I/ReactNativeJS(18100):   details:
+10-23 17:49:05.138 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.138 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.138 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.138 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:49:05.139 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.139 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:49:05.504 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:49:05.504 I/ReactNativeJS(18100):   details:
+10-23 17:49:05.504 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true },
+10-23 17:49:05.504 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:49:05.504 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:49:05.504 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:49:05.504 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.504 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:49:05.515 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:49:05.515 I/ReactNativeJS(18100):   details:
+10-23 17:49:05.515 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.515 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.515 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:49:05.515 I/ReactNativeJS(18100):        age_minutes: 0 } ] }
+10-23 17:49:05.515 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:49:05.516 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486283,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:49:05.516 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:49:05.516 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:49:05.516 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:49:05.516 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486283,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   lon1: 77.8299733,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:49:05.516 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486283,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   longitude1: 77.8299733,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:49:05.516 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.000001299999999204715,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   lng_diff: 0.0000044000000087862645,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:49:05.516 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:49:05.516 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:49:05.517 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:49:05.517 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:49:05.517 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:49:05.517 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.517 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486283, lng: 77.8299733 } }
+10-23 17:49:05.517 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:49:05.517 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:49:05.517 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:49:05.517 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:49:05.517 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:49:05.517 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:05.517 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:49:05.517 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:49:05.517 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:49:05.517 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:49:05.518 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:05.518 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:05.518 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:05.518 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:05.518 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:05.518 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:05.518 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:05.518 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:05.518 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:05.518 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:05.518 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:05.518 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:05.518Z' }
+10-23 17:49:05.518 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:05.518 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:05.518 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:05.518 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:05.518 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:05.518 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:05.518 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:05.518 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:05.518 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:05.529 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   details:
+10-23 17:49:05.529 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.529 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.529 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:49:05.529 I/ReactNativeJS(18100):        age_minutes: 0 } ] }
+10-23 17:49:05.529 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:49:05.529 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486283,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:49:05.529 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:49:05.529 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:49:05.529 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:49:05.529 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486283,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   lon1: 77.8299733,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:49:05.529 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486283,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   longitude1: 77.8299733,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:49:05.529 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:49:05.530 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.000001299999999204715,
+10-23 17:49:05.530 I/ReactNativeJS(18100):   lng_diff: 0.0000044000000087862645,
+10-23 17:49:05.530 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:49:05.530 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:49:05.530 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:49:05.530 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:49:05.530 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:49:05.530 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:49:05.530 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.530 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486283, lng: 77.8299733 } }
+10-23 17:49:05.530 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:49:05.530 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:49:05.530 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:49:05.530 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:49:05.530 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:49:05.530 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:05.530 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:49:05.530 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:49:05.530 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:49:05.530 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:49:05.530 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:49:05.531 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:49:05.531 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:05.531 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:49:05.531 I/ReactNativeJS(18100):   drivers:
+10-23 17:49:05.531 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.531 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.531 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:49:05.531 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.531 I/ReactNativeJS(18100):        heading: null,
+10-23 17:49:05.531 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:49:05.531 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:49:05.531 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:49:05.531 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.531 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.531 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:49:05.531 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.531 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:49:05.531 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:49:05.531 I/ReactNativeJS(18100):   heading: null,
+10-23 17:49:05.531 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:49:05.531 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:05.531 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:05.531 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:05.531 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:05.531 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:05.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:05.532 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:05.532 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:05.532 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:05.532 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:05.532 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:05.532 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:05.532Z' }
+10-23 17:49:05.532 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:05.532 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:05.532 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:05.532 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:05.532 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:05.532 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:05.532 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:05.532 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:05.532 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:05.538 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:49:05.538 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:49:05.538 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:05.538 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:49:05.538 I/ReactNativeJS(18100):   drivers:
+10-23 17:49:05.538 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.538 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.538 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:49:05.538 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.538 I/ReactNativeJS(18100):        heading: null,
+10-23 17:49:05.538 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:49:05.538 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:49:05.538 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:49:05.539 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.539 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.539 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:49:05.539 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.539 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:49:05.539 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:49:05.539 I/ReactNativeJS(18100):   heading: null,
+10-23 17:49:05.539 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:49:05.821 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:49:05.821 I/ReactNativeJS(18100):   details:
+10-23 17:49:05.821 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.821 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.821 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:49:05.821 I/ReactNativeJS(18100):        age_minutes: 0 } ] }
+10-23 17:49:05.821 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:49:05.822 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486283,
+10-23 17:49:05.822 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:49:05.822 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:49:05.822 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:49:05.822 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:49:05.822 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:49:05.822 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486283,
+10-23 17:49:05.822 I/ReactNativeJS(18100):   lon1: 77.8299733,
+10-23 17:49:05.822 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:49:05.822 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:49:05.823 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486283,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   longitude1: 77.8299733,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:49:05.823 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.000001299999999204715,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   lng_diff: 0.0000044000000087862645,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:49:05.823 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:49:05.823 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:49:05.823 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:49:05.823 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.823 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486283, lng: 77.8299733 } }
+10-23 17:49:05.823 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:49:05.823 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:49:05.823 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:49:05.823 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:49:05.823 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:49:05.823 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:49:05.824 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:49:05.824 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:49:05.825 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:05.825 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:05.825 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:05.825 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:05.825 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:05.825 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:05.825 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:05.826 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:05.826 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:05.826 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:05.826 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:05.826 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:05.825Z' }
+10-23 17:49:05.826 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:05.827 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:05.827 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:05.827 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:05.827 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:05.827 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:05.827 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:05.827 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:05.827 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:05.839 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:49:05.839 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:49:05.839 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:05.839 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:49:05.839 I/ReactNativeJS(18100):   drivers:
+10-23 17:49:05.839 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.839 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:49:05.839 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:49:05.839 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.839 I/ReactNativeJS(18100):        heading: null,
+10-23 17:49:05.839 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:49:05.839 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:49:05.839 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:49:05.839 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:49:05.839 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:49:05.839 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:49:05.839 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:49:05.839 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:49:05.839 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:49:05.839 I/ReactNativeJS(18100):   heading: null,
+10-23 17:49:05.839 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:49:08.121 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:08.121 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:08.121 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:08.121 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:08.122 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:08.122 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:08.122 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:08.122 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:08.122 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:08.122 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:08.122 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:08.122 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:08.122Z' }
+10-23 17:49:08.122 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:08.123 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:08.123 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:08.123 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:08.123 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:08.123 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:08.123 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:08.123 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:08.123 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:11.633 I/ReactNativeJS(18100): '≡ƒöì Searching for places:', 'Bagalur '
+10-23 17:49:12.066 I/ReactNativeJS(18100): '≡ƒôì Places API response:', 'OK', 5
+10-23 17:49:14.190 I/ReactNativeJS(18100): '≡ƒôì Location selected:', { description: 'Bagalur, Tamil Nadu, India',
+10-23 17:49:14.190 I/ReactNativeJS(18100):   coordinates: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:49:14.190 I/ReactNativeJS(18100):   type: 'search' }
+10-23 17:49:14.214 I/ReactNativeJS(18100): '≡ƒÆ╛ Saved location to recent searches:', 'Bagalur, Tamil Nadu, India'
+10-23 17:49:14.214 I/ReactNativeJS(18100): Γ£à Calling onLocationSelect with valid coordinates
+10-23 17:49:14.214 I/ReactNativeJS(18100): ≡ƒöì Destination location selected, validating zone...
+10-23 17:49:14.214 I/ReactNativeJS(18100): '≡ƒöì Selected destination:', { location: 'Bagalur, Tamil Nadu, India',
+10-23 17:49:14.214 I/ReactNativeJS(18100):   coords: { latitude: 12.8303987, longitude: 77.86623689999999 } }
+10-23 17:49:14.214 I/ReactNativeJS(18100): '≡ƒöì Active zones for validation:', 2
+10-23 17:49:14.214 I/ReactNativeJS(18100): ≡ƒöì [ZONE-VALIDATION] Starting destination zone validation
+10-23 17:49:14.214 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Location:', 'Bagalur, Tamil Nadu, India'
+10-23 17:49:14.214 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Coordinates:', { latitude: 12.8303987, longitude: 77.86623689999999 }
+10-23 17:49:14.214 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Active zones available:', 2
+10-23 17:49:14.214 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Zone names:', [ 'Inner Ring', 'Outer Ring' ]
+10-23 17:49:14.215 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Full zone data:', '[\n  {\n    "id": "90c1bc5f-7a2d-4585-a2ef-0a85e05e138a",\n    "name": "Inner Ring",\n    "city": "Hosur",\n    "state": "Tamil Nadu",\n    "coordinates": {\n      "type": "circle",\n      "center": {\n        "lat": 12.733564125720461,\n        "lng": 77.82145902191407\n      },\n      "radius": 5882.595479495581\n    },\n    "center_latitude": 12.73356413,\n    "center_longitude": 77.82145902,\n    "radius_km": 5.88,\n    "base_fare": 50,\n    "per_km_rate": 12,\n    "surge_multiplier": 1,\n    "is_active": true,\n    "created_at": "2025-10-22T12:45:47.862374+00:00",\n    "updated_at": "2025-10-22T12:45:47.862374+00:00"\n  },\n  {\n    "id": "8d504fe8-e310-459f-b6d9-29ec5b42ecfc",\n    "name": "Outer Ring",\n    "city": "Hosur",\n    "state": "Tamil Nadu",\n    "coordinates": {\n      "type": "circle",\n      "center": {\n        "lat": 12.736626222356561,\n        "lng": 77.82943489347866\n      },\n      "radius": 13004.829888314574\n    },\n    "center_latitude": 12.73662622,\n    "center_longitude": 77.82943489,\n    "radius_km": 13,\n    "base_fare": 50,\n    "per_km_rate": 12,\n    "surge_multiplier": 1,\n    "is_active": true,\n    "created_at": "2025-10-22T12:04:26.098131+00:00",\n    "updated_at": "2025-10-22T12:04:26.098131+00:00"\n  }\n]'
+10-23 17:49:14.215 I/ReactNativeJS(18100): '≡ƒöì Checking if point is in service area:', { coordinates: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:49:14.215 I/ReactNativeJS(18100):   zonesCount: 2,
+10-23 17:49:14.215 I/ReactNativeJS(18100):   zones:
+10-23 17:49:14.215 I/ReactNativeJS(18100):    [ { name: 'Inner Ring',
+10-23 17:49:14.215 I/ReactNativeJS(18100):        type: 'circle',
+10-23 17:49:14.215 I/ReactNativeJS(18100):        radius_km: 5.88,
+10-23 17:49:14.215 I/ReactNativeJS(18100):        center_lat: 12.73356413,
+10-23 17:49:14.215 I/ReactNativeJS(18100):        center_lng: 77.82145902 },
+10-23 17:49:14.215 I/ReactNativeJS(18100):      { name: 'Outer Ring',
+10-23 17:49:14.215 I/ReactNativeJS(18100):        type: 'circle',
+10-23 17:49:14.215 I/ReactNativeJS(18100):        radius_km: 13,
+10-23 17:49:14.215 I/ReactNativeJS(18100):        center_lat: 12.73662622,
+10-23 17:49:14.215 I/ReactNativeJS(18100):        center_lng: 77.82943489 } ] }
+10-23 17:49:14.215 I/ReactNativeJS(18100): ≡ƒöì Using circle-based zone validation
+10-23 17:49:14.215 I/ReactNativeJS(18100): '≡ƒöì Raw Outer Ring data:', { center_latitude: 12.73662622,
+10-23 17:49:14.215 I/ReactNativeJS(18100):   center_latitude_type: 'number',
+10-23 17:49:14.215 I/ReactNativeJS(18100):   center_longitude: 77.82943489,
+10-23 17:49:14.215 I/ReactNativeJS(18100):   center_longitude_type: 'number',
+10-23 17:49:14.215 I/ReactNativeJS(18100):   radius_km: 13,
+10-23 17:49:14.215 I/ReactNativeJS(18100):   radius_km_type: 'number' }
+10-23 17:49:14.215 I/ReactNativeJS(18100): '≡ƒöì Parsed values:', { centerLat: 12.73662622,
+10-23 17:49:14.215 I/ReactNativeJS(18100):   centerLng: 77.82943489,
+10-23 17:49:14.215 I/ReactNativeJS(18100):   radiusKm: 13,
+10-23 17:49:14.215 I/ReactNativeJS(18100):   allValid: true }
+10-23 17:49:14.215 I/ReactNativeJS(18100): '≡ƒöì Circle zone check:', { point: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:49:14.215 I/ReactNativeJS(18100):   center: { latitude: 12.73662622, longitude: 77.82943489 },
+10-23 17:49:14.215 I/ReactNativeJS(18100):   radiusKm: '13km',
+10-23 17:49:14.215 I/ReactNativeJS(18100):   calculatedDistance: '11.16km',
+10-23 17:49:14.215 I/ReactNativeJS(18100):   difference: '-1.84km',
+10-23 17:49:14.215 I/ReactNativeJS(18100):   isInside: 'Γ£à INSIDE' }
+10-23 17:49:14.215 I/ReactNativeJS(18100): ≡ƒöì Point is INSIDE Outer Ring (13km radius)
+10-23 17:49:14.215 I/ReactNativeJS(18100): Γ£à [ZONE-VALIDATION] Destination location is within active zones
+10-23 17:49:14.216 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:14.216 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:14.216 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:14.216 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:49:14.216 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:14.216 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:14.217 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:14.217 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:14.217 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:14.217 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:49:14.217 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:14.217 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:14.217Z' }
+10-23 17:49:14.217 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:14.217 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:14.217 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:14.217 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:14.217 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:14.217 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:14.217 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:14.217 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:14.217 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:14.232 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:14.232 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:14.232 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:14.232 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:14.232 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:14.232 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:14.232 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:49:14.232 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:14.232 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:14.232 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:14.232 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:49:14.232 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:14.232Z' }
+10-23 17:49:14.233 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 0,
+10-23 17:49:14.233 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.233 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.233 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.244 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 0,
+10-23 17:49:14.244 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.244 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.244 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.247 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 0,
+10-23 17:49:14.247 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:14.247 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.247 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.249 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 0,
+10-23 17:49:14.249 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.249 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.249 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.251 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 90,
+10-23 17:49:14.251 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.251 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:14.251 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:14.253 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 0,
+10-23 17:49:14.253 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.253 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.253 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.255 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:14.256 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:14.256 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:14.256 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:14.256 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:14.256 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:14.256 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:14.256 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:14.256 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:14.281 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== HIDING DRIVERS FOR ROUTE DISPLAY =====
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] Both pickup and destination selected, hiding drivers to show route
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒöä [HOME] Triggering fare calculation due to location/vehicle change
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] ===== STARTING FARE CALCULATION WITH DEADHEAD =====
+10-23 17:49:14.282 I/ReactNativeJS(18100): '≡ƒÆ░ [HOME] Calculating fare for Bagalur trip:', { pickup: 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   destination: 'Bagalur, Tamil Nadu, India',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   pickupCoords: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:49:14.282 I/ReactNativeJS(18100):   destinationCoords: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:49:14.282 I/ReactNativeJS(18100):   selectedVehicle: 'sedan',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:14.282Z',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   shouldHaveDeadhead: true }
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] Calling fareCalculator.calculateFare...
+10-23 17:49:14.282 I/ReactNativeJS(18100): '≡ƒÆ░ [FARE-CALC] Input parameters:', { vehicleType: 'sedan',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   pickup: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:49:14.282 I/ReactNativeJS(18100):   destination: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:49:14.282 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:14.282Z',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   supabaseUrl: 'SET',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   supabaseKey: 'SET' }
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒÄ» [FARE-CALC] Using edge function for deadhead calculation...
+10-23 17:49:14.282 I/ReactNativeJS(18100): '≡ƒöì [FARE-CALC] Environment validation:', { supabaseUrl: 'SET',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   supabaseKey: 'SET',
+10-23 17:49:14.282 I/ReactNativeJS(18100):   urlValid: true,
+10-23 17:49:14.282 I/ReactNativeJS(18100):   keyValid: true }
+10-23 17:49:14.282 I/ReactNativeJS(18100): '≡ƒÄ» [FARE-CALC] Edge function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/fare-calculation'
+10-23 17:49:14.282 I/ReactNativeJS(18100): ≡ƒôí [FARE-CALC] Making request to edge function...
+10-23 17:49:14.283 I/ReactNativeJS(18100): '≡ƒôí [FARE-CALC] Request body:', { pickup_latitude: 12.7486283,
+10-23 17:49:14.283 I/ReactNativeJS(18100):   pickup_longitude: 77.8299733,
+10-23 17:49:14.283 I/ReactNativeJS(18100):   destination_latitude: 12.8303987,
+10-23 17:49:14.283 I/ReactNativeJS(18100):   destination_longitude: 77.86623689999999,
+10-23 17:49:14.283 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:49:14.283 I/ReactNativeJS(18100):   booking_type: 'regular' }
+10-23 17:49:14.283 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:14.284 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:14.284 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:14.284 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:14.284 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:14.284 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:14.284 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:14.284 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:14.284 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:14.284 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:14.284 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:14.284 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:14.284Z' }
+10-23 17:49:14.284 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 0,
+10-23 17:49:14.284 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.284 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.284 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.286 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 0,
+10-23 17:49:14.286 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.286 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.286 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.288 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 0,
+10-23 17:49:14.288 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:14.288 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.288 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.288 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 0,
+10-23 17:49:14.288 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.288 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.288 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.290 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 90,
+10-23 17:49:14.290 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.290 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:14.290 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:14.291 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 0,
+10-23 17:49:14.291 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.291 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.291 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.293 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:14.293 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:14.293 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:14.293 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:14.293 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:14.293 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:14.293 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:14.293 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:14.293 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:14.317 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:14.317 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:14.317 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:14.317 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:14.317 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:14.317 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:14.317 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:14.317 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:14.317 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:14.317 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:14.317 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:14.317 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:14.317Z' }
+10-23 17:49:14.317 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 0,
+10-23 17:49:14.317 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.317 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.317 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.319 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 0,
+10-23 17:49:14.319 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.319 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.319 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.320 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 0,
+10-23 17:49:14.320 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:14.320 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.320 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.321 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 0,
+10-23 17:49:14.321 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.321 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.321 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.322 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 90,
+10-23 17:49:14.322 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.322 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:14.322 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:14.324 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 0,
+10-23 17:49:14.324 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:14.324 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:49:14.324 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:49:14.326 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:14.327 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:14.327 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:14.327 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:14.327 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:14.327 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:14.327 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:14.327 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:14.327 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:16.383 I/ReactNativeJS(18100): '≡ƒôí [FARE-CALC] Edge function response status:', 200
+10-23 17:49:16.387 I/ReactNativeJS(18100): '≡ƒôè [FARE-CALC] Edge function raw result for Bagalur:', { success: true,
+10-23 17:49:16.387 I/ReactNativeJS(18100):   fareBreakdown:
+10-23 17:49:16.387 I/ReactNativeJS(18100):    { baseFare: 145,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      distanceFare: 164,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      timeFare: 0,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      surgeFare: 0,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      platformFee: 0,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      deadheadCharge: 138,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      totalFare: 447,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      distance: 10.55,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      duration: 15,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      deadheadDistance: 11.03 },
+10-23 17:49:16.387 I/ReactNativeJS(18100):   config:
+10-23 17:49:16.387 I/ReactNativeJS(18100):    { vehicle_type: 'sedan',
+10-23 17:49:16.387 I/ReactNativeJS(18100):      base_fare: 145,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      per_km_rate: 25,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      per_minute_rate: 0,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      minimum_fare: 0,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      surge_multiplier: 1,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      platform_fee_percent: 0 },
+10-23 17:49:16.387 I/ReactNativeJS(18100):   deadheadInfo:
+10-23 17:49:16.387 I/ReactNativeJS(18100):    { applied: true,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      reason: 'Between Inner and Outer Ring',
+10-23 17:49:16.387 I/ReactNativeJS(18100):      deadheadDistance: 11.025914915977474,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      deadheadCharge: 137.82393644971842,
+10-23 17:49:16.387 I/ReactNativeJS(18100):      zoneStatus: 'Between Inner and Outer Ring' } }
+10-23 17:49:16.387 I/ReactNativeJS(18100): Γ£à [FARE-CALC] ===== EDGE FUNCTION SUCCESS WITH DEADHEAD FOR BAGALUR =====
+10-23 17:49:16.390 I/ReactNativeJS(18100): 'Γ£à [FARE-CALC] Complete fare breakdown:', { baseFare: 'Γé╣145',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   distanceFare: 'Γé╣164',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   timeFare: 'Γé╣0',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   surgeFare: 'Γé╣0',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   platformFee: 'Γé╣0',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   deadheadCharge: 'Γé╣138',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   deadheadDistance: '11.03km',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   totalFare: 'Γé╣447',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   deadheadInfo:
+10-23 17:49:16.390 I/ReactNativeJS(18100):    { applied: true,
+10-23 17:49:16.390 I/ReactNativeJS(18100):      reason: 'Between Inner and Outer Ring',
+10-23 17:49:16.390 I/ReactNativeJS(18100):      deadheadDistance: 11.025914915977474,
+10-23 17:49:16.390 I/ReactNativeJS(18100):      deadheadCharge: 137.82393644971842,
+10-23 17:49:16.390 I/ReactNativeJS(18100):      zoneStatus: 'Between Inner and Outer Ring' },
+10-23 17:49:16.390 I/ReactNativeJS(18100):   formula: 'Γé╣145 + Γé╣164 + Γé╣0 + Γé╣0 + Γé╣0 + Γé╣138 = Γé╣447',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   bagalurSpecific: 'This should show deadhead charges for Bagalur destination' }
+10-23 17:49:16.390 I/ReactNativeJS(18100): 'Γ£à [FARE-CALC] Deadhead analysis for Bagalur:', { destination: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:49:16.390 I/ReactNativeJS(18100):   deadheadApplied: true,
+10-23 17:49:16.390 I/ReactNativeJS(18100):   deadheadReason: 'Between Inner and Outer Ring',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   zoneStatus: 'Between Inner and Outer Ring',
+10-23 17:49:16.390 I/ReactNativeJS(18100):   expectedForBagalur: 'Should be between Inner and Outer Ring with deadhead charge' }
+10-23 17:49:16.391 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] ===== FARE CALCULATION RESULT =====
+10-23 17:49:16.391 I/ReactNativeJS(18100): 'Γ£à [HOME] Fare breakdown received:', { baseFare: 'Γé╣145',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   distanceFare: 'Γé╣164',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   timeFare: 'Γé╣0',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   surgeFare: 'Γé╣0',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   platformFee: 'Γé╣0',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   deadheadCharge: 'Γé╣138',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   deadheadDistance: '11.03km',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   totalFare: 'Γé╣447',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   distance: '10.55km',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   duration: '15min',
+10-23 17:49:16.391 I/ReactNativeJS(18100):   hasDeadheadCharge: true,
+10-23 17:49:16.391 I/ReactNativeJS(18100):   isBagalurTrip: true,
+10-23 17:49:16.391 I/ReactNativeJS(18100):   expectedDeadhead: 'YES' }
+10-23 17:49:16.392 I/ReactNativeJS(18100): '≡ƒÄ» [HOME] Γ£à DEADHEAD CHARGE APPLIED:', { destination: 'Bagalur, Tamil Nadu, India',
+10-23 17:49:16.392 I/ReactNativeJS(18100):   deadheadCharge: 'Γé╣138',
+10-23 17:49:16.392 I/ReactNativeJS(18100):   deadheadDistance: '11.03km',
+10-23 17:49:16.392 I/ReactNativeJS(18100):   reason: 'Destination is between Inner Ring and Outer Ring' }
+10-23 17:49:16.392 I/ReactNativeJS(18100): '≡ƒÆ░ [HOME] Calculating fares for all vehicle types based on', 'sedan', 'calculation'
+10-23 17:49:16.392 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] hatchback (estimated): Γé╣447 (ratio-based from sedan)
+10-23 17:49:16.392 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] hatchback_ac (estimated): Γé╣493 (ratio-based from sedan)
+10-23 17:49:16.392 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] sedan (selected): Γé╣447 (exact calculation)
+10-23 17:49:16.392 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] sedan_ac (estimated): Γé╣462 (ratio-based from sedan)
+10-23 17:49:16.392 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] suv (estimated): Γé╣762 (ratio-based from sedan)
+10-23 17:49:16.392 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] suv_ac (estimated): Γé╣1923 (ratio-based from sedan)
+10-23 17:49:16.394 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:16.395 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:16.395 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:16.395 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:16.395 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:16.395 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:16.395 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:16.395 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:16.395 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:16.395 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:16.395 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:16.395 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:16.395Z' }
+10-23 17:49:16.396 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:49:16.396 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.396 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.396 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.400 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:49:16.400 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.400 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.400 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.403 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:49:16.403 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:16.403 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.403 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.403 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:49:16.403 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.403 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.403 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.406 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:49:16.406 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.406 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.406 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.409 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:49:16.409 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.409 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.409 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.411 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:16.411 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:16.411 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:16.411 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:16.411 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:16.411 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:16.411 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:16.411 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:16.411 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:16.423 I/ReactNativeJS(18100): '≡ƒÆ░ [HOME] All vehicle fares calculated:', { hatchback: 447,
+10-23 17:49:16.423 I/ReactNativeJS(18100):   hatchback_ac: 493,
+10-23 17:49:16.423 I/ReactNativeJS(18100):   sedan: 447,
+10-23 17:49:16.423 I/ReactNativeJS(18100):   sedan_ac: 462,
+10-23 17:49:16.423 I/ReactNativeJS(18100):   suv: 762,
+10-23 17:49:16.423 I/ReactNativeJS(18100):   suv_ac: 1923 }
+10-23 17:49:16.424 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:16.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:16.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:16.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:16.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:16.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:16.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:16.424 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:16.424 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:16.424 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:16.424 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:16.424 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:16.424Z' }
+10-23 17:49:16.424 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:49:16.424 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.424 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.424 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.426 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:49:16.426 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.426 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.426 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.428 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:49:16.428 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:16.428 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.428 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.428 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:49:16.428 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.428 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.428 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.429 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:49:16.429 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.429 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.429 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.431 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:49:16.431 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.431 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.431 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.433 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:16.433 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:16.433 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:16.433 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:16.433 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:16.433 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:16.433 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:16.433 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:16.433 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:16.447 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:16.447 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:16.447 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:16.447 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:16.447 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:16.447 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:16.447 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:16.447 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:16.447 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:16.447 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:16.447 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:16.447 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:16.447Z' }
+10-23 17:49:16.447 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:49:16.447 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.447 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.447 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.449 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:49:16.449 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.449 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.449 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.451 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:49:16.451 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:16.451 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.451 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.453 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:49:16.453 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.453 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.453 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.455 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:49:16.455 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.455 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.455 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.457 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:49:16.457 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.457 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.457 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.459 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:16.459 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:16.459 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:16.459 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:16.459 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:16.459 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:16.459 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:16.459 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:16.459 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:16.827 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:16.827 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:16.827 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:16.827 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:16.827 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:16.827 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:16.827 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:16.827 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:16.827 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:16.827 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:16.827 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:16.827 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:16.827Z' }
+10-23 17:49:16.828 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:49:16.828 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.828 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.828 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.830 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:49:16.830 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.830 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.830 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.832 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:49:16.832 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:16.832 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.832 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.834 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:49:16.834 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.834 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.834 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.835 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:49:16.835 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.835 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.835 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.837 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:49:16.837 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:16.837 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:16.837 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:16.839 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:16.839 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:16.839 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:16.839 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:16.839 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:16.839 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:16.839 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:16.839 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:16.839 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:28.366 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:49:28.367 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:49:28.367 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:49:28.395 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:49:28.395 I/ReactNativeJS(18100):   loading: false,
+10-23 17:49:28.395 I/ReactNativeJS(18100):   segments: '(tabs)/profile',
+10-23 17:49:28.395 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:49:28.395 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:49:28.395 I/ReactNativeJS(18100): Γ£à User authenticated and on correct screen
+10-23 17:49:28.997 I/ReactNativeJS(18100): ≡ƒÜ¬ Sign out button pressed
+10-23 17:49:29.815 I/ReactNativeJS(18100): ≡ƒÜ¬ User confirmed sign out
+10-23 17:49:29.815 I/ReactNativeJS(18100): ≡ƒÜ¬ Calling signOut function...
+10-23 17:49:29.815 I/ReactNativeJS(18100): ≡ƒÜ¬ Starting sign out process...
+10-23 17:49:30.140 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:49:30.144 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:49:30.145 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:49:30.146 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:30.146 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:30.147 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:30.147 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:30.147 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:30.147 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:30.147 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:30.148 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:30.148 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:30.148 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:30.148 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:30.148 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:30.147Z' }
+10-23 17:49:30.148 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:49:30.148 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.148 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.148 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.151 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:49:30.151 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.151 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.151 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.153 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:49:30.153 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:30.153 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.153 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.154 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:49:30.154 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.154 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.154 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.156 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:49:30.156 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.156 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.156 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.157 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:49:30.157 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.157 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.157 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.159 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:30.159 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:30.159 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:30.159 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:30.159 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:30.159 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:30.159 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:30.159 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:30.159 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:30.179 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:49:30.180 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:49:30.180 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:49:30.181 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:49:30.181 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3601199388504028,"latitude":12.7486283,"speed":6.911815319374692e-17,"longitude":77.8299733,"accuracy":2.0250000953674316}'
+10-23 17:49:30.181 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:49:30.181 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:49:30.181 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:49:30.181 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:49:30.181 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:49:30.181 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:49:30.181 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:49:30.181 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:49:30.181 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:49:30.181 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:19:30.181Z' }
+10-23 17:49:30.181 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:49:30.181 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.181 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.181 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.183 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:49:30.183 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.183 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.183 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.185 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:49:30.185 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:49:30.185 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.185 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.186 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:49:30.186 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.186 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.186 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.188 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:49:30.188 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.188 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.188 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.190 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:49:30.190 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:49:30.190 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:49:30.190 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:49:30.191 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:49:30.192 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:49:30.192 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:49:30.192 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:49:30.192 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:49:30.192 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:49:30.192 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:49:30.192 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:49:30.192 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:49:30.220 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: false,
+10-23 17:49:30.220 I/ReactNativeJS(18100):   loading: false,
+10-23 17:49:30.220 I/ReactNativeJS(18100):   segments: '(tabs)/profile',
+10-23 17:49:30.220 I/ReactNativeJS(18100):   userEmail: undefined,
+10-23 17:49:30.220 I/ReactNativeJS(18100):   userRole: undefined }
+10-23 17:49:30.221 I/ReactNativeJS(18100): ≡ƒöä Redirecting to login - user not authenticated
+10-23 17:49:30.263 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:49:30.268 I/ReactNativeJS(18100): Γ£à Sign out completed, redirecting to login...
+10-23 17:49:30.268 I/ReactNativeJS(18100): Γ£à Sign out completed
+10-23 17:49:30.269 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: false,
+10-23 17:49:30.269 I/ReactNativeJS(18100):   loading: false,
+10-23 17:49:30.269 I/ReactNativeJS(18100):   segments: 'auth/login',
+10-23 17:49:30.269 I/ReactNativeJS(18100):   userEmail: undefined,
+10-23 17:49:30.269 I/ReactNativeJS(18100):   userRole: undefined }
+10-23 17:49:37.462 I/ReactNativeJS(  419): '≡ƒôì Background location update:', [ { timestamp: 1761221972441,
+10-23 17:49:37.462 I/ReactNativeJS(  419):     mocked: false,
+10-23 17:49:37.462 I/ReactNativeJS(  419):     coords:
+10-23 17:49:37.462 I/ReactNativeJS(  419):      { altitude: 774.3999633789062,
+10-23 17:49:37.462 I/ReactNativeJS(  419):        heading: 0,
+10-23 17:49:37.462 I/ReactNativeJS(  419):        altitudeAccuracy: 24.285858154296875,
+10-23 17:49:37.462 I/ReactNativeJS(  419):        latitude: 12.7486283,
+10-23 17:49:37.462 I/ReactNativeJS(  419):        speed: 5.324934164434305e-44,
+10-23 17:49:37.462 I/ReactNativeJS(  419):        longitude: 77.8299733,
+10-23 17:49:37.462 I/ReactNativeJS(  419):        accuracy: 2.4119999408721924 } } ]
+10-23 17:49:37.467 I/ReactNativeJS(  419): ≡ƒôñ Background location update via RPC...
+10-23 17:49:37.467 E/ReactNativeJS(  419): Γ¥î Supabase credentials not configured
+10-23 17:49:42.491 I/ReactNativeJS(  419): '≡ƒôì Background location update:', [ { timestamp: 1761221977428,
+10-23 17:49:42.491 I/ReactNativeJS(  419):     mocked: false,
+10-23 17:49:42.491 I/ReactNativeJS(  419):     coords:
+10-23 17:49:42.491 I/ReactNativeJS(  419):      { altitude: 774.3999633789062,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        heading: 0,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        altitudeAccuracy: 24.33572769165039,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        latitude: 12.7486283,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        speed: 0,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        longitude: 77.8299733,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        accuracy: 2.25 } },
+10-23 17:49:42.491 I/ReactNativeJS(  419):   { timestamp: 1761221977430,
+10-23 17:49:42.491 I/ReactNativeJS(  419):     mocked: false,
+10-23 17:49:42.491 I/ReactNativeJS(  419):     coords:
+10-23 17:49:42.491 I/ReactNativeJS(  419):      { altitude: 771.7999877929688,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        heading: 0,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        altitudeAccuracy: 1.3553755283355713,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        latitude: 12.7486283,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        speed: 0,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        longitude: 77.8299733,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        accuracy: 2.299999952316284 } },
+10-23 17:49:42.491 I/ReactNativeJS(  419):   { timestamp: 1761221982428,
+10-23 17:49:42.491 I/ReactNativeJS(  419):     mocked: false,
+10-23 17:49:42.491 I/ReactNativeJS(  419):     coords:
+10-23 17:49:42.491 I/ReactNativeJS(  419):      { altitude: 771.7999877929688,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        heading: 0,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        altitudeAccuracy: 1.4053676128387451,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        latitude: 12.7486283,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        speed: 0,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        longitude: 77.8299733,
+10-23 17:49:42.491 I/ReactNativeJS(  419):        accuracy: 2 } } ]
+10-23 17:49:42.494 I/ReactNativeJS(  419): ≡ƒôñ Background location update via RPC...
+10-23 17:49:42.494 E/ReactNativeJS(  419): Γ¥î Supabase credentials not configured
+10-23 17:49:51.503 I/ReactNativeJS(  419): '≡ƒôì Background location update:', [ { timestamp: 1761221986429,
+10-23 17:49:51.503 I/ReactNativeJS(  419):     mocked: false,
+10-23 17:49:51.503 I/ReactNativeJS(  419):     coords:
+10-23 17:49:51.503 I/ReactNativeJS(  419):      { altitude: 771.7999877929688,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        heading: 0,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        altitudeAccuracy: 1.3422702550888062,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        latitude: 12.7486283,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        speed: 0,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        longitude: 77.8299733,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        accuracy: 3.1649999618530273 } },
+10-23 17:49:51.503 I/ReactNativeJS(  419):   { timestamp: 1761221991429,
+10-23 17:49:51.503 I/ReactNativeJS(  419):     mocked: false,
+10-23 17:49:51.503 I/ReactNativeJS(  419):     coords:
+10-23 17:49:51.503 I/ReactNativeJS(  419):      { altitude: 771.7999877929688,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        heading: 0,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        altitudeAccuracy: 1.3922778367996216,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        latitude: 12.7486283,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        speed: 0,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        longitude: 77.8299733,
+10-23 17:49:51.503 I/ReactNativeJS(  419):        accuracy: 1.5 } } ]
+10-23 17:49:51.506 I/ReactNativeJS(  419): ≡ƒôñ Background location update via RPC...
+10-23 17:49:51.506 E/ReactNativeJS(  419): Γ¥î Supabase credentials not configured
+10-23 17:50:02.052 I/ReactNativeJS(  419): ≡ƒôì Background fetch triggered for location update
+10-23 17:50:02.072 I/ReactNativeJS(  419): ≡ƒôñ Background location update via RPC...
+10-23 17:50:02.072 E/ReactNativeJS(  419): Γ¥î Supabase credentials not configured
+10-23 17:50:02.074 I/ReactNativeJS(  419): Γ£à Background location update successful
+10-23 17:50:02.956 I/ReactNativeJS(18100): ≡ƒÜÇ ===== HANDLE SEND OTP CLICKED =====
+10-23 17:50:02.956 I/ReactNativeJS(18100): '≡ƒô▒ Formatted phone:', '+918608374935'
+10-23 17:50:02.957 I/ReactNativeJS(18100): ΓÅ│ Setting loading true...
+10-23 17:50:02.957 I/ReactNativeJS(18100): ≡ƒô₧ Calling sendOTP...
+10-23 17:50:02.957 I/ReactNativeJS(18100): ≡ƒô▒ ===== SEND OTP STARTING =====
+10-23 17:50:02.957 I/ReactNativeJS(18100): '≡ƒô▒ Phone Number:', '+918608374935'
+10-23 17:50:02.957 I/ReactNativeJS(18100): '≡ƒô▒ Name:', 'Hhj'
+10-23 17:50:02.957 I/ReactNativeJS(18100): '≡ƒô▒ Supabase URL:', 'https://whubaypabojomdyfqxcf.supabase.co'
+10-23 17:50:02.957 I/ReactNativeJS(18100): '≡ƒô▒ Anon Key exists:', true
+10-23 17:50:02.957 I/ReactNativeJS(18100): '≡ƒô▒ Request URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/send-otp'
+10-23 17:50:02.957 I/ReactNativeJS(18100): ≡ƒô▒ Making fetch request...
+10-23 17:50:04.185 I/ReactNativeJS(18100): '≡ƒô▒ Response status:', 200
+10-23 17:50:04.186 I/ReactNativeJS(18100): '≡ƒô▒ Response ok:', true
+10-23 17:50:04.188 I/ReactNativeJS(18100): '≡ƒô▒ Response data:', '{\n  "success": true,\n  "message": "OTP generated successfully",\n  "devOtp": "462365",\n  "smsSent": false,\n  "smsError": "Authenticate"\n}'
+10-23 17:50:04.188 I/ReactNativeJS(18100): ≡ƒô▒ Γ£à OTP sent successfully!
+10-23 17:50:04.189 I/ReactNativeJS(18100): '≡ƒô▒ Dev OTP:', '462365'
+10-23 17:50:04.189 I/ReactNativeJS(18100): '≡ƒô▒ SMS Sent:', false
+10-23 17:50:04.189 I/ReactNativeJS(18100): '≡ƒô▒ SMS Error:', 'Authenticate'
+10-23 17:50:04.189 I/ReactNativeJS(18100): ≡ƒô▒ ===== SEND OTP COMPLETE =====
+10-23 17:50:04.189 I/ReactNativeJS(18100): '≡ƒô₧ sendOTP returned:', { error: null,
+10-23 17:50:04.189 I/ReactNativeJS(18100):   otp: '462365',
+10-23 17:50:04.189 I/ReactNativeJS(18100):   smsSent: false,
+10-23 17:50:04.189 I/ReactNativeJS(18100):   smsError: 'Authenticate' }
+10-23 17:50:04.189 I/ReactNativeJS(18100): Γ£à No error in result
+10-23 17:50:04.190 I/ReactNativeJS(18100): '≡ƒô▒ OTP received:', '462365'
+10-23 17:50:04.190 I/ReactNativeJS(18100): '≡ƒô▒ SMS sent status:', false
+10-23 17:50:04.190 I/ReactNativeJS(18100): '≡ƒô▒ SMS error:', 'Authenticate'
+10-23 17:50:04.203 I/ReactNativeJS(18100): '≡ƒÆ¼ Showing alert with message:', 'Your OTP code is: 462365\n\nΓÜá∩╕Å SMS failed: Authenticate\nPlease use the code above.'
+10-23 17:50:04.203 I/ReactNativeJS(18100): ≡ƒº¡ Will navigate to verify-otp after alert
+10-23 17:50:04.203 I/ReactNativeJS(18100): ≡ƒÆ¼ Alert displayed
+10-23 17:50:04.203 I/ReactNativeJS(18100): ≡ƒÜÇ ===== HANDLE SEND OTP END =====
+10-23 17:50:07.308 I/ReactNativeJS(18100): ≡ƒº¡ Alert dismissed, navigating to verify-otp...
+10-23 17:50:07.308 I/ReactNativeJS(18100): '≡ƒº¡ Target params:', { phoneNumber: '+918608374935', name: 'Hhj' }
+10-23 17:50:07.338 I/ReactNativeJS(18100): ≡ƒº¡ Navigation triggered
+10-23 17:50:07.339 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: false,
+10-23 17:50:07.339 I/ReactNativeJS(18100):   loading: false,
+10-23 17:50:07.339 I/ReactNativeJS(18100):   segments: 'auth/verify-otp',
+10-23 17:50:07.339 I/ReactNativeJS(18100):   userEmail: undefined,
+10-23 17:50:07.339 I/ReactNativeJS(18100):   userRole: undefined }
+10-23 17:50:07.339 I/ReactNativeJS(18100): ≡ƒöÉ User on verify-otp screen, skipping navigation
+10-23 17:50:14.467 I/ReactNativeJS(18100): '≡ƒôª Full response data:', '{\n  "success": true,\n  "customerId": "1",\n  "userId": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n  "session": {\n    "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6IngvRXB5YUxCdnJGSXNwTE0iLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3dodWJheXBhYm9qb21keWZxeGNmLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJlOTVhNGYxNC04OTU4LTQ5ZTktOGVkZS1kODFiODJhN2JhMTIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMjI1NjE0LCJpYXQiOjE3NjEyMjIwMTQsImVtYWlsIjoiOTE4NjA4Mzc0OTM1QGExdGF4aS5hcHAiLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmdWxsX25hbWUiOiJSaWNjbyIsInBob25lX251bWJlciI6Iis5MTg2MDgzNzQ5MzUifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvdHAiLCJ0aW1lc3RhbXAiOjE3NjEyMjIwMTR9XSwic2Vzc2lvbl9pZCI6IjQ5NDk4MzNkLTUwNDgtNGNjZC1hZDQxLTJkNDI3YjgyYTkzZCIsImlzX2Fub255bW91cyI6ZmFsc2V9.qbhihl1xR8HPiK7i9pAOywQ_56AdKeq6UrWpyMERAZw",\n    "refresh_token": "lewsbihxglb7",\n    "expires_in": 3600,\n    "expires_at": 1761225614,\n    "token_type": "bearer",\n    "user": {\n      "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n      "aud": "authenticated",\n      "role": "authenticated",\n      "email": "918608374935@a1taxi.app",\n      "email_confirmed_at": "2025-10-10T18:50:59.835507Z",\n      "phone": "",\n      "confirmed_at": "2025-10-10T18:50:59.835507Z",\n      "recovery_sent_at": "2025-10-23T12:20:14.609433Z",\n      "last_sign_in_at": "2025-10-23T12:20:14.806446537Z",\n      "app_metadata": {\n        "provider": "email",\n        "providers": [\n          "email"\n        ]\n      },\n      "user_metadata": {\n        "email_verified": true,\n        "full_name": "Ricco",\n        "phone_number": "+918608374935"\n      },\n      "identities": [\n        {\n          "identity_id": "43785572-7543-40c4-8eef-853beacc688b",\n          "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n          "user_id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n          "identity_data": {\n            "email": "918608374935@a1taxi.app",\n            "email_verified": false,\n            "phone_verified": false,\n            "sub": "e95a4f14-8958-49e9-8ede-d81b82a7ba12"\n          },\n          "provider": "email",\n          "last_sign_in_at": "2025-10-10T18:50:59.818589Z",\n          "created_at": "2025-10-10T18:50:59.818651Z",\n          "updated_at": "2025-10-10T18:50:59.818651Z",\n          "email": "918608374935@a1taxi.app"\n        }\n      ],\n      "created_at": "2025-10-10T18:50:59.778879Z",\n      "updated_at": "2025-10-23T12:20:14.810121Z",\n      "is_anonymous": false\n    }\n  },\n  "user": {\n    "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n    "email": "918608374935@a1taxi.app",\n    "phone": "",\n    "user_metadata": {\n      "email_verified": true,\n      "full_name": "Ricco",\n      "phone_number": "+918608374935"\n    }\n  }\n}'
+10-23 17:50:14.467 I/ReactNativeJS(18100): 'Γ£à OTP verified, user ID (UUID):', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:14.467 I/ReactNativeJS(18100): 'Γ£à Customer ID (integer):', '1'
+10-23 17:50:14.468 I/ReactNativeJS(18100): 'Γ£à Session received:', '{\n  "access_token": "eyJhbGciOiJIUzI1NiIsImtpZCI6IngvRXB5YUxCdnJGSXNwTE0iLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3dodWJheXBhYm9qb21keWZxeGNmLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJlOTVhNGYxNC04OTU4LTQ5ZTktOGVkZS1kODFiODJhN2JhMTIiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMjI1NjE0LCJpYXQiOjE3NjEyMjIwMTQsImVtYWlsIjoiOTE4NjA4Mzc0OTM1QGExdGF4aS5hcHAiLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmdWxsX25hbWUiOiJSaWNjbyIsInBob25lX251bWJlciI6Iis5MTg2MDgzNzQ5MzUifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvdHAiLCJ0aW1lc3RhbXAiOjE3NjEyMjIwMTR9XSwic2Vzc2lvbl9pZCI6IjQ5NDk4MzNkLTUwNDgtNGNjZC1hZDQxLTJkNDI3YjgyYTkzZCIsImlzX2Fub255bW91cyI6ZmFsc2V9.qbhihl1xR8HPiK7i9pAOywQ_56AdKeq6UrWpyMERAZw",\n  "refresh_token": "lewsbihxglb7",\n  "expires_in": 3600,\n  "expires_at": 1761225614,\n  "token_type": "bearer",\n  "user": {\n    "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n    "aud": "authenticated",\n    "role": "authenticated",\n    "email": "918608374935@a1taxi.app",\n    "email_confirmed_at": "2025-10-10T18:50:59.835507Z",\n    "phone": "",\n    "confirmed_at": "2025-10-10T18:50:59.835507Z",\n    "recovery_sent_at": "2025-10-23T12:20:14.609433Z",\n    "last_sign_in_at": "2025-10-23T12:20:14.806446537Z",\n    "app_metadata": {\n      "provider": "email",\n      "providers": [\n        "email"\n      ]\n    },\n    "user_metadata": {\n      "email_verified": true,\n      "full_name": "Ricco",\n      "phone_number": "+918608374935"\n    },\n    "identities": [\n      {\n        "identity_id": "43785572-7543-40c4-8eef-853beacc688b",\n        "id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n        "user_id": "e95a4f14-8958-49e9-8ede-d81b82a7ba12",\n        "identity_data": {\n          "email": "918608374935@a1taxi.app",\n          "email_verified": false,\n          "phone_verified": false,\n          "sub": "e95a4f14-8958-49e9-8ede-d81b82a7ba12"\n        },\n        "provider": "email",\n        "last_sign_in_at": "2025-10-10T18:50:59.818589Z",\n        "created_at": "2025-10-10T18:50:59.818651Z",\n        "updated_at": "2025-10-10T18:50:59.818651Z",\n        "email": "918608374935@a1taxi.app"\n      }\n    ],\n    "created_at": "2025-10-10T18:50:59.778879Z",\n    "updated_at": "2025-10-23T12:20:14.810121Z",\n    "is_anonymous": false\n  }\n}'
+10-23 17:50:14.468 I/ReactNativeJS(18100): ≡ƒöÉ Setting Supabase session...
+10-23 17:50:15.085 I/ReactNativeJS(18100): 'Γ£à Supabase session set successfully:', { userId: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-23 17:50:15.085 I/ReactNativeJS(18100):   email: '918608374935@a1taxi.app',
+10-23 17:50:15.085 I/ReactNativeJS(18100):   expiresAt: '2025-10-23T13:20:14.000Z' }
+10-23 17:50:15.085 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:50:15.085 I/ReactNativeJS(18100):   loading: false,
+10-23 17:50:15.085 I/ReactNativeJS(18100):   segments: 'auth/verify-otp',
+10-23 17:50:15.085 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:50:15.085 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:50:15.085 I/ReactNativeJS(18100): ≡ƒöÉ User on verify-otp screen, skipping navigation
+10-23 17:50:15.106 I/ReactNativeJS(18100): Γ£à AsyncStorage data saved
+10-23 17:50:15.107 I/ReactNativeJS(18100): 'Γ£à Setting authenticated user in context with UUID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:15.107 I/ReactNativeJS(18100): 'Γ£à Setting authenticated user in context:', { id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12',
+10-23 17:50:15.107 I/ReactNativeJS(18100):   email: '918608374935@a1taxi.app',
+10-23 17:50:15.107 I/ReactNativeJS(18100):   full_name: 'Ricco',
+10-23 17:50:15.107 I/ReactNativeJS(18100):   phone_number: '+918608374935',
+10-23 17:50:15.107 I/ReactNativeJS(18100):   role: 'customer',
+10-23 17:50:15.107 I/ReactNativeJS(18100):   customer_id: 'e95a4f14-8958-49e9-8ede-d81b82a7ba12' }
+10-23 17:50:15.124 I/ReactNativeJS(18100): Γ£à Customer data saved, navigating to home...
+10-23 17:50:15.125 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:50:15.125 I/ReactNativeJS(18100):   loading: false,
+10-23 17:50:15.125 I/ReactNativeJS(18100):   segments: 'auth/verify-otp',
+10-23 17:50:15.125 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:50:15.125 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:50:15.125 I/ReactNativeJS(18100): ≡ƒöÉ User on verify-otp screen, skipping navigation
+10-23 17:50:15.244 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 0
+10-23 17:50:15.244 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[]'
+10-23 17:50:15.244 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:50:15.261 I/ReactNativeJS(18100): '≡ƒÄ» [useRideNotifications] useEffect triggered, user ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:15.261 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== FETCHING NOTIFICATIONS =====
+10-23 17:50:15.261 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] User ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:15.261 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Timestamp:', '2025-10-23T12:20:15.261Z'
+10-23 17:50:15.267 I/ReactNativeJS(18100): ≡ƒöö [BANNER_DEBUG] ===== NOTIFICATION BANNER EFFECT =====
+10-23 17:50:15.267 I/ReactNativeJS(18100): '≡ƒöö [BANNER_DEBUG] Banner summary:', { totalNotifications: 0,
+10-23 17:50:15.267 I/ReactNativeJS(18100):   currentlyVisible: false,
+10-23 17:50:15.267 I/ReactNativeJS(18100):   currentNotification: undefined,
+10-23 17:50:15.267 I/ReactNativeJS(18100):   shownNotificationsCount: 0,
+10-23 17:50:15.267 I/ReactNativeJS(18100):   tripCompletedNotifications: 0,
+10-23 17:50:15.267 I/ReactNativeJS(18100):   unreadTripCompleted: 0 }
+10-23 17:50:15.267 I/ReactNativeJS(18100): ≡ƒô▒ [BANNER_DEBUG] ===== BANNER DISPLAY DECISION =====
+10-23 17:50:15.267 I/ReactNativeJS(18100): '≡ƒÄ» [useRideNotifications] useEffect triggered, user ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:15.267 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== FETCHING NOTIFICATIONS =====
+10-23 17:50:15.267 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] User ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:15.267 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Timestamp:', '2025-10-23T12:20:15.267Z'
+10-23 17:50:15.268 W/ReactNativeJS(18100): ≡ƒÄ» [TRIP_NOTIFICATION] ===== useEffect TRIGGERED - CHECKING FOR COMPLETION NOTIFICATIONS =====
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications array length:', 0
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Total notifications received:', 0
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notification types:', '[]'
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] ride_completed count:', 0
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Unread ride_completed:', 0
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Already shown count:', 0
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Currently visible:', false
+10-23 17:50:15.268 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Filtered completion notifications:', 0
+10-23 17:50:15.268 I/ReactNativeJS(18100): '≡ƒÄ» [useRideNotifications] useEffect triggered, user ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:15.268 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== FETCHING NOTIFICATIONS =====
+10-23 17:50:15.268 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] User ID:', 'e95a4f14-8958-49e9-8ede-d81b82a7ba12'
+10-23 17:50:15.268 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Timestamp:', '2025-10-23T12:20:15.268Z'
+10-23 17:50:15.269 I/ReactNativeJS(18100): ≡ƒô▒ Requesting location permission on app start for all platforms...
+10-23 17:50:15.269 I/ReactNativeJS(18100): '≡ƒô▒ Current platform:', 'android'
+10-23 17:50:15.269 I/ReactNativeJS(18100): '≡ƒöì Requesting location permission for platform:', 'android'
+10-23 17:50:15.269 I/ReactNativeJS(18100): ≡ƒô▒ Requesting Android location permissions...
+10-23 17:50:15.270 I/ReactNativeJS(18100): ≡ƒôè Loading all vehicle configs from fare_matrix table for booking_type=regular
+10-23 17:50:15.272 I/ReactNativeJS(18100): ≡ƒù║∩╕Å Using cached zones data
+10-23 17:50:15.272 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:50:15.272 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 0,
+10-23 17:50:15.272 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:15.272 I/ReactNativeJS(18100):   driversPassedToMap: 0,
+10-23 17:50:15.272 I/ReactNativeJS(18100):   drivers: [] }
+10-23 17:50:15.272 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] No drivers to pass to map (availableDrivers is empty)
+10-23 17:50:15.277 I/ReactNativeJS(18100): '≡ƒöì AuthNavigator - checking auth state:', { user: true,
+10-23 17:50:15.277 I/ReactNativeJS(18100):   loading: false,
+10-23 17:50:15.277 I/ReactNativeJS(18100):   segments: '(tabs)',
+10-23 17:50:15.277 I/ReactNativeJS(18100):   userEmail: '918608374935@a1taxi.app',
+10-23 17:50:15.277 I/ReactNativeJS(18100):   userRole: 'customer' }
+10-23 17:50:15.277 I/ReactNativeJS(18100): Γ£à User authenticated and on correct screen
+10-23 17:50:15.278 I/ReactNativeJS(18100): 'Γ£à Loaded active zones:', 2
+10-23 17:50:15.280 E/ReactNativeJS(18100): 'Error initializing notifications:', { [Error: Make sure to complete the guide at https://docs.expo.dev/push-notifications/fcm-credentials/ : Default FirebaseApp is not initialized in this process com.a1taxi.a1taxicustomer. Make sure to call FirebaseApp.initializeApp(Context) first.] code: 'E_REGISTRATION_FAILED' }
+10-23 17:50:15.286 I/ReactNativeJS(18100): '≡ƒô▒ Fine location permission result:', 'granted'
+10-23 17:50:15.286 I/ReactNativeJS(18100): Γ£à Android fine location permission granted
+10-23 17:50:15.286 I/ReactNativeJS(18100): Γ£à Location permission granted on mount
+10-23 17:50:15.286 I/ReactNativeJS(18100): ≡ƒôì [HOME] Starting location fetch...
+10-23 17:50:15.286 I/ReactNativeJS(18100): ≡ƒöì Enhanced Location Service: Getting current location with address...
+10-23 17:50:15.286 I/ReactNativeJS(18100): '≡ƒöì Platform:', 'android'
+10-23 17:50:15.286 I/ReactNativeJS(18100): ≡ƒôì Enhanced Location Service: Starting location detection...
+10-23 17:50:15.286 I/ReactNativeJS(18100): '≡ƒîì Platform:', 'android'
+10-23 17:50:15.287 I/ReactNativeJS(18100): Γ£à Enhanced Location Service: Permission granted, attempting detection...
+10-23 17:50:15.287 I/ReactNativeJS(18100): ≡ƒÄ» Enhanced Location Service: Attempting high accuracy GPS...
+10-23 17:50:15.287 I/ReactNativeJS(18100): ≡ƒô▒ Using Expo Location for high accuracy...
+10-23 17:50:15.326 I/ReactNativeJS(18100): 'Γ£à Enhanced Location Service: High accuracy location obtained:', { lat: 12.7486283,
+10-23 17:50:15.326 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:50:15.326 I/ReactNativeJS(18100):   accuracy: '2.200000047683716m' }
+10-23 17:50:15.326 I/ReactNativeJS(18100): '≡ƒôì Enhanced Location Service: Got location:', { latitude: 12.7486283,
+10-23 17:50:15.326 I/ReactNativeJS(18100):   longitude: 77.8299733,
+10-23 17:50:15.326 I/ReactNativeJS(18100):   accuracy: 2.200000047683716 }
+10-23 17:50:15.326 I/ReactNativeJS(18100): ≡ƒù║∩╕Å Enhanced Location Service: Starting reverse geocoding...
+10-23 17:50:15.326 I/ReactNativeJS(18100): '≡ƒù║∩╕Å Reverse geocoding coordinates:', { latitude: 12.7486283, longitude: 77.8299733 }
+10-23 17:50:15.326 I/ReactNativeJS(18100): '≡ƒÅá Reverse geocoding:', { lat: 12.7486283, lng: 77.8299733 }
+10-23 17:50:15.327 I/ReactNativeJS(18100): '≡ƒîÉ Making proxy request to:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/places-proxy/geocode?latlng=12.7486283%2C77.8299733'
+10-23 17:50:15.528 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== DATABASE QUERY RESULT =====
+10-23 17:50:15.531 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Query result:', { hasError: false,
+10-23 17:50:15.531 I/ReactNativeJS(18100):   errorMessage: undefined,
+10-23 17:50:15.531 I/ReactNativeJS(18100):   errorCode: undefined,
+10-23 17:50:15.531 I/ReactNativeJS(18100):   errorDetails: undefined,
+10-23 17:50:15.531 I/ReactNativeJS(18100):   dataCount: 50,
+10-23 17:50:15.531 I/ReactNativeJS(18100):   tripCompletedCount: 0,
+10-23 17:50:15.531 I/ReactNativeJS(18100):   unreadTripCompletedCount: 0,
+10-23 17:50:15.531 I/ReactNativeJS(18100):   allTypes:
+10-23 17:50:15.531 I/ReactNativeJS(18100):    [ 'ride_completed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):      'ride_status_changed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):      'booking_completed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):      'ride_cancelled' ],
+10-23 17:50:15.531 I/ReactNativeJS(18100):   recentNotifications:
+10-23 17:50:15.531 I/ReactNativeJS(18100):    [ { id: 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        type: 'ride_completed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        title: 'Trip Completed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        age_seconds: 4529 },
+10-23 17:50:15.531 I/ReactNativeJS(18100):      { id: '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        age_seconds: 4529 },
+10-23 17:50:15.531 I/ReactNativeJS(18100):      { id: '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:43:16.126619+00:00',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        age_seconds: 5819 },
+10-23 17:50:15.531 I/ReactNativeJS(18100):      { id: 'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:42:44.627741+00:00',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        age_seconds: 5851 },
+10-23 17:50:15.531 I/ReactNativeJS(18100):      { id: '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:40:18.79365+00:00',
+10-23 17:50:15.531 I/ReactNativeJS(18100):        age_seconds: 5997 } ] }
+10-23 17:50:15.531 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== SETTING NOTIFICATIONS IN STATE =====
+10-23 17:50:15.533 I/ReactNativeJS(18100): 'Γ£à [NOTIFICATIONS] Notifications to set:', { total: 50,
+10-23 17:50:15.533 I/ReactNativeJS(18100):   tripCompleted: 0,
+10-23 17:50:15.533 I/ReactNativeJS(18100):   unreadTripCompleted: 0,
+10-23 17:50:15.533 I/ReactNativeJS(18100):   allNotificationIds:
+10-23 17:50:15.533 I/ReactNativeJS(18100):    [ 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'd29bae80-10e7-4d05-99d5-8dc43f61d814',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'd7d8686d-95ee-4ce0-97da-ed89564b014b',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '755a6269-1daf-4327-ab71-f65e3700bf1a',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '500d07b9-07ca-40df-9d4a-3efcf677a117',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'df4552cd-e9bc-4e40-a8a0-1270b37737db',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'acb2b80a-267e-4b98-acd0-397461aee537',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '60dbc0b5-662a-48af-b01a-55212f6ac6ea',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '0f408121-1188-4550-9f50-919dcc8a4ed1',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '23052592-9d19-442c-b40f-12b90c3da756',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'c9ff3014-54e3-4b30-9f22-eceee292796b',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '879d4bbd-20ad-4253-a1c6-ae7535e7c211',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '286129cf-19e6-41fd-b52f-d17334d0d0f9',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'b55ac709-48d5-4db2-8246-e23f9bd317ec',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '92abe95d-e47d-48fa-8159-b119f5802710',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '73ad244d-a00b-42a9-83e9-97932b9db2d2',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '971613ac-8d86-4ab6-8fe5-49c528ca56ee',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '49f0f7f9-03d6-4211-b47d-0e7738f190fa',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '6a87c30d-c48d-458c-9b94-32dd5e75ac05',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'aee0b7a7-9cb2-4f6b-b53f-fa47642319d0',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '6c1d61c3-6cbd-4310-adfe-6d36bc611939',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '9d9ab6e7-0357-4305-9ba8-e91c0bb29897',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'd952183c-69a7-47dc-a848-d11bc2fff300',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '5a385bc8-147d-4ac2-834c-305ed9db9a05',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'b9365ade-a3a4-4036-b42f-606b88d5fac9',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'd850bf94-823f-497a-b292-075abf5b5a59',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '5d8275c0-6692-44b3-a4ff-4eabba59873e',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '5cfa0487-5d05-42e8-8e92-11a287b3ded0',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '679ed79c-eb21-4609-a2b9-a1d304d4d4ad',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '4196d3c8-e6dd-4a11-8d40-6771aa06de07',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '8d21f749-083a-46d1-9f7e-f7dc5c36ef05',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '0a371105-3196-4055-97ad-b230dba42df5',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '9f010555-c90c-447e-83ae-919809ba8350',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '84dd0357-20ec-4317-b7bd-7b31515219fb',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'caaa4644-cefa-47e6-8c92-60415a52ef4b',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'c6e2da1c-f900-47c8-b289-a88c28451f89',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'c1a54517-80eb-451d-8fbb-26492459f1c4',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      'd3a69945-ed73-4db9-84db-77b1013c8fe2',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '8de5daf3-1c41-4bc6-8e2c-c3873b443cbb',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '93b3c278-21c8-4094-a13b-ae25cea5afa8',
+10-23 17:50:15.533 I/ReactNativeJS(18100):      '057c85ff-f0f5-4a15-9e89-de6dc65465a2' ],
+10-23 17:50:15.533 I/ReactNativeJS(18100):   tripCompletedNotificationIds: [],
+10-23 17:50:15.533 I/ReactNativeJS(18100):   unreadTripCompletedNotificationIds: [] }
+10-23 17:50:15.533 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:50:15.535 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:50:15.535 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:50:15.536 W/ReactNativeJS(18100): ≡ƒÄ» [TRIP_NOTIFICATION] ===== useEffect TRIGGERED - CHECKING FOR COMPLETION NOTIFICATIONS =====
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications array length:', 50
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Total notifications received:', 50
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notification types:', '["ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","booking_completed","booking_completed","booking_completed","booking_completed","booking_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_cancelled","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_status_changed","ride_completed","ride_status_changed","ride_status_changed","ride_status_changed"]'
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] ride_completed count:', 7
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Unread ride_completed:', 0
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Already shown count:', 0
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Currently visible:', false
+10-23 17:50:15.536 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Filtered completion notifications:', 0
+10-23 17:50:15.537 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:50:15.538 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:50:15.538 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:50:15.538 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== CHECKING FOR IMMEDIATE TRIP COMPLETION =====
+10-23 17:50:15.538 I/ReactNativeJS(18100): Γ¥î [NOTIFICATIONS] No immediate trip completion notifications found
+10-23 17:50:15.539 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Available notification types:', [ 'ride_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_cancelled',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:15.539 I/ReactNativeJS(18100):   'ride_status_changed' ]
+10-23 17:50:15.539 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Trip completed notifications (all statuses):', []
+10-23 17:50:15.540 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Component render, notifications count:', 50
+10-23 17:50:15.541 W/ReactNativeJS(18100): '≡ƒÄ» [TRIP_NOTIFICATION] Notifications:', '[{"id":"c0930979-b31c-4f63-b636-2d97a731c792","type":"ride_completed","status":"read"},{"id":"2012b652-4fe3-4c41-9df3-bc9d3186a24a","type":"ride_status_changed","status":"read"},{"id":"61a74f93-5643-46ef-8ebb-56d7ed81f675","type":"ride_status_changed","status":"read"},{"id":"e75df879-8cb8-4dee-8100-8dd61f99b26e","type":"ride_status_changed","status":"read"},{"id":"55a746c6-9b8c-44e6-b80c-2beac586c467","type":"ride_status_changed","status":"read"},{"id":"7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808","type":"ride_status_changed","status":"read"},{"id":"8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e","type":"ride_status_changed","status":"read"},{"id":"d29bae80-10e7-4d05-99d5-8dc43f61d814","type":"ride_status_changed","status":"read"},{"id":"d7d8686d-95ee-4ce0-97da-ed89564b014b","type":"ride_status_changed","status":"read"},{"id":"755a6269-1daf-4327-ab71-f65e3700bf1a","type":"ride_status_changed","status":"read"},{"id":"500d07b9-07ca-40df-9d4a-3efcf677a117","type":"ride_status_changed","status":"read"},{"id":"df4552cd-e9bc-4e40-a8a0-1270b37737db","type":"booking_completed","status":"read"},{"id":"acb2b80a-267e-4b98-acd0-397461aee537","type":"booking_completed","status":"read"},{"id":"60dbc0b5-662a-48af-b01a-55212f6ac6ea","type":"booking_completed","status":"read"},{"id":"0f408121-1188-4550-9f50-919dcc8a4ed1","type":"booking_completed","status":"read"},{"id":"23052592-9d19-442c-b40f-12b90c3da756","type":"booking_completed","status":"read"},{"id":"c9ff3014-54e3-4b30-9f22-eceee292796b","type":"ride_status_changed","status":"read"},{"id":"879d4bbd-20ad-4253-a1c6-ae7535e7c211","type":"ride_status_changed","status":"read"},{"id":"286129cf-19e6-41fd-b52f-d17334d0d0f9","type":"ride_status_changed","status":"read"},{"id":"b55ac709-48d5-4db2-8246-e23f9bd317ec","type":"ride_completed","status":"read"},{"id":"92abe95d-e47d-48fa-8159-b119f5802710","type":"ride_status_changed","status":"read"},{"id":"73ad244d-a00b-42a9-83e9-97932b9db2d2","type":"ride_status_changed","status":"read"},{"id":"971613ac-8d86-4ab6-8fe5-49c528ca56ee","type":"ride_status_changed","status":"read"},{"id":"49f0f7f9-03d6-4211-b47d-0e7738f190fa","type":"ride_completed","status":"read"},{"id":"6a87c30d-c48d-458c-9b94-32dd5e75ac05","type":"ride_status_changed","status":"read"},{"id":"aee0b7a7-9cb2-4f6b-b53f-fa47642319d0","type":"ride_status_changed","status":"read"},{"id":"6c1d61c3-6cbd-4310-adfe-6d36bc611939","type":"ride_status_changed","status":"read"},{"id":"9d9ab6e7-0357-4305-9ba8-e91c0bb29897","type":"ride_status_changed","status":"read"},{"id":"d952183c-69a7-47dc-a848-d11bc2fff300","type":"ride_cancelled","status":"read"},{"id":"a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b","type":"ride_status_changed","status":"read"},{"id":"5a385bc8-147d-4ac2-834c-305ed9db9a05","type":"ride_completed","status":"read"},{"id":"b9365ade-a3a4-4036-b42f-606b88d5fac9","type":"ride_status_changed","status":"read"},{"id":"b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953","type":"ride_status_changed","status":"read"},{"id":"d850bf94-823f-497a-b292-075abf5b5a59","type":"ride_status_changed","status":"read"},{"id":"5d8275c0-6692-44b3-a4ff-4eabba59873e","type":"ride_status_changed","status":"read"},{"id":"5cfa0487-5d05-42e8-8e92-11a287b3ded0","type":"ride_completed","status":"read"},{"id":"679ed79c-eb21-4609-a2b9-a1d304d4d4ad","type":"ride_status_changed","status":"read"},{"id":"53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe","type":"ride_status_changed","status":"read"},{"id":"4196d3c8-e6dd-4a11-8d40-6771aa06de07","type":"ride_status_changed","status":"read"},{"id":"8d21f749-083a-46d1-9f7e-f7dc5c36ef05","type":"ride_status_changed","status":"read"},{"id":"0a371105-3196-4055-97ad-b230dba42df5","type":"ride_completed","status":"read"},{"id":"9f010555-c90c-447e-83ae-919809ba8350","type":"ride_status_changed","status":"read"},{"id":"84dd0357-20ec-4317-b7bd-7b31515219fb","type":"ride_status_changed","status":"read"},{"id":"caaa4644-cefa-47e6-8c92-60415a52ef4b","type":"ride_status_changed","status":"read"},{"id":"c6e2da1c-f900-47c8-b289-a88c28451f89","ty
+10-23 17:50:15.541 I/ReactNativeJS(18100): '≡ƒöì [TRIP_NOTIFICATION] Component render - visible:', false, 'notification:', false
+10-23 17:50:15.914 I/ReactNativeJS(18100): ≡ƒöö [BANNER_DEBUG] ===== NOTIFICATION BANNER EFFECT =====
+10-23 17:50:15.915 I/ReactNativeJS(18100): '≡ƒöö [BANNER_DEBUG] Banner summary:', { totalNotifications: 50,
+10-23 17:50:15.915 I/ReactNativeJS(18100):   currentlyVisible: false,
+10-23 17:50:15.915 I/ReactNativeJS(18100):   currentNotification: undefined,
+10-23 17:50:15.915 I/ReactNativeJS(18100):   shownNotificationsCount: 0,
+10-23 17:50:15.915 I/ReactNativeJS(18100):   tripCompletedNotifications: 0,
+10-23 17:50:15.915 I/ReactNativeJS(18100):   unreadTripCompleted: 0 }
+10-23 17:50:15.915 I/ReactNativeJS(18100): ≡ƒô▒ [BANNER_DEBUG] ===== BANNER DISPLAY DECISION =====
+10-23 17:50:15.994 I/ReactNativeJS(18100): 'Γ£à Proxy response received:', 'OK'
+10-23 17:50:15.995 I/ReactNativeJS(18100): 'Γ£à Geocoded address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:15.995 I/ReactNativeJS(18100): 'Γ£à Geocoded address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:15.995 I/ReactNativeJS(18100): '≡ƒÅá Enhanced Location Service: Got address:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:15.995 I/ReactNativeJS(18100): 'Γ£à [HOME] Location obtained:', { lat: 12.7486283,
+10-23 17:50:15.995 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:50:15.995 I/ReactNativeJS(18100):   address: 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India' }
+10-23 17:50:15.999 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== STARTING IMMEDIATE DRIVER DISPLAY =====
+10-23 17:50:15.999 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Current location available, showing drivers immediately
+10-23 17:50:15.999 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Location details:', { latitude: 12.7486283,
+10-23 17:50:15.999 I/ReactNativeJS(18100):   longitude: 77.8299733,
+10-23 17:50:15.999 I/ReactNativeJS(18100):   accuracy: 2.200000047683716 }
+10-23 17:50:15.999 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Showing ALL vehicle types (no filter applied)
+10-23 17:50:15.999 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Should show drivers on map:', true
+10-23 17:50:15.999 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:50:15.999 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:50:15.999 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:50:16.000 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:50:16.000 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:50:16.000 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.000 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:50:16.000 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:50:16.000 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.000 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:16.000 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:50:16.000 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.000Z' }
+10-23 17:50:16.001 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486283&lng=77.8299733&radius=10'
+10-23 17:50:16.005 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== SHOWING DRIVERS AGAIN =====
+10-23 17:50:16.005 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Not both locations selected, showing drivers on map
+10-23 17:50:16.005 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Pickup coords:', true, 'Destination coords:', false
+10-23 17:50:16.005 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:50:16.005 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:50:16.005 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:50:16.005 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:50:16.006 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:50:16.006 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:50:16.006 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.006 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:50:16.006 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:50:16.006 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.006 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:16.006 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:50:16.006 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.006Z' }
+10-23 17:50:16.006 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486283&lng=77.8299733&radius=10'
+10-23 17:50:16.008 I/ReactNativeJS(18100): Γ£à [HOME] Location state updated successfully
+10-23 17:50:16.009 I/ReactNativeJS(18100): ≡ƒôì [HOME] Location loading state set to false
+10-23 17:50:16.285 I/ReactNativeJS(18100): ≡ƒôì [GPS] Starting live GPS tracking (Uber-style)...
+10-23 17:50:16.294 I/ReactNativeJS(18100): Γ£à [GPS] Live GPS tracking started successfully
+10-23 17:50:16.306 I/ReactNativeJS(18100): '≡ƒôì [GPS] Live location update:', { lat: '12.748628', lng: '77.829973', accuracy: '2.20m' }
+10-23 17:50:16.309 I/ReactNativeJS(18100): ≡ƒÜù [HOME] ===== STARTING IMMEDIATE DRIVER DISPLAY =====
+10-23 17:50:16.310 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Current location available, showing drivers immediately
+10-23 17:50:16.310 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Location details:', { latitude: 12.7486283,
+10-23 17:50:16.310 I/ReactNativeJS(18100):   longitude: 77.8299733,
+10-23 17:50:16.310 I/ReactNativeJS(18100):   accuracy: 2.200000047683716 }
+10-23 17:50:16.310 I/ReactNativeJS(18100): ≡ƒÜù [HOME] Showing ALL vehicle types (no filter applied)
+10-23 17:50:16.310 I/ReactNativeJS(18100): '≡ƒÜù [HOME] Should show drivers on map:', true
+10-23 17:50:16.311 I/ReactNativeJS(18100): '≡ƒöä [HOME] Starting driver location polling with:', { currentLocation: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:50:16.311 I/ReactNativeJS(18100):   vehicleType: 'sedan',
+10-23 17:50:16.311 I/ReactNativeJS(18100):   radius: 10 }
+10-23 17:50:16.311 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:50:16.311 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:50:16.311 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Starting driver location polling every', 10, 'seconds'
+10-23 17:50:16.312 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.312 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:50:16.312 I/ReactNativeJS(18100):   interval: '10000ms' }
+10-23 17:50:16.312 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.312 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:16.312 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:50:16.312 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.312Z' }
+10-23 17:50:16.313 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486283&lng=77.8299733&radius=10'
+10-23 17:50:16.390 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== DATABASE QUERY RESULT =====
+10-23 17:50:16.392 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Query result:', { hasError: false,
+10-23 17:50:16.392 I/ReactNativeJS(18100):   errorMessage: undefined,
+10-23 17:50:16.392 I/ReactNativeJS(18100):   errorCode: undefined,
+10-23 17:50:16.392 I/ReactNativeJS(18100):   errorDetails: undefined,
+10-23 17:50:16.392 I/ReactNativeJS(18100):   dataCount: 50,
+10-23 17:50:16.392 I/ReactNativeJS(18100):   tripCompletedCount: 0,
+10-23 17:50:16.392 I/ReactNativeJS(18100):   unreadTripCompletedCount: 0,
+10-23 17:50:16.392 I/ReactNativeJS(18100):   allTypes:
+10-23 17:50:16.392 I/ReactNativeJS(18100):    [ 'ride_completed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):      'ride_status_changed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):      'booking_completed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):      'ride_cancelled' ],
+10-23 17:50:16.392 I/ReactNativeJS(18100):   recentNotifications:
+10-23 17:50:16.392 I/ReactNativeJS(18100):    [ { id: 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        type: 'ride_completed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        title: 'Trip Completed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        age_seconds: 4529 },
+10-23 17:50:16.392 I/ReactNativeJS(18100):      { id: '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        age_seconds: 4529 },
+10-23 17:50:16.392 I/ReactNativeJS(18100):      { id: '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:43:16.126619+00:00',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        age_seconds: 5820 },
+10-23 17:50:16.392 I/ReactNativeJS(18100):      { id: 'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:42:44.627741+00:00',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        age_seconds: 5852 },
+10-23 17:50:16.392 I/ReactNativeJS(18100):      { id: '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:40:18.79365+00:00',
+10-23 17:50:16.392 I/ReactNativeJS(18100):        age_seconds: 5998 } ] }
+10-23 17:50:16.392 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== SETTING NOTIFICATIONS IN STATE =====
+10-23 17:50:16.395 I/ReactNativeJS(18100): 'Γ£à [NOTIFICATIONS] Notifications to set:', { total: 50,
+10-23 17:50:16.395 I/ReactNativeJS(18100):   tripCompleted: 0,
+10-23 17:50:16.395 I/ReactNativeJS(18100):   unreadTripCompleted: 0,
+10-23 17:50:16.395 I/ReactNativeJS(18100):   allNotificationIds:
+10-23 17:50:16.395 I/ReactNativeJS(18100):    [ 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'd29bae80-10e7-4d05-99d5-8dc43f61d814',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'd7d8686d-95ee-4ce0-97da-ed89564b014b',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '755a6269-1daf-4327-ab71-f65e3700bf1a',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '500d07b9-07ca-40df-9d4a-3efcf677a117',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'df4552cd-e9bc-4e40-a8a0-1270b37737db',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'acb2b80a-267e-4b98-acd0-397461aee537',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '60dbc0b5-662a-48af-b01a-55212f6ac6ea',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '0f408121-1188-4550-9f50-919dcc8a4ed1',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '23052592-9d19-442c-b40f-12b90c3da756',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'c9ff3014-54e3-4b30-9f22-eceee292796b',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '879d4bbd-20ad-4253-a1c6-ae7535e7c211',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '286129cf-19e6-41fd-b52f-d17334d0d0f9',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'b55ac709-48d5-4db2-8246-e23f9bd317ec',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '92abe95d-e47d-48fa-8159-b119f5802710',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '73ad244d-a00b-42a9-83e9-97932b9db2d2',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '971613ac-8d86-4ab6-8fe5-49c528ca56ee',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '49f0f7f9-03d6-4211-b47d-0e7738f190fa',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '6a87c30d-c48d-458c-9b94-32dd5e75ac05',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'aee0b7a7-9cb2-4f6b-b53f-fa47642319d0',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '6c1d61c3-6cbd-4310-adfe-6d36bc611939',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '9d9ab6e7-0357-4305-9ba8-e91c0bb29897',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'd952183c-69a7-47dc-a848-d11bc2fff300',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '5a385bc8-147d-4ac2-834c-305ed9db9a05',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'b9365ade-a3a4-4036-b42f-606b88d5fac9',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'd850bf94-823f-497a-b292-075abf5b5a59',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '5d8275c0-6692-44b3-a4ff-4eabba59873e',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '5cfa0487-5d05-42e8-8e92-11a287b3ded0',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '679ed79c-eb21-4609-a2b9-a1d304d4d4ad',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '4196d3c8-e6dd-4a11-8d40-6771aa06de07',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '8d21f749-083a-46d1-9f7e-f7dc5c36ef05',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '0a371105-3196-4055-97ad-b230dba42df5',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '9f010555-c90c-447e-83ae-919809ba8350',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '84dd0357-20ec-4317-b7bd-7b31515219fb',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'caaa4644-cefa-47e6-8c92-60415a52ef4b',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'c6e2da1c-f900-47c8-b289-a88c28451f89',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'c1a54517-80eb-451d-8fbb-26492459f1c4',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      'd3a69945-ed73-4db9-84db-77b1013c8fe2',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '8de5daf3-1c41-4bc6-8e2c-c3873b443cbb',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '93b3c278-21c8-4094-a13b-ae25cea5afa8',
+10-23 17:50:16.395 I/ReactNativeJS(18100):      '057c85ff-f0f5-4a15-9e89-de6dc65465a2' ],
+10-23 17:50:16.395 I/ReactNativeJS(18100):   tripCompletedNotificationIds: [],
+10-23 17:50:16.395 I/ReactNativeJS(18100):   unreadTripCompletedNotificationIds: [] }
+10-23 17:50:16.397 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== CHECKING FOR IMMEDIATE TRIP COMPLETION =====
+10-23 17:50:16.397 I/ReactNativeJS(18100): Γ¥î [NOTIFICATIONS] No immediate trip completion notifications found
+10-23 17:50:16.399 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Available notification types:', [ 'ride_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_cancelled',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.399 I/ReactNativeJS(18100):   'ride_status_changed' ]
+10-23 17:50:16.399 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Trip completed notifications (all statuses):', []
+10-23 17:50:16.400 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:50:16.400 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:50:16.400 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.400 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:16.400 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:50:16.400 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:50:16.404 I/ReactNativeJS(18100): 'Γ£à Loaded', 6, 'fare configs from fare_matrix table:', [ { vehicle_type: 'hatchback', base_fare: 145, per_km_rate: 25 },
+10-23 17:50:16.404 I/ReactNativeJS(18100):   { vehicle_type: 'hatchback_ac', base_fare: 167, per_km_rate: 27 },
+10-23 17:50:16.404 I/ReactNativeJS(18100):   { vehicle_type: 'sedan', base_fare: 145, per_km_rate: 25 },
+10-23 17:50:16.404 I/ReactNativeJS(18100):   { vehicle_type: 'sedan_ac', base_fare: 160, per_km_rate: 25 },
+10-23 17:50:16.404 I/ReactNativeJS(18100):   { vehicle_type: 'suv', base_fare: 400, per_km_rate: 30 },
+10-23 17:50:16.404 I/ReactNativeJS(18100):   { vehicle_type: 'suv_ac', base_fare: 1500, per_km_rate: 35 } ]
+10-23 17:50:16.406 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:16.406 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:16.406 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:16.406 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:16.406 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:16.406 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:50:16.406 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:16.406 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:16.406 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:16.406 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:16.406 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.406 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.406Z' }
+10-23 17:50:16.406 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:16.406 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:16.406 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:16.406 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:16.406 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:16.406 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:16.406 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:16.406 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:16.406 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:16.421 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:50:16.421 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:50:16.421 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.421 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:16.421 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:50:16.421 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:50:16.424 I/ReactNativeJS(18100): ≡ƒöì [NOTIFICATIONS] ===== DATABASE QUERY RESULT =====
+10-23 17:50:16.425 I/ReactNativeJS(18100): '≡ƒöì [NOTIFICATIONS] Query result:', { hasError: false,
+10-23 17:50:16.425 I/ReactNativeJS(18100):   errorMessage: undefined,
+10-23 17:50:16.425 I/ReactNativeJS(18100):   errorCode: undefined,
+10-23 17:50:16.425 I/ReactNativeJS(18100):   errorDetails: undefined,
+10-23 17:50:16.425 I/ReactNativeJS(18100):   dataCount: 50,
+10-23 17:50:16.425 I/ReactNativeJS(18100):   tripCompletedCount: 0,
+10-23 17:50:16.425 I/ReactNativeJS(18100):   unreadTripCompletedCount: 0,
+10-23 17:50:16.425 I/ReactNativeJS(18100):   allTypes:
+10-23 17:50:16.425 I/ReactNativeJS(18100):    [ 'ride_completed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):      'ride_status_changed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):      'booking_completed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):      'ride_cancelled' ],
+10-23 17:50:16.425 I/ReactNativeJS(18100):   recentNotifications:
+10-23 17:50:16.425 I/ReactNativeJS(18100):    [ { id: 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        type: 'ride_completed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        title: 'Trip Completed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        age_seconds: 4529 },
+10-23 17:50:16.425 I/ReactNativeJS(18100):      { id: '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        created_at: '2025-10-23T11:04:46.92906+00:00',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        age_seconds: 4529 },
+10-23 17:50:16.425 I/ReactNativeJS(18100):      { id: '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:43:16.126619+00:00',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        age_seconds: 5820 },
+10-23 17:50:16.425 I/ReactNativeJS(18100):      { id: 'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:42:44.627741+00:00',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        age_seconds: 5852 },
+10-23 17:50:16.425 I/ReactNativeJS(18100):      { id: '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        type: 'ride_status_changed',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        status: 'read',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        title: 'Ride Status Updated',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        created_at: '2025-10-23T10:40:18.79365+00:00',
+10-23 17:50:16.425 I/ReactNativeJS(18100):        age_seconds: 5998 } ] }
+10-23 17:50:16.425 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== SETTING NOTIFICATIONS IN STATE =====
+10-23 17:50:16.426 I/ReactNativeJS(18100): 'Γ£à [NOTIFICATIONS] Notifications to set:', { total: 50,
+10-23 17:50:16.426 I/ReactNativeJS(18100):   tripCompleted: 0,
+10-23 17:50:16.426 I/ReactNativeJS(18100):   unreadTripCompleted: 0,
+10-23 17:50:16.426 I/ReactNativeJS(18100):   allNotificationIds:
+10-23 17:50:16.426 I/ReactNativeJS(18100):    [ 'c0930979-b31c-4f63-b636-2d97a731c792',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '2012b652-4fe3-4c41-9df3-bc9d3186a24a',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '61a74f93-5643-46ef-8ebb-56d7ed81f675',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'e75df879-8cb8-4dee-8100-8dd61f99b26e',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '55a746c6-9b8c-44e6-b80c-2beac586c467',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '7c3cc3c7-e9b6-4cf8-91bb-1bb827ff7808',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '8012a1d6-41e9-4ff2-a75b-8fee9a93ca8e',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'd29bae80-10e7-4d05-99d5-8dc43f61d814',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'd7d8686d-95ee-4ce0-97da-ed89564b014b',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '755a6269-1daf-4327-ab71-f65e3700bf1a',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '500d07b9-07ca-40df-9d4a-3efcf677a117',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'df4552cd-e9bc-4e40-a8a0-1270b37737db',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'acb2b80a-267e-4b98-acd0-397461aee537',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '60dbc0b5-662a-48af-b01a-55212f6ac6ea',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '0f408121-1188-4550-9f50-919dcc8a4ed1',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '23052592-9d19-442c-b40f-12b90c3da756',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'c9ff3014-54e3-4b30-9f22-eceee292796b',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '879d4bbd-20ad-4253-a1c6-ae7535e7c211',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '286129cf-19e6-41fd-b52f-d17334d0d0f9',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'b55ac709-48d5-4db2-8246-e23f9bd317ec',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '92abe95d-e47d-48fa-8159-b119f5802710',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '73ad244d-a00b-42a9-83e9-97932b9db2d2',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '971613ac-8d86-4ab6-8fe5-49c528ca56ee',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '49f0f7f9-03d6-4211-b47d-0e7738f190fa',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '6a87c30d-c48d-458c-9b94-32dd5e75ac05',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'aee0b7a7-9cb2-4f6b-b53f-fa47642319d0',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '6c1d61c3-6cbd-4310-adfe-6d36bc611939',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '9d9ab6e7-0357-4305-9ba8-e91c0bb29897',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'd952183c-69a7-47dc-a848-d11bc2fff300',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'a01d13a8-c95b-4bf1-b0e1-8b2a8e9aaa6b',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '5a385bc8-147d-4ac2-834c-305ed9db9a05',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'b9365ade-a3a4-4036-b42f-606b88d5fac9',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'b6a2c6b6-bdb4-40ce-a092-25f6dd4ba953',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'd850bf94-823f-497a-b292-075abf5b5a59',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '5d8275c0-6692-44b3-a4ff-4eabba59873e',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '5cfa0487-5d05-42e8-8e92-11a287b3ded0',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '679ed79c-eb21-4609-a2b9-a1d304d4d4ad',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '53bb9116-5f1d-445c-94e0-f2e3d9fa3ffe',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '4196d3c8-e6dd-4a11-8d40-6771aa06de07',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '8d21f749-083a-46d1-9f7e-f7dc5c36ef05',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '0a371105-3196-4055-97ad-b230dba42df5',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '9f010555-c90c-447e-83ae-919809ba8350',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '84dd0357-20ec-4317-b7bd-7b31515219fb',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'caaa4644-cefa-47e6-8c92-60415a52ef4b',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'c6e2da1c-f900-47c8-b289-a88c28451f89',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'c1a54517-80eb-451d-8fbb-26492459f1c4',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      'd3a69945-ed73-4db9-84db-77b1013c8fe2',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '8de5daf3-1c41-4bc6-8e2c-c3873b443cbb',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '93b3c278-21c8-4094-a13b-ae25cea5afa8',
+10-23 17:50:16.426 I/ReactNativeJS(18100):      '057c85ff-f0f5-4a15-9e89-de6dc65465a2' ],
+10-23 17:50:16.426 I/ReactNativeJS(18100):   tripCompletedNotificationIds: [],
+10-23 17:50:16.426 I/ReactNativeJS(18100):   unreadTripCompletedNotificationIds: [] }
+10-23 17:50:16.429 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:16.429 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:16.429 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:16.429 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:16.429 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:16.429 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:50:16.429 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:16.429 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:16.429 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:16.429 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:16.429 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.429 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.429Z' }
+10-23 17:50:16.430 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:16.430 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:16.430 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:16.430 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:16.430 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:16.430 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:16.430 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:16.430 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:16.430 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:16.438 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:16.438 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:16.438 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:16.438 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:16.438 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:16.438 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:50:16.438 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:16.438 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:16.438 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:16.438 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:16.438 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.438 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.438Z' }
+10-23 17:50:16.439 I/ReactNativeJS(18100): Γ£à [NOTIFICATIONS] ===== CHECKING FOR IMMEDIATE TRIP COMPLETION =====
+10-23 17:50:16.439 I/ReactNativeJS(18100): Γ¥î [NOTIFICATIONS] No immediate trip completion notifications found
+10-23 17:50:16.439 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Available notification types:', [ 'ride_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'booking_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_cancelled',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_completed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed',
+10-23 17:50:16.439 I/ReactNativeJS(18100):   'ride_status_changed' ]
+10-23 17:50:16.439 I/ReactNativeJS(18100): 'Γ¥î [NOTIFICATIONS] Trip completed notifications (all statuses):', []
+10-23 17:50:16.440 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:16.440 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:16.440 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:16.440 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:16.440 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:16.440 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 0
+10-23 17:50:16.440 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:16.440 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:16.440 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:16.440 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:16.440 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.440 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.440Z' }
+10-23 17:50:16.440 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:16.441 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:16.441 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:16.441 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:16.441 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:16.441 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:16.441 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:16.441 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:16.441 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:16.683 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:50:16.683 I/ReactNativeJS(18100):   details:
+10-23 17:50:16.683 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.683 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.683 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.683 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:50:16.684 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.684 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:50:16.701 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:50:16.701 I/ReactNativeJS(18100):   details:
+10-23 17:50:16.701 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.701 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.701 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.701 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:50:16.702 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.702 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:50:16.710 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:50:16.710 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:50:16.711 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.711 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:16.711 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:50:16.711 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:50:16.924 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:50:16.924 I/ReactNativeJS(18100):   details:
+10-23 17:50:16.924 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.924 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.924 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:50:16.924 I/ReactNativeJS(18100):        age_minutes: 2 } ] }
+10-23 17:50:16.925 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:50:16.925 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486283,
+10-23 17:50:16.925 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:50:16.925 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:50:16.925 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:50:16.925 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:50:16.925 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:50:16.926 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:50:16.926 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:50:16.927 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486283,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   lon1: 77.8299733,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:50:16.927 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486283,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   longitude1: 77.8299733,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:50:16.927 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.000001299999999204715,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   lng_diff: 0.0000044000000087862645,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:50:16.927 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:50:16.927 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:50:16.928 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:50:16.928 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:50:16.928 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:50:16.928 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.928 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486283, lng: 77.8299733 } }
+10-23 17:50:16.928 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:50:16.928 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:50:16.928 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:50:16.928 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:50:16.928 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:50:16.928 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.928 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:50:16.928 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:50:16.929 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:50:16.929 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:50:16.931 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:16.931 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:16.931 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:16.931 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:16.931 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:16.932 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:16.932 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:16.932 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:16.932 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:16.932 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:16.932 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.932 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.932Z' }
+10-23 17:50:16.932 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:16.933 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:16.933 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:16.933 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:16.933 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:16.933 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:16.933 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:16.933 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:16.933 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:16.946 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:50:16.947 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:50:16.947 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.947 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:50:16.947 I/ReactNativeJS(18100):   drivers:
+10-23 17:50:16.947 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:16.947 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.947 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:50:16.947 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.947 I/ReactNativeJS(18100):        heading: null,
+10-23 17:50:16.947 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:50:16.947 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:50:16.947 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:50:16.947 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:16.947 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.947 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:50:16.947 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.947 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:50:16.947 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:50:16.947 I/ReactNativeJS(18100):   heading: null,
+10-23 17:50:16.947 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:50:16.950 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:50:16.950 I/ReactNativeJS(18100):   details:
+10-23 17:50:16.950 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.950 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.950 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:50:16.950 I/ReactNativeJS(18100):        age_minutes: 2 } ] }
+10-23 17:50:16.950 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:50:16.950 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486283,
+10-23 17:50:16.950 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:50:16.950 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:50:16.950 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:50:16.950 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:50:16.950 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:50:16.951 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486283,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   lon1: 77.8299733,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:50:16.951 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486283,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   longitude1: 77.8299733,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:50:16.951 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.000001299999999204715,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   lng_diff: 0.0000044000000087862645,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:50:16.951 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:50:16.951 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:50:16.952 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:50:16.952 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:50:16.952 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:50:16.952 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.952 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486283, lng: 77.8299733 } }
+10-23 17:50:16.952 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:50:16.952 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:50:16.952 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:50:16.952 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:50:16.952 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:50:16.952 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:16.952 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:50:16.952 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:50:16.952 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:50:16.952 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:50:16.955 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:16.955 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:16.955 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:16.955 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:16.955 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:16.955 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:16.955 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:16.955 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:16.955 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:16.955 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:16.955 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.955 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:16.955Z' }
+10-23 17:50:16.956 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:16.956 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:16.956 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:16.956 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:16.956 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:16.956 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:16.956 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:16.956 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:16.956 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:16.967 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:50:16.967 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:50:16.967 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:16.967 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:50:16.967 I/ReactNativeJS(18100):   drivers:
+10-23 17:50:16.967 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:16.967 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.967 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:50:16.967 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.967 I/ReactNativeJS(18100):        heading: null,
+10-23 17:50:16.967 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:50:16.967 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:50:16.967 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:50:16.967 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:16.967 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.967 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:50:16.967 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:16.967 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:50:16.967 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:50:16.967 I/ReactNativeJS(18100):   heading: null,
+10-23 17:50:16.967 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:50:16.972 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:50:16.972 I/ReactNativeJS(18100):   details:
+10-23 17:50:16.972 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:16.972 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:16.972 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:16.972 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:50:16.973 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:16.973 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:50:17.355 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:50:17.355 I/ReactNativeJS(18100):   details:
+10-23 17:50:17.355 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:17.355 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:17.355 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:50:17.355 I/ReactNativeJS(18100):        age_minutes: 2 } ] }
+10-23 17:50:17.356 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:50:17.356 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486283,
+10-23 17:50:17.356 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:50:17.356 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:50:17.356 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:50:17.356 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:50:17.356 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:50:17.356 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:50:17.356 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:50:17.357 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:50:17.357 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:50:17.358 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486283,
+10-23 17:50:17.358 I/ReactNativeJS(18100):   lon1: 77.8299733,
+10-23 17:50:17.358 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:50:17.358 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:50:17.358 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486283,
+10-23 17:50:17.358 I/ReactNativeJS(18100):   longitude1: 77.8299733,
+10-23 17:50:17.358 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:50:17.358 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:50:17.359 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.000001299999999204715,
+10-23 17:50:17.359 I/ReactNativeJS(18100):   lng_diff: 0.0000044000000087862645,
+10-23 17:50:17.359 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:50:17.359 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:50:17.359 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:50:17.359 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:50:17.359 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:50:17.359 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:50:17.359 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:17.359 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486283, lng: 77.8299733 } }
+10-23 17:50:17.359 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:50:17.360 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:50:17.360 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:50:17.360 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:50:17.360 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:50:17.360 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:17.360 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:50:17.360 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:50:17.360 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Initial fetch completed:', 1, 'drivers'
+10-23 17:50:17.361 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:50:17.363 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:17.363 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:17.363 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:17.363 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:17.363 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:17.364 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:17.364 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:17.364 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:17.364 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:17.364 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:17.364 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:17.364 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:17.364Z' }
+10-23 17:50:17.365 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:17.365 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:17.365 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:17.365 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:17.365 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:17.365 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:17.365 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:17.365 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:17.365 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:17.379 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:50:17.380 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:50:17.380 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:17.380 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:50:17.380 I/ReactNativeJS(18100):   drivers:
+10-23 17:50:17.380 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:17.380 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:17.380 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:50:17.380 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:17.380 I/ReactNativeJS(18100):        heading: null,
+10-23 17:50:17.380 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:50:17.380 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:50:17.380 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:50:17.382 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:17.382 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:17.382 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:50:17.382 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:17.382 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:50:17.382 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:50:17.382 I/ReactNativeJS(18100):   heading: null,
+10-23 17:50:17.382 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:50:26.318 I/ReactNativeJS(18100): ≡ƒöä [DRIVER-SERVICE] Polling interval triggered
+10-23 17:50:26.319 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [DRIVER-SERVICE] Fetching available drivers via edge function:', { location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:26.319 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:26.319 I/ReactNativeJS(18100):   vehicleType: 'all',
+10-23 17:50:26.319 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:26.319Z' }
+10-23 17:50:26.319 I/ReactNativeJS(18100): '≡ƒîÉ [DRIVER-SERVICE] Constructed Edge Function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/get-drivers-with-locations?lat=12.7486283&lng=77.8299733&radius=10'
+10-23 17:50:26.788 W/ReactNativeJS(18100): 'ΓÜá∩╕Å [DRIVER-SERVICE] Edge function failed, using direct database access:', 'Edge function failed: 500 - {"code":"WORKER_ERROR","message":"Function exited due to an error (please check logs)"}'
+10-23 17:50:26.788 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] ===== USING DIRECT DATABASE ACCESS =====
+10-23 17:50:26.789 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Parameters:', { customerLocation: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:26.789 I/ReactNativeJS(18100):   radius: '10km',
+10-23 17:50:26.789 I/ReactNativeJS(18100):   vehicleType: 'all' }
+10-23 17:50:26.789 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] Step 1: Fetching online verified drivers...
+10-23 17:50:27.124 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Found drivers:', { total: 21,
+10-23 17:50:27.124 I/ReactNativeJS(18100):   details:
+10-23 17:50:27.124 I/ReactNativeJS(18100):    [ { id: '22480cc3-665c-407e-ad8a-8eafde67706b',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '76b66a88-dff9-4965-9e36-8a92023f155d',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '6f55e87b-6558-48df-af8c-d69190918b32',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '97a4ba58-9431-48e5-ac8f-3472b8357179',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: 'c568b21d-0975-4388-a9fb-cc00013b6d4f',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '7055c2f9-99fa-4d96-bc6c-079b5cda6f56',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '43d81d7d-e647-46cf-8599-11f63996b03e',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan_ac',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '770e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '489b94a7-777b-4e11-ba5c-17e0a3173737',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'hatchback',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: 'd7b4a339-2ba5-45ed-a2ec-238548a8eab6',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'hatchback_ac',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '38ee94d8-ac2d-450e-8084-0bef654546d7',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: 'b4613ecf-44b5-49ba-8613-f8993b6db1d6',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '631f4ab4-c643-45a8-addd-541595b0fe86',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'suv',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '0330d75a-67b0-4b12-b9b7-22a241af9c57',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.124 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.124 I/ReactNativeJS(18100):      { id: '707e2d38-7346-4a2e-bddb-e1157475f786',
+10-23 17:50:27.124 I/ReactNativeJS(18100):        user_id: 'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.125 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.125 I/ReactNativeJS(18100):      { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.125 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        verified: true },
+10-23 17:50:27.125 I/ReactNativeJS(18100):      { id: '058f85df-35b3-4027-81a1-bd52a0df8e4a',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        user_id: '411ee301-8ffc-4874-86e9-37716951bc4d',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        name: undefined,
+10-23 17:50:27.125 I/ReactNativeJS(18100):        vehicle_type: 'suv_ac',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        status: 'online',
+10-23 17:50:27.125 I/ReactNativeJS(18100):        verified: true } ] }
+10-23 17:50:27.126 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Step 2: Getting locations for user IDs:', [ '16011178-decf-4de3-beae-94ca46ce9258',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'ae53a792-6aed-4186-823d-61c34c6defe2',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'e6145579-4f5a-439f-b929-fa478580c049',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '5d6651c8-2e3f-44e7-b4a1-0056c1d5315b',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '6150ee57-77e5-45f7-b6c7-a586f22f2af8',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'dc475d27-6167-4695-a014-dcb8d160b4c6',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440001',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440002',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '6c03a657-c3e4-466e-b49c-324c2d051ce9',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440003',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440004',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '550e8400-e29b-41d4-a716-446655440005',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '892d8e0d-7ca5-4dd8-9979-539f394538f2',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'cb735787-e96d-4d1d-9975-c112e75dfabd',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'fdd94862-18e4-49d4-b6c0-8b9f73c8ff8c',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '539b06c9-4e24-49a4-b307-3fb3f9dc39da',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'b12c8a48-05b3-475a-b042-4810aee4e918',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'f5e495f1-75a4-4ce1-bb60-4adfc348b8fc',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   'ed59084b-f517-4da3-814c-a314cdd8b4c6',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:27.126 I/ReactNativeJS(18100):   '411ee301-8ffc-4874-86e9-37716951bc4d' ]
+10-23 17:50:27.420 I/ReactNativeJS(18100): '≡ƒôì [DRIVER-SERVICE] Found locations:', { total: 1,
+10-23 17:50:27.420 I/ReactNativeJS(18100):   details:
+10-23 17:50:27.420 I/ReactNativeJS(18100):    [ { user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:27.420 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:27.420 I/ReactNativeJS(18100):        updated_at: '2025-10-23T12:18:41.271673+00:00',
+10-23 17:50:27.420 I/ReactNativeJS(18100):        age_minutes: 2 } ] }
+10-23 17:50:27.420 I/ReactNativeJS(18100): ≡ƒöì [DRIVER-SERVICE] Step 3: Processing drivers with distance calculation...
+10-23 17:50:27.420 I/ReactNativeJS(18100): '≡ƒöì [DRIVER-SERVICE] Customer coordinates for distance calc:', { lat: 12.7486283,
+10-23 17:50:27.420 I/ReactNativeJS(18100):   lng: 77.8299733,
+10-23 17:50:27.420 I/ReactNativeJS(18100):   type: 'number',
+10-23 17:50:27.420 I/ReactNativeJS(18100):   isValid: true }
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 22480cc3-665c-407e-ad8a-8eafde67706b (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 76b66a88-dff9-4965-9e36-8a92023f155d (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 6f55e87b-6558-48df-af8c-d69190918b32 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 97a4ba58-9431-48e5-ac8f-3472b8357179 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver c568b21d-0975-4388-a9fb-cc00013b6d4f (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 7055c2f9-99fa-4d96-bc6c-079b5cda6f56 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440001 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440002 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 43d81d7d-e647-46cf-8599-11f63996b03e (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440003 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440004 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 770e8400-e29b-41d4-a716-446655440005 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 489b94a7-777b-4e11-ba5c-17e0a3173737 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver d7b4a339-2ba5-45ed-a2ec-238548a8eab6 (undefined) skipped: no recent location
+10-23 17:50:27.420 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 38ee94d8-ac2d-450e-8084-0bef654546d7 (undefined) skipped: no recent location
+10-23 17:50:27.421 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver b4613ecf-44b5-49ba-8613-f8993b6db1d6 (undefined) skipped: no recent location
+10-23 17:50:27.421 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 631f4ab4-c643-45a8-addd-541595b0fe86 (undefined) skipped: no recent location
+10-23 17:50:27.421 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 0330d75a-67b0-4b12-b9b7-22a241af9c57 (undefined) skipped: no recent location
+10-23 17:50:27.421 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 707e2d38-7346-4a2e-bddb-e1157475f786 (undefined) skipped: no recent location
+10-23 17:50:27.421 I/ReactNativeJS(18100): ≡ƒÜù [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) vehicle type: sedan
+10-23 17:50:27.421 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] ===== DISTANCE CALCULATION DEBUG =====
+10-23 17:50:27.421 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Raw inputs:', { lat1: 12.7486283,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   lon1: 77.8299733,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   lat2: 12.7486296,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   lon2: 77.8299689 }
+10-23 17:50:27.421 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Converted inputs:', { latitude1: 12.7486283,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   longitude1: 77.8299733,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   latitude2: 12.7486296,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   longitude2: 77.8299689 }
+10-23 17:50:27.421 I/ReactNativeJS(18100): '≡ƒôÉ [DISTANCE-SERVICE] Coordinate differences:', { lat_diff: 0.000001299999999204715,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   lng_diff: 0.0000044000000087862645,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   very_close: true,
+10-23 17:50:27.421 I/ReactNativeJS(18100):   essentially_same: true }
+10-23 17:50:27.421 I/ReactNativeJS(18100): ≡ƒôÉ [DISTANCE-SERVICE] Coordinates are essentially the same, returning 0km
+10-23 17:50:27.422 I/ReactNativeJS(18100): '≡ƒôÅ [DRIVER-SERVICE] Distance for driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined):', { distance_km: '0.0000',
+10-23 17:50:27.422 I/ReactNativeJS(18100):   within_radius: true,
+10-23 17:50:27.422 I/ReactNativeJS(18100):   radius_limit: '10km',
+10-23 17:50:27.422 I/ReactNativeJS(18100):   driver_coords: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:27.422 I/ReactNativeJS(18100):   customer_coords: { lat: 12.7486283, lng: 77.8299733 } }
+10-23 17:50:27.422 I/ReactNativeJS(18100): Γ£à [DRIVER-SERVICE] Driver eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4 (undefined) INCLUDED: 0.0000km
+10-23 17:50:27.422 I/ReactNativeJS(18100): Γ¥î [DRIVER-SERVICE] Driver 058f85df-35b3-4027-81a1-bd52a0df8e4a (undefined) skipped: no recent location
+10-23 17:50:27.422 I/ReactNativeJS(18100): ≡ƒôè [DRIVER-SERVICE] ===== DIRECT DATABASE ACCESS RESULT =====
+10-23 17:50:27.422 I/ReactNativeJS(18100): '≡ƒôè [DRIVER-SERVICE] Final summary:', { total_drivers_processed: 21,
+10-23 17:50:27.422 I/ReactNativeJS(18100):   available_drivers_found: 1,
+10-23 17:50:27.422 I/ReactNativeJS(18100):   customer_location: { lat: 12.7486283, lng: 77.8299733 },
+10-23 17:50:27.422 I/ReactNativeJS(18100):   radius_km: 10,
+10-23 17:50:27.422 I/ReactNativeJS(18100):   vehicle_type_filter: 'all (no filter applied)' }
+10-23 17:50:27.422 I/ReactNativeJS(18100): '≡ƒöä [DRIVER-SERVICE] Polling update:', 1, 'drivers'
+10-23 17:50:27.422 I/ReactNativeJS(18100): '≡ƒôì [HOME] Received driver locations update:', 1, 'drivers'
+10-23 17:50:27.424 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:27.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:27.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:27.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:27.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:27.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:27.424 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:27.424 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:27.424 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:27.424 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:27.424 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:27.424 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:27.424Z' }
+10-23 17:50:27.425 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:27.425 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:27.425 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:27.425 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:27.425 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:27.425 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:27.425 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:27.425 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:27.425 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:27.438 I/ReactNativeJS(18100): ≡ƒôè [HOME] ===== AVAILABLE DRIVERS STATE CHANGED =====
+10-23 17:50:27.438 I/ReactNativeJS(18100): '≡ƒôè [HOME] availableDrivers state update:', { count: 1,
+10-23 17:50:27.438 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:27.438 I/ReactNativeJS(18100):   driversPassedToMap: 1,
+10-23 17:50:27.438 I/ReactNativeJS(18100):   drivers:
+10-23 17:50:27.438 I/ReactNativeJS(18100):    [ { id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:27.438 I/ReactNativeJS(18100):        vehicle_type: 'sedan',
+10-23 17:50:27.438 I/ReactNativeJS(18100):        distance: '0.00km',
+10-23 17:50:27.438 I/ReactNativeJS(18100):        coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:27.438 I/ReactNativeJS(18100):        heading: null,
+10-23 17:50:27.438 I/ReactNativeJS(18100):        rating: 5 } ] }
+10-23 17:50:27.438 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== DRIVERS BEING PASSED TO MAP =====
+10-23 17:50:27.438 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Map will receive', 1, 'drivers:'
+10-23 17:50:27.439 I/ReactNativeJS(18100): '≡ƒù║∩╕Å [HOME] Driver 1 for map:', { driver_id: 'eb91d7e5-e2f2-4021-a8c8-3739a3d4cae4',
+10-23 17:50:27.439 I/ReactNativeJS(18100):   user_id: '1c4ac410-54d8-4b5e-960b-3afcbebd115d',
+10-23 17:50:27.439 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:50:27.439 I/ReactNativeJS(18100):   coordinates: { lat: 12.7486296, lng: 77.8299689 },
+10-23 17:50:27.439 I/ReactNativeJS(18100):   distance: '0.0000km',
+10-23 17:50:27.439 I/ReactNativeJS(18100):   rating: 5,
+10-23 17:50:27.439 I/ReactNativeJS(18100):   heading: null,
+10-23 17:50:27.439 I/ReactNativeJS(18100):   updated_at: '2025-10-23T12:18:41.271673+00:00' }
+10-23 17:50:33.074 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:33.074 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:33.074 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:33.074 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', 'null'
+10-23 17:50:33.074 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:33.074 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:33.074 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:33.075 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:33.075 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:33.075 I/ReactNativeJS(18100):   hasDestination: false,
+10-23 17:50:33.075 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:33.075 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:33.074Z' }
+10-23 17:50:33.075 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:33.075 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:33.075 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:33.075 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:33.075 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:33.075 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:33.075 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:33.075 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:33.075 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:33.138 I/ReactNativeJS(18100): '≡ƒôÜ Loaded', 1, 'recent searches'
+10-23 17:50:33.971 I/ReactNativeJS(18100): '≡ƒôì Location selected:', { description: 'Bagalur, Tamil Nadu, India',
+10-23 17:50:33.971 I/ReactNativeJS(18100):   coordinates: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:50:33.971 I/ReactNativeJS(18100):   type: 'recent' }
+10-23 17:50:33.971 I/ReactNativeJS(18100): Γ£à Calling onLocationSelect with valid coordinates
+10-23 17:50:33.971 I/ReactNativeJS(18100): ≡ƒöì Destination location selected, validating zone...
+10-23 17:50:33.971 I/ReactNativeJS(18100): '≡ƒöì Selected destination:', { location: 'Bagalur, Tamil Nadu, India',
+10-23 17:50:33.971 I/ReactNativeJS(18100):   coords: { latitude: 12.8303987, longitude: 77.86623689999999 } }
+10-23 17:50:33.971 I/ReactNativeJS(18100): '≡ƒöì Active zones for validation:', 2
+10-23 17:50:33.971 I/ReactNativeJS(18100): ≡ƒöì [ZONE-VALIDATION] Starting destination zone validation
+10-23 17:50:33.971 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Location:', 'Bagalur, Tamil Nadu, India'
+10-23 17:50:33.971 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Coordinates:', { latitude: 12.8303987, longitude: 77.86623689999999 }
+10-23 17:50:33.971 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Active zones available:', 2
+10-23 17:50:33.972 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Zone names:', [ 'Inner Ring', 'Outer Ring' ]
+10-23 17:50:33.972 I/ReactNativeJS(18100): '≡ƒöì [ZONE-VALIDATION] Full zone data:', '[\n  {\n    "id": "90c1bc5f-7a2d-4585-a2ef-0a85e05e138a",\n    "name": "Inner Ring",\n    "city": "Hosur",\n    "state": "Tamil Nadu",\n    "coordinates": {\n      "type": "circle",\n      "center": {\n        "lat": 12.733564125720461,\n        "lng": 77.82145902191407\n      },\n      "radius": 5882.595479495581\n    },\n    "center_latitude": 12.73356413,\n    "center_longitude": 77.82145902,\n    "radius_km": 5.88,\n    "base_fare": 50,\n    "per_km_rate": 12,\n    "surge_multiplier": 1,\n    "is_active": true,\n    "created_at": "2025-10-22T12:45:47.862374+00:00",\n    "updated_at": "2025-10-22T12:45:47.862374+00:00"\n  },\n  {\n    "id": "8d504fe8-e310-459f-b6d9-29ec5b42ecfc",\n    "name": "Outer Ring",\n    "city": "Hosur",\n    "state": "Tamil Nadu",\n    "coordinates": {\n      "type": "circle",\n      "center": {\n        "lat": 12.736626222356561,\n        "lng": 77.82943489347866\n      },\n      "radius": 13004.829888314574\n    },\n    "center_latitude": 12.73662622,\n    "center_longitude": 77.82943489,\n    "radius_km": 13,\n    "base_fare": 50,\n    "per_km_rate": 12,\n    "surge_multiplier": 1,\n    "is_active": true,\n    "created_at": "2025-10-22T12:04:26.098131+00:00",\n    "updated_at": "2025-10-22T12:04:26.098131+00:00"\n  }\n]'
+10-23 17:50:33.973 I/ReactNativeJS(18100): '≡ƒöì Checking if point is in service area:', { coordinates: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:50:33.973 I/ReactNativeJS(18100):   zonesCount: 2,
+10-23 17:50:33.973 I/ReactNativeJS(18100):   zones:
+10-23 17:50:33.973 I/ReactNativeJS(18100):    [ { name: 'Inner Ring',
+10-23 17:50:33.973 I/ReactNativeJS(18100):        type: 'circle',
+10-23 17:50:33.973 I/ReactNativeJS(18100):        radius_km: 5.88,
+10-23 17:50:33.973 I/ReactNativeJS(18100):        center_lat: 12.73356413,
+10-23 17:50:33.973 I/ReactNativeJS(18100):        center_lng: 77.82145902 },
+10-23 17:50:33.973 I/ReactNativeJS(18100):      { name: 'Outer Ring',
+10-23 17:50:33.973 I/ReactNativeJS(18100):        type: 'circle',
+10-23 17:50:33.973 I/ReactNativeJS(18100):        radius_km: 13,
+10-23 17:50:33.973 I/ReactNativeJS(18100):        center_lat: 12.73662622,
+10-23 17:50:33.973 I/ReactNativeJS(18100):        center_lng: 77.82943489 } ] }
+10-23 17:50:33.973 I/ReactNativeJS(18100): ≡ƒöì Using circle-based zone validation
+10-23 17:50:33.973 I/ReactNativeJS(18100): '≡ƒöì Raw Outer Ring data:', { center_latitude: 12.73662622,
+10-23 17:50:33.973 I/ReactNativeJS(18100):   center_latitude_type: 'number',
+10-23 17:50:33.973 I/ReactNativeJS(18100):   center_longitude: 77.82943489,
+10-23 17:50:33.973 I/ReactNativeJS(18100):   center_longitude_type: 'number',
+10-23 17:50:33.973 I/ReactNativeJS(18100):   radius_km: 13,
+10-23 17:50:33.973 I/ReactNativeJS(18100):   radius_km_type: 'number' }
+10-23 17:50:33.973 I/ReactNativeJS(18100): '≡ƒöì Parsed values:', { centerLat: 12.73662622,
+10-23 17:50:33.973 I/ReactNativeJS(18100):   centerLng: 77.82943489,
+10-23 17:50:33.973 I/ReactNativeJS(18100):   radiusKm: 13,
+10-23 17:50:33.973 I/ReactNativeJS(18100):   allValid: true }
+10-23 17:50:33.974 I/ReactNativeJS(18100): '≡ƒöì Circle zone check:', { point: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:50:33.974 I/ReactNativeJS(18100):   center: { latitude: 12.73662622, longitude: 77.82943489 },
+10-23 17:50:33.974 I/ReactNativeJS(18100):   radiusKm: '13km',
+10-23 17:50:33.974 I/ReactNativeJS(18100):   calculatedDistance: '11.16km',
+10-23 17:50:33.974 I/ReactNativeJS(18100):   difference: '-1.84km',
+10-23 17:50:33.974 I/ReactNativeJS(18100):   isInside: 'Γ£à INSIDE' }
+10-23 17:50:33.974 I/ReactNativeJS(18100): ≡ƒöì Point is INSIDE Outer Ring (13km radius)
+10-23 17:50:33.974 I/ReactNativeJS(18100): Γ£à [ZONE-VALIDATION] Destination location is within active zones
+10-23 17:50:33.975 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:33.975 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:33.975 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:33.976 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:50:33.976 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:33.976 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:33.976 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', true
+10-23 17:50:33.976 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:33.976 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:33.976 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:50:33.976 I/ReactNativeJS(18100):   showDriversOnMap: true,
+10-23 17:50:33.976 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:33.976Z' }
+10-23 17:50:33.976 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 0,
+10-23 17:50:33.976 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:33.976 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:33.976 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:33.981 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 0,
+10-23 17:50:33.981 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:33.981 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:33.981 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:33.985 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 0,
+10-23 17:50:33.985 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:50:33.985 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:33.985 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:33.988 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 0,
+10-23 17:50:33.988 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:33.988 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:33.988 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:33.990 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 90,
+10-23 17:50:33.990 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:33.990 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:33.990 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:33.992 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 0,
+10-23 17:50:33.992 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:33.992 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:33.992 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:33.994 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:33.995 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:33.995 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:33.995 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:33.995 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:33.995 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:33.995 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:33.995 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:33.995 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:34.009 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] ===== HIDING DRIVERS FOR ROUTE DISPLAY =====
+10-23 17:50:34.009 I/ReactNativeJS(18100): ≡ƒù║∩╕Å [HOME] Both pickup and destination selected, hiding drivers to show route
+10-23 17:50:34.009 I/ReactNativeJS(18100): ≡ƒ¢æ [HOME] Stopping driver location polling
+10-23 17:50:34.009 I/ReactNativeJS(18100): ≡ƒ¢æ [DRIVER-SERVICE] Stopped driver location polling
+10-23 17:50:34.009 I/ReactNativeJS(18100): ≡ƒöä [HOME] Triggering fare calculation due to location/vehicle change
+10-23 17:50:34.009 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] ===== STARTING FARE CALCULATION WITH DEADHEAD =====
+10-23 17:50:34.010 I/ReactNativeJS(18100): '≡ƒÆ░ [HOME] Calculating fare for Bagalur trip:', { pickup: 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   destination: 'Bagalur, Tamil Nadu, India',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   pickupCoords: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:50:34.010 I/ReactNativeJS(18100):   destinationCoords: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:50:34.010 I/ReactNativeJS(18100):   selectedVehicle: 'sedan',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:34.009Z',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   shouldHaveDeadhead: true }
+10-23 17:50:34.010 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] Calling fareCalculator.calculateFare...
+10-23 17:50:34.010 I/ReactNativeJS(18100): '≡ƒÆ░ [FARE-CALC] Input parameters:', { vehicleType: 'sedan',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   pickup: { latitude: 12.7486283, longitude: 77.8299733 },
+10-23 17:50:34.010 I/ReactNativeJS(18100):   destination: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:50:34.010 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:34.010Z',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   supabaseUrl: 'SET',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   supabaseKey: 'SET' }
+10-23 17:50:34.010 I/ReactNativeJS(18100): ≡ƒÄ» [FARE-CALC] Using edge function for deadhead calculation...
+10-23 17:50:34.010 I/ReactNativeJS(18100): '≡ƒöì [FARE-CALC] Environment validation:', { supabaseUrl: 'SET',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   supabaseKey: 'SET',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   urlValid: true,
+10-23 17:50:34.010 I/ReactNativeJS(18100):   keyValid: true }
+10-23 17:50:34.010 I/ReactNativeJS(18100): '≡ƒÄ» [FARE-CALC] Edge function URL:', 'https://whubaypabojomdyfqxcf.supabase.co/functions/v1/fare-calculation'
+10-23 17:50:34.010 I/ReactNativeJS(18100): ≡ƒôí [FARE-CALC] Making request to edge function...
+10-23 17:50:34.010 I/ReactNativeJS(18100): '≡ƒôí [FARE-CALC] Request body:', { pickup_latitude: 12.7486283,
+10-23 17:50:34.010 I/ReactNativeJS(18100):   pickup_longitude: 77.8299733,
+10-23 17:50:34.010 I/ReactNativeJS(18100):   destination_latitude: 12.8303987,
+10-23 17:50:34.010 I/ReactNativeJS(18100):   destination_longitude: 77.86623689999999,
+10-23 17:50:34.010 I/ReactNativeJS(18100):   vehicle_type: 'sedan',
+10-23 17:50:34.010 I/ReactNativeJS(18100):   booking_type: 'regular' }
+10-23 17:50:34.011 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:34.011 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:34.011 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:34.011 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:50:34.011 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:34.011 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:34.011 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:50:34.011 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:34.011 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:34.011 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:50:34.011 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:50:34.011 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:34.011Z' }
+10-23 17:50:34.011 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 0,
+10-23 17:50:34.011 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:34.011 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:34.011 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:34.013 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 0,
+10-23 17:50:34.013 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:34.013 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:34.013 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:34.015 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 0,
+10-23 17:50:34.015 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:50:34.015 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:34.015 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:34.015 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 0,
+10-23 17:50:34.015 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:34.015 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:34.015 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:34.017 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 90,
+10-23 17:50:34.017 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:34.017 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:34.017 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:34.018 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 0,
+10-23 17:50:34.018 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:34.018 I/ReactNativeJS(18100):   showingCalculated: false,
+10-23 17:50:34.018 I/ReactNativeJS(18100):   source: 'minimum_fare' }
+10-23 17:50:34.020 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:34.020 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:34.020 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:34.020 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:34.020 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:34.020 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:34.020 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:34.020 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:34.020 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:35.106 I/ReactNativeJS(18100): '≡ƒôí [FARE-CALC] Edge function response status:', 200
+10-23 17:50:35.112 I/ReactNativeJS(18100): '≡ƒôè [FARE-CALC] Edge function raw result for Bagalur:', { success: true,
+10-23 17:50:35.112 I/ReactNativeJS(18100):   fareBreakdown:
+10-23 17:50:35.112 I/ReactNativeJS(18100):    { baseFare: 145,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      distanceFare: 164,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      timeFare: 0,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      surgeFare: 0,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      platformFee: 0,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      deadheadCharge: 138,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      totalFare: 447,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      distance: 10.55,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      duration: 15,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      deadheadDistance: 11.03 },
+10-23 17:50:35.112 I/ReactNativeJS(18100):   config:
+10-23 17:50:35.112 I/ReactNativeJS(18100):    { vehicle_type: 'sedan',
+10-23 17:50:35.112 I/ReactNativeJS(18100):      base_fare: 145,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      per_km_rate: 25,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      per_minute_rate: 0,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      minimum_fare: 0,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      surge_multiplier: 1,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      platform_fee_percent: 0 },
+10-23 17:50:35.112 I/ReactNativeJS(18100):   deadheadInfo:
+10-23 17:50:35.112 I/ReactNativeJS(18100):    { applied: true,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      reason: 'Between Inner and Outer Ring',
+10-23 17:50:35.112 I/ReactNativeJS(18100):      deadheadDistance: 11.025914915977474,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      deadheadCharge: 137.82393644971842,
+10-23 17:50:35.112 I/ReactNativeJS(18100):      zoneStatus: 'Between Inner and Outer Ring' } }
+10-23 17:50:35.112 I/ReactNativeJS(18100): Γ£à [FARE-CALC] ===== EDGE FUNCTION SUCCESS WITH DEADHEAD FOR BAGALUR =====
+10-23 17:50:35.114 I/ReactNativeJS(18100): 'Γ£à [FARE-CALC] Complete fare breakdown:', { baseFare: 'Γé╣145',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   distanceFare: 'Γé╣164',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   timeFare: 'Γé╣0',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   surgeFare: 'Γé╣0',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   platformFee: 'Γé╣0',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   deadheadCharge: 'Γé╣138',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   deadheadDistance: '11.03km',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   totalFare: 'Γé╣447',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   deadheadInfo:
+10-23 17:50:35.114 I/ReactNativeJS(18100):    { applied: true,
+10-23 17:50:35.114 I/ReactNativeJS(18100):      reason: 'Between Inner and Outer Ring',
+10-23 17:50:35.114 I/ReactNativeJS(18100):      deadheadDistance: 11.025914915977474,
+10-23 17:50:35.114 I/ReactNativeJS(18100):      deadheadCharge: 137.82393644971842,
+10-23 17:50:35.114 I/ReactNativeJS(18100):      zoneStatus: 'Between Inner and Outer Ring' },
+10-23 17:50:35.114 I/ReactNativeJS(18100):   formula: 'Γé╣145 + Γé╣164 + Γé╣0 + Γé╣0 + Γé╣0 + Γé╣138 = Γé╣447',
+10-23 17:50:35.114 I/ReactNativeJS(18100):   bagalurSpecific: 'This should show deadhead charges for Bagalur destination' }
+10-23 17:50:35.115 I/ReactNativeJS(18100): 'Γ£à [FARE-CALC] Deadhead analysis for Bagalur:', { destination: { latitude: 12.8303987, longitude: 77.86623689999999 },
+10-23 17:50:35.115 I/ReactNativeJS(18100):   deadheadApplied: true,
+10-23 17:50:35.115 I/ReactNativeJS(18100):   deadheadReason: 'Between Inner and Outer Ring',
+10-23 17:50:35.115 I/ReactNativeJS(18100):   zoneStatus: 'Between Inner and Outer Ring',
+10-23 17:50:35.115 I/ReactNativeJS(18100):   expectedForBagalur: 'Should be between Inner and Outer Ring with deadhead charge' }
+10-23 17:50:35.115 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] ===== FARE CALCULATION RESULT =====
+10-23 17:50:35.116 I/ReactNativeJS(18100): 'Γ£à [HOME] Fare breakdown received:', { baseFare: 'Γé╣145',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   distanceFare: 'Γé╣164',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   timeFare: 'Γé╣0',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   surgeFare: 'Γé╣0',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   platformFee: 'Γé╣0',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   deadheadCharge: 'Γé╣138',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   deadheadDistance: '11.03km',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   totalFare: 'Γé╣447',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   distance: '10.55km',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   duration: '15min',
+10-23 17:50:35.116 I/ReactNativeJS(18100):   hasDeadheadCharge: true,
+10-23 17:50:35.116 I/ReactNativeJS(18100):   isBagalurTrip: true,
+10-23 17:50:35.116 I/ReactNativeJS(18100):   expectedDeadhead: 'YES' }
+10-23 17:50:35.117 I/ReactNativeJS(18100): '≡ƒÄ» [HOME] Γ£à DEADHEAD CHARGE APPLIED:', { destination: 'Bagalur, Tamil Nadu, India',
+10-23 17:50:35.117 I/ReactNativeJS(18100):   deadheadCharge: 'Γé╣138',
+10-23 17:50:35.117 I/ReactNativeJS(18100):   deadheadDistance: '11.03km',
+10-23 17:50:35.117 I/ReactNativeJS(18100):   reason: 'Destination is between Inner Ring and Outer Ring' }
+10-23 17:50:35.117 I/ReactNativeJS(18100): '≡ƒÆ░ [HOME] Calculating fares for all vehicle types based on', 'sedan', 'calculation'
+10-23 17:50:35.117 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] hatchback (estimated): Γé╣447 (ratio-based from sedan)
+10-23 17:50:35.117 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] hatchback_ac (estimated): Γé╣493 (ratio-based from sedan)
+10-23 17:50:35.117 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] sedan (selected): Γé╣447 (exact calculation)
+10-23 17:50:35.117 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] sedan_ac (estimated): Γé╣462 (ratio-based from sedan)
+10-23 17:50:35.117 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] suv (estimated): Γé╣762 (ratio-based from sedan)
+10-23 17:50:35.117 I/ReactNativeJS(18100): ≡ƒÆ░ [HOME] suv_ac (estimated): Γé╣1923 (ratio-based from sedan)
+10-23 17:50:35.126 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:35.127 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:35.127 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:35.127 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:50:35.127 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:35.127 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:35.127 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:50:35.127 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:35.127 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:35.127 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:50:35.127 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:50:35.127 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:35.127Z' }
+10-23 17:50:35.128 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:50:35.128 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.128 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.128 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.131 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:50:35.131 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.131 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.131 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.135 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:50:35.135 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:50:35.135 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.135 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.135 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:50:35.135 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.135 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.135 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.137 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:50:35.137 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.137 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.137 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.139 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:50:35.139 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.139 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.139 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.141 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:35.141 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:35.141 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:35.141 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:35.141 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:35.141 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:35.141 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:35.141 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:35.141 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:35.153 I/ReactNativeJS(18100): '≡ƒÆ░ [HOME] All vehicle fares calculated:', { hatchback: 447,
+10-23 17:50:35.153 I/ReactNativeJS(18100):   hatchback_ac: 493,
+10-23 17:50:35.153 I/ReactNativeJS(18100):   sedan: 447,
+10-23 17:50:35.153 I/ReactNativeJS(18100):   sedan_ac: 462,
+10-23 17:50:35.153 I/ReactNativeJS(18100):   suv: 762,
+10-23 17:50:35.153 I/ReactNativeJS(18100):   suv_ac: 1923 }
+10-23 17:50:35.154 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:35.154 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:35.154 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:35.154 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:50:35.154 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:35.154 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:35.154 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:50:35.154 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:35.154 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:35.154 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:50:35.154 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:50:35.154 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:35.154Z' }
+10-23 17:50:35.154 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:50:35.154 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.154 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.154 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.156 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:50:35.156 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.156 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.156 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.157 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:50:35.157 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:50:35.157 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.157 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.157 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:50:35.157 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.157 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.157 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.159 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:50:35.159 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.159 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.159 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.160 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:50:35.160 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.160 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.160 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.162 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:35.162 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:35.162 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:35.162 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:35.162 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:35.162 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:35.162 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:35.162 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:35.162 I/ReactNativeJS(18100):   'showDrivers' ]
+10-23 17:50:35.175 W/ReactNativeJS(18100): ≡ƒÅá [HOME] ===== RENDERING HOME SCREEN =====
+10-23 17:50:35.175 W/ReactNativeJS(18100): '≡ƒÅá [HOME] currentLocation:', '{"altitude":771.7999877929688,"heading":0,"altitudeAccuracy":1.3241634368896484,"latitude":12.7486283,"speed":0,"longitude":77.8299733,"accuracy":2.200000047683716}'
+10-23 17:50:35.175 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupCoords:', '{"latitude":12.7486283,"longitude":77.8299733}'
+10-23 17:50:35.175 W/ReactNativeJS(18100): '≡ƒÅá [HOME] destinationCoords:', '{"latitude":12.8303987,"longitude":77.86623689999999}'
+10-23 17:50:35.175 W/ReactNativeJS(18100): '≡ƒÅá [HOME] pickupLocation text:', 'PRXJ+F32, Brindavan Nagar, Plot 87, NGGO\'s Colony, Anand Nagar, Hosur, Tamil Nadu 635109, India'
+10-23 17:50:35.175 W/ReactNativeJS(18100): '≡ƒÅá [HOME] availableDrivers count:', 1
+10-23 17:50:35.175 W/ReactNativeJS(18100): '≡ƒÅá [HOME] showDriversOnMap:', false
+10-23 17:50:35.176 I/ReactNativeJS(18100): '≡ƒÅá≡ƒÅá≡ƒÅá [HOME-V2] ABOUT TO RENDER SimpleHosurMap with props:', { hasUserLocation: true,
+10-23 17:50:35.176 I/ReactNativeJS(18100):   hasPickup: true,
+10-23 17:50:35.176 I/ReactNativeJS(18100):   hasDestination: true,
+10-23 17:50:35.176 I/ReactNativeJS(18100):   showDriversOnMap: false,
+10-23 17:50:35.176 I/ReactNativeJS(18100):   timestamp: '2025-10-23T12:20:35.175Z' }
+10-23 17:50:35.176 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback:', { fare: 447,
+10-23 17:50:35.176 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.176 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.176 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.177 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for hatchback_ac:', { fare: 493,
+10-23 17:50:35.177 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.177 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.177 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.178 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan:', { fare: 447,
+10-23 17:50:35.178 I/ReactNativeJS(18100):   isSelected: true,
+10-23 17:50:35.178 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.178 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.180 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for sedan_ac:', { fare: 462,
+10-23 17:50:35.180 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.180 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.180 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.181 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv:', { fare: 762,
+10-23 17:50:35.181 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.181 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.181 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.182 I/ReactNativeJS(18100): '≡ƒÆ░ [UI] Displaying fare for suv_ac:', { fare: 1923,
+10-23 17:50:35.182 I/ReactNativeJS(18100):   isSelected: false,
+10-23 17:50:35.182 I/ReactNativeJS(18100):   showingCalculated: true,
+10-23 17:50:35.182 I/ReactNativeJS(18100):   source: 'calculated' }
+10-23 17:50:35.183 I/ReactNativeJS(18100): ≡ƒº¬≡ƒº¬≡ƒº¬ TEST MAP RENDERING NOW
+10-23 17:50:35.183 I/ReactNativeJS(18100): '≡ƒº¬ Props received:', [ 'userLocation',
+10-23 17:50:35.183 I/ReactNativeJS(18100):   'pickupLocation',
+10-23 17:50:35.183 I/ReactNativeJS(18100):   'destinationLocation',
+10-23 17:50:35.183 I/ReactNativeJS(18100):   'onRegionChangeComplete',
+10-23 17:50:35.183 I/ReactNativeJS(18100):   'onDestinationDragEnd',
+10-23 17:50:35.183 I/ReactNativeJS(18100):   'showCenteredPin',
+10-23 17:50:35.183 I/ReactNativeJS(18100):   'availableDrivers',
+10-23 17:50:35.183 I/ReactNativeJS(18100):   'showDrivers' ]
+^C^C
+C:\Users\Dell\Desktop\platform-tools-latest-windows (1)\platform-tools>

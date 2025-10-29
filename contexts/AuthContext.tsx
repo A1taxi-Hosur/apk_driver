@@ -7,7 +7,6 @@ import { supabase } from '../utils/supabase'
 import { rideNotificationService } from '../services/RideNotificationService'
 import { backgroundRideMonitor } from '../services/BackgroundRideMonitor'
 import { pushNotificationService } from '../services/PushNotificationService'
-import { BackgroundLocationService } from '../services/BackgroundLocationService'
 
 type Driver = Database['public']['Tables']['drivers']['Row'] & {
   user: Database['public']['Tables']['users']['Row']
@@ -190,54 +189,21 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
             // Register for push notifications
             try {
-              console.log('📱 Registering push notifications on app launch...');
               await pushNotificationService.registerForPushNotifications(completeDriver.id);
               console.log('✅ Push notifications registered on app launch');
             } catch (pushError) {
               console.error('⚠️ Error registering push notifications on launch:', pushError);
             }
 
-            // If driver is online, start ALL background services
+            // If driver is online, start background monitoring
             if (completeDriver.status === 'online' || completeDriver.status === 'busy') {
-              console.log('🟢 ===== DRIVER IS ONLINE - STARTING ALL SERVICES =====');
-
-              // 1. Start background location tracking
+              console.log('🟢 Driver is online, starting background services...');
               try {
-                console.log('📍 Starting background location tracking...');
-                const locationStarted = await BackgroundLocationService.startBackgroundLocationTracking(
-                  completeDriver.user_id,
-                  completeDriver.id
-                );
-                if (locationStarted) {
-                  console.log('✅ Background location tracking ACTIVE');
-                } else {
-                  console.warn('⚠️ Background location tracking FAILED to start');
-                }
-              } catch (locError) {
-                console.error('❌ Error starting background location:', locError);
-              }
-
-              // 2. Start background ride monitoring
-              try {
-                console.log('🚨 Starting background ride monitoring...');
                 await backgroundRideMonitor.startMonitoring();
-                console.log('✅ Background ride monitoring ACTIVE');
+                console.log('✅ Background monitoring started on app launch');
               } catch (bgError) {
-                console.error('❌ Error starting background monitoring:', bgError);
+                console.error('⚠️ Error starting background monitoring on launch:', bgError);
               }
-
-              // 3. Show foreground service notification
-              try {
-                console.log('🔔 Starting foreground service notification...');
-                await rideNotificationService.showForegroundServiceNotification();
-                console.log('✅ Foreground service notification ACTIVE');
-              } catch (fgError) {
-                console.error('❌ Error starting foreground service:', fgError);
-              }
-
-              console.log('✅ ===== ALL SERVICES STARTED SUCCESSFULLY =====');
-            } else {
-              console.log('🟡 Driver is offline - services not started');
             }
 
             return
@@ -318,56 +284,15 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
               console.log('✅ Session restored with CURRENT database status:', freshDriverData.status)
 
-              // Register for push notifications
-              try {
-                console.log('📱 Re-registering push notifications...');
-                await pushNotificationService.registerForPushNotifications(freshDriverData.id);
-                console.log('✅ Push notifications re-registered');
-              } catch (pushError) {
-                console.error('⚠️ Error re-registering push notifications:', pushError);
-              }
-
-              // If driver is online, start ALL background services
+              // If driver is online, start background monitoring
               if (freshDriverData.status === 'online' || freshDriverData.status === 'busy') {
-                console.log('🟢 ===== DRIVER IS ONLINE - STARTING ALL SERVICES =====');
-
-                // 1. Start background location tracking
+                console.log('🟢 Driver is online, starting background services...');
                 try {
-                  console.log('📍 Starting background location tracking...');
-                  const locationStarted = await BackgroundLocationService.startBackgroundLocationTracking(
-                    freshDriverData.user_id,
-                    freshDriverData.id
-                  );
-                  if (locationStarted) {
-                    console.log('✅ Background location tracking ACTIVE');
-                  } else {
-                    console.warn('⚠️ Background location tracking FAILED to start');
-                  }
-                } catch (locError) {
-                  console.error('❌ Error starting background location:', locError);
-                }
-
-                // 2. Start background ride monitoring
-                try {
-                  console.log('🚨 Starting background ride monitoring...');
                   await backgroundRideMonitor.startMonitoring();
-                  console.log('✅ Background ride monitoring ACTIVE');
+                  console.log('✅ Background monitoring started on session restore');
                 } catch (bgError) {
-                  console.error('❌ Error starting background monitoring:', bgError);
+                  console.error('⚠️ Error starting background monitoring on restore:', bgError);
                 }
-
-                // 3. Show foreground service notification
-                try {
-                  console.log('🔔 Starting foreground service notification...');
-                  await rideNotificationService.showForegroundServiceNotification();
-                  console.log('✅ Foreground service notification ACTIVE');
-                } catch (fgError) {
-                  console.error('❌ Error starting foreground service:', fgError);
-                }
-
-                console.log('✅ ===== ALL SERVICES STARTED SUCCESSFULLY =====');
-              } else {
-                console.log('🟡 Driver is offline - services not started');
               }
             }
           } catch (fetchError) {
@@ -581,20 +506,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
       setUser(userData as any)
       setDriver(completeDriver)
 
-      // Step 6.5: Register for push notifications (CRITICAL)
-      let pushToken: string | null = null;
+      // Step 6.5: Register for push notifications
       try {
-        console.log('📱 ===== REGISTERING PUSH NOTIFICATIONS =====');
-        pushToken = await pushNotificationService.registerForPushNotifications(completeDriver.id);
-        if (pushToken) {
-          console.log('✅ Push notifications registered successfully');
-          console.log('✅ Token:', pushToken);
-        } else {
-          console.warn('⚠️ Push notification registration returned null - check permissions');
-        }
+        await pushNotificationService.registerForPushNotifications(completeDriver.id);
+        console.log('✅ Push notifications registered after login');
       } catch (pushError) {
-        console.error('❌ CRITICAL: Push notification registration FAILED:', pushError);
-        console.error('❌ You will NOT receive ride notifications!');
+        console.error('⚠️ Error registering push notifications after login:', pushError);
       }
 
       // Step 6.6: Show battery optimization guide (after a delay)
@@ -613,54 +530,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
         timestamp: Date.now()
       }))
 
-      console.log('✅ ===== AUTHENTICATION COMPLETED =====');
-      console.log('✅ Driver:', completeDriver.name);
-      console.log('✅ Status:', completeDriver.status);
-      console.log('✅ Push notifications:', pushToken ? 'REGISTERED' : 'FAILED');
-
-      // If driver is online, start ALL services immediately
-      if (completeDriver.status === 'online' || completeDriver.status === 'busy') {
-        console.log('🟢 ===== DRIVER IS ONLINE - STARTING ALL SERVICES =====');
-
-        // 1. Start background location tracking
-        try {
-          console.log('📍 Starting background location tracking...');
-          const locationStarted = await BackgroundLocationService.startBackgroundLocationTracking(
-            completeDriver.user_id,
-            completeDriver.id
-          );
-          if (locationStarted) {
-            console.log('✅ Background location tracking ACTIVE');
-          } else {
-            console.warn('⚠️ Background location tracking FAILED to start');
-          }
-        } catch (locError) {
-          console.error('❌ Error starting background location:', locError);
-        }
-
-        // 2. Start background ride monitoring
-        try {
-          console.log('🚨 Starting background ride monitoring...');
-          await backgroundRideMonitor.startMonitoring();
-          console.log('✅ Background ride monitoring ACTIVE');
-        } catch (bgError) {
-          console.error('❌ Error starting background monitoring:', bgError);
-        }
-
-        // 3. Show foreground service notification
-        try {
-          console.log('🔔 Starting foreground service notification...');
-          await rideNotificationService.showForegroundServiceNotification();
-          console.log('✅ Foreground service notification ACTIVE');
-        } catch (fgError) {
-          console.error('❌ Error starting foreground service:', fgError);
-        }
-
-        console.log('✅ ===== ALL SERVICES STARTED SUCCESSFULLY =====');
-      } else {
-        console.log('🟡 Driver is offline - services not started');
-        console.log('📍 Location tracking will start when you go online');
-      }
+      console.log('✅ Authentication completed - LocationContext will handle location setup')
+      
+      // Note: Location permission will be requested by LocationContext on startup
+      console.log('📍 Location permission will be requested by LocationContext')
       
       setLoading(false)
       return { error: null }
@@ -677,43 +550,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
       console.log('=== SIGNING OUT ===')
       console.log('📊 Current driver status before logout:', driver?.status)
       console.log('🔒 Status will be preserved in database - NOT changing to offline')
-
-      // Stop all services if driver was online
-      if (driver && (driver.status === 'online' || driver.status === 'busy')) {
-        console.log('🔴 Stopping all services before logout...');
-
-        try {
-          await BackgroundLocationService.stopBackgroundLocationTracking();
-          console.log('✅ Background location stopped');
-        } catch (e) {
-          console.error('❌ Error stopping location:', e);
-        }
-
-        try {
-          await backgroundRideMonitor.stopMonitoring();
-          console.log('✅ Background monitoring stopped');
-        } catch (e) {
-          console.error('❌ Error stopping monitoring:', e);
-        }
-
-        try {
-          await rideNotificationService.dismissAllRideNotifications();
-          console.log('✅ Notifications dismissed');
-        } catch (e) {
-          console.error('❌ Error dismissing notifications:', e);
-        }
-      }
-
-      // Unregister push notifications
-      if (driver) {
-        try {
-          await pushNotificationService.unregisterPushNotifications(driver.id);
-          console.log('✅ Push notifications unregistered');
-        } catch (e) {
-          console.error('❌ Error unregistering push:', e);
-        }
-      }
-
+      
       // Clear session data
       await AsyncStorage.multiRemove([
         DRIVER_SESSION_KEY,
@@ -779,77 +616,41 @@ export function AuthProvider({ children }: AuthProviderProps) {
         console.log('📊 WRITING TO DATABASE - This is the authoritative source of truth')
 
         if (status === 'online') {
-          console.log('🟢 ===== DRIVER GOING ONLINE - STARTING ALL SERVICES =====');
+          console.log('🟢 Driver going ONLINE - ensuring availability for customers');
 
-          // 1. Start background location tracking FIRST
+          // Start foreground service notification
           try {
-            console.log('📍 Starting background location tracking...');
-            if (driver.user_id) {
-              const locationStarted = await BackgroundLocationService.startBackgroundLocationTracking(
-                driver.user_id,
-                driver.id
-              );
-              if (locationStarted) {
-                console.log('✅ Background location tracking ACTIVE');
-              } else {
-                console.warn('⚠️ Background location tracking FAILED to start');
-              }
-            }
-          } catch (locError) {
-            console.error('❌ Error starting background location:', locError);
-          }
-
-          // 2. Start foreground service notification
-          try {
-            console.log('🔔 Starting foreground service notification...');
             await rideNotificationService.showForegroundServiceNotification();
-            console.log('✅ Foreground service notification ACTIVE');
+            console.log('✅ Foreground service notification started');
           } catch (fgError) {
-            console.error('❌ Error starting foreground service:', fgError);
+            console.error('⚠️ Error starting foreground service:', fgError);
           }
 
-          // 3. Start background ride monitoring
+          // Start background ride monitoring
           try {
-            console.log('🚨 Starting background ride monitoring...');
             await backgroundRideMonitor.startMonitoring();
-            console.log('✅ Background ride monitoring ACTIVE');
+            console.log('✅ Background ride monitoring started');
           } catch (bgError) {
-            console.error('❌ Error starting background monitoring:', bgError);
+            console.error('⚠️ Error starting background monitoring:', bgError);
           }
-
-          console.log('✅ ===== ALL SERVICES STARTED SUCCESSFULLY =====');
-
         } else if (status === 'offline') {
-          console.log('🔴 ===== DRIVER GOING OFFLINE - STOPPING ALL SERVICES =====');
+          console.log('🔴 Driver going OFFLINE - cleaning up services');
 
-          // 1. Stop background location tracking FIRST
+          // Stop foreground service notification
           try {
-            console.log('📍 Stopping background location tracking...');
-            await BackgroundLocationService.stopBackgroundLocationTracking();
-            console.log('✅ Background location tracking STOPPED');
-          } catch (locError) {
-            console.error('❌ Error stopping background location:', locError);
-          }
-
-          // 2. Stop foreground service notification
-          try {
-            console.log('🔔 Dismissing foreground service notification...');
             await rideNotificationService.dismissAllRideNotifications();
-            console.log('✅ Foreground service notification DISMISSED');
+            console.log('✅ Foreground service notification dismissed');
           } catch (fgError) {
-            console.error('❌ Error dismissing foreground service:', fgError);
+            console.error('⚠️ Error dismissing foreground service:', fgError);
           }
 
-          // 3. Stop background ride monitoring
+          // Stop background ride monitoring
           try {
-            console.log('🚨 Stopping background ride monitoring...');
             await backgroundRideMonitor.stopMonitoring();
-            console.log('✅ Background ride monitoring STOPPED');
+            console.log('✅ Background ride monitoring stopped');
           } catch (bgError) {
-            console.error('❌ Error stopping background monitoring:', bgError);
+            console.error('⚠️ Error stopping background monitoring:', bgError);
           }
-
-          console.log('✅ ===== ALL SERVICES STOPPED SUCCESSFULLY =====');
         }
 
         const { data: updatedData, error } = await supabase
@@ -927,6 +728,14 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }
 
+  // New function to update driver status from ride context
+  const updateDriverStatusFromRide = (status: 'offline' | 'online' | 'busy') => {
+    console.log('🔄 Updating driver status from ride context:', status)
+    setDriver(prev => prev ? { 
+      ...prev, 
+      status
+    } : null)
+  }
   const value = {
     session,
     user,
@@ -934,7 +743,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
     loading,
     signIn,
     signOut,
-    updateDriverStatus
+    updateDriverStatus,
+    updateDriverStatusFromRide
   }
 
   return (

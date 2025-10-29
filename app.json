@@ -77,8 +77,7 @@
           "android": {
             "icon": "./assets/images/icon.png",
             "color": "#10B981",
-            "defaultChannel": "ride-requests-urgent",
-            "useNextNotificationsApi": true
+            "defaultChannel": "ride-requests-urgent"
           }
         }
       ]
