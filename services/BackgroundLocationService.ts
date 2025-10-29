@@ -10,6 +10,8 @@ const DRIVER_SESSION_KEY = 'driver_session';
 const WEB_LOCATION_INTERVAL_KEY = 'web_location_interval';
 const DRIVER_ID_KEY = 'background_driver_id';
 const DRIVER_USER_ID_KEY = 'background_driver_user_id';
+const SUPABASE_URL_KEY = 'supabase_url';
+const SUPABASE_ANON_KEY_KEY = 'supabase_anon_key';
 
 // Background location task for native platforms
 TaskManager.defineTask(BACKGROUND_LOCATION_TASK, async ({ data, error }) => {
@@ -203,13 +205,14 @@ async function sendLocationToDatabase(location: any): Promise<boolean> {
 
     console.log('📤 Background location update via RPC...', { driverId, lat: location.coords.latitude, lng: location.coords.longitude });
 
-    // Get environment variables
-    const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
-    const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
+    // Get Supabase credentials from AsyncStorage (more reliable than process.env in background tasks)
+    const supabaseUrl = await AsyncStorage.getItem(SUPABASE_URL_KEY);
+    const supabaseAnonKey = await AsyncStorage.getItem(SUPABASE_ANON_KEY_KEY);
 
-    // Validate environment variables
+    // Validate Supabase credentials
     if (!supabaseUrl || !supabaseAnonKey) {
-      console.error('❌ Supabase credentials not configured');
+      console.error('❌ Supabase credentials not configured in AsyncStorage');
+      console.error('This happens when credentials were not stored during login');
       return false;
     }
 
@@ -356,6 +359,20 @@ export class BackgroundLocationService {
         console.log('✅ Stored driver IDs for background access');
       }
 
+      // CRITICAL: Store Supabase credentials for background task access
+      // process.env is NOT available in background task context
+      const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
+      const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
+
+      if (supabaseUrl && supabaseAnonKey) {
+        await AsyncStorage.setItem(SUPABASE_URL_KEY, supabaseUrl);
+        await AsyncStorage.setItem(SUPABASE_ANON_KEY_KEY, supabaseAnonKey);
+        console.log('✅ Stored Supabase credentials for background access');
+      } else {
+        console.error('❌ Supabase credentials not found in process.env');
+        console.error('Background location updates will fail!');
+      }
+
       if (Platform.OS === 'web') {
         console.log('🌐 Web platform: Starting web-based background tracking');
         return await startWebBackgroundTracking(driverUserId);
@@ -459,9 +476,11 @@ export class BackgroundLocationService {
         return await stopWebBackgroundTracking();
       }
 
-      // Clear stored driver IDs
+      // Clear stored driver IDs and Supabase credentials
       await AsyncStorage.removeItem(DRIVER_ID_KEY);
       await AsyncStorage.removeItem(DRIVER_USER_ID_KEY);
+      await AsyncStorage.removeItem(SUPABASE_URL_KEY);
+      await AsyncStorage.removeItem(SUPABASE_ANON_KEY_KEY);
 
       // Check if task is registered
       const isRegistered = await TaskManager.isTaskRegisteredAsync(BACKGROUND_LOCATION_TASK);
