@@ -11,14 +11,13 @@ import { useAuth } from '@/contexts/AuthContext';
 import { debugLog } from '@/utils/debugLogger';
 
 // CRITICAL: Import TripLocationTracker to register background task BEFORE app loads
-// TEMPORARY FIX: Commenting out to prevent crash - will initialize dynamically instead
-// import '@/services/TripLocationTracker';
+import '@/services/TripLocationTracker';
 
 // CRITICAL: Import RideNotificationService to configure notification handler BEFORE app loads
-// import '@/services/RideNotificationService';
+import '@/services/RideNotificationService';
 
 // CRITICAL: Import BackgroundNotificationHandler to handle notifications when app is CLOSED
-// import '@/services/BackgroundNotificationHandler';
+import '@/services/BackgroundNotificationHandler';
 
 function RootLayoutNav() {
   const { session, loading } = useAuth();
@@ -89,28 +88,6 @@ export default function RootLayout() {
   useEffect(() => {
     debugLog('RootLayout', 'Setting up notification handlers', { platform: Platform.OS });
     console.log('📱 Setting up push notification handlers...');
-
-    // CRITICAL: Initialize TripLocationTracker dynamically
-    (async () => {
-      try {
-        console.log('📍 Initializing TripLocationTracker...');
-        await import('@/services/TripLocationTracker');
-        console.log('✅ TripLocationTracker initialized');
-      } catch (error) {
-        console.error('❌ Error initializing TripLocationTracker:', error);
-      }
-    })();
-
-    // CRITICAL: Initialize RideNotificationService dynamically
-    (async () => {
-      try {
-        console.log('📱 Initializing RideNotificationService...');
-        await import('@/services/RideNotificationService');
-        console.log('✅ RideNotificationService initialized');
-      } catch (error) {
-        console.error('❌ Error initializing RideNotificationService:', error);
-      }
-    })();
 
     // CRITICAL: Register background notification task for when app is CLOSED
     (async () => {

@@ -125,10 +125,6 @@ async function checkDriverOnlineStatus(): Promise<boolean> {
 
       if (supabaseUrl && supabaseAnonKey) {
         try {
-          // Create timeout manually (AbortSignal.timeout not available in Hermes)
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 5000);
-
           const response = await fetch(`${supabaseUrl}/rest/v1/rpc/should_driver_track_location`, {
             method: 'POST',
             headers: {
@@ -137,10 +133,8 @@ async function checkDriverOnlineStatus(): Promise<boolean> {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ p_driver_id: driverId }),
-            signal: controller.signal
+            signal: AbortSignal.timeout(5000)
           });
-
-          clearTimeout(timeoutId);
 
           if (response.ok) {
             const result = await response.json();
@@ -220,12 +214,7 @@ async function sendLocationToDatabase(location: any): Promise<boolean> {
     }
 
     // Use RPC function to update location (bypasses RLS)
-    // Note: Using longer timeout for Android Doze mode (network can be delayed)
     try {
-      // Create timeout manually (AbortSignal.timeout not available in Hermes)
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 seconds
-
       const rpcResponse = await fetch(`${supabaseUrl}/rest/v1/rpc/update_driver_location_rpc`, {
         method: 'POST',
         headers: {
@@ -242,10 +231,8 @@ async function sendLocationToDatabase(location: any): Promise<boolean> {
           p_speed: location.coords.speed || null,
           p_accuracy: location.coords.accuracy || null
         }),
-        signal: controller.signal
+        signal: AbortSignal.timeout(8000)
       });
-
-      clearTimeout(timeoutId); // Clear timeout on success
 
       if (rpcResponse.ok) {
         const result = await rpcResponse.json();
@@ -261,7 +248,7 @@ async function sendLocationToDatabase(location: any): Promise<boolean> {
         console.error('❌ RPC request failed:', rpcResponse.status, errorText);
         return false;
       }
-    } catch (rpcError: any) {
+    } catch (rpcError) {
       console.error('❌ RPC exception:', rpcError.message);
       return false;
     }
@@ -419,25 +406,42 @@ export class BackgroundLocationService {
         console.log('✅ Background location permission already granted');
       }
 
-      // Start background location tracking with aggressive settings optimized for Android
+      // Start background location tracking with ULTRA-AGGRESSIVE settings for Android
       await Location.startLocationUpdatesAsync(BACKGROUND_LOCATION_TASK, {
+        // MAXIMUM GPS accuracy for taxi navigation
         accuracy: Location.Accuracy.BestForNavigation,
-        timeInterval: 3000, // Every 3 seconds
-        distanceInterval: 0, // Report every location change regardless of distance
-        deferredUpdatesInterval: 3000, // Match timeInterval
+
+        // EVERY 2 SECONDS - More aggressive than before
+        timeInterval: 2000,
+
+        // Report EVERY location regardless of distance
+        distanceInterval: 0,
+
+        // Force immediate updates - no deferring
+        deferredUpdatesInterval: 2000,
+
+        // Show location indicator on iOS
         showsBackgroundLocationIndicator: true,
+
+        // CRITICAL: Android Foreground Service - prevents battery optimization from killing it
         foregroundService: {
-          notificationTitle: 'A1 Taxi - Driver Online',
-          notificationBody: 'Tracking your location. Tap to open app.',
-          notificationColor: '#10B981',
+          notificationTitle: '🚕 A1 Taxi - Driver Online',
+          notificationBody: 'Location tracking active. DO NOT SWIPE AWAY.',
+          notificationColor: '#FF0000', // RED for high visibility
+          // CRITICAL: killServiceOnDestroy MUST be false
+          killServiceOnDestroy: false,
         },
-        pausesUpdatesAutomatically: false, // CRITICAL: Never pause updates
-        activityType: Location.ActivityType.AutomotiveNavigation, // Highest priority for constant tracking
+
+        // NEVER EVER pause - this is THE most critical setting
+        pausesUpdatesAutomatically: false,
+
+        // Tell Android this is automotive navigation (highest priority)
+        activityType: Location.ActivityType.AutomotiveNavigation,
 
         // Android-specific optimizations
         ...(Platform.OS === 'android' && {
-          // These settings prevent Android from pausing the service
-          mayShowUserSettingsDialog: true, // Allow prompting user for better settings
+          // Don't show settings dialog during tracking
+          mayShowUserSettingsDialog: false,
         }),
       });
 
@@ -453,9 +457,16 @@ export class BackgroundLocationService {
         console.warn('⚠️ Could not register background fetch (non-critical):', fetchError);
       }
 
-      console.log('✅ Background location tracking started');
-      console.log('✅ Foreground service notification will be shown');
-      console.log('✅ Location will update every 3 seconds even when app is closed');
+      console.log('✅ ========================================');
+      console.log('✅ BACKGROUND LOCATION TRACKING STARTED');
+      console.log('✅ ========================================');
+      console.log('📱 Android Foreground Service: ACTIVE');
+      console.log('🔴 RED notification is visible');
+      console.log('⏱️  Update every 2 seconds');
+      console.log('🌍 Works when app is CLOSED');
+      console.log('⚠️  CRITICAL: Do NOT swipe notification');
+      console.log('⚠️  CRITICAL: Disable battery optimization');
+      console.log('✅ ========================================');
 
       return true;
     } catch (error) {
