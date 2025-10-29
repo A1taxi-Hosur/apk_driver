@@ -1,452 +1,493 @@
 --------- beginning of main
-10-29 03:19:06.266  7741 22442 I Authzen : [DeviceStateSyncManager] The server is in sync with current state. Nothing to do
-10-29 03:19:32.787 19858 21575 I .gms.persistent: Explicit concurrent copying GC freed 2105KB AllocSpace bytes, 1(16KB) LOS objects, 50% free, 17MB/34MB, paused 442us,107us total 337.370ms
-10-29 03:19:32.794 19858 19870 W .gms.persistent: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~4eOVbduh7Pp6HuLqnABQLg==/com.google.android.projection.gearhead-C1UtHxT1qnbkVO-G7PjmkQ==/base.apk' with 1 weak references
-10-29 03:19:32.795 19858 19870 W .gms.persistent: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~4eOVbduh7Pp6HuLqnABQLg==/com.google.android.projection.gearhead-C1UtHxT1qnbkVO-G7PjmkQ==/split_config.arm64_v8a.apk' with 1 weak references
-10-29 03:19:32.796 19858 19870 W .gms.persistent: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~4eOVbduh7Pp6HuLqnABQLg==/com.google.android.projection.gearhead-C1UtHxT1qnbkVO-G7PjmkQ==/split_config.en.apk' with 1 weak references
-10-29 03:19:32.796 19858 19870 W .gms.persistent: ApkAssets: Deleting an ApkAssets object '<empty> and /data/app/~~4eOVbduh7Pp6HuLqnABQLg==/com.google.android.projection.gearhead-C1UtHxT1qnbkVO-G7PjmkQ==/split_config.xxhdpi.apk' with 1 weak references
-10-29 03:19:44.029 23256 23256 I bnve    : onPause
-10-29 03:19:44.215  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +319ms
-10-29 03:19:44.223 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 03:19:44.224 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 03:19:44.224 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 03:19:44.226 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:44.285 19858 19872 I IPCThreadState: oneway function results for code 1 on binder at 0xb4000077d0093eb0 will be dropped but finished with status UNKNOWN_TRANSACTION and reply parcel size 80
+10-29 12:13:44.997  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:13:46.432 23256 23256 I bnve    : onStart
+10-29 12:13:46.482 23256 23256 I blly    : (REDACTED) [%s] onStart()
+10-29 12:13:46.483 23256 23256 I bloe    : Reloading theme data
+10-29 12:13:46.486 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
+10-29 12:13:46.487 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
+10-29 12:13:46.487 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-29 12:13:46.488 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:46.516 23256 23256 I bnve    : onResume
+10-29 12:13:46.533 23256 23421 I dpgi    : (REDACTED) Program is %s
+10-29 12:13:46.548 23256 23421 I dpgi    : (REDACTED) Program is %s
+10-29 12:13:47.152 14815 14815 I ImeTracker: com.whatsapp:5184ed3c: onRequestHide at ORIGIN_CLIENT reason HIDE_SOFT_INPUT fromUser false
+10-29 12:13:47.152 14815 14815 I ImeTracker: com.whatsapp:5184ed3c: onFailed at PHASE_CLIENT_VIEW_SERVED
+10-29 12:13:47.348 19858 29081 I NearbyPresence: (REDACTED) %s verified [==] new request %s equals to the old request
+10-29 12:13:47.613  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:13:50.294  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:13:52.439 14815 25111 I com.whatsapp: Explicit concurrent copying GC freed 3774KB AllocSpace bytes, 205(4104KB) LOS objects, 50% free, 19MB/39MB, paused 439us,135us total 264.460ms
+10-29 12:13:52.987 23256 23256 I bnve    : onPause
+10-29 12:13:53.400  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:13:53.428 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-29 12:13:53.449 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-29 12:13:53.449 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#181](f:0,a:1) destructor()
+10-29 12:13:53.449 23256 23256 D BufferQueueConsumer: [VRI[Launcher]#181(BLAST Consumer)181](id:5ad8000000b5,api:0,p:-1,c:23256) disconnect
+10-29 12:13:53.496 23256 23256 I bnve    : onStop
+10-29 12:13:53.531  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +661ms
+10-29 12:13:53.543 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
+10-29 12:13:53.544 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
+10-29 12:13:53.544 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-29 12:13:53.545 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
 --------- beginning of crash
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 21988
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: anonymous@1:2546050
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: metroRequire@1:91948
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: anonymous@1:2542358
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: metroRequire@1:91948
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: get@1:704383
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: metroContext@1:704088
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: loadRoute@1:933407
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: getLayoutNode@1:935475
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: _loop@1:933305
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: getRoutes@1:932152
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: getRoutes@1:931380
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: initialize@1:906463
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: anonymous@1:905068
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: useMemo@1:427180
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: anonymous@1:216470
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: ContextNavigator@1:948340
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: renderWithHooks@1:382872
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: beginWork@1:430869
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: workLoopSync@1:416298
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: renderRootSync@1:416129
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: updateContainer@1:422756
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: anonymous@1:431861
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: renderElement@1:250306
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: renderApplication@1:211665
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: anonymous@1:203533
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: runApplication@1:203958
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: __callFunction@1:111349
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: anonymous@1:109791
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: __guard@1:110731
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 03:19:44.481 21988 22539 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 03:19:44.501 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
-10-29 03:19:44.517 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 03:19:44.517 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#135](f:0,a:1) destructor()
-10-29 03:19:44.517 23256 23256 D BufferQueueConsumer: [VRI[Launcher]#135(BLAST Consumer)135](id:5ad800000087,api:0,p:-1,c:23256) disconnect
-10-29 03:19:44.540 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
-10-29 03:19:44.571 23256 23256 D BufferQueueConsumer: [](id:5ad800000088,api:0,p:-1,c:23256) connect: controlledByApp=false
-10-29 03:19:44.571 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#136](f:0,a:0) constructor()
-10-29 03:19:44.571 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#136](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
-10-29 03:19:44.596 23256 23385 D BLASTBufferQueue: [VRI[Launcher]#136](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1100877641459231(auto) mPendingTransactions.size=0 graphicBufferId=99883759436729 transform=0
-10-29 03:19:44.610 23256 23256 I bnve    : onResume
-10-29 03:19:44.635 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 03:19:44.636 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 03:19:44.637 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 03:19:44.638 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 03:19:46.807 23256 23256 I bnve    : onPause
-10-29 03:19:47.023  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +327ms
-10-29 03:19:47.037 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 03:19:47.037 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 03:19:47.037 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 03:19:47.039 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 03:19:47.243 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
-10-29 03:19:47.267 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 03:19:47.268 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#136](f:0,a:1) destructor()
-10-29 03:19:47.268 23256 23256 D BufferQueueConsumer: [VRI[Launcher]#136(BLAST Consumer)136](id:5ad800000088,api:0,p:-1,c:23256) disconnect
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 21892
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: anonymous@1:2546050
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: metroRequire@1:91948
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: anonymous@1:2542358
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: metroRequire@1:91948
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: get@1:704383
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: metroContext@1:704088
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: loadRoute@1:933407
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: getLayoutNode@1:935475
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: _loop@1:933305
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: getRoutes@1:932152
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: getRoutes@1:931380
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: initialize@1:906463
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: anonymous@1:905068
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: useMemo@1:427180
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: anonymous@1:216470
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: ContextNavigator@1:948340
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: renderWithHooks@1:382872
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: beginWork@1:430869
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: workLoopSync@1:416298
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: renderRootSync@1:416129
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: updateContainer@1:422756
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: anonymous@1:431861
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: renderElement@1:250306
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: renderApplication@1:211665
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: anonymous@1:203533
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: runApplication@1:203958
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: __callFunction@1:111349
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: anonymous@1:109791
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: __guard@1:110731
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 03:19:47.275 21892 22610 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 03:19:47.293 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
-10-29 03:19:47.333 23256 23256 D BufferQueueConsumer: [](id:5ad800000089,api:0,p:-1,c:23256) connect: controlledByApp=false
-10-29 03:19:47.333 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#137](f:0,a:0) constructor()
-10-29 03:19:47.333 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#137](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
-10-29 03:19:47.350 23256 23385 D BLASTBufferQueue: [VRI[Launcher]#137](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1100880395025462(auto) mPendingTransactions.size=0 graphicBufferId=99883759436736 transform=0
-10-29 03:19:47.352 23256 23256 I bnve    : onStop
-10-29 03:19:47.358 23256 23256 I bnve    : onStart
-10-29 03:19:47.361 23256 23256 I blly    : (REDACTED) [%s] onStart()
-10-29 03:19:47.361 23256 23256 I bloe    : Reloading theme data
-10-29 03:19:47.362 23256 23256 I bnve    : onResume
-10-29 03:19:47.434 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 03:19:47.435 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 03:19:47.435 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 03:19:47.436 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 03:19:51.078 22575 22575 I 1taxi.driverpro: Using CollectorTypeCC GC.
-10-29 03:19:51.080 22575 22575 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
-10-29 03:19:51.083 22575 22575 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
-10-29 03:19:51.092 22575 22575 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
-10-29 03:19:51.092 22575 22575 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
-10-29 03:19:51.101 22575 22575 D CompatChangeReporter: Compat change id reported: 242716250; UID 10572; state: ENABLED
-10-29 03:19:51.118 22575 22575 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
-10-29 03:19:51.126 22575 22575 D nativeloader: Configuring clns-7 for other apk /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64:/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
-10-29 03:19:51.146 22575 22575 V GraphicsEnvironment: Currently set values for:
-10-29 03:19:51.146 22575 22575 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
-10-29 03:19:51.146 22575 22575 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
-10-29 03:19:51.146 22575 22575 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
-10-29 03:19:51.146 22575 22575 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
-10-29 03:19:51.216 22575 22575 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
-10-29 03:19:51.216 22575 22575 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
-10-29 03:19:51.218 22575 22575 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
-10-29 03:19:51.229 22575 22575 V SoLoader: Init SoLoader delegate
-10-29 03:19:51.249 22575 22575 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
-10-29 03:19:51.297 22575 22575 V SoLoader: libhermes.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.300 22575 22575 V SoLoader: libjsi.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.301 22575 22575 V SoLoader: libfolly_runtime.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.302 22575 22575 V SoLoader: libglog.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.303 22575 22575 V SoLoader: libm.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.303 22575 22575 V SoLoader: libm.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.303 22575 22575 D SoLoader: libm.so found on /system/lib64
-10-29 03:19:51.303 22575 22575 D SoLoader: libm.so loaded implicitly
-10-29 03:19:51.303 22575 22575 V SoLoader: libc++_shared.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.304 23256 23256 I bnve    : onPause
-10-29 03:19:51.304 22575 22575 V SoLoader: libc.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.304 22575 22575 V SoLoader: libc.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.304 22575 22575 D SoLoader: libc.so found on /system/lib64
-10-29 03:19:51.304 22575 22575 D SoLoader: libc.so loaded implicitly
-10-29 03:19:51.304 22575 22575 V SoLoader: libdl.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.304 22575 22575 V SoLoader: libdl.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.304 22575 22575 D SoLoader: libdl.so found on /system/lib64
-10-29 03:19:51.304 22575 22575 D SoLoader: libdl.so loaded implicitly
-10-29 03:19:51.307 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.307 22575 22575 D SoLoader: libc++_shared.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.309 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.309 22575 22575 D SoLoader: libglog.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.311 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.311 22575 22575 D SoLoader: libfolly_runtime.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.312 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.313 22575 22575 D SoLoader: libjsi.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.313 22575 22575 V SoLoader: libfbjni.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.314 22575 22575 V SoLoader: libandroid.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.314 22575 22575 V SoLoader: libandroid.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.314 22575 22575 D SoLoader: libandroid.so found on /system/lib64
-10-29 03:19:51.314 22575 22575 D SoLoader: libandroid.so loaded implicitly
-10-29 03:19:51.314 22575 22575 V SoLoader: liblog.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.314 22575 22575 V SoLoader: liblog.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.314 22575 22575 D SoLoader: liblog.so found on /system/lib64
-10-29 03:19:51.314 22575 22575 D SoLoader: liblog.so loaded implicitly
-10-29 03:19:51.316 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.316 22575 22575 D SoLoader: libfbjni.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.318 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.318 22575 22575 D SoLoader: libhermes.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.318 22575 22575 V SoLoader: libhermes_executor.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.322 22575 22575 V SoLoader: libreactnativejni.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.325 22575 22575 V SoLoader: libyoga.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.327 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.327 22575 22575 D SoLoader: libyoga.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.328 22575 22575 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.330 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.330 22575 22575 D SoLoader: libreactperfloggerjni.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.330 22575 22575 V SoLoader: libreact_render_core.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.333 22575 22575 V SoLoader: libreact_render_debug.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.335 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.336 22575 22575 D SoLoader: libreact_render_debug.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.336 22575 22575 V SoLoader: libreact_render_graphics.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.338 22575 22575 V SoLoader: libreact_utils.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.340 22575 22575 V SoLoader: libreact_debug.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.341 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.342 22575 22575 D SoLoader: libreact_debug.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.342 22575 22575 V SoLoader: libjsinspector.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.343 22575 22575 V SoLoader: libreact_featureflags.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.345 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.345 22575 22575 D SoLoader: libreact_featureflags.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.345 22575 22575 V SoLoader: libruntimeexecutor.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.347 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.347 22575 22575 D SoLoader: libruntimeexecutor.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.348 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.348 22575 22575 D SoLoader: libjsinspector.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.350 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.350 22575 22575 D SoLoader: libreact_utils.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.351 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.351 22575 22575 D SoLoader: libreact_render_graphics.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.351 22575 22575 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.353 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.354 22575 22575 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.355 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.355 22575 22575 D SoLoader: libreact_render_core.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.357 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.358 22575 22575 D SoLoader: libreactnativejni.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.359 22575 22575 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.359 22575 22575 D SoLoader: libhermes_executor.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.369 22575 22675 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.371 22575 22575 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
-10-29 03:19:51.371 22575 22575 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 03:19:51.371 22575 22575 I M-ProMotion: M-ProMotion is disabled
-10-29 03:19:51.372 22575 22677 I PowerHalWrapper: PowerHalWrapper.getInstance 
-10-29 03:19:51.376 22575 22575 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
-10-29 03:19:51.379 22575 22575 W HWUI    : Unknown dataspace 0
-10-29 03:19:51.397 22575 22575 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
-10-29 03:19:51.397 22575 22575 D BufferQueueConsumer: [](id:582f00000000,api:0,p:-1,c:22575) connect: controlledByApp=false
-10-29 03:19:51.398 22575 22575 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
-10-29 03:19:51.398 22575 22575 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
-10-29 03:19:51.404 22575 22675 I ExpoModulesCore: ✅ AppContext was initialized
-10-29 03:19:51.407 22575 22664 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
-10-29 03:19:51.440 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
-10-29 03:19:51.443 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
-10-29 03:19:51.444 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
-10-29 03:19:51.445 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
-10-29 03:19:51.446 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
-10-29 03:19:51.447 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
-10-29 03:19:51.447 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
-10-29 03:19:51.448 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
-10-29 03:19:51.449 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
-10-29 03:19:51.450 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
-10-29 03:19:51.451 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
-10-29 03:19:51.451 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
-10-29 03:19:51.451 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
-10-29 03:19:51.452 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
-10-29 03:19:51.453 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
-10-29 03:19:51.453 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
-10-29 03:19:51.453 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
-10-29 03:19:51.454 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
-10-29 03:19:51.455 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
-10-29 03:19:51.455 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
-10-29 03:19:51.455 22575 22664 I GrallocExtra: gralloc_extra_query:is_SW3D 0
-10-29 03:19:51.456 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
-10-29 03:19:51.456 22575 22664 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1100884501615540(auto) mPendingTransactions.size=0 graphicBufferId=96958886707200 transform=0
-10-29 03:19:51.456 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
-10-29 03:19:51.456 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
-10-29 03:19:51.457 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
-10-29 03:19:51.457 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
-10-29 03:19:51.458 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
-10-29 03:19:51.459 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
-10-29 03:19:51.459 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
-10-29 03:19:51.460 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
-10-29 03:19:51.463 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
-10-29 03:19:51.464 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
-10-29 03:19:51.465 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
-10-29 03:19:51.466 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
-10-29 03:19:51.466 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
-10-29 03:19:51.467 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
-10-29 03:19:51.467 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
-10-29 03:19:51.468 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
-10-29 03:19:51.468 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
-10-29 03:19:51.469 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
-10-29 03:19:51.469 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
-10-29 03:19:51.469 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
-10-29 03:19:51.470 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
-10-29 03:19:51.470 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
-10-29 03:19:51.471 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
-10-29 03:19:51.471 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
-10-29 03:19:51.472 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
-10-29 03:19:51.472 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
-10-29 03:19:51.473 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
-10-29 03:19:51.474 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
-10-29 03:19:51.474 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
-10-29 03:19:51.475  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +284ms
-10-29 03:19:51.475 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
-10-29 03:19:51.476 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
-10-29 03:19:51.476 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
-10-29 03:19:51.478 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
-10-29 03:19:51.479 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
-10-29 03:19:51.479 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
-10-29 03:19:51.480 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
-10-29 03:19:51.481 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
-10-29 03:19:51.482 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
-10-29 03:19:51.483 22575 22575 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{88218ae V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE|IS_FORWARD_NAVIGATION
-10-29 03:19:51.484 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
-10-29 03:19:51.485 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
-10-29 03:19:51.485 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
-10-29 03:19:51.486 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
-10-29 03:19:51.487 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
-10-29 03:19:51.488 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
-10-29 03:19:51.488 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 03:19:51.489 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 03:19:51.489 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
-10-29 03:19:51.489 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 03:19:51.490 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
-10-29 03:19:51.490 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
-10-29 03:19:51.491 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
-10-29 03:19:51.491 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
-10-29 03:19:51.492 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
-10-29 03:19:51.493 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
-10-29 03:19:51.493 22575 22690 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
-10-29 03:19:51.528 22575 22689 V SoLoader: libexpo-modules-core.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.530 22575 22689 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.534 22575 22689 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.534 22575 22689 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.535 22575 22689 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.536 22575 22689 D SoLoader: libexpo-modules-core.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.537 22575 22689 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.542 22575 22689 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.542 22575 22689 D SoLoader: libturbomodulejsijni.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.546 22575 22689 I ExpoModulesCore: ✅ JSI interop was installed
-10-29 03:19:51.547 22575 22689 W ExpoModulesCore: ⚠️ JSI interop was already installed
-10-29 03:19:51.553 22575 22689 I ExpoModulesCore: ✅ Constants were exported
-10-29 03:19:51.576 22575 22689 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!classes3.dex): ok
-10-29 03:19:51.580 22575 22689 I ReactNativeJS: Running "main
-10-29 03:19:51.585 22575 22689 V SoLoader: libreactnativeblob.so not found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/lib/arm64
-10-29 03:19:51.589 22575 22689 D nativeloader: Load /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk): ok
-10-29 03:19:51.589 22575 22689 D SoLoader: libreactnativeblob.so found on /data/app/~~V1NgwEAL7VMyW6k07jBuLQ==/com.a1taxi.driverpro-yhuLrWPm6zNgBlk2sReVTA==/base.apk!/lib/arm64-v8a
-10-29 03:19:51.593 22575 22689 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
-10-29 03:19:51.593 22575 22689 I ReactNativeJS:   hasAnonKey: true,
-10-29 03:19:51.593 22575 22689 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
-10-29 03:19:51.704 22575 22689 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
-10-29 03:19:51.705 22575 22689 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 03:19:51.706 22575 22689 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
-10-29 03:19:51.707 22575 22689 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 03:19:51.707 22575 22689 E ReactNativeJS: 
-10-29 03:19:51.707 22575 22689 E ReactNativeJS: This error is located at:
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in ContextNavigator
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in ExpoRoot
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in App
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in RCTView
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in Unknown
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 03:19:51.707 22575 22689 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
-10-29 03:19:51.707 22575 22689 E ReactNativeJS: 
-10-29 03:19:51.707 22575 22689 E ReactNativeJS: This error is located at:
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in ContextNavigator
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in ExpoRoot
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in App
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in RCTView
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in Unknown
-10-29 03:19:51.707 22575 22689 E ReactNativeJS:     in AppContainer, js engine: hermes
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 22575
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: anonymous@1:2546050
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: guardedLoadModule@1:92318
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: metroRequire@1:91948
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: anonymous@1:2542358
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: loadModuleImplementation@1:92788
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: guardedLoadModule@1:92275
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: metroRequire@1:91948
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: get@1:704383
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: metroContext@1:704088
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: loadRoute@1:933407
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: getLayoutNode@1:935475
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: _loop@1:933305
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: getDirectoryTree@1:932443
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: getRoutes@1:932152
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: getRoutes@1:931380
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: initialize@1:906463
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: anonymous@1:905068
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: useMemo@1:427180
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: anonymous@1:216470
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: useInitializeExpoRouter@1:905008
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: ContextNavigator@1:948340
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: renderWithHooks@1:382872
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: beginWork@1:430869
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: performUnitOfWork@1:417168
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: workLoopSync@1:416298
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: renderRootSync@1:416129
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: updateContainer@1:422756
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: anonymous@1:431861
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: renderElement@1:250306
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: renderApplication@1:211665
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: anonymous@1:203533
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: runApplication@1:203958
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: __callFunction@1:111349
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: anonymous@1:109791
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: __guard@1:110731
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
-10-29 03:19:51.709 22575 22690 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
-10-29 03:19:51.727 23256 23256 I bnve    : onResume
-10-29 03:19:51.765 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
-10-29 03:19:51.766 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
-10-29 03:19:51.766 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
-10-29 03:19:51.767 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 26057
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: anonymous@1:2546050
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: loadModuleImplementation@1:92788
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: guardedLoadModule@1:92318
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: metroRequire@1:91948
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: anonymous@1:2542358
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: loadModuleImplementation@1:92788
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: guardedLoadModule@1:92275
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: metroRequire@1:91948
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: get@1:704383
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: metroContext@1:704088
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: loadRoute@1:933407
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: getLayoutNode@1:935475
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: _loop@1:933305
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: getDirectoryTree@1:932443
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: getRoutes@1:932152
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: getRoutes@1:931380
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: initialize@1:906463
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: anonymous@1:905068
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: useMemo@1:427180
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: anonymous@1:216470
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: useInitializeExpoRouter@1:905008
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: ContextNavigator@1:948340
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: renderWithHooks@1:382872
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: beginWork@1:430869
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: performUnitOfWork@1:417168
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: workLoopSync@1:416298
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: renderRootSync@1:416129
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: updateContainer@1:422756
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: anonymous@1:431861
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: renderElement@1:250306
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: renderApplication@1:211665
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: anonymous@1:203533
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: runApplication@1:203958
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: __callFunction@1:111349
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: anonymous@1:109791
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: __guard@1:110731
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
+10-29 12:13:53.720 26057 30253 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
+10-29 12:13:53.746 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-29 12:13:53.768 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-29 12:13:53.769 23256 23256 D BufferQueueConsumer: [](id:5ad8000000b6,api:0,p:-1,c:23256) connect: controlledByApp=false
+10-29 12:13:53.769 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#182](f:0,a:0) constructor()
+10-29 12:13:53.769 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#182](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-29 12:13:53.781 23256 23385 D BLASTBufferQueue: [VRI[Launcher]#182](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1107422973790929(auto) mPendingTransactions.size=0 graphicBufferId=99883759437051 transform=0
+10-29 12:13:53.820 23256 23256 I bnve    : onStart
+10-29 12:13:53.822 23256 23256 I blly    : (REDACTED) [%s] onStart()
+10-29 12:13:53.823 23256 23256 I bloe    : Reloading theme data
+10-29 12:13:53.829 23256 23256 I bnve    : onResume
+10-29 12:13:53.888 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
+10-29 12:13:53.888 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
+10-29 12:13:53.889 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-29 12:13:53.889 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:54.604  7741  7741 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.semanticlocationhistory.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.GmsApiService }
+10-29 12:13:55.292 19858 19858 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.libs.gmscorelogger.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+10-29 12:13:56.326 23256 23256 I bnve    : onPause
+10-29 12:13:56.533  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +329ms
+10-29 12:13:56.545 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
+10-29 12:13:56.546 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
+10-29 12:13:56.547 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-29 12:13:56.547 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:56.759 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-29 12:13:56.777 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-29 12:13:56.778 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#182](f:0,a:1) destructor()
+10-29 12:13:56.779 23256 23256 D BufferQueueConsumer: [VRI[Launcher]#182(BLAST Consumer)182](id:5ad8000000b6,api:0,p:-1,c:23256) disconnect
+10-29 12:13:56.792 23256 23256 I bnve    : onStop
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 26305
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: anonymous@1:2546050
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: loadModuleImplementation@1:92788
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: guardedLoadModule@1:92318
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: metroRequire@1:91948
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: anonymous@1:2542358
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: loadModuleImplementation@1:92788
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: guardedLoadModule@1:92275
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: metroRequire@1:91948
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: get@1:704383
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: metroContext@1:704088
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: loadRoute@1:933407
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: getLayoutNode@1:935475
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: _loop@1:933305
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: getDirectoryTree@1:932443
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: getRoutes@1:932152
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: getRoutes@1:931380
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: initialize@1:906463
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: anonymous@1:905068
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: useMemo@1:427180
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: anonymous@1:216470
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: useInitializeExpoRouter@1:905008
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: ContextNavigator@1:948340
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: renderWithHooks@1:382872
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: beginWork@1:430869
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: performUnitOfWork@1:417168
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: workLoopSync@1:416298
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: renderRootSync@1:416129
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: updateContainer@1:422756
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: anonymous@1:431861
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: renderElement@1:250306
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: renderApplication@1:211665
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: anonymous@1:203533
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: runApplication@1:203958
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: __callFunction@1:111349
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: anonymous@1:109791
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: __guard@1:110731
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
+10-29 12:13:56.804 26305 30355 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
+10-29 12:13:56.817 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-29 12:13:56.836 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-29 12:13:56.837 23256 23256 D BufferQueueConsumer: [](id:5ad8000000b7,api:0,p:-1,c:23256) connect: controlledByApp=false
+10-29 12:13:56.838 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#183](f:0,a:0) constructor()
+10-29 12:13:56.841 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#183](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-29 12:13:56.862 23256 23385 D BLASTBufferQueue: [VRI[Launcher]#183](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1107426055225391(auto) mPendingTransactions.size=0 graphicBufferId=99883759437058 transform=0
+10-29 12:13:56.868 23256 23256 I bnve    : onStart
+10-29 12:13:56.874 23256 23256 I blly    : (REDACTED) [%s] onStart()
+10-29 12:13:56.874 23256 23256 I bloe    : Reloading theme data
+10-29 12:13:56.885 23256 23256 I bnve    : onResume
+10-29 12:13:56.921 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
+10-29 12:13:56.921 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
+10-29 12:13:56.922 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-29 12:13:56.922 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:57.435  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:13:58.624 30293 30293 I 1taxi.driverpro: Using CollectorTypeCC GC.
+10-29 12:13:58.629 30293 30293 E 1taxi.driverpro: Not starting debugger since process cannot load the jdwp agent.
+10-29 12:13:58.633 30293 30293 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-29 12:13:58.645 30293 30293 E 1taxi.driverpro: BBinder_init Processname  <pre-initialized>  
+10-29 12:13:58.645 30293 30293 E 1taxi.driverpro: BBinder_init hasGetProcessName  <pre-initialized>
+10-29 12:13:58.673 30293 30293 D CompatChangeReporter: Compat change id reported: 242716250; UID 10574; state: ENABLED
+10-29 12:13:58.681 30293 30293 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/org.apache.http.legacy.jar
+10-29 12:13:58.686 30293 30293 D nativeloader: Configuring clns-7 for other apk /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64:/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.a1taxi.driverpro
+10-29 12:13:58.698 30293 30293 V GraphicsEnvironment: Currently set values for:
+10-29 12:13:58.698 30293 30293 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
+10-29 12:13:58.698 30293 30293 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
+10-29 12:13:58.698 30293 30293 V GraphicsEnvironment: com.a1taxi.driverpro is not listed in per-application setting
+10-29 12:13:58.698 30293 30293 V GraphicsEnvironment: App is not on the allowlist for updatable production driver.
+10-29 12:13:58.711 23256 23256 I bnve    : onPause
+10-29 12:13:58.714 30293 30293 W FirebaseApp: Default FirebaseApp failed to initialize because no default options were found. This usually means that com.google.gms:google-services was not applied to your gradle project.
+10-29 12:13:58.714 30293 30293 I FirebaseInitProvider: FirebaseApp initialization unsuccessful
+10-29 12:13:58.716 30293 30293 D WM-WrkMgrInitializer: Initializing WorkManager with default configuration.
+10-29 12:13:58.725 30293 30293 V SoLoader: Init SoLoader delegate
+10-29 12:13:58.739 30293 30293 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+10-29 12:13:58.769 30293 30293 V SoLoader: libhermes.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.772 30293 30293 V SoLoader: libjsi.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.773 30293 30293 V SoLoader: libfolly_runtime.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.773 30293 30293 V SoLoader: libglog.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.774 30293 30293 V SoLoader: libm.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.775 30293 30293 V SoLoader: libm.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.775 30293 30293 D SoLoader: libm.so found on /system/lib64
+10-29 12:13:58.775 30293 30293 D SoLoader: libm.so loaded implicitly
+10-29 12:13:58.775 30293 30293 V SoLoader: libc++_shared.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.775 30293 30293 V SoLoader: libc.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.775 30293 30293 V SoLoader: libc.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.775 30293 30293 D SoLoader: libc.so found on /system/lib64
+10-29 12:13:58.775 30293 30293 D SoLoader: libc.so loaded implicitly
+10-29 12:13:58.776 30293 30293 V SoLoader: libdl.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.776 30293 30293 V SoLoader: libdl.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.776 30293 30293 D SoLoader: libdl.so found on /system/lib64
+10-29 12:13:58.776 30293 30293 D SoLoader: libdl.so loaded implicitly
+10-29 12:13:58.777 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libc++_shared.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.777 30293 30293 D SoLoader: libc++_shared.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.778 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libglog.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.778 30293 30293 D SoLoader: libglog.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.779 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libfolly_runtime.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.779 30293 30293 D SoLoader: libfolly_runtime.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.780 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libjsi.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.780 30293 30293 D SoLoader: libjsi.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.780 30293 30293 V SoLoader: libfbjni.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.781 30293 30293 V SoLoader: libandroid.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.781 30293 30293 V SoLoader: libandroid.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.781 30293 30293 D SoLoader: libandroid.so found on /system/lib64
+10-29 12:13:58.781 30293 30293 D SoLoader: libandroid.so loaded implicitly
+10-29 12:13:58.781 30293 30293 V SoLoader: liblog.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.781 30293 30293 V SoLoader: liblog.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.781 30293 30293 D SoLoader: liblog.so found on /system/lib64
+10-29 12:13:58.781 30293 30293 D SoLoader: liblog.so loaded implicitly
+10-29 12:13:58.782 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libfbjni.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.782 30293 30293 D SoLoader: libfbjni.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.784 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libhermes.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.784 30293 30293 D SoLoader: libhermes.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.784 30293 30293 V SoLoader: libhermes_executor.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.787 30293 30293 V SoLoader: libreactnativejni.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.789 30293 30293 V SoLoader: libyoga.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.791 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libyoga.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.791 30293 30293 D SoLoader: libyoga.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.791 30293 30293 V SoLoader: libreactperfloggerjni.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.793 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreactperfloggerjni.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.793 30293 30293 D SoLoader: libreactperfloggerjni.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.793 30293 30293 V SoLoader: libreact_render_core.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.795 30293 30293 V SoLoader: libreact_render_debug.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.796 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_render_debug.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.796 30293 30293 D SoLoader: libreact_render_debug.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.797 30293 30293 V SoLoader: libreact_render_graphics.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.798 30293 30293 V SoLoader: libreact_utils.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.800 30293 30293 V SoLoader: libreact_debug.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.801 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_debug.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.801 30293 30293 D SoLoader: libreact_debug.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.801 30293 30293 V SoLoader: libjsinspector.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.802 30293 30293 V SoLoader: libreact_featureflags.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.804 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_featureflags.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.804 30293 30293 D SoLoader: libreact_featureflags.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.804 30293 30293 V SoLoader: libruntimeexecutor.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.805 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libruntimeexecutor.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.805 30293 30293 D SoLoader: libruntimeexecutor.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.806 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libjsinspector.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.807 30293 30293 D SoLoader: libjsinspector.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.807 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_utils.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.808 30293 30293 D SoLoader: libreact_utils.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.809 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_render_graphics.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.809 30293 30293 D SoLoader: libreact_render_graphics.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.809 30293 30293 V SoLoader: libreact_render_mapbuffer.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.810 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_render_mapbuffer.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.811 30293 30293 D SoLoader: libreact_render_mapbuffer.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.811 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_render_core.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.811 30293 30293 D SoLoader: libreact_render_core.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.813 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreactnativejni.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.813 30293 30293 D SoLoader: libreactnativejni.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.814 30293 30293 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libhermes_executor.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.815 30293 30293 D SoLoader: libhermes_executor.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.823 30293 30469 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libexpo-av.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.826 30293 30293 D nativeloader: Load libpowerhalwrap_jni.so using system ns (caller=/system_ext/framework/mediatek-framework.jar): ok
+10-29 12:13:58.826 30293 30293 I PowerHalWrapper: PowerHalWrapper.getInstance 
+10-29 12:13:58.826 30293 30293 I M-ProMotion: M-ProMotion is disabled
+10-29 12:13:58.827 30293 30471 I PowerHalWrapper: PowerHalWrapper.getInstance 
+10-29 12:13:58.831 30293 30293 W libc    : Access denied finding property "persist.vivo.ltw.enabled"
+10-29 12:13:58.833 30293 30293 W HWUI    : Unknown dataspace 0
+10-29 12:13:58.850 30293 30293 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-29 12:13:58.850 30293 30293 D BufferQueueConsumer: [](id:765500000000,api:0,p:-1,c:30293) connect: controlledByApp=false
+10-29 12:13:58.851 30293 30293 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) constructor()
+10-29 12:13:58.851 30293 30293 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:0) update width=1080 height=2392 format=-1 mTransformHint=0
+10-29 12:13:58.857 30293 30469 I ExpoModulesCore: ✅ AppContext was initialized
+10-29 12:13:58.858 30293 30446 D MAGT_SYNC_FRAME: MAGT Sync: MAGT is not supported. Disabling Sync.
+10-29 12:13:58.897 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.drawer.ReactDrawerLayoutManager
+10-29 12:13:58.901 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.uimanager.LayoutShadowNode
+10-29 12:13:58.902 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollViewManager
+10-29 12:13:58.903 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactHorizontalScrollContainerViewManager
+10-29 12:13:58.903 30293 30446 I GrallocExtra: gralloc_extra_query:is_SW3D 0
+10-29 12:13:58.903 30293 30446 D BLASTBufferQueue: [VRI[MainActivity]#0](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1107428096743237(auto) mPendingTransactions.size=0 graphicBufferId=130107444297728 transform=0
+10-29 12:13:58.904 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ReactProgressBarViewManager
+10-29 12:13:58.906 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.progressbar.ProgressBarShadowNode
+10-29 12:13:58.908 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.scroll.ReactScrollViewManager
+10-29 12:13:58.909 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager
+10-29 12:13:58.910 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.switchview.ReactSwitchManager$ReactSwitchShadowNode
+10-29 12:13:58.910 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.swiperefresh.SwipeRefreshLayoutManager
+10-29 12:13:58.911 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageViewManager
+10-29 12:13:58.911 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.frescosupport.FrescoBasedReactTextInlineImageShadowNode
+10-29 12:13:58.912 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.image.ReactImageManager
+10-29 12:13:58.914 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ReactModalHostManager
+10-29 12:13:58.915 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.modal.ModalHostShadowNode
+10-29 12:13:58.916 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextManager
+10-29 12:13:58.917 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactRawTextShadowNode
+10-29 12:13:58.918 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputManager
+10-29 12:13:58.919 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.textinput.ReactTextInputShadowNode
+10-29 12:13:58.920 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextViewManager
+10-29 12:13:58.921 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactTextShadowNode
+10-29 12:13:58.921 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.view.ReactViewManager
+10-29 12:13:58.922 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextViewManager
+10-29 12:13:58.922 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.text.ReactVirtualTextShadowNode
+10-29 12:13:58.922 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.facebook.react.views.unimplementedview.ReactUnimplementedViewManager
+10-29 12:13:58.923 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class expo.modules.kotlin.views.GroupViewManagerWrapper
+10-29 12:13:58.924 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerRootViewManager
+10-29 12:13:58.924 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.gesturehandler.react.RNGestureHandlerButtonViewManager
+10-29 12:13:58.925 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapManager
+10-29 12:13:58.926  1870  1976 I ActivityTaskManager: Displayed com.a1taxi.driverpro/.MainActivity for user 0: +335ms
+10-29 12:13:58.926 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapMarkerManager
+10-29 12:13:58.926 30293 30293 V ImeFocusController: onWindowFocus: com.android.internal.policy.DecorView{88218ae V.E...... R....... 0,0-1080,2392}[MainActivity] softInputMode=STATE_UNSPECIFIED|ADJUST_RESIZE
+10-29 12:13:58.927 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCalloutManager
+10-29 12:13:58.928 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolylineManager
+10-29 12:13:58.928 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapGradientPolylineManager
+10-29 12:13:58.929 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapPolygonManager
+10-29 12:13:58.931 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapCircleManager
+10-29 12:13:58.931 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapUrlTileManager
+10-29 12:13:58.932 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapWMSTileManager
+10-29 12:13:58.932 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
+10-29 12:13:58.933 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapLocalTileManager
+10-29 12:13:58.933 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapOverlayManager
+10-29 12:13:58.933 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
+10-29 12:13:58.934 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.rnmaps.maps.MapHeatmapManager
+10-29 12:13:58.934 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.a1taxi.driverpro, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-29 12:13:58.934 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaProviderManager
+10-29 12:13:58.935 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewManager
+10-29 12:13:58.935 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.th3rdwave.safeareacontext.SafeAreaViewShadowNode
+10-29 12:13:58.935 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenContainerViewManager
+10-29 12:13:58.936 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:58.936 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenViewManager
+10-29 12:13:58.937 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ModalScreenViewManager
+10-29 12:13:58.937 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackViewManager
+10-29 12:13:58.937 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderConfigViewManager
+10-29 12:13:58.939 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.ScreenStackHeaderSubviewManager
+10-29 12:13:58.939 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.swmansion.rnscreens.SearchBarManager
+10-29 12:13:58.940 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$DefsViewManager
+10-29 12:13:58.941 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.VirtualViewManager$RenderableShadowNode
+10-29 12:13:58.942 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MarkerManager
+10-29 12:13:58.943 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ForeignObjectManager
+10-29 12:13:58.944 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$EllipseViewManager
+10-29 12:13:58.944 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LineViewManager
+10-29 12:13:58.945 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$LinearGradientManager
+10-29 12:13:58.946 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$GroupViewManager
+10-29 12:13:58.946 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextViewManager
+10-29 12:13:58.947 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ImageViewManager
+10-29 12:13:58.947 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$ClipPathViewManager
+10-29 12:13:58.948 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RadialGradientManager
+10-29 12:13:58.948 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$MaskManager
+10-29 12:13:58.949 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$SymbolManager
+10-29 12:13:58.950 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PatternManager
+10-29 12:13:58.951 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$RectViewManager
+10-29 12:13:58.951 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TextPathViewManager
+10-29 12:13:58.952 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.SvgViewManager
+10-29 12:13:58.952 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$PathViewManager
+10-29 12:13:58.953 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$UseViewManager
+10-29 12:13:58.953 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$CircleViewManager
+10-29 12:13:58.954 30293 30486 W unknown:ViewManagerPropertyUpdater: Could not find generated setter for class com.horcrux.svg.RenderableViewManager$TSpanViewManager
+10-29 12:13:58.984 30293 30485 V SoLoader: libexpo-modules-core.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.986 30293 30485 V SoLoader: libreact_nativemodule_core.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.990 30293 30485 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreact_nativemodule_core.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.990 30293 30485 D SoLoader: libreact_nativemodule_core.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.992 30293 30485 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libexpo-modules-core.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.993 30293 30485 D SoLoader: libexpo-modules-core.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:58.993 30293 30485 V SoLoader: libturbomodulejsijni.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:58.998 30293 30485 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libturbomodulejsijni.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:58.998 30293 30485 D SoLoader: libturbomodulejsijni.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:59.002 30293 30485 I ExpoModulesCore: ✅ JSI interop was installed
+10-29 12:13:59.002 30293 30485 W ExpoModulesCore: ⚠️ JSI interop was already installed
+10-29 12:13:59.008 30293 30485 I ExpoModulesCore: ✅ Constants were exported
+10-29 12:13:59.030 30293 30485 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/librnscreens.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!classes3.dex): ok
+10-29 12:13:59.033 30293 30485 I ReactNativeJS: Running "main
+10-29 12:13:59.038 30293 30485 V SoLoader: libreactnativeblob.so not found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/lib/arm64
+10-29 12:13:59.042 30293 30485 D nativeloader: Load /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a/libreactnativeblob.so using class loader ns clns-7 (caller=/data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk): ok
+10-29 12:13:59.043 30293 30485 D SoLoader: libreactnativeblob.so found on /data/app/~~6u5MITLQ79cnlG2LoSu7AA==/com.a1taxi.driverpro-B1ZARxWSgKNmfVC0i264iA==/base.apk!/lib/arm64-v8a
+10-29 12:13:59.046 30293 30485 I ReactNativeJS: 'Supabase Config:', { hasUrl: true,
+10-29 12:13:59.046 30293 30485 I ReactNativeJS:   hasAnonKey: true,
+10-29 12:13:59.046 30293 30485 I ReactNativeJS:   url: 'https://whubaypabojomdyfqxcf.supabase.co' }
+10-29 12:13:59.141 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=true newVisibility=false
+10-29 12:13:59.161 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-29 12:13:59.163 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#183](f:0,a:1) destructor()
+10-29 12:13:59.163 23256 23256 D BufferQueueConsumer: [VRI[Launcher]#183(BLAST Consumer)183](id:5ad8000000b7,api:0,p:-1,c:23256) disconnect
+10-29 12:13:59.170 30293 30485 I ReactNativeJS: ✅ TripLocationTracker: Background task registered
+10-29 12:13:59.175 30293 30485 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
+10-29 12:13:59.175 23256 23256 I bnve    : onStop
+10-29 12:13:59.178 30293 30485 E ReactNativeJS: TypeError: undefined is not a function, js engine: hermes
+10-29 12:13:59.179 30293 30485 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
+10-29 12:13:59.179 30293 30485 E ReactNativeJS: 
+10-29 12:13:59.179 30293 30485 E ReactNativeJS: This error is located at:
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in ContextNavigator
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in ExpoRoot
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in App
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in RCTView
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in Unknown
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in AppContainer, js engine: hermes
+10-29 12:13:59.179 30293 30485 E ReactNativeJS: TypeError: Cannot read property 'ErrorBoundary' of undefined
+10-29 12:13:59.179 30293 30485 E ReactNativeJS: 
+10-29 12:13:59.179 30293 30485 E ReactNativeJS: This error is located at:
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in ContextNavigator
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in ExpoRoot
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in App
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in RCTView
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in Unknown
+10-29 12:13:59.179 30293 30485 E ReactNativeJS:     in AppContainer, js engine: hermes
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: FATAL EXCEPTION: mqt_native_modules
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: Process: com.a1taxi.driverpro, PID: 30293
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: com.facebook.react.common.JavascriptException: TypeError: undefined is not a function, js engine: hermes, stack:
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: anonymous@1:2546050
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: loadModuleImplementation@1:92788
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: guardedLoadModule@1:92318
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: metroRequire@1:91948
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: anonymous@1:2542358
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: loadModuleImplementation@1:92788
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: guardedLoadModule@1:92275
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: metroRequire@1:91948
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: get@1:704383
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: metroContext@1:704088
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: loadRoute@1:933407
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: getLayoutNode@1:935475
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: _loop@1:933305
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: getDirectoryTree@1:932443
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: getRoutes@1:932152
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: getRoutes@1:931380
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: initialize@1:906463
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: anonymous@1:905068
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: useMemo@1:427180
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: anonymous@1:216470
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: useInitializeExpoRouter@1:905008
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: ContextNavigator@1:948340
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: renderWithHooks@1:382872
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: beginWork@1:430869
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: performUnitOfWork@1:417168
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: workLoopSync@1:416298
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: renderRootSync@1:416129
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: flushSyncWorkAcrossRoots_impl@1:372563
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: scheduleUpdateOnFiber@1:413634
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: updateContainer@1:422756
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: anonymous@1:431861
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: renderElement@1:250306
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: renderApplication@1:211665
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: anonymous@1:203533
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: runApplication@1:203958
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: __callFunction@1:111349
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: anonymous@1:109791
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: __guard@1:110731
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: callFunctionReturnFlushedQueue@1:109749
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at com.facebook.react.modules.core.ExceptionsManagerModule.reportException(ExceptionsManagerModule.java:65)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:146)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at com.facebook.jni.NativeRunnable.run(Native Method)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at android.os.Handler.handleCallback(Handler.java:1014)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:102)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:250)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:340)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:233)
+10-29 12:13:59.182 30293 30486 E AndroidRuntime: 	at java.lang.Thread.run(Thread.java:1119)
+10-29 12:13:59.198 23256 23256 D VRI[Launcher]: visibilityChanged oldVisibility=false newVisibility=true
+10-29 12:13:59.205 30293 30486 I Process : Sending signal. PID: 30293 SIG: 9
+10-29 12:13:59.211 23256 23256 D ViewRootImpl: AppSizeAfterRelayout, size: Point(1080, 2392), rotation: ROTATION_0
+10-29 12:13:59.213 23256 23256 D BufferQueueConsumer: [](id:5ad8000000b8,api:0,p:-1,c:23256) connect: controlledByApp=false
+10-29 12:13:59.214 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#184](f:0,a:0) constructor()
+10-29 12:13:59.214 23256 23256 D BLASTBufferQueue: [VRI[Launcher]#184](f:0,a:0) update width=1080 height=2392 format=-2 mTransformHint=0
+10-29 12:13:59.226 23256 23385 D BLASTBufferQueue: [VRI[Launcher]#184](f:0,a:1) acquireNextBufferLocked size=1080x2392 mFrameNumber=1 applyTransaction=true mTimestamp=1107428418831776(auto) mPendingTransactions.size=0 graphicBufferId=99883759437065 transform=0
+10-29 12:13:59.260 23256 23256 I bnve    : onStart
+10-29 12:13:59.264 23256 23256 I blly    : (REDACTED) [%s] onStart()
+10-29 12:13:59.265 23256 23256 I bloe    : Reloading theme data
+10-29 12:13:59.268 23256 23256 I bnve    : onResume
+10-29 12:13:59.324 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2086 
+10-29 12:13:59.325 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 0, locked = false
+10-29 12:13:59.325 18285 18285 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1347 onStartInput(EditorInfo{EditorInfo{packageName=com.android.launcher3, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-29 12:13:59.326 18285 18285 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatus():103 repeatCheckTimes = 1, locked = false
+10-29 12:13:59.819  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:14:02.096  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:14:04.552  5720  5865 D SQLiteQueryBuilder: SELECT _id, _data, _size, date_modified, bucket_id, orientation, datetaken FROM images WHERE ((((is_pending=0 AND NOT _modifier=4) OR (is_pending=1 AND lower(_data) NOT REGEXP '.*/\.pending-(\d+)-([^/]+)$' AND owner_package_name IN ( 'com.vivo.widget.gallery' , 'com.vivo.gallery' )))) AND (is_trashed=0) AND (volume_name IN ( 'external_primary' ))) AND (( bucket_id IN ( -1212198981, -1695567127, -53910322, -2140495773, 606811175, 1251957395, 1115488879, 1092149518, 390907738, -1694063856, -803954635, -1690180765, -1816304744, 911081060, -1291404494, -1285319851, -651554454, 151630153, 543621159, -2002206485, 73761835, -1760112825, -71543827, -302991967, -1227671927, -156420408, -1516374533, 1829735780, -1450708494, -506316380, -1341114264, 1114833418, 1152093397, -1733679058, -2131021710, -680697881, 2084439217, -2024679488, -1447456465, 700805465, 991906690, 1345966226, 657155968, 1266435012, -1966306697, -1897284014, -1949680778, 434583847, 990381004, -1526850504, -1612742889, -1273942824, -1004938028, 331203438, 708879003, 255899559, -528275350, -602893060, -1055518229, 545491069, -1716401999, 668104411, -1118657469, 1040014575, 849662899, -174887798, -1292465169, 1101584562, -613830029, -1577375515, -1628155945, -1033534650, -328196774, -2071947861, 805181138, -1104308479, 181789691, 619245019, 616142335, -1829889111, -1578944343, -1809455754, 1690766750, -793566743, 272894235, -435605656, -1858432929, -792464988, -434569360, -1462931038, -879973635, 65759896, -924335728, -1809287853, 1755148769, -223571158, 2126348076, 48382832, 700217390, 630412299, 183872366, 1059985074, -1806957104, -1641691205, -571335571, 1519174419, 1036004452, -2031220924, -1537104433, 1829930144, -745596364, -8122821, 1366741172, 1548299660, 1674287630, -1535937100, 13148420, 1909659649, 264986155, -9482612, 13005089, -2089205090, -1022498075, -919133986, -884178250, -1422443828, -670014994, -2121027476, 2020100714, 489993, 448544941, -2101462868, -261299595, 1172023232, 1278178828, -607125002, -856420653, -1973993346, 1498690426, -1527464249, -1945110980, 395625896, 1909316592, 569711560, -1686988495, 1763470175, -1488038648, 2113906615, -550734493, 85651275, -1964037955, 428383196, -1949793892, 1136101865, 2018234913, -18391924, 1490911920, -884178653, -1170470833, -1215953411, 1077477957, -1198914825, 1461775709, -643464410, 1900774339, 1272506704, -485246563, 1960476238, -1291404897, -1950041765, 1664549270, 2070856141, 1220790880, 359301071, 278762032, 470519460, -924530092, -1382559966, 904275793, 1298630565, 1186223222, -519179321, 232691476, -1684913851, -750954006, 83641895, 1145800364, -2012790048, 1286776387, 397907126, 1330064451, -1804177550, -1809174739, 174397812, 2043613916, -675937132, 1736146008, -1702973091, -1184968074, 1502601919, 1574223589, 445258174, -1682700158, -351293385, 638217523, 2052700512, 949947357, -1318309340, 616722321, -1406249091, 656868479, -402361508, -1410236246, -1193446467, -1415689986, -1935708161, 1786892787, -2041971395, -1087402833, -1809045590, 658433208, 1208185747, 761624307, 250774884, 12344107, -1415495622, 35166595, -175675851, 912551383, -1432612566, 39258592, -131644514, -1950760957, -1022555983, -1656404229, -731336746, 1106324018, 1962141495, -643270046, 133162019, -2075879543, 945165185, -1572118126, 1746875333, -2129001792, -1739773001, -214169408, 1354535744, -1551292529, 581197485, 1732723533, 1456888538, -1448813142, 13311172, -1569520032, -1527994117, 348164313, 1631149349, -242606674, -1914187326, -1445556762, 211087524, -219150656, -1422672119, -1530754818, -1171388910, -2072752055, -1325148867, 361712075, -1730634595, -340891674, 1407102871, 53870456, -508660256, 2028258487, -815228101, -1694937425, -519178918, 1561178453, -1131671344, 1431320847, 2046578077, -781677303, 1291266200, 848578299, -1972390376, -978314959, -1319727662, 943502520, 1028125135, -175466238, 1195992005, 1920382715, 2108277051, 443703009, 675671268, 263662367, -347572232, 183545411, 1450478273, -1879659704, 1957916785, 1976953110, -1157253172, -1407948598, 
+10-29 12:14:05.447  7741 30563 I Authzen : [DeviceStateSyncManager] The server is in sync with current state. Nothing to do
