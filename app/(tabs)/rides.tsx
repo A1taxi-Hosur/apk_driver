@@ -508,23 +508,21 @@ export default function RidesScreen() {
             </View>
           )}
 
-          {/* Location Tracking Status - Shows the most important status */}
+          {/* Foreground Location Tracking Status */}
           <View style={styles.trackingStatus}>
-            <View style={[styles.trackingDot, { backgroundColor: isBackgroundTrackingActive ? '#10B981' : '#EF4444' }]} />
+            <View style={[styles.trackingDot, { backgroundColor: isTracking ? '#10B981' : '#EF4444' }]} />
             <Text style={styles.trackingText}>
-              Location tracking: {isBackgroundTrackingActive ? 'Active' : 'Inactive'}
+              Location tracking: {isTracking ? 'Active' : 'Inactive'}
             </Text>
           </View>
 
-          {/* Debug info - only show when debugging */}
-          {__DEV__ && (
-            <View style={[styles.trackingStatus, { marginTop: 4 }]}>
-              <View style={[styles.trackingDot, { backgroundColor: isTracking ? '#10B981' : '#EF4444' }]} />
-              <Text style={[styles.trackingText, { fontSize: 10, color: '#94A3B8' }]}>
-                Debug: Foreground updates {isTracking ? 'active' : 'inactive'}
-              </Text>
-            </View>
-          )}
+          {/* Background Tracking Status */}
+          <View style={styles.trackingStatus}>
+            <View style={[styles.trackingDot, { backgroundColor: isBackgroundTrackingActive ? '#10B981' : '#EF4444' }]} />
+            <Text style={styles.trackingText}>
+              Background tracking: {isBackgroundTrackingActive ? 'Active' : 'Inactive'}
+            </Text>
+          </View>
         </View>
 
         {/* Current Ride */}

@@ -191,21 +191,28 @@ export function LocationProvider({ children }: LocationProviderProps) {
     console.log('  - NOT isBackgroundTrackingActive:', !isBackgroundTrackingActive)
     console.log('  - NOT isHandlingActiveDriver:', !isHandlingActiveDriver)
 
-    if (driver && (driver.status === 'online' || driver.status === 'busy') && locationPermission && !isTracking && !isBackgroundTrackingActive && !isHandlingActiveDriver) {
-      console.log('✅✅✅ ALL CONDITIONS MET - Starting location services...')
-      handleActiveDriver()
-    } else {
-      console.log('❌ Conditions not met for starting location tracking')
-
-      if (driver && driver.status === 'offline' && isTracking) {
-        console.log('⚠️ Driver is offline, stopping location tracking')
-        stopLocationTracking()
-        stopBackgroundTracking()
-      } else if (!driver && isTracking) {
-        console.log('❌ No driver available, stopping location tracking')
-        stopLocationTracking()
-        stopBackgroundTracking()
+    // CRITICAL: Start tracking services when driver goes online
+    // Check if EITHER foreground OR background tracking needs to be started
+    if (driver && (driver.status === 'online' || driver.status === 'busy') && locationPermission && !isHandlingActiveDriver) {
+      // Check if both are already running
+      if (isTracking && isBackgroundTrackingActive) {
+        console.log('✅ Both tracking services already active')
+      } else if (!isTracking || !isBackgroundTrackingActive) {
+        console.log('⚠️ One or more tracking services inactive - starting missing services')
+        console.log('  - Foreground tracking:', isTracking ? 'active' : 'INACTIVE')
+        console.log('  - Background tracking:', isBackgroundTrackingActive ? 'active' : 'INACTIVE')
+        handleActiveDriver()
       }
+    } else if (driver && driver.status === 'offline' && (isTracking || isBackgroundTrackingActive)) {
+      console.log('⚠️ Driver is offline, stopping all location tracking')
+      stopLocationTracking()
+      stopBackgroundTracking()
+    } else if (!driver && (isTracking || isBackgroundTrackingActive)) {
+      console.log('❌ No driver available, stopping all location tracking')
+      stopLocationTracking()
+      stopBackgroundTracking()
+    } else {
+      console.log('ℹ️ No action needed - driver offline or no permission')
     }
   }, [driver?.status, driver?.user_id, locationPermission, isTracking, isBackgroundTrackingActive, isHandlingActiveDriver])
 
