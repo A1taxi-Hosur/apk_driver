@@ -927,14 +927,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }
 
-  // New function to update driver status from ride context
-  const updateDriverStatusFromRide = (status: 'offline' | 'online' | 'busy') => {
-    console.log('🔄 Updating driver status from ride context:', status)
-    setDriver(prev => prev ? { 
-      ...prev, 
-      status
-    } : null)
-  }
   const value = {
     session,
     user,
@@ -942,8 +934,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     loading,
     signIn,
     signOut,
-    updateDriverStatus,
-    updateDriverStatusFromRide
+    updateDriverStatus
   }
 
   return (
