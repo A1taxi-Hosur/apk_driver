@@ -1,24 +1,9 @@
 import * as Notifications from 'expo-notifications';
 import { Platform, AppState, Linking } from 'react-native';
 
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: true,
-    shouldSetBadge: true,
-    priority: Notifications.AndroidNotificationPriority.MAX,
-  }),
-});
-
-// Add notification response listener to auto-open app
-Notifications.addNotificationResponseReceivedListener((response) => {
-  console.log('📱 Notification tapped, opening app...');
-  const data = response.notification.request.content.data;
-  if (data.type === 'ride_request') {
-    console.log('🚗 Ride request notification tapped, ride ID:', data.rideId);
-    // App will already open, just log for debugging
-  }
-});
+// Configure notification handler - will be set in initialize()
+let notificationHandlerConfigured = false;
+let notificationListenerConfigured = false;
 
 class RideNotificationService {
   private isInitialized = false;
@@ -30,6 +15,33 @@ class RideNotificationService {
     }
 
     try {
+      // Configure notification handler (only once)
+      if (!notificationHandlerConfigured) {
+        Notifications.setNotificationHandler({
+          handleNotification: async () => ({
+            shouldShowAlert: true,
+            shouldPlaySound: true,
+            shouldSetBadge: true,
+            priority: Notifications.AndroidNotificationPriority.MAX,
+          }),
+        });
+        notificationHandlerConfigured = true;
+        console.log('✅ Notification handler configured');
+      }
+
+      // Add notification response listener (only once)
+      if (!notificationListenerConfigured) {
+        Notifications.addNotificationResponseReceivedListener((response) => {
+          console.log('📱 Notification tapped, opening app...');
+          const data = response.notification.request.content.data;
+          if (data.type === 'ride_request') {
+            console.log('🚗 Ride request notification tapped, ride ID:', data.rideId);
+          }
+        });
+        notificationListenerConfigured = true;
+        console.log('✅ Notification listener configured');
+      }
+
       const { status: existingStatus } = await Notifications.getPermissionsAsync();
       let finalStatus = existingStatus;
 
