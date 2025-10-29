@@ -4,6 +4,9 @@ import { Platform } from 'react-native';
 import { supabase } from '../utils/supabase';
 import Constants from 'expo-constants';
 import { debugLog } from '../utils/debugLogger';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const PUSH_TOKEN_KEY = 'expo_push_token';
 
 class PushNotificationService {
   private pushToken: string | null = null;
@@ -15,7 +18,10 @@ class PushNotificationService {
   async registerForPushNotifications(driverId: string): Promise<string | null> {
     try {
       debugLog('PushNotificationService', 'Starting registration', { driverId });
-      console.log('📱 Registering for push notifications...');
+      console.log('📱 ===== REGISTERING FOR PUSH NOTIFICATIONS =====');
+      console.log('📱 Driver ID:', driverId);
+      console.log('📱 Platform:', Platform.OS);
+      console.log('📱 Device:', Device.deviceName);
 
       // Check if physical device
       if (!Device.isDevice) {
@@ -99,8 +105,16 @@ class PushNotificationService {
         throw error;
       }
 
-      console.log('✅ Push token stored successfully');
+      console.log('✅ Push token stored successfully in database');
+
+      // Also store locally for persistence
+      await AsyncStorage.setItem(PUSH_TOKEN_KEY, this.pushToken);
+      console.log('✅ Push token stored locally');
+
       this.isRegistered = true;
+      console.log('✅ ===== PUSH NOTIFICATIONS FULLY REGISTERED =====');
+      console.log('✅ Token:', this.pushToken);
+      console.log('✅ You will now receive notifications even when app is CLOSED');
 
       return this.pushToken;
     } catch (error) {
@@ -110,10 +124,25 @@ class PushNotificationService {
   }
 
   /**
-   * Get current push token
+   * Get current push token (from memory or storage)
    */
-  getPushToken(): string | null {
-    return this.pushToken;
+  async getPushToken(): Promise<string | null> {
+    if (this.pushToken) {
+      return this.pushToken;
+    }
+
+    // Try to get from storage
+    try {
+      const storedToken = await AsyncStorage.getItem(PUSH_TOKEN_KEY);
+      if (storedToken) {
+        this.pushToken = storedToken;
+        console.log('✅ Retrieved push token from storage');
+      }
+      return storedToken;
+    } catch (error) {
+      console.error('❌ Error getting push token from storage:', error);
+      return null;
+    }
   }
 
   /**
@@ -140,6 +169,9 @@ class PushNotificationService {
         console.error('❌ Error removing push token:', error);
         throw error;
       }
+
+      // Remove from local storage
+      await AsyncStorage.removeItem(PUSH_TOKEN_KEY);
 
       this.pushToken = null;
       this.isRegistered = false;
